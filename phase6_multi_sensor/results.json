@@ -1,0 +1,730 @@
+{
+  "timestamp": "2026-06-22T18:39:31.109387",
+  "model": "BAAI/bge-small-en-v1.5",
+  "sample_size_per_dataset": 300,
+  "datasets_requested": [
+    "hh",
+    "pku",
+    "shp"
+  ],
+  "axes": [
+    "broad_good_bad",
+    "harm_reduction",
+    "truth_correction",
+    "calibration",
+    "usefulness",
+    "non_sycophancy",
+    "risk_disclosure",
+    "agency_respect"
+  ],
+  "aggregates": {
+    "equal_all_axes": [
+      "broad_good_bad",
+      "harm_reduction",
+      "truth_correction",
+      "calibration",
+      "usefulness",
+      "non_sycophancy",
+      "risk_disclosure",
+      "agency_respect"
+    ],
+    "safety_truth_axes": [
+      "harm_reduction",
+      "truth_correction",
+      "calibration",
+      "risk_disclosure",
+      "agency_respect"
+    ],
+    "assistant_quality_axes": [
+      "usefulness",
+      "truth_correction",
+      "calibration",
+      "non_sycophancy",
+      "risk_disclosure"
+    ]
+  },
+  "datasets": {
+    "hh_chosen": {
+      "n": 300,
+      "label_name": "Anthropic HH chosen response",
+      "baselines": {
+        "length_prefer_longer": {
+          "agreement": 0.43333333333333335,
+          "ci95": [
+            0.38,
+            0.48587499999999995
+          ],
+          "mean_gap": -11.206666666666667,
+          "median_abs_gap": 14.0,
+          "z_vs_random": -2.3094010767585025,
+          "p_vs_random": 0.020921335337794063,
+          "mutual_information_bits": 0.012862225627813695
+        },
+        "sentiment_prefer_positive": {
+          "agreement": 0.445,
+          "ci95": [
+            0.387375,
+            0.500875
+          ],
+          "mean_gap": -0.024373,
+          "median_abs_gap": 0.4387,
+          "z_vs_random": -1.9052558883257646,
+          "p_vs_random": 0.05674681648938146,
+          "mutual_information_bits": 0.008745992829630955
+        }
+      },
+      "axes": {
+        "broad_good_bad": {
+          "agreement": 0.49333333333333335,
+          "ci95": [
+            0.44,
+            0.5516666666666666
+          ],
+          "mean_gap": -0.002003863789141178,
+          "median_abs_gap": 0.01137396041303873,
+          "z_vs_random": -0.23094010767584985,
+          "p_vs_random": 0.8173613313851772,
+          "mutual_information_bits": 0.00012824335915095908
+        },
+        "harm_reduction": {
+          "agreement": 0.53,
+          "ci95": [
+            0.4716666666666667,
+            0.5834166666666666
+          ],
+          "mean_gap": 0.0023088644910603763,
+          "median_abs_gap": 0.008534980937838554,
+          "z_vs_random": 1.0392304845413272,
+          "p_vs_random": 0.29869755599496983,
+          "mutual_information_bits": 0.0025984114322603613
+        },
+        "truth_correction": {
+          "agreement": 0.49666666666666665,
+          "ci95": [
+            0.444125,
+            0.5525416666666666
+          ],
+          "mean_gap": -0.001947108746195833,
+          "median_abs_gap": 0.00947730801999569,
+          "z_vs_random": -0.11547005383792588,
+          "p_vs_random": 0.9080725552559745,
+          "mutual_information_bits": 3.206012728251828e-05
+        },
+        "calibration": {
+          "agreement": 0.48,
+          "ci95": [
+            0.4266666666666667,
+            0.535
+          ],
+          "mean_gap": -0.003224087255075574,
+          "median_abs_gap": 0.00918883178383112,
+          "z_vs_random": -0.6928203230275515,
+          "p_vs_random": 0.4884223166225933,
+          "mutual_information_bits": 0.001154464004798239
+        },
+        "usefulness": {
+          "agreement": 0.48333333333333334,
+          "ci95": [
+            0.43245833333333333,
+            0.5442083333333333
+          ],
+          "mean_gap": -0.002367372928808133,
+          "median_abs_gap": 0.009979002177715302,
+          "z_vs_random": -0.5773502691896256,
+          "p_vs_random": 0.5637028616507731,
+          "mutual_information_bits": 0.0008016457363602125
+        },
+        "non_sycophancy": {
+          "agreement": 0.48333333333333334,
+          "ci95": [
+            0.42333333333333334,
+            0.540875
+          ],
+          "mean_gap": -0.0016734132853647072,
+          "median_abs_gap": 0.010177741758525372,
+          "z_vs_random": -0.5773502691896256,
+          "p_vs_random": 0.5637028616507731,
+          "mutual_information_bits": 0.0008016457363602125
+        },
+        "risk_disclosure": {
+          "agreement": 0.55,
+          "ci95": [
+            0.495,
+            0.6075416666666666
+          ],
+          "mean_gap": 0.003004782474599779,
+          "median_abs_gap": 0.009135685861110687,
+          "z_vs_random": 1.7320508075688787,
+          "p_vs_random": 0.08326451666355014,
+          "mutual_information_bits": 0.007225546012191719
+        },
+        "agency_respect": {
+          "agreement": 0.4633333333333333,
+          "ci95": [
+            0.41,
+            0.5192083333333333
+          ],
+          "mean_gap": -0.003797050511154036,
+          "median_abs_gap": 0.01109457015991211,
+          "z_vs_random": -1.270170592217177,
+          "p_vs_random": 0.2040238704744365,
+          "mutual_information_bits": 0.003882731120855354
+        }
+      },
+      "aggregates": {
+        "equal_all_axes": {
+          "agreement": 0.48,
+          "ci95": [
+            0.427375,
+            0.5375416666666666
+          ],
+          "mean_gap": -0.0012124061650441338,
+          "median_abs_gap": 0.0067047858610749245,
+          "z_vs_random": -0.6928203230275515,
+          "p_vs_random": 0.4884223166225933,
+          "mutual_information_bits": 0.001154464004798239
+        },
+        "safety_truth_axes": {
+          "agreement": 0.5,
+          "ci95": [
+            0.44579166666666664,
+            0.5575416666666666
+          ],
+          "mean_gap": -0.0007309199109386099,
+          "median_abs_gap": 0.00504038343206048,
+          "z_vs_random": 0.0,
+          "p_vs_random": 1.0,
+          "mutual_information_bits": 0.0
+        },
+        "assistant_quality_axes": {
+          "agreement": 0.46,
+          "ci95": [
+            0.40579166666666666,
+            0.5133333333333333
+          ],
+          "mean_gap": -0.001241439919928477,
+          "median_abs_gap": 0.00691981497220695,
+          "z_vs_random": -1.385640646055101,
+          "p_vs_random": 0.16585666034291024,
+          "mutual_information_bits": 0.004621561179774303
+        }
+      }
+    },
+    "pku_better": {
+      "n": 300,
+      "label_name": "PKU better response",
+      "baselines": {
+        "length_prefer_longer": {
+          "agreement": 0.5683333333333334,
+          "ci95": [
+            0.5157916666666666,
+            0.6242083333333333
+          ],
+          "mean_gap": 4.88,
+          "median_abs_gap": 22.5,
+          "z_vs_random": 2.367136103677466,
+          "p_vs_random": 0.017926339076638674,
+          "mutual_information_bits": 0.013515426684219678
+        },
+        "sentiment_prefer_positive": {
+          "agreement": 0.5033333333333333,
+          "ci95": [
+            0.45,
+            0.56
+          ],
+          "mean_gap": -0.01974633333333333,
+          "median_abs_gap": 0.28850000000000003,
+          "z_vs_random": 0.11547005383792397,
+          "p_vs_random": 0.9080725552559761,
+          "mutual_information_bits": 3.2060127282296236e-05
+        }
+      },
+      "axes": {
+        "broad_good_bad": {
+          "agreement": 0.5,
+          "ci95": [
+            0.4449166666666667,
+            0.5550833333333333
+          ],
+          "mean_gap": -0.0006127540425707896,
+          "median_abs_gap": 0.022237733006477356,
+          "z_vs_random": 0.0,
+          "p_vs_random": 1.0,
+          "mutual_information_bits": 0.0
+        },
+        "harm_reduction": {
+          "agreement": 0.52,
+          "ci95": [
+            0.4633333333333333,
+            0.5733333333333334
+          ],
+          "mean_gap": 0.001093723593900601,
+          "median_abs_gap": 0.017878562211990356,
+          "z_vs_random": 0.6928203230275515,
+          "p_vs_random": 0.4884223166225933,
+          "mutual_information_bits": 0.001154464004798239
+        },
+        "truth_correction": {
+          "agreement": 0.49666666666666665,
+          "ci95": [
+            0.4415833333333333,
+            0.55175
+          ],
+          "mean_gap": -0.0020796534325927497,
+          "median_abs_gap": 0.018648574128746986,
+          "z_vs_random": -0.11547005383792588,
+          "p_vs_random": 0.9080725552559745,
+          "mutual_information_bits": 3.206012728251828e-05
+        },
+        "calibration": {
+          "agreement": 0.5033333333333333,
+          "ci95": [
+            0.45,
+            0.56
+          ],
+          "mean_gap": -0.0007523842000712951,
+          "median_abs_gap": 0.020461589097976685,
+          "z_vs_random": 0.11547005383792397,
+          "p_vs_random": 0.9080725552559761,
+          "mutual_information_bits": 3.2060127282296236e-05
+        },
+        "usefulness": {
+          "agreement": 0.48,
+          "ci95": [
+            0.43,
+            0.5366666666666666
+          ],
+          "mean_gap": -0.0017131857542941969,
+          "median_abs_gap": 0.019608350470662117,
+          "z_vs_random": -0.6928203230275515,
+          "p_vs_random": 0.4884223166225933,
+          "mutual_information_bits": 0.001154464004798239
+        },
+        "non_sycophancy": {
+          "agreement": 0.4766666666666667,
+          "ci95": [
+            0.42333333333333334,
+            0.5366666666666666
+          ],
+          "mean_gap": -0.002373334203536312,
+          "median_abs_gap": 0.01927095279097557,
+          "z_vs_random": -0.8082903768654754,
+          "p_vs_random": 0.41892344094638334,
+          "mutual_information_bits": 0.0015715052884361924
+        },
+        "risk_disclosure": {
+          "agreement": 0.49333333333333335,
+          "ci95": [
+            0.44333333333333336,
+            0.5466666666666666
+          ],
+          "mean_gap": 0.0011758969522391756,
+          "median_abs_gap": 0.017433857545256615,
+          "z_vs_random": -0.23094010767584985,
+          "p_vs_random": 0.8173613313851772,
+          "mutual_information_bits": 0.00012824335915095908
+        },
+        "agency_respect": {
+          "agreement": 0.49,
+          "ci95": [
+            0.43666666666666665,
+            0.5433333333333333
+          ],
+          "mean_gap": -0.0011282513399297992,
+          "median_abs_gap": 0.018974946811795235,
+          "z_vs_random": -0.34641016151377574,
+          "p_vs_random": 0.7290344895388039,
+          "mutual_information_bits": 0.00028855824719009604
+        }
+      },
+      "aggregates": {
+        "equal_all_axes": {
+          "agreement": 0.51,
+          "ci95": [
+            0.4533333333333333,
+            0.5633333333333334
+          ],
+          "mean_gap": -0.0007987429143395274,
+          "median_abs_gap": 0.012749982997775078,
+          "z_vs_random": 0.34641016151377574,
+          "p_vs_random": 0.7290344895388039,
+          "mutual_information_bits": 0.00028855824719009604
+        },
+        "safety_truth_axes": {
+          "agreement": 0.5166666666666667,
+          "ci95": [
+            0.46,
+            0.5684166666666666
+          ],
+          "mean_gap": -0.0003381336906628955,
+          "median_abs_gap": 0.010977241676300764,
+          "z_vs_random": 0.5773502691896275,
+          "p_vs_random": 0.563702861650772,
+          "mutual_information_bits": 0.0008016457363602125
+        },
+        "assistant_quality_axes": {
+          "agreement": 0.49333333333333335,
+          "ci95": [
+            0.43666666666666665,
+            0.55
+          ],
+          "mean_gap": -0.0011485320850715653,
+          "median_abs_gap": 0.0140322744846344,
+          "z_vs_random": -0.23094010767584985,
+          "p_vs_random": 0.8173613313851772,
+          "mutual_information_bits": 0.00012824335915095908
+        }
+      }
+    },
+    "pku_safer": {
+      "n": 300,
+      "label_name": "PKU safer response",
+      "baselines": {
+        "length_prefer_longer": {
+          "agreement": 0.5283333333333333,
+          "ci95": [
+            0.47579166666666667,
+            0.5833333333333334
+          ],
+          "mean_gap": -0.42,
+          "median_abs_gap": 22.5,
+          "z_vs_random": 0.9814954576223633,
+          "p_vs_random": 0.3263484733220725,
+          "mutual_information_bits": 0.0023175682968104017
+        },
+        "sentiment_prefer_positive": {
+          "agreement": 0.4633333333333333,
+          "ci95": [
+            0.4074583333333333,
+            0.5183333333333333
+          ],
+          "mean_gap": -0.040892333333333336,
+          "median_abs_gap": 0.28850000000000003,
+          "z_vs_random": -1.270170592217177,
+          "p_vs_random": 0.2040238704744365,
+          "mutual_information_bits": 0.003882731120855354
+        }
+      },
+      "axes": {
+        "broad_good_bad": {
+          "agreement": 0.48333333333333334,
+          "ci95": [
+            0.42333333333333334,
+            0.5366666666666666
+          ],
+          "mean_gap": -0.0005721845384687185,
+          "median_abs_gap": 0.022237733006477356,
+          "z_vs_random": -0.5773502691896256,
+          "p_vs_random": 0.5637028616507731,
+          "mutual_information_bits": 0.0008016457363602125
+        },
+        "harm_reduction": {
+          "agreement": 0.5433333333333333,
+          "ci95": [
+            0.4866666666666667,
+            0.6
+          ],
+          "mean_gap": 0.0022931983352949222,
+          "median_abs_gap": 0.017878562211990356,
+          "z_vs_random": 1.5011106998930268,
+          "p_vs_random": 0.1333269317743495,
+          "mutual_information_bits": 0.005424924521645225
+        },
+        "truth_correction": {
+          "agreement": 0.5,
+          "ci95": [
+            0.44333333333333336,
+            0.56175
+          ],
+          "mean_gap": -0.0016549257654696703,
+          "median_abs_gap": 0.018648574128746986,
+          "z_vs_random": 0.0,
+          "p_vs_random": 1.0,
+          "mutual_information_bits": 0.0
+        },
+        "calibration": {
+          "agreement": 0.47333333333333333,
+          "ci95": [
+            0.41491666666666666,
+            0.5284166666666665
+          ],
+          "mean_gap": -0.00141724845704933,
+          "median_abs_gap": 0.020461589097976685,
+          "z_vs_random": -0.9237604307034013,
+          "p_vs_random": 0.35561106109523904,
+          "mutual_information_bits": 0.0020528067762761726
+        },
+        "usefulness": {
+          "agreement": 0.44333333333333336,
+          "ci95": [
+            0.38666666666666666,
+            0.5017499999999999
+          ],
+          "mean_gap": -0.0013486762624233962,
+          "median_abs_gap": 0.019608350470662117,
+          "z_vs_random": -1.9629909152447267,
+          "p_vs_random": 0.04964722965745631,
+          "mutual_information_bits": 0.009285245386868812
+        },
+        "non_sycophancy": {
+          "agreement": 0.49333333333333335,
+          "ci95": [
+            0.43825,
+            0.55
+          ],
+          "mean_gap": -0.0006447256697962681,
+          "median_abs_gap": 0.01927095279097557,
+          "z_vs_random": -0.23094010767584985,
+          "p_vs_random": 0.8173613313851772,
+          "mutual_information_bits": 0.00012824335915095908
+        },
+        "risk_disclosure": {
+          "agreement": 0.49666666666666665,
+          "ci95": [
+            0.44333333333333336,
+            0.5533333333333333
+          ],
+          "mean_gap": 0.0012989681757365663,
+          "median_abs_gap": 0.017433867789804935,
+          "z_vs_random": -0.11547005383792588,
+          "p_vs_random": 0.9080725552559745,
+          "mutual_information_bits": 3.206012728251828e-05
+        },
+        "agency_respect": {
+          "agreement": 0.5133333333333333,
+          "ci95": [
+            0.45825,
+            0.5684166666666666
+          ],
+          "mean_gap": 0.0001329115048671762,
+          "median_abs_gap": 0.018974946811795235,
+          "z_vs_random": 0.4618802153516997,
+          "p_vs_random": 0.6441672226837107,
+          "mutual_information_bits": 0.0005130190491101638
+        }
+      },
+      "aggregates": {
+        "equal_all_axes": {
+          "agreement": 0.5,
+          "ci95": [
+            0.44666666666666666,
+            0.5584166666666666
+          ],
+          "mean_gap": -0.00023908527529177567,
+          "median_abs_gap": 0.012749982997775078,
+          "z_vs_random": 0.0,
+          "p_vs_random": 1.0,
+          "mutual_information_bits": 0.0
+        },
+        "safety_truth_axes": {
+          "agreement": 0.49333333333333335,
+          "ci95": [
+            0.43825,
+            0.5550833333333333
+          ],
+          "mean_gap": 0.00013058067099336768,
+          "median_abs_gap": 0.010977241676300764,
+          "z_vs_random": -0.23094010767584985,
+          "p_vs_random": 0.8173613313851772,
+          "mutual_information_bits": 0.00012824335915095908
+        },
+        "assistant_quality_axes": {
+          "agreement": 0.48333333333333334,
+          "ci95": [
+            0.42,
+            0.5450833333333333
+          ],
+          "mean_gap": -0.0007533215425883099,
+          "median_abs_gap": 0.0140322744846344,
+          "z_vs_random": -0.5773502691896256,
+          "p_vs_random": 0.5637028616507731,
+          "mutual_information_bits": 0.0008016457363602125
+        }
+      }
+    },
+    "shp_reddit": {
+      "n": 300,
+      "label_name": "SHP higher-scored Reddit answer",
+      "baselines": {
+        "length_prefer_longer": {
+          "agreement": 0.7033333333333334,
+          "ci95": [
+            0.654125,
+            0.750875
+          ],
+          "mean_gap": 28.466666666666665,
+          "median_abs_gap": 26.5,
+          "z_vs_random": 7.043673284113435,
+          "p_vs_random": 1.872368886726044e-12,
+          "mutual_information_bits": 0.12282199008153749
+        },
+        "sentiment_prefer_positive": {
+          "agreement": 0.545,
+          "ci95": [
+            0.49333333333333335,
+            0.5983333333333334
+          ],
+          "mean_gap": 0.024927999999999992,
+          "median_abs_gap": 0.43265,
+          "z_vs_random": 1.5588457268119909,
+          "p_vs_random": 0.11903289845700753,
+          "mutual_information_bits": 0.00585082851910701
+        }
+      },
+      "axes": {
+        "broad_good_bad": {
+          "agreement": 0.5133333333333333,
+          "ci95": [
+            0.45825,
+            0.5733333333333334
+          ],
+          "mean_gap": -0.0017262245466311773,
+          "median_abs_gap": 0.010478300973773003,
+          "z_vs_random": 0.4618802153516997,
+          "p_vs_random": 0.6441672226837107,
+          "mutual_information_bits": 0.0005130190491101638
+        },
+        "harm_reduction": {
+          "agreement": 0.4066666666666667,
+          "ci95": [
+            0.3515833333333333,
+            0.46
+          ],
+          "mean_gap": -0.0017931457236409188,
+          "median_abs_gap": 0.006016036495566368,
+          "z_vs_random": -3.2331615074619036,
+          "p_vs_random": 0.0012242832644312122,
+          "mutual_information_bits": 0.02528299581975546
+        },
+        "truth_correction": {
+          "agreement": 0.5,
+          "ci95": [
+            0.45,
+            0.5550833333333333
+          ],
+          "mean_gap": -0.002598976728816827,
+          "median_abs_gap": 0.007527150213718414,
+          "z_vs_random": 0.0,
+          "p_vs_random": 1.0,
+          "mutual_information_bits": 0.0
+        },
+        "calibration": {
+          "agreement": 0.5266666666666666,
+          "ci95": [
+            0.47,
+            0.58
+          ],
+          "mean_gap": 0.0001541228157778581,
+          "median_abs_gap": 0.007205665111541748,
+          "z_vs_random": 0.9237604307033994,
+          "p_vs_random": 0.35561106109524004,
+          "mutual_information_bits": 0.0020528067762761726
+        },
+        "usefulness": {
+          "agreement": 0.5166666666666667,
+          "ci95": [
+            0.46158333333333335,
+            0.5750833333333333
+          ],
+          "mean_gap": -0.0013247560647626719,
+          "median_abs_gap": 0.009555349126458168,
+          "z_vs_random": 0.5773502691896275,
+          "p_vs_random": 0.563702861650772,
+          "mutual_information_bits": 0.0008016457363602125
+        },
+        "non_sycophancy": {
+          "agreement": 0.4533333333333333,
+          "ci95": [
+            0.3933333333333333,
+            0.5133333333333333
+          ],
+          "mean_gap": -0.0014325327177842457,
+          "median_abs_gap": 0.007800308987498283,
+          "z_vs_random": -1.616580753730953,
+          "p_vs_random": 0.10596880912720219,
+          "mutual_information_bits": 0.006292893395491994
+        },
+        "risk_disclosure": {
+          "agreement": 0.49,
+          "ci95": [
+            0.43666666666666665,
+            0.55
+          ],
+          "mean_gap": -0.0006973431631922722,
+          "median_abs_gap": 0.005411036312580109,
+          "z_vs_random": -0.34641016151377574,
+          "p_vs_random": 0.7290344895388039,
+          "mutual_information_bits": 0.00028855824719009604
+        },
+        "agency_respect": {
+          "agreement": 0.5533333333333333,
+          "ci95": [
+            0.49666666666666665,
+            0.6066666666666667
+          ],
+          "mean_gap": 0.00030174738727509973,
+          "median_abs_gap": 0.009688915684819221,
+          "z_vs_random": 1.8475208614068026,
+          "p_vs_random": 0.06467168750236373,
+          "mutual_information_bits": 0.008222966587222436
+        }
+      },
+      "aggregates": {
+        "equal_all_axes": {
+          "agreement": 0.5033333333333333,
+          "ci95": [
+            0.45,
+            0.5566666666666666
+          ],
+          "mean_gap": -0.0011396386008709668,
+          "median_abs_gap": 0.006109663052484393,
+          "z_vs_random": 0.11547005383792397,
+          "p_vs_random": 0.9080725552559761,
+          "mutual_information_bits": 3.2060127282296236e-05
+        },
+        "safety_truth_axes": {
+          "agreement": 0.5133333333333333,
+          "ci95": [
+            0.46,
+            0.57
+          ],
+          "mean_gap": -0.000926719077439581,
+          "median_abs_gap": 0.004574356600642204,
+          "z_vs_random": 0.4618802153516997,
+          "p_vs_random": 0.6441672226837107,
+          "mutual_information_bits": 0.0005130190491101638
+        },
+        "assistant_quality_axes": {
+          "agreement": 0.48333333333333334,
+          "ci95": [
+            0.43,
+            0.5433333333333333
+          ],
+          "mean_gap": -0.001179897195555289,
+          "median_abs_gap": 0.005920520285144448,
+          "z_vs_random": -0.5773502691896256,
+          "p_vs_random": 0.5637028616507731,
+          "mutual_information_bits": 0.0008016457363602125
+        }
+      }
+    }
+  },
+  "audit_keys": [
+    "hh_chosen__equal_all_axes",
+    "pku_better__equal_all_axes",
+    "pku_safer__equal_all_axes",
+    "shp_reddit__equal_all_axes",
+    "hh_chosen__safety_truth_axes",
+    "pku_better__safety_truth_axes",
+    "pku_safer__safety_truth_axes",
+    "shp_reddit__safety_truth_axes",
+    "hh_chosen__assistant_quality_axes",
+    "pku_better__assistant_quality_axes",
+    "pku_safer__assistant_quality_axes",
+    "shp_reddit__assistant_quality_axes"
+  ],
+  "notes": {
+    "ground_truth": "Dataset labels are treated as imperfect sensors, not authoritative good/bad truth.",
+    "weights": "No aggregate weights were fit to a dataset; aggregates use simple equal-weight means over predeclared axes."
+  }
+}

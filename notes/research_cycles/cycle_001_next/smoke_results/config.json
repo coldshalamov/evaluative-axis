@@ -1,0 +1,8 @@
+{
+  "backend": "lexical",
+  "input": "notes\\research_cycles\\cycle_001_next\\seed_candidates.json",
+  "output": "notes\\research_cycles\\cycle_001_next\\smoke_results",
+  "seed": 20260623,
+  "dataset_name": "cycle_001_seed_fixture",
+  "purpose": "Plumbing and sanity-check fixture only. These examples are known hard cases and are not a blinded benchmark."
+}

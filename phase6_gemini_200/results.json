@@ -1,0 +1,402 @@
+{
+  "timestamp": "2026-06-22T19:09:26.198794",
+  "model": "gemini-embedding-001",
+  "backend": "gemini",
+  "sample_size_per_dataset": 200,
+  "datasets_requested": [
+    "hh",
+    "pku",
+    "shp"
+  ],
+  "axes": [
+    "broad_good_bad",
+    "harm_reduction",
+    "truth_correction",
+    "calibration",
+    "usefulness",
+    "non_sycophancy",
+    "risk_disclosure",
+    "agency_respect"
+  ],
+  "aggregates": {
+    "equal_all_axes": [
+      "broad_good_bad",
+      "harm_reduction",
+      "truth_correction",
+      "calibration",
+      "usefulness",
+      "non_sycophancy",
+      "risk_disclosure",
+      "agency_respect"
+    ],
+    "safety_truth_axes": [
+      "harm_reduction",
+      "truth_correction",
+      "calibration",
+      "risk_disclosure",
+      "agency_respect"
+    ],
+    "assistant_quality_axes": [
+      "usefulness",
+      "truth_correction",
+      "calibration",
+      "non_sycophancy",
+      "risk_disclosure"
+    ]
+  },
+  "datasets": {
+    "hh_chosen": {
+      "n": 200,
+      "label_name": "Anthropic HH chosen response",
+      "baselines": {
+        "length_prefer_longer": {
+          "agreement": 0.435,
+          "ci95": [
+            0.3686875,
+            0.5038124999999999
+          ],
+          "mean_gap": -9.345,
+          "median_abs_gap": 14.0,
+          "z_vs_random": -1.8384776310850237,
+          "p_vs_random": 0.06599205505934755,
+          "mutual_information_bits": 0.012225344684053119
+        },
+        "sentiment_prefer_positive": {
+          "agreement": 0.465,
+          "ci95": [
+            0.4025,
+            0.5325
+          ],
+          "mean_gap": 0.012063000000000003,
+          "median_abs_gap": 0.4396,
+          "z_vs_random": -0.9899494936611658,
+          "p_vs_random": 0.322198806162582,
+          "mutual_information_bits": 0.003537495115123579
+        }
+      },
+      "axes": {
+        "broad_good_bad": {
+          "agreement": 0.4,
+          "ci95": [
+            0.325,
+            0.465
+          ],
+          "mean_gap": -0.004186596393119544,
+          "median_abs_gap": 0.012442279607057571,
+          "z_vs_random": -2.8284271247461894,
+          "p_vs_random": 0.004677734981047281,
+          "mutual_information_bits": 0.02904940554533142
+        },
+        "harm_reduction": {
+          "agreement": 0.44,
+          "ci95": [
+            0.375,
+            0.5
+          ],
+          "mean_gap": -0.003459710164461285,
+          "median_abs_gap": 0.01046796515583992,
+          "z_vs_random": -1.697056274847714,
+          "p_vs_random": 0.08968602177036462,
+          "mutual_information_bits": 0.010412478777944378
+        },
+        "truth_correction": {
+          "agreement": 0.42,
+          "ci95": [
+            0.35,
+            0.49
+          ],
+          "mean_gap": -0.0027993905916810034,
+          "median_abs_gap": 0.008590631186962128,
+          "z_vs_random": -2.2627416997969525,
+          "p_vs_random": 0.02365161665535598,
+          "mutual_information_bits": 0.018546104966346455
+        },
+        "calibration": {
+          "agreement": 0.37,
+          "ci95": [
+            0.3,
+            0.4376249999999999
+          ],
+          "mean_gap": -0.005365899734897539,
+          "median_abs_gap": 0.00912169087678194,
+          "z_vs_random": -3.6769552621700474,
+          "p_vs_random": 0.00023603441652934908,
+          "mutual_information_bits": 0.04932790731293413
+        },
+        "usefulness": {
+          "agreement": 0.36,
+          "ci95": [
+            0.292375,
+            0.425
+          ],
+          "mean_gap": -0.009761737429071217,
+          "median_abs_gap": 0.014373905956745148,
+          "z_vs_random": -3.9597979746446668,
+          "p_vs_random": 7.501319466545889e-05,
+          "mutual_information_bits": 0.057316810744507785
+        },
+        "non_sycophancy": {
+          "agreement": 0.5,
+          "ci95": [
+            0.435,
+            0.57
+          ],
+          "mean_gap": -0.0006208136235363781,
+          "median_abs_gap": 0.009894981980323792,
+          "z_vs_random": 0.0,
+          "p_vs_random": 1.0,
+          "mutual_information_bits": 0.0
+        },
+        "risk_disclosure": {
+          "agreement": 0.4,
+          "ci95": [
+            0.335,
+            0.4676249999999999
+          ],
+          "mean_gap": -0.004527574637322686,
+          "median_abs_gap": 0.009589903056621552,
+          "z_vs_random": -2.8284271247461894,
+          "p_vs_random": 0.004677734981047281,
+          "mutual_information_bits": 0.02904940554533142
+        },
+        "agency_respect": {
+          "agreement": 0.485,
+          "ci95": [
+            0.42,
+            0.55
+          ],
+          "mean_gap": -0.0016245237342081963,
+          "median_abs_gap": 0.010473312810063362,
+          "z_vs_random": -0.4242640687119289,
+          "p_vs_random": 0.6713732405408723,
+          "mutual_information_bits": 0.0006493101853897176
+        }
+      },
+      "aggregates": {
+        "equal_all_axes": {
+          "agreement": 0.41,
+          "ci95": [
+            0.33737500000000004,
+            0.48
+          ],
+          "mean_gap": -0.0040432806938770225,
+          "median_abs_gap": 0.008067201357334852,
+          "z_vs_random": -2.545584412271572,
+          "p_vs_random": 0.010909498364269262,
+          "mutual_information_bits": 0.023499531242176075
+        },
+        "safety_truth_axes": {
+          "agreement": 0.39,
+          "ci95": [
+            0.315,
+            0.455
+          ],
+          "mean_gap": -0.003555419715194148,
+          "median_abs_gap": 0.007611516863107681,
+          "z_vs_random": -3.1112698372208087,
+          "p_vs_random": 0.001862846297981894,
+          "mutual_information_bits": 0.0352004514949128
+        },
+        "assistant_quality_axes": {
+          "agreement": 0.4,
+          "ci95": [
+            0.325,
+            0.465
+          ],
+          "mean_gap": -0.004615083279422834,
+          "median_abs_gap": 0.008236973080784082,
+          "z_vs_random": -2.8284271247461894,
+          "p_vs_random": 0.004677734981047281,
+          "mutual_information_bits": 0.02904940554533142
+        }
+      }
+    },
+    "pku_better": {
+      "n": 75,
+      "label_name": "PKU better response",
+      "baselines": {
+        "length_prefer_longer": {
+          "agreement": 0.54,
+          "ci95": [
+            0.43333333333333335,
+            0.6466666666666666
+          ],
+          "mean_gap": 1.8533333333333333,
+          "median_abs_gap": 26.0,
+          "z_vs_random": 0.6928203230275515,
+          "p_vs_random": 0.4884223166225933,
+          "mutual_information_bits": 0.004621561179774303
+        },
+        "sentiment_prefer_positive": {
+          "agreement": 0.4666666666666667,
+          "ci95": [
+            0.35333333333333333,
+            0.5733333333333334
+          ],
+          "mean_gap": -0.08501066666666668,
+          "median_abs_gap": 0.2901,
+          "z_vs_random": -0.5773502691896256,
+          "p_vs_random": 0.5637028616507731,
+          "mutual_information_bits": 0.003208368018363439
+        }
+      },
+      "axes": {
+        "broad_good_bad": {
+          "agreement": 0.49333333333333335,
+          "ci95": [
+            0.38666666666666666,
+            0.6
+          ],
+          "mean_gap": -0.004099659863859415,
+          "median_abs_gap": 0.015396183356642723,
+          "z_vs_random": -0.11547005383792493,
+          "p_vs_random": 0.9080725552559753,
+          "mutual_information_bits": 0.00012824335915095908
+        },
+        "harm_reduction": {
+          "agreement": 0.49333333333333335,
+          "ci95": [
+            0.38666666666666666,
+            0.6133333333333333
+          ],
+          "mean_gap": -0.0021884149064620335,
+          "median_abs_gap": 0.009607084095478058,
+          "z_vs_random": -0.11547005383792493,
+          "p_vs_random": 0.9080725552559753,
+          "mutual_information_bits": 0.00012824335915095908
+        },
+        "truth_correction": {
+          "agreement": 0.5066666666666667,
+          "ci95": [
+            0.4,
+            0.6133333333333333
+          ],
+          "mean_gap": -0.0011471742577850818,
+          "median_abs_gap": 0.010172650218009949,
+          "z_vs_random": 0.11547005383792588,
+          "p_vs_random": 0.9080725552559745,
+          "mutual_information_bits": 0.00012824335915095908
+        },
+        "calibration": {
+          "agreement": 0.49333333333333335,
+          "ci95": [
+            0.38666666666666666,
+            0.6133333333333333
+          ],
+          "mean_gap": -0.0012470173401137193,
+          "median_abs_gap": 0.012954268604516983,
+          "z_vs_random": -0.11547005383792493,
+          "p_vs_random": 0.9080725552559753,
+          "mutual_information_bits": 0.00012824335915095908
+        },
+        "usefulness": {
+          "agreement": 0.5066666666666667,
+          "ci95": [
+            0.4,
+            0.6266666666666667
+          ],
+          "mean_gap": -0.004684837541232507,
+          "median_abs_gap": 0.015775106847286224,
+          "z_vs_random": 0.11547005383792588,
+          "p_vs_random": 0.9080725552559745,
+          "mutual_information_bits": 0.00012824335915095908
+        },
+        "non_sycophancy": {
+          "agreement": 0.48,
+          "ci95": [
+            0.37333333333333335,
+            0.6
+          ],
+          "mean_gap": -0.0008974258601665497,
+          "median_abs_gap": 0.014467813074588776,
+          "z_vs_random": -0.34641016151377574,
+          "p_vs_random": 0.7290344895388039,
+          "mutual_information_bits": 0.001154464004798239
+        },
+        "risk_disclosure": {
+          "agreement": 0.49333333333333335,
+          "ci95": [
+            0.38666666666666666,
+            0.6133333333333333
+          ],
+          "mean_gap": -0.0020701382650683323,
+          "median_abs_gap": 0.013754397630691528,
+          "z_vs_random": -0.11547005383792493,
+          "p_vs_random": 0.9080725552559753,
+          "mutual_information_bits": 0.00012824335915095908
+        },
+        "agency_respect": {
+          "agreement": 0.5333333333333333,
+          "ci95": [
+            0.41333333333333333,
+            0.6533333333333333
+          ],
+          "mean_gap": -0.000907877596716086,
+          "median_abs_gap": 0.0153892133384943,
+          "z_vs_random": 0.5773502691896256,
+          "p_vs_random": 0.5637028616507731,
+          "mutual_information_bits": 0.003208368018363439
+        }
+      },
+      "aggregates": {
+        "equal_all_axes": {
+          "agreement": 0.49333333333333335,
+          "ci95": [
+            0.37333333333333335,
+            0.6133333333333333
+          ],
+          "mean_gap": -0.002155318233805398,
+          "median_abs_gap": 0.011848506517708302,
+          "z_vs_random": -0.11547005383792493,
+          "p_vs_random": 0.9080725552559753,
+          "mutual_information_bits": 0.00012824335915095908
+        },
+        "safety_truth_axes": {
+          "agreement": 0.5066666666666667,
+          "ci95": [
+            0.38666666666666666,
+            0.6266666666666667
+          ],
+          "mean_gap": -0.0015121245436603204,
+          "median_abs_gap": 0.010828488506376743,
+          "z_vs_random": 0.11547005383792588,
+          "p_vs_random": 0.9080725552559745,
+          "mutual_information_bits": 0.00012824335915095908
+        },
+        "assistant_quality_axes": {
+          "agreement": 0.48,
+          "ci95": [
+            0.37333333333333335,
+            0.5866666666666667
+          ],
+          "mean_gap": -0.0020093185171329727,
+          "median_abs_gap": 0.00992329977452755,
+          "z_vs_random": -0.34641016151377574,
+          "p_vs_random": 0.7290344895388039,
+          "mutual_information_bits": 0.001154464004798239
+        }
+      }
+    }
+  },
+  "audit_keys": [
+    "hh_chosen__equal_all_axes",
+    "pku_better__equal_all_axes",
+    "hh_chosen__safety_truth_axes",
+    "pku_better__safety_truth_axes",
+    "hh_chosen__assistant_quality_axes",
+    "pku_better__assistant_quality_axes"
+  ],
+  "notes": {
+    "ground_truth": "Dataset labels are treated as imperfect sensors, not authoritative good/bad truth.",
+    "weights": "No aggregate weights were fit to a dataset; aggregates use simple equal-weight means over predeclared axes.",
+    "partial_cache": "Candidate embeddings were scored only for complete preferred/other pairs already present in the cache; no missing pairs were imputed."
+  },
+  "partial_cache": {
+    "mode": "partial_from_cache",
+    "complete_pairs": 275,
+    "requested_pairs": 800,
+    "candidate_texts_done": 550,
+    "candidate_texts_total": 1600,
+    "first_incomplete_text_index": 550
+  }
+}

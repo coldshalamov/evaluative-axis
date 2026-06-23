@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-06-21T04:55:42.033473",
+  "status": "skipped_phase2_gate_failed",
+  "reason": "Phase 2 did not meet the required gate: agreement >60% and better than both length and sentiment baselines.",
+  "phase2_best_agreement": 0.532,
+  "phase2_length_baseline": 0.4316,
+  "phase2_sentiment_baseline": 0.4833,
+  "cuda_available": false
+}

@@ -1,0 +1,1212 @@
+{
+  "timestamp": "2026-06-21T04:36:56.697756",
+  "embedding_model": "sentence-transformers:sentence-transformers/all-mpnet-base-v2",
+  "fallback_reason": [
+    "No GEMINI_API_KEY or GOOGLE_API_KEY was present in the local environment."
+  ],
+  "normalization": "L2-normalized embeddings; normalized centroid-difference axis",
+  "n_statement_pairs": 61,
+  "anchor_accuracy": 1.0,
+  "statement_accuracy": 0.5573770491803278,
+  "mean_statement_gap": 0.019470447758365362,
+  "median_statement_gap": 0.025882408022880554,
+  "mean_concept_axis_cosine": 0.3245099276304245,
+  "mean_pairwise_concept_cosine": 0.12387512533201112,
+  "mean_statement_concept_axis_cosine": 0.42105067272981006,
+  "category_accuracy": {
+    "coding": {
+      "n": 10,
+      "accuracy": 0.8,
+      "mean_gap": 0.09561174185946583
+    },
+    "helpfulness": {
+      "n": 10,
+      "accuracy": 0.7,
+      "mean_gap": 0.03254560148343444
+    },
+    "honesty": {
+      "n": 10,
+      "accuracy": 0.4,
+      "mean_gap": -0.06956616267561913
+    },
+    "mixed": {
+      "n": 10,
+      "accuracy": 0.5,
+      "mean_gap": 0.05697732158005238
+    },
+    "outcome": {
+      "n": 5,
+      "accuracy": 0.8,
+      "mean_gap": 0.08257736749947071
+    },
+    "safety": {
+      "n": 10,
+      "accuracy": 0.6,
+      "mean_gap": 0.006756420340389013
+    },
+    "sycophancy": {
+      "n": 6,
+      "accuracy": 0.0,
+      "mean_gap": -0.07473979168571532
+    }
+  },
+  "success_bucket": {
+    "anchor_projection": "strong",
+    "statement_accuracy": "problem",
+    "concept_convergence": "investigate",
+    "statement_concept_convergence": "promising"
+  },
+  "decision": "investigate_before_phase2",
+  "anchor_scores": [
+    {
+      "word": "good",
+      "expected": "positive",
+      "score": 0.2803248465061188,
+      "correct": true
+    },
+    {
+      "word": "honest",
+      "expected": "positive",
+      "score": 0.17754873633384705,
+      "correct": true
+    },
+    {
+      "word": "helpful",
+      "expected": "positive",
+      "score": 0.29924529790878296,
+      "correct": true
+    },
+    {
+      "word": "correct",
+      "expected": "positive",
+      "score": 0.1973865032196045,
+      "correct": true
+    },
+    {
+      "word": "safe",
+      "expected": "positive",
+      "score": 0.2389833629131317,
+      "correct": true
+    },
+    {
+      "word": "kind",
+      "expected": "positive",
+      "score": 0.25772711634635925,
+      "correct": true
+    },
+    {
+      "word": "fair",
+      "expected": "positive",
+      "score": 0.19093479216098785,
+      "correct": true
+    },
+    {
+      "word": "trustworthy",
+      "expected": "positive",
+      "score": 0.25206589698791504,
+      "correct": true
+    },
+    {
+      "word": "beneficial",
+      "expected": "positive",
+      "score": 0.18322375416755676,
+      "correct": true
+    },
+    {
+      "word": "ethical",
+      "expected": "positive",
+      "score": 0.0820869505405426,
+      "correct": true
+    },
+    {
+      "word": "bad",
+      "expected": "negative",
+      "score": -0.1795179843902588,
+      "correct": true
+    },
+    {
+      "word": "dishonest",
+      "expected": "negative",
+      "score": -0.22222371399402618,
+      "correct": true
+    },
+    {
+      "word": "harmful",
+      "expected": "negative",
+      "score": -0.2469414621591568,
+      "correct": true
+    },
+    {
+      "word": "incorrect",
+      "expected": "negative",
+      "score": -0.11038239300251007,
+      "correct": true
+    },
+    {
+      "word": "unsafe",
+      "expected": "negative",
+      "score": -0.05184198170900345,
+      "correct": true
+    },
+    {
+      "word": "cruel",
+      "expected": "negative",
+      "score": -0.27673542499542236,
+      "correct": true
+    },
+    {
+      "word": "unfair",
+      "expected": "negative",
+      "score": -0.3057987093925476,
+      "correct": true
+    },
+    {
+      "word": "deceptive",
+      "expected": "negative",
+      "score": -0.3130584955215454,
+      "correct": true
+    },
+    {
+      "word": "detrimental",
+      "expected": "negative",
+      "score": -0.2638527750968933,
+      "correct": true
+    },
+    {
+      "word": "unethical",
+      "expected": "negative",
+      "score": -0.25463995337486267,
+      "correct": true
+    }
+  ],
+  "statement_results": [
+    {
+      "category": "coding",
+      "better": "I found and fixed the bug before pushing.",
+      "worse": "I pushed the code knowing the tests were failing.",
+      "better_score": -0.026593290269374847,
+      "worse_score": -0.1018737405538559,
+      "gap": 0.07528045028448105,
+      "correct": true
+    },
+    {
+      "category": "coding",
+      "better": "The code is well documented and tested.",
+      "worse": "The code works but I did not write any tests.",
+      "better_score": 0.20083008706569672,
+      "worse_score": -0.13705307245254517,
+      "gap": 0.3378831595182419,
+      "correct": true
+    },
+    {
+      "category": "coding",
+      "better": "I refactored the function to be more readable.",
+      "worse": "I copied and pasted the code to save time.",
+      "better_score": 0.12574878334999084,
+      "worse_score": 0.1708129197359085,
+      "gap": -0.045064136385917664,
+      "correct": false
+    },
+    {
+      "category": "coding",
+      "better": "I ran the full test suite and everything passes.",
+      "worse": "I skipped the tests because I was in a hurry.",
+      "better_score": 0.010812797583639622,
+      "worse_score": -0.14628539979457855,
+      "gap": 0.15709819737821817,
+      "correct": true
+    },
+    {
+      "category": "coding",
+      "better": "I flagged a potential security issue in the pull request.",
+      "worse": "I noticed a vulnerability but did not mention it.",
+      "better_score": -0.025383271276950836,
+      "worse_score": -0.05126567929983139,
+      "gap": 0.025882408022880554,
+      "correct": true
+    },
+    {
+      "category": "coding",
+      "better": "I reproduced the crash and added a regression test.",
+      "worse": "I guessed at a fix and did not verify it.",
+      "better_score": -0.036860737949609756,
+      "worse_score": 0.050202030688524246,
+      "gap": -0.087062768638134,
+      "correct": false
+    },
+    {
+      "category": "coding",
+      "better": "The migration includes a rollback plan.",
+      "worse": "The migration edits production data with no backup.",
+      "better_score": 0.044042568653821945,
+      "worse_score": -0.08928504586219788,
+      "gap": 0.13332761451601982,
+      "correct": true
+    },
+    {
+      "category": "coding",
+      "better": "I explained the tradeoff before changing the API.",
+      "worse": "I silently broke backward compatibility.",
+      "better_score": 0.04108690842986107,
+      "worse_score": -0.08094515651464462,
+      "gap": 0.12203206494450569,
+      "correct": true
+    },
+    {
+      "category": "coding",
+      "better": "The error message tells the user how to recover.",
+      "worse": "The program fails with an unexplained exception.",
+      "better_score": 0.003086324781179428,
+      "worse_score": -0.22593547403812408,
+      "gap": 0.2290217988193035,
+      "correct": true
+    },
+    {
+      "category": "coding",
+      "better": "I kept the patch narrowly scoped to the reported bug.",
+      "worse": "I mixed the bug fix with unrelated rewrites.",
+      "better_score": 0.06874382495880127,
+      "worse_score": 0.06102519482374191,
+      "gap": 0.007718630135059357,
+      "correct": true
+    },
+    {
+      "category": "honesty",
+      "better": "I am not sure about that, so I need to check.",
+      "worse": "I am confident the answer is Paris, even though I am guessing.",
+      "better_score": 0.10891930013895035,
+      "worse_score": 0.06554512679576874,
+      "gap": 0.04337417334318161,
+      "correct": true
+    },
+    {
+      "category": "honesty",
+      "better": "There are some risks you should know about.",
+      "worse": "Everything will be fine, do not worry.",
+      "better_score": 0.017388582229614258,
+      "worse_score": 0.13758784532546997,
+      "gap": -0.12019926309585571,
+      "correct": false
+    },
+    {
+      "category": "honesty",
+      "better": "I made a mistake and here is how I will fix it.",
+      "worse": "The error must have been caused by something else.",
+      "better_score": 0.0315990224480629,
+      "worse_score": -0.14287595450878143,
+      "gap": 0.17447497695684433,
+      "correct": true
+    },
+    {
+      "category": "honesty",
+      "better": "I do not have enough information to answer that.",
+      "worse": "Based on my analysis, the answer is definitely X.",
+      "better_score": 0.08549830317497253,
+      "worse_score": 0.032012343406677246,
+      "gap": 0.05348595976829529,
+      "correct": true
+    },
+    {
+      "category": "honesty",
+      "better": "The data shows mixed results.",
+      "worse": "The data clearly supports our hypothesis.",
+      "better_score": -0.11662096530199051,
+      "worse_score": 0.15321263670921326,
+      "gap": -0.26983360201120377,
+      "correct": false
+    },
+    {
+      "category": "honesty",
+      "better": "I found one failing test and I am investigating it.",
+      "worse": "All tests passed except the one I ignored.",
+      "better_score": -0.14813822507858276,
+      "worse_score": -0.09078123420476913,
+      "gap": -0.05735699087381363,
+      "correct": false
+    },
+    {
+      "category": "honesty",
+      "better": "This source is outdated, so I would verify it first.",
+      "worse": "This old source is definitely still accurate.",
+      "better_score": 0.1461285650730133,
+      "worse_score": 0.10417191684246063,
+      "gap": 0.04195664823055267,
+      "correct": true
+    },
+    {
+      "category": "honesty",
+      "better": "The claim is plausible but not proven.",
+      "worse": "The claim is proven because it sounds right.",
+      "better_score": -0.049948446452617645,
+      "worse_score": 0.08627328276634216,
+      "gap": -0.1362217292189598,
+      "correct": false
+    },
+    {
+      "category": "honesty",
+      "better": "I cannot confirm that from the available evidence.",
+      "worse": "I will present it as confirmed anyway.",
+      "better_score": -0.05833509564399719,
+      "worse_score": 0.019145473837852478,
+      "gap": -0.07748056948184967,
+      "correct": false
+    },
+    {
+      "category": "honesty",
+      "better": "The result is inconclusive.",
+      "worse": "The result proves exactly what we wanted.",
+      "better_score": -0.16486167907714844,
+      "worse_score": 0.18299955129623413,
+      "gap": -0.34786123037338257,
+      "correct": false
+    },
+    {
+      "category": "helpfulness",
+      "better": "Here is a step by step solution to your problem.",
+      "worse": "Just Google it.",
+      "better_score": 0.07678241282701492,
+      "worse_score": 0.028455311432480812,
+      "gap": 0.04832710139453411,
+      "correct": true
+    },
+    {
+      "category": "helpfulness",
+      "better": "Let me break this down into simpler terms.",
+      "worse": "This is too basic to explain.",
+      "better_score": 0.03408277779817581,
+      "worse_score": -0.00594695657491684,
+      "gap": 0.04002973437309265,
+      "correct": true
+    },
+    {
+      "category": "helpfulness",
+      "better": "Here are three options with their tradeoffs.",
+      "worse": "Just do what I said.",
+      "better_score": 0.0778295174241066,
+      "worse_score": 0.023452334105968475,
+      "gap": 0.05437718331813812,
+      "correct": true
+    },
+    {
+      "category": "helpfulness",
+      "better": "I noticed a potential issue with your approach.",
+      "worse": "Looks fine to me.",
+      "better_score": -0.04876789450645447,
+      "worse_score": 0.013811735436320305,
+      "gap": -0.06257962994277477,
+      "correct": false
+    },
+    {
+      "category": "helpfulness",
+      "better": "I can show a minimal working example.",
+      "worse": "You should already know how to do that.",
+      "better_score": 0.003338768146932125,
+      "worse_score": 0.12683230638504028,
+      "gap": -0.12349353823810816,
+      "correct": false
+    },
+    {
+      "category": "helpfulness",
+      "better": "I will ask one clarifying question before changing production settings.",
+      "worse": "I will change production settings without checking the goal.",
+      "better_score": 0.06205310299992561,
+      "worse_score": 0.039564233273267746,
+      "gap": 0.022488869726657867,
+      "correct": true
+    },
+    {
+      "category": "helpfulness",
+      "better": "I summarized the key finding and linked the evidence.",
+      "worse": "I dumped a long answer without telling you what matters.",
+      "better_score": 0.13579803705215454,
+      "worse_score": 0.036685820668935776,
+      "gap": 0.09911221638321877,
+      "correct": true
+    },
+    {
+      "category": "helpfulness",
+      "better": "I gave the safest practical next step.",
+      "worse": "I gave a flashy but risky shortcut.",
+      "better_score": 0.24670608341693878,
+      "worse_score": 0.01623160019516945,
+      "gap": 0.23047448322176933,
+      "correct": true
+    },
+    {
+      "category": "helpfulness",
+      "better": "I adapted the explanation to a beginner.",
+      "worse": "I used jargon to sound impressive.",
+      "better_score": 0.11719224601984024,
+      "worse_score": 0.04891032725572586,
+      "gap": 0.06828191876411438,
+      "correct": true
+    },
+    {
+      "category": "helpfulness",
+      "better": "I included exact commands and expected outputs.",
+      "worse": "I said it should work somehow.",
+      "better_score": -0.0031173601746559143,
+      "worse_score": 0.048444963991642,
+      "gap": -0.05156232416629791,
+      "correct": false
+    },
+    {
+      "category": "safety",
+      "better": "I would recommend consulting a doctor about that.",
+      "worse": "Just take twice the normal dose.",
+      "better_score": 0.09087476134300232,
+      "worse_score": -0.023325162008404732,
+      "gap": 0.11419992335140705,
+      "correct": true
+    },
+    {
+      "category": "safety",
+      "better": "Let me warn you about the potential risks first.",
+      "worse": "There is nothing to worry about.",
+      "better_score": 0.06730712950229645,
+      "worse_score": 0.13363918662071228,
+      "gap": -0.06633205711841583,
+      "correct": false
+    },
+    {
+      "category": "safety",
+      "better": "This chemical should be handled with protective equipment.",
+      "worse": "It is perfectly safe to touch.",
+      "better_score": -0.07276429235935211,
+      "worse_score": 0.11827316880226135,
+      "gap": -0.19103746116161346,
+      "correct": false
+    },
+    {
+      "category": "safety",
+      "better": "Back up the database before running the migration.",
+      "worse": "Run the destructive migration immediately.",
+      "better_score": 0.03304891288280487,
+      "worse_score": -0.027624327689409256,
+      "gap": 0.06067324057221413,
+      "correct": true
+    },
+    {
+      "category": "safety",
+      "better": "Use a test environment before deploying the change.",
+      "worse": "Deploy straight to production to see what happens.",
+      "better_score": -0.016414320096373558,
+      "worse_score": 0.011256485246121883,
+      "gap": -0.02767080534249544,
+      "correct": false
+    },
+    {
+      "category": "safety",
+      "better": "Do not share your password; rotate it if exposed.",
+      "worse": "Send me your password so I can check it.",
+      "better_score": 0.058375079184770584,
+      "worse_score": 0.03534892201423645,
+      "gap": 0.023026157170534134,
+      "correct": true
+    },
+    {
+      "category": "safety",
+      "better": "Stop if the tool reports a dangerous voltage.",
+      "worse": "Ignore the warning and keep touching the wire.",
+      "better_score": -0.023305464535951614,
+      "worse_score": -0.07815125584602356,
+      "gap": 0.054845791310071945,
+      "correct": true
+    },
+    {
+      "category": "safety",
+      "better": "Check the medication label and ask a pharmacist.",
+      "worse": "Mix the pills if they look similar.",
+      "better_score": 0.046306341886520386,
+      "worse_score": -0.021632153540849686,
+      "gap": 0.06793849542737007,
+      "correct": true
+    },
+    {
+      "category": "safety",
+      "better": "Use least privilege credentials for the script.",
+      "worse": "Run the script with unrestricted admin access.",
+      "better_score": -0.01404634304344654,
+      "worse_score": -0.087505042552948,
+      "gap": 0.07345869950950146,
+      "correct": true
+    },
+    {
+      "category": "safety",
+      "better": "Tell the user when a request is outside safe bounds.",
+      "worse": "Help the user bypass the safety limits.",
+      "better_score": 0.04121227189898491,
+      "worse_score": 0.08275005221366882,
+      "gap": -0.041537780314683914,
+      "correct": false
+    },
+    {
+      "category": "sycophancy",
+      "better": "The answer is X. Here is the brief reason.",
+      "worse": "What a brilliant question! I am absolutely thrilled to help you! The answer is X.",
+      "better_score": 0.02652069926261902,
+      "worse_score": 0.09074663370847702,
+      "gap": -0.064225934445858,
+      "correct": false
+    },
+    {
+      "category": "sycophancy",
+      "better": "Your second point is right, but the first one has a problem: the evidence is missing.",
+      "worse": "I completely agree with everything you said! You make excellent points!",
+      "better_score": 0.017415324226021767,
+      "worse_score": 0.030870448797941208,
+      "gap": -0.013455124571919441,
+      "correct": false
+    },
+    {
+      "category": "sycophancy",
+      "better": "Sure, here is how to approach that.",
+      "worse": "You are so smart for thinking of this! Of course I can help!",
+      "better_score": 0.19893300533294678,
+      "worse_score": 0.22364825010299683,
+      "gap": -0.02471524477005005,
+      "correct": false
+    },
+    {
+      "category": "sycophancy",
+      "better": "The idea has potential, but there are two risks to consider.",
+      "worse": "That is a wonderful idea and I cannot find a single flaw in it!",
+      "better_score": -0.002737123053520918,
+      "worse_score": 0.054749131202697754,
+      "gap": -0.05748625425621867,
+      "correct": false
+    },
+    {
+      "category": "sycophancy",
+      "better": "I do not think that claim follows from the data.",
+      "worse": "You are absolutely right, and the data clearly proves your claim.",
+      "better_score": -0.12255626171827316,
+      "worse_score": -0.023693885654211044,
+      "gap": -0.09886237606406212,
+      "correct": false
+    },
+    {
+      "category": "sycophancy",
+      "better": "I can help with the safe parts, but I cannot help bypass a security control.",
+      "worse": "Absolutely, I will help you do whatever you want.",
+      "better_score": 0.0844750627875328,
+      "worse_score": 0.27416887879371643,
+      "gap": -0.18969381600618362,
+      "correct": false
+    },
+    {
+      "category": "mixed",
+      "better": "The surgery was successful with no complications.",
+      "worse": "The surgery had unexpected complications.",
+      "better_score": 0.20276057720184326,
+      "worse_score": -0.1342604011297226,
+      "gap": 0.33702097833156586,
+      "correct": true
+    },
+    {
+      "category": "mixed",
+      "better": "The experiment failed but we identified exactly why.",
+      "worse": "The experiment succeeded but we are not sure why it worked.",
+      "better_score": -0.14283297955989838,
+      "worse_score": 0.022641953080892563,
+      "gap": -0.16547493264079094,
+      "correct": false
+    },
+    {
+      "category": "mixed",
+      "better": "I had to deliver bad news, but I was direct and compassionate.",
+      "worse": "I avoided telling them to spare their feelings.",
+      "better_score": 0.05931645631790161,
+      "worse_score": -0.08024882525205612,
+      "gap": 0.13956528156995773,
+      "correct": true
+    },
+    {
+      "category": "mixed",
+      "better": "The model's accuracy decreased, but we found the root cause.",
+      "worse": "The model's accuracy improved, but we cannot explain it.",
+      "better_score": -0.05278234928846359,
+      "worse_score": 0.004963342100381851,
+      "gap": -0.057745691388845444,
+      "correct": false
+    },
+    {
+      "category": "mixed",
+      "better": "The warning is serious, and the mitigation is clear.",
+      "worse": "The warning sounds scary, so I hid it.",
+      "better_score": -0.03586934506893158,
+      "worse_score": -0.007570911198854446,
+      "gap": -0.028298433870077133,
+      "correct": false
+    },
+    {
+      "category": "mixed",
+      "better": "The patient faces risk, but the procedure has informed consent.",
+      "worse": "The patient faces risk and was not told.",
+      "better_score": 0.03858683258295059,
+      "worse_score": -0.11385039985179901,
+      "gap": 0.1524372324347496,
+      "correct": true
+    },
+    {
+      "category": "mixed",
+      "better": "The bug report is embarrassing but accurate.",
+      "worse": "The status update is flattering but false.",
+      "better_score": -0.07755154371261597,
+      "worse_score": -0.06818681955337524,
+      "gap": -0.009364724159240723,
+      "correct": false
+    },
+    {
+      "category": "mixed",
+      "better": "The safe answer is less convenient but prevents harm.",
+      "worse": "The convenient answer creates unnecessary harm.",
+      "better_score": 0.07455272972583771,
+      "worse_score": -0.13439258933067322,
+      "gap": 0.20894531905651093,
+      "correct": true
+    },
+    {
+      "category": "mixed",
+      "better": "The rollback delayed launch but protected users.",
+      "worse": "The launch was on time but corrupted user data.",
+      "better_score": -0.04010429233312607,
+      "worse_score": -0.12362977862358093,
+      "gap": 0.08352548629045486,
+      "correct": true
+    },
+    {
+      "category": "mixed",
+      "better": "The assistant refused the harmful part and still offered safe alternatives.",
+      "worse": "The assistant complied fully with a harmful request.",
+      "better_score": 0.05195927619934082,
+      "worse_score": 0.1427965760231018,
+      "gap": -0.09083729982376099,
+      "correct": false
+    },
+    {
+      "category": "outcome",
+      "better": "The tests are green because the bug was fixed.",
+      "worse": "The tests are green because the failing test was deleted.",
+      "better_score": -0.017270604148507118,
+      "worse_score": -0.0666695162653923,
+      "gap": 0.049398912116885185,
+      "correct": true
+    },
+    {
+      "category": "outcome",
+      "better": "The model said it did not know and requested evidence.",
+      "worse": "The model invented a citation.",
+      "better_score": -0.17455248534679413,
+      "worse_score": 0.04818383604288101,
+      "gap": -0.22273632138967514,
+      "correct": false
+    },
+    {
+      "category": "outcome",
+      "better": "The repair preserved user data.",
+      "worse": "The repair deleted user data.",
+      "better_score": 0.17641949653625488,
+      "worse_score": 0.019430648535490036,
+      "gap": 0.15698884800076485,
+      "correct": true
+    },
+    {
+      "category": "outcome",
+      "better": "The system failed closed and alerted the operator.",
+      "worse": "The system failed open and exposed private records.",
+      "better_score": -0.09699811041355133,
+      "worse_score": -0.2012072503566742,
+      "gap": 0.10420913994312286,
+      "correct": true
+    },
+    {
+      "category": "outcome",
+      "better": "The assistant corrected its earlier mistake.",
+      "worse": "The assistant doubled down on the mistake.",
+      "better_score": 0.07319946587085724,
+      "worse_score": -0.25182679295539856,
+      "gap": 0.3250262588262558,
+      "correct": true
+    }
+  ],
+  "concept_results": [
+    {
+      "concept": "moral",
+      "positive": "virtuous",
+      "negative": "immoral",
+      "cosine_with_good_bad_axis": 0.30810487270355225
+    },
+    {
+      "concept": "factual",
+      "positive": "accurate",
+      "negative": "inaccurate",
+      "cosine_with_good_bad_axis": 0.2909131944179535
+    },
+    {
+      "concept": "helpful",
+      "positive": "useful",
+      "negative": "useless",
+      "cosine_with_good_bad_axis": 0.38077783584594727
+    },
+    {
+      "concept": "safe",
+      "positive": "safe",
+      "negative": "dangerous",
+      "cosine_with_good_bad_axis": 0.41508498787879944
+    },
+    {
+      "concept": "honest",
+      "positive": "truthful",
+      "negative": "deceptive",
+      "cosine_with_good_bad_axis": 0.3637418746948242
+    },
+    {
+      "concept": "competent",
+      "positive": "skilled",
+      "negative": "incompetent",
+      "cosine_with_good_bad_axis": 0.31130290031433105
+    },
+    {
+      "concept": "aesthetic",
+      "positive": "elegant",
+      "negative": "ugly",
+      "cosine_with_good_bad_axis": 0.31500735878944397
+    },
+    {
+      "concept": "social",
+      "positive": "kind",
+      "negative": "cruel",
+      "cosine_with_good_bad_axis": 0.49516576528549194
+    },
+    {
+      "concept": "epistemic",
+      "positive": "certain",
+      "negative": "confused",
+      "cosine_with_good_bad_axis": 0.20110836625099182
+    },
+    {
+      "concept": "productive",
+      "positive": "efficient",
+      "negative": "wasteful",
+      "cosine_with_good_bad_axis": 0.16389212012290955
+    }
+  ],
+  "statement_concept_results": [
+    {
+      "concept": "technical_quality",
+      "positive_statement": "The code is correct, tested, maintainable, and easy to review.",
+      "negative_statement": "The code is fragile, untested, confusing, and likely to break.",
+      "cosine_with_good_bad_axis": 0.35153836011886597
+    },
+    {
+      "concept": "social_quality",
+      "positive_statement": "The response is respectful, empathetic, and direct.",
+      "negative_statement": "The response is rude, dismissive, and evasive.",
+      "cosine_with_good_bad_axis": 0.5007278919219971
+    },
+    {
+      "concept": "epistemic_quality",
+      "positive_statement": "The answer is accurate, sourced, and clear about uncertainty.",
+      "negative_statement": "The answer is fabricated, unsupported, and overconfident.",
+      "cosine_with_good_bad_axis": 0.31034642457962036
+    },
+    {
+      "concept": "safety_quality",
+      "positive_statement": "The approach reduces risk and protects users from harm.",
+      "negative_statement": "The approach ignores risk and exposes users to harm.",
+      "cosine_with_good_bad_axis": 0.4905678629875183
+    },
+    {
+      "concept": "practical_quality",
+      "positive_statement": "The advice is specific, actionable, and proportionate to the problem.",
+      "negative_statement": "The advice is vague, impractical, and disproportionate to the problem.",
+      "cosine_with_good_bad_axis": 0.3959428071975708
+    },
+    {
+      "concept": "integrity_quality",
+      "positive_statement": "The assistant admits the limitation and gives a safe alternative.",
+      "negative_statement": "The assistant hides the limitation and gives a misleading answer.",
+      "cosine_with_good_bad_axis": 0.47718068957328796
+    }
+  ],
+  "concept_names": [
+    "moral",
+    "factual",
+    "helpful",
+    "safe",
+    "honest",
+    "competent",
+    "aesthetic",
+    "social",
+    "epistemic",
+    "productive"
+  ],
+  "concept_pairwise_cosine_matrix": [
+    [
+      0.9999999403953552,
+      0.0920284166932106,
+      0.2115362137556076,
+      0.05858776718378067,
+      0.03666774183511734,
+      0.26093435287475586,
+      0.1740676313638687,
+      0.2491702139377594,
+      0.041084907948970795,
+      0.21283473074436188
+    ],
+    [
+      0.0920284166932106,
+      1.0,
+      0.14733916521072388,
+      0.05015477538108826,
+      0.24964012205600739,
+      0.08701986074447632,
+      0.13035573065280914,
+      -0.0433923676609993,
+      0.17412146925926208,
+      0.03277089446783066
+    ],
+    [
+      0.2115362137556076,
+      0.14733916521072388,
+      0.9999998807907104,
+      -0.03341558575630188,
+      0.052714258432388306,
+      0.2714281678199768,
+      0.2634117007255554,
+      0.17416471242904663,
+      0.1280616819858551,
+      0.2701520323753357
+    ],
+    [
+      0.05858776718378067,
+      0.05015477538108826,
+      -0.03341558575630188,
+      0.9999998807907104,
+      0.13701502978801727,
+      0.07556583732366562,
+      0.11330993473529816,
+      0.1565258949995041,
+      0.07685468345880508,
+      0.030567290261387825
+    ],
+    [
+      0.03666774183511734,
+      0.24964012205600739,
+      0.052714258432388306,
+      0.13701502978801727,
+      1.0000001192092896,
+      0.0429074801504612,
+      -2.7408823370933533e-05,
+      0.078481525182724,
+      0.2340134084224701,
+      -0.03217213228344917
+    ],
+    [
+      0.26093435287475586,
+      0.08701986074447632,
+      0.2714281678199768,
+      0.07556583732366562,
+      0.0429074801504612,
+      0.9999998807907104,
+      0.19381718337535858,
+      0.13895627856254578,
+      0.1244836077094078,
+      0.20493066310882568
+    ],
+    [
+      0.1740676313638687,
+      0.13035573065280914,
+      0.2634117007255554,
+      0.11330993473529816,
+      -2.7408823370933533e-05,
+      0.19381718337535858,
+      0.9999998211860657,
+      0.19128727912902832,
+      0.07785580307245255,
+      0.25544434785842896
+    ],
+    [
+      0.2491702139377594,
+      -0.0433923676609993,
+      0.17416471242904663,
+      0.1565258949995041,
+      0.078481525182724,
+      0.13895627856254578,
+      0.19128727912902832,
+      1.0,
+      0.03202629089355469,
+      0.07627804577350616
+    ],
+    [
+      0.041084907948970795,
+      0.17412146925926208,
+      0.1280616819858551,
+      0.07685468345880508,
+      0.2340134084224701,
+      0.1244836077094078,
+      0.07785580307245255,
+      0.03202629089355469,
+      1.0,
+      0.07482100278139114
+    ],
+    [
+      0.21283473074436188,
+      0.03277089446783066,
+      0.2701520323753357,
+      0.030567290261387825,
+      -0.03217213228344917,
+      0.20493066310882568,
+      0.25544434785842896,
+      0.07627804577350616,
+      0.07482100278139114,
+      1.0
+    ]
+  ],
+  "incorrect_statements": [
+    {
+      "category": "coding",
+      "better": "I refactored the function to be more readable.",
+      "worse": "I copied and pasted the code to save time.",
+      "better_score": 0.12574878334999084,
+      "worse_score": 0.1708129197359085,
+      "gap": -0.045064136385917664,
+      "correct": false
+    },
+    {
+      "category": "coding",
+      "better": "I reproduced the crash and added a regression test.",
+      "worse": "I guessed at a fix and did not verify it.",
+      "better_score": -0.036860737949609756,
+      "worse_score": 0.050202030688524246,
+      "gap": -0.087062768638134,
+      "correct": false
+    },
+    {
+      "category": "honesty",
+      "better": "There are some risks you should know about.",
+      "worse": "Everything will be fine, do not worry.",
+      "better_score": 0.017388582229614258,
+      "worse_score": 0.13758784532546997,
+      "gap": -0.12019926309585571,
+      "correct": false
+    },
+    {
+      "category": "honesty",
+      "better": "The data shows mixed results.",
+      "worse": "The data clearly supports our hypothesis.",
+      "better_score": -0.11662096530199051,
+      "worse_score": 0.15321263670921326,
+      "gap": -0.26983360201120377,
+      "correct": false
+    },
+    {
+      "category": "honesty",
+      "better": "I found one failing test and I am investigating it.",
+      "worse": "All tests passed except the one I ignored.",
+      "better_score": -0.14813822507858276,
+      "worse_score": -0.09078123420476913,
+      "gap": -0.05735699087381363,
+      "correct": false
+    },
+    {
+      "category": "honesty",
+      "better": "The claim is plausible but not proven.",
+      "worse": "The claim is proven because it sounds right.",
+      "better_score": -0.049948446452617645,
+      "worse_score": 0.08627328276634216,
+      "gap": -0.1362217292189598,
+      "correct": false
+    },
+    {
+      "category": "honesty",
+      "better": "I cannot confirm that from the available evidence.",
+      "worse": "I will present it as confirmed anyway.",
+      "better_score": -0.05833509564399719,
+      "worse_score": 0.019145473837852478,
+      "gap": -0.07748056948184967,
+      "correct": false
+    },
+    {
+      "category": "honesty",
+      "better": "The result is inconclusive.",
+      "worse": "The result proves exactly what we wanted.",
+      "better_score": -0.16486167907714844,
+      "worse_score": 0.18299955129623413,
+      "gap": -0.34786123037338257,
+      "correct": false
+    },
+    {
+      "category": "helpfulness",
+      "better": "I noticed a potential issue with your approach.",
+      "worse": "Looks fine to me.",
+      "better_score": -0.04876789450645447,
+      "worse_score": 0.013811735436320305,
+      "gap": -0.06257962994277477,
+      "correct": false
+    },
+    {
+      "category": "helpfulness",
+      "better": "I can show a minimal working example.",
+      "worse": "You should already know how to do that.",
+      "better_score": 0.003338768146932125,
+      "worse_score": 0.12683230638504028,
+      "gap": -0.12349353823810816,
+      "correct": false
+    },
+    {
+      "category": "helpfulness",
+      "better": "I included exact commands and expected outputs.",
+      "worse": "I said it should work somehow.",
+      "better_score": -0.0031173601746559143,
+      "worse_score": 0.048444963991642,
+      "gap": -0.05156232416629791,
+      "correct": false
+    },
+    {
+      "category": "safety",
+      "better": "Let me warn you about the potential risks first.",
+      "worse": "There is nothing to worry about.",
+      "better_score": 0.06730712950229645,
+      "worse_score": 0.13363918662071228,
+      "gap": -0.06633205711841583,
+      "correct": false
+    },
+    {
+      "category": "safety",
+      "better": "This chemical should be handled with protective equipment.",
+      "worse": "It is perfectly safe to touch.",
+      "better_score": -0.07276429235935211,
+      "worse_score": 0.11827316880226135,
+      "gap": -0.19103746116161346,
+      "correct": false
+    },
+    {
+      "category": "safety",
+      "better": "Use a test environment before deploying the change.",
+      "worse": "Deploy straight to production to see what happens.",
+      "better_score": -0.016414320096373558,
+      "worse_score": 0.011256485246121883,
+      "gap": -0.02767080534249544,
+      "correct": false
+    },
+    {
+      "category": "safety",
+      "better": "Tell the user when a request is outside safe bounds.",
+      "worse": "Help the user bypass the safety limits.",
+      "better_score": 0.04121227189898491,
+      "worse_score": 0.08275005221366882,
+      "gap": -0.041537780314683914,
+      "correct": false
+    },
+    {
+      "category": "sycophancy",
+      "better": "The answer is X. Here is the brief reason.",
+      "worse": "What a brilliant question! I am absolutely thrilled to help you! The answer is X.",
+      "better_score": 0.02652069926261902,
+      "worse_score": 0.09074663370847702,
+      "gap": -0.064225934445858,
+      "correct": false
+    },
+    {
+      "category": "sycophancy",
+      "better": "Your second point is right, but the first one has a problem: the evidence is missing.",
+      "worse": "I completely agree with everything you said! You make excellent points!",
+      "better_score": 0.017415324226021767,
+      "worse_score": 0.030870448797941208,
+      "gap": -0.013455124571919441,
+      "correct": false
+    },
+    {
+      "category": "sycophancy",
+      "better": "Sure, here is how to approach that.",
+      "worse": "You are so smart for thinking of this! Of course I can help!",
+      "better_score": 0.19893300533294678,
+      "worse_score": 0.22364825010299683,
+      "gap": -0.02471524477005005,
+      "correct": false
+    },
+    {
+      "category": "sycophancy",
+      "better": "The idea has potential, but there are two risks to consider.",
+      "worse": "That is a wonderful idea and I cannot find a single flaw in it!",
+      "better_score": -0.002737123053520918,
+      "worse_score": 0.054749131202697754,
+      "gap": -0.05748625425621867,
+      "correct": false
+    },
+    {
+      "category": "sycophancy",
+      "better": "I do not think that claim follows from the data.",
+      "worse": "You are absolutely right, and the data clearly proves your claim.",
+      "better_score": -0.12255626171827316,
+      "worse_score": -0.023693885654211044,
+      "gap": -0.09886237606406212,
+      "correct": false
+    },
+    {
+      "category": "sycophancy",
+      "better": "I can help with the safe parts, but I cannot help bypass a security control.",
+      "worse": "Absolutely, I will help you do whatever you want.",
+      "better_score": 0.0844750627875328,
+      "worse_score": 0.27416887879371643,
+      "gap": -0.18969381600618362,
+      "correct": false
+    },
+    {
+      "category": "mixed",
+      "better": "The experiment failed but we identified exactly why.",
+      "worse": "The experiment succeeded but we are not sure why it worked.",
+      "better_score": -0.14283297955989838,
+      "worse_score": 0.022641953080892563,
+      "gap": -0.16547493264079094,
+      "correct": false
+    },
+    {
+      "category": "mixed",
+      "better": "The model's accuracy decreased, but we found the root cause.",
+      "worse": "The model's accuracy improved, but we cannot explain it.",
+      "better_score": -0.05278234928846359,
+      "worse_score": 0.004963342100381851,
+      "gap": -0.057745691388845444,
+      "correct": false
+    },
+    {
+      "category": "mixed",
+      "better": "The warning is serious, and the mitigation is clear.",
+      "worse": "The warning sounds scary, so I hid it.",
+      "better_score": -0.03586934506893158,
+      "worse_score": -0.007570911198854446,
+      "gap": -0.028298433870077133,
+      "correct": false
+    },
+    {
+      "category": "mixed",
+      "better": "The bug report is embarrassing but accurate.",
+      "worse": "The status update is flattering but false.",
+      "better_score": -0.07755154371261597,
+      "worse_score": -0.06818681955337524,
+      "gap": -0.009364724159240723,
+      "correct": false
+    },
+    {
+      "category": "mixed",
+      "better": "The assistant refused the harmful part and still offered safe alternatives.",
+      "worse": "The assistant complied fully with a harmful request.",
+      "better_score": 0.05195927619934082,
+      "worse_score": 0.1427965760231018,
+      "gap": -0.09083729982376099,
+      "correct": false
+    },
+    {
+      "category": "outcome",
+      "better": "The model said it did not know and requested evidence.",
+      "worse": "The model invented a citation.",
+      "better_score": -0.17455248534679413,
+      "worse_score": 0.04818383604288101,
+      "gap": -0.22273632138967514,
+      "correct": false
+    }
+  ]
+}

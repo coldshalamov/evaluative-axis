@@ -1,0 +1,198 @@
+{
+  "timestamp": "2026-06-22T12:51:10.992921",
+  "model": "BAAI/bge-large-en-v1.5",
+  "sample_size": 50,
+  "baselines": {
+    "random_theoretical": 0.5,
+    "length_prefer_longer": 0.42,
+    "sentiment_vader_prefer_positive": 0.46
+  },
+  "variant_results": {
+    "response_only__multi_anchor_sentences": {
+      "mode": "response_only",
+      "axis_strategy": "multi_anchor_sentences",
+      "agreement": 0.5,
+      "sentiment_discordant_n": 26,
+      "sentiment_discordant_agreement": 0.3076923076923077,
+      "mean_score_gap": -0.0285527609474957,
+      "median_abs_score_gap": 0.07704557850956917,
+      "top_half_confidence_agreement": 0.28,
+      "z_vs_random": 0.0,
+      "p_vs_random": 1.0,
+      "failure_breakdown": {
+        "context_or_label_disagreement": {
+          "count": 4,
+          "share_of_failures": 0.16
+        },
+        "length_bias": {
+          "count": 12,
+          "share_of_failures": 0.48
+        },
+        "low_confidence": {
+          "count": 5,
+          "share_of_failures": 0.2
+        },
+        "positive_tone_bias": {
+          "count": 4,
+          "share_of_failures": 0.16
+        }
+      }
+    },
+    "response_only__anti_sycophancy_quality": {
+      "mode": "response_only",
+      "axis_strategy": "anti_sycophancy_quality",
+      "agreement": 0.54,
+      "sentiment_discordant_n": 26,
+      "sentiment_discordant_agreement": 0.4230769230769231,
+      "mean_score_gap": -0.01094430185854435,
+      "median_abs_score_gap": 0.04850388504564762,
+      "top_half_confidence_agreement": 0.44,
+      "z_vs_random": 0.5656854249492386,
+      "p_vs_random": 0.5716076449533313,
+      "failure_breakdown": {
+        "context_or_label_disagreement": {
+          "count": 4,
+          "share_of_failures": 0.17391304347826086
+        },
+        "length_bias": {
+          "count": 11,
+          "share_of_failures": 0.4782608695652174
+        },
+        "low_confidence": {
+          "count": 4,
+          "share_of_failures": 0.17391304347826086
+        },
+        "positive_tone_bias": {
+          "count": 4,
+          "share_of_failures": 0.17391304347826086
+        }
+      }
+    },
+    "prompt_response__multi_anchor_sentences": {
+      "mode": "prompt_response",
+      "axis_strategy": "multi_anchor_sentences",
+      "agreement": 0.4,
+      "sentiment_discordant_n": 26,
+      "sentiment_discordant_agreement": 0.23076923076923078,
+      "mean_score_gap": -0.007266609156504273,
+      "median_abs_score_gap": 0.014119507744908333,
+      "top_half_confidence_agreement": 0.28,
+      "z_vs_random": -1.4142135623730947,
+      "p_vs_random": 0.15729920705028527,
+      "failure_breakdown": {
+        "context_or_label_disagreement": {
+          "count": 7,
+          "share_of_failures": 0.23333333333333334
+        },
+        "length_bias": {
+          "count": 15,
+          "share_of_failures": 0.5
+        },
+        "low_confidence": {
+          "count": 5,
+          "share_of_failures": 0.16666666666666666
+        },
+        "positive_tone_bias": {
+          "count": 3,
+          "share_of_failures": 0.1
+        }
+      }
+    },
+    "prompt_response__anti_sycophancy_quality": {
+      "mode": "prompt_response",
+      "axis_strategy": "anti_sycophancy_quality",
+      "agreement": 0.5,
+      "sentiment_discordant_n": 26,
+      "sentiment_discordant_agreement": 0.4230769230769231,
+      "mean_score_gap": -0.004119704924523831,
+      "median_abs_score_gap": 0.011423969641327858,
+      "top_half_confidence_agreement": 0.48,
+      "z_vs_random": 0.0,
+      "p_vs_random": 1.0,
+      "failure_breakdown": {
+        "context_or_label_disagreement": {
+          "count": 5,
+          "share_of_failures": 0.2
+        },
+        "length_bias": {
+          "count": 15,
+          "share_of_failures": 0.6
+        },
+        "low_confidence": {
+          "count": 3,
+          "share_of_failures": 0.12
+        },
+        "positive_tone_bias": {
+          "count": 2,
+          "share_of_failures": 0.08
+        }
+      }
+    },
+    "atomic_evaluation__multi_anchor_sentences": {
+      "mode": "atomic_evaluation",
+      "axis_strategy": "multi_anchor_sentences",
+      "agreement": 0.49,
+      "sentiment_discordant_n": 26,
+      "sentiment_discordant_agreement": 0.4423076923076923,
+      "mean_score_gap": -0.0012689056899398566,
+      "median_abs_score_gap": 0.007275838404893875,
+      "top_half_confidence_agreement": 0.44,
+      "z_vs_random": -0.14142135623730964,
+      "p_vs_random": 0.887537083981715,
+      "failure_breakdown": {
+        "context_or_label_disagreement": {
+          "count": 5,
+          "share_of_failures": 0.19230769230769232
+        },
+        "length_bias": {
+          "count": 11,
+          "share_of_failures": 0.4230769230769231
+        },
+        "low_confidence": {
+          "count": 6,
+          "share_of_failures": 0.23076923076923078
+        },
+        "positive_tone_bias": {
+          "count": 4,
+          "share_of_failures": 0.15384615384615385
+        }
+      }
+    },
+    "atomic_evaluation__anti_sycophancy_quality": {
+      "mode": "atomic_evaluation",
+      "axis_strategy": "anti_sycophancy_quality",
+      "agreement": 0.61,
+      "sentiment_discordant_n": 26,
+      "sentiment_discordant_agreement": 0.5961538461538461,
+      "mean_score_gap": 0.0010697209974750877,
+      "median_abs_score_gap": 0.007234721910208464,
+      "top_half_confidence_agreement": 0.52,
+      "z_vs_random": 1.5556349186104044,
+      "p_vs_random": 0.11979493042591835,
+      "failure_breakdown": {
+        "context_or_label_disagreement": {
+          "count": 5,
+          "share_of_failures": 0.25
+        },
+        "length_bias": {
+          "count": 6,
+          "share_of_failures": 0.3
+        },
+        "low_confidence": {
+          "count": 3,
+          "share_of_failures": 0.15
+        },
+        "positive_tone_bias": {
+          "count": 6,
+          "share_of_failures": 0.3
+        }
+      }
+    }
+  },
+  "best_variant": "atomic_evaluation__anti_sycophancy_quality",
+  "best_agreement": 0.61,
+  "notes": {
+    "colab_mcp_connection": "false",
+    "gemini_status": "blocked by AI Studio rate limit: Gemini Embedding 2 RPD exceeded"
+  }
+}

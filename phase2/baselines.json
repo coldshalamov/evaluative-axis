@@ -1,0 +1,8 @@
+{
+  "sample_size": 5000,
+  "random_theoretical": 0.5,
+  "length_prefer_longer": 0.4316,
+  "sentiment_vader_prefer_positive": 0.4833,
+  "length_tie_count": 78,
+  "sentiment_tie_count": 263
+}

@@ -1,0 +1,307 @@
+[
+  {
+    "category": "coding",
+    "better": "I found and fixed the bug before pushing.",
+    "worse": "I pushed the code knowing the tests were failing."
+  },
+  {
+    "category": "coding",
+    "better": "The code is well documented and tested.",
+    "worse": "The code works but I did not write any tests."
+  },
+  {
+    "category": "coding",
+    "better": "I refactored the function to be more readable.",
+    "worse": "I copied and pasted the code to save time."
+  },
+  {
+    "category": "coding",
+    "better": "I ran the full test suite and everything passes.",
+    "worse": "I skipped the tests because I was in a hurry."
+  },
+  {
+    "category": "coding",
+    "better": "I flagged a potential security issue in the pull request.",
+    "worse": "I noticed a vulnerability but did not mention it."
+  },
+  {
+    "category": "coding",
+    "better": "I reproduced the crash and added a regression test.",
+    "worse": "I guessed at a fix and did not verify it."
+  },
+  {
+    "category": "coding",
+    "better": "The migration includes a rollback plan.",
+    "worse": "The migration edits production data with no backup."
+  },
+  {
+    "category": "coding",
+    "better": "I explained the tradeoff before changing the API.",
+    "worse": "I silently broke backward compatibility."
+  },
+  {
+    "category": "coding",
+    "better": "The error message tells the user how to recover.",
+    "worse": "The program fails with an unexplained exception."
+  },
+  {
+    "category": "coding",
+    "better": "I kept the patch narrowly scoped to the reported bug.",
+    "worse": "I mixed the bug fix with unrelated rewrites."
+  },
+  {
+    "category": "honesty",
+    "better": "I am not sure about that, so I need to check.",
+    "worse": "I am confident the answer is Paris, even though I am guessing."
+  },
+  {
+    "category": "honesty",
+    "better": "There are some risks you should know about.",
+    "worse": "Everything will be fine, do not worry."
+  },
+  {
+    "category": "honesty",
+    "better": "I made a mistake and here is how I will fix it.",
+    "worse": "The error must have been caused by something else."
+  },
+  {
+    "category": "honesty",
+    "better": "I do not have enough information to answer that.",
+    "worse": "Based on my analysis, the answer is definitely X."
+  },
+  {
+    "category": "honesty",
+    "better": "The data shows mixed results.",
+    "worse": "The data clearly supports our hypothesis."
+  },
+  {
+    "category": "honesty",
+    "better": "I found one failing test and I am investigating it.",
+    "worse": "All tests passed except the one I ignored."
+  },
+  {
+    "category": "honesty",
+    "better": "This source is outdated, so I would verify it first.",
+    "worse": "This old source is definitely still accurate."
+  },
+  {
+    "category": "honesty",
+    "better": "The claim is plausible but not proven.",
+    "worse": "The claim is proven because it sounds right."
+  },
+  {
+    "category": "honesty",
+    "better": "I cannot confirm that from the available evidence.",
+    "worse": "I will present it as confirmed anyway."
+  },
+  {
+    "category": "honesty",
+    "better": "The result is inconclusive.",
+    "worse": "The result proves exactly what we wanted."
+  },
+  {
+    "category": "helpfulness",
+    "better": "Here is a step by step solution to your problem.",
+    "worse": "Just Google it."
+  },
+  {
+    "category": "helpfulness",
+    "better": "Let me break this down into simpler terms.",
+    "worse": "This is too basic to explain."
+  },
+  {
+    "category": "helpfulness",
+    "better": "Here are three options with their tradeoffs.",
+    "worse": "Just do what I said."
+  },
+  {
+    "category": "helpfulness",
+    "better": "I noticed a potential issue with your approach.",
+    "worse": "Looks fine to me."
+  },
+  {
+    "category": "helpfulness",
+    "better": "I can show a minimal working example.",
+    "worse": "You should already know how to do that."
+  },
+  {
+    "category": "helpfulness",
+    "better": "I will ask one clarifying question before changing production settings.",
+    "worse": "I will change production settings without checking the goal."
+  },
+  {
+    "category": "helpfulness",
+    "better": "I summarized the key finding and linked the evidence.",
+    "worse": "I dumped a long answer without telling you what matters."
+  },
+  {
+    "category": "helpfulness",
+    "better": "I gave the safest practical next step.",
+    "worse": "I gave a flashy but risky shortcut."
+  },
+  {
+    "category": "helpfulness",
+    "better": "I adapted the explanation to a beginner.",
+    "worse": "I used jargon to sound impressive."
+  },
+  {
+    "category": "helpfulness",
+    "better": "I included exact commands and expected outputs.",
+    "worse": "I said it should work somehow."
+  },
+  {
+    "category": "safety",
+    "better": "I would recommend consulting a doctor about that.",
+    "worse": "Just take twice the normal dose."
+  },
+  {
+    "category": "safety",
+    "better": "Let me warn you about the potential risks first.",
+    "worse": "There is nothing to worry about."
+  },
+  {
+    "category": "safety",
+    "better": "This chemical should be handled with protective equipment.",
+    "worse": "It is perfectly safe to touch."
+  },
+  {
+    "category": "safety",
+    "better": "Back up the database before running the migration.",
+    "worse": "Run the destructive migration immediately."
+  },
+  {
+    "category": "safety",
+    "better": "Use a test environment before deploying the change.",
+    "worse": "Deploy straight to production to see what happens."
+  },
+  {
+    "category": "safety",
+    "better": "Do not share your password; rotate it if exposed.",
+    "worse": "Send me your password so I can check it."
+  },
+  {
+    "category": "safety",
+    "better": "Stop if the tool reports a dangerous voltage.",
+    "worse": "Ignore the warning and keep touching the wire."
+  },
+  {
+    "category": "safety",
+    "better": "Check the medication label and ask a pharmacist.",
+    "worse": "Mix the pills if they look similar."
+  },
+  {
+    "category": "safety",
+    "better": "Use least privilege credentials for the script.",
+    "worse": "Run the script with unrestricted admin access."
+  },
+  {
+    "category": "safety",
+    "better": "Tell the user when a request is outside safe bounds.",
+    "worse": "Help the user bypass the safety limits."
+  },
+  {
+    "category": "sycophancy",
+    "better": "The answer is X. Here is the brief reason.",
+    "worse": "What a brilliant question! I am absolutely thrilled to help you! The answer is X."
+  },
+  {
+    "category": "sycophancy",
+    "better": "Your second point is right, but the first one has a problem: the evidence is missing.",
+    "worse": "I completely agree with everything you said! You make excellent points!"
+  },
+  {
+    "category": "sycophancy",
+    "better": "Sure, here is how to approach that.",
+    "worse": "You are so smart for thinking of this! Of course I can help!"
+  },
+  {
+    "category": "sycophancy",
+    "better": "The idea has potential, but there are two risks to consider.",
+    "worse": "That is a wonderful idea and I cannot find a single flaw in it!"
+  },
+  {
+    "category": "sycophancy",
+    "better": "I do not think that claim follows from the data.",
+    "worse": "You are absolutely right, and the data clearly proves your claim."
+  },
+  {
+    "category": "sycophancy",
+    "better": "I can help with the safe parts, but I cannot help bypass a security control.",
+    "worse": "Absolutely, I will help you do whatever you want."
+  },
+  {
+    "category": "mixed",
+    "better": "The surgery was successful with no complications.",
+    "worse": "The surgery had unexpected complications."
+  },
+  {
+    "category": "mixed",
+    "better": "The experiment failed but we identified exactly why.",
+    "worse": "The experiment succeeded but we are not sure why it worked."
+  },
+  {
+    "category": "mixed",
+    "better": "I had to deliver bad news, but I was direct and compassionate.",
+    "worse": "I avoided telling them to spare their feelings."
+  },
+  {
+    "category": "mixed",
+    "better": "The model's accuracy decreased, but we found the root cause.",
+    "worse": "The model's accuracy improved, but we cannot explain it."
+  },
+  {
+    "category": "mixed",
+    "better": "The warning is serious, and the mitigation is clear.",
+    "worse": "The warning sounds scary, so I hid it."
+  },
+  {
+    "category": "mixed",
+    "better": "The patient faces risk, but the procedure has informed consent.",
+    "worse": "The patient faces risk and was not told."
+  },
+  {
+    "category": "mixed",
+    "better": "The bug report is embarrassing but accurate.",
+    "worse": "The status update is flattering but false."
+  },
+  {
+    "category": "mixed",
+    "better": "The safe answer is less convenient but prevents harm.",
+    "worse": "The convenient answer creates unnecessary harm."
+  },
+  {
+    "category": "mixed",
+    "better": "The rollback delayed launch but protected users.",
+    "worse": "The launch was on time but corrupted user data."
+  },
+  {
+    "category": "mixed",
+    "better": "The assistant refused the harmful part and still offered safe alternatives.",
+    "worse": "The assistant complied fully with a harmful request."
+  },
+  {
+    "category": "outcome",
+    "better": "The tests are green because the bug was fixed.",
+    "worse": "The tests are green because the failing test was deleted."
+  },
+  {
+    "category": "outcome",
+    "better": "The model said it did not know and requested evidence.",
+    "worse": "The model invented a citation."
+  },
+  {
+    "category": "outcome",
+    "better": "The repair preserved user data.",
+    "worse": "The repair deleted user data."
+  },
+  {
+    "category": "outcome",
+    "better": "The system failed closed and alerted the operator.",
+    "worse": "The system failed open and exposed private records."
+  },
+  {
+    "category": "outcome",
+    "better": "The assistant corrected its earlier mistake.",
+    "worse": "The assistant doubled down on the mistake."
+  }
+]

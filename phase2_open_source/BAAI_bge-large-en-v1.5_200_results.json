@@ -1,0 +1,78 @@
+{
+  "timestamp": "2026-06-22T12:59:26.127176",
+  "model": "BAAI/bge-large-en-v1.5",
+  "sample_size": 200,
+  "baselines": {
+    "random_theoretical": 0.5,
+    "length_prefer_longer": 0.435,
+    "sentiment_vader_prefer_positive": 0.465
+  },
+  "variant_results": {
+    "atomic_evaluation__multi_anchor_sentences": {
+      "mode": "atomic_evaluation",
+      "axis_strategy": "multi_anchor_sentences",
+      "agreement": 0.5075,
+      "sentiment_discordant_n": 104,
+      "sentiment_discordant_agreement": 0.38461538461538464,
+      "mean_score_gap": -0.0002913664118386805,
+      "median_abs_score_gap": 0.005565021885558963,
+      "top_half_confidence_agreement": 0.5,
+      "z_vs_random": 0.21213203435596287,
+      "p_vs_random": 0.8320040285726376,
+      "failure_breakdown": {
+        "context_or_label_disagreement": {
+          "count": 14,
+          "share_of_failures": 0.13861386138613863
+        },
+        "length_bias": {
+          "count": 40,
+          "share_of_failures": 0.39603960396039606
+        },
+        "low_confidence": {
+          "count": 26,
+          "share_of_failures": 0.25742574257425743
+        },
+        "positive_tone_bias": {
+          "count": 21,
+          "share_of_failures": 0.2079207920792079
+        }
+      }
+    },
+    "atomic_evaluation__anti_sycophancy_quality": {
+      "mode": "atomic_evaluation",
+      "axis_strategy": "anti_sycophancy_quality",
+      "agreement": 0.5225,
+      "sentiment_discordant_n": 104,
+      "sentiment_discordant_agreement": 0.47115384615384615,
+      "mean_score_gap": 0.0011083241284359246,
+      "median_abs_score_gap": 0.005192293785512447,
+      "top_half_confidence_agreement": 0.52,
+      "z_vs_random": 0.6363961030678917,
+      "p_vs_random": 0.524518280213077,
+      "failure_breakdown": {
+        "context_or_label_disagreement": {
+          "count": 20,
+          "share_of_failures": 0.20408163265306123
+        },
+        "length_bias": {
+          "count": 34,
+          "share_of_failures": 0.3469387755102041
+        },
+        "low_confidence": {
+          "count": 27,
+          "share_of_failures": 0.2755102040816326
+        },
+        "positive_tone_bias": {
+          "count": 17,
+          "share_of_failures": 0.17346938775510204
+        }
+      }
+    }
+  },
+  "best_variant": "atomic_evaluation__anti_sycophancy_quality",
+  "best_agreement": 0.5225,
+  "notes": {
+    "colab_mcp_connection": "false",
+    "gemini_status": "blocked by AI Studio rate limit: Gemini Embedding 2 RPD exceeded"
+  }
+}

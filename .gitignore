@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+.tmp/
+tmp/
+**/tmp/
+**/emb.env
+.env.*
+.env.local
+*.npy
+*.npz
