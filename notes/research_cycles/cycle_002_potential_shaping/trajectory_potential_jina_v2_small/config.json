@@ -1,0 +1,6 @@
+{
+  "input": "C:\\Users\\93rob\\Documents\\GitHub\\Colab_exp\\notes\\research_cycles\\cycle_002_potential_shaping\\controlled_evaluative_axis_battery_v2_length_balanced.jsonl",
+  "backend": "fastembed",
+  "model": "jinaai/jina-embeddings-v2-small-en",
+  "cache_dir": "C:\\Users\\93rob\\.cache\\codex-fastembed"
+}

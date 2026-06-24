@@ -548,3 +548,585 @@ quota is available. If the frontier model raises non-oracle context accuracy
 substantially above 64.3%, then rerun HH-RLHF at 1000-5000 pairs with
 aspect-specific axes. Also test scoring generated decomposition/outcome reports
 instead of scoring final answers directly.
+
+## June 22, 2026 - Phase 6: Multi-Sensor Evaluative Axis Probe
+
+### What was done
+Ran a frozen multi-axis embedding evaluator across multiple imperfect preference
+artifacts instead of treating HH-RLHF as authoritative. Used
+`BAAI/bge-small-en-v1.5` with eight predeclared axes: broad good/bad, harm
+reduction, truth correction, calibration, usefulness, non-sycophancy, risk
+disclosure, and agency respect. No weights were fit to any dataset. Scored 300
+samples each from Anthropic HH, PKU-SafeRLHF, and Stanford SHP; PKU contributes
+both `better` and `safer` label views.
+
+### Key results
+- `hh_chosen`: best axis `risk_disclosure` at 55.0% overlap; length baseline
+  43.3%; sentiment baseline 44.5%.
+- `pku_better`: best axis `harm_reduction` at 52.0%; length baseline 56.8%;
+  sentiment baseline 50.3%.
+- `pku_safer`: best axis `harm_reduction` at 54.3%; length baseline 52.8%;
+  sentiment baseline 46.3%.
+- `shp_reddit`: best axis `agency_respect` at 55.3%; length baseline 70.3%;
+  sentiment baseline 54.5%.
+- Equal-weight aggregates underperformed individual axes, supporting an
+  evaluative-basis framing rather than one universal scalar.
+
+### Interpretation
+The Phase 6 result supports the user's critique: dataset agreement is not
+goodness. Different artifacts measure different things. SHP is strongly
+length/social-signal shaped, PKU better and safer labels diverge, and HH's
+older preference labels overlap most with risk-disclosure under this model.
+The useful object is not a single "accuracy" number but a map of cheap
+embedding sensors against expensive/social preference artifacts.
+
+### Decision
+Continue the research as an embedding-evaluator flywheel, not as an RLHF
+replacement claim. The idea is promising because even crude, cheap axes produce
+non-random overlap and useful disagreement audits under poor conditions.
+
+### Next steps
+Run an intervention: generate multiple candidate answers per prompt, rerank
+with direct embedding axes and embedding-scored LLM critiques, then judge
+whether selected answers improve against random, length, and standard LLM-judge
+baselines. This tests the actual claim: whether the signal improves output
+selection or training data per dollar/token/hour.
+
+## June 22, 2026 - Phase 5: Manual HH Disagreement Adjudication
+
+### What was done
+Reviewed a manual grading pass over the 30 strongest Phase 5 HH-RLHF
+disagreements, where the best embedding variant
+`prompt_response__contextual_harm_reduction` preferred the HH-rejected response
+with the largest margins.
+
+### Key results
+- Raw Phase 5 HH agreement was 279/500 = 55.8%.
+- The top-30 disagreement audit judged 14/30 cases (46.7%) as embedding-right /
+  HH-likely-mislabeled, 10/30 (33.3%) as HH-right / genuine embedding miss, and
+  6/30 (20.0%) as ties or both-bad cases.
+- If the 46.7% bad-label rate generalized to all 221 raw disagreements,
+  corrected agreement would be 76.4%. With a 50% discount for selection bias it
+  would be 66.1%; with a 70% discount it would be 62.0%.
+- Representative HH-label problems included fabricated AI persona claims,
+  doxxing-adjacent compliance, misinformation, racist-story compliance, slur
+  lists, and empty non-answers.
+
+### Interpretation
+The low raw HH agreement is materially influenced by HH label noise. The audit
+does not prove a final corrected accuracy because the cases were selected from
+the strongest disagreements, but it directly refutes the interpretation that
+all HH disagreements are embedding failures.
+
+### Decision
+Treat HH-RLHF as one noisy preference sensor, not as ground truth. Future
+preference-prediction results should report raw agreement, baseline comparison,
+and disagreement adjudication/noise analysis.
+
+### Next steps
+Run a blind adjudication of a larger stratified disagreement sample, ideally
+including high-confidence, medium-confidence, and near-tie disagreements. Use
+that to estimate label-noise-adjusted agreement with uncertainty.
+
+## June 22, 2026 - Phase 6: Gemini Partial Multi-Sensor Probe
+
+### What was done
+Added Gemini backend support to `scripts/run_phase6_multi_sensor.py`, including
+cached anchor embeddings, resumable candidate embeddings, and a
+`--score-partial-cache` mode. Attempted a 1000-sample Gemini Phase 6 run and a
+200-sample bounded run with `gemini-embedding-001`.
+
+### Key results
+- `gemini-embedding-001` probe succeeded with 3072-dimensional normalized
+  vectors.
+- The 1000-sample run hit repeated HTTP 429 quota throttling after 250/8000
+  candidate texts.
+- The 200-sample run hit repeated HTTP 429 throttling after 550/1600 candidate
+  texts.
+- Partial cache scoring produced 275 complete pairs: 200 `hh_chosen` pairs and
+  75 `pku_better` pairs.
+- On the 200 HH pairs, best Gemini axis was `non_sycophancy` at 50.0%;
+  length baseline 43.5%; sentiment baseline 46.5%. Several broad axes were
+  anti-correlated with HH on this slice.
+- On the 75 PKU-better pairs, best Gemini axis was `agency_respect` at 53.3%;
+  length baseline 54.0%; sentiment baseline 46.7%.
+
+### Interpretation
+This is a quota-limited partial result, not the decisive Gemini Embedding 2
+experiment. It shows that `gemini-embedding-001` with the frozen broad Phase 6
+axes does not automatically improve HH overlap, and it reinforces the larger
+lesson: dataset overlap is not the target by itself. The manual HH audit makes
+clear that low HH overlap can reflect bad labels or mismatched objectives.
+
+### Decision
+Do not proceed to Phase 3 from this partial Gemini result. Keep the completed
+BGE-small Phase 6 as the broader multi-sensor baseline and treat the Gemini
+partial as a quota/protocol probe.
+
+### Next steps
+The next decisive experiment should be an intervention, not another raw
+dataset-overlap test: generate several candidate answers per prompt, rerank
+with embedding axes and embedding-scored LLM critiques, and blind-judge whether
+the selected answer improves over random, length, sentiment, and standard
+LLM-judge baselines.
+
+## June 22, 2026 - Phase 5: Full HH Disagreement Grading
+
+### What was done
+Reviewed a full grading pass over all 231 HH-RLHF disagreement cases from a
+500-pair sample where the embedding axis preferred the HH-rejected response.
+Grades were `EMBEDDING_RIGHT`, `HH_RIGHT`, or `EXCLUDE` for cases where both
+responses were bad, trivial, marginal, or not useful for training.
+
+### Key results
+- Raw HH agreement in this grading file: 269/500 = 53.8%.
+- All raw disagreements: 231/500 = 46.2%.
+- `EMBEDDING_RIGHT`: 65/231 = 28.1% of disagreements.
+- `HH_RIGHT`: 44/231 = 19.0% of disagreements.
+- `EXCLUDE`: 122/231 = 52.8% of disagreements.
+- Among gradeable disagreements, the embedding was judged better in
+  65/(65+44) = 59.6%.
+- Excluding the 122 no-signal/both-bad disagreements gives corrected gradeable
+  agreement of (269+65)/(269+65+44) = 334/378 = 88.4%.
+- Sensitivity estimates: 83.3% if 30% of embedding-right calls are wrong;
+  79.9% if 50% are wrong.
+
+### Interpretation
+This is the strongest evidence so far that raw HH agreement is a misleading
+score for this idea. Most apparent embedding failures against HH are either
+cases where HH appears mislabeled, or cases where both responses are bad/trivial
+and an automatic reward pipeline should filter or regenerate rather than force
+a pairwise preference.
+
+This makes the approach look much more valuable for automatic training
+pipelines than the raw 53.8% number suggested. The likely role is not "imitate
+HH," but score/filter/rerank candidates and detect bad preference pairs.
+
+### Decision
+Promote the full disagreement grading to a central result, with caveats. Do not
+claim final proof of training improvement yet, because the grading was not blind
+human adjudication and the agreement cases were assumed correct. But the
+evidence now strongly favors moving to an intervention test.
+
+### Next steps
+Run a no-training intervention benchmark comparing embedding-axis selection,
+embedding-scored critique selection, random, length, sentiment, and vanilla
+LLM-as-judge. The critical question is whether embedding-selected outputs win
+under blind review and whether they do so more cheaply or more robustly than
+vanilla LLM judges.
+
+## June 23, 2026 - Concept Capture: Dense Supervision And Good/Bad Basis
+
+### What was done
+Read and distilled the attached discussion into project artifacts. Added
+`RESEARCH_CONCEPT_NOTES.md`, updated `COLLABORATOR_BRIEF.md`, updated
+`methodology/RIGOR_GUARDRAILS.md`, added cumulative-context process scoring to
+`methodology/experiment_roadmap.md`, and revised `paper/draft.md`.
+
+### Key ideas captured
+- Persona honesty is a lead example because the embedding preferred ontological
+  honesty over warm fabrication, matching later assistant norms.
+- Good/bad may be a self-regularizing primary axis: specific virtues can
+  over-optimize into failure modes, but broad "good" contains cross-pressure
+  from many senses of good.
+- A scalar-plus-basis view is better than scalar-only or many independent
+  targets: broad good/bad supplies the primary reward, while secondary axes
+  diagnose or nudge.
+- Cumulative full-context scoring is the proposed dense-supervision mechanism:
+  embed the whole context so far after each reasoning step/turn and use score
+  deltas as process signal.
+- Token-level scoring is likely too noisy; sentence, paragraph, step, turn, or
+  cumulative-context scoring is the plausible granularity.
+- Embedding context-window limits are a real bottleneck; a serious version wants
+  long-context embedding evaluators closer to generation-model context lengths.
+- Reported axis-convergence numbers from the attached discussion are promising
+  but are marked as needing local reproduction before becoming central
+  evidence.
+
+### Interpretation
+The project's strongest framing is now broader than "cheap HH-RLHF agreement."
+It is an evaluative-geometry and dense-supervision hypothesis: embedding axes
+may score not only final answers, but the trajectory by which a model decomposes
+and evaluates a situation.
+
+### Decision
+Preserve the human conceptual framing rather than reducing it to generic ML
+language. Move cumulative-context process scoring into the roadmap as a no-GPU
+mechanism test before any paid training attempt.
+
+### Next steps
+Reproduce the reported axis-convergence experiment locally with saved code and
+outputs, then run the no-training candidate-selection and process-scoring
+benchmarks before considering Colab/GPU fine-tuning.
+
+## June 23, 2026 - Research Process Fix: Alternating Modes
+
+### What was done
+Converted the "Idea / Literature / Experiment / Autopsy / Forest" discussion
+into concrete project process artifacts:
+
+- `methodology/RESEARCH_LOOP_PROTOCOL.md`
+- `methodology/MECHANISM_MAP.md`
+- `methodology/templates/idea_mode.md`
+- `methodology/templates/literature_mode.md`
+- `methodology/templates/experiment_mode.md`
+- `methodology/templates/autopsy_mode.md`
+- `methodology/templates/forest_mode.md`
+- `methodology/templates/decision_mode.md`
+- `notes/research_cycles/README.md`
+- `notes/research_cycles/cycle_001_next/idea.md`
+
+Updated `README.md`, `COLLABORATOR_BRIEF.md`, and
+`methodology/experiment_roadmap.md` so future work starts from the loop rather
+than from a single benchmark.
+
+### Key numbers
+No new model-evaluation numbers. This is a process correction.
+
+### Interpretation
+The project failure mode was premature narrowing: asking whether the embedding
+score matched HH-RLHF, then treating HH agreement as the result. The new loop
+requires broad mechanism generation, implication-focused literature review,
+frozen experiments, example autopsy, and forest-level interpretation before a
+decision.
+
+### Decision
+Future experiments are incomplete unless they produce an autopsy and forest
+memo. Disagreement examples, both-bad cases, benchmark assumptions, and training
+mechanisms are now required outputs.
+
+### Next steps
+Use `cycle_001_next` to run the no-training intervention benchmark or the
+cumulative-context process-scoring simulation. Before either run, fill in the
+remaining mode templates for that cycle.
+
+## June 23, 2026 - Cycle 001: Intervention Benchmark Scaffold
+
+### What was done
+Completed the first serious research-cycle chunk around the no-training
+candidate-selection intervention test.
+
+Created or completed:
+
+- `notes/research_cycles/cycle_001_next/experiment.md`
+- `notes/research_cycles/cycle_001_next/autopsy.md`
+- `notes/research_cycles/cycle_001_next/forest.md`
+- `notes/research_cycles/cycle_001_next/decision.md`
+- `notes/research_cycles/cycle_001_next/seed_candidates.json`
+- `scripts/run_cycle001_intervention.py`
+- `notes/research_cycles/cycle_001_next/smoke_results/*`
+- `notes/research_cycles/cycle_001_next/gemini_smoke_results/quota_blocked.md`
+
+Also updated `README.md`, `COLLABORATOR_BRIEF.md`, `.gitignore`, and
+`methodology/experiment_roadmap.md`.
+
+### Key numbers
+- Smoke fixture size: 5 prompts, 15 candidates.
+- Lexical backend: completed successfully with direct and decomposition
+  interfaces.
+- Fixture expected-hit rates:
+  - `decomposition_combined`: 4/5 = 80.0%.
+  - `decomposition_general_evaluative`: 4/5 = 80.0%.
+  - `direct_combined`: 3/5 = 60.0%.
+  - `length`: 3/5 = 60.0%.
+  - `random`: 2/5 = 40.0%.
+  - `sentiment`: 1/5 = 20.0%.
+- Generated smoke artifacts: `scores.csv`, `scores.json`, `selections.csv`,
+  `selections.json`, `blind_review_packet.jsonl`, and `summary.md`.
+- Gemini smoke attempt: blocked by HTTP 429 quota exceeded during the embedding
+  probe before any Gemini scores were produced.
+
+### Interpretation
+The smoke run is not evidence for the research thesis because it is tiny,
+hand-authored, and not blinded. It does verify the benchmark interface and shows
+why decomposition scoring deserves a serious test: even a crude lexical backend
+uses explicit good/bad decomposition more effectively than direct scoring on
+the seed fixture.
+
+The Gemini failure is not a Colab or browser-control problem. It is an API quota
+or billing-access problem for the embedding model on the available key.
+
+### Decision
+The next research action is a blinded 50-prompt intervention pilot using this
+scaffold. Treat Gemini as the preferred backend once quota exists; otherwise use
+the scaffold to prepare candidate sets and blind review packets without making
+model-quality claims.
+
+### Next steps
+1. Build a 50-prompt pilot candidate set from mixed sources.
+2. Run Gemini embedding mode when quota is available.
+3. Blind-review method winners.
+4. Fill the autopsy table with actual counts.
+5. Promote or demote the mechanism based on blind win rate plus example
+   autopsy, not raw dataset agreement.
+
+## June 23, 2026 - Cycle 001: Quota-Free Pilot Build And Local Embeddings
+
+### What was done
+Built and ran the quota-free pieces of the next research pipeline:
+
+- Created a 50-prompt intervention pilot with 4 candidates per prompt.
+- Used 25 audited HH disagreement prompts and 25 constructed
+  adversarial/context prompts.
+- Generated pilot answer key and blind review packets.
+- Generated a blind HH disagreement adjudication packet from the actual grading
+  table.
+- Added refusal heuristic and category-axis baselines to
+  `scripts/run_cycle001_intervention.py`.
+- Ran lexical cheap baselines.
+- Installed FastEmbed outside the repo and ran local `BAAI/bge-small-en-v1.5`
+  embedding baselines.
+
+### Key numbers
+- Pilot size: 50 prompts, 200 candidates.
+- Pilot source split: 25 HH disagreement prompts, 25 constructed adversarial
+  prompts.
+- Category counts: 10 anti-sycophancy, 10 persona honesty, 10 general
+  helpfulness, 8 harmful request, 5 factuality, 5 false premise, 1 context
+  negation, 1 privacy safety.
+- HH blind adjudication packet: 108 gradeable cases from the table
+  (`EMBEDDING_RIGHT` 63, `HH_RIGHT` 45, `EXCLUDE` 123). This conflicts with the
+  prose summary's 109 gradeable count, and the discrepancy is documented.
+- 50-prompt lexical proxy hits:
+  - Length: 33/50 = 66.0%.
+  - Direct anti-sycophancy: 29/50 = 58.0%.
+  - Direct harm reduction: 28/50 = 56.0%.
+  - Refusal heuristic: 25/50 = 50.0%.
+  - Random: 16/50 = 32.0%.
+  - Sentiment: 15/50 = 30.0%.
+- 50-prompt FastEmbed/BGE-small proxy hits:
+  - Length: 33/50 = 66.0%.
+  - Refusal heuristic: 25/50 = 50.0%.
+  - Direct anti-sycophancy: 23/50 = 46.0%.
+  - Direct category axis: 19/50 = 38.0%.
+  - Random: 16/50 = 32.0%.
+- Adversarial subset FastEmbed/BGE-small:
+  - Length: 24/25 = 96.0%.
+  - Refusal heuristic: 21/25 = 84.0%.
+  - Direct anti-sycophancy: 18/25 = 72.0%.
+- Local install footprint outside repo:
+  - `C:\Users\93rob\.cache\codex-embedding-venv`: about 169 MB.
+  - `C:\Users\93rob\.cache\codex-fastembed`: about 64 MB.
+
+### Interpretation
+The quota-free run produced useful infrastructure and a clear diagnosis, not a
+positive result to oversell. The current pilot is length-biased: proxy-best
+answers are often longer, so length is too strong. That makes this packet useful
+for blind review and stress testing, but the constructed adversarial cases need
+length-balanced variants before their proxy-hit rates can be used as evidence.
+
+The local BGE-small run did not beat length or refusal heuristic on the
+50-prompt proxy key. This is a real result for the current pilot design, not a
+decisive negative result for evaluative geometry. The benchmark interface and
+candidate construction are now the next bottleneck.
+
+### Decision
+Keep the 50-prompt packet and HH blind adjudication packet. Do not claim the
+current proxy-hit rates support the thesis. The next no-quota improvement is to
+length-balance the constructed adversarial candidates and then run blind review
+on method-selected winners.
+
+### Next steps
+1. Build a length-balanced v2 adversarial set.
+2. Rerun lexical and FastEmbed baselines.
+3. Generate method-winner review packets for blind adjudication.
+4. Use Gemini only after quota is available, as a stronger-model comparison.
+
+## June 23, 2026 - Cycle 002: Potential-Shaping Reframe And Controlled Battery
+
+### What was done
+Read and integrated the attached external-style research review. Verified the
+new prior-work citations for Valence-Assent Axis, PGSRM, TRACE interaction
+dynamics, potential-based reward shaping, Turney semantic orientation, Value
+Entanglement, and Reusing Embeddings.
+
+Created Cycle 002 artifacts:
+
+- `notes/research_cycles/cycle_002_potential_shaping/idea.md`
+- `notes/research_cycles/cycle_002_potential_shaping/literature.md`
+- `notes/research_cycles/cycle_002_potential_shaping/experiment.md`
+- `notes/research_cycles/cycle_002_potential_shaping/decision.md`
+- `notes/research_cycles/cycle_002_potential_shaping/results.md`
+- `notes/research_cycles/cycle_002_potential_shaping/controlled_evaluative_axis_battery.jsonl`
+- `notes/research_cycles/cycle_002_potential_shaping/controlled_evaluative_axis_battery_v2_length_balanced.jsonl`
+- `scripts/run_evaluative_axis_battery.py`
+
+Updated `paper/draft.md` and `methodology/experiment_roadmap.md` so the
+project now leads with controlled minimal-pair testing and cumulative-context
+potential shaping rather than raw HH agreement.
+
+### Key numbers
+- HH table-backed disagreement audit:
+  - `EMBEDDING_RIGHT`: 63.
+  - `HH_RIGHT`: 45.
+  - `EXCLUDE`: 123.
+  - Gradeable embedding win rate: 63/108 = 58.3%.
+  - Exact two-sided binomial p-value vs 50%: 0.101.
+- Controlled battery v0:
+  - 23 cases.
+  - Better answer longer in 20/23 cases.
+  - Mean absolute length gap: 3.57 words.
+  - Length baseline: 89.1%.
+  - FastEmbed/BGE-small direct combined: 26.1%.
+  - FastEmbed/BGE-small decomposition category axis: 52.2%.
+- Controlled battery v2:
+  - 12 cases.
+  - Exact word-count ties in all 12 pairs.
+  - Length baseline: 50.0%.
+  - Sentiment baseline: 50.0%.
+  - FastEmbed/BGE-small direct combined: 8.3%.
+  - FastEmbed/BGE-small direct broad evaluative: 0.0%.
+  - FastEmbed/BGE-small direct anti-sycophancy: 66.7%.
+  - FastEmbed/BGE-small decomposition category axis: 58.3%.
+
+### Interpretation
+The attachment's critique is correct: the earlier "corrected accuracy" framing
+was too strong because agreement cases were not adjudicated. The HH audit is
+qualitative and suggestive until blind review samples both agreements and
+disagreements.
+
+The new controlled battery gives a sharper diagnostic. Once length is exactly
+controlled, local BGE-small broad good/bad scoring fails badly on the v2
+minimal pairs. Narrow axes, especially anti-sycophancy, do better but are not
+yet strong enough to claim a general evaluator. This weakens the naive direct
+scalar version and strengthens the scalar-plus-basis and potential-shaping
+version.
+
+### Decision
+Promote cumulative full-context potential shaping as the strongest research
+formulation. Keep BGE-small results as a local baseline and negative diagnostic.
+Do not spend Gemini quota on broad claims until the length-balanced battery is
+expanded and the trajectory-delta test exists.
+
+### Next steps
+1. Expand the exact length-balanced v2 battery to 50 cases.
+2. Build trajectory cases with injected errors and repairs.
+3. Test cumulative potential deltas against final-only and isolated-step
+   scoring.
+4. Run Gemini on the same battery when quota is available.
+
+## June 23, 2026 - Cycle 002: Local Model Sweep And Trajectory Probe
+
+### What was done
+
+Continued the no-quota research path after BGE-small failed broad direct
+good/bad scoring. Added `scripts/sweep_fastembed_battery.py`, fixed a
+category-axis mapping bug in `scripts/run_cycle001_intervention.py`, reran the
+exact word-count-matched v2 battery across 8 local FastEmbed models, ran the
+best local model on the existing 50-prompt proxy pilot, and added
+`scripts/run_trajectory_potential_test.py` for a first cumulative process-state
+probe.
+
+### Key numbers
+
+- Controlled battery v2 remains 12 exact word-count-tied pairs; length and
+  sentiment baselines are both 50.0%.
+- The fixed map changed category-axis scoring because the battery categories
+  `truthfulness`, `harm_reduction`, `reasoning_rigor`, `context_binding`, and
+  `helpfulness` had previously fallen back too often to `general_evaluative`.
+- Corrected 8-model sweep:
+  - `jinaai/jina-embeddings-v2-small-en`:
+    oracle `decomposition_category_axis` = 11/12 = 91.7%.
+  - This number is contaminated by the hand-authored decomposition fields,
+    which explicitly used "Good parts" and "Bad parts" language. It should not
+    be treated as evidence that the embedding model independently inferred
+    answer quality.
+  - Other strong narrow-axis results: `gte-base` direct harm reduction 75.0%,
+    Snowflake direct persona honesty 75.0%, Nomic decomposition harm reduction
+    75.0%.
+  - Broad direct combined scores stayed poor across models: 8.3% to 33.3%.
+- Jina on the old 50-prompt proxy pilot did not validate the controlled result:
+  length baseline 33/50 = 66.0%, best embedding method
+  `decomposition_persona_honesty` 23/50 = 46.0%,
+  `decomposition_category_axis` 15/50 = 30.0%.
+- Naive trajectory-potential probe failed:
+  - BGE-small category-axis integral 25.0%, combined integral 0.0%.
+  - Jina-small category-axis integral 33.3%, combined integral 0.0%.
+- Model cache footprint is outside the repo:
+  `C:\Users\93rob\.cache\codex-fastembed` about 3.1 GB. Sweep artifacts inside
+  the repo are about 0.35 MB.
+
+### Interpretation
+
+BGE-small is not the only available local model, but the apparent 91.7% Jina
+result was an oracle-label leakage result, not a valid evaluator result. It
+shows only that embeddings can read explicit evaluative labels inserted into
+the input. It should remain as a plumbing sanity check and should be excluded
+from claims about raw or blind evaluation.
+
+The old 50-prompt proxy pilot remains a stress-test artifact rather than a
+validation set, because its labels and candidates are length-biased and not
+blind-adjudicated. The failed trajectory probe is also useful: it prevents the
+project from assuming that any cumulative reasoning text automatically creates a
+usable dense reward signal.
+
+### Decision
+
+Continue the project, but demote the Jina 91.7% result. The next gate must be a
+leakage-controlled test: raw answer scoring and blind LLM-generated
+decomposition scoring, with no answer labels or good/bad annotations supplied
+by the experimenter in the scored text. Do not claim that naive broad good/bad
+scoring works, and do not claim oracle-decomposition results as evidence.
+
+### Next steps
+
+1. Build a no-leakage held-out battery from at least 50 cases.
+2. Compare raw answer scoring, blind LLM-generated decomposition scoring,
+   direct LLM judging, length, sentiment, and refusal heuristics.
+3. Add ablations that remove evaluative words such as "good", "bad", "right",
+   and "wrong" from decomposition text.
+4. Build a better trajectory test using natural model traces or injected
+   error/repair traces, not generic strategy templates.
+5. Rerun Gemini on the same leakage-controlled battery when API quota is
+   available.
+
+## June 23, 2026 - Concept Correction: Emergent Decomposition, Not Oracle Labels
+
+### What was done
+
+Integrated the user's correction that the useful hypothesis is not
+experimenter-written decomposition. The actual training hypothesis is that a
+model optimized against a clean evaluative embedding reward may learn to
+decompose its own scratchpad or planning traces into separable good-making and
+bad-making factors, then choose compromises that preserve good and minimize bad.
+
+Added:
+
+- `methodology/EMERGENT_DECOMPOSITION_REWARD_PROTOCOL.md`
+- roadmap section: "Emergent Decomposition Reward Simulation"
+
+### Key numbers
+
+No new model numbers. This is a research-design correction.
+
+### Interpretation
+
+Hand-authored decompositions such as `Good parts:` / `Bad parts:` are mostly
+tests of whether embeddings read explicit valence words. They are marginally
+useful as plumbing checks but not evidence for the central idea. The central
+idea requires observing or inducing decomposition under reward pressure without
+directly instructing decomposition or leaking labels.
+
+The next useful no-GPU test is an evolutionary feedback simulation: generate
+multiple scratchpad-style traces, score cumulative contexts with an embedding
+reward, keep high-scoring traces, ask for variants using only scalar/rank
+feedback, and test whether decomposition, tradeoff handling, and contextual
+negation handling emerge.
+
+### Decision
+
+Prioritize emergent-decomposition and context-sensitivity tests over more
+oracle decomposition scoring. The reward must handle protective negative-token
+contexts such as `I should avoid introducing this bug` as good, and
+positive-sounding unsafe contexts such as `You're absolutely right` as bad when
+they support false or harmful premises.
+
+### Next steps
+
+1. Build a context-sensitivity battery around protective negative terms,
+   positive-surface bad reasoning, tradeoffs, and repair.
+2. Implement the no-training evolutionary feedback loop.
+3. Report whether high-scoring traces show spontaneous decomposition under
+   blind review.
+4. Only after that, consider DPO/GRPO/QLoRA training with embedding-ranked
+   traces.

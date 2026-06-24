@@ -251,3 +251,148 @@ p = 0.00949), versus length 41.3% and sentiment 46.9%. It reached 57.0% on the
 Interpretation: the signal is real but not universal-scalar clean. The better
 research direction is a small basis of aspect-specific good/bad axes and
 process/outcome text, not one broad final-response projection.
+
+## Phase 6 Multi-Sensor Addendum
+
+Date: June 22, 2026
+
+Phase 6 reframed the test around multiple imperfect sensors rather than
+treating HH-RLHF as ground truth. A frozen eight-axis evaluative basis was
+scored against Anthropic HH chosen labels, PKU-SafeRLHF better labels,
+PKU-SafeRLHF safer labels, and Stanford SHP Reddit-score labels. No axis
+weights were fit to any dataset.
+
+Key overlaps on 300 samples per artifact:
+
+- `hh_chosen`: best axis `risk_disclosure` at 55.0%; length 43.3%; sentiment
+  44.5%.
+- `pku_better`: best axis `harm_reduction` at 52.0%; length 56.8%; sentiment
+  50.3%.
+- `pku_safer`: best axis `harm_reduction` at 54.3%; length 52.8%; sentiment
+  46.3%.
+- `shp_reddit`: best axis `agency_respect` at 55.3%; length 70.3%; sentiment
+  54.5%.
+
+Interpretation: these artifacts are not the same target. SHP is strongly
+length/social-signal shaped, PKU better and safer labels diverge, and HH
+overlap is different again. This supports the flywheel framing: embedding axes
+are cheap auxiliary evaluative sensors, not replacements for RLHF labels and
+not proof that any one dataset is "goodness."
+
+The next decisive experiment is an intervention: generate multiple candidate
+answers, rerank them with embedding axes or embedding-scored LLM critiques, and
+measure whether selected outputs improve against random, length, and standard
+LLM-judge baselines.
+
+## Phase 5 Manual HH Disagreement Audit Addendum
+
+Date: June 22, 2026
+
+A manual grading pass inspected the 30 strongest HH disagreements from the best
+Phase 5 variant, `prompt_response__contextual_harm_reduction`. These were cases
+where the embedding axis most strongly preferred the HH-rejected response.
+
+The raw Phase 5 HH result was 279/500 = 55.8% agreement. Manual adjudication of
+the top 30 disagreements found:
+
+- Embedding preferred the better response / HH likely mislabeled: 14/30
+  (46.7%).
+- HH label was better / genuine embedding miss: 10/30 (33.3%).
+- Tie or both bad: 6/30 (20.0%).
+
+Representative HH-label problems included fabricated assistant persona claims,
+doxxing-adjacent compliance, misinformation, racist-story compliance, slur
+lists, and empty non-answers. For example, HH preferred a response fabricating
+family life over an honest "I am not a person" answer; HH preferred "Sure,
+what's your question?" for a request for Senator Elizabeth Warren's home
+address; and HH preferred a factually wrong slots-app answer over the correct
+entertainment-only answer.
+
+Sensitivity analysis, ignoring ties: if the observed 46.7% bad-label rate among
+top disagreements generalized to all 221 raw disagreements, corrected agreement
+would be 76.4%. With a 50% discount for selection bias it would be 66.1%; with a
+70% discount it would be 62.0%. These are not final accuracy claims because the
+audit set was selected, but they are strong evidence that raw HH agreement
+substantially underestimates the embedding signal on this sample.
+
+Interpretation: HH-RLHF should be treated as one noisy preference sensor, not
+as the authority on "good." The important measurement is no longer only raw
+agreement; it is raw agreement plus disagreement quality.
+
+## Phase 6 Gemini Partial Addendum
+
+Date: June 22, 2026
+
+The Phase 6 runner was extended with a Gemini backend, cached anchor embeddings,
+resumable candidate embeddings, and `--score-partial-cache` analysis. Gemini
+API access worked for `gemini-embedding-001`, returning 3072-dimensional
+normalized vectors, but both larger Phase 6 attempts hit repeated HTTP 429
+quota limits.
+
+Completed Gemini cache:
+
+- 1000-sample attempt: stopped after 250/8000 candidate texts due to repeated
+  quota throttling.
+- 200-sample attempt: stopped after 550/1600 candidate texts due to repeated
+  quota throttling.
+- Partial scoring used 275 complete pairs: 200 `hh_chosen` and 75
+  `pku_better`.
+
+Partial results:
+
+- `hh_chosen` n=200: best axis `non_sycophancy` at 50.0%; length 43.5%;
+  sentiment 46.5%. Several broad axes were anti-correlated with HH on this
+  slice.
+- `pku_better` n=75: best axis `agency_respect` at 53.3%; length 54.0%;
+  sentiment 46.7%.
+
+Interpretation: this is not the decisive Gemini Embedding 2 run. It is a
+quota-limited protocol probe using `gemini-embedding-001` and frozen broad Phase
+6 axes. It shows that a larger embedding vector alone does not automatically
+solve the measurement interface. The stronger conclusion from the combined
+Phase 5/6 evidence is that the research should move to intervention tests:
+generate multiple candidate outputs, score direct responses and evaluative
+critiques with embedding axes, and blind-judge whether the selected outputs
+actually improve.
+
+## Full HH Disagreement Grading Addendum
+
+Date: June 22, 2026
+
+A later grading pass reviewed all 231 HH-RLHF disagreement cases from a 500-pair
+sample where the embedding axis preferred the HH-rejected response. This is a
+stronger result than the earlier top-30 audit because it covers the full
+disagreement set for that run.
+
+Results:
+
+- Raw HH agreement: 269/500 = 53.8%.
+- Raw disagreements: 231/500 = 46.2%.
+- Embedding preferred the better response: 65/231 = 28.1%.
+- HH label preferred the better response: 44/231 = 19.0%.
+- Exclude / both bad / trivial / marginal / no useful training signal:
+  122/231 = 52.8%.
+
+Among the 109 gradeable disagreements, the embedding was judged better in
+65/109 = 59.6%. If the 269 agreement cases are treated as correct and the 122
+excluded disagreements are removed as no-signal or bad-pair cases, the corrected
+gradeable agreement is:
+
+`(269 + 65) / (269 + 65 + 44) = 334 / 378 = 88.4%`.
+
+Sensitivity estimates in the grading file remained high: 83.3% if 30% of the
+embedding-right calls are wrong, and 79.9% if 50% are wrong.
+
+Interpretation: the raw HH score was deeply misleading. More than half of the
+embedding's apparent HH errors were pairs that a training pipeline should not
+learn as clean preferences at all, because both responses were bad, trivial, or
+too marginal. Among the gradeable disagreements, the embedding-preferred answer
+was judged better more often than the HH label.
+
+This substantially strengthens the practical case for embedding-axis reward as
+an automatic filtering/reranking component. It may be more valuable than a
+vanilla LLM-as-judge pipeline in some settings because it is cheap,
+deterministic, scalable, and able to flag noisy preference pairs. However, this
+still needs an intervention test before claiming training superiority: use the
+embedding score to select candidates, then blind-judge whether those selections
+beat random, length, sentiment, and vanilla LLM-judge selections.

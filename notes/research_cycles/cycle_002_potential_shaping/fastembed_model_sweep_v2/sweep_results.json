@@ -1,0 +1,634 @@
+[
+  {
+    "model": "BAAI/bge-small-en-v1.5",
+    "output_dir": "notes\\research_cycles\\cycle_002_potential_shaping\\fastembed_model_sweep_v2\\BAAI_bge-small-en-v1.5",
+    "returncode": 0,
+    "stdout": "# Controlled Evaluative-Axis Battery\n\nBackend: `fastembed`\nModel: `BAAI/bge-small-en-v1.5`\nCases: 12\nMean absolute length gap: 0.00 words\nMax absolute length gap: 0 words\n\n## Pairwise Accuracy\n\n| Method | Accuracy | n |\n| --- | ---: | ---: |\n| `length` | 50.0% | 12 |\n| `sentiment` | 50.0% | 12 |\n| `refusal` | 58.3% | 12 |\n| `direct_combined` | 8.3% | 12 |\n| `direct_category_axis` | 25.0% | 12 |\n| `decomposition_combined` | 41.7% | 12 |\n| `decomposition_category_axis` | 58.3% | 12 |\n| `direct_general_evaluative` | 0.0% | 12 |\n| `direct_truthfulness` | 8.3% | 12 |\n| `direct_harm_reduction` | 41.7% | 12 |\n| `direct_persona_honesty` | 41.7% | 12 |\n| `direct_anti_sycophancy` | 66.7% | 12 |\n| `decomposition_anti_sycophancy` | 66.7% | 12 |\n| `decomposition_general_evaluative` | 50.0% | 12 |\n| `decomposition_harm_reduction` | 58.3% | 12 |\n| `decomposition_persona_honesty` | 58.3% | 12 |\n| `decomposition_truthfulness` | 33.3% | 12 |\n\n## Interpretation Rule\n\nThis controlled battery is still hand-authored, but it is designed to test conceptual discrimination under tighter confound control than the 50-prompt pilot. Inspect failures before treating aggregate accuracy as evidence.\n\n",
+    "stderr": "",
+    "metrics": {
+      "decomposition_anti_sycophancy": {
+        "n": 12,
+        "accuracy": 0.6666666666666666
+      },
+      "decomposition_category_axis": {
+        "n": 12,
+        "accuracy": 0.5833333333333334
+      },
+      "decomposition_combined": {
+        "n": 12,
+        "accuracy": 0.4166666666666667
+      },
+      "decomposition_general_evaluative": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "decomposition_harm_reduction": {
+        "n": 12,
+        "accuracy": 0.5833333333333334
+      },
+      "decomposition_persona_honesty": {
+        "n": 12,
+        "accuracy": 0.5833333333333334
+      },
+      "decomposition_truthfulness": {
+        "n": 12,
+        "accuracy": 0.3333333333333333
+      },
+      "direct_anti_sycophancy": {
+        "n": 12,
+        "accuracy": 0.6666666666666666
+      },
+      "direct_category_axis": {
+        "n": 12,
+        "accuracy": 0.25
+      },
+      "direct_combined": {
+        "n": 12,
+        "accuracy": 0.08333333333333333
+      },
+      "direct_general_evaluative": {
+        "n": 12,
+        "accuracy": 0.0
+      },
+      "direct_harm_reduction": {
+        "n": 12,
+        "accuracy": 0.4166666666666667
+      },
+      "direct_persona_honesty": {
+        "n": 12,
+        "accuracy": 0.4166666666666667
+      },
+      "direct_truthfulness": {
+        "n": 12,
+        "accuracy": 0.08333333333333333
+      },
+      "length": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 12,
+        "accuracy": 0.5833333333333334
+      },
+      "sentiment": {
+        "n": 12,
+        "accuracy": 0.5
+      }
+    },
+    "length_abs_gap_mean": 0.0,
+    "length_abs_gap_max": 0
+  },
+  {
+    "model": "BAAI/bge-base-en-v1.5",
+    "output_dir": "notes\\research_cycles\\cycle_002_potential_shaping\\fastembed_model_sweep_v2\\BAAI_bge-base-en-v1.5",
+    "returncode": 0,
+    "stdout": "# Controlled Evaluative-Axis Battery\n\nBackend: `fastembed`\nModel: `BAAI/bge-base-en-v1.5`\nCases: 12\nMean absolute length gap: 0.00 words\nMax absolute length gap: 0 words\n\n## Pairwise Accuracy\n\n| Method | Accuracy | n |\n| --- | ---: | ---: |\n| `length` | 50.0% | 12 |\n| `sentiment` | 50.0% | 12 |\n| `refusal` | 58.3% | 12 |\n| `direct_combined` | 8.3% | 12 |\n| `direct_category_axis` | 41.7% | 12 |\n| `decomposition_combined` | 33.3% | 12 |\n| `decomposition_category_axis` | 58.3% | 12 |\n| `direct_general_evaluative` | 8.3% | 12 |\n| `direct_truthfulness` | 33.3% | 12 |\n| `direct_harm_reduction` | 58.3% | 12 |\n| `direct_persona_honesty` | 25.0% | 12 |\n| `direct_anti_sycophancy` | 33.3% | 12 |\n| `decomposition_anti_sycophancy` | 41.7% | 12 |\n| `decomposition_general_evaluative` | 25.0% | 12 |\n| `decomposition_harm_reduction` | 58.3% | 12 |\n| `decomposition_persona_honesty` | 41.7% | 12 |\n| `decomposition_truthfulness` | 41.7% | 12 |\n\n## Interpretation Rule\n\nThis controlled battery is still hand-authored, but it is designed to test conceptual discrimination under tighter confound control than the 50-prompt pilot. Inspect failures before treating aggregate accuracy as evidence.\n\n",
+    "stderr": "",
+    "metrics": {
+      "decomposition_anti_sycophancy": {
+        "n": 12,
+        "accuracy": 0.4166666666666667
+      },
+      "decomposition_category_axis": {
+        "n": 12,
+        "accuracy": 0.5833333333333334
+      },
+      "decomposition_combined": {
+        "n": 12,
+        "accuracy": 0.3333333333333333
+      },
+      "decomposition_general_evaluative": {
+        "n": 12,
+        "accuracy": 0.25
+      },
+      "decomposition_harm_reduction": {
+        "n": 12,
+        "accuracy": 0.5833333333333334
+      },
+      "decomposition_persona_honesty": {
+        "n": 12,
+        "accuracy": 0.4166666666666667
+      },
+      "decomposition_truthfulness": {
+        "n": 12,
+        "accuracy": 0.4166666666666667
+      },
+      "direct_anti_sycophancy": {
+        "n": 12,
+        "accuracy": 0.3333333333333333
+      },
+      "direct_category_axis": {
+        "n": 12,
+        "accuracy": 0.4166666666666667
+      },
+      "direct_combined": {
+        "n": 12,
+        "accuracy": 0.08333333333333333
+      },
+      "direct_general_evaluative": {
+        "n": 12,
+        "accuracy": 0.08333333333333333
+      },
+      "direct_harm_reduction": {
+        "n": 12,
+        "accuracy": 0.5833333333333334
+      },
+      "direct_persona_honesty": {
+        "n": 12,
+        "accuracy": 0.25
+      },
+      "direct_truthfulness": {
+        "n": 12,
+        "accuracy": 0.3333333333333333
+      },
+      "length": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 12,
+        "accuracy": 0.5833333333333334
+      },
+      "sentiment": {
+        "n": 12,
+        "accuracy": 0.5
+      }
+    },
+    "length_abs_gap_mean": 0.0,
+    "length_abs_gap_max": 0
+  },
+  {
+    "model": "thenlper/gte-base",
+    "output_dir": "notes\\research_cycles\\cycle_002_potential_shaping\\fastembed_model_sweep_v2\\thenlper_gte-base",
+    "returncode": 0,
+    "stdout": "# Controlled Evaluative-Axis Battery\n\nBackend: `fastembed`\nModel: `thenlper/gte-base`\nCases: 12\nMean absolute length gap: 0.00 words\nMax absolute length gap: 0 words\n\n## Pairwise Accuracy\n\n| Method | Accuracy | n |\n| --- | ---: | ---: |\n| `length` | 50.0% | 12 |\n| `sentiment` | 50.0% | 12 |\n| `refusal` | 58.3% | 12 |\n| `direct_combined` | 8.3% | 12 |\n| `direct_category_axis` | 41.7% | 12 |\n| `decomposition_combined` | 25.0% | 12 |\n| `decomposition_category_axis` | 50.0% | 12 |\n| `direct_general_evaluative` | 8.3% | 12 |\n| `direct_truthfulness` | 25.0% | 12 |\n| `direct_harm_reduction` | 75.0% | 12 |\n| `direct_persona_honesty` | 41.7% | 12 |\n| `direct_anti_sycophancy` | 16.7% | 12 |\n| `decomposition_anti_sycophancy` | 8.3% | 12 |\n| `decomposition_general_evaluative` | 25.0% | 12 |\n| `decomposition_harm_reduction` | 50.0% | 12 |\n| `decomposition_persona_honesty` | 41.7% | 12 |\n| `decomposition_truthfulness` | 41.7% | 12 |\n\n## Interpretation Rule\n\nThis controlled battery is still hand-authored, but it is designed to test conceptual discrimination under tighter confound control than the 50-prompt pilot. Inspect failures before treating aggregate accuracy as evidence.\n\n",
+    "stderr": "",
+    "metrics": {
+      "decomposition_anti_sycophancy": {
+        "n": 12,
+        "accuracy": 0.08333333333333333
+      },
+      "decomposition_category_axis": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "decomposition_combined": {
+        "n": 12,
+        "accuracy": 0.25
+      },
+      "decomposition_general_evaluative": {
+        "n": 12,
+        "accuracy": 0.25
+      },
+      "decomposition_harm_reduction": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "decomposition_persona_honesty": {
+        "n": 12,
+        "accuracy": 0.4166666666666667
+      },
+      "decomposition_truthfulness": {
+        "n": 12,
+        "accuracy": 0.4166666666666667
+      },
+      "direct_anti_sycophancy": {
+        "n": 12,
+        "accuracy": 0.16666666666666666
+      },
+      "direct_category_axis": {
+        "n": 12,
+        "accuracy": 0.4166666666666667
+      },
+      "direct_combined": {
+        "n": 12,
+        "accuracy": 0.08333333333333333
+      },
+      "direct_general_evaluative": {
+        "n": 12,
+        "accuracy": 0.08333333333333333
+      },
+      "direct_harm_reduction": {
+        "n": 12,
+        "accuracy": 0.75
+      },
+      "direct_persona_honesty": {
+        "n": 12,
+        "accuracy": 0.4166666666666667
+      },
+      "direct_truthfulness": {
+        "n": 12,
+        "accuracy": 0.25
+      },
+      "length": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 12,
+        "accuracy": 0.5833333333333334
+      },
+      "sentiment": {
+        "n": 12,
+        "accuracy": 0.5
+      }
+    },
+    "length_abs_gap_mean": 0.0,
+    "length_abs_gap_max": 0
+  },
+  {
+    "model": "snowflake/snowflake-arctic-embed-m",
+    "output_dir": "notes\\research_cycles\\cycle_002_potential_shaping\\fastembed_model_sweep_v2\\snowflake_snowflake-arctic-embed-m",
+    "returncode": 0,
+    "stdout": "# Controlled Evaluative-Axis Battery\n\nBackend: `fastembed`\nModel: `snowflake/snowflake-arctic-embed-m`\nCases: 12\nMean absolute length gap: 0.00 words\nMax absolute length gap: 0 words\n\n## Pairwise Accuracy\n\n| Method | Accuracy | n |\n| --- | ---: | ---: |\n| `length` | 50.0% | 12 |\n| `sentiment` | 50.0% | 12 |\n| `refusal` | 58.3% | 12 |\n| `direct_combined` | 33.3% | 12 |\n| `direct_category_axis` | 50.0% | 12 |\n| `decomposition_combined` | 25.0% | 12 |\n| `decomposition_category_axis` | 58.3% | 12 |\n| `direct_general_evaluative` | 25.0% | 12 |\n| `direct_truthfulness` | 33.3% | 12 |\n| `direct_harm_reduction` | 58.3% | 12 |\n| `direct_persona_honesty` | 75.0% | 12 |\n| `direct_anti_sycophancy` | 50.0% | 12 |\n| `decomposition_anti_sycophancy` | 41.7% | 12 |\n| `decomposition_general_evaluative` | 16.7% | 12 |\n| `decomposition_harm_reduction` | 66.7% | 12 |\n| `decomposition_persona_honesty` | 66.7% | 12 |\n| `decomposition_truthfulness` | 50.0% | 12 |\n\n## Interpretation Rule\n\nThis controlled battery is still hand-authored, but it is designed to test conceptual discrimination under tighter confound control than the 50-prompt pilot. Inspect failures before treating aggregate accuracy as evidence.\n\n",
+    "stderr": "",
+    "metrics": {
+      "decomposition_anti_sycophancy": {
+        "n": 12,
+        "accuracy": 0.4166666666666667
+      },
+      "decomposition_category_axis": {
+        "n": 12,
+        "accuracy": 0.5833333333333334
+      },
+      "decomposition_combined": {
+        "n": 12,
+        "accuracy": 0.25
+      },
+      "decomposition_general_evaluative": {
+        "n": 12,
+        "accuracy": 0.16666666666666666
+      },
+      "decomposition_harm_reduction": {
+        "n": 12,
+        "accuracy": 0.6666666666666666
+      },
+      "decomposition_persona_honesty": {
+        "n": 12,
+        "accuracy": 0.6666666666666666
+      },
+      "decomposition_truthfulness": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "direct_anti_sycophancy": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "direct_category_axis": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "direct_combined": {
+        "n": 12,
+        "accuracy": 0.3333333333333333
+      },
+      "direct_general_evaluative": {
+        "n": 12,
+        "accuracy": 0.25
+      },
+      "direct_harm_reduction": {
+        "n": 12,
+        "accuracy": 0.5833333333333334
+      },
+      "direct_persona_honesty": {
+        "n": 12,
+        "accuracy": 0.75
+      },
+      "direct_truthfulness": {
+        "n": 12,
+        "accuracy": 0.3333333333333333
+      },
+      "length": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 12,
+        "accuracy": 0.5833333333333334
+      },
+      "sentiment": {
+        "n": 12,
+        "accuracy": 0.5
+      }
+    },
+    "length_abs_gap_mean": 0.0,
+    "length_abs_gap_max": 0
+  },
+  {
+    "model": "jinaai/jina-embeddings-v2-small-en",
+    "output_dir": "notes\\research_cycles\\cycle_002_potential_shaping\\fastembed_model_sweep_v2\\jinaai_jina-embeddings-v2-small-en",
+    "returncode": 0,
+    "stdout": "# Controlled Evaluative-Axis Battery\n\nBackend: `fastembed`\nModel: `jinaai/jina-embeddings-v2-small-en`\nCases: 12\nMean absolute length gap: 0.00 words\nMax absolute length gap: 0 words\n\n## Pairwise Accuracy\n\n| Method | Accuracy | n |\n| --- | ---: | ---: |\n| `length` | 50.0% | 12 |\n| `sentiment` | 50.0% | 12 |\n| `refusal` | 58.3% | 12 |\n| `direct_combined` | 25.0% | 12 |\n| `direct_category_axis` | 50.0% | 12 |\n| `decomposition_combined` | 50.0% | 12 |\n| `decomposition_category_axis` | 91.7% | 12 |\n| `direct_general_evaluative` | 16.7% | 12 |\n| `direct_truthfulness` | 25.0% | 12 |\n| `direct_harm_reduction` | 66.7% | 12 |\n| `direct_persona_honesty` | 66.7% | 12 |\n| `direct_anti_sycophancy` | 33.3% | 12 |\n| `decomposition_anti_sycophancy` | 50.0% | 12 |\n| `decomposition_general_evaluative` | 25.0% | 12 |\n| `decomposition_harm_reduction` | 58.3% | 12 |\n| `decomposition_persona_honesty` | 75.0% | 12 |\n| `decomposition_truthfulness` | 58.3% | 12 |\n\n## Interpretation Rule\n\nThis controlled battery is still hand-authored, but it is designed to test conceptual discrimination under tighter confound control than the 50-prompt pilot. Inspect failures before treating aggregate accuracy as evidence.\n\n",
+    "stderr": "",
+    "metrics": {
+      "decomposition_anti_sycophancy": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "decomposition_category_axis": {
+        "n": 12,
+        "accuracy": 0.9166666666666666
+      },
+      "decomposition_combined": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "decomposition_general_evaluative": {
+        "n": 12,
+        "accuracy": 0.25
+      },
+      "decomposition_harm_reduction": {
+        "n": 12,
+        "accuracy": 0.5833333333333334
+      },
+      "decomposition_persona_honesty": {
+        "n": 12,
+        "accuracy": 0.75
+      },
+      "decomposition_truthfulness": {
+        "n": 12,
+        "accuracy": 0.5833333333333334
+      },
+      "direct_anti_sycophancy": {
+        "n": 12,
+        "accuracy": 0.3333333333333333
+      },
+      "direct_category_axis": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "direct_combined": {
+        "n": 12,
+        "accuracy": 0.25
+      },
+      "direct_general_evaluative": {
+        "n": 12,
+        "accuracy": 0.16666666666666666
+      },
+      "direct_harm_reduction": {
+        "n": 12,
+        "accuracy": 0.6666666666666666
+      },
+      "direct_persona_honesty": {
+        "n": 12,
+        "accuracy": 0.6666666666666666
+      },
+      "direct_truthfulness": {
+        "n": 12,
+        "accuracy": 0.25
+      },
+      "length": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 12,
+        "accuracy": 0.5833333333333334
+      },
+      "sentiment": {
+        "n": 12,
+        "accuracy": 0.5
+      }
+    },
+    "length_abs_gap_mean": 0.0,
+    "length_abs_gap_max": 0
+  },
+  {
+    "model": "jinaai/jina-embeddings-v2-base-en",
+    "output_dir": "notes\\research_cycles\\cycle_002_potential_shaping\\fastembed_model_sweep_v2\\jinaai_jina-embeddings-v2-base-en",
+    "returncode": 0,
+    "stdout": "# Controlled Evaluative-Axis Battery\n\nBackend: `fastembed`\nModel: `jinaai/jina-embeddings-v2-base-en`\nCases: 12\nMean absolute length gap: 0.00 words\nMax absolute length gap: 0 words\n\n## Pairwise Accuracy\n\n| Method | Accuracy | n |\n| --- | ---: | ---: |\n| `length` | 50.0% | 12 |\n| `sentiment` | 50.0% | 12 |\n| `refusal` | 58.3% | 12 |\n| `direct_combined` | 25.0% | 12 |\n| `direct_category_axis` | 41.7% | 12 |\n| `decomposition_combined` | 25.0% | 12 |\n| `decomposition_category_axis` | 41.7% | 12 |\n| `direct_general_evaluative` | 0.0% | 12 |\n| `direct_truthfulness` | 25.0% | 12 |\n| `direct_harm_reduction` | 50.0% | 12 |\n| `direct_persona_honesty` | 50.0% | 12 |\n| `direct_anti_sycophancy` | 33.3% | 12 |\n| `decomposition_anti_sycophancy` | 33.3% | 12 |\n| `decomposition_general_evaluative` | 16.7% | 12 |\n| `decomposition_harm_reduction` | 50.0% | 12 |\n| `decomposition_persona_honesty` | 41.7% | 12 |\n| `decomposition_truthfulness` | 25.0% | 12 |\n\n## Interpretation Rule\n\nThis controlled battery is still hand-authored, but it is designed to test conceptual discrimination under tighter confound control than the 50-prompt pilot. Inspect failures before treating aggregate accuracy as evidence.\n\n",
+    "stderr": "",
+    "metrics": {
+      "decomposition_anti_sycophancy": {
+        "n": 12,
+        "accuracy": 0.3333333333333333
+      },
+      "decomposition_category_axis": {
+        "n": 12,
+        "accuracy": 0.4166666666666667
+      },
+      "decomposition_combined": {
+        "n": 12,
+        "accuracy": 0.25
+      },
+      "decomposition_general_evaluative": {
+        "n": 12,
+        "accuracy": 0.16666666666666666
+      },
+      "decomposition_harm_reduction": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "decomposition_persona_honesty": {
+        "n": 12,
+        "accuracy": 0.4166666666666667
+      },
+      "decomposition_truthfulness": {
+        "n": 12,
+        "accuracy": 0.25
+      },
+      "direct_anti_sycophancy": {
+        "n": 12,
+        "accuracy": 0.3333333333333333
+      },
+      "direct_category_axis": {
+        "n": 12,
+        "accuracy": 0.4166666666666667
+      },
+      "direct_combined": {
+        "n": 12,
+        "accuracy": 0.25
+      },
+      "direct_general_evaluative": {
+        "n": 12,
+        "accuracy": 0.0
+      },
+      "direct_harm_reduction": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "direct_persona_honesty": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "direct_truthfulness": {
+        "n": 12,
+        "accuracy": 0.25
+      },
+      "length": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 12,
+        "accuracy": 0.5833333333333334
+      },
+      "sentiment": {
+        "n": 12,
+        "accuracy": 0.5
+      }
+    },
+    "length_abs_gap_mean": 0.0,
+    "length_abs_gap_max": 0
+  },
+  {
+    "model": "nomic-ai/nomic-embed-text-v1.5-Q",
+    "output_dir": "notes\\research_cycles\\cycle_002_potential_shaping\\fastembed_model_sweep_v2\\nomic-ai_nomic-embed-text-v1.5-Q",
+    "returncode": 0,
+    "stdout": "# Controlled Evaluative-Axis Battery\n\nBackend: `fastembed`\nModel: `nomic-ai/nomic-embed-text-v1.5-Q`\nCases: 12\nMean absolute length gap: 0.00 words\nMax absolute length gap: 0 words\n\n## Pairwise Accuracy\n\n| Method | Accuracy | n |\n| --- | ---: | ---: |\n| `length` | 50.0% | 12 |\n| `sentiment` | 50.0% | 12 |\n| `refusal` | 58.3% | 12 |\n| `direct_combined` | 16.7% | 12 |\n| `direct_category_axis` | 25.0% | 12 |\n| `decomposition_combined` | 25.0% | 12 |\n| `decomposition_category_axis` | 33.3% | 12 |\n| `direct_general_evaluative` | 0.0% | 12 |\n| `direct_truthfulness` | 16.7% | 12 |\n| `direct_harm_reduction` | 50.0% | 12 |\n| `direct_persona_honesty` | 41.7% | 12 |\n| `direct_anti_sycophancy` | 33.3% | 12 |\n| `decomposition_anti_sycophancy` | 41.7% | 12 |\n| `decomposition_general_evaluative` | 16.7% | 12 |\n| `decomposition_harm_reduction` | 75.0% | 12 |\n| `decomposition_persona_honesty` | 58.3% | 12 |\n| `decomposition_truthfulness` | 25.0% | 12 |\n\n## Interpretation Rule\n\nThis controlled battery is still hand-authored, but it is designed to test conceptual discrimination under tighter confound control than the 50-prompt pilot. Inspect failures before treating aggregate accuracy as evidence.\n\n",
+    "stderr": "C:\\Users\\93rob\\Documents\\GitHub\\Colab_exp\\scripts\\run_cycle001_intervention.py:432: UserWarning: The model 'nomic-ai/nomic-embed-text-v1.5-Q' has been updated on HuggingFace. Please review the latest documentation on HF and release notes to ensure compatibility with your workflow. \n  embedder = TextEmbedding(model_name=model_name, cache_dir=str(cache_dir))\n",
+    "metrics": {
+      "decomposition_anti_sycophancy": {
+        "n": 12,
+        "accuracy": 0.4166666666666667
+      },
+      "decomposition_category_axis": {
+        "n": 12,
+        "accuracy": 0.3333333333333333
+      },
+      "decomposition_combined": {
+        "n": 12,
+        "accuracy": 0.25
+      },
+      "decomposition_general_evaluative": {
+        "n": 12,
+        "accuracy": 0.16666666666666666
+      },
+      "decomposition_harm_reduction": {
+        "n": 12,
+        "accuracy": 0.75
+      },
+      "decomposition_persona_honesty": {
+        "n": 12,
+        "accuracy": 0.5833333333333334
+      },
+      "decomposition_truthfulness": {
+        "n": 12,
+        "accuracy": 0.25
+      },
+      "direct_anti_sycophancy": {
+        "n": 12,
+        "accuracy": 0.3333333333333333
+      },
+      "direct_category_axis": {
+        "n": 12,
+        "accuracy": 0.25
+      },
+      "direct_combined": {
+        "n": 12,
+        "accuracy": 0.16666666666666666
+      },
+      "direct_general_evaluative": {
+        "n": 12,
+        "accuracy": 0.0
+      },
+      "direct_harm_reduction": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "direct_persona_honesty": {
+        "n": 12,
+        "accuracy": 0.4166666666666667
+      },
+      "direct_truthfulness": {
+        "n": 12,
+        "accuracy": 0.16666666666666666
+      },
+      "length": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 12,
+        "accuracy": 0.5833333333333334
+      },
+      "sentiment": {
+        "n": 12,
+        "accuracy": 0.5
+      }
+    },
+    "length_abs_gap_mean": 0.0,
+    "length_abs_gap_max": 0
+  },
+  {
+    "model": "mixedbread-ai/mxbai-embed-large-v1",
+    "output_dir": "notes\\research_cycles\\cycle_002_potential_shaping\\fastembed_model_sweep_v2\\mixedbread-ai_mxbai-embed-large-v1",
+    "returncode": 0,
+    "stdout": "# Controlled Evaluative-Axis Battery\n\nBackend: `fastembed`\nModel: `mixedbread-ai/mxbai-embed-large-v1`\nCases: 12\nMean absolute length gap: 0.00 words\nMax absolute length gap: 0 words\n\n## Pairwise Accuracy\n\n| Method | Accuracy | n |\n| --- | ---: | ---: |\n| `length` | 50.0% | 12 |\n| `sentiment` | 50.0% | 12 |\n| `refusal` | 58.3% | 12 |\n| `direct_combined` | 8.3% | 12 |\n| `direct_category_axis` | 25.0% | 12 |\n| `decomposition_combined` | 50.0% | 12 |\n| `decomposition_category_axis` | 66.7% | 12 |\n| `direct_general_evaluative` | 8.3% | 12 |\n| `direct_truthfulness` | 8.3% | 12 |\n| `direct_harm_reduction` | 50.0% | 12 |\n| `direct_persona_honesty` | 50.0% | 12 |\n| `direct_anti_sycophancy` | 50.0% | 12 |\n| `decomposition_anti_sycophancy` | 66.7% | 12 |\n| `decomposition_general_evaluative` | 33.3% | 12 |\n| `decomposition_harm_reduction` | 58.3% | 12 |\n| `decomposition_persona_honesty` | 66.7% | 12 |\n| `decomposition_truthfulness` | 50.0% | 12 |\n\n## Interpretation Rule\n\nThis controlled battery is still hand-authored, but it is designed to test conceptual discrimination under tighter confound control than the 50-prompt pilot. Inspect failures before treating aggregate accuracy as evidence.\n\n",
+    "stderr": "",
+    "metrics": {
+      "decomposition_anti_sycophancy": {
+        "n": 12,
+        "accuracy": 0.6666666666666666
+      },
+      "decomposition_category_axis": {
+        "n": 12,
+        "accuracy": 0.6666666666666666
+      },
+      "decomposition_combined": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "decomposition_general_evaluative": {
+        "n": 12,
+        "accuracy": 0.3333333333333333
+      },
+      "decomposition_harm_reduction": {
+        "n": 12,
+        "accuracy": 0.5833333333333334
+      },
+      "decomposition_persona_honesty": {
+        "n": 12,
+        "accuracy": 0.6666666666666666
+      },
+      "decomposition_truthfulness": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "direct_anti_sycophancy": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "direct_category_axis": {
+        "n": 12,
+        "accuracy": 0.25
+      },
+      "direct_combined": {
+        "n": 12,
+        "accuracy": 0.08333333333333333
+      },
+      "direct_general_evaluative": {
+        "n": 12,
+        "accuracy": 0.08333333333333333
+      },
+      "direct_harm_reduction": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "direct_persona_honesty": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "direct_truthfulness": {
+        "n": 12,
+        "accuracy": 0.08333333333333333
+      },
+      "length": {
+        "n": 12,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 12,
+        "accuracy": 0.5833333333333334
+      },
+      "sentiment": {
+        "n": 12,
+        "accuracy": 0.5
+      }
+    },
+    "length_abs_gap_mean": 0.0,
+    "length_abs_gap_max": 0
+  }
+]

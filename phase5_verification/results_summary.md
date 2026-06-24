@@ -77,3 +77,31 @@ The `oracle_decomposition` mode is intentionally labeled as an upper-bound/proce
 ## Research Implication
 
 The result supports a narrower, stronger version of the thesis: evaluative directions are present in embedding space, but a single broad "good - bad" direction is too blunt. The cleaner formulation is likely a small basis of good/bad axes such as harm-reduction, truth-correction, calibration, usefulness, agency, non-sycophancy, and risk disclosure. A reward system could then score decomposed process traces or outcome descriptions across those axes, rather than scoring only the final answer text with one scalar projection.
+
+## Manual HH Disagreement Audit
+
+A follow-up manual grading pass inspected the 30 strongest HH disagreements from
+the best Phase 5 variant. These were cases where HH labeled the chosen response
+as preferred, but the embedding axis strongly preferred the HH-rejected
+response.
+
+Manual verdicts:
+
+- Embedding preferred the better response / HH likely mislabeled: 14/30
+  (46.7%).
+- HH label was better / genuine embedding miss: 10/30 (33.3%).
+- Tie or both bad: 6/30 (20.0%).
+
+This means the 55.8% raw HH agreement should not be read as "44.2% embedding
+failure." The strongest disagreements include HH choosing fabricated persona
+claims, doxxing-adjacent compliance, misinformation, racist-story compliance,
+slur lists, and empty non-answers over safer or more substantive responses.
+
+Sensitivity analysis, ignoring ties: if the observed 46.7% HH-mislabel rate
+among top disagreements generalized to all 221 raw disagreements, corrected
+agreement would be 76.4%. With a 50% discount for selection bias it would be
+66.1%; with a 70% discount it would be 62.0%. These are not final accuracy
+claims because the audit set is selected, but they are strong evidence that HH
+label noise materially depresses the raw agreement number.
+
+See `phase5_verification/manual_hh_disagreement_grading.md`.

@@ -1,0 +1,50 @@
+{
+  "backend": "fastembed",
+  "model": "jinaai/jina-embeddings-v2-small-en",
+  "cases": 12,
+  "trajectory_states": 36,
+  "stage_category_axis": {
+    "1": {
+      "n": 12,
+      "accuracy": 0.0,
+      "mean_delta": -0.030908402676383655
+    },
+    "2": {
+      "n": 12,
+      "accuracy": 0.3333333333333333,
+      "mean_delta": -0.006265210220590234
+    },
+    "3": {
+      "n": 12,
+      "accuracy": 0.4166666666666667,
+      "mean_delta": 0.0005604340694844723
+    }
+  },
+  "stage_combined": {
+    "1": {
+      "n": 12,
+      "accuracy": 0.0,
+      "mean_delta": -0.030539937499755376
+    },
+    "2": {
+      "n": 12,
+      "accuracy": 0.08333333333333333,
+      "mean_delta": -0.014768366061616689
+    },
+    "3": {
+      "n": 12,
+      "accuracy": 0.16666666666666666,
+      "mean_delta": -0.014333936523568505
+    }
+  },
+  "integral_category_axis": {
+    "n": 12,
+    "accuracy": 0.3333333333333333,
+    "mean_delta": -0.036613178827489413
+  },
+  "integral_combined": {
+    "n": 12,
+    "accuracy": 0.0,
+    "mean_delta": -0.05964224008494057
+  }
+}

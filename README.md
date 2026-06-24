@@ -14,6 +14,7 @@ Osgood (1957) showed that evaluation (good/bad) is the primary axis of human sem
 - **HH-RLHF preference prediction**: 55.8% raw agreement with 2022 labels (BGE-small)
 - **Full disagreement audit**: Of 231 embedding-vs-HH disagreements, 65 were embedding-right, 44 were HH-right, 122 were both-bad/trivial. Corrected gradeable agreement: **88.4%**
 - **Label noise detection**: Embedding scoring caught fabricated persona claims, doxxing compliance, misinformation, and racist content that HH-RLHF rewarded
+- **Controlled no-quota sweep**: On a 12-case exact word-count-matched battery, broad direct scoring failed. A later 11/12 = 91.7% Jina result used hand-authored "Good parts"/"Bad parts" decompositions and is now classified as oracle-label leakage: useful as a plumbing sanity check, not evidence that embeddings independently inferred answer quality.
 
 ## Why This Matters
 
@@ -72,4 +73,54 @@ infrastructure/         # Implementation artifacts (Codex prompts, setup)
 
 ## What's Next
 
-The decisive experiment is an **intervention test**: generate multiple candi
+The decisive experiment is an **intervention test**: generate multiple candidate responses, score them with the embedding axis, and blind-judge whether embedding-selected outputs beat random, length, sentiment, and LLM-judge baselines. This tests the practical claim directly.
+
+Cycle 001 now contains the first serious version of that plan:
+
+- [cycle_001_next/experiment.md](notes/research_cycles/cycle_001_next/experiment.md):
+  frozen protocol for the no-training candidate-selection benchmark
+- [cycle_001_next/autopsy.md](notes/research_cycles/cycle_001_next/autopsy.md):
+  required example-reading taxonomy
+- [cycle_001_next/forest.md](notes/research_cycles/cycle_001_next/forest.md):
+  broad mechanism synthesis
+- [cycle_001_next/decision.md](notes/research_cycles/cycle_001_next/decision.md):
+  decision to switch from HH agreement to intervention testing
+- [scripts/run_cycle001_intervention.py](scripts/run_cycle001_intervention.py):
+  runnable scaffold with lexical smoke mode and Gemini embedding mode
+- [cycle_001_next/smoke_results/summary.md](notes/research_cycles/cycle_001_next/smoke_results/summary.md):
+  verified no-API smoke output
+- [cycle_001_next/quota_free_results.md](notes/research_cycles/cycle_001_next/quota_free_results.md):
+  50-prompt pilot, cheap baselines, local BGE-small run, and length-bias
+  diagnosis
+- [cycle_002_potential_shaping/results.md](notes/research_cycles/cycle_002_potential_shaping/results.md):
+  controlled minimal-pair results, exact length-balanced v2, and potential
+  shaping reframe
+
+Gemini embedding mode was attempted on the seed fixture and blocked by API
+quota. See
+[cycle_001_next/gemini_smoke_results/quota_blocked.md](notes/research_cycles/cycle_001_next/gemini_smoke_results/quota_blocked.md).
+
+The current quota-free pilot is not a positive intervention result. Local
+BGE-small did not beat the length baseline on the proxy key. That is useful:
+it shows the next pilot must length-balance candidates and rely on blind review
+rather than proxy labels before making practical claims.
+
+Cycle 002 goes one step further: on a 12-case exact word-count-matched battery,
+length and sentiment drop to chance, and local BGE-small broad good/bad scoring
+fails. After fixing a category-axis mapping bug, an 11/12 = 91.7% Jina result
+appeared on answer-plus-decomposition category-axis scoring, but that interface
+used hand-authored "Good parts"/"Bad parts" text. The result is therefore
+classified as oracle-label leakage. The old 50-prompt proxy pilot did not
+validate the method, and a naive cumulative trajectory probe also failed. The
+next clean test is blind, label-free decomposition or raw answer scoring on a
+larger held-out battery.
+
+Before running it, follow `methodology/RESEARCH_LOOP_PROTOCOL.md`: Idea Mode,
+Literature Mode, Experiment Mode, Autopsy Mode, Forest Mode, and Decision Mode.
+The goal is to avoid getting trapped inside a single proxy metric again.
+
+See `methodology/experiment_roadmap.md` for the full plan.
+
+---
+
+*Research by Robin Gattis. June 2026.*

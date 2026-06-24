@@ -4,8 +4,7 @@
 .tmp/
 tmp/
 **/tmp/
-**/emb.env
-.env.*
-.env.local
-*.npy
-*.npz
+**/embedding_cache/
+__pycache__/
+*.pyc
+.git.broken*/

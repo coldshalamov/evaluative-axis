@@ -1,0 +1,50 @@
+{
+  "backend": "fastembed",
+  "model": "BAAI/bge-small-en-v1.5",
+  "cases": 12,
+  "trajectory_states": 36,
+  "stage_category_axis": {
+    "1": {
+      "n": 12,
+      "accuracy": 0.0,
+      "mean_delta": -0.03748173941858113
+    },
+    "2": {
+      "n": 12,
+      "accuracy": 0.6666666666666666,
+      "mean_delta": 0.005906978777299325
+    },
+    "3": {
+      "n": 12,
+      "accuracy": 0.4166666666666667,
+      "mean_delta": -0.0033746973300973573
+    }
+  },
+  "stage_combined": {
+    "1": {
+      "n": 12,
+      "accuracy": 0.0,
+      "mean_delta": -0.03237051446146021
+    },
+    "2": {
+      "n": 12,
+      "accuracy": 0.5,
+      "mean_delta": -0.006678119825664908
+    },
+    "3": {
+      "n": 12,
+      "accuracy": 0.3333333333333333,
+      "mean_delta": -0.016849146946333347
+    }
+  },
+  "integral_category_axis": {
+    "n": 12,
+    "accuracy": 0.25,
+    "mean_delta": -0.03494945797137916
+  },
+  "integral_combined": {
+    "n": 12,
+    "accuracy": 0.0,
+    "mean_delta": -0.05589778123345846
+  }
+}

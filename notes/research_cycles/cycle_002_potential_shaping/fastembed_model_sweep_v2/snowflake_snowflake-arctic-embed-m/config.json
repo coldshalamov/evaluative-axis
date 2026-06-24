@@ -1,0 +1,5 @@
+{
+  "backend": "fastembed",
+  "model": "snowflake/snowflake-arctic-embed-m",
+  "cache_dir": "C:\\Users\\93rob\\.cache\\codex-fastembed"
+}

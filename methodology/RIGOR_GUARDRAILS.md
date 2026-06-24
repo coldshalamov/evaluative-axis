@@ -62,6 +62,33 @@ Every preference or reranking experiment must include:
 An embedding method is not interesting if it only beats random while losing to
 cheap obvious baselines.
 
+### 4A. No Label Leakage In Scored Inputs
+
+For any confirmatory or intervention claim, the text passed to the embedding
+model or judge must not contain:
+
+- the answer key;
+- labels such as "better answer", "worse answer", "preferred", or "rejected";
+- experimenter-written "Good parts" / "Bad parts" notes;
+- decompositions that already identify the intended winner;
+- method names or category labels that reveal which candidate should score
+  higher.
+
+If explicit evaluative decomposition is supplied by the experimenter, the result
+must be labeled `oracle`, `upper_bound`, or `leakage_check`. It may verify that
+the scoring code can read evaluative language, but it is not evidence that the
+method inferred quality.
+
+Valid decomposition tests must use one of:
+
+- blind LLM-generated decompositions produced without labels or answer keys;
+- human-written decompositions produced blind to the expected label;
+- neutral feature extraction with evaluative words removed;
+- raw answer scoring with no decomposition.
+
+Every decomposition experiment must include a leakage audit before any result
+is promoted.
+
 ### 5. Always Audit Disagreements
 
 For every dataset-overlap result, inspect disagreements.
@@ -171,4 +198,41 @@ Prefer:
 Each future experiment should include:
 
 1. Research question.
-2. Frozen p
+2. Frozen protocol or exploratory status.
+3. Dataset/sensor description.
+4. Model and axes.
+5. Baselines.
+6. Main numbers.
+7. Confidence intervals or statistical test.
+8. Disagreement audit.
+9. Failure modes.
+10. Interpretation with limitations.
+11. Decision.
+12. Next experiment.
+
+## Current Best Next Experiment
+
+Run a no-training candidate-selection benchmark.
+
+Protocol:
+
+1. Choose 100 prompts from mixed sources.
+2. Generate 4 candidate answers per prompt.
+3. Ask an LLM to produce a short blind feature report for each answer:
+   strengths, weaknesses, risks, uncertainties, factual claims, missing context,
+   and practical usefulness. Do not provide answer labels or ask for the winner
+   in this pass.
+4. Score both raw answers and decompositions with frozen embedding axes.
+5. Select winners by random, length, sentiment, LLM judge, direct embedding,
+   and embedding-scored decomposition.
+6. Blind-judge the selected winners pairwise.
+7. Report win rates and cost.
+
+Primary question:
+
+> Does embedding-scored blind decomposition select better answers than random,
+> length, sentiment, refusal heuristics, direct answer scoring, and direct LLM
+> judging?
+
+This tests the user's core decomposition thesis without requiring training
+hardware.

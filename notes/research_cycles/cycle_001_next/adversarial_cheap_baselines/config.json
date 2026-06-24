@@ -1,0 +1,8 @@
+{
+  "backend": "lexical",
+  "input": "notes\\research_cycles\\cycle_001_next\\adversarial_negation_tests.json",
+  "output": "notes\\research_cycles\\cycle_001_next\\adversarial_cheap_baselines",
+  "seed": 20260623,
+  "dataset_name": "cycle001_adversarial_negation_tests",
+  "purpose": null
+}

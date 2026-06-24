@@ -650,4 +650,118 @@ Anthropic HH, PKU-SafeRLHF better labels, PKU-SafeRLHF safer labels, and
 Stanford SHP Reddit-score labels.
 
 ### Key results
-{chr(10).
+{chr(10).join(best_lines)}
+
+### Interpretation
+The result measures overlap between cheap embedding sensors and several
+expensive/social preference artifacts. It does not rank which artifact is
+ultimate truth. Disagreements are audit targets and possible evidence that the
+embedding signal and dataset labels point at different objectives.
+
+### Decision
+Continue the flywheel framing: embedding axes are best treated as cheap
+auxiliary reward/evaluation sensors, not as replacements for RLHF labels.
+
+### Next steps
+Run the same frozen Phase 6 protocol on stronger embedding models and then test
+whether using the scores for reranking or synthetic preference generation
+improves model outputs per dollar/token.
+"""
+    with LOG_PATH.open("a", encoding="utf-8") as f:
+        f.write(entry)
+
+
+def append_final_report(results):
+    lines = [
+        "",
+        "## Phase 6 Multi-Sensor Addendum",
+        "",
+        f"Date: {now_label()}",
+        "",
+        "Phase 6 reframed the experiment around multiple imperfect sensors rather than HH-RLHF as ground truth. A frozen eight-axis evaluative basis was scored against Anthropic HH, PKU-SafeRLHF better labels, PKU-SafeRLHF safer labels, and Stanford SHP Reddit-score labels.",
+        "",
+    ]
+    for dataset, block in results["datasets"].items():
+        best_agg = max(block["aggregates"].items(), key=lambda item: item[1]["agreement"])
+        best_axis = max(block["axes"].items(), key=lambda item: item[1]["agreement"])
+        lines.append(
+            f"- `{dataset}`: best axis `{best_axis[0]}` {best_axis[1]['agreement']:.1%}; "
+            f"best aggregate `{best_agg[0]}` {best_agg[1]['agreement']:.1%}; "
+            f"length {block['baselines']['length_prefer_longer']['agreement']:.1%}; "
+            f"sentiment {block['baselines']['sentiment_prefer_positive']['agreement']:.1%}."
+        )
+    lines.extend(
+        [
+            "",
+            "Interpretation: the question is not whether embeddings copy one dataset, but whether they provide cheap, scalable, interpretable evaluative pressure that shares information with several expensive preference artifacts and exposes useful disagreement cases.",
+        ]
+    )
+    with FINAL_REPORT_PATH.open("a", encoding="utf-8") as f:
+        f.write("\n".join(lines) + "\n")
+
+
+def run(args):
+    global OUT
+    OUT = ROOT / args.output_dir
+    OUT.mkdir(exist_ok=True)
+    embedder, model_label = make_embedder(args)
+    cache_stem = f"{safe_name(model_label)}_{args.sample_size}_{safe_name('_'.join(args.datasets))}"
+    axes = build_axes(embedder, cache_stem=cache_stem)
+    rows = []
+    if "hh" in args.datasets:
+        rows.extend(load_hh(args.sample_size))
+    if "pku" in args.datasets:
+        rows.extend(load_pku(args.sample_size))
+    if "shp" in args.datasets:
+        rows.extend(load_shp(args.sample_size))
+    partial_metadata = None
+    if args.score_partial_cache:
+        by_dataset, audits, partial_metadata = analyze_partial_cache(rows, axes, cache_stem)
+    else:
+        by_dataset, audits = analyze_rows(rows, embedder, axes, cache_stem=cache_stem)
+    results = {
+        "timestamp": datetime.now().isoformat(),
+        "model": model_label,
+        "backend": args.backend,
+        "sample_size_per_dataset": args.sample_size,
+        "datasets_requested": args.datasets,
+        "axes": list(AXES.keys()),
+        "aggregates": AGGREGATES,
+        "datasets": by_dataset,
+        "audit_keys": list(audits.keys()),
+        "notes": {
+            "ground_truth": "Dataset labels are treated as imperfect sensors, not authoritative good/bad truth.",
+            "weights": "No aggregate weights were fit to a dataset; aggregates use simple equal-weight means over predeclared axes.",
+        },
+    }
+    if partial_metadata:
+        results["partial_cache"] = partial_metadata
+        results["notes"]["partial_cache"] = "Candidate embeddings were scored only for complete preferred/other pairs already present in the cache; no missing pairs were imputed."
+    write_json(OUT / "results.json", results)
+    write_text(OUT / "results_summary.md", make_summary(results))
+    if not args.no_append:
+        append_log(results)
+        append_final_report(results)
+    print(json.dumps({"datasets": list(by_dataset), "model": model_label, "output_dir": str(OUT)}, indent=2))
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--backend", choices=["sentence-transformers", "gemini"], default="sentence-transformers")
+    parser.add_argument("--model", default="BAAI/bge-small-en-v1.5")
+    parser.add_argument("--gemini-model", default=None)
+    parser.add_argument("--sample-size", type=int, default=300)
+    parser.add_argument("--batch-size", type=int, default=32)
+    parser.add_argument("--max-workers", type=int, default=1)
+    parser.add_argument("--sleep-between", type=float, default=0.0)
+    parser.add_argument("--datasets", default="hh,pku,shp")
+    parser.add_argument("--output-dir", default="phase6_multi_sensor")
+    parser.add_argument("--score-partial-cache", action="store_true")
+    parser.add_argument("--no-append", action="store_true")
+    args = parser.parse_args()
+    args.datasets = [x.strip() for x in args.datasets.split(",") if x.strip()]
+    run(args)
+
+
+if __name__ == "__main__":
+    main()

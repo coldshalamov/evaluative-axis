@@ -1,0 +1,5 @@
+{
+  "backend": "fastembed",
+  "model": "mixedbread-ai/mxbai-embed-large-v1",
+  "cache_dir": "C:\\Users\\93rob\\.cache\\codex-fastembed"
+}

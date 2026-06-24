@@ -1,0 +1,8 @@
+{
+  "backend": "lexical",
+  "input": "notes\\research_cycles\\cycle_001_next\\pilot_50_candidates.json",
+  "output": "notes\\research_cycles\\cycle_001_next\\pilot_50_cheap_baselines",
+  "seed": 20260623,
+  "dataset_name": "cycle001_50_prompt_intervention_pilot",
+  "purpose": "Quota-free pilot candidate set for blind intervention review. Expected labels are current proxies from prior audit or curated adversarial design, not ground truth."
+}

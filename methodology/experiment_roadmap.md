@@ -21,7 +21,96 @@ The experiment is not complete until `autopsy.md` and `forest.md` exist.
 
 ---
 
-## 1. Intervention Test [DECISIVE - DO THIS FIRST]
+## 1. Controlled Minimal-Pair Battery [DO BEFORE MORE INTERVENTION CLAIMS]
+
+**The question**: Can the evaluator distinguish good/right from bad/wrong when
+length, tone, and verbosity are controlled?
+
+**Why it matters**: Cycle 001 showed that candidate selection can be dominated
+by length. A benchmark that does not control length cannot tell whether the
+embedding sees quality or verbosity.
+
+**Current status (June 23, 2026)**: Cycle 002 added a 23-case controlled
+battery and a 12-case exact word-count-matched v2 battery. On v2, length and
+sentiment fell to 50%, but local BGE-small broad evaluative scoring failed
+badly: direct combined 8.3%, broad evaluative 0.0%, while direct
+anti-sycophancy reached 66.7%. This is a negative diagnostic for the current
+BGE-small/direct-axis setup and supports testing stronger embeddings plus a
+scalar-plus-basis design.
+
+**Next step**: Expand v2 to 50 length-balanced cases, then rerun FastEmbed and
+Gemini when quota exists.
+
+---
+
+## 2. Emergent Decomposition Reward Simulation [STRONGEST ORIGINAL MECHANISM]
+
+**Protocol file**:
+`methodology/EMERGENT_DECOMPOSITION_REWARD_PROTOCOL.md`
+
+**The question**: Does optimizing against an evaluative embedding reward make
+decomposition emerge as a reasoning strategy?
+
+**Why it matters**: The strongest hypothesis is not that an experimenter can
+write `Good parts` / `Bad parts` and an embedding model can read those words.
+The useful training claim is that a model seeking higher evaluative reward may
+learn to separate a situation into good-making and bad-making factors, preserve
+the good, reduce the bad, and handle tradeoffs. This should show up most clearly
+in scratchpad-like traces or plans, not necessarily in the final answer alone.
+
+**Protocol**:
+
+1. Build 50-100 tasks where good performance requires tradeoff recognition,
+   false-premise correction, risk containment, or repair after noticing an
+   error.
+2. Generate multiple scratchpad-style traces per task under neutral
+   instructions. Do not ask for `good` / `bad` decomposition.
+3. Score cumulative contexts with embedding potential.
+4. Compare high-scoring and low-scoring traces under blind review for
+   spontaneous decomposition, tradeoff handling, task quality, and reward
+   hacking.
+5. Run an evolutionary feedback loop: keep top-scoring traces, ask for variants
+   with only scalar/rank feedback, and test whether traces become more
+   decompositional without explicit instruction.
+6. Include context-sensitivity cases such as `I should avoid introducing this
+   bug`, `I should not lie`, and `The user's premise is wrong, so I should
+   correct it`.
+
+**Success criteria**: High reward should correlate with better blind-rated
+traces, more spontaneous decomposition, and better contextual-negation handling
+without merely increasing positive-tone words, refusals, or avoidance of
+negative vocabulary.
+
+---
+
+## 3. Cumulative Context Potential-Shaping Simulation
+
+**The question**: Can evaluative embedding scores provide useful dense
+supervision when used as full-context potential deltas?
+
+**Why it matters**: Raw final-answer or prefix scoring accumulates local
+goodness and rewards verbosity. Potential deltas test whether a new reasoning
+step improves or degrades the entire current trajectory.
+
+**Protocol**:
+
+1. Build short trajectories where one step introduces a known error and a later
+   step may repair it.
+2. Score `Phi_t = axis dot embed(full context through step t)`.
+3. Compute `Delta_t = Phi_t - Phi_(t-1)`.
+4. Test whether deltas localize the injected error and recognize repair.
+5. Compare final-only, isolated-step, cumulative-context, and summary-context
+   scoring.
+
+**Success criteria**: Error steps should create negative deltas and repair
+steps positive deltas more reliably than isolated-step or final-only scoring.
+
+---
+
+## 4. No-Leakage Decomposition Intervention Test [DECISIVE PRACTICAL CLAIM]
+
+**Protocol file**:
+`methodology/NO_LEAKAGE_DECOMPOSITION_PROTOCOL.md`
 
 **The question**: Does embedding-axis scoring actually improve output selection, or does it just correlate with noisy labels?
 
@@ -36,7 +125,9 @@ The experiment is not complete until `autopsy.md` and `forest.md` exist.
    - Length (prefer longest)
    - Sentiment (prefer most positive)
    - Direct embedding-axis score
-   - Embedding-scored LLM critique (have an LLM write a natural-language evaluation, score the evaluation text with the embedding axis)
+   - Embedding-scored blind feature report. The LLM describes strengths,
+     weaknesses, risks, factual claims, uncertainty, and practical usefulness
+     without answer labels and without choosing a winner in the same pass.
    - Standard LLM-as-judge (for comparison, not as ground truth)
 4. Select the winner under each method.
 5. Blind-judge the winners pairwise (human or strong LLM judge, order-randomized).
@@ -56,18 +147,18 @@ quota during the embedding probe.
 
 ---
 
-## 2. Blind Disagreement Adjudication [STRENGTHENS CENTRAL CLAIM]
+## 5. Blind Disagreement Adjudication [STRENGTHENS CENTRAL CLAIM]
 
-**The question**: Does the 88.4% corrected agreement hold up under blind review?
+**The question**: Does the HH disagreement audit hold up under blind review?
 
 **Protocol**:
 
-1. Take the 109 gradeable disagreement cases (65 embedding-right + 44 HH-right).
+1. Take the 108 table-backed gradeable disagreement cases (63 embedding-right + 45 HH-right).
 2. Present each case to 2–3 reviewers (or a strong LLM judge) blind — they see the prompt and both responses but don't know which the embedding preferred.
 3. Collect independent grades.
 4. Compute inter-annotator agreement and the fraction that agree with the embedding vs. HH.
 
-**Why it matters**: The current grading was done by one reviewer who knew which response the embedding preferred. Blind adjudication eliminates that bias and makes the 88.4% number publishable.
+**Why it matters**: The current grading was done by one reviewer who knew which response the embedding preferred. Blind adjudication eliminates that bias. Also sample agreement cases, because assuming all 269 agreements are correct is not a valid corrected-accuracy estimate.
 
 **Resources**: Could use Gemini Flash as a blind judge (cheap, fast) with a sample of human-verified cases to validate the LLM judge's reliability.
 
@@ -75,7 +166,7 @@ quota during the embedding probe.
 
 ---
 
-## 3. Gemini Embedding Full Run [MODEL SCALING]
+## 6. Gemini Embedding Full Run [MODEL SCALING]
 
 **The question**: How much does embedding model quality improve the signal?
 
@@ -96,7 +187,7 @@ quota during the embedding probe.
 
 ---
 
-## 4. Cross-Domain Validation [BROADENS THE CLAIM]
+## 7. Cross-Domain Validation [BROADENS THE CLAIM]
 
 **The question**: Does the evaluative axis work beyond safety/helpfulness?
 
@@ -115,7 +206,7 @@ quota during the embedding probe.
 
 ---
 
-## 5. Adversarial / Negation Testing [CHARACTERIZES LIMITS]
+## 8. Adversarial / Negation Testing [CHARACTERIZES LIMITS]
 
 **The question**: How does the axis handle adversarial cases?
 
@@ -134,7 +225,7 @@ quota during the embedding probe.
 
 ---
 
-## 6. Cumulative Context Process-Scoring Simulation [TRAINING MECHANISM]
+## 9. Cumulative Context Process-Scoring Simulation [TRAINING MECHANISM]
 
 **The question**: Can embedding-axis scores provide dense supervision over a
 reasoning or response trajectory, rather than only a final-answer score?
@@ -177,7 +268,7 @@ required.
 
 ---
 
-## 7. DPO Training Experiment [INTERVENTION — LATER]
+## 10. DPO Training Experiment [INTERVENTION - LATER]
 
 **The question**: Does embedding-axis reward actually improve a model through DPO training?
 
@@ -198,7 +289,7 @@ required.
 
 ---
 
-## 8. Pretraining Data Curation Pilot [EXTENDS APPLICATIONS]
+## 11. Pretraining Data Curation Pilot [EXTENDS APPLICATIONS]
 
 **The question**: Can the embedding axis serve as a quality signal for pretraining data?
 
@@ -220,25 +311,35 @@ required.
 
 ## Order of Operations
 
-```
-Experiment 1 (Intervention test)     <- DO THIS FIRST. Practical claim.
-    │
-    ├── Experiment 2 (Blind adjudication) <- Can run in parallel
-    │
-    ├── Experiment 3 (Gemini full run)    <- Can run in parallel if quota available
-    │
-Experiment 4 (Cross-domain)          <- After intervention test confirms signal
-    │
-Experiment 5 (Adversarial testing)   <- Can run anytime
-    │
-Experiment 6 (Process scoring)       <- Tests dense-supervision mechanism
-    │
-Experiment 7 (DPO training)          <- Only after 1-3 and/or 6 are positive
-    │
-Experiment 8 (Pretraining curation)  <- Extension, after core argument is solid
+```text
+Experiment 1 (Controlled battery)    <- First gate: remove confounds.
+  |
+Experiment 2 (Emergent decomposition) <- Strongest original mechanism.
+  |
+Experiment 3 (Potential shaping)      <- Dense reward mechanics.
+  |
+Experiment 4 (Intervention test)      <- Practical claim after controls.
+  |
+  +-- Experiment 5 (Blind adjudication) <- Can run in parallel.
+  |
+  +-- Experiment 6 (Gemini full run)    <- Run when quota is available.
+  |
+Experiment 7 (Cross-domain)          <- After controlled/intervention signal.
+  |
+Experiment 8 (Adversarial testing)   <- Expand continuously.
+  |
+Experiment 9 (Process scoring)       <- Broader dense-supervision mechanism.
+  |
+Experiment 10 (DPO training)         <- Only after 1-4 and/or 9 are positive.
+  |
+Experiment 11 (Pretraining curation) <- Extension, after core argument is solid.
 ```
 
-The intervention test is the single most important experiment. If embedding-axis selection beats cheap baselines under blind review, the paper has a practical contribution. If it doesn't, no amount of correlation studies will make the argument.
+The controlled battery is now the gate. Cycle 001 showed that intervention
+tests can be length-confounded; Cycle 002 showed that local BGE-small broad
+good/bad scoring fails on a tiny exact-length battery. The next credible claim
+requires passing controlled, length-balanced tests before spending Gemini quota
+or GPU time.
 
 ---
 

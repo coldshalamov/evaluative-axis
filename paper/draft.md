@@ -62,7 +62,21 @@ The gap this paper addresses: these findings establish that the evaluative direc
 
 ### 2.2 Embedding-Based Reward Signals
 
+**Turney (2002)** computed unsupervised positive/negative semantic orientation
+from sparse anchors such as "excellent" and "poor" for review classification.
+This means the project cannot claim novelty for semantic orientation itself.
+The novelty must be in using a sparse external evaluative direction as a
+zero-training evaluator over full context, trajectory deltas, and training
+pipeline decisions.
+
 **Sun et al. (2025)** showed that reward models can be trained on pre-computed embeddings rather than requiring full model inference, dramatically reducing compute costs. They still train a classifier on labeled preference data; our approach skips the classifier entirely and uses the embedding geometry directly. Their work validates the premise — embeddings contain enough information for reward modeling — while leaving the stronger claim undemonstrated.
+
+**PGSRM** (Plashchinsky, 2025) uses cosine similarity between a parent model's
+reference-output embedding and a child model's generated-output embedding as a
+PPO reward on GPT-2-scale models. This establishes that embedding geometry can
+serve as a trainable reward landscape, not merely an offline diagnostic. It
+does not test a universal good/bad axis: the reward is reference similarity, not
+general evaluative projection.
 
 **Legend** (2024) uses representation engineering to find a safety direction in the target model's own activation space, then annotates preference margins based on distances along that direction. Key differences: Legend requires inference through the model being trained, focuses narrowly on safety, and annotates margins on existing preference data. Our approach uses a cheap external embedding model, targets general evaluation rather than safety alone, and generates preference signals from scratch.
 
@@ -73,6 +87,20 @@ The gap this paper addresses: these findings establish that the evaluative direc
 **Grand et al. (2022)** showed that semantic projection recovers context-dependent human knowledge from word embeddings, published in Nature Human Behaviour. Our method is semantic projection applied to the evaluative domain at the sentence level.
 
 **Kozlowski et al. (2025)** confirmed that Osgood's evaluation/potency/activity dimensions exist in LLM embeddings and that semantic features are entangled — shifting along one direction causes proportional shifts on geometrically aligned features. This entanglement is the mechanism by which our single evaluative axis captures multiple quality dimensions.
+
+**Valence-Assent Axis** (Lu, Song, & Wang, 2025) reports a dominant dimension
+across LLMs that jointly encodes subjective valence ("what is good") and assent
+to factual claims ("what is true"). This is close to the proposed mechanism,
+but it also reveals the central danger: steering this shared state can make a
+model rationalize a favored evaluative state at the expense of factual accuracy.
+That result supports the existence of broad evaluative geometry while warning
+against naive maximization.
+
+**Interaction Dynamics / TRACE** (Gooding & Grefenstette, 2025) shows that
+embedding-trajectory structure in dialogue can itself predict interaction
+success: structural trajectory features alone reached 68.20% pairwise accuracy,
+and a hybrid text+trajectory model reached 80.17%. This supports evaluating
+trajectories and context dynamics rather than only final answers.
 
 ### 2.4 Representation Engineering and Activation Steering
 
@@ -124,7 +152,29 @@ where $\vec{e}_t$ is the embedding of text $t$. Higher scores indicate greater a
 
 For preference prediction, given a prompt with two candidate responses, the method predicts the response with the higher score as preferred.
 
-### 3.3 Embedding Models Tested
+### 3.3 Cumulative Context Potential
+
+The stronger training formulation scores the full context after each reasoning
+or response step:
+
+$$\Phi_t = \vec{a} \cdot f(c, r_{1:t})$$
+
+where $c$ is the conversation context and $r_{1:t}$ is the generated prefix up
+to step $t$. The dense shaping signal is the potential delta:
+
+$$F_t = \gamma \Phi_t - \Phi_{t-1}$$
+
+With $\gamma = 1$, the deltas telescope:
+
+$$\sum_t F_t = \Phi_T - \Phi_0$$
+
+This matters because raw prefix scores double-count local goodness in long
+answers. Potential deltas ask whether the new step improves or degrades the
+whole trajectory as it now stands. This connects the proposal to
+potential-based reward shaping rather than naive per-token or per-sentence
+reward accumulation.
+
+### 3.4 Embedding Models Tested
 
 - **BGE-small-en-v1.5** (BAAI): 384 dimensions, 33M parameters. Used for the full disagreement audit and multi-sensor experiments. Chosen for cost and reproducibility — runs on CPU in seconds.
 - **Gemini Embedding 2** (Google): 3072 dimensions, state-of-the-art MTEB. Used for controlled axis validation. Quota limitations prevented full preference prediction experiments.
@@ -180,17 +230,25 @@ The raw 55.8% agreement is statistically significant (z=2.59, p=0.009) and beats
 
 | Grade | Count | % of disagreements |
 |---|---|---|
-| EMBEDDING_RIGHT | 65 | 28.1% |
-| HH_RIGHT | 44 | 19.0% |
-| EXCLUDE | 122 | 52.8% |
+| EMBEDDING_RIGHT | 63 | 27.3% |
+| HH_RIGHT | 45 | 19.5% |
+| EXCLUDE | 123 | 53.2% |
 
-Among gradeable disagreements: embedding preferred the better response in **65/(65+44) = 59.6%** of cases.
+Note: an earlier prose summary of this audit reported 65/44/122. The current
+auditable table in `disagreement_audit/full_grading.md` parses as 63/45/123.
+The corrected-agreement interpretation is essentially unchanged, but the paper
+should use the table-backed count until the audit file is reconciled.
+
+Among gradeable disagreements: embedding preferred the better response in
+**63/(63+45) = 58.3%** of cases.
 
 Corrected gradeable agreement (assuming agreement cases are correct, excluding both-bad pairs):
 
-$$\frac{269 + 65}{269 + 65 + 44} = \frac{334}{378} = 88.4\%$$
+$$\frac{269 + 63}{269 + 63 + 45} = \frac{332}{377} = 88.1\%$$
 
-Conservative sensitivity: 83.3% if 30% of embedding-right calls are wrong; 79.9% if 50% are wrong.
+The broader claim remains 83-88% corrected gradeable agreement under conservative
+sensitivity assumptions, but this number should be treated as provisional until
+blind adjudication validates the audit.
 
 #### 4.3.1 Patterns in Embedding-Right Cases
 
@@ -257,6 +315,76 @@ When used to score 300 HH-RLHF pairs, the individual domain axes outperform the 
 **Design**: Tested the embedding axis across multiple preference datasets (HH-RLHF, PKU-SafeRLHF, Stanford SHP) treated as independent imperfect sensors rather than ground truth. Used 8 aspect-specific axes.
 
 **Key finding**: Different datasets measure different things. SHP is heavily shaped by length and social signals (length baseline: 70.3%). PKU's "better" and "safer" labels diverge. Aggregate scores underperformed individual axis-dataset matches, supporting the view that evaluative structure is best captured by a small basis of aspect-specific axes rather than a single universal scalar.
+
+### 4.7 Quota-Free Intervention Pilot Build
+
+**Design**: Built a 50-prompt no-training intervention pilot without Gemini or
+Colab quota. The pilot contains 25 audited HH disagreement prompts and 25
+constructed adversarial/context prompts, with four candidate responses per
+prompt. We generated blinded review packets, hidden answer keys, cheap lexical
+baselines, refusal heuristics, category-routed baselines, and a local
+open-source embedding baseline using `BAAI/bge-small-en-v1.5` through
+FastEmbed/ONNX.
+
+**Results**:
+
+| Method | Proxy hits | Rate |
+|---|---:|---:|
+| Length | 33/50 | 66.0% |
+| Refusal heuristic | 25/50 | 50.0% |
+| FastEmbed BGE-small direct anti-sycophancy | 23/50 | 46.0% |
+| FastEmbed BGE-small direct category axis | 19/50 | 38.0% |
+| Random | 16/50 | 32.0% |
+| Sentiment | 15/50 | 30.0% |
+
+The adversarial subset exposed a stronger design artifact: length hit 24/25 =
+96.0% against the proxy key. This does not show that length is a good evaluator.
+It shows that the constructed proxy-best answers are often longer, so the pilot
+must be length-balanced or evaluated through blind pairwise review before it can
+support any intervention claim.
+
+**Interpretation**: This pilot is a useful benchmark harness and a useful
+negative design diagnosis. It does not yet show that embedding-axis selection
+improves outputs. It shows that the project now has a reproducible intervention
+pipeline and that candidate construction must control for verbosity before
+claiming practical lift.
+
+### 4.8 Controlled Minimal-Pair Battery
+
+**Design**: Built a controlled evaluative-axis battery to test conceptual
+discrimination under tighter confound control. A first 23-case battery still
+leaked length: the better answer was longer in 20/23 pairs and the length
+baseline reached 89.1%. We then built a 12-case v2 battery with exact word-count
+ties in every pair.
+
+**Results on length-balanced v2**:
+
+| Method | Accuracy |
+|---|---:|
+| Length | 50.0% |
+| Sentiment | 50.0% |
+| Refusal heuristic | 58.3% |
+| BGE-small direct combined | 8.3% |
+| BGE-small direct broad evaluative | 0.0% |
+| BGE-small direct anti-sycophancy | 66.7% |
+| BGE-small decomposition category axis | 58.3% |
+| Jina v2 small oracle decomposition category axis | 91.7% |
+
+**Interpretation**: Under exact length control, the broad direct BGE-small
+evaluative axis fails on this hand-built mini-battery. After fixing a category
+mapping bug and sweeping 8 local FastEmbed models,
+`jinaai/jina-embeddings-v2-small-en` reached 11/12 = 91.7% on
+answer-plus-decomposition category-axis scoring. However, the decomposition
+text was hand-authored and contained explicit "Good parts" and "Bad parts"
+statements. This is oracle-label leakage. It shows that the embedding
+projection can read explicit evaluative language, but it does not show that the
+embedding model independently inferred answer quality.
+
+This result should be retained only as a plumbing/upper-bound sanity check. A
+first naive cumulative-trajectory probe also failed, so process supervision
+should not be assumed to work from generic strategy templates. The next clean
+test is label-free scoring: raw answers, blind LLM-generated decompositions, and
+natural or injected-error/repair trajectories on held-out cases.
 
 ---
 

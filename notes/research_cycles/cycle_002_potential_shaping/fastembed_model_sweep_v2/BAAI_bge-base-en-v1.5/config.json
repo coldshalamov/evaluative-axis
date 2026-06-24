@@ -1,0 +1,5 @@
+{
+  "backend": "fastembed",
+  "model": "BAAI/bge-base-en-v1.5",
+  "cache_dir": "C:\\Users\\93rob\\.cache\\codex-fastembed"
+}
