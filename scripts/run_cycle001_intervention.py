@@ -677,6 +677,7 @@ def summarize(
 ) -> str:
     methods = sorted({row["method"] for row in selections})
     expected_items = [item for item in items if item.get("expected_best_candidate_id")]
+    has_expected = bool(expected_items)
     lines = [
         "# Cycle 001 Intervention Summary",
         "",
@@ -685,19 +686,7 @@ def summarize(
         f"Candidates: {sum(len(item['candidates']) for item in items)}",
         f"Interfaces: {', '.join(interfaces)}",
         "",
-        "## Proxy Expected-Hit Rates",
-        "",
-        "These numbers compare against the current proxy answer key. They are not a substitute for blind review.",
-        "",
-        "| Method | Hits | Total | Rate |",
-        "| --- | ---: | ---: | ---: |",
     ]
-    for method in methods:
-        rows = [row for row in selections if row["method"] == method and row["matches_expected_fixture"] is not None]
-        hits = sum(1 for row in rows if row["matches_expected_fixture"])
-        total = len(rows)
-        rate = hits / total if total else 0.0
-        lines.append(f"| `{method}` | {hits} | {total} | {rate:.1%} |")
 
     focus_methods = [
         "random",
@@ -710,32 +699,87 @@ def summarize(
         "decomposition_category_axis",
     ]
     categories = sorted({item.get("category", "") for item in items})
-    lines.extend(
-        [
-            "",
-            "## Category Proxy-Hit Rates",
-            "",
-            "Focused methods only. Full per-method selections are in `selections.csv`.",
-            "",
-            "| Category | Method | Hits | Total | Rate |",
-            "| --- | --- | ---: | ---: | ---: |",
-        ]
-    )
-    for category in categories:
-        for method in focus_methods:
-            rows = [
-                row
-                for row in selections
-                if row["category"] == category
-                and row["method"] == method
-                and row["matches_expected_fixture"] is not None
+
+    if has_expected:
+        lines.extend(
+            [
+                "## Proxy Expected-Hit Rates",
+                "",
+                "These numbers compare against the current proxy answer key. They are not a substitute for blind review.",
+                "",
+                "| Method | Hits | Total | Rate |",
+                "| --- | ---: | ---: | ---: |",
             ]
-            if not rows:
-                continue
+        )
+        for method in methods:
+            rows = [row for row in selections if row["method"] == method and row["matches_expected_fixture"] is not None]
             hits = sum(1 for row in rows if row["matches_expected_fixture"])
             total = len(rows)
             rate = hits / total if total else 0.0
-            lines.append(f"| `{category}` | `{method}` | {hits} | {total} | {rate:.1%} |")
+            lines.append(f"| `{method}` | {hits} | {total} | {rate:.1%} |")
+
+        lines.extend(
+            [
+                "",
+                "## Category Proxy-Hit Rates",
+                "",
+                "Focused methods only. Full per-method selections are in `selections.csv`.",
+                "",
+                "| Category | Method | Hits | Total | Rate |",
+                "| --- | --- | ---: | ---: | ---: |",
+            ]
+        )
+        for category in categories:
+            for method in focus_methods:
+                rows = [
+                    row
+                    for row in selections
+                    if row["category"] == category
+                    and row["method"] == method
+                    and row["matches_expected_fixture"] is not None
+                ]
+                if not rows:
+                    continue
+                hits = sum(1 for row in rows if row["matches_expected_fixture"])
+                total = len(rows)
+                rate = hits / total if total else 0.0
+                lines.append(f"| `{category}` | `{method}` | {hits} | {total} | {rate:.1%} |")
+    else:
+        method_map: dict[str, dict[str, str]] = {}
+        for row in selections:
+            method_map.setdefault(row["item_id"], {})[row["method"]] = row["selected_candidate_id"]
+        comparison_methods = [method for method in focus_methods if method in methods]
+        pair_rows = []
+        for idx, method_a in enumerate(comparison_methods):
+            for method_b in comparison_methods[idx + 1 :]:
+                disagreements = 0
+                shared = 0
+                for item_id in method_map:
+                    selected_a = method_map[item_id].get(method_a)
+                    selected_b = method_map[item_id].get(method_b)
+                    if selected_a is None or selected_b is None:
+                        continue
+                    if selected_a == selected_b:
+                        shared += 1
+                    else:
+                        disagreements += 1
+                pair_rows.append((method_a, method_b, disagreements, shared))
+
+        lines.extend(
+            [
+                "## Unlabeled Pool Note",
+                "",
+                "No proxy answer key is present for this dataset, so expected-hit tables are intentionally omitted.",
+                "Treat the blind review packet and the method disagreement structure as the main artifact.",
+                "",
+                "## Method Disagreement Counts",
+                "",
+                "| Method A | Method B | Disagreements | Shared selections |",
+                "| --- | --- | ---: | ---: |",
+            ]
+        )
+        for method_a, method_b, disagreements, shared in pair_rows:
+            lines.append(f"| `{method_a}` | `{method_b}` | {disagreements} | {shared} |")
 
     lines.extend(
         [

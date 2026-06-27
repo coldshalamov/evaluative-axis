@@ -21,7 +21,7 @@ The repo can now say something more concrete than before:
    builder when the free-tier generation endpoint is cooperative again.
 2. Rerun Gemini embedding selection on the frozen fresh pool and save that run
    as the main strong-model open-ended pilot.
-3. Complete the blind-review pass on the fresh pool rather than on the old
-   inherited Cycle 001 pool.
+3. Complete the blind-review pass on the fresh pool with the hardened
+   `--resume` judge path rather than on the old inherited Cycle 001 pool.
 4. Only after that, decide whether to scale prompt count or add a neutral
    critique/decomposition interface.

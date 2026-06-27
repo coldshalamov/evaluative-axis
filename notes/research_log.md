@@ -2239,3 +2239,57 @@ selectors only as exploratory scaffolding rather than as the main thesis test.
    inherited pool.
 4. Only after that, decide whether to scale prompt count or add neutral
    critique/decomposition scoring.
+
+## June 27, 2026 - Cycle 012 Follow-up: Judge Hardening And Unlabeled Summary
+
+### What was done
+
+Improved two operational weak points exposed by the fresh-pool pilot:
+
+1. rewrote `scripts/judge_pairwise_with_gemini.py` to use direct HTTP Gemini
+   calls with incremental writes and `--resume`;
+2. updated `scripts/run_cycle001_intervention.py` so unlabeled open-ended runs
+   report method-disagreement counts instead of meaningless `0/0` proxy-hit
+   tables.
+
+Regenerated the local Snowflake summary on:
+
+- `notes/research_cycles/cycle_012_length_controlled_openended_pool/generated_pool_v1/pilot_snapshot_8.json`
+
+### Key results
+
+Fresh unlabeled summary now reports direct disagreement structure:
+
+- `direct_category_axis` vs `length`: 6 disagreements
+- vs `random`: 7 disagreements
+- vs `sentiment`: 7 disagreements
+- vs `refusal_heuristic`: 5 disagreements
+
+Judge-path status:
+
+- new judge script compiles and supports checkpoint/resume
+- the first fresh-pool smoke run still hit HTTP 429 before the first completed
+  row was saved
+
+### Interpretation
+
+This follow-up improves the honesty and resilience of the open-ended lane
+without overstating what was learned from quota-blocked runs.
+
+The important separation is now clearer:
+
+- disagreement structure on the fresh pool is real and saved
+- blind adjudication on that pool is operationally blocked by quota, not by a
+  broken script or bad packet format
+
+### Decision
+
+Keep the hardened judge path and use it as the default for future fresh-pool
+blind review attempts.
+
+### Next steps
+
+1. Resume fresh-pool blind judging with the hardened path when quota allows.
+2. Resume Gemini embedding selection on the same fresh pool.
+3. Keep local selectors as exploratory scaffolding, not as the main external
+   claim.

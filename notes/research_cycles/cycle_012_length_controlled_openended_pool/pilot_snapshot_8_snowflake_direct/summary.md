@@ -5,30 +5,30 @@ Items: 8
 Candidates: 32
 Interfaces: direct
 
-## Proxy Expected-Hit Rates
+## Unlabeled Pool Note
 
-These numbers compare against the current proxy answer key. They are not a substitute for blind review.
+No proxy answer key is present for this dataset, so expected-hit tables are intentionally omitted.
+Treat the blind review packet and the method disagreement structure as the main artifact.
 
-| Method | Hits | Total | Rate |
-| --- | ---: | ---: | ---: |
-| `direct_anti_sycophancy` | 0 | 0 | 0.0% |
-| `direct_category_axis` | 0 | 0 | 0.0% |
-| `direct_combined` | 0 | 0 | 0.0% |
-| `direct_general_evaluative` | 0 | 0 | 0.0% |
-| `direct_harm_reduction` | 0 | 0 | 0.0% |
-| `direct_persona_honesty` | 0 | 0 | 0.0% |
-| `direct_truthfulness` | 0 | 0 | 0.0% |
-| `length` | 0 | 0 | 0.0% |
-| `random` | 0 | 0 | 0.0% |
-| `refusal_heuristic` | 0 | 0 | 0.0% |
-| `sentiment` | 0 | 0 | 0.0% |
+## Method Disagreement Counts
 
-## Category Proxy-Hit Rates
-
-Focused methods only. Full per-method selections are in `selections.csv`.
-
-| Category | Method | Hits | Total | Rate |
-| --- | --- | ---: | ---: | ---: |
+| Method A | Method B | Disagreements | Shared selections |
+| --- | --- | ---: | ---: |
+| `random` | `length` | 5 | 3 |
+| `random` | `sentiment` | 7 | 1 |
+| `random` | `refusal_heuristic` | 4 | 4 |
+| `random` | `direct_combined` | 8 | 0 |
+| `random` | `direct_category_axis` | 7 | 1 |
+| `length` | `sentiment` | 3 | 5 |
+| `length` | `refusal_heuristic` | 4 | 4 |
+| `length` | `direct_combined` | 6 | 2 |
+| `length` | `direct_category_axis` | 6 | 2 |
+| `sentiment` | `refusal_heuristic` | 7 | 1 |
+| `sentiment` | `direct_combined` | 3 | 5 |
+| `sentiment` | `direct_category_axis` | 7 | 1 |
+| `refusal_heuristic` | `direct_combined` | 6 | 2 |
+| `refusal_heuristic` | `direct_category_axis` | 5 | 3 |
+| `direct_combined` | `direct_category_axis` | 6 | 2 |
 
 ## Artifacts
 

@@ -82,6 +82,11 @@ That disagreement was enough to build a real blind-review packet with:
 This matters because it means the fresh pool is already creating real selector
 differences rather than collapsing into "every method picks the same answer."
 
+The local intervention summary was also updated so unlabeled open-ended runs no
+longer print meaningless `0/0` proxy-hit tables. On this fresh pool it now
+reports method-disagreement counts directly, which is a much more honest
+surface for open-ended exploratory work before blind review is finished.
+
 ### 4. Strong-model selection on the fresh pool is still operationally pending
 
 A Gemini embedding selection run on the same 8-item snapshot was started, but
@@ -94,6 +99,16 @@ So the current state is:
 - local selector outputs exist
 - blind-review packet exists
 - strong-model selection on this pool is not yet saved
+
+The pairwise blind judge was also hardened during this cycle:
+
+- direct HTTP Gemini calls instead of the older SDK path
+- incremental writes after each completed row
+- `--resume` support for interrupted review packets
+
+But the first fresh-pool smoke run still hit free-tier HTTP 429s before the
+first row completed, so the operational blocker remains quota availability, not
+the packet format or the judge script itself.
 
 ## Interpretation
 
