@@ -1130,3 +1130,1112 @@ they support false or harmful premises.
    blind review.
 4. Only after that, consider DPO/GRPO/QLoRA training with embedding-ranked
    traces.
+
+## June 25, 2026 - Cycle 003: Objective Code Reranking Pilot
+
+### What was done
+
+Ran a design-first cycle to choose the best next experiment under the real
+constraints: one laptop, free-tier Google access, no hired annotators, and no
+assumption that HH is ground truth. Ranked 20 candidate tests across thesis
+fit, falsification power, budget fit, contamination resistance, and decision
+value. The top choice was objective code reranking with hidden unit tests.
+
+Implemented:
+
+- `scripts/run_objective_code_reranking.py`
+- `notes/research_cycles/cycle_003_objective_code_reranking/idea.md`
+- `notes/research_cycles/cycle_003_objective_code_reranking/experiment.md`
+- `notes/research_cycles/cycle_003_objective_code_reranking/results.md`
+
+Tried to run the full generated-candidate protocol first. Gemini embeddings
+worked, but Gemini generation hit repeated HTTP 429 responses and
+`mcp__colab_mcp.open_colab_browser_connection` returned `false`. Used the
+documented fallback: local execution with curated candidate sets and hidden
+tests.
+
+### Key results
+
+- 20 candidate tests were ranked; top 5:
+  1. objective code reranking with hidden tests
+  2. length-controlled no-leakage open-ended reranking
+  3. objective math reranking with exact-answer checks
+  4. injected error/repair potential shaping
+  5. Gemini-blind HH disagreement adjudication
+- Objective code pilot size:
+  - 6 Python tasks
+  - 3 candidates per task
+- Hidden-test outcomes:
+  - random: 3/6 solved = 50.0%
+  - length: 3/6 solved = 50.0%
+  - direct broad evaluative: 5/6 solved = 83.3%
+  - direct code-quality evaluative: 5/6 solved = 83.3%
+- Avg selected pass rate:
+  - random: 83.3%
+  - length: 83.3%
+  - direct broad evaluative: 96.7%
+  - direct code-quality evaluative: 96.7%
+- Best-candidate hit rate:
+  - random: 50.0%
+  - length: 50.0%
+  - direct broad evaluative: 83.3%
+  - direct code-quality evaluative: 83.3%
+- The single miss was `balanced_brackets`, where the scorer slightly preferred
+  a plausible but order-blind stack solution over the fully correct parser.
+- Colab OSS rerun on the same curated benchmark:
+  - `sentence-transformers/all-mpnet-base-v2`
+    - random: 3/6
+    - length: 3/6
+    - direct broad evaluative: 1/6
+    - direct code-quality evaluative: 1/6
+  - `BAAI/bge-base-en-v1.5`
+    - random: 3/6
+    - length: 3/6
+    - direct broad evaluative: 3/6
+    - direct code-quality evaluative: 3/6
+- The browser approval path was real: the Colab approval modal appeared in
+  Chrome and could be clicked. After approval, the MCP connector no longer
+  returned immediate `false`, but the transport still closed. The browser-side
+  Colab terminal remained usable and was used to run the OSS ablation.
+
+### Interpretation
+
+This is the first clean objective intervention result in the repo that does not
+depend on HH labels or an LLM judge as the final metric. It is only a small
+pilot and uses curated candidates, so it should not be framed as proof that the
+full training thesis is solved. But it is meaningful directional evidence that
+direct evaluative geometry can already function as a useful reranker against
+objective hidden correctness.
+
+The failure mode is also informative. The miss was not a length shortcut or a
+pretty-answer effect. The selected wrong answer was almost correct and failed a
+single order-sensitive hidden case. That suggests the current signal can
+confuse local algorithmic plausibility with full structural constraint
+satisfaction.
+
+The Colab OSS ablation adds an equally important constraint: low-cost
+open-source embeddings did not reproduce the Gemini pilot lift. `all-mpnet`
+performed materially worse than the baselines, and `bge-base` only tied them.
+That makes the project's hardware-cost problem more concrete instead of more
+speculative. The sharpest current interpretation is that a Gemini-family
+embedding likely benefits from a much larger and more capable base model than
+typical OSS embedders, even though the exact parameter count is not publicly
+stated.
+
+### Decision
+
+Promote objective reranking with hidden end metrics to the main no-GPU proof
+path. Demote HH overlap further from "benchmark" to "sensor." The next useful
+question is not whether the signal imitates HH more closely, but whether it
+continues to beat cheap baselines on larger objective reranking tasks and on
+other objective domains.
+
+### Next steps
+
+1. Scale the code reranking pilot from 6 tasks to at least 30-50 tasks with
+   more adversarial hidden checks.
+2. Re-enable critique-based scoring when Gemini generation quota or Colab
+   access becomes available.
+3. Run the same protocol on objective math tasks with exact answers.
+4. Add a small-margin uncertainty rule and test abstain/resample policies on
+   close calls.
+
+## June 25, 2026 - Research System V1: Cross-Domain Evidence Program
+
+### What was done
+
+Turned the repo's methodology into a frozen research program with explicit claim
+gates, benchmark lanes, and an executable report.
+
+Added:
+
+- `experiments/research_system_v1/program_manifest.json`
+- `methodology/SERIOUS_RESEARCH_SYSTEM_V1.md`
+- `scripts/orchestrate_research_system.py`
+- `scripts/run_objective_text_reranking.py`
+- `experiments/research_system_v1/benchmarks/objective_math_reranking_v1.json`
+- `experiments/research_system_v1/benchmarks/tool_interpretation_reranking_v1.json`
+- `experiments/research_system_v1/benchmarks/process_potential_error_repair_v1_spec.md`
+
+Executed the full ready set that fit the available hardware:
+
+- Gemini behavior-basis battery
+- Gemini objective math reranking
+- Gemini tool-interpretation reranking
+- local BGE-base reruns for math and tool after installing
+  `sentence-transformers`
+
+### Key results
+
+- Program report:
+  - `notes/research_system_v1/report/report.md`
+  - lanes with results: 7
+  - `capacity_code_gate`: pass
+  - `capacity_cross_domain_gate`: pass
+  - `behavior_basis_gate`: pass
+  - `cross_domain_selection_gate`: pass
+  - `process_potential_gate`: pending
+  - `training_readiness_gate`: pending
+- Behavior-basis battery:
+  - `direct_category_axis`: 91.7%
+  - `decomposition_category_axis`: 100.0%
+  - `direct_combined`: 83.3%
+  - `direct_general_evaluative`: 33.3%
+- Objective math reranking:
+  - Gemini `direct_combined`: 8/8 = 100.0%
+  - baseline best (`length`): 4/8 = 50.0%
+  - BGE-base `direct_target_axis`: 5/8 = 62.5%
+- Tool-interpretation reranking:
+  - Gemini `direct_target_axis`: 7/8 = 87.5%
+  - baseline best: 3/8 = 37.5%
+  - BGE-base `direct_target_axis`: 4/8 = 50.0%
+- Existing code pilot remains:
+  - Gemini direct methods: 5/6 = 83.3%
+  - baseline best: 3/6 = 50.0%
+  - BGE-base: 3/6 = 50.0%
+  - `all-mpnet-base-v2`: 1/6 = 16.7%
+
+### Interpretation
+
+This is the first version of the repo that looks like a real evidence program
+instead of a collection of promising anecdotes.
+
+The strongest current result is not just that Gemini embeddings looked good on
+one benchmark. It is that frozen, objective, no-judge end metrics now show
+clear lift across three different domains: code, math, and tool/log
+interpretation.
+
+An equally important constraint also became clearer. The broad generic
+`general_evaluative` direction is not universally enough by itself. It was
+excellent on the small math suite, weak on the tool-interpretation suite, and
+poor on the controlled behavior battery. Category-aware or decomposition-aware
+scoring carried much more of the useful signal. That makes the project more
+interesting and more specific: the thesis is no longer just "good/bad works";
+it is that evaluative embedding geometry can carry actionable selection signal,
+and targeted axes matter.
+
+The capacity story also strengthened. BGE-base improved slightly over cheap
+baselines on the new math and tool suites, but the lift was much smaller than
+Gemini's. That does not prove parameter count as the mechanism, but it does
+support the operational claim that more capable embedding families are much more
+useful for this method than small cheap OSS encoders.
+
+### Decision
+
+Promote `research_system_v1` as the main proof frame for the repo.
+
+The project can now credibly claim:
+
+1. objective cross-domain selection evidence exists;
+2. targeted evaluative axes beat naive baselines on a controlled behavior
+   battery;
+3. cheap OSS embedders do not match Gemini's lift on the same frozen suites.
+
+The project must not yet claim that embedding scores are ready to train on as a
+dense reward. That remains blocked on the process-potential suite.
+
+### Next steps
+
+1. Implement `process_potential_error_repair_v1` using the frozen spec and make
+   `dense_reward_localization_score` the next decisive metric.
+2. Expand the objective math and tool suites from 8 tasks each to at least
+   30-50 tasks with harder distractors.
+3. Add one stronger OSS comparison model above BGE-base if laptop or Colab
+   budget allows.
+4. Package the report, benchmark files, and key summaries into an investor /
+   partner briefing packet with honest claim boundaries.
+
+## June 27, 2026 - Cycle 004: Good vs Proxy Conflicts
+
+### What was done
+
+Built a contamination-aware word-level comparison to test the user's stronger
+thesis more directly: whether raw `good/bad` behaves like a broader evaluative
+axis than nearby proxy words such as `true`, `honest`, `useful`, `helpful`,
+`accurate`, `correct`, and `safe`.
+
+Added:
+
+- `methodology/GOOD_VS_PROXY_CONFLICTS_PROTOCOL.md`
+- `scripts/run_good_vs_proxy_conflicts.py`
+- `notes/research_cycles/cycle_004_good_vs_proxy_conflicts/`
+
+Ran the word-level benchmark on:
+
+- `gemini-embedding-2`
+- `BAAI/bge-base-en-v1.5`
+
+Then ran the existing richer evaluative-axis battery on the same 50-case file
+to check whether the benchmark itself was too hard or whether the failure was
+specific to raw/single-word axes.
+
+### Key results
+
+Word-level conflict outputs:
+
+- `notes/research_system_v1/good_vs_proxy_conflicts_gemini_v1/summary.md`
+- `notes/research_system_v1/good_vs_proxy_conflicts_bge_v1/summary.md`
+
+Same-benchmark richer-axis control:
+
+- `notes/research_system_v1/battery_v3_gemini_direct_v1/summary.md`
+
+On `gemini-embedding-2`:
+
+- `raw_good_bad`: 26.0%
+- `sentence_good_bad`: 30.0%
+- proxy mean: 34.8%
+- best proxy: `raw_useful_useless` at 42.0%
+
+On `BAAI/bge-base-en-v1.5`:
+
+- `raw_good_bad`: 28.0%
+- `sentence_good_bad`: 24.0%
+- proxy mean: 21.8%
+- best proxy: `raw_honest_dishonest` at 30.0%
+
+On the same 50 cases, the richer Gemini evaluative axes were much stronger:
+
+- `direct_general_evaluative`: 46.0%
+- `direct_combined`: 86.0%
+- `direct_category_axis`: 86.0%
+- `direct_truthfulness`: 90.0%
+- `direct_harm_reduction`: 94.0%
+- `direct_persona_honesty`: 96.0%
+- `direct_anti_sycophancy`: 98.0%
+
+### Interpretation
+
+This is one of the most useful negative results in the repo so far.
+
+The easy overclaim was that a strong embedding model might already carry the
+full broad evaluative signal in raw `good/bad` form. On this frozen 50-case
+conflict battery, that did not happen. Nearby single-word proxy axes also
+mostly failed.
+
+At the same time, the benchmark itself is clearly not impossible, because the
+richer targeted axes worked very well on the same cases. So the right current
+conclusion is not "evaluative geometry failed." It is:
+
+- the raw one-word version looks too weak in the current zero-shot setup;
+- targeted evaluative criteria are much more recoverable and useful right now;
+- if a pure `good/bad` training signal ever works, it likely requires stronger
+  representation quality, more context, training on the signal, or all three.
+
+### Decision
+
+Narrow the publishable claim. Do not present raw `good/bad` as already
+validated. Present the broader evaluative-geometry claim, the strong targeted
+axis results, the objective reranking results, and this new negative result as
+an honest boundary on what the current evidence can and cannot support.
+
+### Next steps
+
+1. Keep the new word-level conflict battery as a standing falsification test.
+2. Focus new effort on targeted-axis conflict batteries rather than many more
+   one-word variants.
+3. Implement the process-potential lane, because that is still the main missing
+   bridge from selection to training.
+4. Expand the objective reranking suites, which remain the strongest current
+   evidence family.
+
+## June 27, 2026 - Cycle 005: Process Potential Error-Repair
+
+### What was done
+
+Built and ran the missing process-potential bridge test for
+`research_system_v1`.
+
+Added:
+
+- `experiments/research_system_v1/benchmarks/process_potential_error_repair_v1.json`
+- `scripts/run_process_potential_error_repair.py`
+- `notes/research_cycles/cycle_005_process_potential_error_repair/`
+
+Ran the suite on:
+
+- `gemini-embedding-2`
+- `BAAI/bge-base-en-v1.5`
+
+Also included explicit controls for:
+
+- `length`
+- `sentiment`
+- `final_answer_only_category_axis`
+- `final_answer_only_combined`
+
+Then regenerated:
+
+- `notes/research_system_v1/report/report.md`
+
+### Key results
+
+Outputs:
+
+- `notes/research_system_v1/process_potential_error_repair_v1/summary.md`
+- `notes/research_system_v1/process_potential_error_repair_bge_v1/summary.md`
+
+On `gemini-embedding-2`:
+
+- `error_drop_accuracy`: 91.7%
+- `repair_rise_accuracy`: 83.3%
+- `error_localization_top1_accuracy`: 33.3%
+- `repair_localization_top1_accuracy`: 66.7%
+- `dense_reward_localization_score`: 50.0%
+- `combined_dense_reward_localization_score`: 62.5%
+
+On `BAAI/bge-base-en-v1.5`:
+
+- `error_drop_accuracy`: 33.3%
+- `repair_rise_accuracy`: 75.0%
+- `error_localization_top1_accuracy`: 0.0%
+- `repair_localization_top1_accuracy`: 41.7%
+- `dense_reward_localization_score`: 20.8%
+- `combined_dense_reward_localization_score`: 16.7%
+
+Critical controls on Gemini:
+
+- `length`: 0.0% dense score
+- `sentiment`: 8.3% dense score
+- `final_answer_only_category_axis`: 0.0% dense score
+- `final_answer_only_combined`: 0.0% dense score
+
+System gate result after report refresh:
+
+- `process_potential_gate`: `fail`
+- frozen threshold: `0.65`
+- observed `dense_reward_localization_score`: `0.50`
+
+### Interpretation
+
+This is the cleanest bridge result in the repo so far between reranking and the
+denser training thesis.
+
+What it shows:
+
+- the strong embedding model reacts to injected reasoning degradation and later
+  repair inside the trace
+- that effect is much stronger than what the cheap OSS embedder shows
+- the effect is not explained by answer length, sentiment, or looking only at
+  the final answer
+
+What it does not show:
+
+- that the current signal is already strong enough for dense reward training
+- that the frozen process gate should be called a pass
+
+The remaining misses are concentrated in `reasoning_rigor`, `persona_honesty`,
+and some `harm_reduction` cases, which is useful guidance rather than a random
+failure pattern.
+
+### Decision
+
+Promote the narrower claim:
+
+1. process sensitivity exists;
+2. stronger embedding families show much more of it than cheap OSS embedders;
+3. training-readiness is still not demonstrated under the current gate.
+
+### Fallback conditions
+
+If future process runs continue to stall below the threshold after the suite is
+expanded, the repo should treat this as evidence that the current embedding-only
+signal is better framed as a reranking or critique aid than as a dense reward.
+
+If expanded suites improve localization without relying on trivial controls or
+post-hoc gate changes, the training-readiness claim can be revisited.
+
+### Next steps
+
+1. Expand the process suite from 12 traces toward 30-50 traces, especially in
+   `reasoning_rigor`, `persona_honesty`, and `harm_reduction`.
+2. Add multiple repair phrasings per phenomenon so the suite is less sensitive
+   to one particular wording pattern.
+3. Keep the current threshold frozen and resist reclassifying `62.5%` on the
+   combined scorer as a pass after the fact.
+4. Use the refreshed report as the honest external-facing research frame:
+   strong selection evidence, clear capacity gap, real but not yet sufficient
+   process signal.
+
+## June 27, 2026 - Cycle 006: Partner Packet
+
+### What was done
+
+Built a reproducible external-facing packet directly from the current
+`research_system_v1` outputs.
+
+Added:
+
+- `scripts/build_partner_packet.py`
+- `notes/research_cycles/cycle_006_partner_packet/`
+
+Generated:
+
+- `paper/draft.md`
+- `paper/partner_packet_v1/brief.md`
+- `paper/partner_packet_v1/packet_summary.json`
+- `paper/partner_packet_v1/figures/figure_selection_lift.svg`
+- `paper/partner_packet_v1/figures/figure_word_vs_targeted.svg`
+- `paper/partner_packet_v1/figures/figure_process_signal.svg`
+
+### Key results
+
+The repo now has one current-state summary artifact that:
+
+- leads with objective reranking evidence rather than weak proxy overlap;
+- shows the large Gemini-vs-cheap-OSS capability gap;
+- keeps the raw `good/bad` negative result visible;
+- and preserves the frozen failure of the process training-readiness gate.
+
+The paper draft was also updated so its abstract, contributions, new
+experiments, and conclusion no longer lead with the older HH-centric framing.
+
+### Interpretation
+
+This cycle does not create new empirical evidence. It upgrades the repo from a
+collection of folders into a more inspectable research artifact.
+
+That matters because the current bottleneck is not only more experiments. It is
+also whether an external reader can see the evidence ladder and the non-claims
+without having to reconstruct it manually from old drafts.
+
+### Decision
+
+Use `paper/partner_packet_v1/brief.md` as the main partner-facing summary until
+the full paper draft is updated to the same evidence standard.
+
+### Next steps
+
+1. Update the full paper draft to align with the current report and packet.
+2. Expand the objective suites and process suite while keeping the packet
+   generator as the public-facing summary layer.
+3. Add cost and confidence-interval reporting once those numbers are measured
+   directly.
+
+## June 27, 2026 - Cycle 007: Pairwise Blind Review Pilot
+
+### What was done
+
+Ran the first reusable blinded pairwise-review pilot on the old open-ended
+Cycle 001 candidate pool.
+
+Added or updated:
+
+- `scripts/build_pairwise_review.py`
+- `scripts/judge_pairwise_with_gemini.py`
+- `scripts/run_failure_audit.py`
+- `scripts/run_pairwise_blind_review_pilot.py`
+- `notes/research_cycles/cycle_007_pairwise_blind_review_pilot/`
+
+Operational fix:
+
+- the original blind judge path used `gemini-2.0-flash`, which was quota
+  blocked for this key
+- probing showed `gemini-flash-lite-latest` was available
+- the judge tooling was updated to accept an explicit model and the pilot was
+  run on `gemini-flash-lite-latest`
+
+Pilot design:
+
+- use `notes/research_cycles/cycle_001_next/pilot_50_fastembed_bge_small/selections.json`
+- build actually blind pairwise packets only where methods chose different
+  candidates
+- sample at most 10 rows per comparison
+- require order-flip stability from the Gemini judge or treat the case as a tie
+
+Focus methods:
+
+- `direct_category_axis`
+- `direct_anti_sycophancy`
+
+Baselines:
+
+- `length`
+- `random`
+- `sentiment`
+- `refusal_heuristic`
+
+### Key results
+
+Permanent artifacts:
+
+- `notes/research_cycles/cycle_007_pairwise_blind_review_pilot/runs/combined_summary.md`
+- `notes/research_cycles/cycle_007_pairwise_blind_review_pilot/runs/direct_category_axis/`
+- `notes/research_cycles/cycle_007_pairwise_blind_review_pilot/runs/direct_anti_sycophancy/`
+
+For `direct_category_axis`:
+
+- vs `length`: 1 win, 8 losses, 1 tie -> 11.1% decided win rate
+- vs `random`: 5 wins, 3 losses, 2 ties -> 62.5%
+- vs `refusal_heuristic`: 2 wins, 5 losses, 3 ties -> 28.6%
+- vs `sentiment`: 8 wins, 1 loss, 1 tie -> 88.9%
+
+For `direct_anti_sycophancy`:
+
+- vs `length`: 3 wins, 6 losses, 1 tie -> 33.3%
+- vs `random`: 3 wins, 5 losses, 2 ties -> 37.5%
+- vs `refusal_heuristic`: 1 win, 7 losses, 2 ties -> 12.5%
+- vs `sentiment`: 5 wins, 1 loss, 4 ties -> 83.3%
+
+Judge stability:
+
+- `direct_category_axis` pilot: 33 stable wins, 3 stable ties, 4 order-sensitive
+  ties, 0 errors
+- `direct_anti_sycophancy` pilot: 31 stable wins, 2 stable ties, 7
+  order-sensitive ties, 0 errors
+
+### Interpretation
+
+This is an important negative result on the cheap open-ended lane.
+
+What it shows:
+
+- the blind-review tooling now works end-to-end and is reusable
+- cheap BGE-small open-ended selectors do not beat the stronger cheap baselines
+  on this inherited candidate pool
+- the result is not just a proxy-key complaint anymore; it survives a blinded
+  LLM judge sensor
+
+What it does not show:
+
+- that embedding selection fails in general
+- that stronger embedding models would behave the same way
+- that a clean length-controlled open-ended reranking set would also be
+  negative
+
+### Decision
+
+Promote this as an honest negative pilot, not as a decisive intervention claim.
+
+The practical reading is:
+
+1. cheap OSS open-ended selection is not strong enough yet;
+2. the objective reranking results remain the strongest practical evidence;
+3. the next open-ended claim should use a fresh length-controlled candidate pool
+   plus the stronger embedding family.
+
+### Next steps
+
+1. Re-run the same blind-review pilot structure with stronger embedding
+   selections once those outputs exist.
+2. Build a fresh no-leakage open-ended candidate pool with tight length control.
+3. Keep `gemini-flash-lite-latest` as the working blind-judge default unless a
+   better quota-available model is verified.
+
+## June 27, 2026 - Cycle 008: Gemini Open-Ended Blind Review Pilot
+
+### What was done
+
+Reran the reusable open-ended blind-review pilot on the inherited Cycle 001
+candidate pool using stronger Gemini embedding selections.
+
+Added or updated artifacts:
+
+- `.tmp/cycle001_gemini_direct_openended_pilot/`
+- `notes/research_cycles/cycle_008_gemini_openended_blind_review_pilot/`
+
+Core runs:
+
+- `scripts/run_cycle001_intervention.py` with `gemini-embedding-2`,
+  `--interfaces direct`
+- `scripts/run_pairwise_blind_review_pilot.py` with
+  `gemini-flash-lite-latest`
+
+Focus methods:
+
+- `direct_category_axis`
+- `direct_harm_reduction`
+
+Baselines:
+
+- `length`
+- `random`
+- `sentiment`
+- `refusal_heuristic`
+
+Also completed a matched cheap-BGE comparison for:
+
+- `direct_harm_reduction`
+
+under the same blind-review protocol.
+
+### Key results
+
+Gemini selector outputs:
+
+- `notes/research_cycles/cycle_008_gemini_openended_blind_review_pilot/runs/combined_summary.md`
+- `notes/research_cycles/cycle_008_gemini_openended_blind_review_pilot/runs/direct_category_axis/analysis/summary.md`
+- `notes/research_cycles/cycle_008_gemini_openended_blind_review_pilot/runs/direct_harm_reduction/analysis/summary.md`
+
+Matched cheap comparison:
+
+- `notes/research_cycles/cycle_008_gemini_openended_blind_review_pilot/runs_bge_harm/direct_harm_reduction/analysis/summary.md`
+
+For Gemini `direct_category_axis`:
+
+- vs `length`: 20.0%
+- vs `random`: 55.6%
+- vs `refusal_heuristic`: 0.0%
+- vs `sentiment`: 100.0%
+
+For Gemini `direct_harm_reduction`:
+
+- vs `length`: 30.0%
+- vs `random`: 88.9%
+- vs `refusal_heuristic`: 37.5%
+- vs `sentiment`: 100.0%
+
+For cheap BGE `direct_harm_reduction` on the same pilot:
+
+- vs `length`: 12.5%
+- vs `random`: 25.0%
+- vs `refusal_heuristic`: 20.0%
+- vs `sentiment`: 71.4%
+
+### Interpretation
+
+This is a useful capability-gap result on the open-ended lane.
+
+What it shows:
+
+- the stronger embedding backend materially improves blind-review outcomes on
+  the same inherited pool
+- the targeted harm-reduction selector is substantially stronger than the cheap
+  BGE version under the same protocol
+- the pilot is still not just a proxy-key story; it is now backed by blinded
+  LLM adjudication
+
+What it does not show:
+
+- that the repo already has a decisive open-ended selection benchmark
+- that the inherited Cycle 001 pool is clean enough for a partner-grade claim
+
+The persistent problem is that even Gemini still loses to `length` and
+`refusal_heuristic` on this old pool.
+
+### Decision
+
+Promote this cycle as exploratory evidence that backend quality matters a lot
+for open-ended selection.
+
+Do not promote it as the decisive intervention result. The next real open-ended
+claim still needs a fresh length-controlled candidate pool.
+
+### Next steps
+
+1. Build the fresh no-leakage open-ended pool both Cycle 007 and Cycle 008 now
+   point toward.
+2. Keep `direct_harm_reduction` as a lead selector on the next open-ended run.
+3. Treat the old Cycle 001 pool as an exploratory stress surface, not the final
+   benchmark.
+
+## June 27, 2026 - Cycle 009: OSS Direct-Only Battery Sweep
+
+### What was done
+
+Mapped the free/local embedding landscape on the current 50-case controlled
+evaluative battery using direct-only scoring.
+
+Added or updated:
+
+- `scripts/sweep_fastembed_battery.py`
+- `notes/research_cycles/cycle_009_oss_direct_battery_v3_sweep/`
+
+Battery:
+
+- `notes/research_cycles/cycle_002_potential_shaping/controlled_evaluative_axis_battery_v3_50_cases.jsonl`
+
+Interfaces:
+
+- `direct`
+
+Models swept:
+
+- `BAAI/bge-small-en-v1.5`
+- `BAAI/bge-base-en-v1.5`
+- `thenlper/gte-base`
+- `snowflake/snowflake-arctic-embed-m`
+- `jinaai/jina-embeddings-v2-small-en`
+- `jinaai/jina-embeddings-v2-base-en`
+- `nomic-ai/nomic-embed-text-v1.5-Q`
+- `mixedbread-ai/mxbai-embed-large-v1`
+
+Operational note:
+
+- the first attempt used the thread's default `python.exe`, which did not have
+  `fastembed`
+- the sweep was rerun successfully under
+  `C:\Users\93rob\.cache\codex-embedding-venv\Scripts\python.exe`
+
+### Key results
+
+Aggregate outputs:
+
+- `notes/research_cycles/cycle_009_oss_direct_battery_v3_sweep/summary.md`
+- `notes/research_cycles/cycle_009_oss_direct_battery_v3_sweep/sweep_results.json`
+
+Best local direct-only results:
+
+- best `direct_combined`: `snowflake/snowflake-arctic-embed-m` at 34.0%
+- best `direct_category_axis`: `snowflake/snowflake-arctic-embed-m` at 50.0%
+- best `direct_harm_reduction`: `jinaai/jina-embeddings-v2-small-en` and
+  `jinaai/jina-embeddings-v2-base-en` at 64.0%
+- best `direct_persona_honesty`: `snowflake/snowflake-arctic-embed-m` at 74.0%
+- best `direct_anti_sycophancy`: `BAAI/bge-small-en-v1.5` at 62.0%
+
+Gemini comparison on the same battery:
+
+- `direct_combined`: 86.0%
+- `direct_category_axis`: 86.0%
+- `direct_truthfulness`: 90.0%
+- `direct_harm_reduction`: 94.0%
+- `direct_persona_honesty`: 96.0%
+- `direct_anti_sycophancy`: 98.0%
+
+Important baseline fact:
+
+- no local model beat `refusal = 57.0%` on `direct_combined`
+- no local model beat `refusal = 57.0%` on `direct_category_axis`
+
+### Interpretation
+
+This cycle sharpens the local-model story in a way the repo needed.
+
+What it shows:
+
+- the local landscape is not flat; some models are meaningfully better than
+  cheap BGE on narrow axes
+- but none of the free/local models approach Gemini on the cleaner direct-only
+  aggregate metrics
+- the local models still look like fragmented narrow evaluators rather than
+  strong general answer selectors on this battery
+
+What it does not show:
+
+- that parameter count alone explains the gap
+- that all OSS embeddings are equally bad
+
+### Decision
+
+Promote this as the current model-landscape map for the clean direct-only
+battery.
+
+It supports a real capability-gap story while keeping the causal claim narrow:
+better embedding families help a lot, but the free/local models on this laptop
+still do not match Gemini on the direct-only battery.
+
+### Next steps
+
+1. Use this sweep as the default answer when asked whether free Hugging Face
+   models already match Gemini on the clean battery.
+2. If quota allows, run the raw `good/bad` vs proxy-word conflict protocol on
+   one or two of the strongest locals from this sweep.
+3. Keep future partner-facing claims anchored in objective reranking,
+   targeted-axis batteries, and process-potential diagnostics rather than raw
+   broad-word axes alone.
+
+## June 27, 2026 - Cycle 010: OSS Good-vs-Proxy Sweep
+
+### What was done
+
+Extended the word-level conflict harness to the local FastEmbed family and ran
+the current 50-case good-vs-proxy battery across the main free/local models we
+can execute on this laptop.
+
+Added or updated:
+
+- `scripts/run_good_vs_proxy_conflicts.py`
+- `scripts/sweep_good_vs_proxy_conflicts.py`
+- `notes/research_cycles/cycle_010_oss_good_vs_proxy_sweep/`
+
+Battery:
+
+- `notes/research_cycles/cycle_002_potential_shaping/controlled_evaluative_axis_battery_v3_50_cases.jsonl`
+
+Models swept:
+
+- `BAAI/bge-small-en-v1.5`
+- `BAAI/bge-base-en-v1.5`
+- `thenlper/gte-base`
+- `snowflake/snowflake-arctic-embed-m`
+- `jinaai/jina-embeddings-v2-small-en`
+- `jinaai/jina-embeddings-v2-base-en`
+- `nomic-ai/nomic-embed-text-v1.5-Q`
+- `mixedbread-ai/mxbai-embed-large-v1`
+
+Operational note:
+
+- the sweep ran under
+  `C:\Users\93rob\.cache\codex-embedding-venv\Scripts\python.exe`
+
+### Key results
+
+Aggregate outputs:
+
+- `notes/research_cycles/cycle_010_oss_good_vs_proxy_sweep/summary.md`
+- `notes/research_cycles/cycle_010_oss_good_vs_proxy_sweep/sweep_results.json`
+
+Raw `good/bad` accuracy across the local family:
+
+- best local: `snowflake/snowflake-arctic-embed-m` at 48.0%
+- next best: `BAAI/bge-base-en-v1.5` at 28.0%
+- most others: 14.0-22.0%
+
+Sentence `This response is good/bad.`:
+
+- best local: `snowflake/snowflake-arctic-embed-m` at 36.0%
+- most others: 12.0-26.0%
+
+Best nearby proxy by model:
+
+- `snowflake/snowflake-arctic-embed-m`: `helpful/unhelpful` at 58.0%
+- `BAAI/bge-base-en-v1.5`: `honest/dishonest` at 30.0%
+- `thenlper/gte-base`: `honest/dishonest` at 24.0%
+- `jinaai/jina-embeddings-v2-small-en`: `useful/useless` at 28.0%
+- `jinaai/jina-embeddings-v2-base-en`: `helpful/unhelpful` at 32.0%
+- `nomic-ai/nomic-embed-text-v1.5-Q`: `honest/dishonest` at 34.0%
+- `mixedbread-ai/mxbai-embed-large-v1`: `honest/dishonest` at 32.0%
+
+### Interpretation
+
+This cycle makes the surrounding-word story much more concrete.
+
+What it shows:
+
+- the raw broad-word failure was not only a BGE artifact
+- most local models still fail badly on raw `good/bad`
+- some local models partially recover the signal, especially Snowflake, but not
+  enough to make raw `good/bad` look robust
+- nearby proxy words remain fragmented and model-specific rather than converging
+  on one simple replacement for `good/bad`
+
+Taken together with the direct-only targeted-axis sweep, the pattern is now:
+
+- broad raw-word axes are weak
+- richer targeted evaluative directions are much more useful
+
+### Decision
+
+Promote this cycle as the current local-model landscape map for the raw-word
+versus proxy-word hypothesis.
+
+The narrower thesis gets stronger: the usable current signal is in richer
+targeted evaluative geometry, not in the minimalist bare-word setup.
+
+### Next steps
+
+1. Fold this result into the paper framing so the repo no longer overfocuses on
+   only Gemini plus BGE for the broad-word story.
+2. Use the current local-model evidence to justify focusing future cheap/local
+   work on targeted axes and process sensitivity rather than many more raw-word
+   permutations.
+
+## June 27, 2026 - Cycle 011: Battery v3 Gemini Reproduction
+
+### What was done
+
+Reproduced the exact current 50-case length-controlled v3 battery on Gemini and
+paired it with the matching raw `good/bad` versus proxy-word companion run.
+
+Added:
+
+- `notes/research_cycles/cycle_011_battery_v3_gemini_reproduction/`
+
+Executed:
+
+- `scripts/run_evaluative_axis_battery.py`
+- `scripts/run_good_vs_proxy_conflicts.py`
+
+Frozen input:
+
+- `notes/research_cycles/cycle_002_potential_shaping/controlled_evaluative_axis_battery_v3_50_cases.jsonl`
+
+Operational note:
+
+- both runs hit HTTP 429 retries mid-run
+- both completed successfully without changing protocol
+
+### Key results
+
+Direct routed battery reproduction:
+
+- `length`: 50.0%
+- `sentiment`: 44.0%
+- `refusal`: 57.0%
+- `direct_combined`: 86.0%
+- `direct_category_axis`: 86.0%
+- `direct_general_evaluative`: 46.0%
+- `direct_truthfulness`: 90.0%
+- `direct_harm_reduction`: 94.0%
+- `direct_persona_honesty`: 96.0%
+- `direct_anti_sycophancy`: 98.0%
+
+Broad-word companion reproduction:
+
+- `raw_good_bad`: 26.0%
+- `sentence_good_bad`: 30.0%
+- proxy mean: 34.8%
+- best proxy: `raw_useful_useless` at 42.0%
+
+Structured miss pattern:
+
+- `direct_combined` misses concentrated in `helpfulness` and
+  `reasoning_rigor`
+- `direct_category_axis` misses concentrated in `helpfulness` and `mixed`
+- `direct_general_evaluative` collapsed to 46.0% overall and 0.0% on both
+  `anti_sycophancy` and `persona_honesty`
+- `raw_good_bad` hit 0.0% on `anti_sycophancy`, `persona_honesty`, and `mixed`
+
+### Interpretation
+
+This is an important reproduction and boundary-setting cycle.
+
+What it shows:
+
+- the strong Gemini targeted-axis measurement result on the v3 battery is
+  stable on the exact saved file
+- the same exact battery also stably reproduces the weak broad-word
+  `good/bad` result
+- the current evidence therefore favors routed targeted evaluative geometry,
+  not a minimalist raw-word interface
+
+What it does not show:
+
+- a decisive intervention result
+- a training-readiness result
+- that raw `good/bad` is already a generally reliable zero-shot selector
+
+### Decision
+
+Promote this cycle as a confirmatory reproduction artifact rather than as a new
+headline claim.
+
+### Fallback conditions
+
+If later reruns on the same file drift materially without an understood cause,
+the repo should treat the battery as unstable and stop using it as a clean
+reference point until that drift is explained.
+
+If future longer-context or trained variants make raw `good/bad` competitive on
+fresh held-out batteries, revisit the current narrow framing rather than
+assuming this zero-shot failure is permanent.
+
+### Next steps
+
+1. Use this cycle as the clean answer when asked whether the saved Gemini v3
+   battery result still reproduces on the current file.
+2. Keep the highest-value next experiment on the length-controlled open-ended
+   blind-review lane.
+3. Expand future controlled batteries around `helpfulness` and `mixed`
+   phenomena, which remain the main routed-axis weak spots here.
+
+## June 27, 2026 - Cycle 012: Length-Controlled Open-Ended Pool
+
+### What was done
+
+Built the missing fresh open-ended candidate-pool builder and used it to create
+the first frozen partial pilot on a new strict-length surface.
+
+Added:
+
+- `scripts/build_length_controlled_openended_pool.py`
+- `notes/research_cycles/cycle_012_length_controlled_openended_pool/`
+
+Key design choices:
+
+- mixed-category routed prompt spec
+- 4 generated candidates per prompt
+- exact 60-word target per candidate
+- checkpointing after each completed item
+- resume support after quota interruptions
+- candidate-level regeneration when exact-count rewriting fails
+
+Generated so far:
+
+- 8-item pilot snapshot from the fresh pool
+
+Also ran:
+
+- a no-quota local `snowflake/snowflake-arctic-embed-m` direct-only selection
+  pass on the 8-item snapshot
+- a blind-review packet build on `direct_category_axis` versus cheap baselines
+
+### Key results
+
+Fresh-pool snapshot:
+
+- items generated: 8
+- categories covered:
+  - `persona_honesty`: 2
+  - `harmful_request`: 2
+  - `anti_sycophancy`: 2
+  - `false_premise`: 2
+- candidates per item: 4
+- target words: 60
+- mean within-item word-count gap: 0.00
+- max within-item word-count gap: 0
+
+Operational finding:
+
+- `gemini-2.0-flash` generation was effectively unusable here because of
+  immediate repeated HTTP 429 responses
+- switching the builder to `gemini-flash-lite-latest` plus checkpoint/resume
+  support produced a usable frozen pilot artifact
+
+Fresh disagreement packet:
+
+- `direct_category_axis` versus `length`: 6 disagreements
+- versus `random`: 7 disagreements
+- versus `sentiment`: 7 disagreements
+- versus `refusal_heuristic`: 5 disagreements
+- total fresh blind-review packet rows: 25
+
+Strong-model selection status:
+
+- Gemini embedding selection on the same fresh snapshot was started
+- the embedding endpoint repeatedly hit HTTP 429 during candidate embedding
+- no completed Gemini selection artifact was saved yet on this fresh pool
+
+### Interpretation
+
+This cycle materially improves the repo's open-ended research surface.
+
+What it shows:
+
+- the project no longer depends only on the old inherited length-biased
+  candidate pool
+- a fresh strict-length open-ended pool can be built under the actual laptop +
+  free-tier constraints
+- that fresh pool already creates real selector disagreements worth blind
+  judging
+
+What it does not show:
+
+- that the strong embedding backend already wins on this fresh pool
+- that the local Snowflake backend wins on blind review
+- a decisive partner-grade intervention claim
+
+### Decision
+
+Promote this cycle as the creation of the missing clean open-ended intervention
+surface, with a frozen partial pilot already saved.
+
+### Fallback conditions
+
+If repeated future runs show that exact-length building is too operationally
+fragile even with checkpointing and resume, the repo should explicitly fall
+back to tightly pre-registered length bins rather than silently loosening the
+standard.
+
+If Gemini embedding selection remains repeatedly quota-blocked on the fresh
+pool, keep that framed as an operational constraint and continue using local
+selectors only as exploratory scaffolding rather than as the main thesis test.
+
+### Next steps
+
+1. Finish the remaining pilot prompts with the resume-enabled builder.
+2. Save the first completed Gemini embedding selection run on the fresh pool.
+3. Complete blind review on the fresh pool rather than on the old Cycle 001
+   inherited pool.
+4. Only after that, decide whether to scale prompt count or add neutral
+   critique/decomposition scoring.

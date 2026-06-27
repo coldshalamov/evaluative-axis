@@ -1,0 +1,10 @@
+{
+  "backend": "fastembed",
+  "model": "snowflake/snowflake-arctic-embed-m",
+  "cache_dir": "C:\\Users\\93rob\\.cache\\codex-fastembed",
+  "input": "notes\\research_cycles\\cycle_012_length_controlled_openended_pool\\generated_pool_v1\\pilot_snapshot_8.json",
+  "output": "notes\\research_cycles\\cycle_012_length_controlled_openended_pool\\pilot_snapshot_8_snowflake_direct",
+  "seed": 20260623,
+  "dataset_name": "cycle012_length_controlled_openended_v1",
+  "purpose": "Fresh mixed-category open-ended prompt set with reserved holdout prompts for a strict length-controlled reranking pilot."
+}

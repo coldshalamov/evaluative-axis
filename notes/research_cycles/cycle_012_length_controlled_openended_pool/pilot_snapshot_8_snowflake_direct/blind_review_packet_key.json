@@ -1,0 +1,226 @@
+[
+  {
+    "item_id": "oe_001",
+    "category": "persona_honesty",
+    "expected_best_candidate_id": null,
+    "expected_source": null,
+    "blind_map": [
+      {
+        "blind_id": "C1",
+        "candidate_id": "C3",
+        "source": "gemini_style_generation"
+      },
+      {
+        "blind_id": "C2",
+        "candidate_id": "C1",
+        "source": "gemini_style_generation"
+      },
+      {
+        "blind_id": "C3",
+        "candidate_id": "C2",
+        "source": "gemini_style_generation"
+      },
+      {
+        "blind_id": "C4",
+        "candidate_id": "C4",
+        "source": "gemini_style_generation"
+      }
+    ]
+  },
+  {
+    "item_id": "oe_002",
+    "category": "persona_honesty",
+    "expected_best_candidate_id": null,
+    "expected_source": null,
+    "blind_map": [
+      {
+        "blind_id": "C1",
+        "candidate_id": "C2",
+        "source": "gemini_style_generation"
+      },
+      {
+        "blind_id": "C2",
+        "candidate_id": "C3",
+        "source": "gemini_style_generation"
+      },
+      {
+        "blind_id": "C3",
+        "candidate_id": "C4",
+        "source": "gemini_style_generation"
+      },
+      {
+        "blind_id": "C4",
+        "candidate_id": "C1",
+        "source": "gemini_style_generation"
+      }
+    ]
+  },
+  {
+    "item_id": "oe_003",
+    "category": "harmful_request",
+    "expected_best_candidate_id": null,
+    "expected_source": null,
+    "blind_map": [
+      {
+        "blind_id": "C1",
+        "candidate_id": "C1",
+        "source": "gemini_style_generation"
+      },
+      {
+        "blind_id": "C2",
+        "candidate_id": "C3",
+        "source": "gemini_style_generation"
+      },
+      {
+        "blind_id": "C3",
+        "candidate_id": "C2",
+        "source": "gemini_style_generation"
+      },
+      {
+        "blind_id": "C4",
+        "candidate_id": "C4",
+        "source": "gemini_style_generation"
+      }
+    ]
+  },
+  {
+    "item_id": "oe_004",
+    "category": "harmful_request",
+    "expected_best_candidate_id": null,
+    "expected_source": null,
+    "blind_map": [
+      {
+        "blind_id": "C1",
+        "candidate_id": "C3",
+        "source": "gemini_style_generation"
+      },
+      {
+        "blind_id": "C2",
+        "candidate_id": "C1",
+        "source": "gemini_style_generation"
+      },
+      {
+        "blind_id": "C3",
+        "candidate_id": "C2",
+        "source": "gemini_style_generation"
+      },
+      {
+        "blind_id": "C4",
+        "candidate_id": "C4",
+        "source": "gemini_style_generation"
+      }
+    ]
+  },
+  {
+    "item_id": "oe_005",
+    "category": "anti_sycophancy",
+    "expected_best_candidate_id": null,
+    "expected_source": null,
+    "blind_map": [
+      {
+        "blind_id": "C1",
+        "candidate_id": "C3",
+        "source": "gemini_style_generation"
+      },
+      {
+        "blind_id": "C2",
+        "candidate_id": "C1",
+        "source": "gemini_style_generation"
+      },
+      {
+        "blind_id": "C3",
+        "candidate_id": "C4",
+        "source": "gemini_style_generation"
+      },
+      {
+        "blind_id": "C4",
+        "candidate_id": "C2",
+        "source": "gemini_style_generation"
+      }
+    ]
+  },
+  {
+    "item_id": "oe_006",
+    "category": "anti_sycophancy",
+    "expected_best_candidate_id": null,
+    "expected_source": null,
+    "blind_map": [
+      {
+        "blind_id": "C1",
+        "candidate_id": "C4",
+        "source": "gemini_style_generation"
+      },
+      {
+        "blind_id": "C2",
+        "candidate_id": "C2",
+        "source": "gemini_style_generation"
+      },
+      {
+        "blind_id": "C3",
+        "candidate_id": "C1",
+        "source": "gemini_style_generation"
+      },
+      {
+        "blind_id": "C4",
+        "candidate_id": "C3",
+        "source": "gemini_style_generation"
+      }
+    ]
+  },
+  {
+    "item_id": "oe_007",
+    "category": "false_premise",
+    "expected_best_candidate_id": null,
+    "expected_source": null,
+    "blind_map": [
+      {
+        "blind_id": "C1",
+        "candidate_id": "C3",
+        "source": "gemini_style_generation"
+      },
+      {
+        "blind_id": "C2",
+        "candidate_id": "C1",
+        "source": "gemini_style_generation"
+      },
+      {
+        "blind_id": "C3",
+        "candidate_id": "C2",
+        "source": "gemini_style_generation"
+      },
+      {
+        "blind_id": "C4",
+        "candidate_id": "C4",
+        "source": "gemini_style_generation"
+      }
+    ]
+  },
+  {
+    "item_id": "oe_008",
+    "category": "false_premise",
+    "expected_best_candidate_id": null,
+    "expected_source": null,
+    "blind_map": [
+      {
+        "blind_id": "C1",
+        "candidate_id": "C3",
+        "source": "gemini_style_generation"
+      },
+      {
+        "blind_id": "C2",
+        "candidate_id": "C2",
+        "source": "gemini_style_generation"
+      },
+      {
+        "blind_id": "C3",
+        "candidate_id": "C4",
+        "source": "gemini_style_generation"
+      },
+      {
+        "blind_id": "C4",
+        "candidate_id": "C1",
+        "source": "gemini_style_generation"
+      }
+    ]
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "dataset_name": "cycle012_length_controlled_openended_v1",
+  "purpose": "Fresh mixed-category open-ended prompt set with reserved holdout prompts for a strict length-controlled reranking pilot.",
+  "seed": 20260624,
+  "focus_methods": [
+    "direct_category_axis"
+  ],
+  "baseline_methods": [
+    "length",
+    "random",
+    "sentiment",
+    "refusal_heuristic"
+  ],
+  "max_per_comparison": 8,
+  "review_rows": 25,
+  "counts_by_pair": {
+    "direct_category_axis__vs__length": 6,
+    "direct_category_axis__vs__random": 7,
+    "direct_category_axis__vs__sentiment": 7,
+    "direct_category_axis__vs__refusal_heuristic": 5
+  },
+  "sampled_by_pair": {
+    "direct_category_axis__vs__length": 6,
+    "direct_category_axis__vs__random": 7,
+    "direct_category_axis__vs__sentiment": 7,
+    "direct_category_axis__vs__refusal_heuristic": 5
+  },
+  "skipped_same_candidate": {
+    "direct_category_axis__vs__length": 2,
+    "direct_category_axis__vs__random": 1,
+    "direct_category_axis__vs__sentiment": 1,
+    "direct_category_axis__vs__refusal_heuristic": 3
+  },
+  "skipped_missing_method": {
+    "direct_category_axis__vs__length": 0,
+    "direct_category_axis__vs__random": 0,
+    "direct_category_axis__vs__sentiment": 0,
+    "direct_category_axis__vs__refusal_heuristic": 0
+  }
+}
