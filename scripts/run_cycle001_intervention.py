@@ -321,6 +321,7 @@ def score_gemini(
     model: str | None,
     batch_size: int,
     max_workers: int,
+    sleep_between: float,
 ) -> tuple[list[CandidateScore], dict[str, Any]]:
     try:
         import numpy as np
@@ -341,8 +342,26 @@ def score_gemini(
         model=model,
         batch_size=batch_size,
         max_workers=max_workers,
+        sleep_between=sleep_between,
     )
-    probe = embedder.probe_model()
+
+    probe: dict[str, Any]
+    cache_dir = output_dir / "embedding_cache"
+    cached_anchor_paths = sorted(cache_dir.glob("*_anchors.npy"))
+    if cached_anchor_paths:
+        sample = np.load(cached_anchor_paths[0], mmap_mode="r")
+        if sample.ndim == 2 and sample.shape[1] > 0:
+            embedder.dimension = int(sample.shape[1])
+            probe = {
+                "model": embedder.model or model or "unknown",
+                "dimension": int(sample.shape[1]),
+                "norm": None,
+                "source": "cache_hint",
+            }
+        else:
+            probe = embedder.probe_model()
+    else:
+        probe = embedder.probe_model()
 
     axis_vectors: dict[str, Any] = {}
     for axis_name, anchors in AXES.items():
@@ -502,11 +521,12 @@ def score_items(
     model: str | None,
     batch_size: int,
     max_workers: int,
+    sleep_between: float,
 ) -> tuple[list[CandidateScore], dict[str, Any]]:
     if backend == "lexical":
         return score_lexical(items, interfaces), {"backend": "lexical"}
     if backend == "gemini":
-        return score_gemini(items, interfaces, output_dir, model, batch_size, max_workers)
+        return score_gemini(items, interfaces, output_dir, model, batch_size, max_workers, sleep_between)
     if backend == "fastembed":
         return score_fastembed(items, interfaces, output_dir, model)
     raise ValueError(f"Unknown backend: {backend}")
@@ -823,6 +843,7 @@ def main() -> None:
     parser.add_argument("--model", default=None)
     parser.add_argument("--batch-size", type=int, default=16)
     parser.add_argument("--max-workers", type=int, default=2)
+    parser.add_argument("--sleep-between", type=float, default=0.0, help="Seconds to sleep between Gemini embedding batch submissions.")
     args = parser.parse_args()
 
     payload = read_json(args.input)
@@ -838,6 +859,7 @@ def main() -> None:
         model=args.model,
         batch_size=args.batch_size,
         max_workers=args.max_workers,
+        sleep_between=args.sleep_between,
     )
     metadata.update(
         {
@@ -846,6 +868,7 @@ def main() -> None:
             "seed": args.seed,
             "dataset_name": payload.get("dataset_name"),
             "purpose": payload.get("purpose"),
+            "sleep_between": args.sleep_between,
         }
     )
     selections = select_methods(items, scores, interfaces, args.seed)
