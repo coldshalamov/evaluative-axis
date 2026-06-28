@@ -1,0 +1,266 @@
+{
+  "dataset_name": "tool_interpretation_reranking_v1",
+  "purpose": "Exact-answer tool-output interpretation benchmark for evaluative embedding selection.",
+  "tasks": [
+    {
+      "id": "tool_001",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Output: `Server listening on http://127.0.0.1:3000`. What port is the app listening on?",
+      "grading": {
+        "mode": "number",
+        "target": 3000
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "The app is listening on port 3000.",
+          "final_answer": "3000"
+        },
+        {
+          "id": "C2",
+          "label": "host_confusion",
+          "text": "It is listening on port 127.",
+          "final_answer": "127"
+        },
+        {
+          "id": "C3",
+          "label": "default_guess",
+          "text": "The app is probably on port 8080.",
+          "final_answer": "8080"
+        }
+      ]
+    },
+    {
+      "id": "tool_002",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Error: `EADDRINUSE: address already in use :::8080`. What is the most likely problem?",
+      "grading": {
+        "mode": "string",
+        "target": "port 8080 already in use",
+        "aliases": [
+          "8080 already in use",
+          "another process is using port 8080",
+          "port in use"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Another process is already using port 8080.",
+          "final_answer": "port 8080 already in use"
+        },
+        {
+          "id": "C2",
+          "label": "auth_confusion",
+          "text": "The app is unauthorized to bind to the network.",
+          "final_answer": "unauthorized network access"
+        },
+        {
+          "id": "C3",
+          "label": "timeout_guess",
+          "text": "The server probably timed out while binding the socket.",
+          "final_answer": "timeout while binding"
+        }
+      ]
+    },
+    {
+      "id": "tool_003",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Test output: `3 failed, 27 passed`. Did the test suite pass overall?",
+      "grading": {
+        "mode": "bool",
+        "target": false
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "No. Any failed tests mean the suite did not pass overall.",
+          "final_answer": "no"
+        },
+        {
+          "id": "C2",
+          "label": "majority_vote_wrong",
+          "text": "Yes, because most tests passed.",
+          "final_answer": "yes"
+        },
+        {
+          "id": "C3",
+          "label": "ambiguous_wrong",
+          "text": "It is basically a pass with minor issues.",
+          "final_answer": "yes"
+        }
+      ]
+    },
+    {
+      "id": "tool_004",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Git says: `Your branch is ahead of 'origin/main' by 2 commits.` Have those two commits been pushed to origin yet?",
+      "grading": {
+        "mode": "bool",
+        "target": false
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "No. Being ahead of origin means the local branch has commits that are not pushed yet.",
+          "final_answer": "no"
+        },
+        {
+          "id": "C2",
+          "label": "backwards",
+          "text": "Yes. Ahead means origin has already received the commits.",
+          "final_answer": "yes"
+        },
+        {
+          "id": "C3",
+          "label": "uncertain_wrong",
+          "text": "Probably yes, because origin/main is mentioned in the message.",
+          "final_answer": "yes"
+        }
+      ]
+    },
+    {
+      "id": "tool_005",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "HTTP response: `401 Unauthorized`. Was the request successfully authenticated?",
+      "grading": {
+        "mode": "bool",
+        "target": false
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "No. A 401 means authentication is missing, invalid, or expired.",
+          "final_answer": "no"
+        },
+        {
+          "id": "C2",
+          "label": "authorization_confusion",
+          "text": "Yes. Unauthorized only means the user cannot edit the resource.",
+          "final_answer": "yes"
+        },
+        {
+          "id": "C3",
+          "label": "server_error_guess",
+          "text": "It is a server problem, so authentication probably worked.",
+          "final_answer": "yes"
+        }
+      ]
+    },
+    {
+      "id": "tool_006",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Log: `connection refused 127.0.0.1:5432`. Which dependency is most likely unreachable?",
+      "grading": {
+        "mode": "string",
+        "target": "postgres",
+        "aliases": [
+          "postgresql",
+          "database",
+          "postgres database"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Port 5432 is commonly PostgreSQL, so the local database is likely unreachable.",
+          "final_answer": "postgres"
+        },
+        {
+          "id": "C2",
+          "label": "redis_guess",
+          "text": "That is probably Redis failing to start.",
+          "final_answer": "redis"
+        },
+        {
+          "id": "C3",
+          "label": "web_server_guess",
+          "text": "The local web server on port 80 is likely refusing the connection.",
+          "final_answer": "web server"
+        }
+      ]
+    },
+    {
+      "id": "tool_007",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Process exited with code `137`. What is the most likely cause?",
+      "grading": {
+        "mode": "string",
+        "target": "out of memory",
+        "aliases": [
+          "oom",
+          "killed by oom",
+          "memory limit exceeded"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Exit code 137 usually means the process was killed, often because it ran out of memory.",
+          "final_answer": "out of memory"
+        },
+        {
+          "id": "C2",
+          "label": "syntax_error_guess",
+          "text": "It most likely failed because of a Python syntax error.",
+          "final_answer": "syntax error"
+        },
+        {
+          "id": "C3",
+          "label": "success_wrong",
+          "text": "137 indicates success with warnings.",
+          "final_answer": "success"
+        }
+      ]
+    },
+    {
+      "id": "tool_008",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "npm says: `Missing script: \"build\"`. What is the direct root problem?",
+      "grading": {
+        "mode": "string",
+        "target": "build script missing",
+        "aliases": [
+          "missing build script",
+          "package json has no build script",
+          "no build script defined"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "The package configuration does not define a `build` script.",
+          "final_answer": "build script missing"
+        },
+        {
+          "id": "C2",
+          "label": "dependency_guess",
+          "text": "A dependency failed to install during the build.",
+          "final_answer": "dependency install failure"
+        },
+        {
+          "id": "C3",
+          "label": "node_version_guess",
+          "text": "The installed Node version is too old to run the build.",
+          "final_answer": "node version too old"
+        }
+      ]
+    }
+  ]
+}

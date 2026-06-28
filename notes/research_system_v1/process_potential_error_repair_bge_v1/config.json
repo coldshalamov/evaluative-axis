@@ -1,0 +1,8 @@
+{
+  "input": "experiments\\research_system_v1\\benchmarks\\process_potential_error_repair_v1.json",
+  "backend": "sentence_transformers",
+  "probe": {
+    "backend": "sentence_transformers",
+    "model": "BAAI/bge-base-en-v1.5"
+  }
+}

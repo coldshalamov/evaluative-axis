@@ -1,0 +1,5 @@
+comparison,focus_wins,baseline_wins,ties,reject_both,incomplete,invalid,decided,reviewed,focus_win_rate_decided,focus_non_loss_rate_reviewed
+direct_category_axis vs length,1,8,1,0,0,0,9,10,0.1111111111111111,0.15
+direct_category_axis vs random,5,3,2,0,0,0,8,10,0.625,0.6
+direct_category_axis vs refusal_heuristic,2,5,3,0,0,0,7,10,0.2857142857142857,0.35
+direct_category_axis vs sentiment,8,1,1,0,0,0,9,10,0.8888888888888888,0.85

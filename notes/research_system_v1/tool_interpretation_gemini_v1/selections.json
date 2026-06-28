@@ -1,0 +1,522 @@
+[
+  {
+    "task_id": "tool_001",
+    "method": "random",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_001",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_001",
+    "method": "direct_combined",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_001",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_001",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_002",
+    "method": "random",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_002",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_002",
+    "method": "direct_combined",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_002",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_002",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_003",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_003",
+    "method": "length",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_003",
+    "method": "direct_combined",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_003",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_003",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_004",
+    "method": "random",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_004",
+    "method": "length",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_004",
+    "method": "direct_combined",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_004",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_004",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_005",
+    "method": "random",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_005",
+    "method": "length",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_005",
+    "method": "direct_combined",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_005",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_005",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_006",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_006",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_006",
+    "method": "direct_combined",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_006",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_006",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_007",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_007",
+    "method": "length",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_007",
+    "method": "direct_combined",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_007",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_007",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_008",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_008",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_008",
+    "method": "direct_combined",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_008",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "tool_008",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  }
+]

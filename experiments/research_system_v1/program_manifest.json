@@ -1,0 +1,279 @@
+{
+  "program_name": "serious_research_system_v1",
+  "objective": "Turn the evaluative-embedding thesis into a falsifiable, cross-domain, capacity-sensitive research program with frozen benchmark lanes, cheap baselines, and claim gates.",
+  "claims": [
+    {
+      "id": "claim_geometry",
+      "title": "Evaluative geometry exists",
+      "standard": "Supported by prior literature, controlled minimal-pair behavior, and honest failure characterization."
+    },
+    {
+      "id": "claim_selection",
+      "title": "Evaluative geometry improves answer selection",
+      "standard": "Embedding-selected winners beat random and length on multiple objective domains."
+    },
+    {
+      "id": "claim_capacity",
+      "title": "The effect is capability-sensitive",
+      "standard": "Stronger embedding families materially outperform cheap OSS encoders on the same objective benchmark."
+    },
+    {
+      "id": "claim_training",
+      "title": "The signal is strong enough to justify training work",
+      "standard": "Cross-domain selection gates pass and a process-potential suite shows useful dense reward localization."
+    }
+  ],
+  "gates": [
+    {
+      "id": "capacity_code_gate",
+      "title": "Gemini beats cheap OSS on code reranking",
+      "type": "gap",
+      "positive_ref": "objective_code_gemini_curated_local.default.best_direct_solve_rate",
+      "negative_ref": "objective_code_oss_colab.baai_bge_base_en_v1_5.best_direct_solve_rate",
+      "min_gap": 0.2
+    },
+    {
+      "id": "behavior_basis_gate",
+      "title": "Controlled behavior battery shows useful discrimination",
+      "type": "threshold",
+      "metric_ref": "behavior_basis_v2_gemini.metric.direct_category_axis.accuracy",
+      "min_value": 0.6
+    },
+    {
+      "id": "capacity_cross_domain_gate",
+      "title": "Gemini beats cheap OSS on additional objective domains",
+      "type": "count_gap",
+      "min_pass_count": 2,
+      "comparisons": [
+        {
+          "positive_ref": "objective_math_gemini_v1.default.best_direct_solve_rate",
+          "negative_ref": "objective_math_oss_bge_v1.default.best_direct_solve_rate",
+          "min_gap": 0.2
+        },
+        {
+          "positive_ref": "tool_interpretation_gemini_v1.default.best_direct_solve_rate",
+          "negative_ref": "tool_interpretation_oss_bge_v1.default.best_direct_solve_rate",
+          "min_gap": 0.2
+        }
+      ]
+    },
+    {
+      "id": "cross_domain_selection_gate",
+      "title": "Embedding lift appears on multiple objective domains",
+      "type": "count_gap",
+      "min_pass_count": 3,
+      "comparisons": [
+        {
+          "positive_ref": "objective_code_gemini_curated_local.default.best_direct_solve_rate",
+          "negative_ref": "objective_code_gemini_curated_local.default.baseline_best_solve_rate",
+          "min_gap": 0.15
+        },
+        {
+          "positive_ref": "objective_math_gemini_v1.default.best_direct_solve_rate",
+          "negative_ref": "objective_math_gemini_v1.default.baseline_best_solve_rate",
+          "min_gap": 0.15
+        },
+        {
+          "positive_ref": "tool_interpretation_gemini_v1.default.best_direct_solve_rate",
+          "negative_ref": "tool_interpretation_gemini_v1.default.baseline_best_solve_rate",
+          "min_gap": 0.15
+        }
+      ]
+    },
+    {
+      "id": "process_potential_gate",
+      "title": "Dense reward localization exists on process trajectories",
+      "type": "threshold",
+      "metric_ref": "process_potential_error_repair_v1.dense_reward_localization_score",
+      "min_value": 0.65
+    },
+    {
+      "id": "training_readiness_gate",
+      "title": "Selection evidence is strong enough to justify training work",
+      "type": "all",
+      "depends_on": [
+        "capacity_code_gate",
+        "capacity_cross_domain_gate",
+        "behavior_basis_gate",
+        "cross_domain_selection_gate",
+        "process_potential_gate"
+      ]
+    }
+  ],
+  "lanes": [
+    {
+      "id": "objective_code_gemini_curated_local",
+      "title": "Objective code reranking with Gemini embeddings",
+      "family": "objective_reranking",
+      "priority": 0,
+      "status": "completed",
+      "claims_supported": [
+        "claim_selection",
+        "claim_capacity"
+      ],
+      "result_parser": "objective_methods",
+      "summary_path": "notes/research_cycles/cycle_003_objective_code_reranking/pilot_results/summary.json",
+      "command": [
+        "python",
+        "scripts/run_objective_code_reranking.py",
+        "--mode",
+        "curated",
+        "--tasks",
+        "notes/research_cycles/cycle_003_objective_code_reranking/code_candidates_v1.json",
+        "--output",
+        "notes/research_cycles/cycle_003_objective_code_reranking/pilot_results"
+      ]
+    },
+    {
+      "id": "objective_code_oss_colab",
+      "title": "Objective code reranking OSS capacity ladder",
+      "family": "objective_reranking",
+      "priority": 0,
+      "status": "completed",
+      "claims_supported": [
+        "claim_capacity"
+      ],
+      "result_parser": "objective_methods",
+      "summary_path": "notes/research_cycles/cycle_003_objective_code_reranking/oss_results/summary.json"
+    },
+    {
+      "id": "behavior_basis_v2_gemini",
+      "title": "Controlled behavior basis battery with Gemini",
+      "family": "behavior_basis",
+      "priority": 5,
+      "status": "ready",
+      "claims_supported": [
+        "claim_geometry",
+        "claim_selection"
+      ],
+      "result_parser": "battery_summary",
+      "summary_path": "notes/research_system_v1/behavior_basis_gemini_v1/summary.json",
+      "command": [
+        "python",
+        "scripts/run_evaluative_axis_battery.py",
+        "--input",
+        "notes/research_cycles/cycle_002_potential_shaping/controlled_evaluative_axis_battery_v2_length_balanced.jsonl",
+        "--output",
+        "notes/research_system_v1/behavior_basis_gemini_v1",
+        "--backend",
+        "gemini",
+        "--interfaces",
+        "direct,decomposition"
+      ]
+    },
+    {
+      "id": "objective_math_gemini_v1",
+      "title": "Objective math reranking with Gemini",
+      "family": "objective_reranking",
+      "priority": 1,
+      "status": "ready",
+      "claims_supported": [
+        "claim_selection"
+      ],
+      "result_parser": "objective_methods",
+      "summary_path": "notes/research_system_v1/objective_math_gemini_v1/summary.json",
+      "command": [
+        "python",
+        "scripts/run_objective_text_reranking.py",
+        "--tasks",
+        "experiments/research_system_v1/benchmarks/objective_math_reranking_v1.json",
+        "--output",
+        "notes/research_system_v1/objective_math_gemini_v1",
+        "--backend",
+        "gemini"
+      ]
+    },
+    {
+      "id": "objective_math_oss_bge_v1",
+      "title": "Objective math reranking with BGE base",
+      "family": "objective_reranking",
+      "priority": 3,
+      "status": "ready",
+      "claims_supported": [
+        "claim_capacity"
+      ],
+      "result_parser": "objective_methods",
+      "summary_path": "notes/research_system_v1/objective_math_oss_bge_v1/summary.json",
+      "command": [
+        "python",
+        "scripts/run_objective_text_reranking.py",
+        "--tasks",
+        "experiments/research_system_v1/benchmarks/objective_math_reranking_v1.json",
+        "--output",
+        "notes/research_system_v1/objective_math_oss_bge_v1",
+        "--backend",
+        "sentence_transformers",
+        "--model",
+        "BAAI/bge-base-en-v1.5"
+      ]
+    },
+    {
+      "id": "tool_interpretation_gemini_v1",
+      "title": "Objective tool interpretation reranking with Gemini",
+      "family": "objective_reranking",
+      "priority": 2,
+      "status": "ready",
+      "claims_supported": [
+        "claim_selection"
+      ],
+      "result_parser": "objective_methods",
+      "summary_path": "notes/research_system_v1/tool_interpretation_gemini_v1/summary.json",
+      "command": [
+        "python",
+        "scripts/run_objective_text_reranking.py",
+        "--tasks",
+        "experiments/research_system_v1/benchmarks/tool_interpretation_reranking_v1.json",
+        "--output",
+        "notes/research_system_v1/tool_interpretation_gemini_v1",
+        "--backend",
+        "gemini"
+      ]
+    },
+    {
+      "id": "tool_interpretation_oss_bge_v1",
+      "title": "Objective tool interpretation reranking with BGE base",
+      "family": "objective_reranking",
+      "priority": 4,
+      "status": "ready",
+      "claims_supported": [
+        "claim_capacity"
+      ],
+      "result_parser": "objective_methods",
+      "summary_path": "notes/research_system_v1/tool_interpretation_oss_bge_v1/summary.json",
+      "command": [
+        "python",
+        "scripts/run_objective_text_reranking.py",
+        "--tasks",
+        "experiments/research_system_v1/benchmarks/tool_interpretation_reranking_v1.json",
+        "--output",
+        "notes/research_system_v1/tool_interpretation_oss_bge_v1",
+        "--backend",
+        "sentence_transformers",
+        "--model",
+        "BAAI/bge-base-en-v1.5"
+      ]
+    },
+    {
+      "id": "process_potential_error_repair_v1",
+      "title": "Injected error-repair potential shaping suite",
+      "family": "process_potential",
+      "priority": 6,
+      "status": "ready",
+      "claims_supported": [
+        "claim_training"
+      ],
+      "result_parser": "generic_json",
+      "summary_path": "notes/research_system_v1/process_potential_error_repair_v1/summary.json",
+      "command": [
+        "python",
+        "scripts/run_process_potential_error_repair.py",
+        "--input",
+        "experiments/research_system_v1/benchmarks/process_potential_error_repair_v1.json",
+        "--output",
+        "notes/research_system_v1/process_potential_error_repair_v1",
+        "--backend",
+        "gemini"
+      ]
+    }
+  ]
+}

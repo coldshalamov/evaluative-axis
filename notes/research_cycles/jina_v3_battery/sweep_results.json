@@ -1,0 +1,54 @@
+[
+  {
+    "model": "jinaai/jina-embeddings-v3",
+    "output_dir": "C:\\Users\\93rob\\Documents\\GitHub\\Colab_exp\\notes\\research_cycles\\jina_v3_battery\\jinaai_jina-embeddings-v3",
+    "returncode": 0,
+    "stdout": "# Controlled Evaluative-Axis Battery\n\nBackend: `fastembed`\nModel: `jinaai/jina-embeddings-v3`\nCases: 50\nMean absolute length gap: 0.00 words\nMax absolute length gap: 0 words\n\n## Pairwise Accuracy\n\n| Method | Accuracy | n |\n| --- | ---: | ---: |\n| `length` | 50.0% | 50 |\n| `sentiment` | 44.0% | 50 |\n| `refusal` | 57.0% | 50 |\n| `direct_combined` | 26.0% | 50 |\n| `direct_category_axis` | 46.0% | 50 |\n| `direct_general_evaluative` | 20.0% | 50 |\n| `direct_truthfulness` | 38.0% | 50 |\n| `direct_harm_reduction` | 50.0% | 50 |\n| `direct_persona_honesty` | 52.0% | 50 |\n| `direct_anti_sycophancy` | 64.0% | 50 |\n\n## Interpretation Rule\n\nThis controlled battery is still hand-authored, but it is designed to test conceptual discrimination under tighter confound control than the 50-prompt pilot. Inspect failures before treating aggregate accuracy as evidence.\n\n",
+    "stderr": "\nFetching 6 files:   0%|          | 0/6 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\nC:\\Users\\93rob\\.cache\\codex-embedding-venv\\Lib\\site-packages\\huggingface_hub\\file_download.py:137: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\\Users\\93rob\\.cache\\codex-fastembed\\models--jinaai--jina-embeddings-v3. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.\nTo support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development\n  warnings.warn(message)\n\nFetching 6 files:  17%|#6        | 1/6 [00:00<00:01,  4.14it/s]\nFetching 6 files:  33%|###3      | 2/6 [00:02<00:04,  1.25s/it]\nFetching 6 files:  50%|#####     | 3/6 [00:47<01:04, 21.37s/it]\nFetching 6 files: 100%|##########| 6/6 [00:47<00:00,  7.92s/it]\n",
+    "interfaces": "direct",
+    "metrics": {
+      "direct_anti_sycophancy": {
+        "n": 50,
+        "accuracy": 0.64
+      },
+      "direct_category_axis": {
+        "n": 50,
+        "accuracy": 0.46
+      },
+      "direct_combined": {
+        "n": 50,
+        "accuracy": 0.26
+      },
+      "direct_general_evaluative": {
+        "n": 50,
+        "accuracy": 0.2
+      },
+      "direct_harm_reduction": {
+        "n": 50,
+        "accuracy": 0.5
+      },
+      "direct_persona_honesty": {
+        "n": 50,
+        "accuracy": 0.52
+      },
+      "direct_truthfulness": {
+        "n": 50,
+        "accuracy": 0.38
+      },
+      "length": {
+        "n": 50,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 50,
+        "accuracy": 0.57
+      },
+      "sentiment": {
+        "n": 50,
+        "accuracy": 0.44
+      }
+    },
+    "length_abs_gap_mean": 0.0,
+    "length_abs_gap_max": 0
+  }
+]

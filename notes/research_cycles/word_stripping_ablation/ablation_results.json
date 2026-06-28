@@ -1,0 +1,36 @@
+{
+  "battery": "C:\\Users\\93rob\\Documents\\GitHub\\Colab_exp\\notes\\research_cycles\\cycle_002_potential_shaping\\controlled_evaluative_axis_battery_v3_50_cases.jsonl",
+  "backend": "fastembed",
+  "model": "snowflake/snowflake-arctic-embed-m",
+  "n_cases": 50,
+  "n_evaluative_words": 56,
+  "n_anchor_words": 28,
+  "n_all_strip_words": 77,
+  "original": {
+    "direct_anti_sycophancy": 0.52,
+    "direct_category_axis": 0.5,
+    "direct_combined": 0.34,
+    "direct_general_evaluative": 0.32,
+    "direct_harm_reduction": 0.6,
+    "direct_persona_honesty": 0.74,
+    "direct_truthfulness": 0.48
+  },
+  "eval_stripped": {
+    "direct_anti_sycophancy": 0.52,
+    "direct_category_axis": 0.5,
+    "direct_combined": 0.36,
+    "direct_general_evaluative": 0.3,
+    "direct_harm_reduction": 0.64,
+    "direct_persona_honesty": 0.72,
+    "direct_truthfulness": 0.54
+  },
+  "all_stripped": {
+    "direct_anti_sycophancy": 0.48,
+    "direct_category_axis": 0.54,
+    "direct_combined": 0.38,
+    "direct_general_evaluative": 0.32,
+    "direct_harm_reduction": 0.64,
+    "direct_persona_honesty": 0.74,
+    "direct_truthfulness": 0.52
+  }
+}

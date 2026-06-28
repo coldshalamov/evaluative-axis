@@ -11,6 +11,7 @@ This is an active research project exploring whether the evaluative axis in embe
 - **Research loop**: [methodology/RESEARCH_LOOP_PROTOCOL.md](methodology/RESEARCH_LOOP_PROTOCOL.md) — Idea → Literature → Experiment → Autopsy → Forest → Decision
 - **Mechanism map**: [methodology/MECHANISM_MAP.md](methodology/MECHANISM_MAP.md) — pipeline uses beyond HH agreement
 - **Experiment roadmap**: [methodology/experiment_roadmap.md](methodology/experiment_roadmap.md) — what's needed next
+- **Decisive evidence plan**: [methodology/DECISIVE_EVIDENCE_PLAN.md](methodology/DECISIVE_EVIDENCE_PLAN.md) — what would actually count as proof vs suggestive evidence
 - **Rigor guardrails**: [methodology/RIGOR_GUARDRAILS.md](methodology/RIGOR_GUARDRAILS.md) — self-imposed experimental discipline
 - **Research operating mode**: [methodology/RESEARCH_OPERATING_MODE.md](methodology/RESEARCH_OPERATING_MODE.md) — prevents premature metric-chasing and forces broad interpretation
 - **Central result**: [disagreement_audit/full_grading.md](disagreement_audit/full_grading.md) — all 231 HH disagreement cases graded

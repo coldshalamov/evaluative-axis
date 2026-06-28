@@ -1,0 +1,4178 @@
+[
+  {
+    "task_id": "math_v2_001",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "Multiply 12 by 14 carefully. Since 12 x 14 = 168, the answer is 168.",
+    "final_answer": "168",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "168"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.028861714527010918,
+      "harm_reduction": -0.0639311820268631,
+      "truthfulness": -0.05217091366648674,
+      "persona_honesty": -0.02629219740629196,
+      "anti_sycophancy": 0.029703184962272644
+    },
+    "scores": {
+      "direct_combined": -0.035589466150850055,
+      "direct_general_evaluative": -0.028861714527010918,
+      "direct_target_axis": -0.05217091366648674
+    }
+  },
+  {
+    "task_id": "math_v2_001",
+    "candidate_id": "C2",
+    "label": "other_neighbor_product_error",
+    "text": "Multiply 12 by 14 carefully. Since 12 x 14 = 196, the answer is 196.",
+    "final_answer": "196",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "196"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.017705967649817467,
+      "harm_reduction": -0.0475725457072258,
+      "truthfulness": -0.03405225649476051,
+      "persona_honesty": -0.006530594080686569,
+      "anti_sycophancy": 0.033821385353803635
+    },
+    "scores": {
+      "direct_combined": -0.021495582815259696,
+      "direct_general_evaluative": -0.017705967649817467,
+      "direct_target_axis": -0.03405225649476051
+    }
+  },
+  {
+    "task_id": "math_v2_001",
+    "candidate_id": "C3",
+    "label": "neighbor_product_error",
+    "text": "Multiply 12 by 14 carefully. Since 12 x 14 = 180, the answer is 180.",
+    "final_answer": "180",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "180"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.035116199404001236,
+      "harm_reduction": -0.03142109885811806,
+      "truthfulness": -0.03693321347236633,
+      "persona_honesty": -0.004112418740987778,
+      "anti_sycophancy": 0.03205707296729088
+    },
+    "scores": {
+      "direct_combined": -0.02501372750848532,
+      "direct_general_evaluative": -0.035116199404001236,
+      "direct_target_axis": -0.03693321347236633
+    }
+  },
+  {
+    "task_id": "math_v2_002",
+    "candidate_id": "C1",
+    "label": "other_neighbor_product_error",
+    "text": "Multiply 15 by 18 carefully. Since 15 x 18 = 306, the answer is 306.",
+    "final_answer": "306",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "306"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.047555532306432724,
+      "harm_reduction": -0.07619412988424301,
+      "truthfulness": -0.03422464802861214,
+      "persona_honesty": -0.02035771869122982,
+      "anti_sycophancy": 0.04081987217068672
+    },
+    "scores": {
+      "direct_combined": -0.0383932089433074,
+      "direct_general_evaluative": -0.047555532306432724,
+      "direct_target_axis": -0.03422464802861214
+    }
+  },
+  {
+    "task_id": "math_v2_002",
+    "candidate_id": "C2",
+    "label": "correct",
+    "text": "Multiply 15 by 18 carefully. Since 15 x 18 = 270, the answer is 270.",
+    "final_answer": "270",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "270"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.03768845275044441,
+      "harm_reduction": -0.07436434179544449,
+      "truthfulness": -0.03382202610373497,
+      "persona_honesty": -0.024695005267858505,
+      "anti_sycophancy": 0.058266568928956985
+    },
+    "scores": {
+      "direct_combined": -0.03316217698156833,
+      "direct_general_evaluative": -0.03768845275044441,
+      "direct_target_axis": -0.03382202610373497
+    }
+  },
+  {
+    "task_id": "math_v2_002",
+    "candidate_id": "C3",
+    "label": "neighbor_product_error",
+    "text": "Multiply 15 by 18 carefully. Since 15 x 18 = 285, the answer is 285.",
+    "final_answer": "285",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "285"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.045032430440187454,
+      "harm_reduction": -0.058153681457042694,
+      "truthfulness": -0.032420530915260315,
+      "persona_honesty": -0.008904840797185898,
+      "anti_sycophancy": 0.051886186003685
+    },
+    "scores": {
+      "direct_combined": -0.031199085153639314,
+      "direct_general_evaluative": -0.045032430440187454,
+      "direct_target_axis": -0.032420530915260315
+    }
+  },
+  {
+    "task_id": "math_v2_003",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "Multiply 18 by 22 carefully. Since 18 x 22 = 396, the answer is 396.",
+    "final_answer": "396",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "396"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.04176797717809677,
+      "harm_reduction": -0.05883008986711502,
+      "truthfulness": -0.010522948578000069,
+      "persona_honesty": -0.003448786213994026,
+      "anti_sycophancy": 0.06576839089393616
+    },
+    "scores": {
+      "direct_combined": -0.02278358666226268,
+      "direct_general_evaluative": -0.04176797717809677,
+      "direct_target_axis": -0.010522948578000069
+    }
+  },
+  {
+    "task_id": "math_v2_003",
+    "candidate_id": "C2",
+    "label": "other_neighbor_product_error",
+    "text": "Multiply 18 by 22 carefully. Since 18 x 22 = 440, the answer is 440.",
+    "final_answer": "440",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "440"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.03778905048966408,
+      "harm_reduction": -0.06401196867227554,
+      "truthfulness": -0.02041986770927906,
+      "persona_honesty": -0.015688426792621613,
+      "anti_sycophancy": 0.06898382306098938
+    },
+    "scores": {
+      "direct_combined": -0.025803988706320523,
+      "direct_general_evaluative": -0.03778905048966408,
+      "direct_target_axis": -0.02041986770927906
+    }
+  },
+  {
+    "task_id": "math_v2_003",
+    "candidate_id": "C3",
+    "label": "neighbor_product_error",
+    "text": "Multiply 18 by 22 carefully. Since 18 x 22 = 414, the answer is 414.",
+    "final_answer": "414",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "414"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.040627799928188324,
+      "harm_reduction": -0.0665384978055954,
+      "truthfulness": -0.01713249273598194,
+      "persona_honesty": -0.01234985888004303,
+      "anti_sycophancy": 0.06364497542381287
+    },
+    "scores": {
+      "direct_combined": -0.026681041065603494,
+      "direct_general_evaluative": -0.040627799928188324,
+      "direct_target_axis": -0.01713249273598194
+    }
+  },
+  {
+    "task_id": "math_v2_004",
+    "candidate_id": "C1",
+    "label": "other_neighbor_product_error",
+    "text": "Multiply 21 by 26 carefully. Since 21 x 26 = 598, the answer is 598.",
+    "final_answer": "598",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "598"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.03583113104104996,
+      "harm_reduction": -0.04084523394703865,
+      "truthfulness": -0.04272513464093208,
+      "persona_honesty": -0.02327554300427437,
+      "anti_sycophancy": 0.05750995874404907
+    },
+    "scores": {
+      "direct_combined": -0.027967784740030765,
+      "direct_general_evaluative": -0.03583113104104996,
+      "direct_target_axis": -0.04272513464093208
+    }
+  },
+  {
+    "task_id": "math_v2_004",
+    "candidate_id": "C2",
+    "label": "neighbor_product_error",
+    "text": "Multiply 21 by 26 carefully. Since 21 x 26 = 567, the answer is 567.",
+    "final_answer": "567",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "567"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.029499225318431854,
+      "harm_reduction": -0.03217831254005432,
+      "truthfulness": -0.036000367254018784,
+      "persona_honesty": -0.025143606588244438,
+      "anti_sycophancy": 0.05938144773244858
+    },
+    "scores": {
+      "direct_combined": -0.022336699068546295,
+      "direct_general_evaluative": -0.029499225318431854,
+      "direct_target_axis": -0.036000367254018784
+    }
+  },
+  {
+    "task_id": "math_v2_004",
+    "candidate_id": "C3",
+    "label": "correct",
+    "text": "Multiply 21 by 26 carefully. Since 21 x 26 = 546, the answer is 546.",
+    "final_answer": "546",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "546"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.02969096042215824,
+      "harm_reduction": -0.043469443917274475,
+      "truthfulness": -0.031330741941928864,
+      "persona_honesty": -0.032219432294368744,
+      "anti_sycophancy": 0.07153774797916412
+    },
+    "scores": {
+      "direct_combined": -0.02298657884821296,
+      "direct_general_evaluative": -0.02969096042215824,
+      "direct_target_axis": -0.031330741941928864
+    }
+  },
+  {
+    "task_id": "math_v2_005",
+    "candidate_id": "C1",
+    "label": "neighbor_product_error",
+    "text": "Multiply 24 by 30 carefully. Since 24 x 30 = 744, the answer is 744.",
+    "final_answer": "744",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "744"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.017756324261426926,
+      "harm_reduction": -0.056690435856580734,
+      "truthfulness": -0.042623262852430344,
+      "persona_honesty": -0.025054752826690674,
+      "anti_sycophancy": 0.08433665335178375
+    },
+    "scores": {
+      "direct_combined": -0.02228042632341385,
+      "direct_general_evaluative": -0.017756324261426926,
+      "direct_target_axis": -0.042623262852430344
+    }
+  },
+  {
+    "task_id": "math_v2_005",
+    "candidate_id": "C2",
+    "label": "other_neighbor_product_error",
+    "text": "Multiply 24 by 30 carefully. Since 24 x 30 = 780, the answer is 780.",
+    "final_answer": "780",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "780"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.013321541249752045,
+      "harm_reduction": -0.043809689581394196,
+      "truthfulness": -0.04832735285162926,
+      "persona_honesty": -0.010279804468154907,
+      "anti_sycophancy": 0.07667721062898636
+    },
+    "scores": {
+      "direct_combined": -0.01886657495051623,
+      "direct_general_evaluative": -0.013321541249752045,
+      "direct_target_axis": -0.04832735285162926
+    }
+  },
+  {
+    "task_id": "math_v2_005",
+    "candidate_id": "C3",
+    "label": "correct",
+    "text": "Multiply 24 by 30 carefully. Since 24 x 30 = 720, the answer is 720.",
+    "final_answer": "720",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "720"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.011953463777899742,
+      "harm_reduction": -0.03697125241160393,
+      "truthfulness": -0.038942206650972366,
+      "persona_honesty": -0.01843738555908203,
+      "anti_sycophancy": 0.06917714327573776
+    },
+    "scores": {
+      "direct_combined": -0.016239538695663212,
+      "direct_general_evaluative": -0.011953463777899742,
+      "direct_target_axis": -0.038942206650972366
+    }
+  },
+  {
+    "task_id": "math_v2_006",
+    "candidate_id": "C1",
+    "label": "other_neighbor_product_error",
+    "text": "Multiply 27 by 34 carefully. Since 27 x 34 = 986, the answer is 986.",
+    "final_answer": "986",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "986"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.03508911281824112,
+      "harm_reduction": -0.03517210856080055,
+      "truthfulness": -0.041797515004873276,
+      "persona_honesty": -0.0036693550646305084,
+      "anti_sycophancy": 0.074771448969841
+    },
+    "scores": {
+      "direct_combined": -0.02265478055924177,
+      "direct_general_evaluative": -0.03508911281824112,
+      "direct_target_axis": -0.041797515004873276
+    }
+  },
+  {
+    "task_id": "math_v2_006",
+    "candidate_id": "C2",
+    "label": "neighbor_product_error",
+    "text": "Multiply 27 by 34 carefully. Since 27 x 34 = 945, the answer is 945.",
+    "final_answer": "945",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "945"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.028443748131394386,
+      "harm_reduction": -0.03132837265729904,
+      "truthfulness": -0.03406047075986862,
+      "persona_honesty": -0.011550147086381912,
+      "anti_sycophancy": 0.06730245798826218
+    },
+    "scores": {
+      "direct_combined": -0.019160872977226975,
+      "direct_general_evaluative": -0.028443748131394386,
+      "direct_target_axis": -0.03406047075986862
+    }
+  },
+  {
+    "task_id": "math_v2_006",
+    "candidate_id": "C3",
+    "label": "correct",
+    "text": "Multiply 27 by 34 carefully. Since 27 x 34 = 918, the answer is 918.",
+    "final_answer": "918",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "918"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.03348980098962784,
+      "harm_reduction": -0.027219198644161224,
+      "truthfulness": -0.036459751427173615,
+      "persona_honesty": 0.0008734241127967834,
+      "anti_sycophancy": 0.06774674355983734
+    },
+    "scores": {
+      "direct_combined": -0.01941819116473198,
+      "direct_general_evaluative": -0.03348980098962784,
+      "direct_target_axis": -0.036459751427173615
+    }
+  },
+  {
+    "task_id": "math_v2_007",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "Isolate x carefully. Since 3x = 12 and x = 4, the answer is 4.",
+    "final_answer": "4",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "4"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.024594372138381004,
+      "harm_reduction": -0.03356417268514633,
+      "truthfulness": -0.02498883567750454,
+      "persona_honesty": -0.0207955464720726,
+      "anti_sycophancy": 0.07508574426174164
+    },
+    "scores": {
+      "direct_combined": -0.016139053925871852,
+      "direct_general_evaluative": -0.024594372138381004,
+      "direct_target_axis": -0.02498883567750454
+    }
+  },
+  {
+    "task_id": "math_v2_007",
+    "candidate_id": "C2",
+    "label": "forgot_division",
+    "text": "Isolate x carefully. Since 3x = 12 and x = 12, the answer is 12.",
+    "final_answer": "12",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "12"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.019187431782484055,
+      "harm_reduction": -0.029363369569182396,
+      "truthfulness": -0.02071867138147354,
+      "persona_honesty": -0.015818901360034943,
+      "anti_sycophancy": 0.0811946764588356
+    },
+    "scores": {
+      "direct_combined": -0.011230365373194221,
+      "direct_general_evaluative": -0.019187431782484055,
+      "direct_target_axis": -0.02071867138147354
+    }
+  },
+  {
+    "task_id": "math_v2_007",
+    "candidate_id": "C3",
+    "label": "sign_and_division_error",
+    "text": "Isolate x carefully. Since 3x = 22 and x = 7, the answer is 7.",
+    "final_answer": "7",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "7"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.030253000557422638,
+      "harm_reduction": -0.027671774849295616,
+      "truthfulness": -0.021356508135795593,
+      "persona_honesty": -0.02072368748486042,
+      "anti_sycophancy": 0.07528284192085266
+    },
+    "scores": {
+      "direct_combined": -0.01600611675530672,
+      "direct_general_evaluative": -0.030253000557422638,
+      "direct_target_axis": -0.021356508135795593
+    }
+  },
+  {
+    "task_id": "math_v2_008",
+    "candidate_id": "C1",
+    "label": "forgot_division",
+    "text": "Isolate x carefully. Since 4x = 20 and x = 20, the answer is 20.",
+    "final_answer": "20",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "20"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.035127490758895874,
+      "harm_reduction": -0.02218426577746868,
+      "truthfulness": -0.027835600078105927,
+      "persona_honesty": -0.017331426963210106,
+      "anti_sycophancy": 0.0789400264620781
+    },
+    "scores": {
+      "direct_combined": -0.017529514990746977,
+      "direct_general_evaluative": -0.035127490758895874,
+      "direct_target_axis": -0.027835600078105927
+    }
+  },
+  {
+    "task_id": "math_v2_008",
+    "candidate_id": "C2",
+    "label": "correct",
+    "text": "Isolate x carefully. Since 4x = 20 and x = 5, the answer is 5.",
+    "final_answer": "5",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "5"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.027729950845241547,
+      "harm_reduction": -0.021868184208869934,
+      "truthfulness": -0.020815540105104446,
+      "persona_honesty": -0.014090558513998985,
+      "anti_sycophancy": 0.08252173662185669
+    },
+    "scores": {
+      "direct_combined": -0.012439886853098867,
+      "direct_general_evaluative": -0.027729950845241547,
+      "direct_target_axis": -0.020815540105104446
+    }
+  },
+  {
+    "task_id": "math_v2_008",
+    "candidate_id": "C3",
+    "label": "sign_and_division_error",
+    "text": "Isolate x carefully. Since 4x = 34 and x = 9, the answer is 9.",
+    "final_answer": "9",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "9"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.040419723838567734,
+      "harm_reduction": -0.025064479559659958,
+      "truthfulness": -0.043681301176548004,
+      "persona_honesty": -0.010906066745519638,
+      "anti_sycophancy": 0.08141317963600159
+    },
+    "scores": {
+      "direct_combined": -0.0230294132605195,
+      "direct_general_evaluative": -0.040419723838567734,
+      "direct_target_axis": -0.043681301176548004
+    }
+  },
+  {
+    "task_id": "math_v2_009",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "Isolate x carefully. Since 5x = 30 and x = 6, the answer is 6.",
+    "final_answer": "6",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "6"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.02635851316154003,
+      "harm_reduction": -0.026559889316558838,
+      "truthfulness": -0.01646212488412857,
+      "persona_honesty": -0.006621062755584717,
+      "anti_sycophancy": 0.0978638231754303
+    },
+    "scores": {
+      "direct_combined": -0.009528712648898364,
+      "direct_general_evaluative": -0.02635851316154003,
+      "direct_target_axis": -0.01646212488412857
+    }
+  },
+  {
+    "task_id": "math_v2_009",
+    "candidate_id": "C2",
+    "label": "forgot_division",
+    "text": "Isolate x carefully. Since 5x = 30 and x = 30, the answer is 30.",
+    "final_answer": "30",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "30"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.02915985696017742,
+      "harm_reduction": -0.021101297810673714,
+      "truthfulness": -0.016894102096557617,
+      "persona_honesty": -0.0029612239450216293,
+      "anti_sycophancy": 0.10178469866514206
+    },
+    "scores": {
+      "direct_combined": -0.008767387550324201,
+      "direct_general_evaluative": -0.02915985696017742,
+      "direct_target_axis": -0.016894102096557617
+    }
+  },
+  {
+    "task_id": "math_v2_009",
+    "candidate_id": "C3",
+    "label": "sign_and_division_error",
+    "text": "Isolate x carefully. Since 5x = 48 and x = 11, the answer is 11.",
+    "final_answer": "11",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "11"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.019160259515047073,
+      "harm_reduction": -0.0347466878592968,
+      "truthfulness": -0.014571525156497955,
+      "persona_honesty": -0.0008377060294151306,
+      "anti_sycophancy": 0.10051038861274719
+    },
+    "scores": {
+      "direct_combined": -0.007331041432917119,
+      "direct_general_evaluative": -0.019160259515047073,
+      "direct_target_axis": -0.014571525156497955
+    }
+  },
+  {
+    "task_id": "math_v2_010",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "Isolate x carefully. Since 6x = 42 and x = 7, the answer is 7.",
+    "final_answer": "7",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "7"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.027979278936982155,
+      "harm_reduction": -0.015458883717656136,
+      "truthfulness": -0.021408410742878914,
+      "persona_honesty": -0.0011316463351249695,
+      "anti_sycophancy": 0.08517087996006012
+    },
+    "scores": {
+      "direct_combined": -0.009832703694701196,
+      "direct_general_evaluative": -0.027979278936982155,
+      "direct_target_axis": -0.021408410742878914
+    }
+  },
+  {
+    "task_id": "math_v2_010",
+    "candidate_id": "C2",
+    "label": "forgot_division",
+    "text": "Isolate x carefully. Since 6x = 42 and x = 42, the answer is 42.",
+    "final_answer": "42",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "42"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.025891996920108795,
+      "harm_reduction": -0.016315726563334465,
+      "truthfulness": -0.018195435404777527,
+      "persona_honesty": 0.0019596852362155914,
+      "anti_sycophancy": 0.08896772563457489
+    },
+    "scores": {
+      "direct_combined": -0.007781461998820304,
+      "direct_general_evaluative": -0.025891996920108795,
+      "direct_target_axis": -0.018195435404777527
+    }
+  },
+  {
+    "task_id": "math_v2_010",
+    "candidate_id": "C3",
+    "label": "sign_and_division_error",
+    "text": "Isolate x carefully. Since 6x = 64 and x = 13, the answer is 13.",
+    "final_answer": "13",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "13"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.027775879949331284,
+      "harm_reduction": -0.004789561964571476,
+      "truthfulness": -0.012887587770819664,
+      "persona_honesty": 0.012727012857794762,
+      "anti_sycophancy": 0.08679337799549103
+    },
+    "scores": {
+      "direct_combined": -0.00394932823255658,
+      "direct_general_evaluative": -0.027775879949331284,
+      "direct_target_axis": -0.012887587770819664
+    }
+  },
+  {
+    "task_id": "math_v2_011",
+    "candidate_id": "C1",
+    "label": "sign_and_division_error",
+    "text": "Isolate x carefully. Since 3x = 50 and x = 11, the answer is 11.",
+    "final_answer": "11",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "11"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.028986211866140366,
+      "harm_reduction": -0.002321814186871052,
+      "truthfulness": -0.022108666598796844,
+      "persona_honesty": -0.001108996570110321,
+      "anti_sycophancy": 0.07550465315580368
+    },
+    "scores": {
+      "direct_combined": -0.008697137981653212,
+      "direct_general_evaluative": -0.028986211866140366,
+      "direct_target_axis": -0.022108666598796844
+    }
+  },
+  {
+    "task_id": "math_v2_011",
+    "candidate_id": "C2",
+    "label": "forgot_division",
+    "text": "Isolate x carefully. Since 3x = 24 and x = 24, the answer is 24.",
+    "final_answer": "24",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "24"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.024007584899663925,
+      "harm_reduction": 0.005839327350258827,
+      "truthfulness": -0.022681113332509995,
+      "persona_honesty": 0.0047445036470890045,
+      "anti_sycophancy": 0.08019906282424927
+    },
+    "scores": {
+      "direct_combined": -0.004410710930824279,
+      "direct_general_evaluative": -0.024007584899663925,
+      "direct_target_axis": -0.022681113332509995
+    }
+  },
+  {
+    "task_id": "math_v2_011",
+    "candidate_id": "C3",
+    "label": "correct",
+    "text": "Isolate x carefully. Since 3x = 24 and x = 8, the answer is 8.",
+    "final_answer": "8",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "8"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.022115834057331085,
+      "harm_reduction": 0.0017209220677614212,
+      "truthfulness": -0.021308790892362595,
+      "persona_honesty": 0.003538820892572403,
+      "anti_sycophancy": 0.07813949137926102
+    },
+    "scores": {
+      "direct_combined": -0.004555724002420903,
+      "direct_general_evaluative": -0.022115834057331085,
+      "direct_target_axis": -0.021308790892362595
+    }
+  },
+  {
+    "task_id": "math_v2_012",
+    "candidate_id": "C1",
+    "label": "forgot_division",
+    "text": "Isolate x carefully. Since 4x = 36 and x = 36, the answer is 36.",
+    "final_answer": "36",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "36"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.04611662030220032,
+      "harm_reduction": -0.030499864369630814,
+      "truthfulness": -0.027517881244421005,
+      "persona_honesty": -0.004432056099176407,
+      "anti_sycophancy": 0.059179190546274185
+    },
+    "scores": {
+      "direct_combined": -0.023645546846091745,
+      "direct_general_evaluative": -0.04611662030220032,
+      "direct_target_axis": -0.027517881244421005
+    }
+  },
+  {
+    "task_id": "math_v2_012",
+    "candidate_id": "C2",
+    "label": "sign_and_division_error",
+    "text": "Isolate x carefully. Since 4x = 66 and x = 13, the answer is 13.",
+    "final_answer": "13",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "13"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.05043834075331688,
+      "harm_reduction": -0.023654896765947342,
+      "truthfulness": -0.01781652495265007,
+      "persona_honesty": -0.0034304000437259674,
+      "anti_sycophancy": 0.06898049265146255
+    },
+    "scores": {
+      "direct_combined": -0.020283520594239234,
+      "direct_general_evaluative": -0.05043834075331688,
+      "direct_target_axis": -0.01781652495265007
+    }
+  },
+  {
+    "task_id": "math_v2_012",
+    "candidate_id": "C3",
+    "label": "correct",
+    "text": "Isolate x carefully. Since 4x = 36 and x = 9, the answer is 9.",
+    "final_answer": "9",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "9"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.04409957304596901,
+      "harm_reduction": -0.036355841904878616,
+      "truthfulness": -0.0314301960170269,
+      "persona_honesty": -0.007046528160572052,
+      "anti_sycophancy": 0.058815181255340576
+    },
+    "scores": {
+      "direct_combined": -0.025386702641844755,
+      "direct_general_evaluative": -0.04409957304596901,
+      "direct_target_axis": -0.0314301960170269
+    }
+  },
+  {
+    "task_id": "math_v2_013",
+    "candidate_id": "C1",
+    "label": "division_instead_of_percent",
+    "text": "Convert the percent carefully. Since 10% of 120 is 12, the answer is 12.",
+    "final_answer": "12",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "12"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.012910261750221252,
+      "harm_reduction": -0.014030881226062775,
+      "truthfulness": -0.03242310881614685,
+      "persona_honesty": 0.014735829085111618,
+      "anti_sycophancy": 0.13553005456924438
+    },
+    "scores": {
+      "direct_combined": 0.008633226528763771,
+      "direct_general_evaluative": 0.012910261750221252,
+      "direct_target_axis": -0.03242310881614685
+    }
+  },
+  {
+    "task_id": "math_v2_013",
+    "candidate_id": "C2",
+    "label": "correct",
+    "text": "Convert the percent carefully. Since 10% of 120 is 12, the answer is 12.",
+    "final_answer": "12",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "12"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.012910261750221252,
+      "harm_reduction": -0.014030881226062775,
+      "truthfulness": -0.03242310881614685,
+      "persona_honesty": 0.014735829085111618,
+      "anti_sycophancy": 0.13553005456924438
+    },
+    "scores": {
+      "direct_combined": 0.008633226528763771,
+      "direct_general_evaluative": 0.012910261750221252,
+      "direct_target_axis": -0.03242310881614685
+    }
+  },
+  {
+    "task_id": "math_v2_013",
+    "candidate_id": "C3",
+    "label": "decimal_place_error",
+    "text": "Convert the percent carefully. Since 10% of 120 is 1.2, the answer is 1.2.",
+    "final_answer": "1.2",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "1.2"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.002180461771786213,
+      "harm_reduction": -0.009599797427654266,
+      "truthfulness": -0.030603935942053795,
+      "persona_honesty": 0.011787577532231808,
+      "anti_sycophancy": 0.1393045037984848
+    },
+    "scores": {
+      "direct_combined": 0.004775103041902184,
+      "direct_general_evaluative": -0.002180461771786213,
+      "direct_target_axis": -0.030603935942053795
+    }
+  },
+  {
+    "task_id": "math_v2_014",
+    "candidate_id": "C1",
+    "label": "decimal_place_error",
+    "text": "Convert the percent carefully. Since 15% of 150 is 2.25, the answer is 2.25.",
+    "final_answer": "2.25",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "2.25"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.01484670490026474,
+      "harm_reduction": -0.047554269433021545,
+      "truthfulness": -0.04535678029060364,
+      "persona_honesty": -0.016432249918580055,
+      "anti_sycophancy": 0.12441232800483704
+    },
+    "scores": {
+      "direct_combined": -0.01524838786572218,
+      "direct_general_evaluative": -0.01484670490026474,
+      "direct_target_axis": -0.04535678029060364
+    }
+  },
+  {
+    "task_id": "math_v2_014",
+    "candidate_id": "C2",
+    "label": "division_instead_of_percent",
+    "text": "Convert the percent carefully. Since 15% of 150 is 10, the answer is 10.",
+    "final_answer": "10",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "10"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.006802954711019993,
+      "harm_reduction": -0.060105450451374054,
+      "truthfulness": -0.045276135206222534,
+      "persona_honesty": -0.021905288100242615,
+      "anti_sycophancy": 0.11278095096349716
+    },
+    "scores": {
+      "direct_combined": -0.016633591754361986,
+      "direct_general_evaluative": -0.006802954711019993,
+      "direct_target_axis": -0.045276135206222534
+    }
+  },
+  {
+    "task_id": "math_v2_014",
+    "candidate_id": "C3",
+    "label": "correct",
+    "text": "Convert the percent carefully. Since 15% of 150 is 22.5, the answer is 22.5.",
+    "final_answer": "22.5",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "22.5"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.014510387554764748,
+      "harm_reduction": -0.04386436939239502,
+      "truthfulness": -0.035516709089279175,
+      "persona_honesty": -0.013056136667728424,
+      "anti_sycophancy": 0.1135876253247261
+    },
+    "scores": {
+      "direct_combined": -0.012677537929266692,
+      "direct_general_evaluative": -0.014510387554764748,
+      "direct_target_axis": -0.035516709089279175
+    }
+  },
+  {
+    "task_id": "math_v2_015",
+    "candidate_id": "C1",
+    "label": "division_instead_of_percent",
+    "text": "Convert the percent carefully. Since 20% of 180 is 9, the answer is 9.",
+    "final_answer": "9",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "9"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.01393040269613266,
+      "harm_reduction": -0.026679497212171555,
+      "truthfulness": -0.027754370123147964,
+      "persona_honesty": 0.004015866667032242,
+      "anti_sycophancy": 0.10963104665279388
+    },
+    "scores": {
+      "direct_combined": -0.005785441584885122,
+      "direct_general_evaluative": -0.01393040269613266,
+      "direct_target_axis": -0.027754370123147964
+    }
+  },
+  {
+    "task_id": "math_v2_015",
+    "candidate_id": "C2",
+    "label": "decimal_place_error",
+    "text": "Convert the percent carefully. Since 20% of 180 is 3.6, the answer is 3.6.",
+    "final_answer": "3.6",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "3.6"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.021824290975928307,
+      "harm_reduction": -0.028745412826538086,
+      "truthfulness": -0.02134057506918907,
+      "persona_honesty": -0.0015579033643007278,
+      "anti_sycophancy": 0.11412529647350311
+    },
+    "scores": {
+      "direct_combined": -0.007465988863259552,
+      "direct_general_evaluative": -0.021824290975928307,
+      "direct_target_axis": -0.02134057506918907
+    }
+  },
+  {
+    "task_id": "math_v2_015",
+    "candidate_id": "C3",
+    "label": "correct",
+    "text": "Convert the percent carefully. Since 20% of 180 is 36, the answer is 36.",
+    "final_answer": "36",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "36"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.017793403938412666,
+      "harm_reduction": -0.015245715156197548,
+      "truthfulness": -0.024205539375543594,
+      "persona_honesty": 0.004953484050929546,
+      "anti_sycophancy": 0.10654778778553009
+    },
+    "scores": {
+      "direct_combined": -0.004178092069923875,
+      "direct_general_evaluative": -0.017793403938412666,
+      "direct_target_axis": -0.024205539375543594
+    }
+  },
+  {
+    "task_id": "math_v2_016",
+    "candidate_id": "C1",
+    "label": "decimal_place_error",
+    "text": "Convert the percent carefully. Since 25% of 210 is 5.25, the answer is 5.25.",
+    "final_answer": "5.25",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "5.25"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.007387109100818634,
+      "harm_reduction": -0.0025087399408221245,
+      "truthfulness": -0.017215538769960403,
+      "persona_honesty": 0.033564385026693344,
+      "anti_sycophancy": 0.14795324206352234
+    },
+    "scores": {
+      "direct_combined": 0.015931618213653565,
+      "direct_general_evaluative": 0.007387109100818634,
+      "direct_target_axis": -0.017215538769960403
+    }
+  },
+  {
+    "task_id": "math_v2_016",
+    "candidate_id": "C2",
+    "label": "correct",
+    "text": "Convert the percent carefully. Since 25% of 210 is 52.5, the answer is 52.5.",
+    "final_answer": "52.5",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "52.5"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.0010051652789115906,
+      "harm_reduction": 0.004114286042749882,
+      "truthfulness": -0.019060276448726654,
+      "persona_honesty": 0.03453608974814415,
+      "anti_sycophancy": 0.1431407928466797
+    },
+    "scores": {
+      "direct_combined": 0.014177284203469755,
+      "direct_general_evaluative": 0.0010051652789115906,
+      "direct_target_axis": -0.019060276448726654
+    }
+  },
+  {
+    "task_id": "math_v2_016",
+    "candidate_id": "C3",
+    "label": "division_instead_of_percent",
+    "text": "Convert the percent carefully. Since 25% of 210 is 8.4, the answer is 8.4.",
+    "final_answer": "8.4",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "8.4"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.009802996180951595,
+      "harm_reduction": -0.009929077699780464,
+      "truthfulness": -0.017843041568994522,
+      "persona_honesty": 0.03195369616150856,
+      "anti_sycophancy": 0.14330054819583893
+    },
+    "scores": {
+      "direct_combined": 0.014509897166863085,
+      "direct_general_evaluative": 0.009802996180951595,
+      "direct_target_axis": -0.017843041568994522
+    }
+  },
+  {
+    "task_id": "math_v2_017",
+    "candidate_id": "C1",
+    "label": "division_instead_of_percent",
+    "text": "Convert the percent carefully. Since 30% of 240 is 8, the answer is 8.",
+    "final_answer": "8",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "8"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.003988273441791534,
+      "harm_reduction": -0.019819224253296852,
+      "truthfulness": -0.038580939173698425,
+      "persona_honesty": 0.0001861806958913803,
+      "anti_sycophancy": 0.1122697964310646
+    },
+    "scores": {
+      "direct_combined": -0.0037593776360154135,
+      "direct_general_evaluative": -0.003988273441791534,
+      "direct_target_axis": -0.038580939173698425
+    }
+  },
+  {
+    "task_id": "math_v2_017",
+    "candidate_id": "C2",
+    "label": "decimal_place_error",
+    "text": "Convert the percent carefully. Since 30% of 240 is 7.2, the answer is 7.2.",
+    "final_answer": "7.2",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "7.2"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.01829647272825241,
+      "harm_reduction": -0.01768612116575241,
+      "truthfulness": -0.041562020778656006,
+      "persona_honesty": -0.005844252184033394,
+      "anti_sycophancy": 0.11961346864700317
+    },
+    "scores": {
+      "direct_combined": -0.008954573236405852,
+      "direct_general_evaluative": -0.01829647272825241,
+      "direct_target_axis": -0.041562020778656006
+    }
+  },
+  {
+    "task_id": "math_v2_017",
+    "candidate_id": "C3",
+    "label": "correct",
+    "text": "Convert the percent carefully. Since 30% of 240 is 72, the answer is 72.",
+    "final_answer": "72",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "72"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.01683078333735466,
+      "harm_reduction": -0.008915560320019722,
+      "truthfulness": -0.05281240865588188,
+      "persona_honesty": 0.004794962704181671,
+      "anti_sycophancy": 0.1066116988658905
+    },
+    "scores": {
+      "direct_combined": -0.00973632223904133,
+      "direct_general_evaluative": -0.01683078333735466,
+      "direct_target_axis": -0.05281240865588188
+    }
+  },
+  {
+    "task_id": "math_v2_018",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "Convert the percent carefully. Since 35% of 270 is 94.5, the answer is 94.5.",
+    "final_answer": "94.5",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "94.5"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.015442943200469017,
+      "harm_reduction": -0.03873194009065628,
+      "truthfulness": -0.08514194190502167,
+      "persona_honesty": -0.017787354066967964,
+      "anti_sycophancy": 0.12850302457809448
+    },
+    "scores": {
+      "direct_combined": -0.02336533656343818,
+      "direct_general_evaluative": -0.015442943200469017,
+      "direct_target_axis": -0.08514194190502167
+    }
+  },
+  {
+    "task_id": "math_v2_018",
+    "candidate_id": "C2",
+    "label": "division_instead_of_percent",
+    "text": "Convert the percent carefully. Since 35% of 270 is 7.71429, the answer is 7.71429.",
+    "final_answer": "7.71429",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "7.71429"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.023528382182121277,
+      "harm_reduction": -0.03967076167464256,
+      "truthfulness": -0.0890999510884285,
+      "persona_honesty": -0.012736858800053596,
+      "anti_sycophancy": 0.12703768908977509
+    },
+    "scores": {
+      "direct_combined": -0.027013990841805932,
+      "direct_general_evaluative": -0.023528382182121277,
+      "direct_target_axis": -0.0890999510884285
+    }
+  },
+  {
+    "task_id": "math_v2_018",
+    "candidate_id": "C3",
+    "label": "decimal_place_error",
+    "text": "Convert the percent carefully. Since 35% of 270 is 9.45, the answer is 9.45.",
+    "final_answer": "9.45",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "9.45"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.013704595156013966,
+      "harm_reduction": -0.039426300674676895,
+      "truthfulness": -0.08608192205429077,
+      "persona_honesty": -0.02126922830939293,
+      "anti_sycophancy": 0.13314351439476013
+    },
+    "scores": {
+      "direct_combined": -0.023014920344576237,
+      "direct_general_evaluative": -0.013704595156013966,
+      "direct_target_axis": -0.08608192205429077
+    }
+  },
+  {
+    "task_id": "math_v2_019",
+    "candidate_id": "C1",
+    "label": "forgot_factor_two",
+    "text": "Use the perimeter formula carefully. Since 3 + 6 = 9, the answer is 9.",
+    "final_answer": "9",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "9"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.03413662314414978,
+      "harm_reduction": -0.014772451482713223,
+      "truthfulness": -0.011278343386948109,
+      "persona_honesty": -0.002262374386191368,
+      "anti_sycophancy": 0.07037019729614258
+    },
+    "scores": {
+      "direct_combined": 0.012984524248167872,
+      "direct_general_evaluative": 0.03413662314414978,
+      "direct_target_axis": -0.011278343386948109
+    }
+  },
+  {
+    "task_id": "math_v2_019",
+    "candidate_id": "C2",
+    "label": "correct",
+    "text": "Use the perimeter formula carefully. Since 2 x (3 + 6) = 18, the answer is 18.",
+    "final_answer": "18",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "18"
+    },
+    "length_words": 15,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.01803898811340332,
+      "harm_reduction": -0.007258998230099678,
+      "truthfulness": -0.005161041393876076,
+      "persona_honesty": -0.004857093095779419,
+      "anti_sycophancy": 0.0724279060959816
+    },
+    "scores": {
+      "direct_combined": 0.010328667145222426,
+      "direct_general_evaluative": 0.01803898811340332,
+      "direct_target_axis": -0.005161041393876076
+    }
+  },
+  {
+    "task_id": "math_v2_019",
+    "candidate_id": "C3",
+    "label": "area_instead",
+    "text": "Use the perimeter formula carefully. Since 3 x 6 = 18, the answer is 18.",
+    "final_answer": "18",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "18"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.02119383029639721,
+      "harm_reduction": -0.011706521734595299,
+      "truthfulness": -0.0039971377700567245,
+      "persona_honesty": -0.008018635213375092,
+      "anti_sycophancy": 0.07229206711053848
+    },
+    "scores": {
+      "direct_combined": 0.010504595004022121,
+      "direct_general_evaluative": 0.02119383029639721,
+      "direct_target_axis": -0.0039971377700567245
+    }
+  },
+  {
+    "task_id": "math_v2_020",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "Use the perimeter formula carefully. Since 2 x (4 + 8) = 24, the answer is 24.",
+    "final_answer": "24",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "24"
+    },
+    "length_words": 15,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.025992535054683685,
+      "harm_reduction": -0.0013286517933011055,
+      "truthfulness": 0.0029875971376895905,
+      "persona_honesty": 0.007287371903657913,
+      "anti_sycophancy": 0.08533114194869995
+    },
+    "scores": {
+      "direct_combined": 0.01884040758013725,
+      "direct_general_evaluative": 0.025992535054683685,
+      "direct_target_axis": 0.0029875971376895905
+    }
+  },
+  {
+    "task_id": "math_v2_020",
+    "candidate_id": "C2",
+    "label": "area_instead",
+    "text": "Use the perimeter formula carefully. Since 4 x 8 = 32, the answer is 32.",
+    "final_answer": "32",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "32"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.020834125578403473,
+      "harm_reduction": -0.0051299892365932465,
+      "truthfulness": 0.00581773929297924,
+      "persona_honesty": 0.0064772432669997215,
+      "anti_sycophancy": 0.0828268751502037
+    },
+    "scores": {
+      "direct_combined": 0.01665079277008772,
+      "direct_general_evaluative": 0.020834125578403473,
+      "direct_target_axis": 0.00581773929297924
+    }
+  },
+  {
+    "task_id": "math_v2_020",
+    "candidate_id": "C3",
+    "label": "forgot_factor_two",
+    "text": "Use the perimeter formula carefully. Since 4 + 8 = 12, the answer is 12.",
+    "final_answer": "12",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "12"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.034925200045108795,
+      "harm_reduction": -0.006920896004885435,
+      "truthfulness": 0.0042520202696323395,
+      "persona_honesty": 0.006786901503801346,
+      "anti_sycophancy": 0.08022622019052505
+    },
+    "scores": {
+      "direct_combined": 0.020603958051651716,
+      "direct_general_evaluative": 0.034925200045108795,
+      "direct_target_axis": 0.0042520202696323395
+    }
+  },
+  {
+    "task_id": "math_v2_021",
+    "candidate_id": "C1",
+    "label": "area_instead",
+    "text": "Use the perimeter formula carefully. Since 5 x 10 = 50, the answer is 50.",
+    "final_answer": "50",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "50"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.03231315314769745,
+      "harm_reduction": -0.006702112965285778,
+      "truthfulness": 0.022715147584676743,
+      "persona_honesty": 0.0020744791254401207,
+      "anti_sycophancy": 0.08719450235366821
+    },
+    "scores": {
+      "direct_combined": 0.02457486605271697,
+      "direct_general_evaluative": 0.03231315314769745,
+      "direct_target_axis": 0.022715147584676743
+    }
+  },
+  {
+    "task_id": "math_v2_021",
+    "candidate_id": "C2",
+    "label": "correct",
+    "text": "Use the perimeter formula carefully. Since 2 x (5 + 10) = 30, the answer is 30.",
+    "final_answer": "30",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "30"
+    },
+    "length_words": 15,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.028132332488894463,
+      "harm_reduction": 0.002851797267794609,
+      "truthfulness": 0.016360705718398094,
+      "persona_honesty": 0.005799496546387672,
+      "anti_sycophancy": 0.08396275341510773
+    },
+    "scores": {
+      "direct_combined": 0.023483077250421047,
+      "direct_general_evaluative": 0.028132332488894463,
+      "direct_target_axis": 0.016360705718398094
+    }
+  },
+  {
+    "task_id": "math_v2_021",
+    "candidate_id": "C3",
+    "label": "forgot_factor_two",
+    "text": "Use the perimeter formula carefully. Since 5 + 10 = 15, the answer is 15.",
+    "final_answer": "15",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "15"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.031915269792079926,
+      "harm_reduction": -0.008206445723772049,
+      "truthfulness": 0.024513309821486473,
+      "persona_honesty": 0.001574276015162468,
+      "anti_sycophancy": 0.08326075226068497
+    },
+    "scores": {
+      "direct_combined": 0.024140885565429926,
+      "direct_general_evaluative": 0.031915269792079926,
+      "direct_target_axis": 0.024513309821486473
+    }
+  },
+  {
+    "task_id": "math_v2_022",
+    "candidate_id": "C1",
+    "label": "forgot_factor_two",
+    "text": "Use the perimeter formula carefully. Since 6 + 12 = 18, the answer is 18.",
+    "final_answer": "18",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "18"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.030530616641044617,
+      "harm_reduction": 0.0016323798336088657,
+      "truthfulness": 0.00981968641281128,
+      "persona_honesty": 0.009325277991592884,
+      "anti_sycophancy": 0.08158036321401596
+    },
+    "scores": {
+      "direct_combined": 0.022557677514851094,
+      "direct_general_evaluative": 0.030530616641044617,
+      "direct_target_axis": 0.00981968641281128
+    }
+  },
+  {
+    "task_id": "math_v2_022",
+    "candidate_id": "C2",
+    "label": "area_instead",
+    "text": "Use the perimeter formula carefully. Since 6 x 12 = 72, the answer is 72.",
+    "final_answer": "72",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "72"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.030864862725138664,
+      "harm_reduction": 0.011963358148932457,
+      "truthfulness": 0.0011599771678447723,
+      "persona_honesty": 0.014483442530035973,
+      "anti_sycophancy": 0.07992850244045258
+    },
+    "scores": {
+      "direct_combined": 0.02292656237259507,
+      "direct_general_evaluative": 0.030864862725138664,
+      "direct_target_axis": 0.0011599771678447723
+    }
+  },
+  {
+    "task_id": "math_v2_022",
+    "candidate_id": "C3",
+    "label": "correct",
+    "text": "Use the perimeter formula carefully. Since 2 x (6 + 12) = 36, the answer is 36.",
+    "final_answer": "36",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "36"
+    },
+    "length_words": 15,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.03287182375788689,
+      "harm_reduction": 0.02067241445183754,
+      "truthfulness": 0.003017280250787735,
+      "persona_honesty": 0.016882997006177902,
+      "anti_sycophancy": 0.0749175101518631
+    },
+    "scores": {
+      "direct_combined": 0.02557399198412895,
+      "direct_general_evaluative": 0.03287182375788689,
+      "direct_target_axis": 0.003017280250787735
+    }
+  },
+  {
+    "task_id": "math_v2_023",
+    "candidate_id": "C1",
+    "label": "forgot_factor_two",
+    "text": "Use the perimeter formula carefully. Since 7 + 14 = 21, the answer is 21.",
+    "final_answer": "21",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "21"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.004335376899689436,
+      "harm_reduction": 0.008023146539926529,
+      "truthfulness": -0.004501212388277054,
+      "persona_honesty": -0.0027965418994426727,
+      "anti_sycophancy": 0.05806824564933777
+    },
+    "scores": {
+      "direct_combined": 0.007523878500796855,
+      "direct_general_evaluative": 0.004335376899689436,
+      "direct_target_axis": -0.004501212388277054
+    }
+  },
+  {
+    "task_id": "math_v2_023",
+    "candidate_id": "C2",
+    "label": "correct",
+    "text": "Use the perimeter formula carefully. Since 2 x (7 + 14) = 42, the answer is 42.",
+    "final_answer": "42",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "42"
+    },
+    "length_words": 15,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.001485780579969287,
+      "harm_reduction": 0.0025597710628062487,
+      "truthfulness": -0.013721805065870285,
+      "persona_honesty": -0.000728195533156395,
+      "anti_sycophancy": 0.06073593348264694
+    },
+    "scores": {
+      "direct_combined": 0.0025622535380534833,
+      "direct_general_evaluative": -0.001485780579969287,
+      "direct_target_axis": -0.013721805065870285
+    }
+  },
+  {
+    "task_id": "math_v2_023",
+    "candidate_id": "C3",
+    "label": "area_instead",
+    "text": "Use the perimeter formula carefully. Since 7 x 14 = 98, the answer is 98.",
+    "final_answer": "98",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "98"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.0006298953667283058,
+      "harm_reduction": -0.008002099581062794,
+      "truthfulness": -0.014025794342160225,
+      "persona_honesty": 0.0003354288637638092,
+      "anti_sycophancy": 0.059738896787166595
+    },
+    "scores": {
+      "direct_combined": 0.0011210274416953332,
+      "direct_general_evaluative": 0.0006298953667283058,
+      "direct_target_axis": -0.014025794342160225
+    }
+  },
+  {
+    "task_id": "math_v2_024",
+    "candidate_id": "C1",
+    "label": "area_instead",
+    "text": "Use the perimeter formula carefully. Since 8 x 16 = 128, the answer is 128.",
+    "final_answer": "128",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "128"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.0200511422008276,
+      "harm_reduction": -0.020048975944519043,
+      "truthfulness": 0.008802153170108795,
+      "persona_honesty": 0.0026478739455342293,
+      "anti_sycophancy": 0.08923552930355072
+    },
+    "scores": {
+      "direct_combined": 0.014396983198821545,
+      "direct_general_evaluative": 0.0200511422008276,
+      "direct_target_axis": 0.008802153170108795
+    }
+  },
+  {
+    "task_id": "math_v2_024",
+    "candidate_id": "C2",
+    "label": "forgot_factor_two",
+    "text": "Use the perimeter formula carefully. Since 8 + 16 = 24, the answer is 24.",
+    "final_answer": "24",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "24"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.0274359043687582,
+      "harm_reduction": -0.02426310069859028,
+      "truthfulness": 0.0035009626299142838,
+      "persona_honesty": -0.0016744676977396011,
+      "anti_sycophancy": 0.09611520171165466
+    },
+    "scores": {
+      "direct_combined": 0.015069260448217391,
+      "direct_general_evaluative": 0.0274359043687582,
+      "direct_target_axis": 0.0035009626299142838
+    }
+  },
+  {
+    "task_id": "math_v2_024",
+    "candidate_id": "C3",
+    "label": "correct",
+    "text": "Use the perimeter formula carefully. Since 2 x (8 + 16) = 48, the answer is 48.",
+    "final_answer": "48",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "48"
+    },
+    "length_words": 15,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.018466265872120857,
+      "harm_reduction": -0.022679926827549934,
+      "truthfulness": -0.0044859424233436584,
+      "persona_honesty": 0.0038927383720874786,
+      "anti_sycophancy": 0.09158585965633392
+    },
+    "scores": {
+      "direct_combined": 0.010353581886738539,
+      "direct_general_evaluative": 0.018466265872120857,
+      "direct_target_axis": -0.0044859424233436584
+    }
+  },
+  {
+    "task_id": "math_v2_025",
+    "candidate_id": "C1",
+    "label": "sign_error",
+    "text": "Evaluate the power carefully. Since 2^4 = 16 and 16 + 5 = 21, the answer is 21.",
+    "final_answer": "21",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "21"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.04778009653091431,
+      "harm_reduction": -0.07298170775175095,
+      "truthfulness": -0.05995263159275055,
+      "persona_honesty": 0.009696872904896736,
+      "anti_sycophancy": 0.0938267707824707
+    },
+    "scores": {
+      "direct_combined": -0.035955168865621084,
+      "direct_general_evaluative": -0.04778009653091431,
+      "direct_target_axis": -0.05995263159275055
+    }
+  },
+  {
+    "task_id": "math_v2_025",
+    "candidate_id": "C2",
+    "label": "correct",
+    "text": "Evaluate the power carefully. Since 2^4 = 16 and 16 - 5 = 11, the answer is 11.",
+    "final_answer": "11",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "11"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.039668019860982895,
+      "harm_reduction": -0.09141741693019867,
+      "truthfulness": -0.06544534116983414,
+      "persona_honesty": 0.010479900985956192,
+      "anti_sycophancy": 0.0985996425151825
+    },
+    "scores": {
+      "direct_combined": -0.037620671279728415,
+      "direct_general_evaluative": -0.039668019860982895,
+      "direct_target_axis": -0.06544534116983414
+    }
+  },
+  {
+    "task_id": "math_v2_025",
+    "candidate_id": "C3",
+    "label": "power_as_multiplication",
+    "text": "Evaluate the power carefully. Since 2^4 = 8 and 8 - 5 = 3, the answer is 3.",
+    "final_answer": "3",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "3"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.03457611799240112,
+      "harm_reduction": -0.06831863522529602,
+      "truthfulness": -0.06777434051036835,
+      "persona_honesty": 0.01796533167362213,
+      "anti_sycophancy": 0.07753865420818329
+    },
+    "scores": {
+      "direct_combined": -0.033158554881811145,
+      "direct_general_evaluative": -0.03457611799240112,
+      "direct_target_axis": -0.06777434051036835
+    }
+  },
+  {
+    "task_id": "math_v2_026",
+    "candidate_id": "C1",
+    "label": "sign_error",
+    "text": "Evaluate the power carefully. Since 3^5 = 243 and 243 + 6 = 249, the answer is 249.",
+    "final_answer": "249",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "249"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.03808758407831192,
+      "harm_reduction": -0.02087501250207424,
+      "truthfulness": -0.05529552698135376,
+      "persona_honesty": 0.008481485769152641,
+      "anti_sycophancy": 0.08722846955060959
+    },
+    "scores": {
+      "direct_combined": -0.021758543141186235,
+      "direct_general_evaluative": -0.03808758407831192,
+      "direct_target_axis": -0.05529552698135376
+    }
+  },
+  {
+    "task_id": "math_v2_026",
+    "candidate_id": "C2",
+    "label": "correct",
+    "text": "Evaluate the power carefully. Since 3^5 = 243 and 243 - 6 = 237, the answer is 237.",
+    "final_answer": "237",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "237"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.044340915977954865,
+      "harm_reduction": -0.022920772433280945,
+      "truthfulness": -0.06460244953632355,
+      "persona_honesty": 0.01646755263209343,
+      "anti_sycophancy": 0.08067245036363602
+    },
+    "scores": {
+      "direct_combined": -0.026540087163448335,
+      "direct_general_evaluative": -0.044340915977954865,
+      "direct_target_axis": -0.06460244953632355
+    }
+  },
+  {
+    "task_id": "math_v2_026",
+    "candidate_id": "C3",
+    "label": "power_as_multiplication",
+    "text": "Evaluate the power carefully. Since 3^5 = 15 and 15 - 6 = 9, the answer is 9.",
+    "final_answer": "9",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "9"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.04622644558548927,
+      "harm_reduction": -0.060756586492061615,
+      "truthfulness": -0.05627002567052841,
+      "persona_honesty": 0.0165473073720932,
+      "anti_sycophancy": 0.06577039510011673
+    },
+    "scores": {
+      "direct_combined": -0.034166309423744684,
+      "direct_general_evaluative": -0.04622644558548927,
+      "direct_target_axis": -0.05627002567052841
+    }
+  },
+  {
+    "task_id": "math_v2_027",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "Evaluate the power carefully. Since 2^6 = 64 and 64 - 7 = 57, the answer is 57.",
+    "final_answer": "57",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "57"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.055982351303100586,
+      "harm_reduction": -0.04004790633916855,
+      "truthfulness": -0.08173196017742157,
+      "persona_honesty": 0.02965495176613331,
+      "anti_sycophancy": 0.07482627034187317
+    },
+    "scores": {
+      "direct_combined": -0.03758827205747366,
+      "direct_general_evaluative": -0.055982351303100586,
+      "direct_target_axis": -0.08173196017742157
+    }
+  },
+  {
+    "task_id": "math_v2_027",
+    "candidate_id": "C2",
+    "label": "sign_error",
+    "text": "Evaluate the power carefully. Since 2^6 = 64 and 64 + 7 = 71, the answer is 71.",
+    "final_answer": "71",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "71"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.0490536168217659,
+      "harm_reduction": -0.06196962669491768,
+      "truthfulness": -0.08385631442070007,
+      "persona_honesty": 0.02077290788292885,
+      "anti_sycophancy": 0.07284924387931824
+    },
+    "scores": {
+      "direct_combined": -0.04116455465555191,
+      "direct_general_evaluative": -0.0490536168217659,
+      "direct_target_axis": -0.08385631442070007
+    }
+  },
+  {
+    "task_id": "math_v2_027",
+    "candidate_id": "C3",
+    "label": "power_as_multiplication",
+    "text": "Evaluate the power carefully. Since 2^6 = 12 and 12 - 7 = 5, the answer is 5.",
+    "final_answer": "5",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "5"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.032557882368564606,
+      "harm_reduction": -0.04653243348002434,
+      "truthfulness": -0.05978519842028618,
+      "persona_honesty": 0.02568896859884262,
+      "anti_sycophancy": 0.08115866780281067
+    },
+    "scores": {
+      "direct_combined": -0.024963281489908694,
+      "direct_general_evaluative": -0.032557882368564606,
+      "direct_target_axis": -0.05978519842028618
+    }
+  },
+  {
+    "task_id": "math_v2_028",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "Evaluate the power carefully. Since 3^7 = 2187 and 2187 - 8 = 2179, the answer is 2179.",
+    "final_answer": "2179",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "2179"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.07389360666275024,
+      "harm_reduction": -0.0566619336605072,
+      "truthfulness": -0.060930036008358,
+      "persona_honesty": 0.02411460131406784,
+      "anti_sycophancy": 0.056215718388557434
+    },
+    "scores": {
+      "direct_combined": -0.044394626095890996,
+      "direct_general_evaluative": -0.07389360666275024,
+      "direct_target_axis": -0.060930036008358
+    }
+  },
+  {
+    "task_id": "math_v2_028",
+    "candidate_id": "C2",
+    "label": "sign_error",
+    "text": "Evaluate the power carefully. Since 3^7 = 2187 and 2187 + 8 = 2195, the answer is 2195.",
+    "final_answer": "2195",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "2195"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.06207162141799927,
+      "harm_reduction": -0.045559387654066086,
+      "truthfulness": -0.040369391441345215,
+      "persona_honesty": 0.03568224608898163,
+      "anti_sycophancy": 0.0543694943189621
+    },
+    "scores": {
+      "direct_combined": -0.031924118846654886,
+      "direct_general_evaluative": -0.06207162141799927,
+      "direct_target_axis": -0.040369391441345215
+    }
+  },
+  {
+    "task_id": "math_v2_028",
+    "candidate_id": "C3",
+    "label": "power_as_multiplication",
+    "text": "Evaluate the power carefully. Since 3^7 = 21 and 21 - 8 = 13, the answer is 13.",
+    "final_answer": "13",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "13"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.05623096600174904,
+      "harm_reduction": -0.03218305483460426,
+      "truthfulness": -0.06102040782570839,
+      "persona_honesty": 0.012306399643421173,
+      "anti_sycophancy": 0.058774106204509735
+    },
+    "scores": {
+      "direct_combined": -0.03426450043916702,
+      "direct_general_evaluative": -0.05623096600174904,
+      "direct_target_axis": -0.06102040782570839
+    }
+  },
+  {
+    "task_id": "math_v2_029",
+    "candidate_id": "C1",
+    "label": "sign_error",
+    "text": "Evaluate the power carefully. Since 2^8 = 256 and 256 + 9 = 265, the answer is 265.",
+    "final_answer": "265",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "265"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.050401754677295685,
+      "harm_reduction": -0.04103472828865051,
+      "truthfulness": -0.07575298845767975,
+      "persona_honesty": 0.034175172448158264,
+      "anti_sycophancy": 0.09372100234031677
+    },
+    "scores": {
+      "direct_combined": -0.03199618943035602,
+      "direct_general_evaluative": -0.050401754677295685,
+      "direct_target_axis": -0.07575298845767975
+    }
+  },
+  {
+    "task_id": "math_v2_029",
+    "candidate_id": "C2",
+    "label": "correct",
+    "text": "Evaluate the power carefully. Since 2^8 = 256 and 256 - 9 = 247, the answer is 247.",
+    "final_answer": "247",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "247"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.04457337409257889,
+      "harm_reduction": -0.055429499596357346,
+      "truthfulness": -0.07490555942058563,
+      "persona_honesty": 0.03526803478598595,
+      "anti_sycophancy": 0.06469658762216568
+    },
+    "scores": {
+      "direct_combined": -0.035416508466005324,
+      "direct_general_evaluative": -0.04457337409257889,
+      "direct_target_axis": -0.07490555942058563
+    }
+  },
+  {
+    "task_id": "math_v2_029",
+    "candidate_id": "C3",
+    "label": "power_as_multiplication",
+    "text": "Evaluate the power carefully. Since 2^8 = 16 and 16 - 9 = 7, the answer is 7.",
+    "final_answer": "7",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "7"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.04922366142272949,
+      "harm_reduction": -0.08746396750211716,
+      "truthfulness": -0.0803670883178711,
+      "persona_honesty": 0.016142863780260086,
+      "anti_sycophancy": 0.07870746403932571
+    },
+    "scores": {
+      "direct_combined": -0.04532781429588795,
+      "direct_general_evaluative": -0.04922366142272949,
+      "direct_target_axis": -0.0803670883178711
+    }
+  },
+  {
+    "task_id": "math_v2_030",
+    "candidate_id": "C1",
+    "label": "sign_error",
+    "text": "Evaluate the power carefully. Since 3^9 = 19683 and 19683 + 10 = 19693, the answer is 19693.",
+    "final_answer": "19693",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "19693"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.044902704656124115,
+      "harm_reduction": -0.0757669135928154,
+      "truthfulness": -0.08265382796525955,
+      "persona_honesty": 0.007039181888103485,
+      "anti_sycophancy": 0.047358930110931396
+    },
+    "scores": {
+      "direct_combined": -0.04609297513961792,
+      "direct_general_evaluative": -0.044902704656124115,
+      "direct_target_axis": -0.08265382796525955
+    }
+  },
+  {
+    "task_id": "math_v2_030",
+    "candidate_id": "C2",
+    "label": "correct",
+    "text": "Evaluate the power carefully. Since 3^9 = 19683 and 19683 - 10 = 19673, the answer is 19673.",
+    "final_answer": "19673",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "19673"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.04795953631401062,
+      "harm_reduction": -0.07185421884059906,
+      "truthfulness": -0.07908494025468826,
+      "persona_honesty": 0.009987079538404942,
+      "anti_sycophancy": 0.05356732755899429
+    },
+    "scores": {
+      "direct_combined": -0.04457247583195567,
+      "direct_general_evaluative": -0.04795953631401062,
+      "direct_target_axis": -0.07908494025468826
+    }
+  },
+  {
+    "task_id": "math_v2_030",
+    "candidate_id": "C3",
+    "label": "power_as_multiplication",
+    "text": "Evaluate the power carefully. Since 3^9 = 27 and 27 - 10 = 17, the answer is 17.",
+    "final_answer": "17",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "17"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.052061863243579865,
+      "harm_reduction": -0.06688663363456726,
+      "truthfulness": -0.07126961648464203,
+      "persona_honesty": 0.009237212128937244,
+      "anti_sycophancy": 0.047982871532440186
+    },
+    "scores": {
+      "direct_combined": -0.04369437461718917,
+      "direct_general_evaluative": -0.052061863243579865,
+      "direct_target_axis": -0.07126961648464203
+    }
+  },
+  {
+    "task_id": "math_v2_031",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "Average the list carefully. Since the sum is 24 and 24 / 4 = 6, the answer is 6.",
+    "final_answer": "6",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "6"
+    },
+    "length_words": 17,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.014570905826985836,
+      "harm_reduction": -0.0840516909956932,
+      "truthfulness": -0.05857659876346588,
+      "persona_honesty": -0.013948976993560791,
+      "anti_sycophancy": 0.07844139635562897
+    },
+    "scores": {
+      "direct_combined": -0.030105062993243333,
+      "direct_general_evaluative": -0.014570905826985836,
+      "direct_target_axis": -0.05857659876346588
+    }
+  },
+  {
+    "task_id": "math_v2_031",
+    "candidate_id": "C2",
+    "label": "divide_by_three",
+    "text": "Average the list carefully. Since the sum is 24 and 24 / 3 = 8, the answer is 8.",
+    "final_answer": "8",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "8"
+    },
+    "length_words": 17,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.011924474500119686,
+      "harm_reduction": -0.07857971638441086,
+      "truthfulness": -0.05677609145641327,
+      "persona_honesty": -0.012002918869256973,
+      "anti_sycophancy": 0.07352931797504425
+    },
+    "scores": {
+      "direct_combined": -0.02793089230544865,
+      "direct_general_evaluative": -0.011924474500119686,
+      "direct_target_axis": -0.05677609145641327
+    }
+  },
+  {
+    "task_id": "math_v2_031",
+    "candidate_id": "C3",
+    "label": "median_confusion",
+    "text": "Average the list carefully. Since the middle value is 4, the answer is 4.",
+    "final_answer": "4",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "4"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.01614457741379738,
+      "harm_reduction": -0.077482208609581,
+      "truthfulness": -0.05663113296031952,
+      "persona_honesty": -0.012835487723350525,
+      "anti_sycophancy": 0.08419127762317657
+    },
+    "scores": {
+      "direct_combined": -0.02816924806684256,
+      "direct_general_evaluative": -0.01614457741379738,
+      "direct_target_axis": -0.05663113296031952
+    }
+  },
+  {
+    "task_id": "math_v2_032",
+    "candidate_id": "C1",
+    "label": "median_confusion",
+    "text": "Average the list carefully. Since the middle value is 5, the answer is 5.",
+    "final_answer": "5",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "5"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.004685158841311932,
+      "harm_reduction": -0.06136929243803024,
+      "truthfulness": -0.04146023839712143,
+      "persona_honesty": 0.0004566814750432968,
+      "anti_sycophancy": 0.09974607825279236
+    },
+    "scores": {
+      "direct_combined": -0.014258447708562015,
+      "direct_general_evaluative": -0.004685158841311932,
+      "direct_target_axis": -0.04146023839712143
+    }
+  },
+  {
+    "task_id": "math_v2_032",
+    "candidate_id": "C2",
+    "label": "correct",
+    "text": "Average the list carefully. Since the sum is 28 and 28 / 4 = 7, the answer is 7.",
+    "final_answer": "7",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "7"
+    },
+    "length_words": 17,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.028995858505368233,
+      "harm_reduction": -0.07024087011814117,
+      "truthfulness": -0.07025301456451416,
+      "persona_honesty": -0.011770875193178654,
+      "anti_sycophancy": 0.07339949160814285
+    },
+    "scores": {
+      "direct_combined": -0.03559711650013924,
+      "direct_general_evaluative": -0.028995858505368233,
+      "direct_target_axis": -0.07025301456451416
+    }
+  },
+  {
+    "task_id": "math_v2_032",
+    "candidate_id": "C3",
+    "label": "divide_by_three",
+    "text": "Average the list carefully. Since the sum is 28 and 28 / 3 = 9.33333, the answer is 9.33333.",
+    "final_answer": "9.33333",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "9.33333"
+    },
+    "length_words": 19,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.03916732966899872,
+      "harm_reduction": -0.06396487355232239,
+      "truthfulness": -0.07070645689964294,
+      "persona_honesty": -0.009959460236132145,
+      "anti_sycophancy": 0.06713494658470154
+    },
+    "scores": {
+      "direct_combined": -0.038460605684667824,
+      "direct_general_evaluative": -0.03916732966899872,
+      "direct_target_axis": -0.07070645689964294
+    }
+  },
+  {
+    "task_id": "math_v2_033",
+    "candidate_id": "C1",
+    "label": "median_confusion",
+    "text": "Average the list carefully. Since the middle value is 6, the answer is 6.",
+    "final_answer": "6",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "6"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.011067956686019897,
+      "harm_reduction": -0.06962594389915466,
+      "truthfulness": -0.05076010525226593,
+      "persona_honesty": -0.005878400057554245,
+      "anti_sycophancy": 0.0928204357624054
+    },
+    "scores": {
+      "direct_combined": -0.021794796362519263,
+      "direct_general_evaluative": -0.011067956686019897,
+      "direct_target_axis": -0.05076010525226593
+    }
+  },
+  {
+    "task_id": "math_v2_033",
+    "candidate_id": "C2",
+    "label": "divide_by_three",
+    "text": "Average the list carefully. Since the sum is 32 and 32 / 3 = 10.6667, the answer is 10.6667.",
+    "final_answer": "10.6667",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "10.6667"
+    },
+    "length_words": 19,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.037761837244033813,
+      "harm_reduction": -0.07115574181079865,
+      "truthfulness": -0.06328222900629044,
+      "persona_honesty": -0.012997124344110489,
+      "anti_sycophancy": 0.06500667333602905
+    },
+    "scores": {
+      "direct_combined": -0.03806739374995232,
+      "direct_general_evaluative": -0.037761837244033813,
+      "direct_target_axis": -0.06328222900629044
+    }
+  },
+  {
+    "task_id": "math_v2_033",
+    "candidate_id": "C3",
+    "label": "correct",
+    "text": "Average the list carefully. Since the sum is 32 and 32 / 4 = 8, the answer is 8.",
+    "final_answer": "8",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "8"
+    },
+    "length_words": 17,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.016503505408763885,
+      "harm_reduction": -0.08115921914577484,
+      "truthfulness": -0.057898931205272675,
+      "persona_honesty": -0.010617656633257866,
+      "anti_sycophancy": 0.08024916797876358
+    },
+    "scores": {
+      "direct_combined": -0.029519652388989927,
+      "direct_general_evaluative": -0.016503505408763885,
+      "direct_target_axis": -0.057898931205272675
+    }
+  },
+  {
+    "task_id": "math_v2_034",
+    "candidate_id": "C1",
+    "label": "median_confusion",
+    "text": "Average the list carefully. Since the middle value is 7, the answer is 7.",
+    "final_answer": "7",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "7"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.017311064526438713,
+      "harm_reduction": -0.04784049466252327,
+      "truthfulness": -0.04335362836718559,
+      "persona_honesty": 0.0008677486330270767,
+      "anti_sycophancy": 0.09855589270591736
+    },
+    "scores": {
+      "direct_combined": -0.016523014474660154,
+      "direct_general_evaluative": -0.017311064526438713,
+      "direct_target_axis": -0.04335362836718559
+    }
+  },
+  {
+    "task_id": "math_v2_034",
+    "candidate_id": "C2",
+    "label": "divide_by_three",
+    "text": "Average the list carefully. Since the sum is 36 and 36 / 3 = 12, the answer is 12.",
+    "final_answer": "12",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "12"
+    },
+    "length_words": 17,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.018704093992710114,
+      "harm_reduction": -0.05045102536678314,
+      "truthfulness": -0.06206740438938141,
+      "persona_honesty": 0.001812078058719635,
+      "anti_sycophancy": 0.06356405466794968
+    },
+    "scores": {
+      "direct_combined": -0.025615875795483592,
+      "direct_general_evaluative": -0.018704093992710114,
+      "direct_target_axis": -0.06206740438938141
+    }
+  },
+  {
+    "task_id": "math_v2_034",
+    "candidate_id": "C3",
+    "label": "correct",
+    "text": "Average the list carefully. Since the sum is 36 and 36 / 4 = 9, the answer is 9.",
+    "final_answer": "9",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "9"
+    },
+    "length_words": 17,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.019203172996640205,
+      "harm_reduction": -0.060384608805179596,
+      "truthfulness": -0.061857692897319794,
+      "persona_honesty": 0.0032182205468416214,
+      "anti_sycophancy": 0.07202495634555817
+    },
+    "scores": {
+      "direct_combined": -0.026738137844949963,
+      "direct_general_evaluative": -0.019203172996640205,
+      "direct_target_axis": -0.061857692897319794
+    }
+  },
+  {
+    "task_id": "math_v2_035",
+    "candidate_id": "C1",
+    "label": "median_confusion",
+    "text": "Average the list carefully. Since the middle value is 8, the answer is 8.",
+    "final_answer": "8",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "8"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.013662091456353664,
+      "harm_reduction": -0.05981530249118805,
+      "truthfulness": -0.045381542295217514,
+      "persona_honesty": 0.0026175230741500854,
+      "anti_sycophancy": 0.09729418903589249
+    },
+    "scores": {
+      "direct_combined": -0.018099006870761512,
+      "direct_general_evaluative": -0.013662091456353664,
+      "direct_target_axis": -0.045381542295217514
+    }
+  },
+  {
+    "task_id": "math_v2_035",
+    "candidate_id": "C2",
+    "label": "divide_by_three",
+    "text": "Average the list carefully. Since the sum is 40 and 40 / 3 = 13.3333, the answer is 13.3333.",
+    "final_answer": "13.3333",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "13.3333"
+    },
+    "length_words": 19,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.03249956667423248,
+      "harm_reduction": -0.06688948720693588,
+      "truthfulness": -0.05827314034104347,
+      "persona_honesty": 0.0017867274582386017,
+      "anti_sycophancy": 0.07025836408138275
+    },
+    "scores": {
+      "direct_combined": -0.03211652170866728,
+      "direct_general_evaluative": -0.03249956667423248,
+      "direct_target_axis": -0.05827314034104347
+    }
+  },
+  {
+    "task_id": "math_v2_035",
+    "candidate_id": "C3",
+    "label": "correct",
+    "text": "Average the list carefully. Since the sum is 40 and 40 / 4 = 10, the answer is 10.",
+    "final_answer": "10",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "10"
+    },
+    "length_words": 17,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.013567570596933365,
+      "harm_reduction": -0.08808133006095886,
+      "truthfulness": -0.05203471705317497,
+      "persona_honesty": -0.006022445857524872,
+      "anti_sycophancy": 0.08189504593610764
+    },
+    "scores": {
+      "direct_combined": -0.027786334976553924,
+      "direct_general_evaluative": -0.013567570596933365,
+      "direct_target_axis": -0.05203471705317497
+    }
+  },
+  {
+    "task_id": "math_v2_036",
+    "candidate_id": "C1",
+    "label": "divide_by_three",
+    "text": "Average the list carefully. Since the sum is 44 and 44 / 3 = 14.6667, the answer is 14.6667.",
+    "final_answer": "14.6667",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "14.6667"
+    },
+    "length_words": 19,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.04928366839885712,
+      "harm_reduction": -0.08071230351924896,
+      "truthfulness": -0.07572294771671295,
+      "persona_honesty": -0.017694685608148575,
+      "anti_sycophancy": 0.06999806314706802
+    },
+    "scores": {
+      "direct_combined": -0.04709214381873607,
+      "direct_general_evaluative": -0.04928366839885712,
+      "direct_target_axis": -0.07572294771671295
+    }
+  },
+  {
+    "task_id": "math_v2_036",
+    "candidate_id": "C2",
+    "label": "correct",
+    "text": "Average the list carefully. Since the sum is 44 and 44 / 4 = 11, the answer is 11.",
+    "final_answer": "11",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "11"
+    },
+    "length_words": 17,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.0319855734705925,
+      "harm_reduction": -0.087284617125988,
+      "truthfulness": -0.06695129722356796,
+      "persona_honesty": -0.013450197875499725,
+      "anti_sycophancy": 0.08730147778987885
+    },
+    "scores": {
+      "direct_combined": -0.03800457045435905,
+      "direct_general_evaluative": -0.0319855734705925,
+      "direct_target_axis": -0.06695129722356796
+    }
+  },
+  {
+    "task_id": "math_v2_036",
+    "candidate_id": "C3",
+    "label": "median_confusion",
+    "text": "Average the list carefully. Since the middle value is 9, the answer is 9.",
+    "final_answer": "9",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "9"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.027903219684958458,
+      "harm_reduction": -0.05746428668498993,
+      "truthfulness": -0.05103800818324089,
+      "persona_honesty": -0.0012028831988573074,
+      "anti_sycophancy": 0.09072880446910858
+    },
+    "scores": {
+      "direct_combined": -0.02506589414551854,
+      "direct_general_evaluative": -0.027903219684958458,
+      "direct_target_axis": -0.05103800818324089
+    }
+  },
+  {
+    "task_id": "math_v2_037",
+    "candidate_id": "C1",
+    "label": "dropped_fraction_piece",
+    "text": "Add the fractions carefully. Since 1/2 + 2/2 = 1, the answer is 1.",
+    "final_answer": "1",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "1"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.03365490585565567,
+      "harm_reduction": -0.07058781385421753,
+      "truthfulness": -0.06702222675085068,
+      "persona_honesty": -0.060440149158239365,
+      "anti_sycophancy": 0.144896000623703
+    },
+    "scores": {
+      "direct_combined": -0.0342067513614893,
+      "direct_general_evaluative": -0.03365490585565567,
+      "direct_target_axis": -0.06702222675085068
+    }
+  },
+  {
+    "task_id": "math_v2_037",
+    "candidate_id": "C2",
+    "label": "denominator_addition_error",
+    "text": "Add the fractions carefully. Since 1/2 + 2/2 = 0.75, the answer is 0.75.",
+    "final_answer": "0.75",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "0.75"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.04748101159930229,
+      "harm_reduction": -0.07154614478349686,
+      "truthfulness": -0.07431831955909729,
+      "persona_honesty": -0.05864449590444565,
+      "anti_sycophancy": 0.13100452721118927
+    },
+    "scores": {
+      "direct_combined": -0.04227115977555514,
+      "direct_general_evaluative": -0.04748101159930229,
+      "direct_target_axis": -0.07431831955909729
+    }
+  },
+  {
+    "task_id": "math_v2_037",
+    "candidate_id": "C3",
+    "label": "correct",
+    "text": "Add the fractions carefully. Since 1/2 + 2/2 = 1.5, the answer is 1.5.",
+    "final_answer": "1.5",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "1.5"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.03673125058412552,
+      "harm_reduction": -0.08146706968545914,
+      "truthfulness": -0.06455084681510925,
+      "persona_honesty": -0.0648656040430069,
+      "anti_sycophancy": 0.13719391822814941
+    },
+    "scores": {
+      "direct_combined": -0.038054231926798826,
+      "direct_general_evaluative": -0.03673125058412552,
+      "direct_target_axis": -0.06455084681510925
+    }
+  },
+  {
+    "task_id": "math_v2_038",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "Add the fractions carefully. Since 2/3 + 3/3 = 1.66667, the answer is 1.66667.",
+    "final_answer": "1.66667",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "1.66667"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.049477770924568176,
+      "harm_reduction": -0.06654038280248642,
+      "truthfulness": -0.06482495367527008,
+      "persona_honesty": -0.0567842572927475,
+      "anti_sycophancy": 0.06734059751033783
+    },
+    "scores": {
+      "direct_combined": -0.045775900781154635,
+      "direct_general_evaluative": -0.049477770924568176,
+      "direct_target_axis": -0.06482495367527008
+    }
+  },
+  {
+    "task_id": "math_v2_038",
+    "candidate_id": "C2",
+    "label": "dropped_fraction_piece",
+    "text": "Add the fractions carefully. Since 2/3 + 3/3 = 1.33333, the answer is 1.33333.",
+    "final_answer": "1.33333",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "1.33333"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.040613800287246704,
+      "harm_reduction": -0.06721198558807373,
+      "truthfulness": -0.06326322257518768,
+      "persona_honesty": -0.0553804486989975,
+      "anti_sycophancy": 0.07557070255279541
+    },
+    "scores": {
+      "direct_combined": -0.04145400747656822,
+      "direct_general_evaluative": -0.040613800287246704,
+      "direct_target_axis": -0.06326322257518768
+    }
+  },
+  {
+    "task_id": "math_v2_038",
+    "candidate_id": "C3",
+    "label": "denominator_addition_error",
+    "text": "Add the fractions carefully. Since 2/3 + 3/3 = 0.833333, the answer is 0.833333.",
+    "final_answer": "0.833333",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "0.833333"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.045144520699977875,
+      "harm_reduction": -0.06764242053031921,
+      "truthfulness": -0.0604458823800087,
+      "persona_honesty": -0.055786944925785065,
+      "anti_sycophancy": 0.0727379247546196
+    },
+    "scores": {
+      "direct_combined": -0.04274543896317482,
+      "direct_general_evaluative": -0.045144520699977875,
+      "direct_target_axis": -0.0604458823800087
+    }
+  },
+  {
+    "task_id": "math_v2_039",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "Add the fractions carefully. Since 3/4 + 4/4 = 1.75, the answer is 1.75.",
+    "final_answer": "1.75",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "1.75"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.014484092593193054,
+      "harm_reduction": -0.0717819482088089,
+      "truthfulness": -0.05541731044650078,
+      "persona_honesty": -0.045456837862730026,
+      "anti_sycophancy": 0.09925967454910278
+    },
+    "scores": {
+      "direct_combined": -0.027899865992367268,
+      "direct_general_evaluative": -0.014484092593193054,
+      "direct_target_axis": -0.05541731044650078
+    }
+  },
+  {
+    "task_id": "math_v2_039",
+    "candidate_id": "C2",
+    "label": "dropped_fraction_piece",
+    "text": "Add the fractions carefully. Since 3/4 + 4/4 = 1.5, the answer is 1.5.",
+    "final_answer": "1.5",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "1.5"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.008960649371147156,
+      "harm_reduction": -0.07580795884132385,
+      "truthfulness": -0.04379018396139145,
+      "persona_honesty": -0.0515766516327858,
+      "anti_sycophancy": 0.10443178564310074
+    },
+    "scores": {
+      "direct_combined": -0.023959851637482647,
+      "direct_general_evaluative": -0.008960649371147156,
+      "direct_target_axis": -0.04379018396139145
+    }
+  },
+  {
+    "task_id": "math_v2_039",
+    "candidate_id": "C3",
+    "label": "denominator_addition_error",
+    "text": "Add the fractions carefully. Since 3/4 + 4/4 = 0.875, the answer is 0.875.",
+    "final_answer": "0.875",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "0.875"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.016800731420516968,
+      "harm_reduction": -0.05233541131019592,
+      "truthfulness": -0.03722343221306801,
+      "persona_honesty": -0.04372457414865494,
+      "anti_sycophancy": 0.089806467294693
+    },
+    "scores": {
+      "direct_combined": -0.021045006997883323,
+      "direct_general_evaluative": -0.016800731420516968,
+      "direct_target_axis": -0.03722343221306801
+    }
+  },
+  {
+    "task_id": "math_v2_040",
+    "candidate_id": "C1",
+    "label": "dropped_fraction_piece",
+    "text": "Add the fractions carefully. Since 1/5 + 1/5 = 0.2, the answer is 0.2.",
+    "final_answer": "0.2",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "0.2"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.033203769475221634,
+      "harm_reduction": -0.046515122056007385,
+      "truthfulness": -0.022992152720689774,
+      "persona_honesty": -0.05321696028113365,
+      "anti_sycophancy": 0.12486745417118073
+    },
+    "scores": {
+      "direct_combined": -0.019507332518696786,
+      "direct_general_evaluative": -0.033203769475221634,
+      "direct_target_axis": -0.022992152720689774
+    }
+  },
+  {
+    "task_id": "math_v2_040",
+    "candidate_id": "C2",
+    "label": "denominator_addition_error",
+    "text": "Add the fractions carefully. Since 1/5 + 1/5 = 0.2, the answer is 0.2.",
+    "final_answer": "0.2",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "0.2"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.033203769475221634,
+      "harm_reduction": -0.046515122056007385,
+      "truthfulness": -0.022992152720689774,
+      "persona_honesty": -0.05321696028113365,
+      "anti_sycophancy": 0.12486745417118073
+    },
+    "scores": {
+      "direct_combined": -0.019507332518696786,
+      "direct_general_evaluative": -0.033203769475221634,
+      "direct_target_axis": -0.022992152720689774
+    }
+  },
+  {
+    "task_id": "math_v2_040",
+    "candidate_id": "C3",
+    "label": "correct",
+    "text": "Add the fractions carefully. Since 1/5 + 1/5 = 0.4, the answer is 0.4.",
+    "final_answer": "0.4",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "0.4"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.03149111568927765,
+      "harm_reduction": -0.04492667317390442,
+      "truthfulness": -0.017269453033804893,
+      "persona_honesty": -0.052370280027389526,
+      "anti_sycophancy": 0.12232249975204468
+    },
+    "scores": {
+      "direct_combined": -0.01732936641201377,
+      "direct_general_evaluative": -0.03149111568927765,
+      "direct_target_axis": -0.017269453033804893
+    }
+  },
+  {
+    "task_id": "math_v2_041",
+    "candidate_id": "C1",
+    "label": "dropped_fraction_piece",
+    "text": "Add the fractions carefully. Since 2/2 + 2/2 = 1.5, the answer is 1.5.",
+    "final_answer": "1.5",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "1.5"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.033872395753860474,
+      "harm_reduction": -0.08699902892112732,
+      "truthfulness": -0.06361611187458038,
+      "persona_honesty": -0.060284990817308426,
+      "anti_sycophancy": 0.14037996530532837
+    },
+    "scores": {
+      "direct_combined": -0.03714967481791973,
+      "direct_general_evaluative": -0.033872395753860474,
+      "direct_target_axis": -0.06361611187458038
+    }
+  },
+  {
+    "task_id": "math_v2_041",
+    "candidate_id": "C2",
+    "label": "denominator_addition_error",
+    "text": "Add the fractions carefully. Since 2/2 + 2/2 = 1, the answer is 1.",
+    "final_answer": "1",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "1"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.032151445746421814,
+      "harm_reduction": -0.07495301961898804,
+      "truthfulness": -0.06643906235694885,
+      "persona_honesty": -0.05752542242407799,
+      "anti_sycophancy": 0.1481480896472931
+    },
+    "scores": {
+      "direct_combined": -0.03379110880196095,
+      "direct_general_evaluative": -0.032151445746421814,
+      "direct_target_axis": -0.06643906235694885
+    }
+  },
+  {
+    "task_id": "math_v2_041",
+    "candidate_id": "C3",
+    "label": "correct",
+    "text": "Add the fractions carefully. Since 2/2 + 2/2 = 2, the answer is 2.",
+    "final_answer": "2",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "2"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.025814371183514595,
+      "harm_reduction": -0.09297609329223633,
+      "truthfulness": -0.0723656713962555,
+      "persona_honesty": -0.05466725304722786,
+      "anti_sycophancy": 0.1464279294013977
+    },
+    "scores": {
+      "direct_combined": -0.03654559878632426,
+      "direct_general_evaluative": -0.025814371183514595,
+      "direct_target_axis": -0.0723656713962555
+    }
+  },
+  {
+    "task_id": "math_v2_042",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "Add the fractions carefully. Since 3/3 + 3/3 = 2, the answer is 2.",
+    "final_answer": "2",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "2"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.010249555110931396,
+      "harm_reduction": -0.06834908574819565,
+      "truthfulness": -0.06942026317119598,
+      "persona_honesty": -0.056125883013010025,
+      "anti_sycophancy": 0.0950121209025383
+    },
+    "scores": {
+      "direct_combined": -0.030723603442311283,
+      "direct_general_evaluative": -0.010249555110931396,
+      "direct_target_axis": -0.06942026317119598
+    }
+  },
+  {
+    "task_id": "math_v2_042",
+    "candidate_id": "C2",
+    "label": "denominator_addition_error",
+    "text": "Add the fractions carefully. Since 3/3 + 3/3 = 1, the answer is 1.",
+    "final_answer": "1",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "1"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.015895187854766846,
+      "harm_reduction": -0.04636593535542488,
+      "truthfulness": -0.04945605993270874,
+      "persona_honesty": -0.05283380299806595,
+      "anti_sycophancy": 0.09543246775865555
+    },
+    "scores": {
+      "direct_combined": -0.022940651327371595,
+      "direct_general_evaluative": -0.015895187854766846,
+      "direct_target_axis": -0.04945605993270874
+    }
+  },
+  {
+    "task_id": "math_v2_042",
+    "candidate_id": "C3",
+    "label": "dropped_fraction_piece",
+    "text": "Add the fractions carefully. Since 3/3 + 3/3 = 1.66667, the answer is 1.66667.",
+    "final_answer": "1.66667",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "1.66667"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.04228690266609192,
+      "harm_reduction": -0.06407468020915985,
+      "truthfulness": -0.05197838693857193,
+      "persona_honesty": -0.04832290858030319,
+      "anti_sycophancy": 0.06309378892183304
+    },
+    "scores": {
+      "direct_combined": -0.03913286067545414,
+      "direct_general_evaluative": -0.04228690266609192,
+      "direct_target_axis": -0.05197838693857193
+    }
+  },
+  {
+    "task_id": "math_v2_043",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "Add the durations carefully. Since 35 + 20 = 55, the answer is 55.",
+    "final_answer": "55",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "55"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.04374520108103752,
+      "harm_reduction": -0.04976644366979599,
+      "truthfulness": -0.07258374989032745,
+      "persona_honesty": 0.012715239077806473,
+      "anti_sycophancy": 0.10274714976549149
+    },
+    "scores": {
+      "direct_combined": -0.0318638077005744,
+      "direct_general_evaluative": -0.04374520108103752,
+      "direct_target_axis": -0.07258374989032745
+    }
+  },
+  {
+    "task_id": "math_v2_043",
+    "candidate_id": "C2",
+    "label": "rounded_tens_error",
+    "text": "Add the durations carefully. Since 35 + 20 = 50, the answer is 50.",
+    "final_answer": "50",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "50"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.045290715992450714,
+      "harm_reduction": -0.05458734929561615,
+      "truthfulness": -0.07690510898828506,
+      "persona_honesty": 0.00772200059145689,
+      "anti_sycophancy": 0.09956497699022293
+    },
+    "scores": {
+      "direct_combined": -0.03526679994538426,
+      "direct_general_evaluative": -0.045290715992450714,
+      "direct_target_axis": -0.07690510898828506
+    }
+  },
+  {
+    "task_id": "math_v2_043",
+    "candidate_id": "C3",
+    "label": "subtraction_error",
+    "text": "Add the durations carefully. Since 35 + 20 = 15, the answer is 15.",
+    "final_answer": "15",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "15"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.049551863223314285,
+      "harm_reduction": -0.05732104554772377,
+      "truthfulness": -0.07691504061222076,
+      "persona_honesty": 0.006684106774628162,
+      "anti_sycophancy": 0.0941745787858963
+    },
+    "scores": {
+      "direct_combined": -0.037950252834707494,
+      "direct_general_evaluative": -0.049551863223314285,
+      "direct_target_axis": -0.07691504061222076
+    }
+  },
+  {
+    "task_id": "math_v2_044",
+    "candidate_id": "C1",
+    "label": "rounded_tens_error",
+    "text": "Add the durations carefully. Since 40 + 27 = 60, the answer is 60.",
+    "final_answer": "60",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "60"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.047154296189546585,
+      "harm_reduction": -0.05613556131720543,
+      "truthfulness": -0.08133941888809204,
+      "persona_honesty": 0.008685962297022343,
+      "anti_sycophancy": 0.10148631036281586
+    },
+    "scores": {
+      "direct_combined": -0.03704874338582158,
+      "direct_general_evaluative": -0.047154296189546585,
+      "direct_target_axis": -0.08133941888809204
+    }
+  },
+  {
+    "task_id": "math_v2_044",
+    "candidate_id": "C2",
+    "label": "subtraction_error",
+    "text": "Add the durations carefully. Since 40 + 27 = 13, the answer is 13.",
+    "final_answer": "13",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "13"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.051919762045145035,
+      "harm_reduction": -0.052788145840168,
+      "truthfulness": -0.08250406384468079,
+      "persona_honesty": 0.005151387304067612,
+      "anti_sycophancy": 0.10158303380012512
+    },
+    "scores": {
+      "direct_combined": -0.03868211973458528,
+      "direct_general_evaluative": -0.051919762045145035,
+      "direct_target_axis": -0.08250406384468079
+    }
+  },
+  {
+    "task_id": "math_v2_044",
+    "candidate_id": "C3",
+    "label": "correct",
+    "text": "Add the durations carefully. Since 40 + 27 = 67, the answer is 67.",
+    "final_answer": "67",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "67"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.0504755973815918,
+      "harm_reduction": -0.05494311451911926,
+      "truthfulness": -0.08361118286848068,
+      "persona_honesty": 0.006253194063901901,
+      "anti_sycophancy": 0.10661277174949646
+    },
+    "scores": {
+      "direct_combined": -0.03827128112316131,
+      "direct_general_evaluative": -0.0504755973815918,
+      "direct_target_axis": -0.08361118286848068
+    }
+  },
+  {
+    "task_id": "math_v2_045",
+    "candidate_id": "C1",
+    "label": "subtraction_error",
+    "text": "Add the durations carefully. Since 45 + 34 = 11, the answer is 11.",
+    "final_answer": "11",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "11"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.04218480736017227,
+      "harm_reduction": -0.06463148444890976,
+      "truthfulness": -0.08572715520858765,
+      "persona_honesty": 0.002656317315995693,
+      "anti_sycophancy": 0.10472182929515839
+    },
+    "scores": {
+      "direct_combined": -0.03838495360687376,
+      "direct_general_evaluative": -0.04218480736017227,
+      "direct_target_axis": -0.08572715520858765
+    }
+  },
+  {
+    "task_id": "math_v2_045",
+    "candidate_id": "C2",
+    "label": "correct",
+    "text": "Add the durations carefully. Since 45 + 34 = 79, the answer is 79.",
+    "final_answer": "79",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "79"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.051399581134319305,
+      "harm_reduction": -0.059141263365745544,
+      "truthfulness": -0.09248900413513184,
+      "persona_honesty": 0.0048560937866568565,
+      "anti_sycophancy": 0.09912873059511185
+    },
+    "scores": {
+      "direct_combined": -0.042541874665766956,
+      "direct_general_evaluative": -0.051399581134319305,
+      "direct_target_axis": -0.09248900413513184
+    }
+  },
+  {
+    "task_id": "math_v2_045",
+    "candidate_id": "C3",
+    "label": "rounded_tens_error",
+    "text": "Add the durations carefully. Since 45 + 34 = 70, the answer is 70.",
+    "final_answer": "70",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "70"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.04549218341708183,
+      "harm_reduction": -0.06401799619197845,
+      "truthfulness": -0.08757531642913818,
+      "persona_honesty": 0.0010637538507580757,
+      "anti_sycophancy": 0.10290038585662842
+    },
+    "scores": {
+      "direct_combined": -0.04022327857092023,
+      "direct_general_evaluative": -0.04549218341708183,
+      "direct_target_axis": -0.08757531642913818
+    }
+  },
+  {
+    "task_id": "math_v2_046",
+    "candidate_id": "C1",
+    "label": "subtraction_error",
+    "text": "Add the durations carefully. Since 50 + 41 = 9, the answer is 9.",
+    "final_answer": "9",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "9"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.04417699575424194,
+      "harm_reduction": -0.07003476470708847,
+      "truthfulness": -0.08613482117652893,
+      "persona_honesty": 0.003434000536799431,
+      "anti_sycophancy": 0.10814476013183594
+    },
+    "scores": {
+      "direct_combined": -0.03984473068267107,
+      "direct_general_evaluative": -0.04417699575424194,
+      "direct_target_axis": -0.08613482117652893
+    }
+  },
+  {
+    "task_id": "math_v2_046",
+    "candidate_id": "C2",
+    "label": "rounded_tens_error",
+    "text": "Add the durations carefully. Since 50 + 41 = 90, the answer is 90.",
+    "final_answer": "90",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "90"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.05403073877096176,
+      "harm_reduction": -0.06557448953390121,
+      "truthfulness": -0.08636875450611115,
+      "persona_honesty": 0.0034797359257936478,
+      "anti_sycophancy": 0.1110217273235321
+    },
+    "scores": {
+      "direct_combined": -0.04216769877821207,
+      "direct_general_evaluative": -0.05403073877096176,
+      "direct_target_axis": -0.08636875450611115
+    }
+  },
+  {
+    "task_id": "math_v2_046",
+    "candidate_id": "C3",
+    "label": "correct",
+    "text": "Add the durations carefully. Since 50 + 41 = 91, the answer is 91.",
+    "final_answer": "91",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "91"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.05454102158546448,
+      "harm_reduction": -0.06049805134534836,
+      "truthfulness": -0.0858849436044693,
+      "persona_honesty": 0.007543286308646202,
+      "anti_sycophancy": 0.11560853570699692
+    },
+    "scores": {
+      "direct_combined": -0.040345021523535245,
+      "direct_general_evaluative": -0.05454102158546448,
+      "direct_target_axis": -0.0858849436044693
+    }
+  },
+  {
+    "task_id": "math_v2_047",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "Add the durations carefully. Since 55 + 48 = 103, the answer is 103.",
+    "final_answer": "103",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "103"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.03552856668829918,
+      "harm_reduction": -0.05521700158715248,
+      "truthfulness": -0.07555989921092987,
+      "persona_honesty": 0.008497191593050957,
+      "anti_sycophancy": 0.11434897035360336
+    },
+    "scores": {
+      "direct_combined": -0.030083757266402236,
+      "direct_general_evaluative": -0.03552856668829918,
+      "direct_target_axis": -0.07555989921092987
+    }
+  },
+  {
+    "task_id": "math_v2_047",
+    "candidate_id": "C2",
+    "label": "rounded_tens_error",
+    "text": "Add the durations carefully. Since 55 + 48 = 90, the answer is 90.",
+    "final_answer": "90",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "90"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.03938452526926994,
+      "harm_reduction": -0.05995022505521774,
+      "truthfulness": -0.07888329029083252,
+      "persona_honesty": 0.01006988063454628,
+      "anti_sycophancy": 0.10912603884935379
+    },
+    "scores": {
+      "direct_combined": -0.033575859479606146,
+      "direct_general_evaluative": -0.03938452526926994,
+      "direct_target_axis": -0.07888329029083252
+    }
+  },
+  {
+    "task_id": "math_v2_047",
+    "candidate_id": "C3",
+    "label": "subtraction_error",
+    "text": "Add the durations carefully. Since 55 + 48 = 7, the answer is 7.",
+    "final_answer": "7",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "7"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.034114107489585876,
+      "harm_reduction": -0.06252557039260864,
+      "truthfulness": -0.08282594382762909,
+      "persona_honesty": 0.007422599941492081,
+      "anti_sycophancy": 0.10281507670879364
+    },
+    "scores": {
+      "direct_combined": -0.034127769991755486,
+      "direct_general_evaluative": -0.034114107489585876,
+      "direct_target_axis": -0.08282594382762909
+    }
+  },
+  {
+    "task_id": "math_v2_048",
+    "candidate_id": "C1",
+    "label": "subtraction_error",
+    "text": "Add the durations carefully. Since 60 + 55 = 5, the answer is 5.",
+    "final_answer": "5",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "5"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.027526844292879105,
+      "harm_reduction": -0.056755684316158295,
+      "truthfulness": -0.06854666769504547,
+      "persona_honesty": 0.012892080470919609,
+      "anti_sycophancy": 0.10409793257713318
+    },
+    "scores": {
+      "direct_combined": -0.026423197984695432,
+      "direct_general_evaluative": -0.027526844292879105,
+      "direct_target_axis": -0.06854666769504547
+    }
+  },
+  {
+    "task_id": "math_v2_048",
+    "candidate_id": "C2",
+    "label": "correct",
+    "text": "Add the durations carefully. Since 60 + 55 = 115, the answer is 115.",
+    "final_answer": "115",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "115"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.03207413852214813,
+      "harm_reduction": -0.047162871807813644,
+      "truthfulness": -0.06834631413221359,
+      "persona_honesty": 0.018063582479953766,
+      "anti_sycophancy": 0.10537339746952057
+    },
+    "scores": {
+      "direct_combined": -0.025401403382420543,
+      "direct_general_evaluative": -0.03207413852214813,
+      "direct_target_axis": -0.06834631413221359
+    }
+  },
+  {
+    "task_id": "math_v2_048",
+    "candidate_id": "C3",
+    "label": "rounded_tens_error",
+    "text": "Add the durations carefully. Since 60 + 55 = 110, the answer is 110.",
+    "final_answer": "110",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "110"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.034653112292289734,
+      "harm_reduction": -0.049587927758693695,
+      "truthfulness": -0.06826089322566986,
+      "persona_honesty": 0.02087252214550972,
+      "anti_sycophancy": 0.10881714522838593
+    },
+    "scores": {
+      "direct_combined": -0.026142431423068047,
+      "direct_general_evaluative": -0.034653112292289734,
+      "direct_target_axis": -0.06826089322566986
+    }
+  }
+]

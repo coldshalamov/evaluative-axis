@@ -18,14 +18,13 @@ DEFAULT_BATTERY = (
     / "notes"
     / "research_cycles"
     / "cycle_002_potential_shaping"
-    / "controlled_evaluative_axis_battery_v2_length_balanced.jsonl"
+    / "controlled_evaluative_axis_battery_v3_50_cases.jsonl"
 )
 DEFAULT_OUTPUT = (
     ROOT
     / "notes"
     / "research_cycles"
-    / "cycle_002_potential_shaping"
-    / "fastembed_model_sweep_v2"
+    / "cycle_009_oss_direct_battery_v3_sweep"
 )
 
 
@@ -75,7 +74,13 @@ def write_json(path: Path, data: Any) -> None:
     path.write_text(json.dumps(data, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
 
 
-def run_model(model: str, battery: Path, output_root: Path) -> dict[str, Any]:
+def pct(value: float | None) -> str:
+    if value is None:
+        return "-"
+    return f"{value:.1%}"
+
+
+def run_model(model: str, battery: Path, output_root: Path, interfaces: str) -> dict[str, Any]:
     out_dir = output_root / slug(model)
     cmd = [
         sys.executable,
@@ -88,6 +93,8 @@ def run_model(model: str, battery: Path, output_root: Path) -> dict[str, Any]:
         str(battery),
         "--output",
         str(out_dir),
+        "--interfaces",
+        interfaces,
     ]
     proc = subprocess.run(cmd, cwd=ROOT, text=True, capture_output=True)
     result = {
@@ -96,6 +103,7 @@ def run_model(model: str, battery: Path, output_root: Path) -> dict[str, Any]:
         "returncode": proc.returncode,
         "stdout": proc.stdout,
         "stderr": proc.stderr,
+        "interfaces": interfaces,
     }
     if proc.returncode == 0 and (out_dir / "summary.json").exists():
         summary = read_json(out_dir / "summary.json")
@@ -105,61 +113,140 @@ def run_model(model: str, battery: Path, output_root: Path) -> dict[str, Any]:
     return result
 
 
-def write_markdown(path: Path, results: list[dict[str, Any]]) -> None:
+def write_markdown(path: Path, results: list[dict[str, Any]], battery: Path, interfaces: str) -> None:
+    interface_set = {part.strip() for part in interfaces.split(",") if part.strip()}
+    has_direct = "direct" in interface_set
+    has_decomposition = "decomposition" in interface_set
     lines = [
-        "# FastEmbed Model Sweep: Length-Balanced Battery V2",
+        "# FastEmbed Model Sweep",
         "",
-        "Date: June 23, 2026",
+        "Date: June 27, 2026",
         "",
-        "Battery: `controlled_evaluative_axis_battery_v2_length_balanced.jsonl`",
+        f"Battery: `{battery.name}`",
+        f"Interfaces: `{interfaces}`",
         "",
-        "All candidate pairs in this battery have exact word-count ties, so the",
-        "length baseline should be 50%. The sample is small (12 pairs), so this",
-        "is a diagnostic sweep, not a publishable model ranking.",
+        "This sweep is diagnostic rather than decisive. Its purpose is to map how",
+        "free/local embedding models behave on the same frozen battery so the repo",
+        "can separate model-capacity limits from benchmark limits.",
         "",
         "## Key Metrics",
         "",
-        "| Model | Status | Best Axis | Best Acc | Direct Combined | Direct Broad | Direct Category | Decomp Category | Anti-Syc |",
-        "| --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |",
     ]
+    if has_direct and has_decomposition:
+        lines.extend(
+            [
+                "| Model | Status | Best Overall | Best Acc | Length | Refusal | Direct Category | Direct Harm | Direct Persona | Direct Anti-Syc | Decomp Category |",
+                "| --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
+            ]
+        )
+    elif has_direct:
+        lines.extend(
+            [
+                "| Model | Status | Best Direct | Best Acc | Length | Refusal | Direct Combined | Direct Category | Direct Harm | Direct Persona | Direct Anti-Syc |",
+                "| --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
+            ]
+        )
+    else:
+        lines.extend(
+            [
+                "| Model | Status | Best Decomp | Best Acc | Length | Refusal | Decomp Combined | Decomp Category |",
+                "| --- | --- | --- | ---: | ---: | ---: | ---: | ---: |",
+            ]
+        )
     for result in results:
         if result.get("returncode") != 0 or "metrics" not in result:
-            lines.append(f"| `{result['model']}` | failed | - | - | - | - | - | - | - |")
+            if has_direct and has_decomposition:
+                lines.append(f"| `{result['model']}` | failed | - | - | - | - | - | - | - | - | - |")
+            elif has_direct:
+                lines.append(f"| `{result['model']}` | failed | - | - | - | - | - | - | - | - | - |")
+            else:
+                lines.append(f"| `{result['model']}` | failed | - | - | - | - | - | - |")
             continue
         metrics = result["metrics"]
-        embedding_metrics = {
-            name: row["accuracy"]
-            for name, row in metrics.items()
-            if name not in {"length", "sentiment", "refusal"}
-        }
-        best_name, best_acc = max(embedding_metrics.items(), key=lambda item: item[1])
-        lines.append(
-            "| `{model}` | ok | `{best}` | {best_acc:.1%} | {direct_combined:.1%} | "
-            "{direct_broad:.1%} | {direct_category:.1%} | {decomp_category:.1%} | {anti:.1%} |".format(
-                model=result["model"],
-                best=best_name,
-                best_acc=best_acc,
-                direct_combined=metrics.get("direct_combined", {}).get("accuracy", 0.0),
-                direct_broad=metrics.get("direct_general_evaluative", {}).get("accuracy", 0.0),
-                direct_category=metrics.get("direct_category_axis", {}).get("accuracy", 0.0),
-                decomp_category=metrics.get("decomposition_category_axis", {}).get("accuracy", 0.0),
-                anti=metrics.get("direct_anti_sycophancy", {}).get("accuracy", 0.0),
+        if has_direct:
+            candidate_metrics = {
+                name: row["accuracy"]
+                for name, row in metrics.items()
+                if name.startswith("direct_")
+            }
+        else:
+            candidate_metrics = {
+                name: row["accuracy"]
+                for name, row in metrics.items()
+                if name.startswith("decomposition_")
+            }
+        if has_decomposition and has_direct:
+            candidate_metrics = {
+                name: row["accuracy"]
+                for name, row in metrics.items()
+                if name not in {"length", "sentiment", "refusal"}
+            }
+        best_name, best_acc = max(candidate_metrics.items(), key=lambda item: item[1])
+        length_acc = metrics.get("length", {}).get("accuracy")
+        refusal_acc = metrics.get("refusal", {}).get("accuracy")
+        if has_direct and has_decomposition:
+            lines.append(
+                "| `{model}` | ok | `{best}` | {best_acc} | {length} | {refusal} | {direct_category} | {direct_harm} | {direct_persona} | {direct_anti} | {decomp_category} |".format(
+                    model=result["model"],
+                    best=best_name,
+                    best_acc=pct(best_acc),
+                    length=pct(length_acc),
+                    refusal=pct(refusal_acc),
+                    direct_category=pct(metrics.get("direct_category_axis", {}).get("accuracy")),
+                    direct_harm=pct(metrics.get("direct_harm_reduction", {}).get("accuracy")),
+                    direct_persona=pct(metrics.get("direct_persona_honesty", {}).get("accuracy")),
+                    direct_anti=pct(metrics.get("direct_anti_sycophancy", {}).get("accuracy")),
+                    decomp_category=pct(metrics.get("decomposition_category_axis", {}).get("accuracy")),
+                )
             )
-        )
+        elif has_direct:
+            lines.append(
+                "| `{model}` | ok | `{best}` | {best_acc} | {length} | {refusal} | {direct_combined} | {direct_category} | {direct_harm} | {direct_persona} | {direct_anti} |".format(
+                    model=result["model"],
+                    best=best_name,
+                    best_acc=pct(best_acc),
+                    length=pct(length_acc),
+                    refusal=pct(refusal_acc),
+                    direct_combined=pct(metrics.get("direct_combined", {}).get("accuracy")),
+                    direct_category=pct(metrics.get("direct_category_axis", {}).get("accuracy")),
+                    direct_harm=pct(metrics.get("direct_harm_reduction", {}).get("accuracy")),
+                    direct_persona=pct(metrics.get("direct_persona_honesty", {}).get("accuracy")),
+                    direct_anti=pct(metrics.get("direct_anti_sycophancy", {}).get("accuracy")),
+                )
+            )
+        else:
+            lines.append(
+                "| `{model}` | ok | `{best}` | {best_acc} | {length} | {refusal} | {decomp_combined} | {decomp_category} |".format(
+                    model=result["model"],
+                    best=best_name,
+                    best_acc=pct(best_acc),
+                    length=pct(length_acc),
+                    refusal=pct(refusal_acc),
+                    decomp_combined=pct(metrics.get("decomposition_combined", {}).get("accuracy")),
+                    decomp_category=pct(metrics.get("decomposition_category_axis", {}).get("accuracy")),
+                )
+            )
 
     lines.extend(
         [
             "",
             "## Interpretation Rule",
             "",
-            "This sweep answers a narrow question: whether a stronger local ONNX",
-            "embedding model changes the result on the same exact-length battery.",
-            "If no model beats cheap baselines except on narrow axes, the next move",
-            "is trajectory-potential testing and/or Gemini, not more final-answer",
-            "BGE-style scoring.",
+            "Treat this as a model-landscape map, not as training proof.",
+            "If direct-only local models stay near or below cheap baselines while",
+            "Gemini remains strong on the same battery, that supports a real",
+            "capability gap story rather than a benchmark-only story.",
             "",
         ]
     )
+    if has_direct and not has_decomposition:
+        lines.extend(
+            [
+                "These direct-only runs avoid decomposition leakage from hand-authored",
+                "notes, so they are the cleaner evidence lane for this battery.",
+                "",
+            ]
+        )
 
     failures = [result for result in results if result.get("returncode") != 0]
     if failures:
@@ -178,6 +265,7 @@ def main() -> None:
     parser.add_argument("--battery", type=Path, default=DEFAULT_BATTERY)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--models", default=",".join(DEFAULT_MODELS))
+    parser.add_argument("--interfaces", default="direct,decomposition")
     args = parser.parse_args()
 
     models = [part.strip() for part in args.models.split(",") if part.strip()]
@@ -185,7 +273,7 @@ def main() -> None:
     results = []
     for model in models:
         print(f"=== {model} ===", flush=True)
-        result = run_model(model, args.battery, args.output)
+        result = run_model(model, args.battery, args.output, args.interfaces)
         print(f"returncode={result['returncode']}", flush=True)
         if result.get("stdout"):
             print(result["stdout"], flush=True)
@@ -193,7 +281,7 @@ def main() -> None:
             print(result["stderr"], file=sys.stderr, flush=True)
         results.append(result)
         write_json(args.output / "sweep_results.json", results)
-        write_markdown(args.output / "summary.md", results)
+        write_markdown(args.output / "summary.md", results, args.battery, args.interfaces)
     print(f"Wrote {args.output / 'summary.md'}")
 
 

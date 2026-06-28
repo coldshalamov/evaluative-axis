@@ -1,0 +1,1452 @@
+{
+  "dataset_name": "objective_math_reranking_v2",
+  "purpose": "Larger frozen exact-answer math reranking benchmark with randomized candidate order and low length confounding.",
+  "tasks": [
+    {
+      "id": "math_v2_001",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 12 multiplied by 14?",
+      "grading": {
+        "mode": "number",
+        "target": 168
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Multiply 12 by 14 carefully. Since 12 x 14 = 168, the answer is 168.",
+          "final_answer": "168"
+        },
+        {
+          "id": "C2",
+          "label": "other_neighbor_product_error",
+          "text": "Multiply 12 by 14 carefully. Since 12 x 14 = 196, the answer is 196.",
+          "final_answer": "196"
+        },
+        {
+          "id": "C3",
+          "label": "neighbor_product_error",
+          "text": "Multiply 12 by 14 carefully. Since 12 x 14 = 180, the answer is 180.",
+          "final_answer": "180"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_002",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 15 multiplied by 18?",
+      "grading": {
+        "mode": "number",
+        "target": 270
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "other_neighbor_product_error",
+          "text": "Multiply 15 by 18 carefully. Since 15 x 18 = 306, the answer is 306.",
+          "final_answer": "306"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Multiply 15 by 18 carefully. Since 15 x 18 = 270, the answer is 270.",
+          "final_answer": "270"
+        },
+        {
+          "id": "C3",
+          "label": "neighbor_product_error",
+          "text": "Multiply 15 by 18 carefully. Since 15 x 18 = 285, the answer is 285.",
+          "final_answer": "285"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_003",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 18 multiplied by 22?",
+      "grading": {
+        "mode": "number",
+        "target": 396
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Multiply 18 by 22 carefully. Since 18 x 22 = 396, the answer is 396.",
+          "final_answer": "396"
+        },
+        {
+          "id": "C2",
+          "label": "other_neighbor_product_error",
+          "text": "Multiply 18 by 22 carefully. Since 18 x 22 = 440, the answer is 440.",
+          "final_answer": "440"
+        },
+        {
+          "id": "C3",
+          "label": "neighbor_product_error",
+          "text": "Multiply 18 by 22 carefully. Since 18 x 22 = 414, the answer is 414.",
+          "final_answer": "414"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_004",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 21 multiplied by 26?",
+      "grading": {
+        "mode": "number",
+        "target": 546
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "other_neighbor_product_error",
+          "text": "Multiply 21 by 26 carefully. Since 21 x 26 = 598, the answer is 598.",
+          "final_answer": "598"
+        },
+        {
+          "id": "C2",
+          "label": "neighbor_product_error",
+          "text": "Multiply 21 by 26 carefully. Since 21 x 26 = 567, the answer is 567.",
+          "final_answer": "567"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Multiply 21 by 26 carefully. Since 21 x 26 = 546, the answer is 546.",
+          "final_answer": "546"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_005",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 24 multiplied by 30?",
+      "grading": {
+        "mode": "number",
+        "target": 720
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "neighbor_product_error",
+          "text": "Multiply 24 by 30 carefully. Since 24 x 30 = 744, the answer is 744.",
+          "final_answer": "744"
+        },
+        {
+          "id": "C2",
+          "label": "other_neighbor_product_error",
+          "text": "Multiply 24 by 30 carefully. Since 24 x 30 = 780, the answer is 780.",
+          "final_answer": "780"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Multiply 24 by 30 carefully. Since 24 x 30 = 720, the answer is 720.",
+          "final_answer": "720"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_006",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 27 multiplied by 34?",
+      "grading": {
+        "mode": "number",
+        "target": 918
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "other_neighbor_product_error",
+          "text": "Multiply 27 by 34 carefully. Since 27 x 34 = 986, the answer is 986.",
+          "final_answer": "986"
+        },
+        {
+          "id": "C2",
+          "label": "neighbor_product_error",
+          "text": "Multiply 27 by 34 carefully. Since 27 x 34 = 945, the answer is 945.",
+          "final_answer": "945"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Multiply 27 by 34 carefully. Since 27 x 34 = 918, the answer is 918.",
+          "final_answer": "918"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_007",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "Solve for x: 3x + 5 = 17.",
+      "grading": {
+        "mode": "number",
+        "target": 4
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Isolate x carefully. Since 3x = 12 and x = 4, the answer is 4.",
+          "final_answer": "4"
+        },
+        {
+          "id": "C2",
+          "label": "forgot_division",
+          "text": "Isolate x carefully. Since 3x = 12 and x = 12, the answer is 12.",
+          "final_answer": "12"
+        },
+        {
+          "id": "C3",
+          "label": "sign_and_division_error",
+          "text": "Isolate x carefully. Since 3x = 22 and x = 7, the answer is 7.",
+          "final_answer": "7"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_008",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "Solve for x: 4x + 7 = 27.",
+      "grading": {
+        "mode": "number",
+        "target": 5
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "forgot_division",
+          "text": "Isolate x carefully. Since 4x = 20 and x = 20, the answer is 20.",
+          "final_answer": "20"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Isolate x carefully. Since 4x = 20 and x = 5, the answer is 5.",
+          "final_answer": "5"
+        },
+        {
+          "id": "C3",
+          "label": "sign_and_division_error",
+          "text": "Isolate x carefully. Since 4x = 34 and x = 9, the answer is 9.",
+          "final_answer": "9"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_009",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "Solve for x: 5x + 9 = 39.",
+      "grading": {
+        "mode": "number",
+        "target": 6
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Isolate x carefully. Since 5x = 30 and x = 6, the answer is 6.",
+          "final_answer": "6"
+        },
+        {
+          "id": "C2",
+          "label": "forgot_division",
+          "text": "Isolate x carefully. Since 5x = 30 and x = 30, the answer is 30.",
+          "final_answer": "30"
+        },
+        {
+          "id": "C3",
+          "label": "sign_and_division_error",
+          "text": "Isolate x carefully. Since 5x = 48 and x = 11, the answer is 11.",
+          "final_answer": "11"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_010",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "Solve for x: 6x + 11 = 53.",
+      "grading": {
+        "mode": "number",
+        "target": 7
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Isolate x carefully. Since 6x = 42 and x = 7, the answer is 7.",
+          "final_answer": "7"
+        },
+        {
+          "id": "C2",
+          "label": "forgot_division",
+          "text": "Isolate x carefully. Since 6x = 42 and x = 42, the answer is 42.",
+          "final_answer": "42"
+        },
+        {
+          "id": "C3",
+          "label": "sign_and_division_error",
+          "text": "Isolate x carefully. Since 6x = 64 and x = 13, the answer is 13.",
+          "final_answer": "13"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_011",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "Solve for x: 3x + 13 = 37.",
+      "grading": {
+        "mode": "number",
+        "target": 8
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "sign_and_division_error",
+          "text": "Isolate x carefully. Since 3x = 50 and x = 11, the answer is 11.",
+          "final_answer": "11"
+        },
+        {
+          "id": "C2",
+          "label": "forgot_division",
+          "text": "Isolate x carefully. Since 3x = 24 and x = 24, the answer is 24.",
+          "final_answer": "24"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Isolate x carefully. Since 3x = 24 and x = 8, the answer is 8.",
+          "final_answer": "8"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_012",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "Solve for x: 4x + 15 = 51.",
+      "grading": {
+        "mode": "number",
+        "target": 9
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "forgot_division",
+          "text": "Isolate x carefully. Since 4x = 36 and x = 36, the answer is 36.",
+          "final_answer": "36"
+        },
+        {
+          "id": "C2",
+          "label": "sign_and_division_error",
+          "text": "Isolate x carefully. Since 4x = 66 and x = 13, the answer is 13.",
+          "final_answer": "13"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Isolate x carefully. Since 4x = 36 and x = 9, the answer is 9.",
+          "final_answer": "9"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_013",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 10% of 120?",
+      "grading": {
+        "mode": "number",
+        "target": 12.0
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "division_instead_of_percent",
+          "text": "Convert the percent carefully. Since 10% of 120 is 12, the answer is 12.",
+          "final_answer": "12"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Convert the percent carefully. Since 10% of 120 is 12, the answer is 12.",
+          "final_answer": "12"
+        },
+        {
+          "id": "C3",
+          "label": "decimal_place_error",
+          "text": "Convert the percent carefully. Since 10% of 120 is 1.2, the answer is 1.2.",
+          "final_answer": "1.2"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_014",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 15% of 150?",
+      "grading": {
+        "mode": "number",
+        "target": 22.5
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "decimal_place_error",
+          "text": "Convert the percent carefully. Since 15% of 150 is 2.25, the answer is 2.25.",
+          "final_answer": "2.25"
+        },
+        {
+          "id": "C2",
+          "label": "division_instead_of_percent",
+          "text": "Convert the percent carefully. Since 15% of 150 is 10, the answer is 10.",
+          "final_answer": "10"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Convert the percent carefully. Since 15% of 150 is 22.5, the answer is 22.5.",
+          "final_answer": "22.5"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_015",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 20% of 180?",
+      "grading": {
+        "mode": "number",
+        "target": 36.0
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "division_instead_of_percent",
+          "text": "Convert the percent carefully. Since 20% of 180 is 9, the answer is 9.",
+          "final_answer": "9"
+        },
+        {
+          "id": "C2",
+          "label": "decimal_place_error",
+          "text": "Convert the percent carefully. Since 20% of 180 is 3.6, the answer is 3.6.",
+          "final_answer": "3.6"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Convert the percent carefully. Since 20% of 180 is 36, the answer is 36.",
+          "final_answer": "36"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_016",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 25% of 210?",
+      "grading": {
+        "mode": "number",
+        "target": 52.5
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "decimal_place_error",
+          "text": "Convert the percent carefully. Since 25% of 210 is 5.25, the answer is 5.25.",
+          "final_answer": "5.25"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Convert the percent carefully. Since 25% of 210 is 52.5, the answer is 52.5.",
+          "final_answer": "52.5"
+        },
+        {
+          "id": "C3",
+          "label": "division_instead_of_percent",
+          "text": "Convert the percent carefully. Since 25% of 210 is 8.4, the answer is 8.4.",
+          "final_answer": "8.4"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_017",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 30% of 240?",
+      "grading": {
+        "mode": "number",
+        "target": 72.0
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "division_instead_of_percent",
+          "text": "Convert the percent carefully. Since 30% of 240 is 8, the answer is 8.",
+          "final_answer": "8"
+        },
+        {
+          "id": "C2",
+          "label": "decimal_place_error",
+          "text": "Convert the percent carefully. Since 30% of 240 is 7.2, the answer is 7.2.",
+          "final_answer": "7.2"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Convert the percent carefully. Since 30% of 240 is 72, the answer is 72.",
+          "final_answer": "72"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_018",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 35% of 270?",
+      "grading": {
+        "mode": "number",
+        "target": 94.5
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Convert the percent carefully. Since 35% of 270 is 94.5, the answer is 94.5.",
+          "final_answer": "94.5"
+        },
+        {
+          "id": "C2",
+          "label": "division_instead_of_percent",
+          "text": "Convert the percent carefully. Since 35% of 270 is 7.71429, the answer is 7.71429.",
+          "final_answer": "7.71429"
+        },
+        {
+          "id": "C3",
+          "label": "decimal_place_error",
+          "text": "Convert the percent carefully. Since 35% of 270 is 9.45, the answer is 9.45.",
+          "final_answer": "9.45"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_019",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is the perimeter of a rectangle with width 3 and height 6?",
+      "grading": {
+        "mode": "number",
+        "target": 18
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "forgot_factor_two",
+          "text": "Use the perimeter formula carefully. Since 3 + 6 = 9, the answer is 9.",
+          "final_answer": "9"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Use the perimeter formula carefully. Since 2 x (3 + 6) = 18, the answer is 18.",
+          "final_answer": "18"
+        },
+        {
+          "id": "C3",
+          "label": "area_instead",
+          "text": "Use the perimeter formula carefully. Since 3 x 6 = 18, the answer is 18.",
+          "final_answer": "18"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_020",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is the perimeter of a rectangle with width 4 and height 8?",
+      "grading": {
+        "mode": "number",
+        "target": 24
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Use the perimeter formula carefully. Since 2 x (4 + 8) = 24, the answer is 24.",
+          "final_answer": "24"
+        },
+        {
+          "id": "C2",
+          "label": "area_instead",
+          "text": "Use the perimeter formula carefully. Since 4 x 8 = 32, the answer is 32.",
+          "final_answer": "32"
+        },
+        {
+          "id": "C3",
+          "label": "forgot_factor_two",
+          "text": "Use the perimeter formula carefully. Since 4 + 8 = 12, the answer is 12.",
+          "final_answer": "12"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_021",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is the perimeter of a rectangle with width 5 and height 10?",
+      "grading": {
+        "mode": "number",
+        "target": 30
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "area_instead",
+          "text": "Use the perimeter formula carefully. Since 5 x 10 = 50, the answer is 50.",
+          "final_answer": "50"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Use the perimeter formula carefully. Since 2 x (5 + 10) = 30, the answer is 30.",
+          "final_answer": "30"
+        },
+        {
+          "id": "C3",
+          "label": "forgot_factor_two",
+          "text": "Use the perimeter formula carefully. Since 5 + 10 = 15, the answer is 15.",
+          "final_answer": "15"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_022",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is the perimeter of a rectangle with width 6 and height 12?",
+      "grading": {
+        "mode": "number",
+        "target": 36
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "forgot_factor_two",
+          "text": "Use the perimeter formula carefully. Since 6 + 12 = 18, the answer is 18.",
+          "final_answer": "18"
+        },
+        {
+          "id": "C2",
+          "label": "area_instead",
+          "text": "Use the perimeter formula carefully. Since 6 x 12 = 72, the answer is 72.",
+          "final_answer": "72"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Use the perimeter formula carefully. Since 2 x (6 + 12) = 36, the answer is 36.",
+          "final_answer": "36"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_023",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is the perimeter of a rectangle with width 7 and height 14?",
+      "grading": {
+        "mode": "number",
+        "target": 42
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "forgot_factor_two",
+          "text": "Use the perimeter formula carefully. Since 7 + 14 = 21, the answer is 21.",
+          "final_answer": "21"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Use the perimeter formula carefully. Since 2 x (7 + 14) = 42, the answer is 42.",
+          "final_answer": "42"
+        },
+        {
+          "id": "C3",
+          "label": "area_instead",
+          "text": "Use the perimeter formula carefully. Since 7 x 14 = 98, the answer is 98.",
+          "final_answer": "98"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_024",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is the perimeter of a rectangle with width 8 and height 16?",
+      "grading": {
+        "mode": "number",
+        "target": 48
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "area_instead",
+          "text": "Use the perimeter formula carefully. Since 8 x 16 = 128, the answer is 128.",
+          "final_answer": "128"
+        },
+        {
+          "id": "C2",
+          "label": "forgot_factor_two",
+          "text": "Use the perimeter formula carefully. Since 8 + 16 = 24, the answer is 24.",
+          "final_answer": "24"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Use the perimeter formula carefully. Since 2 x (8 + 16) = 48, the answer is 48.",
+          "final_answer": "48"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_025",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 2 to the 4th power minus 5?",
+      "grading": {
+        "mode": "number",
+        "target": 11
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "sign_error",
+          "text": "Evaluate the power carefully. Since 2^4 = 16 and 16 + 5 = 21, the answer is 21.",
+          "final_answer": "21"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Evaluate the power carefully. Since 2^4 = 16 and 16 - 5 = 11, the answer is 11.",
+          "final_answer": "11"
+        },
+        {
+          "id": "C3",
+          "label": "power_as_multiplication",
+          "text": "Evaluate the power carefully. Since 2^4 = 8 and 8 - 5 = 3, the answer is 3.",
+          "final_answer": "3"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_026",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 3 to the 5th power minus 6?",
+      "grading": {
+        "mode": "number",
+        "target": 237
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "sign_error",
+          "text": "Evaluate the power carefully. Since 3^5 = 243 and 243 + 6 = 249, the answer is 249.",
+          "final_answer": "249"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Evaluate the power carefully. Since 3^5 = 243 and 243 - 6 = 237, the answer is 237.",
+          "final_answer": "237"
+        },
+        {
+          "id": "C3",
+          "label": "power_as_multiplication",
+          "text": "Evaluate the power carefully. Since 3^5 = 15 and 15 - 6 = 9, the answer is 9.",
+          "final_answer": "9"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_027",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 2 to the 6th power minus 7?",
+      "grading": {
+        "mode": "number",
+        "target": 57
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Evaluate the power carefully. Since 2^6 = 64 and 64 - 7 = 57, the answer is 57.",
+          "final_answer": "57"
+        },
+        {
+          "id": "C2",
+          "label": "sign_error",
+          "text": "Evaluate the power carefully. Since 2^6 = 64 and 64 + 7 = 71, the answer is 71.",
+          "final_answer": "71"
+        },
+        {
+          "id": "C3",
+          "label": "power_as_multiplication",
+          "text": "Evaluate the power carefully. Since 2^6 = 12 and 12 - 7 = 5, the answer is 5.",
+          "final_answer": "5"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_028",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 3 to the 7th power minus 8?",
+      "grading": {
+        "mode": "number",
+        "target": 2179
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Evaluate the power carefully. Since 3^7 = 2187 and 2187 - 8 = 2179, the answer is 2179.",
+          "final_answer": "2179"
+        },
+        {
+          "id": "C2",
+          "label": "sign_error",
+          "text": "Evaluate the power carefully. Since 3^7 = 2187 and 2187 + 8 = 2195, the answer is 2195.",
+          "final_answer": "2195"
+        },
+        {
+          "id": "C3",
+          "label": "power_as_multiplication",
+          "text": "Evaluate the power carefully. Since 3^7 = 21 and 21 - 8 = 13, the answer is 13.",
+          "final_answer": "13"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_029",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 2 to the 8th power minus 9?",
+      "grading": {
+        "mode": "number",
+        "target": 247
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "sign_error",
+          "text": "Evaluate the power carefully. Since 2^8 = 256 and 256 + 9 = 265, the answer is 265.",
+          "final_answer": "265"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Evaluate the power carefully. Since 2^8 = 256 and 256 - 9 = 247, the answer is 247.",
+          "final_answer": "247"
+        },
+        {
+          "id": "C3",
+          "label": "power_as_multiplication",
+          "text": "Evaluate the power carefully. Since 2^8 = 16 and 16 - 9 = 7, the answer is 7.",
+          "final_answer": "7"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_030",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 3 to the 9th power minus 10?",
+      "grading": {
+        "mode": "number",
+        "target": 19673
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "sign_error",
+          "text": "Evaluate the power carefully. Since 3^9 = 19683 and 19683 + 10 = 19693, the answer is 19693.",
+          "final_answer": "19693"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Evaluate the power carefully. Since 3^9 = 19683 and 19683 - 10 = 19673, the answer is 19673.",
+          "final_answer": "19673"
+        },
+        {
+          "id": "C3",
+          "label": "power_as_multiplication",
+          "text": "Evaluate the power carefully. Since 3^9 = 27 and 27 - 10 = 17, the answer is 17.",
+          "final_answer": "17"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_031",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is the mean of 2, 4, 8, 10?",
+      "grading": {
+        "mode": "number",
+        "target": 6.0
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Average the list carefully. Since the sum is 24 and 24 / 4 = 6, the answer is 6.",
+          "final_answer": "6"
+        },
+        {
+          "id": "C2",
+          "label": "divide_by_three",
+          "text": "Average the list carefully. Since the sum is 24 and 24 / 3 = 8, the answer is 8.",
+          "final_answer": "8"
+        },
+        {
+          "id": "C3",
+          "label": "median_confusion",
+          "text": "Average the list carefully. Since the middle value is 4, the answer is 4.",
+          "final_answer": "4"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_032",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is the mean of 3, 5, 9, 11?",
+      "grading": {
+        "mode": "number",
+        "target": 7.0
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "median_confusion",
+          "text": "Average the list carefully. Since the middle value is 5, the answer is 5.",
+          "final_answer": "5"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Average the list carefully. Since the sum is 28 and 28 / 4 = 7, the answer is 7.",
+          "final_answer": "7"
+        },
+        {
+          "id": "C3",
+          "label": "divide_by_three",
+          "text": "Average the list carefully. Since the sum is 28 and 28 / 3 = 9.33333, the answer is 9.33333.",
+          "final_answer": "9.33333"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_033",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is the mean of 4, 6, 10, 12?",
+      "grading": {
+        "mode": "number",
+        "target": 8.0
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "median_confusion",
+          "text": "Average the list carefully. Since the middle value is 6, the answer is 6.",
+          "final_answer": "6"
+        },
+        {
+          "id": "C2",
+          "label": "divide_by_three",
+          "text": "Average the list carefully. Since the sum is 32 and 32 / 3 = 10.6667, the answer is 10.6667.",
+          "final_answer": "10.6667"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Average the list carefully. Since the sum is 32 and 32 / 4 = 8, the answer is 8.",
+          "final_answer": "8"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_034",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is the mean of 5, 7, 11, 13?",
+      "grading": {
+        "mode": "number",
+        "target": 9.0
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "median_confusion",
+          "text": "Average the list carefully. Since the middle value is 7, the answer is 7.",
+          "final_answer": "7"
+        },
+        {
+          "id": "C2",
+          "label": "divide_by_three",
+          "text": "Average the list carefully. Since the sum is 36 and 36 / 3 = 12, the answer is 12.",
+          "final_answer": "12"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Average the list carefully. Since the sum is 36 and 36 / 4 = 9, the answer is 9.",
+          "final_answer": "9"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_035",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is the mean of 6, 8, 12, 14?",
+      "grading": {
+        "mode": "number",
+        "target": 10.0
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "median_confusion",
+          "text": "Average the list carefully. Since the middle value is 8, the answer is 8.",
+          "final_answer": "8"
+        },
+        {
+          "id": "C2",
+          "label": "divide_by_three",
+          "text": "Average the list carefully. Since the sum is 40 and 40 / 3 = 13.3333, the answer is 13.3333.",
+          "final_answer": "13.3333"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Average the list carefully. Since the sum is 40 and 40 / 4 = 10, the answer is 10.",
+          "final_answer": "10"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_036",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is the mean of 7, 9, 13, 15?",
+      "grading": {
+        "mode": "number",
+        "target": 11.0
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "divide_by_three",
+          "text": "Average the list carefully. Since the sum is 44 and 44 / 3 = 14.6667, the answer is 14.6667.",
+          "final_answer": "14.6667"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Average the list carefully. Since the sum is 44 and 44 / 4 = 11, the answer is 11.",
+          "final_answer": "11"
+        },
+        {
+          "id": "C3",
+          "label": "median_confusion",
+          "text": "Average the list carefully. Since the middle value is 9, the answer is 9.",
+          "final_answer": "9"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_037",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 1/2 plus 2/2?",
+      "grading": {
+        "mode": "number",
+        "target": 1.5,
+        "tolerance": 1e-09
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "dropped_fraction_piece",
+          "text": "Add the fractions carefully. Since 1/2 + 2/2 = 1, the answer is 1.",
+          "final_answer": "1"
+        },
+        {
+          "id": "C2",
+          "label": "denominator_addition_error",
+          "text": "Add the fractions carefully. Since 1/2 + 2/2 = 0.75, the answer is 0.75.",
+          "final_answer": "0.75"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Add the fractions carefully. Since 1/2 + 2/2 = 1.5, the answer is 1.5.",
+          "final_answer": "1.5"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_038",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 2/3 plus 3/3?",
+      "grading": {
+        "mode": "number",
+        "target": 1.6666666666666667,
+        "tolerance": 1e-09
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Add the fractions carefully. Since 2/3 + 3/3 = 1.66667, the answer is 1.66667.",
+          "final_answer": "1.66667"
+        },
+        {
+          "id": "C2",
+          "label": "dropped_fraction_piece",
+          "text": "Add the fractions carefully. Since 2/3 + 3/3 = 1.33333, the answer is 1.33333.",
+          "final_answer": "1.33333"
+        },
+        {
+          "id": "C3",
+          "label": "denominator_addition_error",
+          "text": "Add the fractions carefully. Since 2/3 + 3/3 = 0.833333, the answer is 0.833333.",
+          "final_answer": "0.833333"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_039",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 3/4 plus 4/4?",
+      "grading": {
+        "mode": "number",
+        "target": 1.75,
+        "tolerance": 1e-09
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Add the fractions carefully. Since 3/4 + 4/4 = 1.75, the answer is 1.75.",
+          "final_answer": "1.75"
+        },
+        {
+          "id": "C2",
+          "label": "dropped_fraction_piece",
+          "text": "Add the fractions carefully. Since 3/4 + 4/4 = 1.5, the answer is 1.5.",
+          "final_answer": "1.5"
+        },
+        {
+          "id": "C3",
+          "label": "denominator_addition_error",
+          "text": "Add the fractions carefully. Since 3/4 + 4/4 = 0.875, the answer is 0.875.",
+          "final_answer": "0.875"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_040",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 1/5 plus 1/5?",
+      "grading": {
+        "mode": "number",
+        "target": 0.4,
+        "tolerance": 1e-09
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "dropped_fraction_piece",
+          "text": "Add the fractions carefully. Since 1/5 + 1/5 = 0.2, the answer is 0.2.",
+          "final_answer": "0.2"
+        },
+        {
+          "id": "C2",
+          "label": "denominator_addition_error",
+          "text": "Add the fractions carefully. Since 1/5 + 1/5 = 0.2, the answer is 0.2.",
+          "final_answer": "0.2"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Add the fractions carefully. Since 1/5 + 1/5 = 0.4, the answer is 0.4.",
+          "final_answer": "0.4"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_041",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 2/2 plus 2/2?",
+      "grading": {
+        "mode": "number",
+        "target": 2.0,
+        "tolerance": 1e-09
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "dropped_fraction_piece",
+          "text": "Add the fractions carefully. Since 2/2 + 2/2 = 1.5, the answer is 1.5.",
+          "final_answer": "1.5"
+        },
+        {
+          "id": "C2",
+          "label": "denominator_addition_error",
+          "text": "Add the fractions carefully. Since 2/2 + 2/2 = 1, the answer is 1.",
+          "final_answer": "1"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Add the fractions carefully. Since 2/2 + 2/2 = 2, the answer is 2.",
+          "final_answer": "2"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_042",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 3/3 plus 3/3?",
+      "grading": {
+        "mode": "number",
+        "target": 2.0,
+        "tolerance": 1e-09
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Add the fractions carefully. Since 3/3 + 3/3 = 2, the answer is 2.",
+          "final_answer": "2"
+        },
+        {
+          "id": "C2",
+          "label": "denominator_addition_error",
+          "text": "Add the fractions carefully. Since 3/3 + 3/3 = 1, the answer is 1.",
+          "final_answer": "1"
+        },
+        {
+          "id": "C3",
+          "label": "dropped_fraction_piece",
+          "text": "Add the fractions carefully. Since 3/3 + 3/3 = 1.66667, the answer is 1.66667.",
+          "final_answer": "1.66667"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_043",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "If one run lasted 35 minutes and another lasted 20 minutes, how many minutes total is that?",
+      "grading": {
+        "mode": "number",
+        "target": 55
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Add the durations carefully. Since 35 + 20 = 55, the answer is 55.",
+          "final_answer": "55"
+        },
+        {
+          "id": "C2",
+          "label": "rounded_tens_error",
+          "text": "Add the durations carefully. Since 35 + 20 = 50, the answer is 50.",
+          "final_answer": "50"
+        },
+        {
+          "id": "C3",
+          "label": "subtraction_error",
+          "text": "Add the durations carefully. Since 35 + 20 = 15, the answer is 15.",
+          "final_answer": "15"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_044",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "If one run lasted 40 minutes and another lasted 27 minutes, how many minutes total is that?",
+      "grading": {
+        "mode": "number",
+        "target": 67
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "rounded_tens_error",
+          "text": "Add the durations carefully. Since 40 + 27 = 60, the answer is 60.",
+          "final_answer": "60"
+        },
+        {
+          "id": "C2",
+          "label": "subtraction_error",
+          "text": "Add the durations carefully. Since 40 + 27 = 13, the answer is 13.",
+          "final_answer": "13"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Add the durations carefully. Since 40 + 27 = 67, the answer is 67.",
+          "final_answer": "67"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_045",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "If one run lasted 45 minutes and another lasted 34 minutes, how many minutes total is that?",
+      "grading": {
+        "mode": "number",
+        "target": 79
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "subtraction_error",
+          "text": "Add the durations carefully. Since 45 + 34 = 11, the answer is 11.",
+          "final_answer": "11"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Add the durations carefully. Since 45 + 34 = 79, the answer is 79.",
+          "final_answer": "79"
+        },
+        {
+          "id": "C3",
+          "label": "rounded_tens_error",
+          "text": "Add the durations carefully. Since 45 + 34 = 70, the answer is 70.",
+          "final_answer": "70"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_046",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "If one run lasted 50 minutes and another lasted 41 minutes, how many minutes total is that?",
+      "grading": {
+        "mode": "number",
+        "target": 91
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "subtraction_error",
+          "text": "Add the durations carefully. Since 50 + 41 = 9, the answer is 9.",
+          "final_answer": "9"
+        },
+        {
+          "id": "C2",
+          "label": "rounded_tens_error",
+          "text": "Add the durations carefully. Since 50 + 41 = 90, the answer is 90.",
+          "final_answer": "90"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Add the durations carefully. Since 50 + 41 = 91, the answer is 91.",
+          "final_answer": "91"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_047",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "If one run lasted 55 minutes and another lasted 48 minutes, how many minutes total is that?",
+      "grading": {
+        "mode": "number",
+        "target": 103
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Add the durations carefully. Since 55 + 48 = 103, the answer is 103.",
+          "final_answer": "103"
+        },
+        {
+          "id": "C2",
+          "label": "rounded_tens_error",
+          "text": "Add the durations carefully. Since 55 + 48 = 90, the answer is 90.",
+          "final_answer": "90"
+        },
+        {
+          "id": "C3",
+          "label": "subtraction_error",
+          "text": "Add the durations carefully. Since 55 + 48 = 7, the answer is 7.",
+          "final_answer": "7"
+        }
+      ]
+    },
+    {
+      "id": "math_v2_048",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "If one run lasted 60 minutes and another lasted 55 minutes, how many minutes total is that?",
+      "grading": {
+        "mode": "number",
+        "target": 115
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "subtraction_error",
+          "text": "Add the durations carefully. Since 60 + 55 = 5, the answer is 5.",
+          "final_answer": "5"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Add the durations carefully. Since 60 + 55 = 115, the answer is 115.",
+          "final_answer": "115"
+        },
+        {
+          "id": "C3",
+          "label": "rounded_tens_error",
+          "text": "Add the durations carefully. Since 60 + 55 = 110, the answer is 110.",
+          "final_answer": "110"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "BAAI/bge-small-en-v1.5": {
+    "model": "BAAI/bge-small-en-v1.5",
+    "dim": 384,
+    "mean_axis_acc": 0.3,
+    "centered_pc1_raw": 0.72,
+    "centered_pc1_oriented": 0.28,
+    "uncentered_pc1_oriented": 0.28,
+    "best_individual_axis": 0.62,
+    "null_mean_axis_stats": {
+      "mean": 0.5684999999999999,
+      "max": 0.76,
+      "n_beat_targeted": 5
+    },
+    "null_pc1_stats": {
+      "mean": 0.5798000000000001,
+      "max": 0.78,
+      "n_beat_targeted": 9
+    }
+  },
+  "snowflake/snowflake-arctic-embed-m": {
+    "model": "snowflake/snowflake-arctic-embed-m",
+    "dim": 768,
+    "mean_axis_acc": 0.48,
+    "centered_pc1_raw": 0.72,
+    "centered_pc1_oriented": 0.72,
+    "uncentered_pc1_oriented": 0.56,
+    "best_individual_axis": 0.72,
+    "null_mean_axis_stats": {
+      "mean": 0.5697,
+      "max": 0.74,
+      "n_beat_targeted": 182
+    },
+    "null_pc1_stats": {
+      "mean": 0.5666,
+      "max": 0.72,
+      "n_beat_targeted": 2
+    }
+  },
+  "BAAI/bge-large-en-v1.5": {
+    "model": "BAAI/bge-large-en-v1.5",
+    "dim": 1024,
+    "mean_axis_acc": 0.5,
+    "centered_pc1_raw": 0.76,
+    "centered_pc1_oriented": 0.24,
+    "uncentered_pc1_oriented": 0.48,
+    "best_individual_axis": 0.58,
+    "null_mean_axis_stats": {
+      "mean": 0.5755,
+      "max": 0.76,
+      "n_beat_targeted": 200
+    },
+    "null_pc1_stats": {
+      "mean": 0.5662,
+      "max": 0.68,
+      "n_beat_targeted": 0
+    }
+  },
+  "nomic-ai/nomic-embed-text-v1.5": {
+    "model": "nomic-ai/nomic-embed-text-v1.5",
+    "dim": 768,
+    "mean_axis_acc": 0.2,
+    "centered_pc1_raw": 0.84,
+    "centered_pc1_oriented": 0.16,
+    "uncentered_pc1_oriented": 0.2,
+    "best_individual_axis": 0.56,
+    "null_mean_axis_stats": {
+      "mean": 0.5946,
+      "max": 0.76,
+      "n_beat_targeted": 0
+    },
+    "null_pc1_stats": {
+      "mean": 0.5927,
+      "max": 0.76,
+      "n_beat_targeted": 0
+    }
+  }
+}

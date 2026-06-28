@@ -1,0 +1,102 @@
+{
+  "dataset_name": "objective_code_reranking_v1",
+  "purpose": "Small objective reranking pilot with hidden unit tests and no HH label dependence.",
+  "tasks": [
+    {
+      "id": "rotate_list",
+      "function_name": "rotate_list",
+      "prompt": "Write a Python function `rotate_list(values, k)` that returns a new list rotated to the right by `k` positions. Negative `k` should rotate left. Do not mutate the input list.",
+      "visible_examples": [
+        "rotate_list([1, 2, 3, 4], 1) -> [4, 1, 2, 3]",
+        "rotate_list([1, 2, 3, 4], -1) -> [2, 3, 4, 1]"
+      ],
+      "hidden_checks": [
+        "fn([1, 2, 3, 4], 1) == [4, 1, 2, 3]",
+        "fn([1, 2, 3, 4], -1) == [2, 3, 4, 1]",
+        "fn([], 3) == []",
+        "fn([1, 2], 5) == [2, 1]",
+        "fn(['a', 'b', 'c'], 0) == ['a', 'b', 'c']"
+      ]
+    },
+    {
+      "id": "merge_intervals",
+      "function_name": "merge_intervals",
+      "prompt": "Write a Python function `merge_intervals(intervals)` that takes a list of `[start, end]` integer pairs and returns overlapping or touching intervals merged into sorted order. Touching intervals such as `[1, 2]` and `[2, 4]` should merge.",
+      "visible_examples": [
+        "merge_intervals([[1, 3], [2, 4], [8, 10]]) -> [[1, 4], [8, 10]]",
+        "merge_intervals([[5, 7], [1, 2], [2, 3]]) -> [[1, 3], [5, 7]]"
+      ],
+      "hidden_checks": [
+        "fn([[1, 3], [2, 4], [8, 10]]) == [[1, 4], [8, 10]]",
+        "fn([[5, 7], [1, 2], [2, 3]]) == [[1, 3], [5, 7]]",
+        "fn([]) == []",
+        "fn([[1, 2]]) == [[1, 2]]",
+        "fn([[1, 2], [2, 4], [6, 8], [7, 9]]) == [[1, 4], [6, 9]]"
+      ]
+    },
+    {
+      "id": "longest_common_prefix",
+      "function_name": "longest_common_prefix",
+      "prompt": "Write a Python function `longest_common_prefix(words)` that returns the longest starting substring shared by every string in the input list. If the list is empty or there is no shared prefix, return an empty string.",
+      "visible_examples": [
+        "longest_common_prefix(['flower', 'flow', 'flight']) -> 'fl'",
+        "longest_common_prefix(['dog', 'racecar', 'car']) -> ''"
+      ],
+      "hidden_checks": [
+        "fn(['flower', 'flow', 'flight']) == 'fl'",
+        "fn(['dog', 'racecar', 'car']) == ''",
+        "fn([]) == ''",
+        "fn(['single']) == 'single'",
+        "fn(['interspecies', 'interstellar', 'interstate']) == 'inters'"
+      ]
+    },
+    {
+      "id": "balanced_brackets",
+      "function_name": "balanced_brackets",
+      "prompt": "Write a Python function `balanced_brackets(text)` that returns `True` if the brackets in the string are balanced and properly nested. Only `()`, `[]`, and `{}` matter; ignore all other characters.",
+      "visible_examples": [
+        "balanced_brackets('a[b](c){d}') -> True",
+        "balanced_brackets('([)]') -> False"
+      ],
+      "hidden_checks": [
+        "fn('a[b](c){d}') is True",
+        "fn('([)]') is False",
+        "fn('(((())))') is True",
+        "fn(']') is False",
+        "fn('function(x[y]{z})') is True"
+      ]
+    },
+    {
+      "id": "top_k_frequent",
+      "function_name": "top_k_frequent",
+      "prompt": "Write a Python function `top_k_frequent(items, k)` that returns the `k` most frequent items from the input list. Break ties by the order in which items first appear in the input. Return fewer than `k` items only if there are not enough unique values.",
+      "visible_examples": [
+        "top_k_frequent(['a', 'b', 'a', 'c', 'b', 'a'], 2) -> ['a', 'b']",
+        "top_k_frequent([3, 1, 3, 2, 2, 1], 2) -> [3, 1]"
+      ],
+      "hidden_checks": [
+        "fn(['a', 'b', 'a', 'c', 'b', 'a'], 2) == ['a', 'b']",
+        "fn([3, 1, 3, 2, 2, 1], 2) == [3, 1]",
+        "fn([], 3) == []",
+        "fn([1, 2, 3], 5) == [1, 2, 3]",
+        "fn(['x', 'y', 'x', 'z', 'y'], 2) == ['x', 'y']"
+      ]
+    },
+    {
+      "id": "chunk_list",
+      "function_name": "chunk_list",
+      "prompt": "Write a Python function `chunk_list(items, size)` that splits a list into consecutive chunks of length `size`. The last chunk may be shorter. Raise `ValueError` if `size` is less than or equal to zero.",
+      "visible_examples": [
+        "chunk_list([1, 2, 3, 4, 5], 2) -> [[1, 2], [3, 4], [5]]",
+        "chunk_list(['a', 'b', 'c'], 5) -> [['a', 'b', 'c']]"
+      ],
+      "hidden_checks": [
+        "fn([1, 2, 3, 4, 5], 2) == [[1, 2], [3, 4], [5]]",
+        "fn(['a', 'b', 'c'], 5) == [['a', 'b', 'c']]",
+        "fn([], 3) == []",
+        "raises_value_error(fn, [1, 2, 3], 0)",
+        "raises_value_error(fn, [1, 2, 3], -2)"
+      ]
+    }
+  ]
+}

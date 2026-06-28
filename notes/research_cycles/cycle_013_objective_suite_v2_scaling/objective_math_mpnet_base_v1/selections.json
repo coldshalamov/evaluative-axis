@@ -1,0 +1,3142 @@
+[
+  {
+    "task_id": "math_v2_001",
+    "method": "random",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_001",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_001",
+    "method": "direct_combined",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_001",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_001",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_002",
+    "method": "random",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_002",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_002",
+    "method": "direct_combined",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_002",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_002",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_003",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_003",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_003",
+    "method": "direct_combined",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_003",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_003",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_004",
+    "method": "random",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_004",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_004",
+    "method": "direct_combined",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_004",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_004",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_005",
+    "method": "random",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_005",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_005",
+    "method": "direct_combined",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_005",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_005",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_006",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_006",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_006",
+    "method": "direct_combined",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_006",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_006",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_007",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_007",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_007",
+    "method": "direct_combined",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_007",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_007",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_008",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_008",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_008",
+    "method": "direct_combined",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_008",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_008",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_009",
+    "method": "random",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_009",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_009",
+    "method": "direct_combined",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_009",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_009",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_010",
+    "method": "random",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_010",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_010",
+    "method": "direct_combined",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_010",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_010",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_011",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_011",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_011",
+    "method": "direct_combined",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_011",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_011",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_012",
+    "method": "random",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_012",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_012",
+    "method": "direct_combined",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_012",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_012",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_013",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1",
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_013",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1",
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_013",
+    "method": "direct_combined",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1",
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_013",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1",
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_013",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1",
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_014",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_014",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_014",
+    "method": "direct_combined",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_014",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_014",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_015",
+    "method": "random",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_015",
+    "method": "length",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_015",
+    "method": "direct_combined",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_015",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_015",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_016",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_016",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_016",
+    "method": "direct_combined",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_016",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_016",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_017",
+    "method": "random",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_017",
+    "method": "length",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_017",
+    "method": "direct_combined",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_017",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_017",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_018",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_018",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_018",
+    "method": "direct_combined",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_018",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_018",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_019",
+    "method": "random",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2",
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_019",
+    "method": "length",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2",
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_019",
+    "method": "direct_combined",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2",
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_019",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2",
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_019",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2",
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_020",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_020",
+    "method": "length",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_020",
+    "method": "direct_combined",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_020",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_020",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_021",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_021",
+    "method": "length",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_021",
+    "method": "direct_combined",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_021",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_021",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_022",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_022",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_022",
+    "method": "direct_combined",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_022",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_022",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_023",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_023",
+    "method": "length",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_023",
+    "method": "direct_combined",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_023",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_023",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_024",
+    "method": "random",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_024",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_024",
+    "method": "direct_combined",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_024",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_024",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_025",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_025",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_025",
+    "method": "direct_combined",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_025",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_025",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_026",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_026",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_026",
+    "method": "direct_combined",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_026",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_026",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_027",
+    "method": "random",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_027",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_027",
+    "method": "direct_combined",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_027",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_027",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_028",
+    "method": "random",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_028",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_028",
+    "method": "direct_combined",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_028",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_028",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_029",
+    "method": "random",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_029",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_029",
+    "method": "direct_combined",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_029",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_029",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_030",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_030",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_030",
+    "method": "direct_combined",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_030",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_030",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_031",
+    "method": "random",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_031",
+    "method": "length",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_031",
+    "method": "direct_combined",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_031",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_031",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_032",
+    "method": "random",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_032",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_032",
+    "method": "direct_combined",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_032",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_032",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_033",
+    "method": "random",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_033",
+    "method": "length",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_033",
+    "method": "direct_combined",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_033",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_033",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_034",
+    "method": "random",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_034",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_034",
+    "method": "direct_combined",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_034",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_034",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_035",
+    "method": "random",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_035",
+    "method": "length",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_035",
+    "method": "direct_combined",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_035",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_035",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_036",
+    "method": "random",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_036",
+    "method": "length",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_036",
+    "method": "direct_combined",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_036",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_036",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_037",
+    "method": "random",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_037",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_037",
+    "method": "direct_combined",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_037",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_037",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_038",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 0.0,
+    "best_candidate_ids": [
+      "C1",
+      "C2",
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_038",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 0.0,
+    "best_candidate_ids": [
+      "C1",
+      "C2",
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_038",
+    "method": "direct_combined",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 0.0,
+    "best_candidate_ids": [
+      "C1",
+      "C2",
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_038",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 0.0,
+    "best_candidate_ids": [
+      "C1",
+      "C2",
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_038",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 0.0,
+    "best_candidate_ids": [
+      "C1",
+      "C2",
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_039",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_039",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_039",
+    "method": "direct_combined",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_039",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_039",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_040",
+    "method": "random",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_040",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_040",
+    "method": "direct_combined",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_040",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_040",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_041",
+    "method": "random",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_041",
+    "method": "length",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_041",
+    "method": "direct_combined",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_041",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_041",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_042",
+    "method": "random",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_042",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_042",
+    "method": "direct_combined",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_042",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_042",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_043",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_043",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_043",
+    "method": "direct_combined",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_043",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_043",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_044",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_044",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_044",
+    "method": "direct_combined",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_044",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_044",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_045",
+    "method": "random",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_045",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_045",
+    "method": "direct_combined",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_045",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_045",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_046",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_046",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_046",
+    "method": "direct_combined",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_046",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_046",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C3",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C3"
+    ]
+  },
+  {
+    "task_id": "math_v2_047",
+    "method": "random",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_047",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_047",
+    "method": "direct_combined",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_047",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_047",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C1",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "math_v2_048",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_048",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_048",
+    "method": "direct_combined",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_048",
+    "method": "direct_general_evaluative",
+    "selected_candidate_id": "C1",
+    "selected_passed": 0,
+    "selected_total": 1,
+    "selected_pass_rate": 0.0,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  },
+  {
+    "task_id": "math_v2_048",
+    "method": "direct_target_axis",
+    "selected_candidate_id": "C2",
+    "selected_passed": 1,
+    "selected_total": 1,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C2"
+    ]
+  }
+]

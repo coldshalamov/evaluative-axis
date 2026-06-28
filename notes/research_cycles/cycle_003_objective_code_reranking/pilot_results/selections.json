@@ -1,0 +1,318 @@
+[
+  {
+    "task_id": "rotate_list",
+    "method": "random",
+    "selected_candidate_id": "C3",
+    "selected_passed": 3,
+    "selected_total": 5,
+    "selected_pass_rate": 0.6,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "rotate_list",
+    "method": "length",
+    "selected_candidate_id": "C1",
+    "selected_passed": 5,
+    "selected_total": 5,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "rotate_list",
+    "method": "direct_broad",
+    "selected_candidate_id": "C1",
+    "selected_passed": 5,
+    "selected_total": 5,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "rotate_list",
+    "method": "direct_code",
+    "selected_candidate_id": "C1",
+    "selected_passed": 5,
+    "selected_total": 5,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "merge_intervals",
+    "method": "random",
+    "selected_candidate_id": "C1",
+    "selected_passed": 5,
+    "selected_total": 5,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "merge_intervals",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 3,
+    "selected_total": 5,
+    "selected_pass_rate": 0.6,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "merge_intervals",
+    "method": "direct_broad",
+    "selected_candidate_id": "C1",
+    "selected_passed": 5,
+    "selected_total": 5,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "merge_intervals",
+    "method": "direct_code",
+    "selected_candidate_id": "C1",
+    "selected_passed": 5,
+    "selected_total": 5,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "longest_common_prefix",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 4,
+    "selected_total": 5,
+    "selected_pass_rate": 0.8,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "longest_common_prefix",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 4,
+    "selected_total": 5,
+    "selected_pass_rate": 0.8,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "longest_common_prefix",
+    "method": "direct_broad",
+    "selected_candidate_id": "C1",
+    "selected_passed": 5,
+    "selected_total": 5,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "longest_common_prefix",
+    "method": "direct_code",
+    "selected_candidate_id": "C1",
+    "selected_passed": 5,
+    "selected_total": 5,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "balanced_brackets",
+    "method": "random",
+    "selected_candidate_id": "C1",
+    "selected_passed": 5,
+    "selected_total": 5,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "balanced_brackets",
+    "method": "length",
+    "selected_candidate_id": "C1",
+    "selected_passed": 5,
+    "selected_total": 5,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "balanced_brackets",
+    "method": "direct_broad",
+    "selected_candidate_id": "C3",
+    "selected_passed": 4,
+    "selected_total": 5,
+    "selected_pass_rate": 0.8,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "balanced_brackets",
+    "method": "direct_code",
+    "selected_candidate_id": "C3",
+    "selected_passed": 4,
+    "selected_total": 5,
+    "selected_pass_rate": 0.8,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "top_k_frequent",
+    "method": "random",
+    "selected_candidate_id": "C1",
+    "selected_passed": 5,
+    "selected_total": 5,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1",
+      "C3"
+    ]
+  },
+  {
+    "task_id": "top_k_frequent",
+    "method": "length",
+    "selected_candidate_id": "C1",
+    "selected_passed": 5,
+    "selected_total": 5,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1",
+      "C3"
+    ]
+  },
+  {
+    "task_id": "top_k_frequent",
+    "method": "direct_broad",
+    "selected_candidate_id": "C1",
+    "selected_passed": 5,
+    "selected_total": 5,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1",
+      "C3"
+    ]
+  },
+  {
+    "task_id": "top_k_frequent",
+    "method": "direct_code",
+    "selected_candidate_id": "C1",
+    "selected_passed": 5,
+    "selected_total": 5,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1",
+      "C3"
+    ]
+  },
+  {
+    "task_id": "chunk_list",
+    "method": "random",
+    "selected_candidate_id": "C2",
+    "selected_passed": 3,
+    "selected_total": 5,
+    "selected_pass_rate": 0.6,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "chunk_list",
+    "method": "length",
+    "selected_candidate_id": "C3",
+    "selected_passed": 3,
+    "selected_total": 5,
+    "selected_pass_rate": 0.6,
+    "selected_is_best_available": false,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "chunk_list",
+    "method": "direct_broad",
+    "selected_candidate_id": "C1",
+    "selected_passed": 5,
+    "selected_total": 5,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  },
+  {
+    "task_id": "chunk_list",
+    "method": "direct_code",
+    "selected_candidate_id": "C1",
+    "selected_passed": 5,
+    "selected_total": 5,
+    "selected_pass_rate": 1.0,
+    "selected_is_best_available": true,
+    "best_pass_rate": 1.0,
+    "best_candidate_ids": [
+      "C1"
+    ]
+  }
+]

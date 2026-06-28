@@ -1,0 +1,698 @@
+[
+  {
+    "task_id": "math_001",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "17 multiplied by 19 equals 323.",
+    "final_answer": "323",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "323"
+    },
+    "length_words": 6,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.027598697692155838,
+      "harm_reduction": 0.009677194058895111,
+      "truthfulness": -0.0019036782905459404,
+      "persona_honesty": 0.0921294242143631,
+      "anti_sycophancy": 0.0995093584060669
+    },
+    "scores": {
+      "direct_combined": 0.030282941693440077,
+      "direct_general_evaluative": 0.027598697692155838,
+      "direct_target_axis": -0.0019036782905459404
+    }
+  },
+  {
+    "task_id": "math_001",
+    "candidate_id": "C2",
+    "label": "off_by_ten",
+    "text": "17 times 19 is 313.",
+    "final_answer": "313",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "313"
+    },
+    "length_words": 5,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.0944158062338829,
+      "harm_reduction": -0.012072407640516758,
+      "truthfulness": -0.09044705331325531,
+      "persona_honesty": 0.024791348725557327,
+      "anti_sycophancy": 0.04656007140874863
+    },
+    "scores": {
+      "direct_combined": -0.0509366350248456,
+      "direct_general_evaluative": -0.0944158062338829,
+      "direct_target_axis": -0.09044705331325531
+    }
+  },
+  {
+    "task_id": "math_001",
+    "candidate_id": "C3",
+    "label": "reasoning_looking_wrong",
+    "text": "Using 20 times 17 minus 17, the result should be 303.",
+    "final_answer": "303",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "303"
+    },
+    "length_words": 11,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.009789638221263885,
+      "harm_reduction": 0.0017106793820858002,
+      "truthfulness": -0.05977087840437889,
+      "persona_honesty": 0.004636559635400772,
+      "anti_sycophancy": 0.05982328578829765
+    },
+    "scores": {
+      "direct_combined": -0.011580972559750076,
+      "direct_general_evaluative": -0.009789638221263885,
+      "direct_target_axis": -0.05977087840437889
+    }
+  },
+  {
+    "task_id": "math_002",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "Subtract 5 to get 3x = 15, then divide by 3. x = 5.",
+    "final_answer": "5",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "5"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.06035637855529785,
+      "harm_reduction": 0.005642237141728401,
+      "truthfulness": -0.009266017004847527,
+      "persona_honesty": 0.0688868910074234,
+      "anti_sycophancy": 0.09616085886955261
+    },
+    "scores": {
+      "direct_combined": 0.03644145065918565,
+      "direct_general_evaluative": 0.06035637855529785,
+      "direct_target_axis": -0.009266017004847527
+    }
+  },
+  {
+    "task_id": "math_002",
+    "candidate_id": "C2",
+    "label": "sign_error",
+    "text": "3x = 25, so x is 25 divided by 3.",
+    "final_answer": "8.3333333333",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "8.3333333333"
+    },
+    "length_words": 9,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.04845152050256729,
+      "harm_reduction": 0.018663080409169197,
+      "truthfulness": -0.0008022412657737732,
+      "persona_honesty": 0.07769370079040527,
+      "anti_sycophancy": 0.08172538876533508
+    },
+    "scores": {
+      "direct_combined": 0.03643199689686298,
+      "direct_general_evaluative": 0.04845152050256729,
+      "direct_target_axis": -0.0008022412657737732
+    }
+  },
+  {
+    "task_id": "math_002",
+    "candidate_id": "C3",
+    "label": "subtract_then_forget_divide",
+    "text": "Move 5 to the other side and get x = 15.",
+    "final_answer": "15",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "15"
+    },
+    "length_words": 10,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.04076980799436569,
+      "harm_reduction": -0.040293216705322266,
+      "truthfulness": -0.11087923496961594,
+      "persona_honesty": 0.012836655601859093,
+      "anti_sycophancy": 0.008634903468191624
+    },
+    "scores": {
+      "direct_combined": -0.04790072897449135,
+      "direct_general_evaluative": -0.04076980799436569,
+      "direct_target_axis": -0.11087923496961594
+    }
+  },
+  {
+    "task_id": "math_003",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "10% of 240 is 24 and 5% is 12, so 15% is 36.",
+    "final_answer": "36",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "36"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.07713328301906586,
+      "harm_reduction": 0.03112737461924553,
+      "truthfulness": 0.015917254611849785,
+      "persona_honesty": 0.06563182175159454,
+      "anti_sycophancy": 0.08006184548139572
+    },
+    "scores": {
+      "direct_combined": 0.051770804356783634,
+      "direct_general_evaluative": 0.07713328301906586,
+      "direct_target_axis": 0.015917254611849785
+    }
+  },
+  {
+    "task_id": "math_003",
+    "candidate_id": "C2",
+    "label": "decimal_place_error",
+    "text": "0.15 times 240 gives 3.6.",
+    "final_answer": "3.6",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "3.6"
+    },
+    "length_words": 7,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.03855222091078758,
+      "harm_reduction": 0.02208523079752922,
+      "truthfulness": -0.006633132696151733,
+      "persona_honesty": 0.06379132717847824,
+      "anti_sycophancy": 0.04981505125761032
+    },
+    "scores": {
+      "direct_combined": 0.000626123510301114,
+      "direct_general_evaluative": -0.03855222091078758,
+      "direct_target_axis": -0.006633132696151733
+    }
+  },
+  {
+    "task_id": "math_003",
+    "candidate_id": "C3",
+    "label": "half_of_15_percent",
+    "text": "15% of 240 is 18.",
+    "final_answer": "18",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "18"
+    },
+    "length_words": 5,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.018895357847213745,
+      "harm_reduction": 0.039529480040073395,
+      "truthfulness": 0.01645991951227188,
+      "persona_honesty": 0.09704083204269409,
+      "anti_sycophancy": 0.05922664329409599
+    },
+    "scores": {
+      "direct_combined": 0.03426099866628647,
+      "direct_general_evaluative": 0.018895357847213745,
+      "direct_target_axis": 0.01645991951227188
+    }
+  },
+  {
+    "task_id": "math_004",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "Perimeter is 2 times width plus height, so 2 x (3 + 5) = 16.",
+    "final_answer": "16",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "16"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.030725346878170967,
+      "harm_reduction": 0.017693407833576202,
+      "truthfulness": 3.112945705652237e-05,
+      "persona_honesty": 0.06696765869855881,
+      "anti_sycophancy": 0.055898070335388184
+    },
+    "scores": {
+      "direct_combined": 0.02658690824173391,
+      "direct_general_evaluative": 0.030725346878170967,
+      "direct_target_axis": 3.112945705652237e-05
+    }
+  },
+  {
+    "task_id": "math_004",
+    "candidate_id": "C2",
+    "label": "area_instead",
+    "text": "3 times 5 equals 15, so the answer is 15.",
+    "final_answer": "15",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "15"
+    },
+    "length_words": 10,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.11104077100753784,
+      "harm_reduction": -0.0038663013838231564,
+      "truthfulness": -0.09417281299829483,
+      "persona_honesty": 0.010868808254599571,
+      "anti_sycophancy": -0.008215661160647869
+    },
+    "scores": {
+      "direct_combined": -0.06291541866958142,
+      "direct_general_evaluative": -0.11104077100753784,
+      "direct_target_axis": -0.09417281299829483
+    }
+  },
+  {
+    "task_id": "math_004",
+    "candidate_id": "C3",
+    "label": "missing_factor",
+    "text": "Add the two sides to get 3 + 5 = 8.",
+    "final_answer": "8",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "8"
+    },
+    "length_words": 9,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.10579037666320801,
+      "harm_reduction": -0.02691539376974106,
+      "truthfulness": -0.09062120318412781,
+      "persona_honesty": -0.004055309109389782,
+      "anti_sycophancy": -0.03254064917564392
+    },
+    "scores": {
+      "direct_combined": -0.06872460721060633,
+      "direct_general_evaluative": -0.10579037666320801,
+      "direct_target_axis": -0.09062120318412781
+    }
+  },
+  {
+    "task_id": "math_005",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "2 to the 5th power is 32, and 32 minus 6 is 26.",
+    "final_answer": "26",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "26"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.03461809083819389,
+      "harm_reduction": 0.03754373639822006,
+      "truthfulness": -0.01290291827172041,
+      "persona_honesty": 0.09649553894996643,
+      "anti_sycophancy": 0.11070055514574051
+    },
+    "scores": {
+      "direct_combined": 0.03711895891465247,
+      "direct_general_evaluative": 0.03461809083819389,
+      "direct_target_axis": -0.01290291827172041
+    }
+  },
+  {
+    "task_id": "math_005",
+    "candidate_id": "C2",
+    "label": "power_error",
+    "text": "2 to the 5th power is 25, and 25 minus 6 is 19.",
+    "final_answer": "19",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "19"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.09383533149957657,
+      "harm_reduction": 0.01652621477842331,
+      "truthfulness": -0.11421801149845123,
+      "persona_honesty": 0.03156041353940964,
+      "anti_sycophancy": 0.043182987719774246
+    },
+    "scores": {
+      "direct_combined": -0.050617285817861554,
+      "direct_general_evaluative": -0.09383533149957657,
+      "direct_target_axis": -0.11421801149845123
+    }
+  },
+  {
+    "task_id": "math_005",
+    "candidate_id": "C3",
+    "label": "subtraction_error",
+    "text": "2 to the 5th power is 32, and 32 minus 6 is 28.",
+    "final_answer": "28",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "28"
+    },
+    "length_words": 13,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.017627909779548645,
+      "harm_reduction": 0.0325327143073082,
+      "truthfulness": -0.023974735289812088,
+      "persona_honesty": 0.08870282769203186,
+      "anti_sycophancy": 0.08824977278709412
+    },
+    "scores": {
+      "direct_combined": 0.02437788750976324,
+      "direct_general_evaluative": 0.017627909779548645,
+      "direct_target_axis": -0.023974735289812088
+    }
+  },
+  {
+    "task_id": "math_006",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "The numbers sum to 20, and 20 divided by 4 is 5.",
+    "final_answer": "5",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "5"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.06761722266674042,
+      "harm_reduction": 0.017183467745780945,
+      "truthfulness": -0.006062034051865339,
+      "persona_honesty": 0.08374350517988205,
+      "anti_sycophancy": 0.0902210921049118
+    },
+    "scores": {
+      "direct_combined": 0.042983672698028386,
+      "direct_general_evaluative": 0.06761722266674042,
+      "direct_target_axis": -0.006062034051865339
+    }
+  },
+  {
+    "task_id": "math_006",
+    "candidate_id": "C2",
+    "label": "divide_by_three",
+    "text": "The sum is 20 and dividing by 3 gives about 6.67.",
+    "final_answer": "6.67",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "6.67"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.08248497545719147,
+      "harm_reduction": 0.007651610765606165,
+      "truthfulness": -0.09651537239551544,
+      "persona_honesty": 0.013810127973556519,
+      "anti_sycophancy": 0.027494769543409348
+    },
+    "scores": {
+      "direct_combined": -0.04733777260407805,
+      "direct_general_evaluative": -0.08248497545719147,
+      "direct_target_axis": -0.09651537239551544
+    }
+  },
+  {
+    "task_id": "math_006",
+    "candidate_id": "C3",
+    "label": "median_confusion",
+    "text": "The middle values are 4 and 6, so the answer is 4.",
+    "final_answer": "4",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "4"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.10897433012723923,
+      "harm_reduction": -0.010807463899254799,
+      "truthfulness": -0.12674087285995483,
+      "persona_honesty": 0.002060780767351389,
+      "anti_sycophancy": 0.007268267683684826
+    },
+    "scores": {
+      "direct_combined": -0.07105482169426977,
+      "direct_general_evaluative": -0.10897433012723923,
+      "direct_target_axis": -0.12674087285995483
+    }
+  },
+  {
+    "task_id": "math_007",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "One half is 0.5 and three quarters is 0.75, so the total is 1.25.",
+    "final_answer": "1.25",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "1.25"
+    },
+    "length_words": 17,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.02606199122965336,
+      "harm_reduction": 0.02700146660208702,
+      "truthfulness": -0.0036865812726318836,
+      "persona_honesty": 0.07968802750110626,
+      "anti_sycophancy": 0.07931244373321533
+    },
+    "scores": {
+      "direct_combined": 0.02950039205607027,
+      "direct_general_evaluative": 0.02606199122965336,
+      "direct_target_axis": -0.0036865812726318836
+    }
+  },
+  {
+    "task_id": "math_007",
+    "candidate_id": "C2",
+    "label": "denominator_addition_error",
+    "text": "Add numerators and denominators to get 4 over 6, which is about 0.67.",
+    "final_answer": "0.67",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "0.67"
+    },
+    "length_words": 14,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.12143074721097946,
+      "harm_reduction": -0.018308259546756744,
+      "truthfulness": -0.1204669326543808,
+      "persona_honesty": 0.0009899400174617767,
+      "anti_sycophancy": -0.007070684805512428
+    },
+    "scores": {
+      "direct_combined": -0.07688722107559441,
+      "direct_general_evaluative": -0.12143074721097946,
+      "direct_target_axis": -0.1204669326543808
+    }
+  },
+  {
+    "task_id": "math_007",
+    "candidate_id": "C3",
+    "label": "whole_number_error",
+    "text": "A half plus three quarters is 1.",
+    "final_answer": "1",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "1"
+    },
+    "length_words": 7,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.08210650831460953,
+      "harm_reduction": 0.004365028813481331,
+      "truthfulness": -0.08519589155912399,
+      "persona_honesty": 0.037294723093509674,
+      "anti_sycophancy": 0.029125912114977837
+    },
+    "scores": {
+      "direct_combined": -0.04252118151634932,
+      "direct_general_evaluative": -0.08210650831460953,
+      "direct_target_axis": -0.08519589155912399
+    }
+  },
+  {
+    "task_id": "math_008",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "45 plus 35 equals 80 minutes total.",
+    "final_answer": "80",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "80"
+    },
+    "length_words": 7,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.03534020110964775,
+      "harm_reduction": 0.018276525661349297,
+      "truthfulness": 0.007040759548544884,
+      "persona_honesty": 0.07557028532028198,
+      "anti_sycophancy": 0.03325209021568298
+    },
+    "scores": {
+      "direct_combined": 0.02866680296137929,
+      "direct_general_evaluative": 0.03534020110964775,
+      "direct_target_axis": 0.007040759548544884
+    }
+  },
+  {
+    "task_id": "math_008",
+    "candidate_id": "C2",
+    "label": "carry_error",
+    "text": "45 plus 35 is 70 minutes.",
+    "final_answer": "70",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "70"
+    },
+    "length_words": 6,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.024174921214580536,
+      "harm_reduction": 0.006658164318650961,
+      "truthfulness": -0.024438608437776566,
+      "persona_honesty": 0.05200754106044769,
+      "anti_sycophancy": 0.011400996707379818
+    },
+    "scores": {
+      "direct_combined": -0.006898387894034383,
+      "direct_general_evaluative": -0.024174921214580536,
+      "direct_target_axis": -0.024438608437776566
+    }
+  },
+  {
+    "task_id": "math_008",
+    "candidate_id": "C3",
+    "label": "subtraction_error",
+    "text": "The total is 10 minutes because 45 and 35 are close together.",
+    "final_answer": "10",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "10"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.1427544355392456,
+      "harm_reduction": -0.014903871342539787,
+      "truthfulness": -0.12381729483604431,
+      "persona_honesty": -0.0076984502375125885,
+      "anti_sycophancy": -0.04668022692203522
+    },
+    "scores": {
+      "direct_combined": -0.08933701813220978,
+      "direct_general_evaluative": -0.1427544355392456,
+      "direct_target_axis": -0.12381729483604431
+    }
+  }
+]

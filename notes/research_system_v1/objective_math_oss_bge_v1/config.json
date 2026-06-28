@@ -1,0 +1,10 @@
+{
+  "dataset_name": "objective_math_reranking_v1",
+  "purpose": "Exact-answer math reranking benchmark for evaluative embedding selection.",
+  "backend": "sentence_transformers",
+  "probe": {
+    "backend": "sentence_transformers",
+    "model": "BAAI/bge-base-en-v1.5"
+  },
+  "seed": 20260625
+}

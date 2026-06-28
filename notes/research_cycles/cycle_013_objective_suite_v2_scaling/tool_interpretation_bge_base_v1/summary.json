@@ -1,0 +1,42 @@
+{
+  "random": {
+    "tasks": 32,
+    "tasks_solved": 12,
+    "solve_rate": 0.375,
+    "avg_selected_pass_rate": 0.375,
+    "avg_regret_vs_best_available": 0.625,
+    "best_candidate_hit_rate": 0.375
+  },
+  "length": {
+    "tasks": 32,
+    "tasks_solved": 16,
+    "solve_rate": 0.5,
+    "avg_selected_pass_rate": 0.5,
+    "avg_regret_vs_best_available": 0.5,
+    "best_candidate_hit_rate": 0.5
+  },
+  "direct_combined": {
+    "tasks": 32,
+    "tasks_solved": 14,
+    "solve_rate": 0.4375,
+    "avg_selected_pass_rate": 0.4375,
+    "avg_regret_vs_best_available": 0.5625,
+    "best_candidate_hit_rate": 0.4375
+  },
+  "direct_general_evaluative": {
+    "tasks": 32,
+    "tasks_solved": 14,
+    "solve_rate": 0.4375,
+    "avg_selected_pass_rate": 0.4375,
+    "avg_regret_vs_best_available": 0.5625,
+    "best_candidate_hit_rate": 0.4375
+  },
+  "direct_target_axis": {
+    "tasks": 32,
+    "tasks_solved": 13,
+    "solve_rate": 0.40625,
+    "avg_selected_pass_rate": 0.40625,
+    "avg_regret_vs_best_available": 0.59375,
+    "best_candidate_hit_rate": 0.40625
+  }
+}

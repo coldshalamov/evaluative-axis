@@ -1,126 +1,194 @@
-# Evaluative Geometry as Reward Signal
+# The Evaluative Axis: Embedding Geometry as a Quality Signal for LLM Alignment
 
-**Claim**: The evaluative axis (good/bad) in embedding space encodes a general-purpose quality signal that can serve as a direct reward for LLM alignment — without training a reward model, without human labelers, and without LLM-as-judge inference.
+Robin Gattis, June 2026
 
-**Status**: Exploratory research with strong preliminary evidence. The key finding so far is that embedding-axis scoring agrees with corrected human preference on 83–88% of gradeable cases, and in many disagreements with existing labels, the embedding anticipates where human preference norms later converged.
+## What This Is
 
-## The Idea in 30 Seconds
+Evaluation (good/bad) is the primary dimension of human semantic judgment
+(Osgood et al., 1957), and this structure is recoverable from embedding
+geometry (Grand et al., 2022; Kozlowski et al., 2025). We test whether
+projecting text onto evaluative directions in embedding space can serve as
+a cheap alignment signal --- without training a classifier, without labeled
+preference data, and without LLM inference.
 
-Osgood (1957) showed that evaluation (good/bad) is the primary axis of human semantic judgment. Kozlowski et al. (2025) confirmed this axis exists in LLM embedding geometry. We project text onto this axis using 12 anchor sentences and a dot product. The result is a quality score that costs a fraction of a cent, is perfectly deterministic, and captures helpfulness, honesty, safety, and correctness simultaneously — because those properties are geometrically entangled along the evaluative direction.
+## Current Results
 
-## Key Results
+**Objective reranking** (verifiable end metrics, Gemini Embedding 2):
 
-- **Controlled validation**: 70.5% accuracy on 61 statement pairs (Gemini Embedding 2); 86.7% excluding structurally hard sycophancy/honesty cases
-- **HH-RLHF preference prediction**: 55.8% raw agreement with 2022 labels (BGE-small)
-- **Full disagreement audit**: Of 231 embedding-vs-HH disagreements, 65 were embedding-right, 44 were HH-right, 122 were both-bad/trivial. Corrected gradeable agreement: **88.4%**
-- **Label noise detection**: Embedding scoring caught fabricated persona claims, doxxing compliance, misinformation, and racist content that HH-RLHF rewarded
-- **Controlled no-quota sweep**: On a 12-case exact word-count-matched battery, broad direct scoring failed. A later 11/12 = 91.7% Jina result used hand-authored "Good parts"/"Bad parts" decompositions and is now classified as oracle-label leakage: useful as a plumbing sanity check, not evidence that embeddings independently inferred answer quality.
+| Domain | N | Random | Length | Embedding | Cheap OSS best |
+|---|---:|---:|---:|---:|---:|
+| Code | 6 | 50.0% | 50.0% | 83.3% | 50.0% |
+| Math | 8 | 37.5% | 50.0% | 100.0% | 62.5% |
+| Tool | 8 | 37.5% | 37.5% | 87.5% | 50.0% |
 
-## Why This Matters
+All suites are 3-way selection; p-values against 1/3 random: code p=0.018,
+math p < 0.001, tool p=0.003. Length baseline is tiebreak-sensitive on tasks
+with equal-word-count candidates.
 
-Current alignment approaches require either expensive human annotation (RLHF: ~$100/annotation-hour) or full LLM inference for every judgment (RLAIF). Embedding-axis scoring costs near-zero, runs at millions of evaluations per minute, and captures evaluative structure that appears to be deeper than any single dataset's labeling policy.
+Length confound analysis on the code suite: r(length, quality) = 0.19;
+r(score, quality) = 0.60. Length selection scores 3/6 (50%), equal to random.
+On the 2 tasks with a uniquely longest wrong candidate, embedding succeeds on
+both.
 
-The "anticipating later norms" finding — where the embedding preferred responses that align with modern safety standards over responses that HH-RLHF labeled as preferred in 2022 — suggests the geometry isn't just approximating existing labels but recovering underlying evaluative structure from language itself.
+**50-case length-balanced conflict battery** (exact word-count matching):
+
+| Method | Accuracy |
+|---|---:|
+| Raw `good/bad` | 26% |
+| Best proxy word (`useful/useless`) | 42% |
+| Targeted axis (anti-sycophancy) | 98% |
+| Targeted axis (persona honesty) | 96% |
+| Targeted axis (harm reduction) | 94% |
+| Targeted axis (truthfulness) | 90% |
+| Combined targeted axes | 86% |
+
+**Signal concentration gap**: On individual targeted axes, local OSS models
+(384--1024 dim) score 50--74% vs Gemini's 86--98%, and this does not improve
+with model size: Qwen3-Embedding-0.6B (600M params, 1024d) performs comparably
+to 33M-parameter models. Multi-axis PCA does not yield a usable evaluative
+direction — no method-internal orientation rule recovers the correct sign on
+local models (principled orientation gives 16--28%). The frontier advantage
+does not close with scale in the 33M–600M range; its cause is unidentified
+(Gemini's parameter count is undisclosed). On expanded
+objective suites (48 math, 32 tool), individual-axis OSS scoring is at
+or below baseline.
+
+**Random-axis null control**: Individual targeted axes are mostly in the noise
+band on local models (only Snowflake-M at 99.5th percentile). Multi-axis PCA
+yields a negative result: while centered-PC1 of targeted axes separates from
+a matched null (PC1-of-5-random-axes) on 3/5 models, no method-internal
+orientation rule recovers the correct sign — principled orientation gives
+16--28% accuracy, below chance. The 72--84% numbers depend on post-hoc sign
+selection using labels. Local models do not yield a usable zero-shot evaluative
+direction even with PCA.
+
+**Process-potential scoring**: On 12 injected error/repair traces, Gemini
+category-axis scoring detects 91.7% of error drops and 83.3% of repair
+rises, beating length (0%/100%), sentiment (42%/17%), and final-answer-only
+(0%/0%). Dense localization score is 50%, below the frozen 65% training gate.
+
+**HH-RLHF disagreement audit**: 231 cases where embedding disagreed with
+dataset labels. Among gradeable disagreements, embedding was right 58.3%
+of the time. Corrected agreement: 83--88%.
+
+## Honest Negatives
+
+- Raw one-word `good/bad` **fails** as a zero-shot evaluator (26% on the
+  50-case battery). Targeted multi-sentence axes are required.
+- Cheap OSS embedders fail on individual targeted axes regardless of model
+  size (33M--600M params). Multi-axis PCA is also a negative result: no
+  method-internal orientation rule recovers the correct sign on local models.
+- The training-readiness gate has not been met. Process scoring is promising
+  but not yet sharp enough for dense reward.
+- Sycophancy and honesty-hedging are structural blind spots for any
+  surface-text evaluation method.
+- The HH disagreement audit was not blind; provisional until multi-annotator
+  adjudication.
+
+## Reproducing
+
+Requirements: Python 3.10+, a Google API key for Gemini experiments.
+
+```bash
+# Install all dependencies
+pip install -r requirements.txt
+
+# Or install only what you need for local experiments (free, no API key)
+pip install fastembed numpy
+
+# Battery sweep (8 local models, ~5 minutes)
+python scripts/sweep_fastembed_battery.py --interfaces direct
+
+# Word-stripping ablation
+python scripts/run_word_stripping_ablation.py --backend fastembed
+
+# Random-axis null control (verifies signal is axis-specific)
+python scripts/run_random_axis_control.py --n-random 200
+
+# Anchor perturbation (tests axis robustness to anchor rewording)
+python scripts/run_anchor_perturbation.py --backend fastembed
+
+# Cross-category transfer and PCA of axis geometry
+python scripts/run_cross_category_transfer.py --backend fastembed
+
+# Larger open models via sentence-transformers (PC1 analysis)
+pip install sentence-transformers einops
+python scripts/run_large_open_model_battery.py --model BAAI/bge-large-en-v1.5
+python scripts/run_large_open_model_battery.py --model nomic-ai/nomic-embed-text-v1.5
+python scripts/run_large_open_model_battery.py --model Qwen/Qwen3-Embedding-0.6B
+
+# PC1 validation (sign orientation + matched null checks)
+python scripts/validate_pc1_claims.py
+
+# Statistical significance tests
+python scripts/compute_significance.py
+
+# Gemini experiments (requires GOOGLE_API_KEY in .env.local; subject to quota)
+pip install google-genai python-dotenv
+python scripts/run_evaluative_axis_battery.py --backend gemini
+python scripts/run_objective_code_reranking.py   # uses curated candidate sets; see cycle_003 results.md
+```
 
 ## Repository Structure
 
 ```
 paper/
-  draft.md              # Paper draft (argument + evidence)
-  references.md         # Bibliography
+  draft.md                     Full paper draft
 
 methodology/
-  RESEARCH_LOOP_PROTOCOL.md   # Idea/Literature/Experiment/Autopsy/Forest/Decision loop
-  RESEARCH_OPERATING_MODE.md  # Prevents premature metric-chasing
-  MECHANISM_MAP.md            # Where embedding evaluation could fit in the pipeline
-  RIGOR_GUARDRAILS.md   # Self-imposed experimental discipline rules
-  experiment_roadmap.md # Remaining experiments needed
-  templates/            # Fill-in templates for each research mode
+  DECISIVE_EVIDENCE_PLAN.md    What counts as proof, what does not
+  SERIOUS_RESEARCH_SYSTEM_V1.md  Frozen research program with 4 claims
+  NO_LEAKAGE_DECOMPOSITION_PROTOCOL.md  Leakage prevention rules
 
-experiments/            # All experimental results, by phase
-  phase1/               # Axis validation (controlled statement pairs)
-  phase1_gemini/        # Gemini rerun of Phase 1
-  phase2/               # HH-RLHF preference prediction
-  phase2_gemini/        # Gemini rerun (quota-blocked)
-  phase2_open_source/   # BGE model comparisons
-  phase3/               # DPO fine-tuning (not yet run)
-  phase4/               # Original report + figures
-  phase5_verification/  # Context binding test + HH verification
-  phase6_gemini_200/    # Partial Gemini multi-sensor
-  phase6_multi_sensor/  # Multi-sensor across HH, PKU, SHP
+scripts/
+  run_evaluative_axis_battery.py    Score battery with any backend
+  sweep_fastembed_battery.py        Sweep 8 local models on battery
+  run_objective_code_reranking.py   Code reranking with hidden tests
+  run_word_stripping_ablation.py    Evaluative word stripping ablation
+  run_random_axis_control.py        Random-axis null control
+  run_anchor_perturbation.py        Anchor perturbation robustness test
+  run_cross_category_transfer.py    Cross-category transfer and axis PCA
+  run_large_open_model_battery.py    Full battery on larger open models (sentence-transformers)
+  validate_pc1_claims.py             PC1 sign orientation + matched null validation
+  compute_significance.py           Binomial tests and Wilson CIs
+  run_good_vs_proxy_conflicts.py    Raw good/bad vs proxy words
+  run_process_potential_error_repair.py  Error/repair trace scoring
 
-disagreement_audit/     # Full 231-case HH disagreement grading
-  full_grading.md       # All cases with grades + reasoning
-  manual_grading.md     # Initial 30-case audit
-  all_disagreements.json
+notes/research_cycles/
+  cycle_002_*    Battery development and potential shaping
+  cycle_003_*    Objective code reranking (Gemini + OSS)
+  cycle_009_*    8-model OSS battery sweep
+  cycle_010_*    Good-vs-proxy conflict sweep
+  cycle_013_*    Expanded objective suites (48 math, 32 tool)
 
-scripts/                # All experimental scripts
-
-notes/                  # Analysis and logs
-  RESEARCH_NOTES.md     # Detailed analytical notes
-  research_log.md       # Chronological experiment log
-  PHASE2_DIAGNOSIS.md   # Phase 2 failure analysis
-
-infrastructure/         # Implementation artifacts (Codex prompts, setup)
+experiments/research_system_v1/   Objective benchmark specs and results
 ```
 
-## Theoretical Foundation
+## Theoretical Chain
 
-1. **Osgood (1957)**: Evaluation is the primary dimension of human semantic judgment, cross-culturally universal
-2. **Grand et al. (2022)**: Semantic projection onto antonym-defined directions recovers human knowledge from embeddings
-3. **Kozlowski et al. (2025)**: Osgood's dimensions exist in LLM embedding geometry; features are entangled
-4. **Value Entanglement (2026)**: LLMs conflate moral, grammatical, and economic "good" — which for alignment is a feature, not a bug
+1. **Osgood et al. (1957)**: Evaluation is the primary dimension of human
+   semantic judgment, cross-culturally universal.
+2. **Grand et al. (2022)**: Semantic projection recovers human knowledge
+   from embedding geometry (Nature Human Behaviour).
+3. **Kozlowski et al. (2025)**: Osgood's dimensions exist in LLM embeddings;
+   features are entangled along shared directions.
+4. **Cho et al. (2026)**: LLMs conflate moral, grammatical, and economic
+   "good" --- for alignment, this entanglement is the mechanism, not a bug.
 
-## What's Next
+## Key Claim Ladder
 
-The decisive experiment is an **intervention test**: generate multiple candidate responses, score them with the embedding axis, and blind-judge whether embedding-selected outputs beat random, length, sentiment, and LLM-judge baselines. This tests the practical claim directly.
-
-Cycle 001 now contains the first serious version of that plan:
-
-- [cycle_001_next/experiment.md](notes/research_cycles/cycle_001_next/experiment.md):
-  frozen protocol for the no-training candidate-selection benchmark
-- [cycle_001_next/autopsy.md](notes/research_cycles/cycle_001_next/autopsy.md):
-  required example-reading taxonomy
-- [cycle_001_next/forest.md](notes/research_cycles/cycle_001_next/forest.md):
-  broad mechanism synthesis
-- [cycle_001_next/decision.md](notes/research_cycles/cycle_001_next/decision.md):
-  decision to switch from HH agreement to intervention testing
-- [scripts/run_cycle001_intervention.py](scripts/run_cycle001_intervention.py):
-  runnable scaffold with lexical smoke mode and Gemini embedding mode
-- [cycle_001_next/smoke_results/summary.md](notes/research_cycles/cycle_001_next/smoke_results/summary.md):
-  verified no-API smoke output
-- [cycle_001_next/quota_free_results.md](notes/research_cycles/cycle_001_next/quota_free_results.md):
-  50-prompt pilot, cheap baselines, local BGE-small run, and length-bias
-  diagnosis
-- [cycle_002_potential_shaping/results.md](notes/research_cycles/cycle_002_potential_shaping/results.md):
-  controlled minimal-pair results, exact length-balanced v2, and potential
-  shaping reframe
-
-Gemini embedding mode was attempted on the seed fixture and blocked by API
-quota. See
-[cycle_001_next/gemini_smoke_results/quota_blocked.md](notes/research_cycles/cycle_001_next/gemini_smoke_results/quota_blocked.md).
-
-The current quota-free pilot is not a positive intervention result. Local
-BGE-small did not beat the length baseline on the proxy key. That is useful:
-it shows the next pilot must length-balance candidates and rely on blind review
-rather than proxy labels before making practical claims.
-
-Cycle 002 goes one step further: on a 12-case exact word-count-matched battery,
-length and sentiment drop to chance, and local BGE-small broad good/bad scoring
-fails. After fixing a category-axis mapping bug, an 11/12 = 91.7% Jina result
-appeared on answer-plus-decomposition category-axis scoring, but that interface
-used hand-authored "Good parts"/"Bad parts" text. The result is therefore
-classified as oracle-label leakage. The old 50-prompt proxy pilot did not
-validate the method, and a naive cumulative trajectory probe also failed. The
-next clean test is blind, label-free decomposition or raw answer scoring on a
-larger held-out battery.
-
-Before running it, follow `methodology/RESEARCH_LOOP_PROTOCOL.md`: Idea Mode,
-Literature Mode, Experiment Mode, Autopsy Mode, Forest Mode, and Decision Mode.
-The goal is to avoid getting trapped inside a single proxy metric again.
-
-See `methodology/experiment_roadmap.md` for the full plan.
+1. **Geometry exists** (supported): evaluative structure is present in
+   embedding space across domains.
+2. **Selection works** (supported on small suites): embedding scoring beats
+   baselines on objective reranking with a capable model.
+3. **Signal concentration gap** (supported): individual targeted axes fail on
+   all local models tested (33M--600M params) regardless of scale. Multi-axis
+   PCA is a negative result (sign not orientable). The frontier advantage
+   does not close with scale in the 33M–600M range; cause is unidentified
+   (Gemini's parameter count is undisclosed).
+4. **Training readiness** (not yet met): process scoring is promising but
+   below the frozen gate.
 
 ---
 
-*Research by Robin Gattis. June 2026.*
+*Independent research. No institutional affiliation.*

@@ -1,0 +1,10 @@
+{
+  "dataset_name": "tool_interpretation_reranking_v2",
+  "purpose": "Larger frozen exact-answer tool-interpretation reranking benchmark with randomized candidate order and low length confounding.",
+  "backend": "sentence_transformers",
+  "probe": {
+    "backend": "sentence_transformers",
+    "model": "sentence-transformers/all-mpnet-base-v2"
+  },
+  "seed": 20260625
+}

@@ -1,0 +1,13 @@
+# Core (local experiments - free, no API key)
+numpy>=1.24
+fastembed>=0.2
+
+# Larger open models (optional)
+sentence-transformers>=2.2
+einops
+
+# Gemini experiments (optional, requires GOOGLE_API_KEY)
+google-genai>=0.5
+
+# Statistics
+scipy>=1.10

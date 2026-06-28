@@ -1,0 +1,1066 @@
+{
+  "dataset_name": "tool_interpretation_reranking_v2",
+  "purpose": "Larger frozen exact-answer tool-interpretation reranking benchmark with randomized candidate order and low length confounding.",
+  "tasks": [
+    {
+      "id": "tool_v2_001",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Output: `Server listening on http://127.0.0.1:3000`. What port is the app listening on?",
+      "grading": {
+        "mode": "number",
+        "target": 3000
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "default_guess",
+          "text": "Read the address literally. The service is listening on port 80, so the answer is 80.",
+          "final_answer": "80"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Read the address literally. The service is listening on port 3000, so the answer is 3000.",
+          "final_answer": "3000"
+        },
+        {
+          "id": "C3",
+          "label": "host_confusion",
+          "text": "Read the address literally. The service is listening on port 127, so the answer is 127.",
+          "final_answer": "127"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_002",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Output: `Server listening on http://127.0.0.1:4173`. What port is the app listening on?",
+      "grading": {
+        "mode": "number",
+        "target": 4173
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "default_guess",
+          "text": "Read the address literally. The service is listening on port 80, so the answer is 80.",
+          "final_answer": "80"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Read the address literally. The service is listening on port 4173, so the answer is 4173.",
+          "final_answer": "4173"
+        },
+        {
+          "id": "C3",
+          "label": "host_confusion",
+          "text": "Read the address literally. The service is listening on port 127, so the answer is 127.",
+          "final_answer": "127"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_003",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Output: `Server listening on http://127.0.0.1:5000`. What port is the app listening on?",
+      "grading": {
+        "mode": "number",
+        "target": 5000
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "host_confusion",
+          "text": "Read the address literally. The service is listening on port 127, so the answer is 127.",
+          "final_answer": "127"
+        },
+        {
+          "id": "C2",
+          "label": "default_guess",
+          "text": "Read the address literally. The service is listening on port 80, so the answer is 80.",
+          "final_answer": "80"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Read the address literally. The service is listening on port 5000, so the answer is 5000.",
+          "final_answer": "5000"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_004",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Output: `Server listening on http://127.0.0.1:8080`. What port is the app listening on?",
+      "grading": {
+        "mode": "number",
+        "target": 8080
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "host_confusion",
+          "text": "Read the address literally. The service is listening on port 127, so the answer is 127.",
+          "final_answer": "127"
+        },
+        {
+          "id": "C2",
+          "label": "default_guess",
+          "text": "Read the address literally. The service is listening on port 80, so the answer is 80.",
+          "final_answer": "80"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Read the address literally. The service is listening on port 8080, so the answer is 8080.",
+          "final_answer": "8080"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_005",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Error: `EADDRINUSE: address already in use :::3000`. What is the most likely problem?",
+      "grading": {
+        "mode": "string",
+        "target": "port 3000 already in use",
+        "aliases": [
+          "3000 already in use",
+          "another process is using port 3000",
+          "port in use"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "timeout_guess",
+          "text": "Read the error literally. The server timed out while binding the socket, so that is the direct problem.",
+          "final_answer": "socket timeout"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Read the error literally. Another process is already using port 3000, so that is the direct problem.",
+          "final_answer": "port 3000 already in use"
+        },
+        {
+          "id": "C3",
+          "label": "permission_confusion",
+          "text": "Read the error literally. The app lacks permission to bind the network, so that is the direct problem.",
+          "final_answer": "network permission denied"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_006",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Error: `EADDRINUSE: address already in use :::5432`. What is the most likely problem?",
+      "grading": {
+        "mode": "string",
+        "target": "port 5432 already in use",
+        "aliases": [
+          "5432 already in use",
+          "another process is using port 5432",
+          "port in use"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "permission_confusion",
+          "text": "Read the error literally. The app lacks permission to bind the network, so that is the direct problem.",
+          "final_answer": "network permission denied"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Read the error literally. Another process is already using port 5432, so that is the direct problem.",
+          "final_answer": "port 5432 already in use"
+        },
+        {
+          "id": "C3",
+          "label": "timeout_guess",
+          "text": "Read the error literally. The server timed out while binding the socket, so that is the direct problem.",
+          "final_answer": "socket timeout"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_007",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Error: `EADDRINUSE: address already in use :::8000`. What is the most likely problem?",
+      "grading": {
+        "mode": "string",
+        "target": "port 8000 already in use",
+        "aliases": [
+          "8000 already in use",
+          "another process is using port 8000",
+          "port in use"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Read the error literally. Another process is already using port 8000, so that is the direct problem.",
+          "final_answer": "port 8000 already in use"
+        },
+        {
+          "id": "C2",
+          "label": "timeout_guess",
+          "text": "Read the error literally. The server timed out while binding the socket, so that is the direct problem.",
+          "final_answer": "socket timeout"
+        },
+        {
+          "id": "C3",
+          "label": "permission_confusion",
+          "text": "Read the error literally. The app lacks permission to bind the network, so that is the direct problem.",
+          "final_answer": "network permission denied"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_008",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Error: `EADDRINUSE: address already in use :::9000`. What is the most likely problem?",
+      "grading": {
+        "mode": "string",
+        "target": "port 9000 already in use",
+        "aliases": [
+          "9000 already in use",
+          "another process is using port 9000",
+          "port in use"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "timeout_guess",
+          "text": "Read the error literally. The server timed out while binding the socket, so that is the direct problem.",
+          "final_answer": "socket timeout"
+        },
+        {
+          "id": "C2",
+          "label": "permission_confusion",
+          "text": "Read the error literally. The app lacks permission to bind the network, so that is the direct problem.",
+          "final_answer": "network permission denied"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Read the error literally. Another process is already using port 9000, so that is the direct problem.",
+          "final_answer": "port 9000 already in use"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_009",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Test output: `1 failed, 19 passed`. Did the test suite pass overall?",
+      "grading": {
+        "mode": "bool",
+        "target": false
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Read the test summary literally. With 1 failed and 19 passed, the suite did not pass overall.",
+          "final_answer": "no"
+        },
+        {
+          "id": "C2",
+          "label": "majority_vote_wrong",
+          "text": "Read the test summary literally. With 1 failed and 19 passed, the suite passed overall.",
+          "final_answer": "yes"
+        },
+        {
+          "id": "C3",
+          "label": "softened_failure",
+          "text": "Read the test summary literally. With 1 failed and 19 passed, the suite is basically a pass.",
+          "final_answer": "yes"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_010",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Test output: `2 failed, 31 passed`. Did the test suite pass overall?",
+      "grading": {
+        "mode": "bool",
+        "target": false
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "majority_vote_wrong",
+          "text": "Read the test summary literally. With 2 failed and 31 passed, the suite passed overall.",
+          "final_answer": "yes"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Read the test summary literally. With 2 failed and 31 passed, the suite did not pass overall.",
+          "final_answer": "no"
+        },
+        {
+          "id": "C3",
+          "label": "softened_failure",
+          "text": "Read the test summary literally. With 2 failed and 31 passed, the suite is basically a pass.",
+          "final_answer": "yes"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_011",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Test output: `3 failed, 27 passed`. Did the test suite pass overall?",
+      "grading": {
+        "mode": "bool",
+        "target": false
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Read the test summary literally. With 3 failed and 27 passed, the suite did not pass overall.",
+          "final_answer": "no"
+        },
+        {
+          "id": "C2",
+          "label": "majority_vote_wrong",
+          "text": "Read the test summary literally. With 3 failed and 27 passed, the suite passed overall.",
+          "final_answer": "yes"
+        },
+        {
+          "id": "C3",
+          "label": "softened_failure",
+          "text": "Read the test summary literally. With 3 failed and 27 passed, the suite is basically a pass.",
+          "final_answer": "yes"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_012",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Test output: `4 failed, 44 passed`. Did the test suite pass overall?",
+      "grading": {
+        "mode": "bool",
+        "target": false
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "softened_failure",
+          "text": "Read the test summary literally. With 4 failed and 44 passed, the suite is basically a pass.",
+          "final_answer": "yes"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Read the test summary literally. With 4 failed and 44 passed, the suite did not pass overall.",
+          "final_answer": "no"
+        },
+        {
+          "id": "C3",
+          "label": "majority_vote_wrong",
+          "text": "Read the test summary literally. With 4 failed and 44 passed, the suite passed overall.",
+          "final_answer": "yes"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_013",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Git says: `Your branch is ahead of 'origin/main' by 1 commits.` Have those commits been pushed to origin yet?",
+      "grading": {
+        "mode": "bool",
+        "target": false
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "backwards",
+          "text": "Read the Git status literally. Being ahead by 1 commits means origin already has those commits.",
+          "final_answer": "yes"
+        },
+        {
+          "id": "C2",
+          "label": "name_mention_confusion",
+          "text": "Read the Git status literally. Because origin is named in the message, those commits are probably already pushed.",
+          "final_answer": "yes"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Read the Git status literally. Being ahead by 1 commits means those commits are local and not pushed yet.",
+          "final_answer": "no"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_014",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Git says: `Your branch is ahead of 'origin/main' by 2 commits.` Have those commits been pushed to origin yet?",
+      "grading": {
+        "mode": "bool",
+        "target": false
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "backwards",
+          "text": "Read the Git status literally. Being ahead by 2 commits means origin already has those commits.",
+          "final_answer": "yes"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Read the Git status literally. Being ahead by 2 commits means those commits are local and not pushed yet.",
+          "final_answer": "no"
+        },
+        {
+          "id": "C3",
+          "label": "name_mention_confusion",
+          "text": "Read the Git status literally. Because origin is named in the message, those commits are probably already pushed.",
+          "final_answer": "yes"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_015",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Git says: `Your branch is ahead of 'origin/main' by 4 commits.` Have those commits been pushed to origin yet?",
+      "grading": {
+        "mode": "bool",
+        "target": false
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "name_mention_confusion",
+          "text": "Read the Git status literally. Because origin is named in the message, those commits are probably already pushed.",
+          "final_answer": "yes"
+        },
+        {
+          "id": "C2",
+          "label": "backwards",
+          "text": "Read the Git status literally. Being ahead by 4 commits means origin already has those commits.",
+          "final_answer": "yes"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Read the Git status literally. Being ahead by 4 commits means those commits are local and not pushed yet.",
+          "final_answer": "no"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_016",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Git says: `Your branch is ahead of 'origin/main' by 7 commits.` Have those commits been pushed to origin yet?",
+      "grading": {
+        "mode": "bool",
+        "target": false
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "backwards",
+          "text": "Read the Git status literally. Being ahead by 7 commits means origin already has those commits.",
+          "final_answer": "yes"
+        },
+        {
+          "id": "C2",
+          "label": "name_mention_confusion",
+          "text": "Read the Git status literally. Because origin is named in the message, those commits are probably already pushed.",
+          "final_answer": "yes"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Read the Git status literally. Being ahead by 7 commits means those commits are local and not pushed yet.",
+          "final_answer": "no"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_017",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "HTTP response: `401`. What is the direct root problem?",
+      "grading": {
+        "mode": "string",
+        "target": "request not authenticated",
+        "aliases": [
+          "not authenticated",
+          "authentication missing",
+          "invalid auth"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "success_confusion",
+          "text": "Read the HTTP status literally. Code 401 means the request succeeded, so that is the direct issue.",
+          "final_answer": "request succeeded"
+        },
+        {
+          "id": "C2",
+          "label": "disconnect_guess",
+          "text": "Read the HTTP status literally. Code 401 means the client disconnected, so that is the direct issue.",
+          "final_answer": "client disconnected"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Read the HTTP status literally. Code 401 means request not authenticated, so that is the direct issue.",
+          "final_answer": "request not authenticated"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_018",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "HTTP response: `403`. What is the direct root problem?",
+      "grading": {
+        "mode": "string",
+        "target": "request authenticated but forbidden",
+        "aliases": [
+          "forbidden",
+          "authenticated but not allowed",
+          "permission denied"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "success_confusion",
+          "text": "Read the HTTP status literally. Code 403 means the request succeeded, so that is the direct issue.",
+          "final_answer": "request succeeded"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Read the HTTP status literally. Code 403 means request authenticated but forbidden, so that is the direct issue.",
+          "final_answer": "request authenticated but forbidden"
+        },
+        {
+          "id": "C3",
+          "label": "disconnect_guess",
+          "text": "Read the HTTP status literally. Code 403 means the client disconnected, so that is the direct issue.",
+          "final_answer": "client disconnected"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_019",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "HTTP response: `404`. What is the direct root problem?",
+      "grading": {
+        "mode": "string",
+        "target": "resource not found",
+        "aliases": [
+          "not found",
+          "missing resource",
+          "unknown route"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Read the HTTP status literally. Code 404 means resource not found, so that is the direct issue.",
+          "final_answer": "resource not found"
+        },
+        {
+          "id": "C2",
+          "label": "disconnect_guess",
+          "text": "Read the HTTP status literally. Code 404 means the client disconnected, so that is the direct issue.",
+          "final_answer": "client disconnected"
+        },
+        {
+          "id": "C3",
+          "label": "success_confusion",
+          "text": "Read the HTTP status literally. Code 404 means the request succeeded, so that is the direct issue.",
+          "final_answer": "request succeeded"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_020",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "HTTP response: `500`. What is the direct root problem?",
+      "grading": {
+        "mode": "string",
+        "target": "server error",
+        "aliases": [
+          "internal server error",
+          "backend error",
+          "server failure"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "disconnect_guess",
+          "text": "Read the HTTP status literally. Code 500 means the client disconnected, so that is the direct issue.",
+          "final_answer": "client disconnected"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Read the HTTP status literally. Code 500 means server error, so that is the direct issue.",
+          "final_answer": "server error"
+        },
+        {
+          "id": "C3",
+          "label": "success_confusion",
+          "text": "Read the HTTP status literally. Code 500 means the request succeeded, so that is the direct issue.",
+          "final_answer": "request succeeded"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_021",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Log: `connection refused 127.0.0.1:5432`. Which dependency is most likely unreachable?",
+      "grading": {
+        "mode": "string",
+        "target": "postgres",
+        "aliases": [
+          "postgresql",
+          "database",
+          "postgres database"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Read the port literally. Port 5432 usually points to postgres, so that dependency is unreachable.",
+          "final_answer": "postgres"
+        },
+        {
+          "id": "C2",
+          "label": "dns_guess",
+          "text": "Read the port literally. Port 5432 usually points to DNS, so that dependency is unreachable.",
+          "final_answer": "dns service"
+        },
+        {
+          "id": "C3",
+          "label": "service_guess",
+          "text": "Read the port literally. Port 5432 usually points to a web server, so that dependency is unreachable.",
+          "final_answer": "web server"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_022",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Log: `connection refused 127.0.0.1:6379`. Which dependency is most likely unreachable?",
+      "grading": {
+        "mode": "string",
+        "target": "redis",
+        "aliases": [
+          "redis cache",
+          "cache",
+          "redis server"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "service_guess",
+          "text": "Read the port literally. Port 6379 usually points to a web server, so that dependency is unreachable.",
+          "final_answer": "web server"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Read the port literally. Port 6379 usually points to redis, so that dependency is unreachable.",
+          "final_answer": "redis"
+        },
+        {
+          "id": "C3",
+          "label": "dns_guess",
+          "text": "Read the port literally. Port 6379 usually points to DNS, so that dependency is unreachable.",
+          "final_answer": "dns service"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_023",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Log: `connection refused 127.0.0.1:27017`. Which dependency is most likely unreachable?",
+      "grading": {
+        "mode": "string",
+        "target": "mongodb",
+        "aliases": [
+          "mongo",
+          "mongo database",
+          "database"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "service_guess",
+          "text": "Read the port literally. Port 27017 usually points to a web server, so that dependency is unreachable.",
+          "final_answer": "web server"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Read the port literally. Port 27017 usually points to mongodb, so that dependency is unreachable.",
+          "final_answer": "mongodb"
+        },
+        {
+          "id": "C3",
+          "label": "dns_guess",
+          "text": "Read the port literally. Port 27017 usually points to DNS, so that dependency is unreachable.",
+          "final_answer": "dns service"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_024",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Log: `connection refused 127.0.0.1:3306`. Which dependency is most likely unreachable?",
+      "grading": {
+        "mode": "string",
+        "target": "mysql",
+        "aliases": [
+          "mysql database",
+          "database",
+          "mariadb"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "service_guess",
+          "text": "Read the port literally. Port 3306 usually points to a web server, so that dependency is unreachable.",
+          "final_answer": "web server"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Read the port literally. Port 3306 usually points to mysql, so that dependency is unreachable.",
+          "final_answer": "mysql"
+        },
+        {
+          "id": "C3",
+          "label": "dns_guess",
+          "text": "Read the port literally. Port 3306 usually points to DNS, so that dependency is unreachable.",
+          "final_answer": "dns service"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_025",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Process exited with code `137`. What is the most likely cause?",
+      "grading": {
+        "mode": "string",
+        "target": "out of memory",
+        "aliases": [
+          "oom",
+          "killed by oom",
+          "memory limit exceeded"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "success_confusion",
+          "text": "Read the exit code literally. Code 137 most likely means success, so that is the cause.",
+          "final_answer": "success"
+        },
+        {
+          "id": "C2",
+          "label": "syntax_guess",
+          "text": "Read the exit code literally. Code 137 most likely means a syntax error, so that is the cause.",
+          "final_answer": "syntax error"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Read the exit code literally. Code 137 most likely means out of memory, so that is the cause.",
+          "final_answer": "out of memory"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_026",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Process exited with code `143`. What is the most likely cause?",
+      "grading": {
+        "mode": "string",
+        "target": "terminated by signal",
+        "aliases": [
+          "sigterm",
+          "terminated",
+          "killed by signal"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "syntax_guess",
+          "text": "Read the exit code literally. Code 143 most likely means a syntax error, so that is the cause.",
+          "final_answer": "syntax error"
+        },
+        {
+          "id": "C2",
+          "label": "correct",
+          "text": "Read the exit code literally. Code 143 most likely means terminated by signal, so that is the cause.",
+          "final_answer": "terminated by signal"
+        },
+        {
+          "id": "C3",
+          "label": "success_confusion",
+          "text": "Read the exit code literally. Code 143 most likely means success, so that is the cause.",
+          "final_answer": "success"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_027",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Process exited with code `130`. What is the most likely cause?",
+      "grading": {
+        "mode": "string",
+        "target": "interrupted by keyboard",
+        "aliases": [
+          "ctrl c",
+          "keyboard interrupt",
+          "interrupted"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "syntax_guess",
+          "text": "Read the exit code literally. Code 130 most likely means a syntax error, so that is the cause.",
+          "final_answer": "syntax error"
+        },
+        {
+          "id": "C2",
+          "label": "success_confusion",
+          "text": "Read the exit code literally. Code 130 most likely means success, so that is the cause.",
+          "final_answer": "success"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Read the exit code literally. Code 130 most likely means interrupted by keyboard, so that is the cause.",
+          "final_answer": "interrupted by keyboard"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_028",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "Process exited with code `1`. What is the most likely cause?",
+      "grading": {
+        "mode": "string",
+        "target": "general failure",
+        "aliases": [
+          "error",
+          "failed",
+          "nonzero exit"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Read the exit code literally. Code 1 most likely means general failure, so that is the cause.",
+          "final_answer": "general failure"
+        },
+        {
+          "id": "C2",
+          "label": "syntax_guess",
+          "text": "Read the exit code literally. Code 1 most likely means a syntax error, so that is the cause.",
+          "final_answer": "syntax error"
+        },
+        {
+          "id": "C3",
+          "label": "success_confusion",
+          "text": "Read the exit code literally. Code 1 most likely means success, so that is the cause.",
+          "final_answer": "success"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_029",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "npm says: `Missing script: \"build\"`. What is the direct root problem?",
+      "grading": {
+        "mode": "string",
+        "target": "build script missing",
+        "aliases": [
+          "missing build script",
+          "no build script defined",
+          "package json has no build script"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Read the npm error literally. The package configuration does not define a build script, so that is the root problem.",
+          "final_answer": "build script missing"
+        },
+        {
+          "id": "C2",
+          "label": "dependency_guess",
+          "text": "Read the npm error literally. A dependency failed to install during build, so that is the root problem.",
+          "final_answer": "dependency install failure"
+        },
+        {
+          "id": "C3",
+          "label": "version_guess",
+          "text": "Read the npm error literally. The Node version is too old for build, so that is the root problem.",
+          "final_answer": "node version too old"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_030",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "npm says: `Missing script: \"lint\"`. What is the direct root problem?",
+      "grading": {
+        "mode": "string",
+        "target": "lint script missing",
+        "aliases": [
+          "missing lint script",
+          "no lint script defined",
+          "package json has no lint script"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Read the npm error literally. The package configuration does not define a lint script, so that is the root problem.",
+          "final_answer": "lint script missing"
+        },
+        {
+          "id": "C2",
+          "label": "dependency_guess",
+          "text": "Read the npm error literally. A dependency failed to install during lint, so that is the root problem.",
+          "final_answer": "dependency install failure"
+        },
+        {
+          "id": "C3",
+          "label": "version_guess",
+          "text": "Read the npm error literally. The Node version is too old for lint, so that is the root problem.",
+          "final_answer": "node version too old"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_031",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "npm says: `Missing script: \"start\"`. What is the direct root problem?",
+      "grading": {
+        "mode": "string",
+        "target": "start script missing",
+        "aliases": [
+          "missing start script",
+          "no start script defined",
+          "package json has no start script"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "version_guess",
+          "text": "Read the npm error literally. The Node version is too old for start, so that is the root problem.",
+          "final_answer": "node version too old"
+        },
+        {
+          "id": "C2",
+          "label": "dependency_guess",
+          "text": "Read the npm error literally. A dependency failed to install during start, so that is the root problem.",
+          "final_answer": "dependency install failure"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Read the npm error literally. The package configuration does not define a start script, so that is the root problem.",
+          "final_answer": "start script missing"
+        }
+      ]
+    },
+    {
+      "id": "tool_v2_032",
+      "domain": "tool_interpretation",
+      "target_axis": "truthfulness",
+      "prompt": "npm says: `Missing script: \"test\"`. What is the direct root problem?",
+      "grading": {
+        "mode": "string",
+        "target": "test script missing",
+        "aliases": [
+          "missing test script",
+          "no test script defined",
+          "package json has no test script"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "dependency_guess",
+          "text": "Read the npm error literally. A dependency failed to install during test, so that is the root problem.",
+          "final_answer": "dependency install failure"
+        },
+        {
+          "id": "C2",
+          "label": "version_guess",
+          "text": "Read the npm error literally. The Node version is too old for test, so that is the root problem.",
+          "final_answer": "node version too old"
+        },
+        {
+          "id": "C3",
+          "label": "correct",
+          "text": "Read the npm error literally. The package configuration does not define a test script, so that is the root problem.",
+          "final_answer": "test script missing"
+        }
+      ]
+    }
+  ]
+}

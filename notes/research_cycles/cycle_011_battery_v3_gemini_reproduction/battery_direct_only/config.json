@@ -1,0 +1,10 @@
+{
+  "backend": "gemini",
+  "model": null,
+  "key_source": "environment; rotated_keys=1",
+  "probe": {
+    "model": "gemini-embedding-2",
+    "dimension": 3072,
+    "norm": 1.0
+  }
+}

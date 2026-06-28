@@ -1,0 +1,5 @@
+{
+  "backend": "fastembed",
+  "model": "nomic-ai/nomic-embed-text-v1.5-Q",
+  "cache_dir": "C:\\Users\\93rob\\.cache\\codex-fastembed"
+}

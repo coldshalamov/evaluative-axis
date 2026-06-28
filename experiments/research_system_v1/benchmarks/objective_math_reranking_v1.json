@@ -1,0 +1,247 @@
+{
+  "dataset_name": "objective_math_reranking_v1",
+  "purpose": "Exact-answer math reranking benchmark for evaluative embedding selection.",
+  "tasks": [
+    {
+      "id": "math_001",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 17 multiplied by 19?",
+      "grading": {
+        "mode": "number",
+        "target": 323
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "17 multiplied by 19 equals 323.",
+          "final_answer": "323"
+        },
+        {
+          "id": "C2",
+          "label": "off_by_ten",
+          "text": "17 times 19 is 313.",
+          "final_answer": "313"
+        },
+        {
+          "id": "C3",
+          "label": "reasoning_looking_wrong",
+          "text": "Using 20 times 17 minus 17, the result should be 303.",
+          "final_answer": "303"
+        }
+      ]
+    },
+    {
+      "id": "math_002",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "Solve for x: 3x + 5 = 20.",
+      "grading": {
+        "mode": "number",
+        "target": 5
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Subtract 5 to get 3x = 15, then divide by 3. x = 5.",
+          "final_answer": "5"
+        },
+        {
+          "id": "C2",
+          "label": "sign_error",
+          "text": "3x = 25, so x is 25 divided by 3.",
+          "final_answer": "8.3333333333"
+        },
+        {
+          "id": "C3",
+          "label": "subtract_then_forget_divide",
+          "text": "Move 5 to the other side and get x = 15.",
+          "final_answer": "15"
+        }
+      ]
+    },
+    {
+      "id": "math_003",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 15% of 240?",
+      "grading": {
+        "mode": "number",
+        "target": 36
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "10% of 240 is 24 and 5% is 12, so 15% is 36.",
+          "final_answer": "36"
+        },
+        {
+          "id": "C2",
+          "label": "decimal_place_error",
+          "text": "0.15 times 240 gives 3.6.",
+          "final_answer": "3.6"
+        },
+        {
+          "id": "C3",
+          "label": "half_of_15_percent",
+          "text": "15% of 240 is 18.",
+          "final_answer": "18"
+        }
+      ]
+    },
+    {
+      "id": "math_004",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is the perimeter of a rectangle with width 3 and height 5?",
+      "grading": {
+        "mode": "number",
+        "target": 16
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "Perimeter is 2 times width plus height, so 2 x (3 + 5) = 16.",
+          "final_answer": "16"
+        },
+        {
+          "id": "C2",
+          "label": "area_instead",
+          "text": "3 times 5 equals 15, so the answer is 15.",
+          "final_answer": "15"
+        },
+        {
+          "id": "C3",
+          "label": "missing_factor",
+          "text": "Add the two sides to get 3 + 5 = 8.",
+          "final_answer": "8"
+        }
+      ]
+    },
+    {
+      "id": "math_005",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is 2 to the 5th power minus 6?",
+      "grading": {
+        "mode": "number",
+        "target": 26
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "2 to the 5th power is 32, and 32 minus 6 is 26.",
+          "final_answer": "26"
+        },
+        {
+          "id": "C2",
+          "label": "power_error",
+          "text": "2 to the 5th power is 25, and 25 minus 6 is 19.",
+          "final_answer": "19"
+        },
+        {
+          "id": "C3",
+          "label": "subtraction_error",
+          "text": "2 to the 5th power is 32, and 32 minus 6 is 28.",
+          "final_answer": "28"
+        }
+      ]
+    },
+    {
+      "id": "math_006",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is the mean of 2, 4, 6, and 8?",
+      "grading": {
+        "mode": "number",
+        "target": 5
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "The numbers sum to 20, and 20 divided by 4 is 5.",
+          "final_answer": "5"
+        },
+        {
+          "id": "C2",
+          "label": "divide_by_three",
+          "text": "The sum is 20 and dividing by 3 gives about 6.67.",
+          "final_answer": "6.67"
+        },
+        {
+          "id": "C3",
+          "label": "median_confusion",
+          "text": "The middle values are 4 and 6, so the answer is 4.",
+          "final_answer": "4"
+        }
+      ]
+    },
+    {
+      "id": "math_007",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "What is one half plus three quarters?",
+      "grading": {
+        "mode": "number",
+        "target": 1.25,
+        "tolerance": 1e-09
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "One half is 0.5 and three quarters is 0.75, so the total is 1.25.",
+          "final_answer": "1.25"
+        },
+        {
+          "id": "C2",
+          "label": "denominator_addition_error",
+          "text": "Add numerators and denominators to get 4 over 6, which is about 0.67.",
+          "final_answer": "0.67"
+        },
+        {
+          "id": "C3",
+          "label": "whole_number_error",
+          "text": "A half plus three quarters is 1.",
+          "final_answer": "1"
+        }
+      ]
+    },
+    {
+      "id": "math_008",
+      "domain": "math",
+      "target_axis": "truthfulness",
+      "prompt": "If a notebook ran for 45 minutes and then another 35 minutes, how many minutes total is that?",
+      "grading": {
+        "mode": "number",
+        "target": 80
+      },
+      "candidates": [
+        {
+          "id": "C1",
+          "label": "correct",
+          "text": "45 plus 35 equals 80 minutes total.",
+          "final_answer": "80"
+        },
+        {
+          "id": "C2",
+          "label": "carry_error",
+          "text": "45 plus 35 is 70 minutes.",
+          "final_answer": "70"
+        },
+        {
+          "id": "C3",
+          "label": "subtraction_error",
+          "text": "The total is 10 minutes because 45 and 35 are close together.",
+          "final_answer": "10"
+        }
+      ]
+    }
+  ]
+}

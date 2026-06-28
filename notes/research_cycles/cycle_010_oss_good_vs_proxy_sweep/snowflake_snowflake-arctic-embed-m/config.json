@@ -1,0 +1,21 @@
+{
+  "input": "notes\\research_cycles\\cycle_002_potential_shaping\\controlled_evaluative_axis_battery_v3_50_cases.jsonl",
+  "backend": "fastembed",
+  "probe": {
+    "backend": "fastembed",
+    "model": "snowflake/snowflake-arctic-embed-m",
+    "cache_dir": "C:\\Users\\93rob\\.cache\\codex-fastembed"
+  },
+  "axis_names": [
+    "raw_good_bad",
+    "sentence_good_bad",
+    "raw_true_false",
+    "raw_truthful_untruthful",
+    "raw_honest_dishonest",
+    "raw_useful_useless",
+    "raw_helpful_unhelpful",
+    "raw_accurate_inaccurate",
+    "raw_correct_incorrect",
+    "raw_safe_unsafe"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "dataset_name": "tool_interpretation_reranking_v1",
+  "purpose": "Exact-answer tool-output interpretation benchmark for evaluative embedding selection.",
+  "backend": "gemini",
+  "probe": {
+    "model": "gemini-embedding-2",
+    "dimension": 3072,
+    "norm": 1.0,
+    "backend": "gemini",
+    "key_source": "environment; rotated_keys=1"
+  },
+  "seed": 20260625
+}

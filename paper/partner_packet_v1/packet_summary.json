@@ -1,0 +1,211 @@
+{
+  "program_name": "serious_research_system_v1",
+  "claim_gate_status": {
+    "capacity_code_gate": {
+      "status": "pass",
+      "detail": "gap 0.333 >= 0.200"
+    },
+    "behavior_basis_gate": {
+      "status": "pass",
+      "detail": "0.917 >= 0.600"
+    },
+    "capacity_cross_domain_gate": {
+      "status": "pass",
+      "detail": "2/2 comparisons passed; pass(0.375), pass(0.375)"
+    },
+    "cross_domain_selection_gate": {
+      "status": "pass",
+      "detail": "3/3 comparisons passed; pass(0.333), pass(0.500), pass(0.500)"
+    },
+    "process_potential_gate": {
+      "status": "fail",
+      "detail": "0.500 >= 0.650"
+    },
+    "training_readiness_gate": {
+      "status": "fail",
+      "detail": "capacity_code_gate=pass, capacity_cross_domain_gate=pass, behavior_basis_gate=pass, cross_domain_selection_gate=pass, process_potential_gate=fail"
+    }
+  },
+  "objective_selection": {
+    "code": {
+      "baseline": 0.5,
+      "gemini": 0.8333333333333334,
+      "oss_bge": 0.5,
+      "oss_mpnet": 0.16666666666666666
+    },
+    "math": {
+      "baseline": 0.5,
+      "gemini": 1.0,
+      "oss_bge": 0.625
+    },
+    "tool_interpretation": {
+      "baseline": 0.375,
+      "gemini": 0.875,
+      "oss_bge": 0.5
+    }
+  },
+  "word_vs_targeted": {
+    "gemini_raw_good_bad": 0.26,
+    "gemini_sentence_good_bad": 0.3,
+    "gemini_best_proxy_name": "raw_useful_useless",
+    "gemini_best_proxy_accuracy": 0.42,
+    "bge_raw_good_bad": 0.28,
+    "bge_best_proxy_name": "raw_honest_dishonest",
+    "bge_best_proxy_accuracy": 0.3,
+    "gemini_direct_general_evaluative": 0.46,
+    "gemini_direct_combined": 0.86,
+    "gemini_direct_category_axis": 0.86,
+    "gemini_direct_truthfulness": 0.9,
+    "gemini_direct_harm_reduction": 0.94,
+    "gemini_direct_persona_honesty": 0.96,
+    "gemini_direct_anti_sycophancy": 0.98
+  },
+  "process_signal": {
+    "gemini_category_axis_dense": 0.5,
+    "gemini_combined_dense": 0.625,
+    "gemini_error_drop": 0.9166666666666666,
+    "gemini_repair_rise": 0.8333333333333334,
+    "gemini_final_answer_only_combined_dense": 0.0,
+    "gemini_sentiment_dense": 0.08333333333333333,
+    "gemini_length_dense": 0.0,
+    "bge_category_axis_dense": 0.20833333333333334,
+    "bge_combined_dense": 0.16666666666666666
+  },
+  "blind_review_pilot": {
+    "direct_anti_sycophancy__vs__length": {
+      "focus_wins": 3,
+      "baseline_wins": 6,
+      "ties": 1,
+      "focus_win_rate_decided": 0.3333333333333333
+    },
+    "direct_anti_sycophancy__vs__random": {
+      "focus_wins": 3,
+      "baseline_wins": 5,
+      "ties": 2,
+      "focus_win_rate_decided": 0.375
+    },
+    "direct_anti_sycophancy__vs__refusal_heuristic": {
+      "focus_wins": 1,
+      "baseline_wins": 7,
+      "ties": 2,
+      "focus_win_rate_decided": 0.125
+    },
+    "direct_anti_sycophancy__vs__sentiment": {
+      "focus_wins": 5,
+      "baseline_wins": 1,
+      "ties": 4,
+      "focus_win_rate_decided": 0.8333333333333334
+    },
+    "direct_category_axis__vs__length": {
+      "focus_wins": 1,
+      "baseline_wins": 8,
+      "ties": 1,
+      "focus_win_rate_decided": 0.1111111111111111
+    },
+    "direct_category_axis__vs__random": {
+      "focus_wins": 5,
+      "baseline_wins": 3,
+      "ties": 2,
+      "focus_win_rate_decided": 0.625
+    },
+    "direct_category_axis__vs__refusal_heuristic": {
+      "focus_wins": 2,
+      "baseline_wins": 5,
+      "ties": 3,
+      "focus_win_rate_decided": 0.2857142857142857
+    },
+    "direct_category_axis__vs__sentiment": {
+      "focus_wins": 8,
+      "baseline_wins": 1,
+      "ties": 1,
+      "focus_win_rate_decided": 0.8888888888888888
+    }
+  },
+  "blind_review_gemini_followup": {
+    "direct_category_axis__vs__length": {
+      "focus_wins": 2,
+      "baseline_wins": 8,
+      "ties": 0,
+      "focus_win_rate_decided": 0.2
+    },
+    "direct_category_axis__vs__random": {
+      "focus_wins": 5,
+      "baseline_wins": 4,
+      "ties": 1,
+      "focus_win_rate_decided": 0.5555555555555556
+    },
+    "direct_category_axis__vs__refusal_heuristic": {
+      "focus_wins": 0,
+      "baseline_wins": 8,
+      "ties": 2,
+      "focus_win_rate_decided": 0.0
+    },
+    "direct_category_axis__vs__sentiment": {
+      "focus_wins": 10,
+      "baseline_wins": 0,
+      "ties": 0,
+      "focus_win_rate_decided": 1.0
+    },
+    "direct_harm_reduction__vs__length": {
+      "focus_wins": 3,
+      "baseline_wins": 7,
+      "ties": 0,
+      "focus_win_rate_decided": 0.3
+    },
+    "direct_harm_reduction__vs__random": {
+      "focus_wins": 8,
+      "baseline_wins": 1,
+      "ties": 1,
+      "focus_win_rate_decided": 0.8888888888888888
+    },
+    "direct_harm_reduction__vs__refusal_heuristic": {
+      "focus_wins": 3,
+      "baseline_wins": 5,
+      "ties": 2,
+      "focus_win_rate_decided": 0.375
+    },
+    "direct_harm_reduction__vs__sentiment": {
+      "focus_wins": 9,
+      "baseline_wins": 0,
+      "ties": 1,
+      "focus_win_rate_decided": 1.0
+    }
+  },
+  "blind_review_bge_harm_followup": {
+    "direct_harm_reduction_vs_length": {
+      "focus_wins": 1,
+      "baseline_wins": 7,
+      "ties": 2,
+      "focus_win_rate_decided": 0.125
+    },
+    "direct_harm_reduction_vs_random": {
+      "focus_wins": 2,
+      "baseline_wins": 6,
+      "ties": 2,
+      "focus_win_rate_decided": 0.25
+    },
+    "direct_harm_reduction_vs_refusal_heuristic": {
+      "focus_wins": 2,
+      "baseline_wins": 8,
+      "ties": 0,
+      "focus_win_rate_decided": 0.2
+    },
+    "direct_harm_reduction_vs_sentiment": {
+      "focus_wins": 5,
+      "baseline_wins": 2,
+      "ties": 2,
+      "focus_win_rate_decided": 0.7142857142857143
+    }
+  },
+  "local_word_sweep": {
+    "best_local_raw_model": "snowflake/snowflake-arctic-embed-m",
+    "best_local_raw_good_bad": 0.48,
+    "best_local_sentence_model": "snowflake/snowflake-arctic-embed-m",
+    "best_local_sentence_good_bad": 0.36,
+    "best_local_proxy_model": "snowflake/snowflake-arctic-embed-m",
+    "best_local_proxy_name": "raw_helpful_unhelpful",
+    "best_local_proxy_accuracy": 0.58,
+    "local_models_raw_good_bad_below_30_count": 7,
+    "local_models_total": 8
+  }
+}

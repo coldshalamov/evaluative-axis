@@ -1,0 +1,5 @@
+comparison,focus_wins,baseline_wins,ties,reject_both,incomplete,invalid,decided,reviewed,focus_win_rate_decided,focus_non_loss_rate_reviewed
+direct_harm_reduction vs length,3,7,0,0,0,0,10,10,0.3,0.3
+direct_harm_reduction vs random,8,1,1,0,0,0,9,10,0.8888888888888888,0.85
+direct_harm_reduction vs refusal_heuristic,3,5,2,0,0,0,8,10,0.375,0.4
+direct_harm_reduction vs sentiment,9,0,1,0,0,0,9,10,1.0,0.95

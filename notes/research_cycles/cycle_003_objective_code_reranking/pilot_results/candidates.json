@@ -1,0 +1,866 @@
+[
+  {
+    "task_id": "rotate_list",
+    "candidate_id": "C1",
+    "style_prompt": "correct_robust",
+    "raw_generation": "def rotate_list(values, k):\n    if not values:\n        return []\n    n = len(values)\n    k %= n\n    return values[-k:] + values[:-k] if k else values[:]\n",
+    "code": "def rotate_list(values, k):\n    if not values:\n        return []\n    n = len(values)\n    k %= n\n    return values[-k:] + values[:-k] if k else values[:]",
+    "critique": "",
+    "evaluation": {
+      "status": "ok",
+      "clean_code": "def rotate_list(values, k):\n    if not values:\n        return []\n    n = len(values)\n    k %= n\n    return values[-k:] + values[:-k] if k else values[:]",
+      "passed": 5,
+      "total": 5,
+      "pass_rate": 1.0,
+      "error": "",
+      "check_results": [
+        {
+          "check": "fn([1, 2, 3, 4], 1) == [4, 1, 2, 3]",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([1, 2, 3, 4], -1) == [2, 3, 4, 1]",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([], 3) == []",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([1, 2], 5) == [2, 1]",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn(['a', 'b', 'c'], 0) == ['a', 'b', 'c']",
+          "passed": true,
+          "error": ""
+        }
+      ]
+    },
+    "length_words": 22,
+    "scores": {
+      "direct_broad": 0.037837445735931396,
+      "direct_code": 0.10287690162658691
+    }
+  },
+  {
+    "task_id": "rotate_list",
+    "candidate_id": "C2",
+    "style_prompt": "ignores_negative_direction",
+    "raw_generation": "def rotate_list(values, k):\n    if not values:\n        return []\n    n = len(values)\n    k = abs(k) % n\n    return values[-k:] + values[:-k]\n",
+    "code": "def rotate_list(values, k):\n    if not values:\n        return []\n    n = len(values)\n    k = abs(k) % n\n    return values[-k:] + values[:-k]",
+    "critique": "",
+    "evaluation": {
+      "status": "ok",
+      "clean_code": "def rotate_list(values, k):\n    if not values:\n        return []\n    n = len(values)\n    k = abs(k) % n\n    return values[-k:] + values[:-k]",
+      "passed": 4,
+      "total": 5,
+      "pass_rate": 0.8,
+      "error": "",
+      "check_results": [
+        {
+          "check": "fn([1, 2, 3, 4], 1) == [4, 1, 2, 3]",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([1, 2, 3, 4], -1) == [2, 3, 4, 1]",
+          "passed": false,
+          "error": ""
+        },
+        {
+          "check": "fn([], 3) == []",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([1, 2], 5) == [2, 1]",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn(['a', 'b', 'c'], 0) == ['a', 'b', 'c']",
+          "passed": true,
+          "error": ""
+        }
+      ]
+    },
+    "length_words": 20,
+    "scores": {
+      "direct_broad": 0.02609691023826599,
+      "direct_code": 0.08522126078605652
+    }
+  },
+  {
+    "task_id": "rotate_list",
+    "candidate_id": "C3",
+    "style_prompt": "mutates_and_reverses_direction",
+    "raw_generation": "def rotate_list(values, k):\n    if not values:\n        return values\n    n = len(values)\n    k %= n\n    values[:] = values[k:] + values[:k]\n    return values\n",
+    "code": "def rotate_list(values, k):\n    if not values:\n        return values\n    n = len(values)\n    k %= n\n    values[:] = values[k:] + values[:k]\n    return values",
+    "critique": "",
+    "evaluation": {
+      "status": "ok",
+      "clean_code": "def rotate_list(values, k):\n    if not values:\n        return values\n    n = len(values)\n    k %= n\n    values[:] = values[k:] + values[:k]\n    return values",
+      "passed": 3,
+      "total": 5,
+      "pass_rate": 0.6,
+      "error": "",
+      "check_results": [
+        {
+          "check": "fn([1, 2, 3, 4], 1) == [4, 1, 2, 3]",
+          "passed": false,
+          "error": ""
+        },
+        {
+          "check": "fn([1, 2, 3, 4], -1) == [2, 3, 4, 1]",
+          "passed": false,
+          "error": ""
+        },
+        {
+          "check": "fn([], 3) == []",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([1, 2], 5) == [2, 1]",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn(['a', 'b', 'c'], 0) == ['a', 'b', 'c']",
+          "passed": true,
+          "error": ""
+        }
+      ]
+    },
+    "length_words": 21,
+    "scores": {
+      "direct_broad": -0.07703904807567596,
+      "direct_code": -0.03672303631901741
+    }
+  },
+  {
+    "task_id": "merge_intervals",
+    "candidate_id": "C1",
+    "style_prompt": "correct",
+    "raw_generation": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n    intervals = sorted(intervals)\n    merged = [intervals[0][:]]\n    for start, end in intervals[1:]:\n        last = merged[-1]\n        if start <= last[1]:\n            last[1] = max(last[1], end)\n        else:\n            merged.append([start, end])\n    return merged\n",
+    "code": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n    intervals = sorted(intervals)\n    merged = [intervals[0][:]]\n    for start, end in intervals[1:]:\n        last = merged[-1]\n        if start <= last[1]:\n            last[1] = max(last[1], end)\n        else:\n            merged.append([start, end])\n    return merged",
+    "critique": "",
+    "evaluation": {
+      "status": "ok",
+      "clean_code": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n    intervals = sorted(intervals)\n    merged = [intervals[0][:]]\n    for start, end in intervals[1:]:\n        last = merged[-1]\n        if start <= last[1]:\n            last[1] = max(last[1], end)\n        else:\n            merged.append([start, end])\n    return merged",
+      "passed": 5,
+      "total": 5,
+      "pass_rate": 1.0,
+      "error": "",
+      "check_results": [
+        {
+          "check": "fn([[1, 3], [2, 4], [8, 10]]) == [[1, 4], [8, 10]]",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([[5, 7], [1, 2], [2, 3]]) == [[1, 3], [5, 7]]",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([]) == []",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([[1, 2]]) == [[1, 2]]",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([[1, 2], [2, 4], [6, 8], [7, 9]]) == [[1, 4], [6, 9]]",
+          "passed": true,
+          "error": ""
+        }
+      ]
+    },
+    "length_words": 39,
+    "scores": {
+      "direct_broad": 0.07716712355613708,
+      "direct_code": 0.1093587577342987
+    }
+  },
+  {
+    "task_id": "merge_intervals",
+    "candidate_id": "C2",
+    "style_prompt": "fails_unsorted_input",
+    "raw_generation": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n    merged = [intervals[0][:]]\n    for start, end in intervals[1:]:\n        last = merged[-1]\n        if start <= last[1]:\n            last[1] = max(last[1], end)\n        else:\n            merged.append([start, end])\n    return merged\n",
+    "code": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n    merged = [intervals[0][:]]\n    for start, end in intervals[1:]:\n        last = merged[-1]\n        if start <= last[1]:\n            last[1] = max(last[1], end)\n        else:\n            merged.append([start, end])\n    return merged",
+    "critique": "",
+    "evaluation": {
+      "status": "ok",
+      "clean_code": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n    merged = [intervals[0][:]]\n    for start, end in intervals[1:]:\n        last = merged[-1]\n        if start <= last[1]:\n            last[1] = max(last[1], end)\n        else:\n            merged.append([start, end])\n    return merged",
+      "passed": 4,
+      "total": 5,
+      "pass_rate": 0.8,
+      "error": "",
+      "check_results": [
+        {
+          "check": "fn([[1, 3], [2, 4], [8, 10]]) == [[1, 4], [8, 10]]",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([[5, 7], [1, 2], [2, 3]]) == [[1, 3], [5, 7]]",
+          "passed": false,
+          "error": ""
+        },
+        {
+          "check": "fn([]) == []",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([[1, 2]]) == [[1, 2]]",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([[1, 2], [2, 4], [6, 8], [7, 9]]) == [[1, 4], [6, 9]]",
+          "passed": true,
+          "error": ""
+        }
+      ]
+    },
+    "length_words": 36,
+    "scores": {
+      "direct_broad": 0.07539767026901245,
+      "direct_code": 0.10525178909301758
+    }
+  },
+  {
+    "task_id": "merge_intervals",
+    "candidate_id": "C3",
+    "style_prompt": "does_not_merge_touching",
+    "raw_generation": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n    intervals = sorted(intervals)\n    merged = [intervals[0][:]]\n    for start, end in intervals[1:]:\n        last = merged[-1]\n        if start < last[1]:\n            last[1] = max(last[1], end)\n        else:\n            merged.append([start, end])\n    return merged\n",
+    "code": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n    intervals = sorted(intervals)\n    merged = [intervals[0][:]]\n    for start, end in intervals[1:]:\n        last = merged[-1]\n        if start < last[1]:\n            last[1] = max(last[1], end)\n        else:\n            merged.append([start, end])\n    return merged",
+    "critique": "",
+    "evaluation": {
+      "status": "ok",
+      "clean_code": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n    intervals = sorted(intervals)\n    merged = [intervals[0][:]]\n    for start, end in intervals[1:]:\n        last = merged[-1]\n        if start < last[1]:\n            last[1] = max(last[1], end)\n        else:\n            merged.append([start, end])\n    return merged",
+      "passed": 3,
+      "total": 5,
+      "pass_rate": 0.6,
+      "error": "",
+      "check_results": [
+        {
+          "check": "fn([[1, 3], [2, 4], [8, 10]]) == [[1, 4], [8, 10]]",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([[5, 7], [1, 2], [2, 3]]) == [[1, 3], [5, 7]]",
+          "passed": false,
+          "error": ""
+        },
+        {
+          "check": "fn([]) == []",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([[1, 2]]) == [[1, 2]]",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([[1, 2], [2, 4], [6, 8], [7, 9]]) == [[1, 4], [6, 9]]",
+          "passed": false,
+          "error": ""
+        }
+      ]
+    },
+    "length_words": 39,
+    "scores": {
+      "direct_broad": 0.04951203614473343,
+      "direct_code": 0.07483212649822235
+    }
+  },
+  {
+    "task_id": "longest_common_prefix",
+    "candidate_id": "C1",
+    "style_prompt": "correct",
+    "raw_generation": "def longest_common_prefix(words):\n    if not words:\n        return ''\n    prefix = words[0]\n    for word in words[1:]:\n        while not word.startswith(prefix):\n            prefix = prefix[:-1]\n            if not prefix:\n                return ''\n    return prefix\n",
+    "code": "def longest_common_prefix(words):\n    if not words:\n        return ''\n    prefix = words[0]\n    for word in words[1:]:\n        while not word.startswith(prefix):\n            prefix = prefix[:-1]\n            if not prefix:\n                return ''\n    return prefix",
+    "critique": "",
+    "evaluation": {
+      "status": "ok",
+      "clean_code": "def longest_common_prefix(words):\n    if not words:\n        return ''\n    prefix = words[0]\n    for word in words[1:]:\n        while not word.startswith(prefix):\n            prefix = prefix[:-1]\n            if not prefix:\n                return ''\n    return prefix",
+      "passed": 5,
+      "total": 5,
+      "pass_rate": 1.0,
+      "error": "",
+      "check_results": [
+        {
+          "check": "fn(['flower', 'flow', 'flight']) == 'fl'",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn(['dog', 'racecar', 'car']) == ''",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([]) == ''",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn(['single']) == 'single'",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn(['interspecies', 'interstellar', 'interstate']) == 'inters'",
+          "passed": true,
+          "error": ""
+        }
+      ]
+    },
+    "length_words": 29,
+    "scores": {
+      "direct_broad": 0.05638156086206436,
+      "direct_code": 0.08594801276922226
+    }
+  },
+  {
+    "task_id": "longest_common_prefix",
+    "candidate_id": "C2",
+    "style_prompt": "fails_empty_input",
+    "raw_generation": "def longest_common_prefix(words):\n    prefix = words[0]\n    for word in words[1:]:\n        while not word.startswith(prefix):\n            prefix = prefix[:-1]\n    return prefix\n",
+    "code": "def longest_common_prefix(words):\n    prefix = words[0]\n    for word in words[1:]:\n        while not word.startswith(prefix):\n            prefix = prefix[:-1]\n    return prefix",
+    "critique": "",
+    "evaluation": {
+      "status": "ok",
+      "clean_code": "def longest_common_prefix(words):\n    prefix = words[0]\n    for word in words[1:]:\n        while not word.startswith(prefix):\n            prefix = prefix[:-1]\n    return prefix",
+      "passed": 4,
+      "total": 5,
+      "pass_rate": 0.8,
+      "error": "",
+      "check_results": [
+        {
+          "check": "fn(['flower', 'flow', 'flight']) == 'fl'",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn(['dog', 'racecar', 'car']) == ''",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([]) == ''",
+          "passed": false,
+          "error": "IndexError: list index out of range"
+        },
+        {
+          "check": "fn(['single']) == 'single'",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn(['interspecies', 'interstellar', 'interstate']) == 'inters'",
+          "passed": true,
+          "error": ""
+        }
+      ]
+    },
+    "length_words": 21,
+    "scores": {
+      "direct_broad": 0.034053534269332886,
+      "direct_code": 0.060766082257032394
+    }
+  },
+  {
+    "task_id": "longest_common_prefix",
+    "candidate_id": "C3",
+    "style_prompt": "compares_only_first_two",
+    "raw_generation": "def longest_common_prefix(words):\n    if not words:\n        return ''\n    if len(words) == 1:\n        return words[0]\n    a, b = words[0], words[1]\n    out = []\n    for ch1, ch2 in zip(a, b):\n        if ch1 != ch2:\n            break\n        out.append(ch1)\n    return ''.join(out)\n",
+    "code": "def longest_common_prefix(words):\n    if not words:\n        return ''\n    if len(words) == 1:\n        return words[0]\n    a, b = words[0], words[1]\n    out = []\n    for ch1, ch2 in zip(a, b):\n        if ch1 != ch2:\n            break\n        out.append(ch1)\n    return ''.join(out)",
+    "critique": "",
+    "evaluation": {
+      "status": "ok",
+      "clean_code": "def longest_common_prefix(words):\n    if not words:\n        return ''\n    if len(words) == 1:\n        return words[0]\n    a, b = words[0], words[1]\n    out = []\n    for ch1, ch2 in zip(a, b):\n        if ch1 != ch2:\n            break\n        out.append(ch1)\n    return ''.join(out)",
+      "passed": 4,
+      "total": 5,
+      "pass_rate": 0.8,
+      "error": "",
+      "check_results": [
+        {
+          "check": "fn(['flower', 'flow', 'flight']) == 'fl'",
+          "passed": false,
+          "error": ""
+        },
+        {
+          "check": "fn(['dog', 'racecar', 'car']) == ''",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([]) == ''",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn(['single']) == 'single'",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn(['interspecies', 'interstellar', 'interstate']) == 'inters'",
+          "passed": true,
+          "error": ""
+        }
+      ]
+    },
+    "length_words": 38,
+    "scores": {
+      "direct_broad": -0.028358520939946175,
+      "direct_code": 0.0010947706177830696
+    }
+  },
+  {
+    "task_id": "balanced_brackets",
+    "candidate_id": "C1",
+    "style_prompt": "correct",
+    "raw_generation": "def balanced_brackets(text):\n    pairs = {')': '(', ']': '[', '}': '{'}\n    stack = []\n    for ch in text:\n        if ch in '([{':\n            stack.append(ch)\n        elif ch in pairs:\n            if not stack or stack[-1] != pairs[ch]:\n                return False\n            stack.pop()\n    return not stack\n",
+    "code": "def balanced_brackets(text):\n    pairs = {')': '(', ']': '[', '}': '{'}\n    stack = []\n    for ch in text:\n        if ch in '([{':\n            stack.append(ch)\n        elif ch in pairs:\n            if not stack or stack[-1] != pairs[ch]:\n                return False\n            stack.pop()\n    return not stack",
+    "critique": "",
+    "evaluation": {
+      "status": "ok",
+      "clean_code": "def balanced_brackets(text):\n    pairs = {')': '(', ']': '[', '}': '{'}\n    stack = []\n    for ch in text:\n        if ch in '([{':\n            stack.append(ch)\n        elif ch in pairs:\n            if not stack or stack[-1] != pairs[ch]:\n                return False\n            stack.pop()\n    return not stack",
+      "passed": 5,
+      "total": 5,
+      "pass_rate": 1.0,
+      "error": "",
+      "check_results": [
+        {
+          "check": "fn('a[b](c){d}') is True",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn('([)]') is False",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn('(((())))') is True",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn(']') is False",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn('function(x[y]{z})') is True",
+          "passed": true,
+          "error": ""
+        }
+      ]
+    },
+    "length_words": 34,
+    "scores": {
+      "direct_broad": 0.07956738770008087,
+      "direct_code": 0.10836601257324219
+    }
+  },
+  {
+    "task_id": "balanced_brackets",
+    "candidate_id": "C2",
+    "style_prompt": "counts_only",
+    "raw_generation": "def balanced_brackets(text):\n    return text.count('(') == text.count(')') and text.count('[') == text.count(']') and text.count('{') == text.count('}')\n",
+    "code": "def balanced_brackets(text):\n    return text.count('(') == text.count(')') and text.count('[') == text.count(']') and text.count('{') == text.count('}')",
+    "critique": "",
+    "evaluation": {
+      "status": "ok",
+      "clean_code": "def balanced_brackets(text):\n    return text.count('(') == text.count(')') and text.count('[') == text.count(']') and text.count('{') == text.count('}')",
+      "passed": 4,
+      "total": 5,
+      "pass_rate": 0.8,
+      "error": "",
+      "check_results": [
+        {
+          "check": "fn('a[b](c){d}') is True",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn('([)]') is False",
+          "passed": false,
+          "error": ""
+        },
+        {
+          "check": "fn('(((())))') is True",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn(']') is False",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn('function(x[y]{z})') is True",
+          "passed": true,
+          "error": ""
+        }
+      ]
+    },
+    "length_words": 18,
+    "scores": {
+      "direct_broad": -0.04582444578409195,
+      "direct_code": -0.019345633685588837
+    }
+  },
+  {
+    "task_id": "balanced_brackets",
+    "candidate_id": "C3",
+    "style_prompt": "misses_bad_closer_order",
+    "raw_generation": "def balanced_brackets(text):\n    stack = []\n    for ch in text:\n        if ch in '([{':\n            stack.append(ch)\n        elif ch in ')]}':\n            if stack:\n                stack.pop()\n            else:\n                return False\n    return not stack\n",
+    "code": "def balanced_brackets(text):\n    stack = []\n    for ch in text:\n        if ch in '([{':\n            stack.append(ch)\n        elif ch in ')]}':\n            if stack:\n                stack.pop()\n            else:\n                return False\n    return not stack",
+    "critique": "",
+    "evaluation": {
+      "status": "ok",
+      "clean_code": "def balanced_brackets(text):\n    stack = []\n    for ch in text:\n        if ch in '([{':\n            stack.append(ch)\n        elif ch in ')]}':\n            if stack:\n                stack.pop()\n            else:\n                return False\n    return not stack",
+      "passed": 4,
+      "total": 5,
+      "pass_rate": 0.8,
+      "error": "",
+      "check_results": [
+        {
+          "check": "fn('a[b](c){d}') is True",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn('([)]') is False",
+          "passed": false,
+          "error": ""
+        },
+        {
+          "check": "fn('(((())))') is True",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn(']') is False",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn('function(x[y]{z})') is True",
+          "passed": true,
+          "error": ""
+        }
+      ]
+    },
+    "length_words": 27,
+    "scores": {
+      "direct_broad": 0.08234135806560516,
+      "direct_code": 0.11270302534103394
+    }
+  },
+  {
+    "task_id": "top_k_frequent",
+    "candidate_id": "C1",
+    "style_prompt": "correct",
+    "raw_generation": "def top_k_frequent(items, k):\n    counts = {}\n    first_seen = {}\n    for idx, item in enumerate(items):\n        counts[item] = counts.get(item, 0) + 1\n        if item not in first_seen:\n            first_seen[item] = idx\n    ranked = sorted(counts, key=lambda item: (-counts[item], first_seen[item]))\n    return ranked[:k]\n",
+    "code": "def top_k_frequent(items, k):\n    counts = {}\n    first_seen = {}\n    for idx, item in enumerate(items):\n        counts[item] = counts.get(item, 0) + 1\n        if item not in first_seen:\n            first_seen[item] = idx\n    ranked = sorted(counts, key=lambda item: (-counts[item], first_seen[item]))\n    return ranked[:k]",
+    "critique": "",
+    "evaluation": {
+      "status": "ok",
+      "clean_code": "def top_k_frequent(items, k):\n    counts = {}\n    first_seen = {}\n    for idx, item in enumerate(items):\n        counts[item] = counts.get(item, 0) + 1\n        if item not in first_seen:\n            first_seen[item] = idx\n    ranked = sorted(counts, key=lambda item: (-counts[item], first_seen[item]))\n    return ranked[:k]",
+      "passed": 5,
+      "total": 5,
+      "pass_rate": 1.0,
+      "error": "",
+      "check_results": [
+        {
+          "check": "fn(['a', 'b', 'a', 'c', 'b', 'a'], 2) == ['a', 'b']",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([3, 1, 3, 2, 2, 1], 2) == [3, 1]",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([], 3) == []",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([1, 2, 3], 5) == [1, 2, 3]",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn(['x', 'y', 'x', 'z', 'y'], 2) == ['x', 'y']",
+          "passed": true,
+          "error": ""
+        }
+      ]
+    },
+    "length_words": 40,
+    "scores": {
+      "direct_broad": 0.09640248119831085,
+      "direct_code": 0.09432116150856018
+    }
+  },
+  {
+    "task_id": "top_k_frequent",
+    "candidate_id": "C2",
+    "style_prompt": "alphabetic_tie_breaker",
+    "raw_generation": "def top_k_frequent(items, k):\n    counts = {}\n    for item in items:\n        counts[item] = counts.get(item, 0) + 1\n    ranked = sorted(counts, key=lambda item: (-counts[item], item))\n    return ranked[:k]\n",
+    "code": "def top_k_frequent(items, k):\n    counts = {}\n    for item in items:\n        counts[item] = counts.get(item, 0) + 1\n    ranked = sorted(counts, key=lambda item: (-counts[item], item))\n    return ranked[:k]",
+    "critique": "",
+    "evaluation": {
+      "status": "ok",
+      "clean_code": "def top_k_frequent(items, k):\n    counts = {}\n    for item in items:\n        counts[item] = counts.get(item, 0) + 1\n    ranked = sorted(counts, key=lambda item: (-counts[item], item))\n    return ranked[:k]",
+      "passed": 4,
+      "total": 5,
+      "pass_rate": 0.8,
+      "error": "",
+      "check_results": [
+        {
+          "check": "fn(['a', 'b', 'a', 'c', 'b', 'a'], 2) == ['a', 'b']",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([3, 1, 3, 2, 2, 1], 2) == [3, 1]",
+          "passed": false,
+          "error": ""
+        },
+        {
+          "check": "fn([], 3) == []",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([1, 2, 3], 5) == [1, 2, 3]",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn(['x', 'y', 'x', 'z', 'y'], 2) == ['x', 'y']",
+          "passed": true,
+          "error": ""
+        }
+      ]
+    },
+    "length_words": 28,
+    "scores": {
+      "direct_broad": 0.0482683926820755,
+      "direct_code": 0.03863375261425972
+    }
+  },
+  {
+    "task_id": "top_k_frequent",
+    "candidate_id": "C3",
+    "style_prompt": "drops_k_overflow_order",
+    "raw_generation": "def top_k_frequent(items, k):\n    counts = {}\n    for item in items:\n        counts[item] = counts.get(item, 0) + 1\n    ranked = sorted(counts.items(), key=lambda pair: pair[1], reverse=True)\n    return [item for item, _ in ranked[:k]]\n",
+    "code": "def top_k_frequent(items, k):\n    counts = {}\n    for item in items:\n        counts[item] = counts.get(item, 0) + 1\n    ranked = sorted(counts.items(), key=lambda pair: pair[1], reverse=True)\n    return [item for item, _ in ranked[:k]]",
+    "critique": "",
+    "evaluation": {
+      "status": "ok",
+      "clean_code": "def top_k_frequent(items, k):\n    counts = {}\n    for item in items:\n        counts[item] = counts.get(item, 0) + 1\n    ranked = sorted(counts.items(), key=lambda pair: pair[1], reverse=True)\n    return [item for item, _ in ranked[:k]]",
+      "passed": 5,
+      "total": 5,
+      "pass_rate": 1.0,
+      "error": "",
+      "check_results": [
+        {
+          "check": "fn(['a', 'b', 'a', 'c', 'b', 'a'], 2) == ['a', 'b']",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([3, 1, 3, 2, 2, 1], 2) == [3, 1]",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([], 3) == []",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([1, 2, 3], 5) == [1, 2, 3]",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn(['x', 'y', 'x', 'z', 'y'], 2) == ['x', 'y']",
+          "passed": true,
+          "error": ""
+        }
+      ]
+    },
+    "length_words": 35,
+    "scores": {
+      "direct_broad": 0.04472355544567108,
+      "direct_code": 0.035509899258613586
+    }
+  },
+  {
+    "task_id": "chunk_list",
+    "candidate_id": "C1",
+    "style_prompt": "correct",
+    "raw_generation": "def chunk_list(items, size):\n    if size <= 0:\n        raise ValueError('size must be positive')\n    return [items[i:i + size] for i in range(0, len(items), size)]\n",
+    "code": "def chunk_list(items, size):\n    if size <= 0:\n        raise ValueError('size must be positive')\n    return [items[i:i + size] for i in range(0, len(items), size)]",
+    "critique": "",
+    "evaluation": {
+      "status": "ok",
+      "clean_code": "def chunk_list(items, size):\n    if size <= 0:\n        raise ValueError('size must be positive')\n    return [items[i:i + size] for i in range(0, len(items), size)]",
+      "passed": 5,
+      "total": 5,
+      "pass_rate": 1.0,
+      "error": "",
+      "check_results": [
+        {
+          "check": "fn([1, 2, 3, 4, 5], 2) == [[1, 2], [3, 4], [5]]",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn(['a', 'b', 'c'], 5) == [['a', 'b', 'c']]",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([], 3) == []",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "raises_value_error(fn, [1, 2, 3], 0)",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "raises_value_error(fn, [1, 2, 3], -2)",
+          "passed": true,
+          "error": ""
+        }
+      ]
+    },
+    "length_words": 26,
+    "scores": {
+      "direct_broad": 0.010389033704996109,
+      "direct_code": 0.07796445488929749
+    }
+  },
+  {
+    "task_id": "chunk_list",
+    "candidate_id": "C2",
+    "style_prompt": "returns_empty_on_bad_size",
+    "raw_generation": "def chunk_list(items, size):\n    if size <= 0:\n        return []\n    return [items[i:i + size] for i in range(0, len(items), size)]\n",
+    "code": "def chunk_list(items, size):\n    if size <= 0:\n        return []\n    return [items[i:i + size] for i in range(0, len(items), size)]",
+    "critique": "",
+    "evaluation": {
+      "status": "ok",
+      "clean_code": "def chunk_list(items, size):\n    if size <= 0:\n        return []\n    return [items[i:i + size] for i in range(0, len(items), size)]",
+      "passed": 3,
+      "total": 5,
+      "pass_rate": 0.6,
+      "error": "",
+      "check_results": [
+        {
+          "check": "fn([1, 2, 3, 4, 5], 2) == [[1, 2], [3, 4], [5]]",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn(['a', 'b', 'c'], 5) == [['a', 'b', 'c']]",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "fn([], 3) == []",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "raises_value_error(fn, [1, 2, 3], 0)",
+          "passed": false,
+          "error": ""
+        },
+        {
+          "check": "raises_value_error(fn, [1, 2, 3], -2)",
+          "passed": false,
+          "error": ""
+        }
+      ]
+    },
+    "length_words": 21,
+    "scores": {
+      "direct_broad": -0.02484087273478508,
+      "direct_code": 0.035256583243608475
+    }
+  },
+  {
+    "task_id": "chunk_list",
+    "candidate_id": "C3",
+    "style_prompt": "drops_last_partial_chunk",
+    "raw_generation": "def chunk_list(items, size):\n    if size <= 0:\n        raise ValueError('size must be positive')\n    chunks = []\n    for i in range(0, len(items), size):\n        piece = items[i:i + size]\n        if len(piece) == size:\n            chunks.append(piece)\n    return chunks\n",
+    "code": "def chunk_list(items, size):\n    if size <= 0:\n        raise ValueError('size must be positive')\n    chunks = []\n    for i in range(0, len(items), size):\n        piece = items[i:i + size]\n        if len(piece) == size:\n            chunks.append(piece)\n    return chunks",
+    "critique": "",
+    "evaluation": {
+      "status": "ok",
+      "clean_code": "def chunk_list(items, size):\n    if size <= 0:\n        raise ValueError('size must be positive')\n    chunks = []\n    for i in range(0, len(items), size):\n        piece = items[i:i + size]\n        if len(piece) == size:\n            chunks.append(piece)\n    return chunks",
+      "passed": 3,
+      "total": 5,
+      "pass_rate": 0.6,
+      "error": "",
+      "check_results": [
+        {
+          "check": "fn([1, 2, 3, 4, 5], 2) == [[1, 2], [3, 4], [5]]",
+          "passed": false,
+          "error": ""
+        },
+        {
+          "check": "fn(['a', 'b', 'c'], 5) == [['a', 'b', 'c']]",
+          "passed": false,
+          "error": ""
+        },
+        {
+          "check": "fn([], 3) == []",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "raises_value_error(fn, [1, 2, 3], 0)",
+          "passed": true,
+          "error": ""
+        },
+        {
+          "check": "raises_value_error(fn, [1, 2, 3], -2)",
+          "passed": true,
+          "error": ""
+        }
+      ]
+    },
+    "length_words": 36,
+    "scores": {
+      "direct_broad": -0.03310827910900116,
+      "direct_code": 0.005041074473410845
+    }
+  }
+]

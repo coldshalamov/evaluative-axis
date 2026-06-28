@@ -1,0 +1,15 @@
+{
+  "dataset_name": "objective_code_reranking_candidates_v1",
+  "purpose": "Curated code candidates for an objective reranking pilot when generation quota is constrained.",
+  "mode": "curated",
+  "generation_model": "gemini-2.0-flash",
+  "embedding_probe": {
+    "model": "gemini-embedding-2",
+    "dimension": 3072,
+    "norm": 1.0
+  },
+  "key_source": "environment; rotated_keys=1",
+  "limit_tasks": 6,
+  "candidates_per_task": 3,
+  "seed": 20260625
+}

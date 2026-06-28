@@ -1,0 +1,127 @@
+{
+  "model": "BAAI/bge-small-en-v1.5",
+  "embedding_dim": 384,
+  "n_cases": 50,
+  "categories": {
+    "reasoning_rigor": 11,
+    "truthfulness": 9,
+    "harm_reduction": 7,
+    "persona_honesty": 4,
+    "anti_sycophancy": 5,
+    "context_binding": 5,
+    "helpfulness": 5,
+    "mixed": 4
+  },
+  "transfer_matrix": {
+    "anti_sycophancy": {
+      "general_evaluative": 0.0,
+      "harm_reduction": 0.6,
+      "truthfulness": 0.0,
+      "persona_honesty": 0.2,
+      "anti_sycophancy": 0.2
+    },
+    "context_binding": {
+      "general_evaluative": 0.2,
+      "harm_reduction": 0.8,
+      "truthfulness": 0.2,
+      "persona_honesty": 0.6,
+      "anti_sycophancy": 0.6
+    },
+    "harm_reduction": {
+      "general_evaluative": 0.2857142857142857,
+      "harm_reduction": 0.42857142857142855,
+      "truthfulness": 0.42857142857142855,
+      "persona_honesty": 0.2857142857142857,
+      "anti_sycophancy": 0.7142857142857143
+    },
+    "helpfulness": {
+      "general_evaluative": 0.2,
+      "harm_reduction": 0.2,
+      "truthfulness": 0.2,
+      "persona_honesty": 0.2,
+      "anti_sycophancy": 0.4
+    },
+    "mixed": {
+      "general_evaluative": 0.0,
+      "harm_reduction": 0.25,
+      "truthfulness": 0.5,
+      "persona_honesty": 0.5,
+      "anti_sycophancy": 0.75
+    },
+    "persona_honesty": {
+      "general_evaluative": 0.0,
+      "harm_reduction": 1.0,
+      "truthfulness": 0.0,
+      "persona_honesty": 1.0,
+      "anti_sycophancy": 1.0
+    },
+    "reasoning_rigor": {
+      "general_evaluative": 0.09090909090909091,
+      "harm_reduction": 0.5454545454545454,
+      "truthfulness": 0.2727272727272727,
+      "persona_honesty": 0.45454545454545453,
+      "anti_sycophancy": 0.5454545454545454
+    },
+    "truthfulness": {
+      "general_evaluative": 0.1111111111111111,
+      "harm_reduction": 0.6666666666666666,
+      "truthfulness": 0.2222222222222222,
+      "persona_honesty": 0.3333333333333333,
+      "anti_sycophancy": 0.7777777777777778
+    }
+  },
+  "on_diagonal_mean": 0.3154401154401154,
+  "off_diagonal_mean": 0.41373556998557,
+  "cosine_similarity": {
+    "general_evaluative": {
+      "general_evaluative": 1.0,
+      "harm_reduction": 0.23485201597213745,
+      "truthfulness": 0.6373707056045532,
+      "persona_honesty": 0.18670566380023956,
+      "anti_sycophancy": 0.1702089011669159
+    },
+    "harm_reduction": {
+      "general_evaluative": 0.23485201597213745,
+      "harm_reduction": 1.0,
+      "truthfulness": 0.300031453371048,
+      "persona_honesty": 0.5371403694152832,
+      "anti_sycophancy": 0.2017233669757843
+    },
+    "truthfulness": {
+      "general_evaluative": 0.6373707056045532,
+      "harm_reduction": 0.300031453371048,
+      "truthfulness": 1.0000001192092896,
+      "persona_honesty": 0.33890557289123535,
+      "anti_sycophancy": 0.2583349645137787
+    },
+    "persona_honesty": {
+      "general_evaluative": 0.18670566380023956,
+      "harm_reduction": 0.5371403694152832,
+      "truthfulness": 0.33890557289123535,
+      "persona_honesty": 0.9999997615814209,
+      "anti_sycophancy": 0.21577514708042145
+    },
+    "anti_sycophancy": {
+      "general_evaluative": 0.1702089011669159,
+      "harm_reduction": 0.2017233669757843,
+      "truthfulness": 0.2583349645137787,
+      "persona_honesty": 0.21577514708042145,
+      "anti_sycophancy": 1.0
+    }
+  },
+  "pca_explained_variance": [
+    0.3857825696468353,
+    0.31939277052879333,
+    0.17236796021461487,
+    0.12245678156614304,
+    2.5030242872673466e-15
+  ],
+  "pc1_accuracy": 0.72,
+  "pc1_axis_projections": {
+    "general_evaluative": -0.6416812539100647,
+    "harm_reduction": 0.4494645297527313,
+    "truthfulness": -0.47817784547805786,
+    "persona_honesty": 0.47176259756088257,
+    "anti_sycophancy": 0.0756453201174736
+  }
+}

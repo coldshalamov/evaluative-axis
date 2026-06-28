@@ -1,0 +1,10 @@
+{
+  "dataset_name": "objective_math_reranking_v2",
+  "purpose": "Larger frozen exact-answer math reranking benchmark with randomized candidate order and low length confounding.",
+  "backend": "sentence_transformers",
+  "probe": {
+    "backend": "sentence_transformers",
+    "model": "BAAI/bge-base-en-v1.5"
+  },
+  "seed": 20260625
+}

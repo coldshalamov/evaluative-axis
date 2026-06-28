@@ -1,0 +1,5 @@
+comparison,focus_wins,baseline_wins,ties,reject_both,incomplete,invalid,decided,reviewed,focus_win_rate_decided,focus_non_loss_rate_reviewed
+direct_anti_sycophancy vs length,3,6,1,0,0,0,9,10,0.3333333333333333,0.35
+direct_anti_sycophancy vs random,3,5,2,0,0,0,8,10,0.375,0.4
+direct_anti_sycophancy vs refusal_heuristic,1,7,2,0,0,0,8,10,0.125,0.2
+direct_anti_sycophancy vs sentiment,5,1,4,0,0,0,6,10,0.8333333333333334,0.7

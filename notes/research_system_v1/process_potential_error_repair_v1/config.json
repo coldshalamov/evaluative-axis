@@ -1,0 +1,11 @@
+{
+  "input": "experiments\\research_system_v1\\benchmarks\\process_potential_error_repair_v1.json",
+  "backend": "gemini",
+  "probe": {
+    "model": "gemini-embedding-2",
+    "dimension": 3072,
+    "norm": 1.0,
+    "backend": "gemini",
+    "key_source": "environment; rotated_keys=1"
+  }
+}

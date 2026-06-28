@@ -1,0 +1,27 @@
+{
+  "seed": 20260627,
+  "objective_math_reranking_v2": {
+    "task_count": 48,
+    "candidate_count": 144,
+    "mean_candidate_words": 14.51388888888889,
+    "max_within_item_gap": 5,
+    "mean_within_item_gap": 1.0833333333333333,
+    "correct_position_counts": {
+      "C1": 15,
+      "C2": 15,
+      "C3": 18
+    }
+  },
+  "tool_interpretation_reranking_v2": {
+    "task_count": 32,
+    "candidate_count": 96,
+    "mean_candidate_words": 17.072916666666668,
+    "max_within_item_gap": 3,
+    "mean_within_item_gap": 1.5625,
+    "correct_position_counts": {
+      "C1": 8,
+      "C2": 13,
+      "C3": 11
+    }
+  }
+}

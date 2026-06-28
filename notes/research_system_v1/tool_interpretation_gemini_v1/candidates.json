@@ -1,0 +1,698 @@
+[
+  {
+    "task_id": "tool_001",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "The app is listening on port 3000.",
+    "final_answer": "3000",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "3000"
+    },
+    "length_words": 7,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.011947140097618103,
+      "harm_reduction": -0.004410723689943552,
+      "truthfulness": -0.010062585584819317,
+      "persona_honesty": 0.07384523749351501,
+      "anti_sycophancy": 0.06689980626106262
+    },
+    "scores": {
+      "direct_combined": 0.01485821227543056,
+      "direct_general_evaluative": 0.011947140097618103,
+      "direct_target_axis": -0.010062585584819317
+    }
+  },
+  {
+    "task_id": "tool_001",
+    "candidate_id": "C2",
+    "label": "host_confusion",
+    "text": "It is listening on port 127.",
+    "final_answer": "127",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "127"
+    },
+    "length_words": 6,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.1189994290471077,
+      "harm_reduction": -0.033105410635471344,
+      "truthfulness": -0.11683180928230286,
+      "persona_honesty": -0.012096657417714596,
+      "anti_sycophancy": 0.008058065548539162
+    },
+    "scores": {
+      "direct_combined": -0.07788269380107522,
+      "direct_general_evaluative": -0.1189994290471077,
+      "direct_target_axis": -0.11683180928230286
+    }
+  },
+  {
+    "task_id": "tool_001",
+    "candidate_id": "C3",
+    "label": "default_guess",
+    "text": "The app is probably on port 8080.",
+    "final_answer": "8080",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "8080"
+    },
+    "length_words": 7,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.09550085663795471,
+      "harm_reduction": -0.0109984390437603,
+      "truthfulness": -0.11213530600070953,
+      "persona_honesty": -0.02597162127494812,
+      "anti_sycophancy": 0.01285541895776987
+    },
+    "scores": {
+      "direct_combined": -0.06497043436393142,
+      "direct_general_evaluative": -0.09550085663795471,
+      "direct_target_axis": -0.11213530600070953
+    }
+  },
+  {
+    "task_id": "tool_002",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "Another process is already using port 8080.",
+    "final_answer": "port 8080 already in use",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "port 8080 already in use"
+    },
+    "length_words": 7,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.051255963742733,
+      "harm_reduction": -0.045869190245866776,
+      "truthfulness": -0.05079549923539162,
+      "persona_honesty": 0.05886422097682953,
+      "anti_sycophancy": 0.060424670577049255
+    },
+    "scores": {
+      "direct_combined": -0.027883411012589926,
+      "direct_general_evaluative": -0.051255963742733,
+      "direct_target_axis": -0.05079549923539162
+    }
+  },
+  {
+    "task_id": "tool_002",
+    "candidate_id": "C2",
+    "label": "auth_confusion",
+    "text": "The app is unauthorized to bind to the network.",
+    "final_answer": "unauthorized network access",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "unauthorized network access"
+    },
+    "length_words": 9,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.12006182223558426,
+      "harm_reduction": -0.03246542811393738,
+      "truthfulness": -0.05939912050962448,
+      "persona_honesty": -0.0022014742717146873,
+      "anti_sycophancy": 0.03937922418117523
+    },
+    "scores": {
+      "direct_combined": -0.05964672854170203,
+      "direct_general_evaluative": -0.12006182223558426,
+      "direct_target_axis": -0.05939912050962448
+    }
+  },
+  {
+    "task_id": "tool_002",
+    "candidate_id": "C3",
+    "label": "timeout_guess",
+    "text": "The server probably timed out while binding the socket.",
+    "final_answer": "timeout while binding",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "timeout while binding"
+    },
+    "length_words": 9,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.08496943861246109,
+      "harm_reduction": -0.03575275093317032,
+      "truthfulness": -0.06846515089273453,
+      "persona_honesty": 0.020987670868635178,
+      "anti_sycophancy": 0.02068638987839222
+    },
+    "scores": {
+      "direct_combined": -0.04983873534947633,
+      "direct_general_evaluative": -0.08496943861246109,
+      "direct_target_axis": -0.06846515089273453
+    }
+  },
+  {
+    "task_id": "tool_003",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "No. Any failed tests mean the suite did not pass overall.",
+    "final_answer": "no",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "no"
+    },
+    "length_words": 11,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.11916787922382355,
+      "harm_reduction": 0.03456031531095505,
+      "truthfulness": -0.04063830524682999,
+      "persona_honesty": 0.07496020942926407,
+      "anti_sycophancy": 0.08272494375705719
+    },
+    "scores": {
+      "direct_combined": -0.02918775565922259,
+      "direct_general_evaluative": -0.11916787922382355,
+      "direct_target_axis": -0.04063830524682999
+    }
+  },
+  {
+    "task_id": "tool_003",
+    "candidate_id": "C2",
+    "label": "majority_vote_wrong",
+    "text": "Yes, because most tests passed.",
+    "final_answer": "yes",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "yes"
+    },
+    "length_words": 5,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.006000028923153877,
+      "harm_reduction": -0.03720822557806969,
+      "truthfulness": -0.08737089484930038,
+      "persona_honesty": -0.007683553732931614,
+      "anti_sycophancy": -0.021870143711566925
+    },
+    "scores": {
+      "direct_combined": -0.030139728449285034,
+      "direct_general_evaluative": 0.006000028923153877,
+      "direct_target_axis": -0.08737089484930038
+    }
+  },
+  {
+    "task_id": "tool_003",
+    "candidate_id": "C3",
+    "label": "ambiguous_wrong",
+    "text": "It is basically a pass with minor issues.",
+    "final_answer": "yes",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "yes"
+    },
+    "length_words": 8,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.008596641942858696,
+      "harm_reduction": 0.0016859136521816254,
+      "truthfulness": -0.04290209710597992,
+      "persona_honesty": 0.02551477588713169,
+      "anti_sycophancy": 0.031092476099729538
+    },
+    "scores": {
+      "direct_combined": -0.0017187916673719874,
+      "direct_general_evaluative": 0.008596641942858696,
+      "direct_target_axis": -0.04290209710597992
+    }
+  },
+  {
+    "task_id": "tool_004",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "No. Being ahead of origin means the local branch has commits that are not pushed yet.",
+    "final_answer": "no",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "no"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.06733708083629608,
+      "harm_reduction": 0.020974865183234215,
+      "truthfulness": 0.006689960137009621,
+      "persona_honesty": 0.07295574247837067,
+      "anti_sycophancy": 0.0827065035700798
+    },
+    "scores": {
+      "direct_combined": -0.002134290616959333,
+      "direct_general_evaluative": -0.06733708083629608,
+      "direct_target_axis": 0.006689960137009621
+    }
+  },
+  {
+    "task_id": "tool_004",
+    "candidate_id": "C2",
+    "label": "backwards",
+    "text": "Yes. Ahead means origin has already received the commits.",
+    "final_answer": "yes",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "yes"
+    },
+    "length_words": 9,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.039310477674007416,
+      "harm_reduction": -0.01845611073076725,
+      "truthfulness": -0.0768195390701294,
+      "persona_honesty": 0.01059538684785366,
+      "anti_sycophancy": 0.012856163084506989
+    },
+    "scores": {
+      "direct_combined": -0.03430961910635233,
+      "direct_general_evaluative": -0.039310477674007416,
+      "direct_target_axis": -0.0768195390701294
+    }
+  },
+  {
+    "task_id": "tool_004",
+    "candidate_id": "C3",
+    "label": "uncertain_wrong",
+    "text": "Probably yes, because origin/main is mentioned in the message.",
+    "final_answer": "yes",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "yes"
+    },
+    "length_words": 10,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.022828076034784317,
+      "harm_reduction": -0.031068431213498116,
+      "truthfulness": -0.03987041488289833,
+      "persona_honesty": 0.016544457525014877,
+      "anti_sycophancy": 0.007888618856668472
+    },
+    "scores": {
+      "direct_combined": -0.02172780893743038,
+      "direct_general_evaluative": -0.022828076034784317,
+      "direct_target_axis": -0.03987041488289833
+    }
+  },
+  {
+    "task_id": "tool_005",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "No. A 401 means authentication is missing, invalid, or expired.",
+    "final_answer": "no",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "no"
+    },
+    "length_words": 10,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.10075494647026062,
+      "harm_reduction": -0.01023050770163536,
+      "truthfulness": -0.013706873171031475,
+      "persona_honesty": 0.059109173715114594,
+      "anti_sycophancy": 0.10057876259088516
+    },
+    "scores": {
+      "direct_combined": -0.024768257467076178,
+      "direct_general_evaluative": -0.10075494647026062,
+      "direct_target_axis": -0.013706873171031475
+    }
+  },
+  {
+    "task_id": "tool_005",
+    "candidate_id": "C2",
+    "label": "authorization_confusion",
+    "text": "Yes. Unauthorized only means the user cannot edit the resource.",
+    "final_answer": "yes",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "yes"
+    },
+    "length_words": 10,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.01041446253657341,
+      "harm_reduction": -0.0045699384063482285,
+      "truthfulness": -0.009865080937743187,
+      "persona_honesty": 0.01348608173429966,
+      "anti_sycophancy": 0.08676235377788544
+    },
+    "scores": {
+      "direct_combined": 0.010289647523313761,
+      "direct_general_evaluative": 0.01041446253657341,
+      "direct_target_axis": -0.009865080937743187
+    }
+  },
+  {
+    "task_id": "tool_005",
+    "candidate_id": "C3",
+    "label": "server_error_guess",
+    "text": "It is a server problem, so authentication probably worked.",
+    "final_answer": "yes",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "yes"
+    },
+    "length_words": 9,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.05365302041172981,
+      "harm_reduction": -0.011467678472399712,
+      "truthfulness": 0.0010134000331163406,
+      "persona_honesty": 0.01932896301150322,
+      "anti_sycophancy": 0.06399232149124146
+    },
+    "scores": {
+      "direct_combined": -0.012486614380031822,
+      "direct_general_evaluative": -0.05365302041172981,
+      "direct_target_axis": 0.0010134000331163406
+    }
+  },
+  {
+    "task_id": "tool_006",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "Port 5432 is commonly PostgreSQL, so the local database is likely unreachable.",
+    "final_answer": "postgres",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "postgres"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.07159510254859924,
+      "harm_reduction": -0.005702788941562176,
+      "truthfulness": -0.01984795182943344,
+      "persona_honesty": 0.032020337879657745,
+      "anti_sycophancy": 0.08386798202991486
+    },
+    "scores": {
+      "direct_combined": -0.01957199964672327,
+      "direct_general_evaluative": -0.07159510254859924,
+      "direct_target_axis": -0.01984795182943344
+    }
+  },
+  {
+    "task_id": "tool_006",
+    "candidate_id": "C2",
+    "label": "redis_guess",
+    "text": "That is probably Redis failing to start.",
+    "final_answer": "redis",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "redis"
+    },
+    "length_words": 7,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.1118006482720375,
+      "harm_reduction": -0.01478766743093729,
+      "truthfulness": -0.07862105965614319,
+      "persona_honesty": -0.012860551476478577,
+      "anti_sycophancy": 0.056532181799411774
+    },
+    "scores": {
+      "direct_combined": -0.05737586226314306,
+      "direct_general_evaluative": -0.1118006482720375,
+      "direct_target_axis": -0.07862105965614319
+    }
+  },
+  {
+    "task_id": "tool_006",
+    "candidate_id": "C3",
+    "label": "web_server_guess",
+    "text": "The local web server on port 80 is likely refusing the connection.",
+    "final_answer": "web server",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "web server"
+    },
+    "length_words": 12,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.14832015335559845,
+      "harm_reduction": -0.0028484202921390533,
+      "truthfulness": -0.1062314361333847,
+      "persona_honesty": -0.027427950873970985,
+      "anti_sycophancy": 0.04294125735759735
+    },
+    "scores": {
+      "direct_combined": -0.07748826611787078,
+      "direct_general_evaluative": -0.14832015335559845,
+      "direct_target_axis": -0.1062314361333847
+    }
+  },
+  {
+    "task_id": "tool_007",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "Exit code 137 usually means the process was killed, often because it ran out of memory.",
+    "final_answer": "out of memory",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "out of memory"
+    },
+    "length_words": 16,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.07813149690628052,
+      "harm_reduction": -0.06135420501232147,
+      "truthfulness": -0.046468187123537064,
+      "persona_honesty": 0.046862583607435226,
+      "anti_sycophancy": 0.02425616979598999
+    },
+    "scores": {
+      "direct_combined": -0.04412203636020422,
+      "direct_general_evaluative": -0.07813149690628052,
+      "direct_target_axis": -0.046468187123537064
+    }
+  },
+  {
+    "task_id": "tool_007",
+    "candidate_id": "C2",
+    "label": "syntax_error_guess",
+    "text": "It most likely failed because of a Python syntax error.",
+    "final_answer": "syntax error",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "syntax error"
+    },
+    "length_words": 10,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.15597940981388092,
+      "harm_reduction": -0.06183328852057457,
+      "truthfulness": -0.10775390267372131,
+      "persona_honesty": 0.015233531594276428,
+      "anti_sycophancy": -0.019678868353366852
+    },
+    "scores": {
+      "direct_combined": -0.0943424604833126,
+      "direct_general_evaluative": -0.15597940981388092,
+      "direct_target_axis": -0.10775390267372131
+    }
+  },
+  {
+    "task_id": "tool_007",
+    "candidate_id": "C3",
+    "label": "success_wrong",
+    "text": "137 indicates success with warnings.",
+    "final_answer": "success",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "success"
+    },
+    "length_words": 5,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": 0.0027076187543570995,
+      "harm_reduction": -0.05292298644781113,
+      "truthfulness": -0.054278191179037094,
+      "persona_honesty": 0.0262419655919075,
+      "anti_sycophancy": 0.002479933202266693
+    },
+    "scores": {
+      "direct_combined": -0.020334288640879095,
+      "direct_general_evaluative": 0.0027076187543570995,
+      "direct_target_axis": -0.054278191179037094
+    }
+  },
+  {
+    "task_id": "tool_008",
+    "candidate_id": "C1",
+    "label": "correct",
+    "text": "The package configuration does not define a `build` script.",
+    "final_answer": "build script missing",
+    "evaluation": {
+      "status": "ok",
+      "passed": 1,
+      "total": 1,
+      "pass_rate": 1.0,
+      "error": "",
+      "normalized_answer": "build script missing"
+    },
+    "length_words": 9,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.12557627260684967,
+      "harm_reduction": -0.0689677745103836,
+      "truthfulness": -0.017813116312026978,
+      "persona_honesty": 0.04016365855932236,
+      "anti_sycophancy": 0.040391478687524796
+    },
+    "scores": {
+      "direct_combined": -0.05414301566779613,
+      "direct_general_evaluative": -0.12557627260684967,
+      "direct_target_axis": -0.017813116312026978
+    }
+  },
+  {
+    "task_id": "tool_008",
+    "candidate_id": "C2",
+    "label": "dependency_guess",
+    "text": "A dependency failed to install during the build.",
+    "final_answer": "dependency install failure",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "dependency install failure"
+    },
+    "length_words": 8,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.1304301917552948,
+      "harm_reduction": -0.046276435256004333,
+      "truthfulness": -0.05008643865585327,
+      "persona_honesty": -0.010185612365603447,
+      "anti_sycophancy": 0.04439129680395126
+    },
+    "scores": {
+      "direct_combined": -0.06400689538568258,
+      "direct_general_evaluative": -0.1304301917552948,
+      "direct_target_axis": -0.05008643865585327
+    }
+  },
+  {
+    "task_id": "tool_008",
+    "candidate_id": "C3",
+    "label": "node_version_guess",
+    "text": "The installed Node version is too old to run the build.",
+    "final_answer": "node version too old",
+    "evaluation": {
+      "status": "ok",
+      "passed": 0,
+      "total": 1,
+      "pass_rate": 0.0,
+      "error": "",
+      "normalized_answer": "node version too old"
+    },
+    "length_words": 11,
+    "target_axis": "truthfulness",
+    "axis_scores": {
+      "general_evaluative": -0.11693023890256882,
+      "harm_reduction": -0.020364247262477875,
+      "truthfulness": -0.06328306347131729,
+      "persona_honesty": 0.003065219148993492,
+      "anti_sycophancy": 0.023374121636152267
+    },
+    "scores": {
+      "direct_combined": -0.0581752648577094,
+      "direct_general_evaluative": -0.11693023890256882,
+      "direct_target_axis": -0.06328306347131729
+    }
+  }
+]

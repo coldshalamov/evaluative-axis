@@ -1,0 +1,43 @@
+{
+  "model": "BAAI/bge-small-en-v1.5",
+  "n_cases": 50,
+  "n_random_axes": 20,
+  "seed": 42,
+  "embedding_dim": 384,
+  "targeted_accs": {
+    "general_evaluative": 0.12,
+    "harm_reduction": 0.56,
+    "truthfulness": 0.24,
+    "persona_honesty": 0.42,
+    "anti_sycophancy": 0.62
+  },
+  "random_axis_stats": {
+    "mean": 0.5009999999999999,
+    "std": 0.08472897969408105,
+    "min": 0.26,
+    "max": 0.62,
+    "median": 0.52
+  },
+  "random_accs": [
+    0.52,
+    0.62,
+    0.62,
+    0.52,
+    0.46,
+    0.48,
+    0.46,
+    0.36,
+    0.48,
+    0.54,
+    0.52,
+    0.6,
+    0.5,
+    0.52,
+    0.44,
+    0.58,
+    0.52,
+    0.44,
+    0.26,
+    0.58
+  ]
+}

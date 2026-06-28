@@ -1,0 +1,418 @@
+[
+  {
+    "model": "BAAI/bge-small-en-v1.5",
+    "output_dir": "C:\\Users\\93rob\\Documents\\GitHub\\Colab_exp\\notes\\research_cycles\\cycle_009_oss_direct_battery_v3_sweep\\BAAI_bge-small-en-v1.5",
+    "returncode": 0,
+    "stdout": "# Controlled Evaluative-Axis Battery\n\nBackend: `fastembed`\nModel: `BAAI/bge-small-en-v1.5`\nCases: 50\nMean absolute length gap: 0.00 words\nMax absolute length gap: 0 words\n\n## Pairwise Accuracy\n\n| Method | Accuracy | n |\n| --- | ---: | ---: |\n| `length` | 50.0% | 50 |\n| `sentiment` | 44.0% | 50 |\n| `refusal` | 57.0% | 50 |\n| `direct_combined` | 20.0% | 50 |\n| `direct_category_axis` | 30.0% | 50 |\n| `direct_general_evaluative` | 12.0% | 50 |\n| `direct_truthfulness` | 24.0% | 50 |\n| `direct_harm_reduction` | 58.0% | 50 |\n| `direct_persona_honesty` | 42.0% | 50 |\n| `direct_anti_sycophancy` | 62.0% | 50 |\n\n## Interpretation Rule\n\nThis controlled battery is still hand-authored, but it is designed to test conceptual discrimination under tighter confound control than the 50-prompt pilot. Inspect failures before treating aggregate accuracy as evidence.\n\n",
+    "stderr": "",
+    "interfaces": "direct",
+    "metrics": {
+      "direct_anti_sycophancy": {
+        "n": 50,
+        "accuracy": 0.62
+      },
+      "direct_category_axis": {
+        "n": 50,
+        "accuracy": 0.3
+      },
+      "direct_combined": {
+        "n": 50,
+        "accuracy": 0.2
+      },
+      "direct_general_evaluative": {
+        "n": 50,
+        "accuracy": 0.12
+      },
+      "direct_harm_reduction": {
+        "n": 50,
+        "accuracy": 0.58
+      },
+      "direct_persona_honesty": {
+        "n": 50,
+        "accuracy": 0.42
+      },
+      "direct_truthfulness": {
+        "n": 50,
+        "accuracy": 0.24
+      },
+      "length": {
+        "n": 50,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 50,
+        "accuracy": 0.57
+      },
+      "sentiment": {
+        "n": 50,
+        "accuracy": 0.44
+      }
+    },
+    "length_abs_gap_mean": 0.0,
+    "length_abs_gap_max": 0
+  },
+  {
+    "model": "BAAI/bge-base-en-v1.5",
+    "output_dir": "C:\\Users\\93rob\\Documents\\GitHub\\Colab_exp\\notes\\research_cycles\\cycle_009_oss_direct_battery_v3_sweep\\BAAI_bge-base-en-v1.5",
+    "returncode": 0,
+    "stdout": "# Controlled Evaluative-Axis Battery\n\nBackend: `fastembed`\nModel: `BAAI/bge-base-en-v1.5`\nCases: 50\nMean absolute length gap: 0.00 words\nMax absolute length gap: 0 words\n\n## Pairwise Accuracy\n\n| Method | Accuracy | n |\n| --- | ---: | ---: |\n| `length` | 50.0% | 50 |\n| `sentiment` | 44.0% | 50 |\n| `refusal` | 57.0% | 50 |\n| `direct_combined` | 16.0% | 50 |\n| `direct_category_axis` | 32.0% | 50 |\n| `direct_general_evaluative` | 20.0% | 50 |\n| `direct_truthfulness` | 26.0% | 50 |\n| `direct_harm_reduction` | 50.0% | 50 |\n| `direct_persona_honesty` | 34.0% | 50 |\n| `direct_anti_sycophancy` | 32.0% | 50 |\n\n## Interpretation Rule\n\nThis controlled battery is still hand-authored, but it is designed to test conceptual discrimination under tighter confound control than the 50-prompt pilot. Inspect failures before treating aggregate accuracy as evidence.\n\n",
+    "stderr": "",
+    "interfaces": "direct",
+    "metrics": {
+      "direct_anti_sycophancy": {
+        "n": 50,
+        "accuracy": 0.32
+      },
+      "direct_category_axis": {
+        "n": 50,
+        "accuracy": 0.32
+      },
+      "direct_combined": {
+        "n": 50,
+        "accuracy": 0.16
+      },
+      "direct_general_evaluative": {
+        "n": 50,
+        "accuracy": 0.2
+      },
+      "direct_harm_reduction": {
+        "n": 50,
+        "accuracy": 0.5
+      },
+      "direct_persona_honesty": {
+        "n": 50,
+        "accuracy": 0.34
+      },
+      "direct_truthfulness": {
+        "n": 50,
+        "accuracy": 0.26
+      },
+      "length": {
+        "n": 50,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 50,
+        "accuracy": 0.57
+      },
+      "sentiment": {
+        "n": 50,
+        "accuracy": 0.44
+      }
+    },
+    "length_abs_gap_mean": 0.0,
+    "length_abs_gap_max": 0
+  },
+  {
+    "model": "thenlper/gte-base",
+    "output_dir": "C:\\Users\\93rob\\Documents\\GitHub\\Colab_exp\\notes\\research_cycles\\cycle_009_oss_direct_battery_v3_sweep\\thenlper_gte-base",
+    "returncode": 0,
+    "stdout": "# Controlled Evaluative-Axis Battery\n\nBackend: `fastembed`\nModel: `thenlper/gte-base`\nCases: 50\nMean absolute length gap: 0.00 words\nMax absolute length gap: 0 words\n\n## Pairwise Accuracy\n\n| Method | Accuracy | n |\n| --- | ---: | ---: |\n| `length` | 50.0% | 50 |\n| `sentiment` | 44.0% | 50 |\n| `refusal` | 57.0% | 50 |\n| `direct_combined` | 20.0% | 50 |\n| `direct_category_axis` | 32.0% | 50 |\n| `direct_general_evaluative` | 16.0% | 50 |\n| `direct_truthfulness` | 28.0% | 50 |\n| `direct_harm_reduction` | 52.0% | 50 |\n| `direct_persona_honesty` | 46.0% | 50 |\n| `direct_anti_sycophancy` | 28.0% | 50 |\n\n## Interpretation Rule\n\nThis controlled battery is still hand-authored, but it is designed to test conceptual discrimination under tighter confound control than the 50-prompt pilot. Inspect failures before treating aggregate accuracy as evidence.\n\n",
+    "stderr": "",
+    "interfaces": "direct",
+    "metrics": {
+      "direct_anti_sycophancy": {
+        "n": 50,
+        "accuracy": 0.28
+      },
+      "direct_category_axis": {
+        "n": 50,
+        "accuracy": 0.32
+      },
+      "direct_combined": {
+        "n": 50,
+        "accuracy": 0.2
+      },
+      "direct_general_evaluative": {
+        "n": 50,
+        "accuracy": 0.16
+      },
+      "direct_harm_reduction": {
+        "n": 50,
+        "accuracy": 0.52
+      },
+      "direct_persona_honesty": {
+        "n": 50,
+        "accuracy": 0.46
+      },
+      "direct_truthfulness": {
+        "n": 50,
+        "accuracy": 0.28
+      },
+      "length": {
+        "n": 50,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 50,
+        "accuracy": 0.57
+      },
+      "sentiment": {
+        "n": 50,
+        "accuracy": 0.44
+      }
+    },
+    "length_abs_gap_mean": 0.0,
+    "length_abs_gap_max": 0
+  },
+  {
+    "model": "snowflake/snowflake-arctic-embed-m",
+    "output_dir": "C:\\Users\\93rob\\Documents\\GitHub\\Colab_exp\\notes\\research_cycles\\cycle_009_oss_direct_battery_v3_sweep\\snowflake_snowflake-arctic-embed-m",
+    "returncode": 0,
+    "stdout": "# Controlled Evaluative-Axis Battery\n\nBackend: `fastembed`\nModel: `snowflake/snowflake-arctic-embed-m`\nCases: 50\nMean absolute length gap: 0.00 words\nMax absolute length gap: 0 words\n\n## Pairwise Accuracy\n\n| Method | Accuracy | n |\n| --- | ---: | ---: |\n| `length` | 50.0% | 50 |\n| `sentiment` | 44.0% | 50 |\n| `refusal` | 57.0% | 50 |\n| `direct_combined` | 34.0% | 50 |\n| `direct_category_axis` | 50.0% | 50 |\n| `direct_general_evaluative` | 32.0% | 50 |\n| `direct_truthfulness` | 48.0% | 50 |\n| `direct_harm_reduction` | 60.0% | 50 |\n| `direct_persona_honesty` | 74.0% | 50 |\n| `direct_anti_sycophancy` | 52.0% | 50 |\n\n## Interpretation Rule\n\nThis controlled battery is still hand-authored, but it is designed to test conceptual discrimination under tighter confound control than the 50-prompt pilot. Inspect failures before treating aggregate accuracy as evidence.\n\n",
+    "stderr": "",
+    "interfaces": "direct",
+    "metrics": {
+      "direct_anti_sycophancy": {
+        "n": 50,
+        "accuracy": 0.52
+      },
+      "direct_category_axis": {
+        "n": 50,
+        "accuracy": 0.5
+      },
+      "direct_combined": {
+        "n": 50,
+        "accuracy": 0.34
+      },
+      "direct_general_evaluative": {
+        "n": 50,
+        "accuracy": 0.32
+      },
+      "direct_harm_reduction": {
+        "n": 50,
+        "accuracy": 0.6
+      },
+      "direct_persona_honesty": {
+        "n": 50,
+        "accuracy": 0.74
+      },
+      "direct_truthfulness": {
+        "n": 50,
+        "accuracy": 0.48
+      },
+      "length": {
+        "n": 50,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 50,
+        "accuracy": 0.57
+      },
+      "sentiment": {
+        "n": 50,
+        "accuracy": 0.44
+      }
+    },
+    "length_abs_gap_mean": 0.0,
+    "length_abs_gap_max": 0
+  },
+  {
+    "model": "jinaai/jina-embeddings-v2-small-en",
+    "output_dir": "C:\\Users\\93rob\\Documents\\GitHub\\Colab_exp\\notes\\research_cycles\\cycle_009_oss_direct_battery_v3_sweep\\jinaai_jina-embeddings-v2-small-en",
+    "returncode": 0,
+    "stdout": "# Controlled Evaluative-Axis Battery\n\nBackend: `fastembed`\nModel: `jinaai/jina-embeddings-v2-small-en`\nCases: 50\nMean absolute length gap: 0.00 words\nMax absolute length gap: 0 words\n\n## Pairwise Accuracy\n\n| Method | Accuracy | n |\n| --- | ---: | ---: |\n| `length` | 50.0% | 50 |\n| `sentiment` | 44.0% | 50 |\n| `refusal` | 57.0% | 50 |\n| `direct_combined` | 28.0% | 50 |\n| `direct_category_axis` | 46.0% | 50 |\n| `direct_general_evaluative` | 20.0% | 50 |\n| `direct_truthfulness` | 38.0% | 50 |\n| `direct_harm_reduction` | 64.0% | 50 |\n| `direct_persona_honesty` | 68.0% | 50 |\n| `direct_anti_sycophancy` | 36.0% | 50 |\n\n## Interpretation Rule\n\nThis controlled battery is still hand-authored, but it is designed to test conceptual discrimination under tighter confound control than the 50-prompt pilot. Inspect failures before treating aggregate accuracy as evidence.\n\n",
+    "stderr": "",
+    "interfaces": "direct",
+    "metrics": {
+      "direct_anti_sycophancy": {
+        "n": 50,
+        "accuracy": 0.36
+      },
+      "direct_category_axis": {
+        "n": 50,
+        "accuracy": 0.46
+      },
+      "direct_combined": {
+        "n": 50,
+        "accuracy": 0.28
+      },
+      "direct_general_evaluative": {
+        "n": 50,
+        "accuracy": 0.2
+      },
+      "direct_harm_reduction": {
+        "n": 50,
+        "accuracy": 0.64
+      },
+      "direct_persona_honesty": {
+        "n": 50,
+        "accuracy": 0.68
+      },
+      "direct_truthfulness": {
+        "n": 50,
+        "accuracy": 0.38
+      },
+      "length": {
+        "n": 50,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 50,
+        "accuracy": 0.57
+      },
+      "sentiment": {
+        "n": 50,
+        "accuracy": 0.44
+      }
+    },
+    "length_abs_gap_mean": 0.0,
+    "length_abs_gap_max": 0
+  },
+  {
+    "model": "jinaai/jina-embeddings-v2-base-en",
+    "output_dir": "C:\\Users\\93rob\\Documents\\GitHub\\Colab_exp\\notes\\research_cycles\\cycle_009_oss_direct_battery_v3_sweep\\jinaai_jina-embeddings-v2-base-en",
+    "returncode": 0,
+    "stdout": "# Controlled Evaluative-Axis Battery\n\nBackend: `fastembed`\nModel: `jinaai/jina-embeddings-v2-base-en`\nCases: 50\nMean absolute length gap: 0.00 words\nMax absolute length gap: 0 words\n\n## Pairwise Accuracy\n\n| Method | Accuracy | n |\n| --- | ---: | ---: |\n| `length` | 50.0% | 50 |\n| `sentiment` | 44.0% | 50 |\n| `refusal` | 57.0% | 50 |\n| `direct_combined` | 32.0% | 50 |\n| `direct_category_axis` | 42.0% | 50 |\n| `direct_general_evaluative` | 18.0% | 50 |\n| `direct_truthfulness` | 36.0% | 50 |\n| `direct_harm_reduction` | 64.0% | 50 |\n| `direct_persona_honesty` | 62.0% | 50 |\n| `direct_anti_sycophancy` | 40.0% | 50 |\n\n## Interpretation Rule\n\nThis controlled battery is still hand-authored, but it is designed to test conceptual discrimination under tighter confound control than the 50-prompt pilot. Inspect failures before treating aggregate accuracy as evidence.\n\n",
+    "stderr": "",
+    "interfaces": "direct",
+    "metrics": {
+      "direct_anti_sycophancy": {
+        "n": 50,
+        "accuracy": 0.4
+      },
+      "direct_category_axis": {
+        "n": 50,
+        "accuracy": 0.42
+      },
+      "direct_combined": {
+        "n": 50,
+        "accuracy": 0.32
+      },
+      "direct_general_evaluative": {
+        "n": 50,
+        "accuracy": 0.18
+      },
+      "direct_harm_reduction": {
+        "n": 50,
+        "accuracy": 0.64
+      },
+      "direct_persona_honesty": {
+        "n": 50,
+        "accuracy": 0.62
+      },
+      "direct_truthfulness": {
+        "n": 50,
+        "accuracy": 0.36
+      },
+      "length": {
+        "n": 50,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 50,
+        "accuracy": 0.57
+      },
+      "sentiment": {
+        "n": 50,
+        "accuracy": 0.44
+      }
+    },
+    "length_abs_gap_mean": 0.0,
+    "length_abs_gap_max": 0
+  },
+  {
+    "model": "nomic-ai/nomic-embed-text-v1.5-Q",
+    "output_dir": "C:\\Users\\93rob\\Documents\\GitHub\\Colab_exp\\notes\\research_cycles\\cycle_009_oss_direct_battery_v3_sweep\\nomic-ai_nomic-embed-text-v1.5-Q",
+    "returncode": 0,
+    "stdout": "# Controlled Evaluative-Axis Battery\n\nBackend: `fastembed`\nModel: `nomic-ai/nomic-embed-text-v1.5-Q`\nCases: 50\nMean absolute length gap: 0.00 words\nMax absolute length gap: 0 words\n\n## Pairwise Accuracy\n\n| Method | Accuracy | n |\n| --- | ---: | ---: |\n| `length` | 50.0% | 50 |\n| `sentiment` | 44.0% | 50 |\n| `refusal` | 57.0% | 50 |\n| `direct_combined` | 24.0% | 50 |\n| `direct_category_axis` | 28.0% | 50 |\n| `direct_general_evaluative` | 20.0% | 50 |\n| `direct_truthfulness` | 28.0% | 50 |\n| `direct_harm_reduction` | 52.0% | 50 |\n| `direct_persona_honesty` | 42.0% | 50 |\n| `direct_anti_sycophancy` | 50.0% | 50 |\n\n## Interpretation Rule\n\nThis controlled battery is still hand-authored, but it is designed to test conceptual discrimination under tighter confound control than the 50-prompt pilot. Inspect failures before treating aggregate accuracy as evidence.\n\n",
+    "stderr": "C:\\Users\\93rob\\Documents\\GitHub\\Colab_exp\\scripts\\run_cycle001_intervention.py:451: UserWarning: The model 'nomic-ai/nomic-embed-text-v1.5-Q' has been updated on HuggingFace. Please review the latest documentation on HF and release notes to ensure compatibility with your workflow. \n  embedder = TextEmbedding(model_name=model_name, cache_dir=str(cache_dir))\n",
+    "interfaces": "direct",
+    "metrics": {
+      "direct_anti_sycophancy": {
+        "n": 50,
+        "accuracy": 0.5
+      },
+      "direct_category_axis": {
+        "n": 50,
+        "accuracy": 0.28
+      },
+      "direct_combined": {
+        "n": 50,
+        "accuracy": 0.24
+      },
+      "direct_general_evaluative": {
+        "n": 50,
+        "accuracy": 0.2
+      },
+      "direct_harm_reduction": {
+        "n": 50,
+        "accuracy": 0.52
+      },
+      "direct_persona_honesty": {
+        "n": 50,
+        "accuracy": 0.42
+      },
+      "direct_truthfulness": {
+        "n": 50,
+        "accuracy": 0.28
+      },
+      "length": {
+        "n": 50,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 50,
+        "accuracy": 0.57
+      },
+      "sentiment": {
+        "n": 50,
+        "accuracy": 0.44
+      }
+    },
+    "length_abs_gap_mean": 0.0,
+    "length_abs_gap_max": 0
+  },
+  {
+    "model": "mixedbread-ai/mxbai-embed-large-v1",
+    "output_dir": "C:\\Users\\93rob\\Documents\\GitHub\\Colab_exp\\notes\\research_cycles\\cycle_009_oss_direct_battery_v3_sweep\\mixedbread-ai_mxbai-embed-large-v1",
+    "returncode": 0,
+    "stdout": "# Controlled Evaluative-Axis Battery\n\nBackend: `fastembed`\nModel: `mixedbread-ai/mxbai-embed-large-v1`\nCases: 50\nMean absolute length gap: 0.00 words\nMax absolute length gap: 0 words\n\n## Pairwise Accuracy\n\n| Method | Accuracy | n |\n| --- | ---: | ---: |\n| `length` | 50.0% | 50 |\n| `sentiment` | 44.0% | 50 |\n| `refusal` | 57.0% | 50 |\n| `direct_combined` | 26.0% | 50 |\n| `direct_category_axis` | 36.0% | 50 |\n| `direct_general_evaluative` | 18.0% | 50 |\n| `direct_truthfulness` | 28.0% | 50 |\n| `direct_harm_reduction` | 52.0% | 50 |\n| `direct_persona_honesty` | 58.0% | 50 |\n| `direct_anti_sycophancy` | 56.0% | 50 |\n\n## Interpretation Rule\n\nThis controlled battery is still hand-authored, but it is designed to test conceptual discrimination under tighter confound control than the 50-prompt pilot. Inspect failures before treating aggregate accuracy as evidence.\n\n",
+    "stderr": "",
+    "interfaces": "direct",
+    "metrics": {
+      "direct_anti_sycophancy": {
+        "n": 50,
+        "accuracy": 0.56
+      },
+      "direct_category_axis": {
+        "n": 50,
+        "accuracy": 0.36
+      },
+      "direct_combined": {
+        "n": 50,
+        "accuracy": 0.26
+      },
+      "direct_general_evaluative": {
+        "n": 50,
+        "accuracy": 0.18
+      },
+      "direct_harm_reduction": {
+        "n": 50,
+        "accuracy": 0.52
+      },
+      "direct_persona_honesty": {
+        "n": 50,
+        "accuracy": 0.58
+      },
+      "direct_truthfulness": {
+        "n": 50,
+        "accuracy": 0.28
+      },
+      "length": {
+        "n": 50,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 50,
+        "accuracy": 0.57
+      },
+      "sentiment": {
+        "n": 50,
+        "accuracy": 0.44
+      }
+    },
+    "length_abs_gap_mean": 0.0,
+    "length_abs_gap_max": 0
+  }
+]

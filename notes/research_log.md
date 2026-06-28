@@ -2293,3 +2293,87 @@ blind review attempts.
 2. Resume Gemini embedding selection on the same fresh pool.
 3. Keep local selectors as exploratory scaffolding, not as the main external
    claim.
+
+## June 27, 2026 - Cycle 013: Objective Suite V2 Scaling
+
+### What was done
+
+Built a deterministic larger objective reranking surface so the repo does not
+have to lean on the old 8-task math and tool pilots as if they were decisive.
+
+Added:
+
+- `scripts/build_objective_reranking_suite_v2.py`
+- `experiments/research_system_v1/benchmarks/objective_math_reranking_v2.json`
+- `experiments/research_system_v1/benchmarks/tool_interpretation_reranking_v2.json`
+- `experiments/research_system_v1/benchmarks/objective_suite_v2_build_summary.json`
+- `notes/research_cycles/cycle_013_objective_suite_v2_scaling/`
+
+The builder freezes:
+
+- 48 exact-graded math tasks
+- 32 exact-graded tool-interpretation tasks
+- randomized candidate order before `C1` / `C2` / `C3` assignment
+- low within-item length gaps instead of the old tiny fixed-order pilot sets
+
+Also ran exploratory local OSS verification on the new frozen suites with:
+
+- `BAAI/bge-base-en-v1.5`
+- `sentence-transformers/all-mpnet-base-v2`
+
+### Key results
+
+Build summary:
+
+- math mean within-item word gap: 1.08
+- tool mean within-item word gap: 1.56
+- math correct-slot distribution: `C1=15`, `C2=15`, `C3=18`
+- tool correct-slot distribution: `C1=8`, `C2=13`, `C3=11`
+
+Objective math v2:
+
+- random: 47.9%
+- length: 35.4%
+- BGE-base best direct: 29.2%
+- MPNet-base best direct: 35.4%
+
+Tool interpretation v2:
+
+- random: 37.5%
+- length: 50.0%
+- BGE-base best direct: 43.8%
+- MPNet-base best direct: 28.1%
+
+Operational note:
+
+- direct Colab MCP transport still timed out after browser approval
+- Chrome-approved live Colab notebook fallback is usable
+
+### Interpretation
+
+This is the kind of negative result the repo needed.
+
+The objective lane is now materially more serious because:
+
+- it scales without blind reviewers;
+- it keeps exact final grading;
+- it removes the fixed-slot weakness of the older tiny suites.
+
+On that stronger surface, cheap OSS embedders remain weak or anti-correlated.
+That does not prove the strong-model story, but it does make the capacity-ladder
+hypothesis more meaningful than before.
+
+### Decision
+
+Treat the v2 objective suites as the new default surface for future
+capacity-ladder work.
+
+Do not present the old 8-task objective wins as decisive evidence anymore.
+
+### Next steps
+
+1. Run `gemini-embedding-2` on the same v2 suites when quota allows.
+2. Use the working Chrome-approved Colab notebook surface to test at least one
+   stronger OSS embedder on the same frozen v2 files.
+3. Update the serious research report so the old objective v1 wins are framed
+   as pilot evidence and v2 becomes the new confirmatory target.

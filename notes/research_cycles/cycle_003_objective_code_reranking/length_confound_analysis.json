@@ -1,0 +1,20 @@
+{
+  "n_candidates": 18,
+  "n_tasks": 6,
+  "correlations": {
+    "length_vs_broad_score": 0.468,
+    "length_vs_code_score": 0.2713,
+    "length_vs_pass_rate": 0.1906,
+    "broad_score_vs_pass_rate": 0.5962,
+    "code_score_vs_pass_rate": 0.5622
+  },
+  "selection_accuracy": {
+    "length": 0.6666666666666666,
+    "broad_score": 0.8333333333333334,
+    "code_score": 0.8333333333333334
+  },
+  "discriminating_test": {
+    "tasks_where_longest_is_not_best": 2,
+    "embedding_correct_on_those": 2
+  }
+}

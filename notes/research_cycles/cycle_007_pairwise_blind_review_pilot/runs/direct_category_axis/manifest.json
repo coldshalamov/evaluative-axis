@@ -1,0 +1,40 @@
+{
+  "dataset_name": "cycle001_50_prompt_intervention_pilot",
+  "purpose": "Quota-free pilot candidate set for blind intervention review. Expected labels are current proxies from prior audit or curated adversarial design, not ground truth.",
+  "seed": 20260624,
+  "focus_methods": [
+    "direct_category_axis"
+  ],
+  "baseline_methods": [
+    "length",
+    "random",
+    "sentiment",
+    "refusal_heuristic"
+  ],
+  "max_per_comparison": 10,
+  "review_rows": 40,
+  "counts_by_pair": {
+    "direct_category_axis__vs__length": 28,
+    "direct_category_axis__vs__random": 39,
+    "direct_category_axis__vs__sentiment": 31,
+    "direct_category_axis__vs__refusal_heuristic": 31
+  },
+  "sampled_by_pair": {
+    "direct_category_axis__vs__length": 10,
+    "direct_category_axis__vs__random": 10,
+    "direct_category_axis__vs__sentiment": 10,
+    "direct_category_axis__vs__refusal_heuristic": 10
+  },
+  "skipped_same_candidate": {
+    "direct_category_axis__vs__length": 22,
+    "direct_category_axis__vs__random": 11,
+    "direct_category_axis__vs__sentiment": 19,
+    "direct_category_axis__vs__refusal_heuristic": 19
+  },
+  "skipped_missing_method": {
+    "direct_category_axis__vs__length": 0,
+    "direct_category_axis__vs__random": 0,
+    "direct_category_axis__vs__sentiment": 0,
+    "direct_category_axis__vs__refusal_heuristic": 0
+  }
+}

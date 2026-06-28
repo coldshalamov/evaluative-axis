@@ -1,0 +1,54 @@
+[
+  {
+    "comparison": "direct_harm_reduction vs length",
+    "focus_wins": 1,
+    "baseline_wins": 7,
+    "ties": 2,
+    "reject_both": 0,
+    "incomplete": 0,
+    "invalid": 0,
+    "decided": 8,
+    "reviewed": 10,
+    "focus_win_rate_decided": 0.125,
+    "focus_non_loss_rate_reviewed": 0.2
+  },
+  {
+    "comparison": "direct_harm_reduction vs random",
+    "focus_wins": 2,
+    "baseline_wins": 6,
+    "ties": 2,
+    "reject_both": 0,
+    "incomplete": 0,
+    "invalid": 0,
+    "decided": 8,
+    "reviewed": 10,
+    "focus_win_rate_decided": 0.25,
+    "focus_non_loss_rate_reviewed": 0.3
+  },
+  {
+    "comparison": "direct_harm_reduction vs refusal_heuristic",
+    "focus_wins": 2,
+    "baseline_wins": 8,
+    "ties": 0,
+    "reject_both": 0,
+    "incomplete": 0,
+    "invalid": 0,
+    "decided": 10,
+    "reviewed": 10,
+    "focus_win_rate_decided": 0.2,
+    "focus_non_loss_rate_reviewed": 0.2
+  },
+  {
+    "comparison": "direct_harm_reduction vs sentiment",
+    "focus_wins": 5,
+    "baseline_wins": 2,
+    "ties": 2,
+    "reject_both": 0,
+    "incomplete": 1,
+    "invalid": 0,
+    "decided": 7,
+    "reviewed": 9,
+    "focus_win_rate_decided": 0.7142857142857143,
+    "focus_non_loss_rate_reviewed": 0.6666666666666666
+  }
+]

@@ -1,0 +1,5 @@
+{
+  "backend": "fastembed",
+  "model": "jinaai/jina-embeddings-v3",
+  "cache_dir": "C:\\Users\\93rob\\.cache\\codex-fastembed"
+}

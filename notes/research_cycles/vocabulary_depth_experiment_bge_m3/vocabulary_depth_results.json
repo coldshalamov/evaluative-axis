@@ -1,0 +1,82 @@
+{
+  "model": "BAAI/bge-m3",
+  "dim": 1024,
+  "n_cases": 50,
+  "ml_jargon": {
+    "general_evaluative": 0.12,
+    "harm_reduction": 0.44,
+    "truthfulness": 0.26,
+    "persona_honesty": 0.66,
+    "anti_sycophancy": 0.8
+  },
+  "single_word": {
+    "good_bad": 0.16,
+    "true_false": 0.16,
+    "honest": 0.16,
+    "just": 0.32,
+    "fair": 0.16,
+    "kind": 0.44,
+    "wise": 0.24,
+    "useful": 0.24,
+    "helpful": 0.24,
+    "brave": 0.18,
+    "clear": 0.24,
+    "capable": 0.22,
+    "right_wrong": 0.14,
+    "noble": 0.46,
+    "sincere": 0.1,
+    "careful": 0.58,
+    "strong": 0.08,
+    "accurate": 0.16,
+    "virtuous": 0.28,
+    "trustworthy": 0.18
+  },
+  "character_projection": {
+    "good_bad": 0.16,
+    "true_false": 0.14,
+    "honest": 0.16,
+    "just": 0.18,
+    "fair": 0.16,
+    "kind": 0.28,
+    "wise": 0.18,
+    "useful": 0.28,
+    "helpful": 0.18,
+    "brave": 0.18,
+    "clear": 0.2,
+    "capable": 0.14,
+    "right_wrong": 0.16,
+    "noble": 0.34,
+    "sincere": 0.12,
+    "careful": 0.24,
+    "strong": 0.08,
+    "accurate": 0.14,
+    "virtuous": 0.22,
+    "trustworthy": 0.12
+  },
+  "synonym_cluster": {
+    "good_bad": 0.12,
+    "true_false": 0.14,
+    "honest": 0.06,
+    "just": 0.16,
+    "kind": 0.2,
+    "wise": 0.36,
+    "useful": 0.2,
+    "helpful": 0.18,
+    "brave": 0.34,
+    "clear": 0.24
+  },
+  "best_universal": {
+    "axis": "single_word/careful",
+    "accuracy": 0.58
+  },
+  "best_ml_jargon": {
+    "axis": "anti_sycophancy",
+    "accuracy": 0.8
+  },
+  "top_3_universal_mean": 0.4933,
+  "top_5_universal_mean": 0.436,
+  "top_7_universal_mean": 0.4057,
+  "top_10_universal_mean": 0.368,
+  "top_3_ml_mean": 0.6333,
+  "top_5_ml_mean": 0.456
+}

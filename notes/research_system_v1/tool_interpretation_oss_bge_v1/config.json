@@ -1,0 +1,10 @@
+{
+  "dataset_name": "tool_interpretation_reranking_v1",
+  "purpose": "Exact-answer tool-output interpretation benchmark for evaluative embedding selection.",
+  "backend": "sentence_transformers",
+  "probe": {
+    "backend": "sentence_transformers",
+    "model": "BAAI/bge-base-en-v1.5"
+  },
+  "seed": 20260625
+}

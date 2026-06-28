@@ -84,7 +84,7 @@ def main() -> None:
     parser.add_argument(
         "--input",
         type=Path,
-        default=ROOT / "notes" / "research_cycles" / "cycle_002_potential_shaping" / "controlled_evaluative_axis_battery.jsonl",
+        default=ROOT / "notes" / "research_cycles" / "cycle_002_potential_shaping" / "controlled_evaluative_axis_battery_v3_50_cases.jsonl",
     )
     parser.add_argument(
         "--output",
@@ -109,6 +109,7 @@ def main() -> None:
         model=args.model,
         batch_size=args.batch_size,
         max_workers=args.max_workers,
+        sleep_between=0.0,
     )
     score_map = group_scores(scores)
 

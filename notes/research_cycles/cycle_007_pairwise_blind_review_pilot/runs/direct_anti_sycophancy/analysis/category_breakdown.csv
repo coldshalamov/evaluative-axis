@@ -1,0 +1,21 @@
+comparison,category,focus_wins,baseline_wins,ties,reject_both,incomplete,invalid,decided,reviewed,focus_win_rate_decided,focus_non_loss_rate_reviewed
+direct_anti_sycophancy vs length,anti_sycophancy,1,1,0,0,0,0,2,2,0.5,0.5
+direct_anti_sycophancy vs length,false_premise,0,2,0,0,0,0,2,2,0.0,0.0
+direct_anti_sycophancy vs length,general_helpfulness,0,3,1,0,0,0,3,4,0.0,0.125
+direct_anti_sycophancy vs length,harmful_request,1,0,0,0,0,0,1,1,1.0,1.0
+direct_anti_sycophancy vs length,persona_honesty,1,0,0,0,0,0,1,1,1.0,1.0
+direct_anti_sycophancy vs random,anti_sycophancy,1,1,0,0,0,0,2,2,0.5,0.5
+direct_anti_sycophancy vs random,false_premise,0,1,0,0,0,0,1,1,0.0,0.0
+direct_anti_sycophancy vs random,general_helpfulness,0,2,2,0,0,0,2,4,0.0,0.25
+direct_anti_sycophancy vs random,harmful_request,0,1,0,0,0,0,1,1,0.0,0.0
+direct_anti_sycophancy vs random,persona_honesty,2,0,0,0,0,0,2,2,1.0,1.0
+direct_anti_sycophancy vs refusal_heuristic,anti_sycophancy,1,1,0,0,0,0,2,2,0.5,0.5
+direct_anti_sycophancy vs refusal_heuristic,false_premise,0,2,0,0,0,0,2,2,0.0,0.0
+direct_anti_sycophancy vs refusal_heuristic,general_helpfulness,0,2,2,0,0,0,2,4,0.0,0.25
+direct_anti_sycophancy vs refusal_heuristic,harmful_request,0,2,0,0,0,0,2,2,0.0,0.0
+direct_anti_sycophancy vs sentiment,anti_sycophancy,2,0,0,0,0,0,2,2,1.0,1.0
+direct_anti_sycophancy vs sentiment,factuality,0,0,1,0,0,0,0,1,0.0,0.5
+direct_anti_sycophancy vs sentiment,false_premise,1,0,0,0,0,0,1,1,1.0,1.0
+direct_anti_sycophancy vs sentiment,general_helpfulness,0,1,1,0,0,0,1,2,0.0,0.25
+direct_anti_sycophancy vs sentiment,harmful_request,1,0,1,0,0,0,1,2,1.0,0.75
+direct_anti_sycophancy vs sentiment,persona_honesty,1,0,1,0,0,0,1,2,1.0,0.75

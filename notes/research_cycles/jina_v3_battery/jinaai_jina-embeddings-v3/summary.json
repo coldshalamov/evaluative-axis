@@ -1,0 +1,384 @@
+{
+  "metrics": {
+    "direct_anti_sycophancy": {
+      "n": 50,
+      "accuracy": 0.64
+    },
+    "direct_category_axis": {
+      "n": 50,
+      "accuracy": 0.46
+    },
+    "direct_combined": {
+      "n": 50,
+      "accuracy": 0.26
+    },
+    "direct_general_evaluative": {
+      "n": 50,
+      "accuracy": 0.2
+    },
+    "direct_harm_reduction": {
+      "n": 50,
+      "accuracy": 0.5
+    },
+    "direct_persona_honesty": {
+      "n": 50,
+      "accuracy": 0.52
+    },
+    "direct_truthfulness": {
+      "n": 50,
+      "accuracy": 0.38
+    },
+    "length": {
+      "n": 50,
+      "accuracy": 0.5
+    },
+    "refusal": {
+      "n": 50,
+      "accuracy": 0.57
+    },
+    "sentiment": {
+      "n": 50,
+      "accuracy": 0.44
+    }
+  },
+  "categories": {
+    "anti_sycophancy": {
+      "direct_anti_sycophancy": {
+        "n": 5,
+        "accuracy": 0.6
+      },
+      "direct_category_axis": {
+        "n": 5,
+        "accuracy": 0.6
+      },
+      "direct_combined": {
+        "n": 5,
+        "accuracy": 0.2
+      },
+      "direct_general_evaluative": {
+        "n": 5,
+        "accuracy": 0.0
+      },
+      "direct_harm_reduction": {
+        "n": 5,
+        "accuracy": 0.6
+      },
+      "direct_persona_honesty": {
+        "n": 5,
+        "accuracy": 0.6
+      },
+      "direct_truthfulness": {
+        "n": 5,
+        "accuracy": 0.0
+      },
+      "length": {
+        "n": 5,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 5,
+        "accuracy": 0.5
+      },
+      "sentiment": {
+        "n": 5,
+        "accuracy": 0.1
+      }
+    },
+    "context_binding": {
+      "direct_anti_sycophancy": {
+        "n": 5,
+        "accuracy": 0.4
+      },
+      "direct_category_axis": {
+        "n": 5,
+        "accuracy": 0.4
+      },
+      "direct_combined": {
+        "n": 5,
+        "accuracy": 0.2
+      },
+      "direct_general_evaluative": {
+        "n": 5,
+        "accuracy": 0.2
+      },
+      "direct_harm_reduction": {
+        "n": 5,
+        "accuracy": 0.8
+      },
+      "direct_persona_honesty": {
+        "n": 5,
+        "accuracy": 0.8
+      },
+      "direct_truthfulness": {
+        "n": 5,
+        "accuracy": 0.4
+      },
+      "length": {
+        "n": 5,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 5,
+        "accuracy": 0.5
+      },
+      "sentiment": {
+        "n": 5,
+        "accuracy": 0.7
+      }
+    },
+    "harm_reduction": {
+      "direct_anti_sycophancy": {
+        "n": 7,
+        "accuracy": 0.5714285714285714
+      },
+      "direct_category_axis": {
+        "n": 7,
+        "accuracy": 0.5714285714285714
+      },
+      "direct_combined": {
+        "n": 7,
+        "accuracy": 0.2857142857142857
+      },
+      "direct_general_evaluative": {
+        "n": 7,
+        "accuracy": 0.14285714285714285
+      },
+      "direct_harm_reduction": {
+        "n": 7,
+        "accuracy": 0.5714285714285714
+      },
+      "direct_persona_honesty": {
+        "n": 7,
+        "accuracy": 0.42857142857142855
+      },
+      "direct_truthfulness": {
+        "n": 7,
+        "accuracy": 0.42857142857142855
+      },
+      "length": {
+        "n": 7,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 7,
+        "accuracy": 1.0
+      },
+      "sentiment": {
+        "n": 7,
+        "accuracy": 0.5
+      }
+    },
+    "helpfulness": {
+      "direct_anti_sycophancy": {
+        "n": 5,
+        "accuracy": 0.2
+      },
+      "direct_category_axis": {
+        "n": 5,
+        "accuracy": 0.6
+      },
+      "direct_combined": {
+        "n": 5,
+        "accuracy": 0.2
+      },
+      "direct_general_evaluative": {
+        "n": 5,
+        "accuracy": 0.6
+      },
+      "direct_harm_reduction": {
+        "n": 5,
+        "accuracy": 0.4
+      },
+      "direct_persona_honesty": {
+        "n": 5,
+        "accuracy": 0.4
+      },
+      "direct_truthfulness": {
+        "n": 5,
+        "accuracy": 0.6
+      },
+      "length": {
+        "n": 5,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 5,
+        "accuracy": 0.4
+      },
+      "sentiment": {
+        "n": 5,
+        "accuracy": 0.4
+      }
+    },
+    "mixed": {
+      "direct_anti_sycophancy": {
+        "n": 4,
+        "accuracy": 0.25
+      },
+      "direct_category_axis": {
+        "n": 4,
+        "accuracy": 0.0
+      },
+      "direct_combined": {
+        "n": 4,
+        "accuracy": 0.0
+      },
+      "direct_general_evaluative": {
+        "n": 4,
+        "accuracy": 0.0
+      },
+      "direct_harm_reduction": {
+        "n": 4,
+        "accuracy": 0.0
+      },
+      "direct_persona_honesty": {
+        "n": 4,
+        "accuracy": 0.25
+      },
+      "direct_truthfulness": {
+        "n": 4,
+        "accuracy": 0.25
+      },
+      "length": {
+        "n": 4,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 4,
+        "accuracy": 0.5
+      },
+      "sentiment": {
+        "n": 4,
+        "accuracy": 0.25
+      }
+    },
+    "persona_honesty": {
+      "direct_anti_sycophancy": {
+        "n": 4,
+        "accuracy": 0.75
+      },
+      "direct_category_axis": {
+        "n": 4,
+        "accuracy": 0.75
+      },
+      "direct_combined": {
+        "n": 4,
+        "accuracy": 0.5
+      },
+      "direct_general_evaluative": {
+        "n": 4,
+        "accuracy": 0.0
+      },
+      "direct_harm_reduction": {
+        "n": 4,
+        "accuracy": 0.75
+      },
+      "direct_persona_honesty": {
+        "n": 4,
+        "accuracy": 0.75
+      },
+      "direct_truthfulness": {
+        "n": 4,
+        "accuracy": 0.5
+      },
+      "length": {
+        "n": 4,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 4,
+        "accuracy": 0.625
+      },
+      "sentiment": {
+        "n": 4,
+        "accuracy": 0.5
+      }
+    },
+    "reasoning_rigor": {
+      "direct_anti_sycophancy": {
+        "n": 11,
+        "accuracy": 0.9090909090909091
+      },
+      "direct_category_axis": {
+        "n": 11,
+        "accuracy": 0.45454545454545453
+      },
+      "direct_combined": {
+        "n": 11,
+        "accuracy": 0.2727272727272727
+      },
+      "direct_general_evaluative": {
+        "n": 11,
+        "accuracy": 0.18181818181818182
+      },
+      "direct_harm_reduction": {
+        "n": 11,
+        "accuracy": 0.5454545454545454
+      },
+      "direct_persona_honesty": {
+        "n": 11,
+        "accuracy": 0.45454545454545453
+      },
+      "direct_truthfulness": {
+        "n": 11,
+        "accuracy": 0.45454545454545453
+      },
+      "length": {
+        "n": 11,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 11,
+        "accuracy": 0.5
+      },
+      "sentiment": {
+        "n": 11,
+        "accuracy": 0.5
+      }
+    },
+    "truthfulness": {
+      "direct_anti_sycophancy": {
+        "n": 9,
+        "accuracy": 0.8888888888888888
+      },
+      "direct_category_axis": {
+        "n": 9,
+        "accuracy": 0.3333333333333333
+      },
+      "direct_combined": {
+        "n": 9,
+        "accuracy": 0.3333333333333333
+      },
+      "direct_general_evaluative": {
+        "n": 9,
+        "accuracy": 0.3333333333333333
+      },
+      "direct_harm_reduction": {
+        "n": 9,
+        "accuracy": 0.3333333333333333
+      },
+      "direct_persona_honesty": {
+        "n": 9,
+        "accuracy": 0.5555555555555556
+      },
+      "direct_truthfulness": {
+        "n": 9,
+        "accuracy": 0.3333333333333333
+      },
+      "length": {
+        "n": 9,
+        "accuracy": 0.5
+      },
+      "refusal": {
+        "n": 9,
+        "accuracy": 0.5
+      },
+      "sentiment": {
+        "n": 9,
+        "accuracy": 0.4444444444444444
+      }
+    }
+  },
+  "length_abs_gap_mean": 0.0,
+  "length_abs_gap_max": 0
+}

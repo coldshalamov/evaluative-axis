@@ -1,0 +1,42 @@
+{
+  "random": {
+    "tasks": 48,
+    "tasks_solved": 23,
+    "solve_rate": 0.4791666666666667,
+    "avg_selected_pass_rate": 0.4791666666666667,
+    "avg_regret_vs_best_available": 0.5,
+    "best_candidate_hit_rate": 0.5
+  },
+  "length": {
+    "tasks": 48,
+    "tasks_solved": 17,
+    "solve_rate": 0.3541666666666667,
+    "avg_selected_pass_rate": 0.3541666666666667,
+    "avg_regret_vs_best_available": 0.625,
+    "best_candidate_hit_rate": 0.375
+  },
+  "direct_combined": {
+    "tasks": 48,
+    "tasks_solved": 11,
+    "solve_rate": 0.22916666666666666,
+    "avg_selected_pass_rate": 0.22916666666666666,
+    "avg_regret_vs_best_available": 0.75,
+    "best_candidate_hit_rate": 0.25
+  },
+  "direct_general_evaluative": {
+    "tasks": 48,
+    "tasks_solved": 13,
+    "solve_rate": 0.2708333333333333,
+    "avg_selected_pass_rate": 0.2708333333333333,
+    "avg_regret_vs_best_available": 0.7083333333333334,
+    "best_candidate_hit_rate": 0.2916666666666667
+  },
+  "direct_target_axis": {
+    "tasks": 48,
+    "tasks_solved": 14,
+    "solve_rate": 0.2916666666666667,
+    "avg_selected_pass_rate": 0.2916666666666667,
+    "avg_regret_vs_best_available": 0.6875,
+    "best_candidate_hit_rate": 0.3125
+  }
+}

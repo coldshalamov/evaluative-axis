@@ -191,7 +191,7 @@ def build_axes(embedder):
 # Gemini Flash judge
 # ---------------------------------------------------------------------------
 
-def get_gemini_judge():
+def get_gemini_judge(model_name="gemini-flash-lite-latest"):
     import google.generativeai as genai
     key = None
     for var in ("GOOGLE_API_KEY", "GEMINI_API_KEY"):
@@ -216,7 +216,7 @@ def get_gemini_judge():
     if not key:
         raise RuntimeError("No Gemini API key for judge")
     genai.configure(api_key=key)
-    return genai.GenerativeModel("gemini-2.0-flash")
+    return genai.GenerativeModel(model_name)
 
 
 JUDGE_PROMPT = """You are evaluating two AI assistant responses to the same user message.

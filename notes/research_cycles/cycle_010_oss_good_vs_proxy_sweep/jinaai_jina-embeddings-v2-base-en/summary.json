@@ -1,0 +1,487 @@
+{
+  "metrics": {
+    "raw_accurate_inaccurate": {
+      "n": 50,
+      "accuracy": 0.2,
+      "mean_delta": -0.038947984082624315
+    },
+    "raw_correct_incorrect": {
+      "n": 50,
+      "accuracy": 0.2,
+      "mean_delta": -0.027847123518586158
+    },
+    "raw_good_bad": {
+      "n": 50,
+      "accuracy": 0.16,
+      "mean_delta": -0.029601337146013974
+    },
+    "raw_helpful_unhelpful": {
+      "n": 50,
+      "accuracy": 0.32,
+      "mean_delta": -0.028441406581550838
+    },
+    "raw_honest_dishonest": {
+      "n": 50,
+      "accuracy": 0.14,
+      "mean_delta": -0.027563106324523686
+    },
+    "raw_safe_unsafe": {
+      "n": 50,
+      "accuracy": 0.24,
+      "mean_delta": -0.025015382361598313
+    },
+    "raw_true_false": {
+      "n": 50,
+      "accuracy": 0.26,
+      "mean_delta": -0.017125007808208467
+    },
+    "raw_truthful_untruthful": {
+      "n": 50,
+      "accuracy": 0.08,
+      "mean_delta": -0.04090929700061679
+    },
+    "raw_useful_useless": {
+      "n": 50,
+      "accuracy": 0.24,
+      "mean_delta": -0.02872391405515373
+    },
+    "sentence_good_bad": {
+      "n": 50,
+      "accuracy": 0.18,
+      "mean_delta": -0.032466302597895264
+    }
+  },
+  "categories": {
+    "anti_sycophancy": {
+      "raw_accurate_inaccurate": {
+        "n": 5,
+        "accuracy": 0.2,
+        "mean_delta": -0.06811840776354075
+      },
+      "raw_correct_incorrect": {
+        "n": 5,
+        "accuracy": 0.2,
+        "mean_delta": -0.05358868055045605
+      },
+      "raw_good_bad": {
+        "n": 5,
+        "accuracy": 0.0,
+        "mean_delta": -0.06471854839473963
+      },
+      "raw_helpful_unhelpful": {
+        "n": 5,
+        "accuracy": 0.2,
+        "mean_delta": -0.04584953859448433
+      },
+      "raw_honest_dishonest": {
+        "n": 5,
+        "accuracy": 0.0,
+        "mean_delta": -0.07017985135316848
+      },
+      "raw_safe_unsafe": {
+        "n": 5,
+        "accuracy": 0.0,
+        "mean_delta": -0.06258447421714664
+      },
+      "raw_true_false": {
+        "n": 5,
+        "accuracy": 0.4,
+        "mean_delta": -0.034559516794979574
+      },
+      "raw_truthful_untruthful": {
+        "n": 5,
+        "accuracy": 0.0,
+        "mean_delta": -0.06213110685348511
+      },
+      "raw_useful_useless": {
+        "n": 5,
+        "accuracy": 0.2,
+        "mean_delta": -0.04058525320142507
+      },
+      "sentence_good_bad": {
+        "n": 5,
+        "accuracy": 0.0,
+        "mean_delta": -0.07219866029918194
+      }
+    },
+    "context_binding": {
+      "raw_accurate_inaccurate": {
+        "n": 5,
+        "accuracy": 0.2,
+        "mean_delta": -0.029057506285607815
+      },
+      "raw_correct_incorrect": {
+        "n": 5,
+        "accuracy": 0.2,
+        "mean_delta": -0.015302256122231484
+      },
+      "raw_good_bad": {
+        "n": 5,
+        "accuracy": 0.2,
+        "mean_delta": -0.017328481003642083
+      },
+      "raw_helpful_unhelpful": {
+        "n": 5,
+        "accuracy": 0.2,
+        "mean_delta": -0.03343479298055172
+      },
+      "raw_honest_dishonest": {
+        "n": 5,
+        "accuracy": 0.0,
+        "mean_delta": -0.03062395453453064
+      },
+      "raw_safe_unsafe": {
+        "n": 5,
+        "accuracy": 0.2,
+        "mean_delta": 0.001858379878103733
+      },
+      "raw_true_false": {
+        "n": 5,
+        "accuracy": 0.2,
+        "mean_delta": -4.4193677604198454e-05
+      },
+      "raw_truthful_untruthful": {
+        "n": 5,
+        "accuracy": 0.2,
+        "mean_delta": -0.033595623634755614
+      },
+      "raw_useful_useless": {
+        "n": 5,
+        "accuracy": 0.2,
+        "mean_delta": -0.03328061439096928
+      },
+      "sentence_good_bad": {
+        "n": 5,
+        "accuracy": 0.2,
+        "mean_delta": -0.020162591896951198
+      }
+    },
+    "harm_reduction": {
+      "raw_accurate_inaccurate": {
+        "n": 7,
+        "accuracy": 0.2857142857142857,
+        "mean_delta": -0.025623364839702845
+      },
+      "raw_correct_incorrect": {
+        "n": 7,
+        "accuracy": 0.42857142857142855,
+        "mean_delta": -0.010386837779411249
+      },
+      "raw_good_bad": {
+        "n": 7,
+        "accuracy": 0.14285714285714285,
+        "mean_delta": -0.016858530763004507
+      },
+      "raw_helpful_unhelpful": {
+        "n": 7,
+        "accuracy": 0.5714285714285714,
+        "mean_delta": 0.006501743569970131
+      },
+      "raw_honest_dishonest": {
+        "n": 7,
+        "accuracy": 0.14285714285714285,
+        "mean_delta": -0.02446637542120048
+      },
+      "raw_safe_unsafe": {
+        "n": 7,
+        "accuracy": 0.14285714285714285,
+        "mean_delta": -0.03117915049993566
+      },
+      "raw_true_false": {
+        "n": 7,
+        "accuracy": 0.5714285714285714,
+        "mean_delta": 0.0033587015100887845
+      },
+      "raw_truthful_untruthful": {
+        "n": 7,
+        "accuracy": 0.14285714285714285,
+        "mean_delta": -0.02570469052131687
+      },
+      "raw_useful_useless": {
+        "n": 7,
+        "accuracy": 0.42857142857142855,
+        "mean_delta": -0.004940970667770931
+      },
+      "sentence_good_bad": {
+        "n": 7,
+        "accuracy": 0.2857142857142857,
+        "mean_delta": -0.013672095324311937
+      }
+    },
+    "helpfulness": {
+      "raw_accurate_inaccurate": {
+        "n": 5,
+        "accuracy": 0.4,
+        "mean_delta": -0.010267208144068719
+      },
+      "raw_correct_incorrect": {
+        "n": 5,
+        "accuracy": 0.2,
+        "mean_delta": -0.011569715291261672
+      },
+      "raw_good_bad": {
+        "n": 5,
+        "accuracy": 0.2,
+        "mean_delta": -0.02036830261349678
+      },
+      "raw_helpful_unhelpful": {
+        "n": 5,
+        "accuracy": 0.4,
+        "mean_delta": -0.022762719169259073
+      },
+      "raw_honest_dishonest": {
+        "n": 5,
+        "accuracy": 0.2,
+        "mean_delta": -0.007921516336500645
+      },
+      "raw_safe_unsafe": {
+        "n": 5,
+        "accuracy": 0.2,
+        "mean_delta": -0.02397431470453739
+      },
+      "raw_true_false": {
+        "n": 5,
+        "accuracy": 0.0,
+        "mean_delta": -0.03640243336558342
+      },
+      "raw_truthful_untruthful": {
+        "n": 5,
+        "accuracy": 0.2,
+        "mean_delta": -0.02330683544278145
+      },
+      "raw_useful_useless": {
+        "n": 5,
+        "accuracy": 0.4,
+        "mean_delta": -0.016407020017504693
+      },
+      "sentence_good_bad": {
+        "n": 5,
+        "accuracy": 0.2,
+        "mean_delta": -0.02362011792138219
+      }
+    },
+    "mixed": {
+      "raw_accurate_inaccurate": {
+        "n": 4,
+        "accuracy": 0.25,
+        "mean_delta": -0.026965196477249265
+      },
+      "raw_correct_incorrect": {
+        "n": 4,
+        "accuracy": 0.25,
+        "mean_delta": -0.020897965179756284
+      },
+      "raw_good_bad": {
+        "n": 4,
+        "accuracy": 0.0,
+        "mean_delta": -0.04473057924769819
+      },
+      "raw_helpful_unhelpful": {
+        "n": 4,
+        "accuracy": 0.0,
+        "mean_delta": -0.060480739222839475
+      },
+      "raw_honest_dishonest": {
+        "n": 4,
+        "accuracy": 0.0,
+        "mean_delta": -0.036378355231136084
+      },
+      "raw_safe_unsafe": {
+        "n": 4,
+        "accuracy": 0.0,
+        "mean_delta": -0.037564430851489305
+      },
+      "raw_true_false": {
+        "n": 4,
+        "accuracy": 0.25,
+        "mean_delta": 0.00012193713337182999
+      },
+      "raw_truthful_untruthful": {
+        "n": 4,
+        "accuracy": 0.0,
+        "mean_delta": -0.052436391822993755
+      },
+      "raw_useful_useless": {
+        "n": 4,
+        "accuracy": 0.0,
+        "mean_delta": -0.03609406773466617
+      },
+      "sentence_good_bad": {
+        "n": 4,
+        "accuracy": 0.25,
+        "mean_delta": -0.03008939791470766
+      }
+    },
+    "persona_honesty": {
+      "raw_accurate_inaccurate": {
+        "n": 4,
+        "accuracy": 0.0,
+        "mean_delta": -0.07655476592481136
+      },
+      "raw_correct_incorrect": {
+        "n": 4,
+        "accuracy": 0.0,
+        "mean_delta": -0.06564785027876496
+      },
+      "raw_good_bad": {
+        "n": 4,
+        "accuracy": 0.0,
+        "mean_delta": -0.033146342262625694
+      },
+      "raw_helpful_unhelpful": {
+        "n": 4,
+        "accuracy": 0.0,
+        "mean_delta": -0.061512503772974014
+      },
+      "raw_honest_dishonest": {
+        "n": 4,
+        "accuracy": 0.0,
+        "mean_delta": -0.05850897450000048
+      },
+      "raw_safe_unsafe": {
+        "n": 4,
+        "accuracy": 0.25,
+        "mean_delta": -0.03521149611333385
+      },
+      "raw_true_false": {
+        "n": 4,
+        "accuracy": 0.0,
+        "mean_delta": -0.04763813642784953
+      },
+      "raw_truthful_untruthful": {
+        "n": 4,
+        "accuracy": 0.0,
+        "mean_delta": -0.06664575589820743
+      },
+      "raw_useful_useless": {
+        "n": 4,
+        "accuracy": 0.0,
+        "mean_delta": -0.07220461778342724
+      },
+      "sentence_good_bad": {
+        "n": 4,
+        "accuracy": 0.0,
+        "mean_delta": -0.048360714223235846
+      }
+    },
+    "reasoning_rigor": {
+      "raw_accurate_inaccurate": {
+        "n": 11,
+        "accuracy": 0.18181818181818182,
+        "mean_delta": -0.035147389566356484
+      },
+      "raw_correct_incorrect": {
+        "n": 11,
+        "accuracy": 0.18181818181818182,
+        "mean_delta": -0.026193781247870487
+      },
+      "raw_good_bad": {
+        "n": 11,
+        "accuracy": 0.2727272727272727,
+        "mean_delta": -0.029693237336521797
+      },
+      "raw_helpful_unhelpful": {
+        "n": 11,
+        "accuracy": 0.36363636363636365,
+        "mean_delta": -0.024679621342908253
+      },
+      "raw_honest_dishonest": {
+        "n": 11,
+        "accuracy": 0.2727272727272727,
+        "mean_delta": -0.008442647755146027
+      },
+      "raw_safe_unsafe": {
+        "n": 11,
+        "accuracy": 0.36363636363636365,
+        "mean_delta": -0.015007988634434614
+      },
+      "raw_true_false": {
+        "n": 11,
+        "accuracy": 0.2727272727272727,
+        "mean_delta": -0.014381921003487978
+      },
+      "raw_truthful_untruthful": {
+        "n": 11,
+        "accuracy": 0.09090909090909091,
+        "mean_delta": -0.03117291375317357
+      },
+      "raw_useful_useless": {
+        "n": 11,
+        "accuracy": 0.2727272727272727,
+        "mean_delta": -0.024510010399601677
+      },
+      "sentence_good_bad": {
+        "n": 11,
+        "accuracy": 0.2727272727272727,
+        "mean_delta": -0.0279362772337415
+      }
+    },
+    "truthfulness": {
+      "raw_accurate_inaccurate": {
+        "n": 9,
+        "accuracy": 0.1111111111111111,
+        "mean_delta": -0.047790989383227296
+      },
+      "raw_correct_incorrect": {
+        "n": 9,
+        "accuracy": 0.1111111111111111,
+        "mean_delta": -0.03144779956589142
+      },
+      "raw_good_bad": {
+        "n": 9,
+        "accuracy": 0.2222222222222222,
+        "mean_delta": -0.02353857612858216
+      },
+      "raw_helpful_unhelpful": {
+        "n": 9,
+        "accuracy": 0.4444444444444444,
+        "mean_delta": -0.021988719287845824
+      },
+      "raw_honest_dishonest": {
+        "n": 9,
+        "accuracy": 0.2222222222222222,
+        "mean_delta": -0.021205070325069957
+      },
+      "raw_safe_unsafe": {
+        "n": 9,
+        "accuracy": 0.4444444444444444,
+        "mean_delta": -0.016980159613821242
+      },
+      "raw_true_false": {
+        "n": 9,
+        "accuracy": 0.2222222222222222,
+        "mean_delta": -0.019607183730436697
+      },
+      "raw_truthful_untruthful": {
+        "n": 9,
+        "accuracy": 0.0,
+        "mean_delta": -0.05012594939519962
+      },
+      "raw_useful_useless": {
+        "n": 9,
+        "accuracy": 0.2222222222222222,
+        "mean_delta": -0.027493290396200284
+      },
+      "sentence_good_bad": {
+        "n": 9,
+        "accuracy": 0.1111111111111111,
+        "mean_delta": -0.0362893459904525
+      }
+    }
+  },
+  "comparison": {
+    "raw_good_bad_accuracy": 0.16,
+    "sentence_good_bad_accuracy": 0.18,
+    "proxy_mean_accuracy": 0.21,
+    "best_proxy_axis": "raw_helpful_unhelpful",
+    "best_proxy_accuracy": 0.32,
+    "best_axis_name": "raw_helpful_unhelpful",
+    "best_axis_accuracy": 0.32,
+    "raw_good_bad_minus_proxy_mean": -0.04999999999999999,
+    "sentence_good_bad_minus_proxy_mean": -0.03,
+    "raw_good_bad_minus_best_proxy": -0.16,
+    "sentence_good_bad_minus_best_proxy": -0.14,
+    "length_abs_gap_mean": 0.0,
+    "length_abs_gap_max": 0
+  }
+}

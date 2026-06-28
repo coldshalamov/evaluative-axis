@@ -1,0 +1,54 @@
+[
+  {
+    "comparison": "direct_category_axis vs length",
+    "focus_wins": 1,
+    "baseline_wins": 8,
+    "ties": 1,
+    "reject_both": 0,
+    "incomplete": 0,
+    "invalid": 0,
+    "decided": 9,
+    "reviewed": 10,
+    "focus_win_rate_decided": 0.1111111111111111,
+    "focus_non_loss_rate_reviewed": 0.15
+  },
+  {
+    "comparison": "direct_category_axis vs random",
+    "focus_wins": 5,
+    "baseline_wins": 3,
+    "ties": 2,
+    "reject_both": 0,
+    "incomplete": 0,
+    "invalid": 0,
+    "decided": 8,
+    "reviewed": 10,
+    "focus_win_rate_decided": 0.625,
+    "focus_non_loss_rate_reviewed": 0.6
+  },
+  {
+    "comparison": "direct_category_axis vs refusal_heuristic",
+    "focus_wins": 2,
+    "baseline_wins": 5,
+    "ties": 3,
+    "reject_both": 0,
+    "incomplete": 0,
+    "invalid": 0,
+    "decided": 7,
+    "reviewed": 10,
+    "focus_win_rate_decided": 0.2857142857142857,
+    "focus_non_loss_rate_reviewed": 0.35
+  },
+  {
+    "comparison": "direct_category_axis vs sentiment",
+    "focus_wins": 8,
+    "baseline_wins": 1,
+    "ties": 1,
+    "reject_both": 0,
+    "incomplete": 0,
+    "invalid": 0,
+    "decided": 9,
+    "reviewed": 10,
+    "focus_win_rate_decided": 0.8888888888888888,
+    "focus_non_loss_rate_reviewed": 0.85
+  }
+]
