@@ -1,0 +1,44 @@
+{
+  "snowflake/snowflake-arctic-embed-m": {
+    "prompt_cosine": 0.4,
+    "length_bias": 0.51,
+    "embedding_norm": 0.57,
+    "cos_good_response": 0.44,
+    "cos_helpful": 0.5,
+    "cos_high_quality": 0.46,
+    "axis/general_evaluative": 0.34,
+    "axis/harm_reduction": 0.6,
+    "axis/truthfulness": 0.48,
+    "axis/persona_honesty": 0.72,
+    "axis/anti_sycophancy": 0.52,
+    "axis/careful_reckless": 0.52
+  },
+  "BAAI/bge-m3": {
+    "prompt_cosine": 0.28,
+    "length_bias": 0.51,
+    "embedding_norm": 0.51,
+    "cos_good_response": 0.22,
+    "cos_helpful": 0.26,
+    "cos_high_quality": 0.18,
+    "axis/general_evaluative": 0.12,
+    "axis/harm_reduction": 0.44,
+    "axis/truthfulness": 0.26,
+    "axis/persona_honesty": 0.66,
+    "axis/anti_sycophancy": 0.8,
+    "axis/careful_reckless": 0.58
+  },
+  "nomic-ai/nomic-embed-text-v1.5": {
+    "prompt_cosine": 0.26,
+    "length_bias": 0.51,
+    "embedding_norm": 0.3,
+    "cos_good_response": 0.2,
+    "cos_helpful": 0.26,
+    "cos_high_quality": 0.28,
+    "axis/general_evaluative": 0.1,
+    "axis/harm_reduction": 0.5,
+    "axis/truthfulness": 0.2,
+    "axis/persona_honesty": 0.54,
+    "axis/anti_sycophancy": 0.56,
+    "axis/careful_reckless": 0.62
+  }
+}

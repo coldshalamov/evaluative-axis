@@ -1,0 +1,166 @@
+{
+  "cross_model_individual": {
+    "hard": {
+      "min": 0.58,
+      "mean": 0.6333333333333333,
+      "models": {
+        "snowflake/snowflake-arctic-embed-m": 0.58,
+        "BAAI/bge-m3": 0.64,
+        "nomic-ai/nomic-embed-text-v1.5": 0.68
+      }
+    },
+    "careful": {
+      "min": 0.52,
+      "mean": 0.5733333333333334,
+      "models": {
+        "snowflake/snowflake-arctic-embed-m": 0.52,
+        "BAAI/bge-m3": 0.58,
+        "nomic-ai/nomic-embed-text-v1.5": 0.62
+      }
+    },
+    "heavy": {
+      "min": 0.52,
+      "mean": 0.5666666666666668,
+      "models": {
+        "snowflake/snowflake-arctic-embed-m": 0.52,
+        "BAAI/bge-m3": 0.6,
+        "nomic-ai/nomic-embed-text-v1.5": 0.58
+      }
+    },
+    "noble": {
+      "min": 0.46,
+      "mean": 0.4666666666666666,
+      "models": {
+        "snowflake/snowflake-arctic-embed-m": 0.46,
+        "BAAI/bge-m3": 0.46,
+        "nomic-ai/nomic-embed-text-v1.5": 0.48
+      }
+    },
+    "thorough": {
+      "min": 0.42,
+      "mean": 0.5266666666666667,
+      "models": {
+        "snowflake/snowflake-arctic-embed-m": 0.6,
+        "BAAI/bge-m3": 0.42,
+        "nomic-ai/nomic-embed-text-v1.5": 0.56
+      }
+    },
+    "moderate": {
+      "min": 0.4,
+      "mean": 0.45999999999999996,
+      "models": {
+        "snowflake/snowflake-arctic-embed-m": 0.48,
+        "BAAI/bge-m3": 0.5,
+        "nomic-ai/nomic-embed-text-v1.5": 0.4
+      }
+    },
+    "kind": {
+      "min": 0.28,
+      "mean": 0.37333333333333335,
+      "models": {
+        "snowflake/snowflake-arctic-embed-m": 0.4,
+        "BAAI/bge-m3": 0.44,
+        "nomic-ai/nomic-embed-text-v1.5": 0.28
+      }
+    },
+    "constructive": {
+      "min": 0.26,
+      "mean": 0.3333333333333333,
+      "models": {
+        "snowflake/snowflake-arctic-embed-m": 0.46,
+        "BAAI/bge-m3": 0.26,
+        "nomic-ai/nomic-embed-text-v1.5": 0.28
+      }
+    },
+    "wise": {
+      "min": 0.24,
+      "mean": 0.3333333333333333,
+      "models": {
+        "snowflake/snowflake-arctic-embed-m": 0.46,
+        "BAAI/bge-m3": 0.24,
+        "nomic-ai/nomic-embed-text-v1.5": 0.3
+      }
+    },
+    "clear": {
+      "min": 0.24,
+      "mean": 0.32666666666666666,
+      "models": {
+        "snowflake/snowflake-arctic-embed-m": 0.46,
+        "BAAI/bge-m3": 0.24,
+        "nomic-ai/nomic-embed-text-v1.5": 0.28
+      }
+    },
+    "useful": {
+      "min": 0.22,
+      "mean": 0.27999999999999997,
+      "models": {
+        "snowflake/snowflake-arctic-embed-m": 0.38,
+        "BAAI/bge-m3": 0.24,
+        "nomic-ai/nomic-embed-text-v1.5": 0.22
+      }
+    },
+    "sound": {
+      "min": 0.22,
+      "mean": 0.2933333333333333,
+      "models": {
+        "snowflake/snowflake-arctic-embed-m": 0.36,
+        "BAAI/bge-m3": 0.22,
+        "nomic-ai/nomic-embed-text-v1.5": 0.3
+      }
+    },
+    "responsible": {
+      "min": 0.2,
+      "mean": 0.32,
+      "models": {
+        "snowflake/snowflake-arctic-embed-m": 0.52,
+        "BAAI/bge-m3": 0.24,
+        "nomic-ai/nomic-embed-text-v1.5": 0.2
+      }
+    },
+    "active": {
+      "min": 0.18,
+      "mean": 0.38000000000000006,
+      "models": {
+        "snowflake/snowflake-arctic-embed-m": 0.6,
+        "BAAI/bge-m3": 0.18,
+        "nomic-ai/nomic-embed-text-v1.5": 0.36
+      }
+    },
+    "honest": {
+      "min": 0.16,
+      "mean": 0.24,
+      "models": {
+        "snowflake/snowflake-arctic-embed-m": 0.26,
+        "BAAI/bge-m3": 0.16,
+        "nomic-ai/nomic-embed-text-v1.5": 0.3
+      }
+    },
+    "fair": {
+      "min": 0.16,
+      "mean": 0.2733333333333333,
+      "models": {
+        "snowflake/snowflake-arctic-embed-m": 0.42,
+        "BAAI/bge-m3": 0.16,
+        "nomic-ai/nomic-embed-text-v1.5": 0.24
+      }
+    },
+    "precise": {
+      "min": 0.14,
+      "mean": 0.3,
+      "models": {
+        "snowflake/snowflake-arctic-embed-m": 0.48,
+        "BAAI/bge-m3": 0.14,
+        "nomic-ai/nomic-embed-text-v1.5": 0.28
+      }
+    },
+    "good": {
+      "min": 0.12,
+      "mean": 0.25333333333333335,
+      "models": {
+        "snowflake/snowflake-arctic-embed-m": 0.48,
+        "BAAI/bge-m3": 0.16,
+        "nomic-ai/nomic-embed-text-v1.5": 0.12
+      }
+    }
+  }
+}

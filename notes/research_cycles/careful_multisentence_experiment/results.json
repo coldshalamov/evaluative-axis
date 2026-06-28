@@ -1,0 +1,47 @@
+{
+  "snowflake/snowflake-arctic-embed-m": {
+    "ml/general_evaluative": 0.34,
+    "ml/harm_reduction": 0.6,
+    "ml/truthfulness": 0.48,
+    "ml/persona_honesty": 0.72,
+    "ml/anti_sycophancy": 0.52,
+    "single/careful_single": 0.52,
+    "single/good_single": 0.48,
+    "universal_multi/careful_1sent": 0.3,
+    "universal_multi/careful_3sent": 0.34,
+    "universal_multi/wise_3sent": 0.24,
+    "universal_multi/honest_3sent": 0.28,
+    "universal_multi/good_3sent_universal": 0.32,
+    "universal_multi/quality_3sent_universal": 0.34
+  },
+  "BAAI/bge-m3": {
+    "ml/general_evaluative": 0.12,
+    "ml/harm_reduction": 0.44,
+    "ml/truthfulness": 0.26,
+    "ml/persona_honesty": 0.66,
+    "ml/anti_sycophancy": 0.8,
+    "single/careful_single": 0.58,
+    "single/good_single": 0.16,
+    "universal_multi/careful_1sent": 0.22,
+    "universal_multi/careful_3sent": 0.22,
+    "universal_multi/wise_3sent": 0.12,
+    "universal_multi/honest_3sent": 0.14,
+    "universal_multi/good_3sent_universal": 0.16,
+    "universal_multi/quality_3sent_universal": 0.12
+  },
+  "nomic-ai/nomic-embed-text-v1.5": {
+    "ml/general_evaluative": 0.1,
+    "ml/harm_reduction": 0.5,
+    "ml/truthfulness": 0.2,
+    "ml/persona_honesty": 0.54,
+    "ml/anti_sycophancy": 0.56,
+    "single/careful_single": 0.62,
+    "single/good_single": 0.12,
+    "universal_multi/careful_1sent": 0.22,
+    "universal_multi/careful_3sent": 0.2,
+    "universal_multi/wise_3sent": 0.22,
+    "universal_multi/honest_3sent": 0.14,
+    "universal_multi/good_3sent_universal": 0.16,
+    "universal_multi/quality_3sent_universal": 0.12
+  }
+}

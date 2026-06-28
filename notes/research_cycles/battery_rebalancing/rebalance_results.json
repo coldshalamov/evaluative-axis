@@ -1,0 +1,398 @@
+{
+  "snowflake/snowflake-arctic-embed-m": {
+    "ml/general_evaluative": {
+      "original": 0.34,
+      "warmth": 0.7,
+      "combined": 0.4429
+    },
+    "ml/harm_reduction": {
+      "original": 0.6,
+      "warmth": 0.55,
+      "combined": 0.5857
+    },
+    "ml/truthfulness": {
+      "original": 0.48,
+      "warmth": 0.3,
+      "combined": 0.4286
+    },
+    "ml/persona_honesty": {
+      "original": 0.72,
+      "warmth": 0.35,
+      "combined": 0.6143
+    },
+    "ml/anti_sycophancy": {
+      "original": 0.52,
+      "warmth": 0.35,
+      "combined": 0.4714
+    },
+    "careful": {
+      "original": 0.52,
+      "warmth": 0.4,
+      "combined": 0.4857
+    },
+    "hard": {
+      "original": 0.58,
+      "warmth": 0.65,
+      "combined": 0.6
+    },
+    "heavy": {
+      "original": 0.52,
+      "warmth": 0.45,
+      "combined": 0.5
+    },
+    "moderate": {
+      "original": 0.48,
+      "warmth": 0.45,
+      "combined": 0.4714
+    },
+    "good": {
+      "original": 0.48,
+      "warmth": 0.6,
+      "combined": 0.5143
+    },
+    "thorough": {
+      "original": 0.6,
+      "warmth": 0.6,
+      "combined": 0.6
+    },
+    "noble": {
+      "original": 0.46,
+      "warmth": 0.65,
+      "combined": 0.5143
+    },
+    "kind": {
+      "original": 0.4,
+      "warmth": 0.55,
+      "combined": 0.4429
+    },
+    "honest": {
+      "original": 0.26,
+      "warmth": 0.75,
+      "combined": 0.4
+    },
+    "wise": {
+      "original": 0.46,
+      "warmth": 0.55,
+      "combined": 0.4857
+    },
+    "responsible": {
+      "original": 0.52,
+      "warmth": 0.6,
+      "combined": 0.5429
+    },
+    "constructive": {
+      "original": 0.46,
+      "warmth": 0.75,
+      "combined": 0.5429
+    },
+    "fair": {
+      "original": 0.42,
+      "warmth": 0.55,
+      "combined": 0.4571
+    },
+    "gentle": {
+      "original": 0.46,
+      "warmth": 0.6,
+      "combined": 0.5
+    },
+    "patient": {
+      "original": 0.54,
+      "warmth": 0.2,
+      "combined": 0.4429
+    },
+    "supportive": {
+      "original": 0.5,
+      "warmth": 0.4,
+      "combined": 0.4714
+    },
+    "respectful": {
+      "original": 0.36,
+      "warmth": 0.6,
+      "combined": 0.4286
+    },
+    "warm": {
+      "original": 0.58,
+      "warmth": 0.55,
+      "combined": 0.5714
+    },
+    "encouraging": {
+      "original": 0.3,
+      "warmth": 0.75,
+      "combined": 0.4286
+    },
+    "compassionate": {
+      "original": 0.5,
+      "warmth": 0.4,
+      "combined": 0.4714
+    },
+    "thoughtful": {
+      "original": 0.44,
+      "warmth": 0.65,
+      "combined": 0.5
+    }
+  },
+  "BAAI/bge-m3": {
+    "ml/general_evaluative": {
+      "original": 0.12,
+      "warmth": 0.75,
+      "combined": 0.3
+    },
+    "ml/harm_reduction": {
+      "original": 0.44,
+      "warmth": 0.75,
+      "combined": 0.5286
+    },
+    "ml/truthfulness": {
+      "original": 0.26,
+      "warmth": 0.6,
+      "combined": 0.3571
+    },
+    "ml/persona_honesty": {
+      "original": 0.66,
+      "warmth": 0.5,
+      "combined": 0.6143
+    },
+    "ml/anti_sycophancy": {
+      "original": 0.8,
+      "warmth": 0.35,
+      "combined": 0.6714
+    },
+    "careful": {
+      "original": 0.58,
+      "warmth": 0.35,
+      "combined": 0.5143
+    },
+    "hard": {
+      "original": 0.64,
+      "warmth": 0.55,
+      "combined": 0.6143
+    },
+    "heavy": {
+      "original": 0.6,
+      "warmth": 0.5,
+      "combined": 0.5714
+    },
+    "moderate": {
+      "original": 0.5,
+      "warmth": 0.55,
+      "combined": 0.5143
+    },
+    "good": {
+      "original": 0.16,
+      "warmth": 0.85,
+      "combined": 0.3571
+    },
+    "thorough": {
+      "original": 0.42,
+      "warmth": 0.8,
+      "combined": 0.5286
+    },
+    "noble": {
+      "original": 0.46,
+      "warmth": 0.5,
+      "combined": 0.4714
+    },
+    "kind": {
+      "original": 0.44,
+      "warmth": 0.75,
+      "combined": 0.5286
+    },
+    "honest": {
+      "original": 0.16,
+      "warmth": 0.65,
+      "combined": 0.3
+    },
+    "wise": {
+      "original": 0.24,
+      "warmth": 0.75,
+      "combined": 0.3857
+    },
+    "responsible": {
+      "original": 0.24,
+      "warmth": 0.7,
+      "combined": 0.3714
+    },
+    "constructive": {
+      "original": 0.26,
+      "warmth": 0.7,
+      "combined": 0.3857
+    },
+    "fair": {
+      "original": 0.16,
+      "warmth": 0.7,
+      "combined": 0.3143
+    },
+    "gentle": {
+      "original": 0.28,
+      "warmth": 0.55,
+      "combined": 0.3571
+    },
+    "patient": {
+      "original": 0.38,
+      "warmth": 0.55,
+      "combined": 0.4286
+    },
+    "supportive": {
+      "original": 0.28,
+      "warmth": 0.65,
+      "combined": 0.3857
+    },
+    "respectful": {
+      "original": 0.2,
+      "warmth": 0.8,
+      "combined": 0.3714
+    },
+    "warm": {
+      "original": 0.14,
+      "warmth": 0.65,
+      "combined": 0.2857
+    },
+    "encouraging": {
+      "original": 0.36,
+      "warmth": 0.4,
+      "combined": 0.3714
+    },
+    "compassionate": {
+      "original": 0.26,
+      "warmth": 0.6,
+      "combined": 0.3571
+    },
+    "thoughtful": {
+      "original": 0.24,
+      "warmth": 0.7,
+      "combined": 0.3714
+    }
+  },
+  "nomic-ai/nomic-embed-text-v1.5": {
+    "ml/general_evaluative": {
+      "original": 0.1,
+      "warmth": 0.85,
+      "combined": 0.3143
+    },
+    "ml/harm_reduction": {
+      "original": 0.5,
+      "warmth": 0.65,
+      "combined": 0.5429
+    },
+    "ml/truthfulness": {
+      "original": 0.2,
+      "warmth": 0.55,
+      "combined": 0.3
+    },
+    "ml/persona_honesty": {
+      "original": 0.54,
+      "warmth": 0.4,
+      "combined": 0.5
+    },
+    "ml/anti_sycophancy": {
+      "original": 0.56,
+      "warmth": 0.45,
+      "combined": 0.5286
+    },
+    "careful": {
+      "original": 0.62,
+      "warmth": 0.7,
+      "combined": 0.6429
+    },
+    "hard": {
+      "original": 0.68,
+      "warmth": 0.5,
+      "combined": 0.6286
+    },
+    "heavy": {
+      "original": 0.58,
+      "warmth": 0.65,
+      "combined": 0.6
+    },
+    "moderate": {
+      "original": 0.4,
+      "warmth": 0.65,
+      "combined": 0.4714
+    },
+    "good": {
+      "original": 0.12,
+      "warmth": 0.8,
+      "combined": 0.3143
+    },
+    "thorough": {
+      "original": 0.56,
+      "warmth": 0.5,
+      "combined": 0.5429
+    },
+    "noble": {
+      "original": 0.48,
+      "warmth": 0.6,
+      "combined": 0.5143
+    },
+    "kind": {
+      "original": 0.28,
+      "warmth": 0.7,
+      "combined": 0.4
+    },
+    "honest": {
+      "original": 0.3,
+      "warmth": 0.6,
+      "combined": 0.3857
+    },
+    "wise": {
+      "original": 0.3,
+      "warmth": 0.65,
+      "combined": 0.4
+    },
+    "responsible": {
+      "original": 0.2,
+      "warmth": 0.8,
+      "combined": 0.3714
+    },
+    "constructive": {
+      "original": 0.28,
+      "warmth": 0.7,
+      "combined": 0.4
+    },
+    "fair": {
+      "original": 0.24,
+      "warmth": 0.7,
+      "combined": 0.3714
+    },
+    "gentle": {
+      "original": 0.26,
+      "warmth": 0.65,
+      "combined": 0.3714
+    },
+    "patient": {
+      "original": 0.56,
+      "warmth": 0.45,
+      "combined": 0.5286
+    },
+    "supportive": {
+      "original": 0.38,
+      "warmth": 0.65,
+      "combined": 0.4571
+    },
+    "respectful": {
+      "original": 0.26,
+      "warmth": 0.65,
+      "combined": 0.3714
+    },
+    "warm": {
+      "original": 0.28,
+      "warmth": 0.7,
+      "combined": 0.4
+    },
+    "encouraging": {
+      "original": 0.22,
+      "warmth": 0.8,
+      "combined": 0.3857
+    },
+    "compassionate": {
+      "original": 0.34,
+      "warmth": 0.45,
+      "combined": 0.3714
+    },
+    "thoughtful": {
+      "original": 0.42,
+      "warmth": 0.5,
+      "combined": 0.4429
+    }
+  }
+}

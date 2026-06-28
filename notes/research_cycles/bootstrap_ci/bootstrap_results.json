@@ -1,0 +1,260 @@
+{
+  "snowflake/snowflake-arctic-embed-m": {
+    "ml/general_evaluative": {
+      "accuracy": 0.34,
+      "ci_lo": 0.22,
+      "ci_hi": 0.48,
+      "significant": false
+    },
+    "ml/harm_reduction": {
+      "accuracy": 0.6,
+      "ci_lo": 0.46,
+      "ci_hi": 0.74,
+      "significant": false
+    },
+    "ml/truthfulness": {
+      "accuracy": 0.48,
+      "ci_lo": 0.34,
+      "ci_hi": 0.62,
+      "significant": false
+    },
+    "ml/persona_honesty": {
+      "accuracy": 0.72,
+      "ci_lo": 0.6,
+      "ci_hi": 0.84,
+      "significant": true
+    },
+    "ml/anti_sycophancy": {
+      "accuracy": 0.52,
+      "ci_lo": 0.38,
+      "ci_hi": 0.66,
+      "significant": false
+    },
+    "single/careful_reckless": {
+      "accuracy": 0.52,
+      "ci_lo": 0.38,
+      "ci_hi": 0.66,
+      "significant": false
+    },
+    "single/moderate_excessive": {
+      "accuracy": 0.48,
+      "ci_lo": 0.34,
+      "ci_hi": 0.62,
+      "significant": false
+    },
+    "single/noble_base": {
+      "accuracy": 0.46,
+      "ci_lo": 0.32,
+      "ci_hi": 0.6,
+      "significant": false
+    },
+    "single/good_bad": {
+      "accuracy": 0.48,
+      "ci_lo": 0.34,
+      "ci_hi": 0.62,
+      "significant": false
+    },
+    "single/honest_dishonest": {
+      "accuracy": 0.26,
+      "ci_lo": 0.14,
+      "ci_hi": 0.38,
+      "significant": false
+    },
+    "single/true_false": {
+      "accuracy": 0.3,
+      "ci_lo": 0.18,
+      "ci_hi": 0.42,
+      "significant": false
+    },
+    "single/kind_cruel": {
+      "accuracy": 0.4,
+      "ci_lo": 0.26,
+      "ci_hi": 0.54,
+      "significant": false
+    },
+    "single/complete_incomplete": {
+      "accuracy": 0.16,
+      "ci_lo": 0.06,
+      "ci_hi": 0.26,
+      "significant": false
+    },
+    "single/useful_useless": {
+      "accuracy": 0.38,
+      "ci_lo": 0.24,
+      "ci_hi": 0.52,
+      "significant": false
+    }
+  },
+  "BAAI/bge-m3": {
+    "ml/general_evaluative": {
+      "accuracy": 0.12,
+      "ci_lo": 0.04,
+      "ci_hi": 0.22,
+      "significant": false
+    },
+    "ml/harm_reduction": {
+      "accuracy": 0.44,
+      "ci_lo": 0.3,
+      "ci_hi": 0.58,
+      "significant": false
+    },
+    "ml/truthfulness": {
+      "accuracy": 0.26,
+      "ci_lo": 0.14,
+      "ci_hi": 0.38,
+      "significant": false
+    },
+    "ml/persona_honesty": {
+      "accuracy": 0.66,
+      "ci_lo": 0.52,
+      "ci_hi": 0.78,
+      "significant": true
+    },
+    "ml/anti_sycophancy": {
+      "accuracy": 0.8,
+      "ci_lo": 0.68,
+      "ci_hi": 0.9,
+      "significant": true
+    },
+    "single/careful_reckless": {
+      "accuracy": 0.58,
+      "ci_lo": 0.44,
+      "ci_hi": 0.72,
+      "significant": false
+    },
+    "single/moderate_excessive": {
+      "accuracy": 0.5,
+      "ci_lo": 0.36,
+      "ci_hi": 0.64,
+      "significant": false
+    },
+    "single/noble_base": {
+      "accuracy": 0.46,
+      "ci_lo": 0.32,
+      "ci_hi": 0.6,
+      "significant": false
+    },
+    "single/good_bad": {
+      "accuracy": 0.16,
+      "ci_lo": 0.06,
+      "ci_hi": 0.26,
+      "significant": false
+    },
+    "single/honest_dishonest": {
+      "accuracy": 0.16,
+      "ci_lo": 0.06,
+      "ci_hi": 0.26,
+      "significant": false
+    },
+    "single/true_false": {
+      "accuracy": 0.16,
+      "ci_lo": 0.06,
+      "ci_hi": 0.26,
+      "significant": false
+    },
+    "single/kind_cruel": {
+      "accuracy": 0.44,
+      "ci_lo": 0.3,
+      "ci_hi": 0.58,
+      "significant": false
+    },
+    "single/complete_incomplete": {
+      "accuracy": 0.14,
+      "ci_lo": 0.04,
+      "ci_hi": 0.24,
+      "significant": false
+    },
+    "single/useful_useless": {
+      "accuracy": 0.24,
+      "ci_lo": 0.12,
+      "ci_hi": 0.36,
+      "significant": false
+    }
+  },
+  "nomic-ai/nomic-embed-text-v1.5": {
+    "ml/general_evaluative": {
+      "accuracy": 0.1,
+      "ci_lo": 0.02,
+      "ci_hi": 0.18,
+      "significant": false
+    },
+    "ml/harm_reduction": {
+      "accuracy": 0.5,
+      "ci_lo": 0.36,
+      "ci_hi": 0.64,
+      "significant": false
+    },
+    "ml/truthfulness": {
+      "accuracy": 0.2,
+      "ci_lo": 0.1,
+      "ci_hi": 0.32,
+      "significant": false
+    },
+    "ml/persona_honesty": {
+      "accuracy": 0.54,
+      "ci_lo": 0.4,
+      "ci_hi": 0.68,
+      "significant": false
+    },
+    "ml/anti_sycophancy": {
+      "accuracy": 0.56,
+      "ci_lo": 0.42,
+      "ci_hi": 0.7,
+      "significant": false
+    },
+    "single/careful_reckless": {
+      "accuracy": 0.62,
+      "ci_lo": 0.48,
+      "ci_hi": 0.76,
+      "significant": false
+    },
+    "single/moderate_excessive": {
+      "accuracy": 0.4,
+      "ci_lo": 0.26,
+      "ci_hi": 0.54,
+      "significant": false
+    },
+    "single/noble_base": {
+      "accuracy": 0.48,
+      "ci_lo": 0.34,
+      "ci_hi": 0.62,
+      "significant": false
+    },
+    "single/good_bad": {
+      "accuracy": 0.12,
+      "ci_lo": 0.04,
+      "ci_hi": 0.22,
+      "significant": false
+    },
+    "single/honest_dishonest": {
+      "accuracy": 0.3,
+      "ci_lo": 0.18,
+      "ci_hi": 0.44,
+      "significant": false
+    },
+    "single/true_false": {
+      "accuracy": 0.16,
+      "ci_lo": 0.06,
+      "ci_hi": 0.26,
+      "significant": false
+    },
+    "single/kind_cruel": {
+      "accuracy": 0.28,
+      "ci_lo": 0.16,
+      "ci_hi": 0.42,
+      "significant": false
+    },
+    "single/complete_incomplete": {
+      "accuracy": 0.18,
+      "ci_lo": 0.08,
+      "ci_hi": 0.28,
+      "significant": false
+    },
+    "single/useful_useless": {
+      "accuracy": 0.22,
+      "ci_lo": 0.1,
+      "ci_hi": 0.34,
+      "significant": false
+    }
+  }
+}

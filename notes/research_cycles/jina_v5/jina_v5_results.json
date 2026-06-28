@@ -1,0 +1,293 @@
+{
+  "default": {
+    "good": {
+      "original": 0.3,
+      "warmth": 0.7,
+      "combined": 0.4143
+    },
+    "careful": {
+      "original": 0.46,
+      "warmth": 0.8,
+      "combined": 0.5571
+    },
+    "honest": {
+      "original": 0.24,
+      "warmth": 0.8,
+      "combined": 0.4
+    },
+    "kind": {
+      "original": 0.32,
+      "warmth": 0.6,
+      "combined": 0.4
+    },
+    "thorough": {
+      "original": 0.26,
+      "warmth": 0.75,
+      "combined": 0.4
+    },
+    "hard": {
+      "original": 0.54,
+      "warmth": 0.45,
+      "combined": 0.5143
+    },
+    "wise": {
+      "original": 0.26,
+      "warmth": 0.6,
+      "combined": 0.3571
+    },
+    "fair": {
+      "original": 0.28,
+      "warmth": 0.65,
+      "combined": 0.3857
+    },
+    "helpful": {
+      "original": 0.18,
+      "warmth": 0.7,
+      "combined": 0.3286
+    },
+    "clear": {
+      "original": 0.28,
+      "warmth": 0.5,
+      "combined": 0.3429
+    },
+    "ml/general_evaluative": {
+      "original": 0.2,
+      "warmth": 0.75,
+      "combined": 0.3571
+    },
+    "ml/harm_reduction": {
+      "original": 0.68,
+      "warmth": 0.65,
+      "combined": 0.6714
+    },
+    "ml/truthfulness": {
+      "original": 0.38,
+      "warmth": 0.7,
+      "combined": 0.4714
+    },
+    "ml/persona_honesty": {
+      "original": 0.64,
+      "warmth": 0.65,
+      "combined": 0.6429
+    },
+    "ml/anti_sycophancy": {
+      "original": 0.78,
+      "warmth": 0.3,
+      "combined": 0.6429
+    },
+    "sum/careful+kind": {
+      "original": 0.36,
+      "warmth": 0.75,
+      "combined": 0.4714
+    },
+    "sum/careful+honest+kind": {
+      "original": 0.26,
+      "warmth": 0.7,
+      "combined": 0.3857
+    },
+    "sum/careful+honest+kind+thorough": {
+      "original": 0.26,
+      "warmth": 0.85,
+      "combined": 0.4286
+    },
+    "sum/careful+honest+kind+thorough+fair": {
+      "original": 0.24,
+      "warmth": 0.85,
+      "combined": 0.4143
+    }
+  },
+  "text_matching": {
+    "good": {
+      "original": 0.3,
+      "warmth": 0.7,
+      "combined": 0.4143
+    },
+    "careful": {
+      "original": 0.46,
+      "warmth": 0.8,
+      "combined": 0.5571
+    },
+    "honest": {
+      "original": 0.24,
+      "warmth": 0.8,
+      "combined": 0.4
+    },
+    "kind": {
+      "original": 0.32,
+      "warmth": 0.6,
+      "combined": 0.4
+    },
+    "thorough": {
+      "original": 0.28,
+      "warmth": 0.75,
+      "combined": 0.4143
+    },
+    "hard": {
+      "original": 0.54,
+      "warmth": 0.45,
+      "combined": 0.5143
+    },
+    "wise": {
+      "original": 0.26,
+      "warmth": 0.6,
+      "combined": 0.3571
+    },
+    "fair": {
+      "original": 0.28,
+      "warmth": 0.65,
+      "combined": 0.3857
+    },
+    "helpful": {
+      "original": 0.18,
+      "warmth": 0.7,
+      "combined": 0.3286
+    },
+    "clear": {
+      "original": 0.28,
+      "warmth": 0.5,
+      "combined": 0.3429
+    },
+    "ml/general_evaluative": {
+      "original": 0.2,
+      "warmth": 0.75,
+      "combined": 0.3571
+    },
+    "ml/harm_reduction": {
+      "original": 0.66,
+      "warmth": 0.65,
+      "combined": 0.6571
+    },
+    "ml/truthfulness": {
+      "original": 0.4,
+      "warmth": 0.7,
+      "combined": 0.4857
+    },
+    "ml/persona_honesty": {
+      "original": 0.64,
+      "warmth": 0.65,
+      "combined": 0.6429
+    },
+    "ml/anti_sycophancy": {
+      "original": 0.78,
+      "warmth": 0.3,
+      "combined": 0.6429
+    },
+    "sum/careful+kind": {
+      "original": 0.38,
+      "warmth": 0.75,
+      "combined": 0.4857
+    },
+    "sum/careful+honest+kind": {
+      "original": 0.26,
+      "warmth": 0.7,
+      "combined": 0.3857
+    },
+    "sum/careful+honest+kind+thorough": {
+      "original": 0.26,
+      "warmth": 0.85,
+      "combined": 0.4286
+    },
+    "sum/careful+honest+kind+thorough+fair": {
+      "original": 0.24,
+      "warmth": 0.85,
+      "combined": 0.4143
+    }
+  },
+  "classification": {
+    "good": {
+      "original": 0.48,
+      "warmth": 0.7,
+      "combined": 0.5429
+    },
+    "careful": {
+      "original": 0.48,
+      "warmth": 0.65,
+      "combined": 0.5286
+    },
+    "honest": {
+      "original": 0.54,
+      "warmth": 0.35,
+      "combined": 0.4857
+    },
+    "kind": {
+      "original": 0.56,
+      "warmth": 0.45,
+      "combined": 0.5286
+    },
+    "thorough": {
+      "original": 0.5,
+      "warmth": 0.75,
+      "combined": 0.5714
+    },
+    "hard": {
+      "original": 0.6,
+      "warmth": 0.45,
+      "combined": 0.5571
+    },
+    "wise": {
+      "original": 0.44,
+      "warmth": 0.55,
+      "combined": 0.4714
+    },
+    "fair": {
+      "original": 0.44,
+      "warmth": 0.4,
+      "combined": 0.4286
+    },
+    "helpful": {
+      "original": 0.4,
+      "warmth": 0.65,
+      "combined": 0.4714
+    },
+    "clear": {
+      "original": 0.34,
+      "warmth": 0.65,
+      "combined": 0.4286
+    },
+    "ml/general_evaluative": {
+      "original": 0.32,
+      "warmth": 0.7,
+      "combined": 0.4286
+    },
+    "ml/harm_reduction": {
+      "original": 0.64,
+      "warmth": 0.65,
+      "combined": 0.6429
+    },
+    "ml/truthfulness": {
+      "original": 0.38,
+      "warmth": 0.8,
+      "combined": 0.5
+    },
+    "ml/persona_honesty": {
+      "original": 0.36,
+      "warmth": 0.6,
+      "combined": 0.4286
+    },
+    "ml/anti_sycophancy": {
+      "original": 0.72,
+      "warmth": 0.5,
+      "combined": 0.6571
+    },
+    "sum/careful+kind": {
+      "original": 0.52,
+      "warmth": 0.55,
+      "combined": 0.5286
+    },
+    "sum/careful+honest+kind": {
+      "original": 0.5,
+      "warmth": 0.45,
+      "combined": 0.4857
+    },
+    "sum/careful+honest+kind+thorough": {
+      "original": 0.46,
+      "warmth": 0.5,
+      "combined": 0.4714
+    },
+    "sum/careful+honest+kind+thorough+fair": {
+      "original": 0.54,
+      "warmth": 0.55,
+      "combined": 0.5429
+    }
+  }
+}

@@ -1,0 +1,323 @@
+{
+  "snowflake/snowflake-arctic-embed-m": {
+    "ml/general_evaluative": {
+      "accuracy": 0.2,
+      "per_case": [
+        "Y",
+        "N",
+        "N",
+        "N",
+        "N",
+        "N",
+        "N",
+        "N",
+        "N",
+        "Y"
+      ]
+    },
+    "ml/harm_reduction": {
+      "accuracy": 0.2,
+      "per_case": [
+        "N",
+        "N",
+        "N",
+        "N",
+        "Y",
+        "N",
+        "N",
+        "N",
+        "Y",
+        "N"
+      ]
+    },
+    "ml/truthfulness": {
+      "accuracy": 0.4,
+      "per_case": [
+        "Y",
+        "N",
+        "Y",
+        "N",
+        "N",
+        "N",
+        "N",
+        "Y",
+        "Y",
+        "N"
+      ]
+    },
+    "ml/persona_honesty": {
+      "accuracy": 0.6,
+      "per_case": [
+        "N",
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "N",
+        "N",
+        "Y",
+        "N"
+      ]
+    },
+    "ml/anti_sycophancy": {
+      "accuracy": 0.4,
+      "per_case": [
+        "N",
+        "Y",
+        "N",
+        "Y",
+        "Y",
+        "N",
+        "N",
+        "N",
+        "Y",
+        "N"
+      ]
+    },
+    "single/careful_reckless": {
+      "accuracy": 0.6,
+      "per_case": [
+        "Y",
+        "Y",
+        "Y",
+        "N",
+        "N",
+        "N",
+        "N",
+        "Y",
+        "Y",
+        "Y"
+      ]
+    },
+    "single/moderate_excessive": {
+      "accuracy": 0.2,
+      "per_case": [
+        "N",
+        "N",
+        "N",
+        "N",
+        "Y",
+        "N",
+        "N",
+        "N",
+        "Y",
+        "N"
+      ]
+    }
+  },
+  "BAAI/bge-m3": {
+    "ml/general_evaluative": {
+      "accuracy": 0.3,
+      "per_case": [
+        "N",
+        "Y",
+        "Y",
+        "Y",
+        "N",
+        "N",
+        "N",
+        "N",
+        "N",
+        "N"
+      ]
+    },
+    "ml/harm_reduction": {
+      "accuracy": 0.5,
+      "per_case": [
+        "Y",
+        "Y",
+        "N",
+        "Y",
+        "Y",
+        "N",
+        "N",
+        "N",
+        "Y",
+        "N"
+      ]
+    },
+    "ml/truthfulness": {
+      "accuracy": 0.5,
+      "per_case": [
+        "N",
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "N",
+        "N",
+        "N",
+        "Y",
+        "N"
+      ]
+    },
+    "ml/persona_honesty": {
+      "accuracy": 0.7,
+      "per_case": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "N",
+        "N",
+        "N",
+        "Y",
+        "Y"
+      ]
+    },
+    "ml/anti_sycophancy": {
+      "accuracy": 0.7,
+      "per_case": [
+        "N",
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "N",
+        "N",
+        "Y",
+        "Y",
+        "Y"
+      ]
+    },
+    "single/careful_reckless": {
+      "accuracy": 0.6,
+      "per_case": [
+        "Y",
+        "N",
+        "N",
+        "Y",
+        "N",
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "N"
+      ]
+    },
+    "single/moderate_excessive": {
+      "accuracy": 0.2,
+      "per_case": [
+        "N",
+        "N",
+        "Y",
+        "Y",
+        "N",
+        "N",
+        "N",
+        "N",
+        "N",
+        "N"
+      ]
+    }
+  },
+  "nomic-ai/nomic-embed-text-v1.5": {
+    "ml/general_evaluative": {
+      "accuracy": 0.3,
+      "per_case": [
+        "N",
+        "N",
+        "N",
+        "Y",
+        "N",
+        "N",
+        "N",
+        "Y",
+        "Y",
+        "N"
+      ]
+    },
+    "ml/harm_reduction": {
+      "accuracy": 0.7,
+      "per_case": [
+        "Y",
+        "Y",
+        "Y",
+        "N",
+        "Y",
+        "N",
+        "N",
+        "Y",
+        "Y",
+        "Y"
+      ]
+    },
+    "ml/truthfulness": {
+      "accuracy": 0.4,
+      "per_case": [
+        "N",
+        "N",
+        "N",
+        "Y",
+        "Y",
+        "N",
+        "N",
+        "N",
+        "Y",
+        "Y"
+      ]
+    },
+    "ml/persona_honesty": {
+      "accuracy": 0.7,
+      "per_case": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "N",
+        "N",
+        "N",
+        "Y",
+        "Y",
+        "Y"
+      ]
+    },
+    "ml/anti_sycophancy": {
+      "accuracy": 0.6,
+      "per_case": [
+        "N",
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "N",
+        "N",
+        "N",
+        "Y",
+        "Y"
+      ]
+    },
+    "single/careful_reckless": {
+      "accuracy": 0.2,
+      "per_case": [
+        "N",
+        "N",
+        "N",
+        "N",
+        "N",
+        "N",
+        "N",
+        "Y",
+        "N",
+        "Y"
+      ]
+    },
+    "single/moderate_excessive": {
+      "accuracy": 0.6,
+      "per_case": [
+        "Y",
+        "Y",
+        "N",
+        "Y",
+        "N",
+        "N",
+        "N",
+        "Y",
+        "Y",
+        "Y"
+      ]
+    }
+  }
+}

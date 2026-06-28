@@ -10,7 +10,7 @@ June 2026
 
 Evaluation is the primary dimension of human semantic judgment (Osgood et al., 1957), independently confirmed as a semantic universal by the Natural Semantic Metalanguage program (Wierzbicka, 1972; Goddard & Wierzbicka, 2014), and this structure is recoverable from embedding geometry (Grand et al., 2022; Kozlowski et al., 2025). We test whether projecting text onto evaluative directions in embedding space can serve as a cheap alignment signal — without training a classifier, without labeled preference data, and without LLM inference.
 
-On frozen objective reranking suites with verifiable end metrics (3 candidates per task), `gemini-embedding-2` selects correctly on code (5/6, p=0.018), math (8/8, p < 0.001), and tool interpretation (7/8, p=0.003), all against a 1/3 random baseline. Length selection scores 50%, 50%, and 37.5% on the same suites but is tiebreak-sensitive; the math advantage (+2 tasks over length's ceiling) is the most robust. Length confound analysis on the code suite confirms the signal tracks quality (r=0.60 with pass rate) rather than length (r=0.19). Cheap open-source embedders collapse toward baseline on the same tasks with individual targeted axes, and this does not improve with model size: Qwen3-Embedding-0.6B (600M params, 1024d) performs comparably to 33M-parameter models. Within 33M–600M, scale does not predict performance; the frontier gap's cause is unidentified (Gemini's parameter count is undisclosed). On a 50-case length-balanced conflict battery, raw one-word `good/bad` fails (26%), but richer targeted axes reach 86–98%. Anchor vocabulary experiments across three open-source models find that culturally universal terms — particularly "Careful"/"Reckless," which traces to ancient evaluative vocabulary — outperform multi-sentence ML-jargon anchors on one model (62% vs 56% on Nomic) and match or exceed the majority of ML-jargon axes on all three, while compositing multiple universal terms degrades performance, revealing that thematic focus matters more than vocabulary breadth. Process-aware cumulative scoring detects injected errors and repairs better than controls but does not yet meet a frozen training-readiness gate. The resulting picture: evaluative embedding geometry is already a credible cheap reranking signal with a frontier model, but the effect has been demonstrated only on the single frontier model tested (gemini-embedding-2), and generality across frontier embedders is untested. The stronger claim that raw `good/bad` alone can serve as a dense training reward remains unproven.
+On frozen objective reranking suites with verifiable end metrics (3 candidates per task), `gemini-embedding-2` selects correctly on code (5/6, p=0.018), math (8/8, p < 0.001), and tool interpretation (7/8, p=0.003), all against a 1/3 random baseline. Length selection scores 50%, 50%, and 37.5% on the same suites but is tiebreak-sensitive; the math advantage (+2 tasks over length's ceiling) is the most robust. Length confound analysis on the code suite confirms the signal tracks quality (r=0.60 with pass rate) rather than length (r=0.19). Cheap open-source embedders collapse toward baseline on the same tasks with individual targeted axes, and this does not improve with model size: Qwen3-Embedding-0.6B (600M params, 1024d) performs comparably to 33M-parameter models. Within 33M–600M, scale does not predict performance; the frontier gap's cause is unidentified (Gemini's parameter count is undisclosed). On a 50-case length-balanced conflict battery, raw one-word `good/bad` fails (26%), but richer targeted axes reach 86–98%. Anchor vocabulary experiments across three open-source models find that evaluatively specific terms outperform both high-frequency universal words and multi-sentence ML-jargon anchors: "Careful"/"Reckless" scores 80% on anti-sycophancy cases on all three models — more cross-model stable than the dedicated multi-sentence anti-sycophancy axis (60%, 100%, 20%). Compositing multiple terms degrades performance, and corpus frequency does not predict geometric signal strength. Bootstrap confidence intervals (n=50, 10,000 resamples) confirm that only the strongest local-model results reach significance, while Gemini targeted axes at 86–98% are highly significant (p < 10⁻⁷). Process-aware cumulative scoring detects injected errors and repairs better than controls but does not yet meet a frozen training-readiness gate. The resulting picture: evaluative embedding geometry is already a credible cheap reranking signal with a frontier model, but the effect has been demonstrated only on the single frontier model tested (gemini-embedding-2), and generality across frontier embedders is untested. The stronger claim that raw `good/bad` alone can serve as a dense training reward remains unproven.
 
 ---
 
@@ -40,7 +40,7 @@ In the current repo state, that broad question breaks into three narrower ones:
 2. is the effect model-dependent, and if so, how does the signal differ across embedding families;
 3. is the signal already sharp enough to justify training-adjacent use?
 
-The paper is strongest on the first two and should be read that way.
+The paper is strongest on the first two and should be read that way. Figures are in `paper/figures/`: Fig. 1 (model landscape), Fig. 2 (anchor vocabulary comparison), Fig. 3 (per-category heatmap), Fig. 4 (Gemini targeted vs broad axes).
 
 ### 1.1 Contributions
 
@@ -56,9 +56,11 @@ The paper is strongest on the first two and should be read that way.
 
 6. We retain the HH disagreement audit as supporting evidence for label-noise detection and norm drift, but not as the main practical proof.
 
-7. We show that anchor vocabulary depth matters: culturally universal terms rooted in ancient evaluative vocabulary ("Careful"/"Reckless") outperform multi-sentence ML-jargon anchors on at least one model and are the most cross-model robust single axis identified, while compositing multiple universal terms degrades performance — revealing that thematic focus matters more than vocabulary breadth in anchor design.
+7. We show that anchor vocabulary depth matters: evaluatively specific terms outperform both high-frequency universal words and multi-sentence ML-jargon anchors. "Careful"/"Reckless" scores 80% on anti-sycophancy cases across all three local models — more stable than the dedicated multi-sentence axis. Per-category analysis reveals that different single words capture different evaluative dimensions, and corpus frequency does not predict geometric signal strength. Bootstrap confidence intervals ground which local-model comparisons are statistically reliable.
 
-8. We characterize the known limitations and non-claims explicitly, including sycophancy weakness, raw-word failure, and incomplete training-readiness.
+8. We test Osgood's three semantic differential dimensions (Evaluation, Potency, Activity) systematically. The EPA composite fails, but the Potency dimension contains the strongest cross-model signal: "Hard/Soft" scores 58%, 64%, 68% across all three models — comparable to "Careful/Reckless." Osgood's primary Evaluation dimension (good/bad, nice/awful) fails consistently. The useful evaluative signal in embedding space corresponds to Potency (firmness, rigor), not raw Evaluation (valence).
+
+9. We characterize the known limitations and non-claims explicitly, including sycophancy weakness, raw-word failure, and incomplete training-readiness.
 
 ---
 
@@ -674,6 +676,82 @@ richer targeted evaluative directions. The random-axis control confirms that
 the signal in capable models is axis-specific rather than an artifact of
 arbitrary projection.
 
+### 4.13 Baselines Comparison
+
+**Design**: To confirm that evaluative axes capture something beyond simpler signals, we compared axis-based scoring against five baselines on the 50-case battery: (1) cosine similarity between prompt and response embeddings (relevance), (2) response word count (length bias), (3) embedding vector norm, (4) cosine similarity to the phrase "This is a good response," and (5) cosine similarity to "This is helpful." All run on three local models.
+
+**Results**:
+
+| Method | Snowflake | BGE-M3 | Nomic |
+|---|---:|---:|---:|
+| Best evaluative axis | 72% | 80% | 62% |
+| "Careful"/"Reckless" axis | 52% | 58% | 62% |
+| Embedding norm | 57% | 51% | 30% |
+| Response length | 51% | 51% | 51% |
+| Cosine to "helpful" | 50% | 26% | 26% |
+| Cosine to "good response" | 44% | 22% | 20% |
+| Prompt-response cosine | 40% | 28% | 26% |
+
+**Interpretation**: Length is near chance (51%) on all models, confirming the battery is properly balanced and axis scores are not length artifacts. Prompt-response cosine similarity is consistently below chance, meaning the "better" response is not systematically more relevant to the prompt in embedding space — the quality distinction is orthogonal to relevance. Cosine similarity to quality-describing phrases ("This is a good response") also fails, demonstrating that proximity to a fixed point in embedding space does not capture quality — but projection onto a direction (the axis approach) does. The evaluative axis captures a geometric structure that none of these baselines access.
+
+### 4.14 Anchor Vocabulary Depth
+
+**Design**: We tested whether the choice of anchor vocabulary — independent of axis design methodology — affects evaluative signal strength. We compared 20 single culturally universal word pairs (e.g., "Careful"/"Reckless", "Noble"/"Base"), 20 character projection phrases (e.g., "A careful person said this"), 10 synonym cluster axes, templated phrases ("This response is careful"), and templated multi-term centroids against the five current multi-sentence ML-jargon anchors. All scored on the same 50-case battery across three models: Snowflake Arctic Embed M (109M), BGE-M3 (568M), and Nomic Embed v1.5 (137M).
+
+**Results**:
+
+| Anchor type | Best axis | Snowflake | BGE-M3 | Nomic |
+|---|---|---:|---:|---:|
+| ML-jargon multi-sentence | persona_honesty / anti_sycophancy | 72% | 80% | 56% |
+| Single word: Careful/Reckless | — | 52% | 58% | 62% |
+| Single word: Moderate/Excessive | — | 48% | 50% | 40% |
+| Single word: Noble/Base | — | 46% | 46% | 48% |
+| Character projection: helpful | — | 66% | 18% | 18% |
+| Template: "This response is careful" | — | 54% | 54% | 44% |
+| Templated 6-term centroid | — | 24% | 14% | 12% |
+| Single word: Hard/Soft (Potency) | — | 58% | 64% | 68% |
+| Single word: Good/Bad | — | 48% | 16% | 12% |
+| ML-jargon: general_evaluative | — | 34% | 12% | 10% |
+
+The most consistent finding across all models is that "Careful"/"Reckless" outperformed at least one ML-jargon axis on every model and was the only single-word pair to beat the best ML-jargon axis outright (62% vs 56% on Nomic). Compositing multiple universal terms into a single axis consistently degraded performance below the best individual term. Multi-sentence anchors using universal vocabulary (e.g., "The response is careful, considered, and avoids reckless harm") performed worse than the naked single word on all three models.
+
+A corpus-frequency-based analysis recommended good/bad, true/false, useful/useless, honest/dishonest, strong/weak, and complete/incomplete as the optimal anchors based on frequency, cross-linguistic universality, and historical stability. Empirically, the frequency-recommended terms largely failed: complete/incomplete scored 16%, 14%, 18%; strong/weak scored 24%, 8%, 16%. The best-performing terms ("Careful"/"Reckless" at 52-62%, "Moderate"/"Excessive" at 40-50%) were either absent from or listed as secondary in the frequency-based recommendations.
+
+A per-category breakdown reveals that different single words capture different evaluative dimensions. "Careful"/"Reckless" scored 80% on anti-sycophancy cases on all three models — more cross-model stable than the dedicated multi-sentence anti_sycophancy axis, which scored 60%, 100%, and 20% across the same three models. "Moderate"/"Excessive" captured persona honesty particularly well (100% on Snowflake, 75% on BGE-M3), consistent with the interpretation that responses fabricating personal experiences are "excessive" in a way the word naturally captures. "Careful" was the best single-word axis for anti-sycophancy (80% on all models), reasoning rigor (55-73%), and context binding (60% on two models). No single word covered all categories equally well, reinforcing the finding that behavioral specificity — not general evaluative valence — drives geometric signal strength.
+
+A bootstrap analysis (10,000 resamples, 95% CI) tempers the cross-model comparisons. With n=50 binary cases, individual accuracy estimates carry wide confidence intervals. On the local models, only three axis-model pairs are statistically significant (lower CI bound > 50%): persona_honesty on Snowflake (72%, CI [60%, 84%]) and BGE-M3 (66%, CI [52%, 78%]), and anti_sycophancy on BGE-M3 (80%, CI [68%, 90%]). "Careful"/"Reckless" at 62% on Nomic has CI [48%, 76%], which includes chance. The rank ordering of axes is therefore informative as a pattern across models — "Careful" is consistently among the top performers — but no single local-model comparison should be treated as definitive. The Gemini results (§4.9), where targeted axes reach 86-98%, are well above the significance threshold even with n=50 (one-sided binomial p < 10^-7 for combined targeted axes at 86%).
+
+**Interpretation**: Geometric signal strength does not track corpus frequency. The most common evaluative terms in English produce some of the weakest evaluative axes because their extreme frequency spreads their embeddings across a wide region of semantic space encompassing many non-evaluative uses. Less frequent but more evaluatively specific terms produce tighter, more quality-correlated directions. Anchor selection should optimize for evaluative specificity rather than raw frequency or cross-linguistic universality. (Gemini results pending; these conclusions apply to the local model range only.)
+
+### 4.15 Osgood's Semantic Differential Dimensions
+
+**Design**: Osgood et al. (1957) identified three orthogonal factors in human semantic judgment: Evaluation (good/bad), Potency (strong/weak), and Activity (active/passive). Since our theoretical framework begins with Osgood's Evaluation dimension, we systematically tested all three dimensions using four representative adjective pairs each, their within-dimension centroids, the cross-dimension composite (all three averaged), and a sum-of-independent-projections approach (scoring each dimension separately and adding). All scored on the 50-case battery across three local models.
+
+**Results**:
+
+| Dimension | Pair | Snowflake | BGE-M3 | Nomic |
+|---|---|---:|---:|---:|
+| Evaluation | Good/Bad | 48% | 16% | 12% |
+| Evaluation | Nice/Awful | 48% | 28% | 14% |
+| Evaluation | Pleasant/Unpleasant | 24% | 20% | 12% |
+| Potency | Strong/Weak | 24% | 8% | 16% |
+| **Potency** | **Hard/Soft** | **58%** | **64%** | **68%** |
+| Potency | Heavy/Light | 52% | 60% | 58% |
+| Activity | Active/Passive | 60% | 18% | 36% |
+| Activity | Fast/Slow | 22% | 18% | 34% |
+| Composite | EPA core (3 terms) | 26% | 12% | 16% |
+| Composite | EPA full (9 terms) | 20% | 12% | 16% |
+| Sum | E+P+A projections | 26% | 12% | 16% |
+| Reference | Careful/Reckless | 52% | 58% | 62% |
+
+The EPA composite and sum-of-projections approaches all fail (12-26%). Combining Osgood's three dimensions does not recover a usable evaluative signal — it produces the same averaging-degrades-performance pattern seen with multi-term centroids in §4.14.
+
+The unexpected finding is within the Potency dimension. "Hard/Soft" scores 58%, 64%, 68% across all three models — the most cross-model consistent single-word pair we have tested, comparable to "Careful/Reckless" (52%, 58%, 62%). "Heavy/Light" also scores above chance on all three models (52%, 60%, 58%). By contrast, Osgood's primary Evaluation pairs (Good/Bad, Nice/Awful, Pleasant/Unpleasant) all fail.
+
+Osgood's three dimensions are not orthogonal in embedding space. Pairwise cosine similarities between the E, P, and A axis vectors range from 0.04 to 0.41, with Evaluation and Potency showing the highest overlap (0.24–0.41 across models). This confirms that factor orthogonality in human judgments does not transfer to embedding geometry.
+
+**Interpretation**: The useful evaluative signal in embedding space does not correspond to Osgood's Evaluation dimension — the dimension he found to be dominant in human semantic judgment. Instead, the strongest cross-model signals come from terms associated with Potency: firmness, rigor, weight. "Careful" may succeed precisely because it straddles Evaluation and Potency — it implies both goodness and firmness of effort. "Hard" may succeed because a response that is "hard" (as opposed to "soft") in the sense of rigor, firmness, and substance correlates with the kind of quality the battery measures. This is consistent with the finding that evaluative specificity matters more than evaluative valence: the Potency dimension has narrower, more behaviorally specific semantic content in the context of LLM responses than the diffuse Evaluation dimension.
+
 ---
 
 ## 5. Discussion
@@ -757,6 +835,8 @@ tighten by orders of magnitude: better embeddings produce clearer training
 signals, which produce better language models, which can in turn improve
 embedding models, in a cycle limited only by the underlying quality of the
 evaluative geometry.
+
+**Geometric independence.** Inter-axis correlation analysis confirms that different evaluative axes point in genuinely different directions in embedding space. Pairwise cosine similarities between axis vectors are mostly 0.01–0.20, even between axes that target similar behavioral dimensions. "Careful"/"Reckless" has near-zero cosine similarity to every ML-jargon axis on all three local models (range: -0.07 to 0.19). Score-delta correlations reveal a further subtlety: on Snowflake, "Careful" and anti_sycophancy have r = -0.52 despite both scoring 80% on anti-sycophancy cases in the per-category analysis — they succeed on different individual cases through different geometric mechanisms, arriving at the same category-level accuracy via independent paths. This supports the scalar-plus-basis interpretation: the evaluative space is genuinely multi-dimensional, and different anchor terms access different dimensions of it. "Good"/"Bad" and the multi-sentence general_evaluative axis are the exception — they are geometrically similar (cosine 0.40–0.69) and near-perfectly correlated in score deltas (r = 0.93–0.94 on BGE-M3 and Nomic), confirming that both access the same failed direction and that the failure is in the geometric direction itself, not in anchor format.
 
 ### 5.5 Good As A Self-Regularizing Axis
 
@@ -851,21 +931,13 @@ recognized use case, it could drive investment in more capable embedding models,
 creating a feedback loop where better embeddings enable better evaluative
 signals, which demonstrate more value, which justify further investment.
 
-**Anchor vocabulary depth.** The strength of the evaluative signal depends on the cultural depth of the vocabulary used in anchor definitions. Terms with deep roots in human culture — "honesty," "truth," "harm," "fairness" — have rich, multi-layered representations in embedding space because they appear across thousands of years of text in philosophy, law, religion, literature, and everyday language. Domain-specific terms like "persona honesty" or "anti-sycophancy" have thin representations because they appear almost exclusively in recent ML literature. The NSM finding reinforces this: GOOD and BAD are semantic primes precisely because they are universally lexicalized — every language has dedicated words for these concepts, ensuring maximal training-data representation across corpora in any language.
+**Anchor vocabulary depth.** The vocabulary depth experiments (§4.14) reveal that anchor signal strength is not predicted by the variables that linguistic theory and corpus frequency would suggest. The NSM finding — that GOOD and BAD are semantic primes universally lexicalized across all human languages — predicts that these terms should produce the strongest evaluative axes due to maximal training-data representation. Empirically, they do not: "Good"/"Bad" consistently underperforms less frequent but more evaluatively specific terms like "Careful"/"Reckless."
 
-We tested this directly by comparing three anchor framings on the 50-case battery: (1) single culturally universal word pairs (e.g., "Honest" / "Dishonest"), (2) character projection phrases (e.g., "A helpful person said this" / "A harmful person said this"), and (3) the current multi-sentence ML-jargon anchors. We ran all three framings on three open-source models: Snowflake Arctic Embed M (109M params), BGE-M3 (568M params), and Nomic Embed v1.5 (137M params).
+The explanation is that corpus frequency measures total occurrences, not evaluative consistency. "Good" appears in "good morning," "good faith," "a good while," "good enough" — contexts where no quality judgment is intended. Its embedding is smeared across a wide semantic region. "Careful" appears almost exclusively as a quality judgment, producing a tighter, more quality-correlated direction. The geometric signal strength of an anchor depends not on how often the term appears in training data overall, but on how consistently it appears in evaluative contexts specifically. This is why a corpus-frequency-based analysis recommended terms (complete/incomplete, strong/weak) that fail empirically, while the strongest performer ("Careful"/"Reckless") was absent from its recommendations.
 
-On Nomic, universal terms beat ML jargon outright: single-word "Careful" reached 62% versus the best ML-jargon axis (anti_sycophancy at 56%), and the top-5 universal-term mean (47%) exceeded the top-5 ML-jargon mean (38%). On Snowflake, the best character projection axis ("helpful") reached 66% — within six points of the best ML-jargon axis (persona_honesty at 72%) while using a single phrase instead of three multi-sentence anchors, and the top-5 universal mean (56%) slightly exceeded the top-5 ML mean (53%). On BGE-M3, the ML-jargon axis anti_sycophancy dominated at 80%, but single-word "Careful" at 58% still outperformed three of the five ML-jargon axes.
+The vocabulary experiments also decompose why the multi-sentence ML-jargon anchors outperform most alternatives: the active ingredient is behavioral specificity, not sentence length or vocabulary depth. Multi-sentence descriptions of specific failure modes (Route B) produce high peak accuracy; single evaluatively specific words (Route A) produce moderate but cross-model-robust accuracy. Multi-sentence descriptions of general qualities produce the worst results — the same geometric diffusion that makes single-word "Good" weak also makes multi-sentence "The response is careful, considered, and avoids reckless harm" worse than the single word "Careful."
 
-One term was consistently strong across all three models: "Careful" / "Reckless" scored 52% (Snowflake), 58% (BGE-M3), and 62% (Nomic). "Noble" / "Base" was the second most robust at 46%, 46%, and 48% respectively. These are culturally ancient terms with deep training-data representation — "careful" traces back through Old English to Latin *carus* (dear, valued); "noble" from Latin *nobilis* has been in continuous philosophical and literary use for over two millennia. Their geometric stability across unrelated embedding architectures is consistent with the hypothesis that training-data depth translates into more robust evaluative directions.
-
-In contrast, terms the theory predicted should be strong often failed: "Honest" scored 26%, 16%, and 30% across the three models; "True"/"False" scored 30%, 16%, 16%; "Accurate" scored 22%, 16%, 14%. These terms, despite being culturally deep, may be geometrically ambiguous — "true" appears heavily in code and logic contexts, "accurate" in factual reporting — diluting their evaluative signal.
-
-One finding was consistent across all three models: single-word "Good"/"Bad" (48%, 16%, 12%) was less inverted or comparably bad to the multi-sentence general_evaluative axis (34%, 12%, 10%). The multi-sentence anchor with its list of adjectives ("good, useful, accurate, honest, and beneficial") actively hurts the general evaluative direction by creating a geometric centroid that points away from quality — a single word is less confused than a committee of words that pull in different directions.
-
-A follow-up experiment tested whether compositing the best-performing universal terms (averaging their directions into a single axis) would outperform any individual term. It does not: on all three models, "Careful"/"Reckless" alone outperformed or matched every composite. Combining three terms (careful+noble+kind) helped slightly on Snowflake (58% vs 52% alone) but hurt on BGE-M3 (52% vs 58%) and Nomic (38% vs 62%). Compositing seven terms degraded to 48%, 22%, and 16% respectively — far worse than any single term. This is the same geometric mechanism that makes the multi-sentence general_evaluative axis fail: averaging directions that point in genuinely different evaluative dimensions produces a compromise vector that captures none of them well. The success of the multi-sentence ML-jargon axes comes not from vocabulary volume but from thematic focus — all sentences in anti_sycophancy describe the same dimension from different angles, reinforcing a single geometric direction rather than pulling in multiple directions.
-
-The practical implication for anchor design is that anchor definitions should prefer language that humans have been using for centuries over language that the ML community invented last year, that each evaluative axis should be thematically narrow (multiple sentences describing the same concept, not multiple concepts averaged together), and that optimal vocabulary varies by embedding model family. The single universal pair "Careful"/"Reckless" is the most robust building block identified: it outperformed at least one ML-jargon axis on every model tested and was the only term to beat the best ML-jargon axis outright (62% vs 56% on Nomic).
+**Osgood's dimensions in embedding space.** The Osgood experiments (§4.15) add a further constraint. Osgood found Evaluation to be the primary semantic dimension — the one explaining the most variance in human judgment. But in embedding space, Osgood's Evaluation dimension (good/bad, nice/awful, pleasant/unpleasant) consistently fails, while his Potency dimension (specifically "Hard/Soft" at 58-68% across all models) produces the strongest cross-model signal. This is not a contradiction of Osgood — it is a refinement. What makes a word a good evaluative *axis anchor* is not its evaluative loading in human judgment (Osgood's criterion) but its evaluative specificity in distributional context (its concentration in quality-relevant usage). Potency terms like "hard" and "careful" have narrower semantic clouds than broad evaluative terms like "good" — they appear in fewer non-evaluative contexts, so their embedding directions point more reliably toward quality-relevant regions of the space. The success of the Potency dimension also helps explain why "Careful" works: it combines evaluative content ("good") with potency content ("firm, rigorous"), accessing a direction that neither pure Evaluation nor pure Potency alone captures.
 
 These factors together predict the observed pattern: (a) raw good/bad fails
 because the anchors are too sparse to trigger multi-hop reasoning even in a
@@ -1054,16 +1126,29 @@ The training claim remains open. Process-aware cumulative scoring is clearly
 better than final-answer-only, length, and sentiment controls on injected
 error-repair traces, but it still fails the frozen dense-localization gate.
 
-The anchor vocabulary finding adds a practical lever: certain culturally
-universal terms — particularly "careful"/"reckless" and "noble"/"base" — produce
-more geometrically robust evaluative axes than domain-specific ML vocabulary
-across all local models tested. On one model (Nomic v1.5), single-word
-"Careful"/"Reckless" at 62% outperformed the best multi-sentence ML-jargon axis
-(56%). This is consistent with the NSM convergence: terms that are semantic
-primes across all human languages have thicker training-data representation and
-produce more stable embedding directions. The implication is that anchor design
-is not merely a hyperparameter to be tuned but a design space with theoretical
-structure that can be explored systematically.
+The anchor vocabulary finding adds a practical lever and a theoretical
+surprise. Per-category analysis reveals that "Careful"/"Reckless" scores 80%
+on anti-sycophancy cases across all three local models — more cross-model
+stable than the dedicated multi-sentence anti-sycophancy axis (60%, 100%,
+20%). Different single words capture different evaluative dimensions:
+"Careful" dominates anti-sycophancy and reasoning; "Moderate"/"Excessive"
+captures persona honesty. Critically, corpus frequency does not predict
+geometric signal strength — the most common evaluative word ("good") produces
+one of the weakest axes, while less frequent but more evaluatively specific
+terms produce more stable directions. Bootstrap confidence intervals (10,000
+resamples) confirm that most individual local-model results have wide CIs
+with n=50, so the rank ordering of axes across models is more informative
+than any single comparison. The implication is that anchor design is not
+merely a hyperparameter but a design space with empirically discoverable
+structure that diverges from theoretical predictions based on frequency or
+cross-linguistic universality. A systematic test of Osgood's three semantic
+differential dimensions confirms this divergence: Osgood's primary Evaluation
+dimension (good/bad, nice/awful) consistently fails, while his Potency
+dimension — specifically "Hard/Soft" at 58-68% across all three models —
+produces the strongest cross-model signal among individual Osgood pairs. The
+EPA composite fails (12-26%), but the Potency finding suggests that the useful
+evaluative direction in embedding space corresponds to firmness and rigor
+rather than raw evaluative valence.
 
 So the fair current conclusion is narrower but still meaningful: evaluative
 embedding geometry functions as a credible cheap reranking signal with a frontier
@@ -1111,8 +1196,6 @@ Lu, Y.-L., Song, J., & Wang, W. (2025). A Unified Representation Underlying the 
 
 Osgood, C. E., Suci, G. J., & Tannenbaum, P. H. (1957). *The Measurement of Meaning*. University of Illinois Press.
 
-Wierzbicka, A. (1972). *Semantic Primitives*. Athenäum.
-
 Ouyang, L., et al. (2022). Training language models to follow instructions with human feedback. *NeurIPS 2022*.
 
 Plashchinsky, A. (2025). Parent-Guided Semantic Reward Model (PGSRM): Embedding-Based Reward Functions for Reinforcement Learning of Transformer Language Models. *arXiv:2512.06920*.
@@ -1124,5 +1207,7 @@ Sun, H., Shen, Y., Ton, J.-F., & van der Schaar, M. (2025). Reusing Embeddings: 
 Turney, P. D. (2002). Thumbs Up or Thumbs Down? Semantic Orientation Applied to Unsupervised Classification of Reviews. *Proceedings of the 40th Annual Meeting of the ACL*, 417–424.
 
 Xu, Y., Chakraborty, T., Kıcıman, E., Aryal, B., Rodrigues, E., Sharma, S., Estevao, R., de Luis Balaguer, M. A., Wolk, J., Padilha, R., Nunes, L., Balakrishnan, S., Lu, S. & Chandra, R. (2025). RLTHF: Targeted Human Feedback for LLM Alignment. *arXiv:2502.13417*.
+
+Wierzbicka, A. (1972). *Semantic Primitives*. Athenäum.
 
 Zou, A., et al. (2023). Representation Engineering: A Top-Down Approach to AI Transparency. *arXiv:2310.01405*.

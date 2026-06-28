@@ -1,0 +1,515 @@
+{
+  "snowflake/snowflake-arctic-embed-m": {
+    "ml/general_evaluative": {
+      "overall": 0.34,
+      "per_category": {
+        "anti_sycophancy": 0.2,
+        "context_binding": 0.0,
+        "harm_reduction": 0.4286,
+        "helpfulness": 0.4,
+        "mixed": 0.25,
+        "persona_honesty": 0.75,
+        "reasoning_rigor": 0.3636,
+        "truthfulness": 0.3333
+      }
+    },
+    "ml/harm_reduction": {
+      "overall": 0.6,
+      "per_category": {
+        "anti_sycophancy": 0.8,
+        "context_binding": 1.0,
+        "harm_reduction": 0.7143,
+        "helpfulness": 0.6,
+        "mixed": 0.75,
+        "persona_honesty": 0.5,
+        "reasoning_rigor": 0.3636,
+        "truthfulness": 0.4444
+      }
+    },
+    "ml/truthfulness": {
+      "overall": 0.48,
+      "per_category": {
+        "anti_sycophancy": 0.8,
+        "context_binding": 0.4,
+        "harm_reduction": 0.4286,
+        "helpfulness": 0.6,
+        "mixed": 0.5,
+        "persona_honesty": 0.5,
+        "reasoning_rigor": 0.3636,
+        "truthfulness": 0.4444
+      }
+    },
+    "ml/persona_honesty": {
+      "overall": 0.72,
+      "per_category": {
+        "anti_sycophancy": 0.8,
+        "context_binding": 1.0,
+        "harm_reduction": 0.7143,
+        "helpfulness": 0.6,
+        "mixed": 0.75,
+        "persona_honesty": 1.0,
+        "reasoning_rigor": 0.7273,
+        "truthfulness": 0.4444
+      }
+    },
+    "ml/anti_sycophancy": {
+      "overall": 0.52,
+      "per_category": {
+        "anti_sycophancy": 0.6,
+        "context_binding": 0.6,
+        "harm_reduction": 0.8571,
+        "helpfulness": 0.6,
+        "mixed": 0.25,
+        "persona_honesty": 0.5,
+        "reasoning_rigor": 0.3636,
+        "truthfulness": 0.4444
+      }
+    },
+    "single/careful_reckless": {
+      "overall": 0.52,
+      "per_category": {
+        "anti_sycophancy": 0.8,
+        "context_binding": 0.6,
+        "harm_reduction": 0.7143,
+        "helpfulness": 0.4,
+        "mixed": 0.0,
+        "persona_honesty": 0.25,
+        "reasoning_rigor": 0.5455,
+        "truthfulness": 0.5556
+      }
+    },
+    "single/moderate_excessive": {
+      "overall": 0.48,
+      "per_category": {
+        "anti_sycophancy": 0.2,
+        "context_binding": 0.2,
+        "harm_reduction": 0.5714,
+        "helpfulness": 0.6,
+        "mixed": 0.25,
+        "persona_honesty": 1.0,
+        "reasoning_rigor": 0.4545,
+        "truthfulness": 0.5556
+      }
+    },
+    "single/noble_base": {
+      "overall": 0.46,
+      "per_category": {
+        "anti_sycophancy": 0.4,
+        "context_binding": 0.6,
+        "harm_reduction": 0.7143,
+        "helpfulness": 0.2,
+        "mixed": 0.25,
+        "persona_honesty": 1.0,
+        "reasoning_rigor": 0.3636,
+        "truthfulness": 0.3333
+      }
+    },
+    "single/good_bad": {
+      "overall": 0.48,
+      "per_category": {
+        "anti_sycophancy": 0.2,
+        "context_binding": 0.6,
+        "harm_reduction": 0.5714,
+        "helpfulness": 1.0,
+        "mixed": 0.0,
+        "persona_honesty": 0.75,
+        "reasoning_rigor": 0.4545,
+        "truthfulness": 0.3333
+      }
+    },
+    "single/honest_dishonest": {
+      "overall": 0.26,
+      "per_category": {
+        "anti_sycophancy": 0.2,
+        "context_binding": 0.0,
+        "harm_reduction": 0.5714,
+        "helpfulness": 0.6,
+        "mixed": 0.25,
+        "persona_honesty": 0.0,
+        "reasoning_rigor": 0.1818,
+        "truthfulness": 0.2222
+      }
+    },
+    "single/true_false": {
+      "overall": 0.3,
+      "per_category": {
+        "anti_sycophancy": 0.0,
+        "context_binding": 0.2,
+        "harm_reduction": 0.1429,
+        "helpfulness": 0.6,
+        "mixed": 0.5,
+        "persona_honesty": 0.25,
+        "reasoning_rigor": 0.5455,
+        "truthfulness": 0.1111
+      }
+    },
+    "single/kind_cruel": {
+      "overall": 0.4,
+      "per_category": {
+        "anti_sycophancy": 0.2,
+        "context_binding": 0.2,
+        "harm_reduction": 0.4286,
+        "helpfulness": 0.6,
+        "mixed": 0.5,
+        "persona_honesty": 0.5,
+        "reasoning_rigor": 0.2727,
+        "truthfulness": 0.5556
+      }
+    },
+    "single/useful_useless": {
+      "overall": 0.38,
+      "per_category": {
+        "anti_sycophancy": 0.4,
+        "context_binding": 0.2,
+        "harm_reduction": 0.7143,
+        "helpfulness": 0.4,
+        "mixed": 0.75,
+        "persona_honesty": 0.25,
+        "reasoning_rigor": 0.1818,
+        "truthfulness": 0.3333
+      }
+    }
+  },
+  "BAAI/bge-m3": {
+    "ml/general_evaluative": {
+      "overall": 0.12,
+      "per_category": {
+        "anti_sycophancy": 0.0,
+        "context_binding": 0.4,
+        "harm_reduction": 0.1429,
+        "helpfulness": 0.0,
+        "mixed": 0.0,
+        "persona_honesty": 0.0,
+        "reasoning_rigor": 0.1818,
+        "truthfulness": 0.1111
+      }
+    },
+    "ml/harm_reduction": {
+      "overall": 0.44,
+      "per_category": {
+        "anti_sycophancy": 0.2,
+        "context_binding": 0.4,
+        "harm_reduction": 0.5714,
+        "helpfulness": 0.4,
+        "mixed": 0.0,
+        "persona_honesty": 0.75,
+        "reasoning_rigor": 0.5455,
+        "truthfulness": 0.4444
+      }
+    },
+    "ml/truthfulness": {
+      "overall": 0.26,
+      "per_category": {
+        "anti_sycophancy": 0.0,
+        "context_binding": 0.4,
+        "harm_reduction": 0.4286,
+        "helpfulness": 0.0,
+        "mixed": 0.25,
+        "persona_honesty": 0.25,
+        "reasoning_rigor": 0.3636,
+        "truthfulness": 0.2222
+      }
+    },
+    "ml/persona_honesty": {
+      "overall": 0.66,
+      "per_category": {
+        "anti_sycophancy": 0.6,
+        "context_binding": 0.8,
+        "harm_reduction": 0.5714,
+        "helpfulness": 0.2,
+        "mixed": 0.5,
+        "persona_honesty": 1.0,
+        "reasoning_rigor": 0.7273,
+        "truthfulness": 0.7778
+      }
+    },
+    "ml/anti_sycophancy": {
+      "overall": 0.8,
+      "per_category": {
+        "anti_sycophancy": 1.0,
+        "context_binding": 0.8,
+        "harm_reduction": 1.0,
+        "helpfulness": 0.2,
+        "mixed": 0.75,
+        "persona_honesty": 1.0,
+        "reasoning_rigor": 0.8182,
+        "truthfulness": 0.7778
+      }
+    },
+    "single/careful_reckless": {
+      "overall": 0.58,
+      "per_category": {
+        "anti_sycophancy": 0.8,
+        "context_binding": 0.4,
+        "harm_reduction": 0.5714,
+        "helpfulness": 0.4,
+        "mixed": 0.5,
+        "persona_honesty": 0.5,
+        "reasoning_rigor": 0.7273,
+        "truthfulness": 0.5556
+      }
+    },
+    "single/moderate_excessive": {
+      "overall": 0.5,
+      "per_category": {
+        "anti_sycophancy": 0.4,
+        "context_binding": 0.6,
+        "harm_reduction": 0.4286,
+        "helpfulness": 0.4,
+        "mixed": 0.0,
+        "persona_honesty": 0.75,
+        "reasoning_rigor": 0.6364,
+        "truthfulness": 0.5556
+      }
+    },
+    "single/noble_base": {
+      "overall": 0.46,
+      "per_category": {
+        "anti_sycophancy": 0.4,
+        "context_binding": 0.6,
+        "harm_reduction": 0.5714,
+        "helpfulness": 0.0,
+        "mixed": 0.75,
+        "persona_honesty": 0.5,
+        "reasoning_rigor": 0.2727,
+        "truthfulness": 0.6667
+      }
+    },
+    "single/good_bad": {
+      "overall": 0.16,
+      "per_category": {
+        "anti_sycophancy": 0.0,
+        "context_binding": 0.4,
+        "harm_reduction": 0.4286,
+        "helpfulness": 0.0,
+        "mixed": 0.0,
+        "persona_honesty": 0.0,
+        "reasoning_rigor": 0.1818,
+        "truthfulness": 0.1111
+      }
+    },
+    "single/honest_dishonest": {
+      "overall": 0.16,
+      "per_category": {
+        "anti_sycophancy": 0.0,
+        "context_binding": 0.2,
+        "harm_reduction": 0.4286,
+        "helpfulness": 0.2,
+        "mixed": 0.25,
+        "persona_honesty": 0.0,
+        "reasoning_rigor": 0.0,
+        "truthfulness": 0.2222
+      }
+    },
+    "single/true_false": {
+      "overall": 0.16,
+      "per_category": {
+        "anti_sycophancy": 0.0,
+        "context_binding": 0.2,
+        "harm_reduction": 0.4286,
+        "helpfulness": 0.4,
+        "mixed": 0.25,
+        "persona_honesty": 0.0,
+        "reasoning_rigor": 0.0,
+        "truthfulness": 0.1111
+      }
+    },
+    "single/kind_cruel": {
+      "overall": 0.44,
+      "per_category": {
+        "anti_sycophancy": 0.0,
+        "context_binding": 0.2,
+        "harm_reduction": 0.4286,
+        "helpfulness": 0.4,
+        "mixed": 0.25,
+        "persona_honesty": 0.5,
+        "reasoning_rigor": 0.7273,
+        "truthfulness": 0.5556
+      }
+    },
+    "single/useful_useless": {
+      "overall": 0.24,
+      "per_category": {
+        "anti_sycophancy": 0.0,
+        "context_binding": 0.2,
+        "harm_reduction": 0.4286,
+        "helpfulness": 0.4,
+        "mixed": 0.0,
+        "persona_honesty": 0.0,
+        "reasoning_rigor": 0.2727,
+        "truthfulness": 0.3333
+      }
+    }
+  },
+  "nomic-ai/nomic-embed-text-v1.5": {
+    "ml/general_evaluative": {
+      "overall": 0.1,
+      "per_category": {
+        "anti_sycophancy": 0.0,
+        "context_binding": 0.2,
+        "harm_reduction": 0.1429,
+        "helpfulness": 0.4,
+        "mixed": 0.0,
+        "persona_honesty": 0.0,
+        "reasoning_rigor": 0.0909,
+        "truthfulness": 0.0
+      }
+    },
+    "ml/harm_reduction": {
+      "overall": 0.5,
+      "per_category": {
+        "anti_sycophancy": 0.6,
+        "context_binding": 0.8,
+        "harm_reduction": 0.5714,
+        "helpfulness": 0.0,
+        "mixed": 0.0,
+        "persona_honesty": 1.0,
+        "reasoning_rigor": 0.4545,
+        "truthfulness": 0.5556
+      }
+    },
+    "ml/truthfulness": {
+      "overall": 0.2,
+      "per_category": {
+        "anti_sycophancy": 0.0,
+        "context_binding": 0.2,
+        "harm_reduction": 0.1429,
+        "helpfulness": 0.6,
+        "mixed": 0.25,
+        "persona_honesty": 0.0,
+        "reasoning_rigor": 0.1818,
+        "truthfulness": 0.2222
+      }
+    },
+    "ml/persona_honesty": {
+      "overall": 0.54,
+      "per_category": {
+        "anti_sycophancy": 0.6,
+        "context_binding": 0.6,
+        "harm_reduction": 0.2857,
+        "helpfulness": 0.2,
+        "mixed": 0.75,
+        "persona_honesty": 0.5,
+        "reasoning_rigor": 0.7273,
+        "truthfulness": 0.5556
+      }
+    },
+    "ml/anti_sycophancy": {
+      "overall": 0.56,
+      "per_category": {
+        "anti_sycophancy": 0.2,
+        "context_binding": 0.8,
+        "harm_reduction": 0.4286,
+        "helpfulness": 0.6,
+        "mixed": 0.5,
+        "persona_honesty": 0.25,
+        "reasoning_rigor": 0.7273,
+        "truthfulness": 0.6667
+      }
+    },
+    "single/careful_reckless": {
+      "overall": 0.62,
+      "per_category": {
+        "anti_sycophancy": 0.8,
+        "context_binding": 0.6,
+        "harm_reduction": 0.4286,
+        "helpfulness": 0.6,
+        "mixed": 0.75,
+        "persona_honesty": 0.75,
+        "reasoning_rigor": 0.6364,
+        "truthfulness": 0.5556
+      }
+    },
+    "single/moderate_excessive": {
+      "overall": 0.4,
+      "per_category": {
+        "anti_sycophancy": 0.4,
+        "context_binding": 0.4,
+        "harm_reduction": 0.7143,
+        "helpfulness": 0.4,
+        "mixed": 0.0,
+        "persona_honesty": 0.75,
+        "reasoning_rigor": 0.2727,
+        "truthfulness": 0.3333
+      }
+    },
+    "single/noble_base": {
+      "overall": 0.48,
+      "per_category": {
+        "anti_sycophancy": 0.2,
+        "context_binding": 0.4,
+        "harm_reduction": 0.5714,
+        "helpfulness": 0.4,
+        "mixed": 0.5,
+        "persona_honesty": 0.5,
+        "reasoning_rigor": 0.6364,
+        "truthfulness": 0.4444
+      }
+    },
+    "single/good_bad": {
+      "overall": 0.12,
+      "per_category": {
+        "anti_sycophancy": 0.0,
+        "context_binding": 0.2,
+        "harm_reduction": 0.2857,
+        "helpfulness": 0.4,
+        "mixed": 0.0,
+        "persona_honesty": 0.0,
+        "reasoning_rigor": 0.0909,
+        "truthfulness": 0.0
+      }
+    },
+    "single/honest_dishonest": {
+      "overall": 0.3,
+      "per_category": {
+        "anti_sycophancy": 0.0,
+        "context_binding": 0.0,
+        "harm_reduction": 0.5714,
+        "helpfulness": 0.4,
+        "mixed": 0.25,
+        "persona_honesty": 0.25,
+        "reasoning_rigor": 0.5455,
+        "truthfulness": 0.1111
+      }
+    },
+    "single/true_false": {
+      "overall": 0.16,
+      "per_category": {
+        "anti_sycophancy": 0.0,
+        "context_binding": 0.2,
+        "harm_reduction": 0.2857,
+        "helpfulness": 0.4,
+        "mixed": 0.25,
+        "persona_honesty": 0.0,
+        "reasoning_rigor": 0.0909,
+        "truthfulness": 0.1111
+      }
+    },
+    "single/kind_cruel": {
+      "overall": 0.28,
+      "per_category": {
+        "anti_sycophancy": 0.0,
+        "context_binding": 0.0,
+        "harm_reduction": 0.2857,
+        "helpfulness": 0.2,
+        "mixed": 0.75,
+        "persona_honesty": 0.75,
+        "reasoning_rigor": 0.2727,
+        "truthfulness": 0.2222
+      }
+    },
+    "single/useful_useless": {
+      "overall": 0.22,
+      "per_category": {
+        "anti_sycophancy": 0.0,
+        "context_binding": 0.2,
+        "harm_reduction": 0.2857,
+        "helpfulness": 0.6,
+        "mixed": 0.5,
+        "persona_honesty": 0.0,
+        "reasoning_rigor": 0.0909,
+        "truthfulness": 0.2222
+      }
+    }
+  }
+}

@@ -67,6 +67,28 @@ category-axis scoring detects 91.7% of error drops and 83.3% of repair
 rises, beating length (0%/100%), sentiment (42%/17%), and final-answer-only
 (0%/0%). Dense localization score is 50%, below the frozen 65% training gate.
 
+**Baselines comparison** (50-case battery, 3 local models):
+
+Evaluative axes beat all simple baselines: prompt-response cosine similarity
+(26-40%), cosine to "This is a good response" (20-44%), response length (51%),
+and embedding norm (30-57%). Best evaluative axis: 62-80%.
+
+**Anchor vocabulary depth** (3 local models, 50+ anchor configurations):
+
+"Careful"/"Reckless" is the most cross-model robust single-word axis, scoring
+80% on anti-sycophancy cases on all three models — more stable than the
+dedicated multi-sentence anti-sycophancy axis (60%, 100%, 20%). Corpus
+frequency does not predict geometric signal strength. Bootstrap CIs (10,000
+resamples) ground which comparisons are statistically reliable.
+
+**Osgood's semantic differential dimensions** (3 local models, E/P/A):
+
+Osgood's EPA composite fails (12-26%). But his Potency dimension contains
+the strongest cross-model signal: "Hard/Soft" scores 58%, 64%, 68% across
+all three models — comparable to "Careful/Reckless." Osgood's primary
+Evaluation dimension (good/bad, nice/awful) consistently fails. The three
+dimensions are not orthogonal in embedding space (cosine 0.04-0.41).
+
 **HH-RLHF disagreement audit**: 231 cases where embedding disagreed with
 dataset labels. Among gradeable disagreements, embedding was right 58.3%
 of the time. Corrected agreement: 83--88%.
@@ -107,6 +129,24 @@ python scripts/run_random_axis_control.py --n-random 200
 
 # Anchor perturbation (tests axis robustness to anchor rewording)
 python scripts/run_anchor_perturbation.py --backend fastembed
+
+# Vocabulary depth experiment (single words vs ML jargon)
+python scripts/run_vocabulary_depth_experiment.py --model snowflake/snowflake-arctic-embed-m
+
+# Bootstrap confidence intervals
+python scripts/run_bootstrap_ci.py
+
+# Per-category breakdown
+python scripts/run_category_breakdown.py
+
+# Baselines comparison (relevance, length, norm, phrase proximity)
+python scripts/run_baselines_comparison.py
+
+# Osgood's semantic differential dimensions (Evaluation, Potency, Activity)
+python scripts/run_osgood_dimensions.py
+
+# Inter-axis correlation analysis
+python scripts/run_axis_correlation.py
 
 # Cross-category transfer and PCA of axis geometry
 python scripts/run_cross_category_transfer.py --backend fastembed
@@ -153,6 +193,15 @@ scripts/
   compute_significance.py           Binomial tests and Wilson CIs
   run_good_vs_proxy_conflicts.py    Raw good/bad vs proxy words
   run_process_potential_error_repair.py  Error/repair trace scoring
+  run_vocabulary_depth_experiment.py  Single-word vs ML-jargon anchors
+  run_deep_research_candidates.py    Corpus-frequency recommended terms
+  run_universal_composite.py         Composite universal axis test
+  run_careful_multisentence.py       Multi-sentence universal vocabulary
+  run_bootstrap_ci.py                Bootstrap CIs for key axes
+  run_category_breakdown.py          Per-category accuracy breakdown
+  run_baselines_comparison.py        Axis vs simple baselines
+  run_osgood_dimensions.py           Osgood EPA semantic differential test
+  run_axis_correlation.py            Inter-axis correlation and cosine analysis
 
 notes/research_cycles/
   cycle_002_*    Battery development and potential shaping
@@ -168,11 +217,15 @@ experiments/research_system_v1/   Objective benchmark specs and results
 
 1. **Osgood et al. (1957)**: Evaluation is the primary dimension of human
    semantic judgment, cross-culturally universal.
-2. **Grand et al. (2022)**: Semantic projection recovers human knowledge
+2. **Wierzbicka (1972), Goddard & Wierzbicka (2014)**: GOOD and BAD are
+   semantic primes — universally lexicalized across all human languages (NSM).
+3. **Chen & Skiena (2014)**: Cross-lingual sentiment lexicons for 136
+   languages show ~95% agreement on basic evaluative polarity.
+4. **Grand et al. (2022)**: Semantic projection recovers human knowledge
    from embedding geometry (Nature Human Behaviour).
-3. **Kozlowski et al. (2025)**: Osgood's dimensions exist in LLM embeddings;
+5. **Kozlowski et al. (2025)**: Osgood's dimensions exist in LLM embeddings;
    features are entangled along shared directions.
-4. **Cho et al. (2026)**: LLMs conflate moral, grammatical, and economic
+6. **Cho et al. (2026)**: LLMs conflate moral, grammatical, and economic
    "good" --- for alignment, this entanglement is the mechanism, not a bug.
 
 ## Key Claim Ladder

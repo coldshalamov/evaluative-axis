@@ -1,0 +1,781 @@
+{
+  "metadata": {
+    "expansion_categories": [
+      "conciseness_completeness",
+      "creative_quality",
+      "factual_accuracy",
+      "nuance_context"
+    ],
+    "n_expansion": 20,
+    "n_balanced": 70,
+    "n_models": 3,
+    "n_axes": 23
+  },
+  "per_model": {
+    "snowflake/snowflake-arctic-embed-m": {
+      "ml/general_evaluative": {
+        "expansion": 0.65,
+        "firmness": 0.34,
+        "warmth": 0.7,
+        "per_category": {
+          "conciseness_completeness": 0.4,
+          "creative_quality": 0.8,
+          "factual_accuracy": 0.8,
+          "nuance_context": 0.6
+        }
+      },
+      "ml/harm_reduction": {
+        "expansion": 0.5,
+        "firmness": 0.6,
+        "warmth": 0.55,
+        "per_category": {
+          "conciseness_completeness": 0.4,
+          "creative_quality": 0.6,
+          "factual_accuracy": 0.8,
+          "nuance_context": 0.2
+        }
+      },
+      "ml/truthfulness": {
+        "expansion": 0.55,
+        "firmness": 0.48,
+        "warmth": 0.3,
+        "per_category": {
+          "conciseness_completeness": 0.4,
+          "creative_quality": 0.6,
+          "factual_accuracy": 0.6,
+          "nuance_context": 0.6
+        }
+      },
+      "ml/persona_honesty": {
+        "expansion": 0.25,
+        "firmness": 0.72,
+        "warmth": 0.35,
+        "per_category": {
+          "conciseness_completeness": 0.6,
+          "creative_quality": 0.2,
+          "factual_accuracy": 0.2,
+          "nuance_context": 0.0
+        }
+      },
+      "ml/anti_sycophancy": {
+        "expansion": 0.25,
+        "firmness": 0.52,
+        "warmth": 0.35,
+        "per_category": {
+          "conciseness_completeness": 0.2,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.4,
+          "nuance_context": 0.0
+        }
+      },
+      "word/careful": {
+        "expansion": 0.8,
+        "firmness": 0.52,
+        "warmth": 0.4,
+        "per_category": {
+          "conciseness_completeness": 0.8,
+          "creative_quality": 1.0,
+          "factual_accuracy": 0.8,
+          "nuance_context": 0.6
+        }
+      },
+      "word/hard": {
+        "expansion": 0.75,
+        "firmness": 0.58,
+        "warmth": 0.65,
+        "per_category": {
+          "conciseness_completeness": 0.8,
+          "creative_quality": 1.0,
+          "factual_accuracy": 0.8,
+          "nuance_context": 0.4
+        }
+      },
+      "word/moderate": {
+        "expansion": 0.7,
+        "firmness": 0.48,
+        "warmth": 0.45,
+        "per_category": {
+          "conciseness_completeness": 0.6,
+          "creative_quality": 0.8,
+          "factual_accuracy": 0.8,
+          "nuance_context": 0.6
+        }
+      },
+      "word/heavy": {
+        "expansion": 0.6,
+        "firmness": 0.52,
+        "warmth": 0.45,
+        "per_category": {
+          "conciseness_completeness": 0.6,
+          "creative_quality": 0.6,
+          "factual_accuracy": 0.2,
+          "nuance_context": 1.0
+        }
+      },
+      "word/noble": {
+        "expansion": 0.4,
+        "firmness": 0.46,
+        "warmth": 0.65,
+        "per_category": {
+          "conciseness_completeness": 0.6,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.4,
+          "nuance_context": 0.2
+        }
+      },
+      "word/wise": {
+        "expansion": 0.55,
+        "firmness": 0.46,
+        "warmth": 0.55,
+        "per_category": {
+          "conciseness_completeness": 0.6,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.4,
+          "nuance_context": 0.8
+        }
+      },
+      "word/honest": {
+        "expansion": 0.55,
+        "firmness": 0.26,
+        "warmth": 0.75,
+        "per_category": {
+          "conciseness_completeness": 0.2,
+          "creative_quality": 0.8,
+          "factual_accuracy": 0.4,
+          "nuance_context": 0.8
+        }
+      },
+      "word/precise": {
+        "expansion": 0.6,
+        "firmness": 0.48,
+        "warmth": 0.35,
+        "per_category": {
+          "conciseness_completeness": 0.4,
+          "creative_quality": 0.6,
+          "factual_accuracy": 0.6,
+          "nuance_context": 0.8
+        }
+      },
+      "word/kind": {
+        "expansion": 0.4,
+        "firmness": 0.4,
+        "warmth": 0.55,
+        "per_category": {
+          "conciseness_completeness": 0.6,
+          "creative_quality": 0.0,
+          "factual_accuracy": 0.2,
+          "nuance_context": 0.8
+        }
+      },
+      "word/clear": {
+        "expansion": 0.45,
+        "firmness": 0.46,
+        "warmth": 0.55,
+        "per_category": {
+          "conciseness_completeness": 0.4,
+          "creative_quality": 0.8,
+          "factual_accuracy": 0.2,
+          "nuance_context": 0.4
+        }
+      },
+      "word/useful": {
+        "expansion": 0.45,
+        "firmness": 0.38,
+        "warmth": 0.6,
+        "per_category": {
+          "conciseness_completeness": 0.4,
+          "creative_quality": 0.2,
+          "factual_accuracy": 0.4,
+          "nuance_context": 0.8
+        }
+      },
+      "word/good": {
+        "expansion": 0.3,
+        "firmness": 0.48,
+        "warmth": 0.6,
+        "per_category": {
+          "conciseness_completeness": 0.2,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.2,
+          "nuance_context": 0.4
+        }
+      },
+      "word/active": {
+        "expansion": 0.85,
+        "firmness": 0.6,
+        "warmth": 0.5,
+        "per_category": {
+          "conciseness_completeness": 0.8,
+          "creative_quality": 1.0,
+          "factual_accuracy": 0.8,
+          "nuance_context": 0.8
+        }
+      },
+      "word/fair": {
+        "expansion": 0.65,
+        "firmness": 0.42,
+        "warmth": 0.55,
+        "per_category": {
+          "conciseness_completeness": 0.6,
+          "creative_quality": 0.6,
+          "factual_accuracy": 0.8,
+          "nuance_context": 0.6
+        }
+      },
+      "word/sound": {
+        "expansion": 0.55,
+        "firmness": 0.36,
+        "warmth": 0.75,
+        "per_category": {
+          "conciseness_completeness": 0.6,
+          "creative_quality": 0.8,
+          "factual_accuracy": 0.4,
+          "nuance_context": 0.4
+        }
+      },
+      "word/thorough": {
+        "expansion": 0.4,
+        "firmness": 0.6,
+        "warmth": 0.6,
+        "per_category": {
+          "conciseness_completeness": 0.8,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.0,
+          "nuance_context": 0.4
+        }
+      },
+      "word/responsible": {
+        "expansion": 0.65,
+        "firmness": 0.52,
+        "warmth": 0.6,
+        "per_category": {
+          "conciseness_completeness": 1.0,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.6,
+          "nuance_context": 0.6
+        }
+      },
+      "word/constructive": {
+        "expansion": 0.55,
+        "firmness": 0.46,
+        "warmth": 0.75,
+        "per_category": {
+          "conciseness_completeness": 0.4,
+          "creative_quality": 0.2,
+          "factual_accuracy": 0.6,
+          "nuance_context": 1.0
+        }
+      }
+    },
+    "BAAI/bge-m3": {
+      "ml/general_evaluative": {
+        "expansion": 0.3,
+        "firmness": 0.12,
+        "warmth": 0.75,
+        "per_category": {
+          "conciseness_completeness": 0.4,
+          "creative_quality": 0.2,
+          "factual_accuracy": 0.2,
+          "nuance_context": 0.4
+        }
+      },
+      "ml/harm_reduction": {
+        "expansion": 0.5,
+        "firmness": 0.44,
+        "warmth": 0.75,
+        "per_category": {
+          "conciseness_completeness": 0.0,
+          "creative_quality": 0.8,
+          "factual_accuracy": 0.4,
+          "nuance_context": 0.8
+        }
+      },
+      "ml/truthfulness": {
+        "expansion": 0.25,
+        "firmness": 0.26,
+        "warmth": 0.6,
+        "per_category": {
+          "conciseness_completeness": 0.4,
+          "creative_quality": 0.2,
+          "factual_accuracy": 0.2,
+          "nuance_context": 0.2
+        }
+      },
+      "ml/persona_honesty": {
+        "expansion": 0.5,
+        "firmness": 0.66,
+        "warmth": 0.5,
+        "per_category": {
+          "conciseness_completeness": 0.0,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.6,
+          "nuance_context": 1.0
+        }
+      },
+      "ml/anti_sycophancy": {
+        "expansion": 0.25,
+        "firmness": 0.8,
+        "warmth": 0.35,
+        "per_category": {
+          "conciseness_completeness": 0.0,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.4,
+          "nuance_context": 0.2
+        }
+      },
+      "word/careful": {
+        "expansion": 0.6,
+        "firmness": 0.58,
+        "warmth": 0.35,
+        "per_category": {
+          "conciseness_completeness": 0.8,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.4,
+          "nuance_context": 0.8
+        }
+      },
+      "word/hard": {
+        "expansion": 0.4,
+        "firmness": 0.64,
+        "warmth": 0.55,
+        "per_category": {
+          "conciseness_completeness": 0.2,
+          "creative_quality": 0.2,
+          "factual_accuracy": 0.6,
+          "nuance_context": 0.6
+        }
+      },
+      "word/moderate": {
+        "expansion": 0.55,
+        "firmness": 0.5,
+        "warmth": 0.55,
+        "per_category": {
+          "conciseness_completeness": 0.4,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.6,
+          "nuance_context": 0.8
+        }
+      },
+      "word/heavy": {
+        "expansion": 0.4,
+        "firmness": 0.6,
+        "warmth": 0.5,
+        "per_category": {
+          "conciseness_completeness": 0.4,
+          "creative_quality": 0.6,
+          "factual_accuracy": 0.2,
+          "nuance_context": 0.4
+        }
+      },
+      "word/noble": {
+        "expansion": 0.45,
+        "firmness": 0.46,
+        "warmth": 0.5,
+        "per_category": {
+          "conciseness_completeness": 0.8,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.4,
+          "nuance_context": 0.2
+        }
+      },
+      "word/wise": {
+        "expansion": 0.55,
+        "firmness": 0.24,
+        "warmth": 0.75,
+        "per_category": {
+          "conciseness_completeness": 1.0,
+          "creative_quality": 0.6,
+          "factual_accuracy": 0.2,
+          "nuance_context": 0.4
+        }
+      },
+      "word/honest": {
+        "expansion": 0.45,
+        "firmness": 0.16,
+        "warmth": 0.65,
+        "per_category": {
+          "conciseness_completeness": 0.2,
+          "creative_quality": 0.2,
+          "factual_accuracy": 0.6,
+          "nuance_context": 0.8
+        }
+      },
+      "word/precise": {
+        "expansion": 0.4,
+        "firmness": 0.14,
+        "warmth": 0.6,
+        "per_category": {
+          "conciseness_completeness": 0.2,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.6,
+          "nuance_context": 0.4
+        }
+      },
+      "word/kind": {
+        "expansion": 0.35,
+        "firmness": 0.44,
+        "warmth": 0.75,
+        "per_category": {
+          "conciseness_completeness": 0.2,
+          "creative_quality": 0.2,
+          "factual_accuracy": 0.4,
+          "nuance_context": 0.6
+        }
+      },
+      "word/clear": {
+        "expansion": 0.3,
+        "firmness": 0.24,
+        "warmth": 0.55,
+        "per_category": {
+          "conciseness_completeness": 0.2,
+          "creative_quality": 0.6,
+          "factual_accuracy": 0.0,
+          "nuance_context": 0.4
+        }
+      },
+      "word/useful": {
+        "expansion": 0.25,
+        "firmness": 0.24,
+        "warmth": 0.85,
+        "per_category": {
+          "conciseness_completeness": 0.4,
+          "creative_quality": 0.2,
+          "factual_accuracy": 0.2,
+          "nuance_context": 0.2
+        }
+      },
+      "word/good": {
+        "expansion": 0.5,
+        "firmness": 0.16,
+        "warmth": 0.85,
+        "per_category": {
+          "conciseness_completeness": 0.6,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.4,
+          "nuance_context": 0.6
+        }
+      },
+      "word/active": {
+        "expansion": 0.45,
+        "firmness": 0.18,
+        "warmth": 0.5,
+        "per_category": {
+          "conciseness_completeness": 0.2,
+          "creative_quality": 0.6,
+          "factual_accuracy": 0.8,
+          "nuance_context": 0.2
+        }
+      },
+      "word/fair": {
+        "expansion": 0.4,
+        "firmness": 0.16,
+        "warmth": 0.7,
+        "per_category": {
+          "conciseness_completeness": 0.4,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.2,
+          "nuance_context": 0.6
+        }
+      },
+      "word/sound": {
+        "expansion": 0.55,
+        "firmness": 0.22,
+        "warmth": 0.65,
+        "per_category": {
+          "conciseness_completeness": 0.6,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.4,
+          "nuance_context": 0.8
+        }
+      },
+      "word/thorough": {
+        "expansion": 0.65,
+        "firmness": 0.42,
+        "warmth": 0.8,
+        "per_category": {
+          "conciseness_completeness": 0.6,
+          "creative_quality": 0.4,
+          "factual_accuracy": 1.0,
+          "nuance_context": 0.6
+        }
+      },
+      "word/responsible": {
+        "expansion": 0.4,
+        "firmness": 0.24,
+        "warmth": 0.7,
+        "per_category": {
+          "conciseness_completeness": 0.4,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.2,
+          "nuance_context": 0.6
+        }
+      },
+      "word/constructive": {
+        "expansion": 0.7,
+        "firmness": 0.26,
+        "warmth": 0.7,
+        "per_category": {
+          "conciseness_completeness": 1.0,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.6,
+          "nuance_context": 0.8
+        }
+      }
+    },
+    "nomic-ai/nomic-embed-text-v1.5": {
+      "ml/general_evaluative": {
+        "expansion": 0.3,
+        "firmness": 0.1,
+        "warmth": 0.85,
+        "per_category": {
+          "conciseness_completeness": 0.0,
+          "creative_quality": 0.2,
+          "factual_accuracy": 0.4,
+          "nuance_context": 0.6
+        }
+      },
+      "ml/harm_reduction": {
+        "expansion": 0.55,
+        "firmness": 0.5,
+        "warmth": 0.65,
+        "per_category": {
+          "conciseness_completeness": 0.0,
+          "creative_quality": 0.8,
+          "factual_accuracy": 0.6,
+          "nuance_context": 0.8
+        }
+      },
+      "ml/truthfulness": {
+        "expansion": 0.25,
+        "firmness": 0.2,
+        "warmth": 0.55,
+        "per_category": {
+          "conciseness_completeness": 0.2,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.2,
+          "nuance_context": 0.2
+        }
+      },
+      "ml/persona_honesty": {
+        "expansion": 0.45,
+        "firmness": 0.54,
+        "warmth": 0.4,
+        "per_category": {
+          "conciseness_completeness": 0.4,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.4,
+          "nuance_context": 0.6
+        }
+      },
+      "ml/anti_sycophancy": {
+        "expansion": 0.5,
+        "firmness": 0.56,
+        "warmth": 0.45,
+        "per_category": {
+          "conciseness_completeness": 0.2,
+          "creative_quality": 0.6,
+          "factual_accuracy": 0.6,
+          "nuance_context": 0.6
+        }
+      },
+      "word/careful": {
+        "expansion": 0.65,
+        "firmness": 0.62,
+        "warmth": 0.7,
+        "per_category": {
+          "conciseness_completeness": 0.8,
+          "creative_quality": 0.8,
+          "factual_accuracy": 0.4,
+          "nuance_context": 0.6
+        }
+      },
+      "word/hard": {
+        "expansion": 0.55,
+        "firmness": 0.68,
+        "warmth": 0.5,
+        "per_category": {
+          "conciseness_completeness": 1.0,
+          "creative_quality": 0.6,
+          "factual_accuracy": 0.4,
+          "nuance_context": 0.2
+        }
+      },
+      "word/moderate": {
+        "expansion": 0.5,
+        "firmness": 0.4,
+        "warmth": 0.65,
+        "per_category": {
+          "conciseness_completeness": 0.4,
+          "creative_quality": 0.6,
+          "factual_accuracy": 0.2,
+          "nuance_context": 0.8
+        }
+      },
+      "word/heavy": {
+        "expansion": 0.55,
+        "firmness": 0.58,
+        "warmth": 0.65,
+        "per_category": {
+          "conciseness_completeness": 0.6,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.4,
+          "nuance_context": 0.8
+        }
+      },
+      "word/noble": {
+        "expansion": 0.5,
+        "firmness": 0.48,
+        "warmth": 0.6,
+        "per_category": {
+          "conciseness_completeness": 0.8,
+          "creative_quality": 0.6,
+          "factual_accuracy": 0.2,
+          "nuance_context": 0.4
+        }
+      },
+      "word/wise": {
+        "expansion": 0.2,
+        "firmness": 0.3,
+        "warmth": 0.65,
+        "per_category": {
+          "conciseness_completeness": 0.0,
+          "creative_quality": 0.2,
+          "factual_accuracy": 0.2,
+          "nuance_context": 0.4
+        }
+      },
+      "word/honest": {
+        "expansion": 0.4,
+        "firmness": 0.3,
+        "warmth": 0.6,
+        "per_category": {
+          "conciseness_completeness": 0.0,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.4,
+          "nuance_context": 0.8
+        }
+      },
+      "word/precise": {
+        "expansion": 0.25,
+        "firmness": 0.28,
+        "warmth": 0.5,
+        "per_category": {
+          "conciseness_completeness": 0.2,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.2,
+          "nuance_context": 0.2
+        }
+      },
+      "word/kind": {
+        "expansion": 0.2,
+        "firmness": 0.28,
+        "warmth": 0.7,
+        "per_category": {
+          "conciseness_completeness": 0.0,
+          "creative_quality": 0.0,
+          "factual_accuracy": 0.2,
+          "nuance_context": 0.6
+        }
+      },
+      "word/clear": {
+        "expansion": 0.45,
+        "firmness": 0.28,
+        "warmth": 0.55,
+        "per_category": {
+          "conciseness_completeness": 0.2,
+          "creative_quality": 1.0,
+          "factual_accuracy": 0.0,
+          "nuance_context": 0.6
+        }
+      },
+      "word/useful": {
+        "expansion": 0.3,
+        "firmness": 0.22,
+        "warmth": 0.7,
+        "per_category": {
+          "conciseness_completeness": 0.0,
+          "creative_quality": 0.2,
+          "factual_accuracy": 0.6,
+          "nuance_context": 0.4
+        }
+      },
+      "word/good": {
+        "expansion": 0.45,
+        "firmness": 0.12,
+        "warmth": 0.8,
+        "per_category": {
+          "conciseness_completeness": 0.2,
+          "creative_quality": 0.6,
+          "factual_accuracy": 0.2,
+          "nuance_context": 0.8
+        }
+      },
+      "word/active": {
+        "expansion": 0.45,
+        "firmness": 0.36,
+        "warmth": 0.35,
+        "per_category": {
+          "conciseness_completeness": 0.6,
+          "creative_quality": 0.6,
+          "factual_accuracy": 0.4,
+          "nuance_context": 0.2
+        }
+      },
+      "word/fair": {
+        "expansion": 0.55,
+        "firmness": 0.24,
+        "warmth": 0.7,
+        "per_category": {
+          "conciseness_completeness": 0.6,
+          "creative_quality": 0.0,
+          "factual_accuracy": 0.6,
+          "nuance_context": 1.0
+        }
+      },
+      "word/sound": {
+        "expansion": 0.45,
+        "firmness": 0.3,
+        "warmth": 0.5,
+        "per_category": {
+          "conciseness_completeness": 0.8,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.2,
+          "nuance_context": 0.4
+        }
+      },
+      "word/thorough": {
+        "expansion": 0.4,
+        "firmness": 0.56,
+        "warmth": 0.5,
+        "per_category": {
+          "conciseness_completeness": 0.6,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.2,
+          "nuance_context": 0.4
+        }
+      },
+      "word/responsible": {
+        "expansion": 0.55,
+        "firmness": 0.2,
+        "warmth": 0.8,
+        "per_category": {
+          "conciseness_completeness": 0.6,
+          "creative_quality": 0.6,
+          "factual_accuracy": 0.4,
+          "nuance_context": 0.6
+        }
+      },
+      "word/constructive": {
+        "expansion": 0.5,
+        "firmness": 0.28,
+        "warmth": 0.7,
+        "per_category": {
+          "conciseness_completeness": 0.4,
+          "creative_quality": 0.4,
+          "factual_accuracy": 0.4,
+          "nuance_context": 0.8
+        }
+      }
+    }
+  }
+}
