@@ -1,0 +1,465 @@
+{
+  "created_by": "scripts/download_centroid_rl_datasets.py",
+  "dataset_sizes": {
+    "PKU-Alignment/PKU-SafeRLHF": {
+      "configs": [
+        {
+          "config": "default",
+          "dataset": "PKU-Alignment/PKU-SafeRLHF",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 118686646,
+          "num_bytes_original_files": 232675755,
+          "num_bytes_parquet_files": 73082408,
+          "num_columns": 16,
+          "num_rows": 82118
+        },
+        {
+          "config": "alpaca-7b",
+          "dataset": "PKU-Alignment/PKU-SafeRLHF",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 43859340,
+          "num_bytes_original_files": 86087207,
+          "num_bytes_parquet_files": 27147975,
+          "num_columns": 16,
+          "num_rows": 30429
+        },
+        {
+          "config": "alpaca2-7b",
+          "dataset": "PKU-Alignment/PKU-SafeRLHF",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 41160116,
+          "num_bytes_original_files": 80586615,
+          "num_bytes_parquet_files": 25302381,
+          "num_columns": 16,
+          "num_rows": 28412
+        },
+        {
+          "config": "alpaca3-8b",
+          "dataset": "PKU-Alignment/PKU-SafeRLHF",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 33667190,
+          "num_bytes_original_files": 66001933,
+          "num_bytes_parquet_files": 20683382,
+          "num_columns": 16,
+          "num_rows": 23277
+        }
+      ],
+      "dataset": {
+        "dataset": "PKU-Alignment/PKU-SafeRLHF",
+        "estimated_num_rows": null,
+        "num_bytes_memory": 237373292,
+        "num_bytes_original_files": 465351510,
+        "num_bytes_parquet_files": 146216146,
+        "num_rows": 164236
+      },
+      "splits": [
+        {
+          "config": "default",
+          "dataset": "PKU-Alignment/PKU-SafeRLHF",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 106765356,
+          "num_bytes_parquet_files": 65698788,
+          "num_columns": 16,
+          "num_rows": 73907,
+          "split": "train"
+        },
+        {
+          "config": "default",
+          "dataset": "PKU-Alignment/PKU-SafeRLHF",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 11921290,
+          "num_bytes_parquet_files": 7383620,
+          "num_columns": 16,
+          "num_rows": 8211,
+          "split": "test"
+        },
+        {
+          "config": "alpaca-7b",
+          "dataset": "PKU-Alignment/PKU-SafeRLHF",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 39472663,
+          "num_bytes_parquet_files": 24415534,
+          "num_columns": 16,
+          "num_rows": 27393,
+          "split": "train"
+        },
+        {
+          "config": "alpaca-7b",
+          "dataset": "PKU-Alignment/PKU-SafeRLHF",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 4386677,
+          "num_bytes_parquet_files": 2732441,
+          "num_columns": 16,
+          "num_rows": 3036,
+          "split": "test"
+        },
+        {
+          "config": "alpaca2-7b",
+          "dataset": "PKU-Alignment/PKU-SafeRLHF",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 37026939,
+          "num_bytes_parquet_files": 22742966,
+          "num_columns": 16,
+          "num_rows": 25564,
+          "split": "train"
+        },
+        {
+          "config": "alpaca2-7b",
+          "dataset": "PKU-Alignment/PKU-SafeRLHF",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 4133177,
+          "num_bytes_parquet_files": 2559415,
+          "num_columns": 16,
+          "num_rows": 2848,
+          "split": "test"
+        },
+        {
+          "config": "alpaca3-8b",
+          "dataset": "PKU-Alignment/PKU-SafeRLHF",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 30265754,
+          "num_bytes_parquet_files": 18565947,
+          "num_columns": 16,
+          "num_rows": 20950,
+          "split": "train"
+        },
+        {
+          "config": "alpaca3-8b",
+          "dataset": "PKU-Alignment/PKU-SafeRLHF",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 3401436,
+          "num_bytes_parquet_files": 2117435,
+          "num_columns": 16,
+          "num_rows": 2327,
+          "split": "test"
+        }
+      ]
+    },
+    "allenai/reward-bench-2": {
+      "configs": [
+        {
+          "config": "default",
+          "dataset": "allenai/reward-bench-2",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 11958557,
+          "num_bytes_original_files": 6973189,
+          "num_bytes_parquet_files": 6973189,
+          "num_columns": 10,
+          "num_rows": 1865
+        }
+      ],
+      "dataset": {
+        "dataset": "allenai/reward-bench-2",
+        "estimated_num_rows": null,
+        "num_bytes_memory": 11958557,
+        "num_bytes_original_files": 6973189,
+        "num_bytes_parquet_files": 6973189,
+        "num_rows": 1865
+      },
+      "splits": [
+        {
+          "config": "default",
+          "dataset": "allenai/reward-bench-2",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 11958557,
+          "num_bytes_parquet_files": 6973189,
+          "num_columns": 10,
+          "num_rows": 1865,
+          "split": "test"
+        }
+      ]
+    },
+    "nvidia/HelpSteer2": {
+      "configs": [
+        {
+          "config": "default",
+          "dataset": "nvidia/HelpSteer2",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 48214322,
+          "num_bytes_original_files": 11897646,
+          "num_bytes_parquet_files": 19459677,
+          "num_columns": 7,
+          "num_rows": 21362
+        }
+      ],
+      "dataset": {
+        "dataset": "nvidia/HelpSteer2",
+        "estimated_num_rows": null,
+        "num_bytes_memory": 48214322,
+        "num_bytes_original_files": 11897646,
+        "num_bytes_parquet_files": 19459677,
+        "num_rows": 21362
+      },
+      "splits": [
+        {
+          "config": "default",
+          "dataset": "nvidia/HelpSteer2",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 45878971,
+          "num_bytes_parquet_files": 18495985,
+          "num_columns": 7,
+          "num_rows": 20324,
+          "split": "train"
+        },
+        {
+          "config": "default",
+          "dataset": "nvidia/HelpSteer2",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 2335351,
+          "num_bytes_parquet_files": 963692,
+          "num_columns": 7,
+          "num_rows": 1038,
+          "split": "validation"
+        }
+      ]
+    },
+    "open-r1/OpenR1-Math-220k": {
+      "configs": [
+        {
+          "config": "default",
+          "dataset": "open-r1/OpenR1-Math-220k",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 5079805007,
+          "num_bytes_original_files": 2149897914,
+          "num_bytes_parquet_files": 2149897914,
+          "num_columns": 14,
+          "num_rows": 93733
+        },
+        {
+          "config": "all",
+          "dataset": "open-r1/OpenR1-Math-220k",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 10161169949,
+          "num_bytes_original_files": 4221672067,
+          "num_bytes_parquet_files": 4221672067,
+          "num_columns": 14,
+          "num_rows": 225129
+        },
+        {
+          "config": "extended",
+          "dataset": "open-r1/OpenR1-Math-220k",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 4770393404,
+          "num_bytes_original_files": 2063936457,
+          "num_bytes_parquet_files": 2063936457,
+          "num_columns": 14,
+          "num_rows": 131396
+        }
+      ],
+      "dataset": {
+        "dataset": "open-r1/OpenR1-Math-220k",
+        "estimated_num_rows": null,
+        "num_bytes_memory": 20011368360,
+        "num_bytes_original_files": 8435506438,
+        "num_bytes_parquet_files": 8435506438,
+        "num_rows": 450258
+      },
+      "splits": [
+        {
+          "config": "default",
+          "dataset": "open-r1/OpenR1-Math-220k",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 5079805007,
+          "num_bytes_parquet_files": 2149897914,
+          "num_columns": 14,
+          "num_rows": 93733,
+          "split": "train"
+        },
+        {
+          "config": "all",
+          "dataset": "open-r1/OpenR1-Math-220k",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 10161169949,
+          "num_bytes_parquet_files": 4221672067,
+          "num_columns": 14,
+          "num_rows": 225129,
+          "split": "train"
+        },
+        {
+          "config": "extended",
+          "dataset": "open-r1/OpenR1-Math-220k",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 4770393404,
+          "num_bytes_parquet_files": 2063936457,
+          "num_columns": 14,
+          "num_rows": 131396,
+          "split": "train"
+        }
+      ]
+    },
+    "openai/summarize_from_feedback": {
+      "configs": [
+        {
+          "config": "axis",
+          "dataset": "openai/summarize_from_feedback",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 42239761,
+          "num_bytes_original_files": 45339339,
+          "num_bytes_parquet_files": 4599829,
+          "num_columns": 5,
+          "num_rows": 14897
+        },
+        {
+          "config": "comparisons",
+          "dataset": "openai/summarize_from_feedback",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 343118863,
+          "num_bytes_original_files": 374387954,
+          "num_bytes_parquet_files": 43947392,
+          "num_columns": 7,
+          "num_rows": 178944
+        }
+      ],
+      "dataset": {
+        "dataset": "openai/summarize_from_feedback",
+        "estimated_num_rows": null,
+        "num_bytes_memory": 385358624,
+        "num_bytes_original_files": 419727293,
+        "num_bytes_parquet_files": 48547221,
+        "num_rows": 193841
+      },
+      "splits": [
+        {
+          "config": "axis",
+          "dataset": "openai/summarize_from_feedback",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 27478596,
+          "num_bytes_parquet_files": 2532630,
+          "num_columns": 5,
+          "num_rows": 6312,
+          "split": "test"
+        },
+        {
+          "config": "axis",
+          "dataset": "openai/summarize_from_feedback",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 14761165,
+          "num_bytes_parquet_files": 2067199,
+          "num_columns": 5,
+          "num_rows": 8585,
+          "split": "validation"
+        },
+        {
+          "config": "comparisons",
+          "dataset": "openai/summarize_from_feedback",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 172539153,
+          "num_bytes_parquet_files": 21115502,
+          "num_columns": 7,
+          "num_rows": 92858,
+          "split": "train"
+        },
+        {
+          "config": "comparisons",
+          "dataset": "openai/summarize_from_feedback",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 170579710,
+          "num_bytes_parquet_files": 22831890,
+          "num_columns": 7,
+          "num_rows": 86086,
+          "split": "validation"
+        }
+      ]
+    },
+    "openai/webgpt_comparisons": {
+      "configs": [
+        {
+          "config": "default",
+          "dataset": "openai/webgpt_comparisons",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 226898211,
+          "num_bytes_original_files": 278540416,
+          "num_bytes_parquet_files": 127188617,
+          "num_columns": 9,
+          "num_rows": 19578
+        }
+      ],
+      "dataset": {
+        "dataset": "openai/webgpt_comparisons",
+        "estimated_num_rows": null,
+        "num_bytes_memory": 226898211,
+        "num_bytes_original_files": 278540416,
+        "num_bytes_parquet_files": 127188617,
+        "num_rows": 19578
+      },
+      "splits": [
+        {
+          "config": "default",
+          "dataset": "openai/webgpt_comparisons",
+          "estimated_num_rows": null,
+          "num_bytes_memory": 226898211,
+          "num_bytes_parquet_files": 127188617,
+          "num_columns": 9,
+          "num_rows": 19578,
+          "split": "train"
+        }
+      ]
+    },
+    "tasksource/PRM800K": {
+      "configs": [],
+      "dataset": {
+        "dataset": "tasksource/PRM800K",
+        "estimated_num_rows": null,
+        "num_bytes_memory": 0,
+        "num_bytes_original_files": 0,
+        "num_bytes_parquet_files": 0,
+        "num_rows": 0
+      },
+      "splits": []
+    }
+  },
+  "files": [
+    {
+      "file": "helpsteer2_preference_pairs.jsonl",
+      "n_pairs": 2000,
+      "size_bytes": 8619753,
+      "source_dataset": "nvidia/HelpSteer2",
+      "task_type": "pairwise_helpsteer_preference"
+    },
+    {
+      "file": "pku_better_pairs.jsonl",
+      "n_pairs": 2000,
+      "size_bytes": 3319021,
+      "source_dataset": "PKU-Alignment/PKU-SafeRLHF",
+      "task_type": "pairwise_helpfulness_preference"
+    },
+    {
+      "file": "pku_safer_pairs.jsonl",
+      "n_pairs": 2000,
+      "size_bytes": 3397499,
+      "source_dataset": "PKU-Alignment/PKU-SafeRLHF",
+      "task_type": "pairwise_safety_preference"
+    },
+    {
+      "file": "prm800k_step_pairs.jsonl",
+      "n_pairs": 3000,
+      "size_bytes": 6028997,
+      "source_dataset": "tasksource/PRM800K",
+      "task_type": "process_reward_step"
+    },
+    {
+      "file": "openr1_math_pairs.jsonl",
+      "n_pairs": 185,
+      "size_bytes": 8491261,
+      "source_dataset": "open-r1/OpenR1-Math-220k",
+      "task_type": "verifiable_math_generation"
+    },
+    {
+      "file": "rewardbench2_eval_pairs.jsonl",
+      "n_pairs": 1865,
+      "size_bytes": 14154881,
+      "source_dataset": "allenai/reward-bench-2",
+      "task_type": "heldout_reward_benchmark"
+    },
+    {
+      "file": "README.md",
+      "n_pairs": null,
+      "size_bytes": 1220,
+      "source_dataset": null,
+      "task_type": "documentation"
+    }
+  ],
+  "max_local_mb": 1500.0,
+  "strategy": "compact standardized pair slices; no full dataset mirrors",
+  "total_size_bytes": 44011412
+}

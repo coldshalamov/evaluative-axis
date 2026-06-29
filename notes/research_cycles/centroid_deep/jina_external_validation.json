@@ -1,0 +1,43 @@
+{
+  "SHP_ratio2.0": {
+    "n_pairs": 1000,
+    "full_insample": 0.702,
+    "oos_mean": 0.5867,
+    "oos_std": 0.0128,
+    "oos_min": 0.5688,
+    "oos_max": 0.6043,
+    "permutation_p": 0.002
+  },
+  "SHP_ratio5.0": {
+    "n_pairs": 1000,
+    "full_insample": 0.72,
+    "oos_mean": 0.602,
+    "oos_std": 0.025,
+    "oos_min": 0.5613,
+    "oos_max": 0.657,
+    "permutation_p": 0.0
+  },
+  "SHP_ratio10.0": {
+    "n_pairs": 1000,
+    "full_insample": 0.777,
+    "oos_mean": 0.6278,
+    "oos_std": 0.0197,
+    "oos_min": 0.6043,
+    "oos_max": 0.6688,
+    "permutation_p": 0.0
+  },
+  "UltraFeedback": {
+    "n_pairs": 1000,
+    "full_insample": 0.668,
+    "oos_mean": 0.5569,
+    "oos_std": 0.0301,
+    "oos_min": 0.4914,
+    "oos_max": 0.5957,
+    "permutation_p": 0.0
+  },
+  "our_battery": {
+    "n_train": 70,
+    "n_test": 61,
+    "oos_accuracy": 0.8033
+  }
+}
