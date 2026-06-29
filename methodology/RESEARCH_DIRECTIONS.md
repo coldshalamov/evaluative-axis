@@ -1,6 +1,6 @@
 # Open Research Directions
 
-Last updated: 2026-06-28
+Last updated: 2026-06-29
 
 This document captures every open question identified so far. New sessions
 should read this first instead of re-deriving the research agenda. When a
@@ -10,7 +10,131 @@ mark it RETIRED with the reason.
 
 ---
 
-## What we know (established results)
+## PRIMARY FOCUS: Supervised Centroid Direction
+
+The centroid approach is the central finding. All new experiments should
+prioritize validating and stress-testing it. Word-based experiments (section A
+below) are diagnostic supporting work explaining WHY words fail as probes.
+
+**Master spec**: `methodology/CENTROID_METHOD_SPEC.md`
+
+### Centroid established results
+
+23. **Centroid achieves 77-86% OOS across 4 models.** Snowflake 77-80%,
+    BGE-M3 75-80%, Nomic 66-77%, Gemini 86%. 50% is chance. Permutation
+    p-values: 0.003 (Snowflake), 0.053 (BGE-M3), 0.032 (Nomic).
+
+24. **Quality direction is orthogonal to ALL tested English words.**
+    Cosine < 0.10 with "good," "careful," "helpful," "honest," etc.
+    across all 4 models. The direction captures something words cannot name.
+
+25. **Quality is multi-dimensional.** Firmness and warmth quality directions
+    are anti-correlated: cosine -0.35 (Snowflake) to -0.49 (Gemini).
+    Training on firmness alone → 15-25% on warmth cases (worse than chance).
+
+26. **Length is NOT a confound.** Length-only classifier: 37-49%. Quality
+    direction orthogonal to length direction (cosine < 0.05).
+
+27. **10 labeled pairs suffice for BGE-M3 (78% OOS).** Learning curve
+    hasn't fully flattened at 70 pairs.
+
+28. **Margins are self-weighting.** Anti-sycophancy (obvious quality gaps):
+    margins 0.10-0.26. Errors: margins -0.003 to -0.035.
+
+29. **The five-term tree's 89-94% is inflated by OR-logic.** Chance baseline
+    with 5 binary classifiers under OR: 1 - 0.5^5 = 97%. The centroid's
+    77-86% is the honest measure.
+
+30. **Logistic probe (full embedding) beats centroid by 12 points.**
+    87-94% on BGE-M3 vs centroid's 75-80%. The centroid's claim is
+    "cheapest," not "best."
+
+### Centroid open questions (PRIORITY ORDER)
+
+**C1. External validation [DONE 2026-06-29 — NEGATIVE]** — Our direction
+scores chance (43-50%) on SHP and UltraFeedback across all 3 models.
+Directions orthogonal (cosine < 0.12). Failure is BIDIRECTIONAL — their
+directions also fail on our data (30-50%). But the METHOD works: their own
+centroids get 66-77% in-sample. Conclusion: quality is dataset-specific,
+not universal. The centroid extracts whatever quality concept is in the
+labels, but different label sources define quality in orthogonal directions.
+Results: `centroid_deep/external_validation_results.json`.
+
+**C2. Gameability [DONE 2026-06-29 — NOT GAMEABLE]** — Six mechanical
+modifications (padded, hedged, bulletized, repeated, formalized, lengthened)
+on 30 expansion cases × 3 models. Total flips: 10/540 = 1.9%.
+Formalization had ZERO effect across all models. Padding and lengthening
+DECREASE scores. Results: `gameability_probe_results.json`.
+
+**C3. Vocabulary projection [DONE 2026-06-29 — CLAIM HOLDS]** — Projected
+onto 10K Brown corpus words. No word exceeds cosine 0.30 on any model.
+Max: Snowflake 0.12 ("deny"), BGE-M3 0.25 ("doubted"), Nomic 0.25
+("efficiently" with NEGATIVE sign — quality points AWAY from performance
+vocabulary). The direction is genuinely unnameable by single words.
+Results: `vocabulary_projection_results.json`.
+
+**C4. Margin-length correlation [DONE 2026-06-29 — NOT A CONFOUND]** —
+word_length_diff inconsistent across models (+0.30, -0.08, 0.00).
+|margin| vs |char_diff| consistently NEGATIVE (-0.17 to -0.24). Larger
+length differences → smaller margins. Mean length diff near zero for
+both correct and incorrect. Results: `margin_length_correlation.json`.
+
+**C5. PCA dimensionality [DONE 2026-06-29]** — ~51 components for 80%
+variance on all 3 models. Quality is genuinely high-dimensional. Centroid
+(88-93% OOS) massively outperforms PCA-based classification (41-77%).
+The centroid works by noise cancellation. Results: `pca_dimensionality_results.json`.
+
+**C6. Additional embedding models [DONE 2026-06-29 — MIXED]** — Three
+models tested. All show above-chance OOS accuracy but NONE pass the
+200-permutation significance test:
+  gte-base: 65.6% OOS, p=0.540.
+  e5-base-v2: 72.1% OOS, p=0.675.
+  mxbai-embed-large-v1: 70.5% OOS, p=0.335.
+In-sample accuracy is high (83-87%) for all three. The signal exists but
+doesn't generalize OOS as reliably as on our core four models. Model
+quality matters — not all embedding models encode quality structure
+strongly enough for the centroid to extract a significant direction.
+Results: `additional_models_results.json`.
+
+**C7. Stability at scale** — Does direction stability improve with more
+training data? Status: BLOCKED. C1 showed cross-dataset transfer is zero
+(our direction and external directions are orthogonal). Testing stability
+on external data measures stability of THEIR quality concept, not ours.
+Could only test this with more data IN OUR quality framework (cross-author
+validation, C9).
+
+**C8. Score diversity** — Does the centroid reward one "flavor" of good
+or tolerate diverse quality? Status: NOT STARTED.
+
+**C9. Cross-author validation** — Test whether the centroid works on data
+written by a different author (Gemini 2.5 Flash generating pairs with
+different system prompts). Addresses the strongest reviewer objection:
+all training and test data is self-authored. Status: PARTIALLY STARTED
+2026-06-29. Script at `scripts/run_cross_author_validation.py`. 9/70
+pairs generated before hitting free-tier daily quota (20 req/day). Needs
+accumulation over multiple days. Partial pairs saved at
+`notes/research_cycles/centroid_deep/gemini_generated_pairs.jsonl`.
+
+**C10. Meta-validity battery [DONE 2026-06-29]** — Five tests completed:
+(M1) Prompt HURTS accuracy on 2/3 models — response-only outperforms full
+format by 8-11pp on Snowflake/Nomic. (M2) Label flip is perfectly
+symmetric (0% asymmetry, cosine -1.000). (M3) LOO is very stable (mean
+cosine 0.995+, max accuracy impact ±5-7%). (M4) Edge case scoring is
+mixed — Snowflake bad for absolute scores, BGE-M3 good (1/7 degenerate
+above real_better). (M5) Warmth cases more influential on Snowflake only
+(p=0.0002); no asymmetry on BGE-M3/Nomic. Results: `meta_validity_results.json`.
+
+---
+
+## Word-Based Experiments (diagnostic, supporting)
+
+The word-based experiments explain WHY words fail as quality probes.
+They are NOT the primary finding — the centroid is. These sections are
+retained as supporting evidence for the paper.
+
+---
+
+## What we know (established results — word-based)
 
 These are not open questions. They are settled results that constrain the
 remaining research. Read them before designing new experiments.
@@ -62,10 +186,11 @@ remaining research. Read them before designing new experiments.
     captures firmness well but fails on warmth and on balanced test sets.
 
 11. **Cosine-to-positive scoring is model-dependent.** BGE-M3 benefits
-    dramatically (+10-16 points, explainable by low anchor cosine ~0.50).
-    Snowflake sees no benefit (high anchor cosine ~0.90). Gemini is hurt
-    by cospos. Correlation between anchor geometry and cospos advantage
-    exists at model level but NOT within models.
+    dramatically on many axes (+10-24 points in the 2026-06-28 audit,
+    plausibly related to low anchor cosine ~0.50). Snowflake sees no
+    robust benefit (high anchor cosine ~0.90). Nomic is mixed. Gemini is
+    hurt by cospos. Correlation between anchor geometry and cospos
+    advantage exists at model level but NOT within models.
 
 12. **Multi-word anchors generally hurt.** Single words outperform concatenated
     words, grammatical phrases, and sentence-level anchors across all models.
@@ -116,7 +241,7 @@ remaining research. Read them before designing new experiments.
     battery). Escaping warmth bias removes the anti-signal; only "careful"
     clears chance meaningfully, and only on some models.
 
-20. **Training-signal quality is split-dependent, not universally anti-correlated.**
+19. **Training-signal quality is split-dependent, not universally anti-correlated.**
     An absolute-score analysis shows "good"'s d sign-flips by case type: positive
     on warmth cases (d = +0.74 on BGE-M3, where warmth aligns with correctness),
     strongly negative on firmness cases (d = -0.73, where they conflict), and
@@ -126,11 +251,27 @@ remaining research. Read them before designing new experiments.
     rate of warmth/correctness conflicts in real training data. No single axis
     provides a universal training signal.
 
-19. **"Restrained" shows model-specific strength on BGE-M3.**
+20. **"Restrained" shows model-specific strength on BGE-M3.**
     In-sample: 64% (BGE-M3), 54% (Snowflake), 61% (Nomic).
     OOS expansion battery: 75% (BGE-M3), 55% (Snowflake), 45% (Nomic).
     Strongly anti-correlated with good (r = -0.57 on BGE-M3). But drops to
     near-chance on other models OOS. Not a universal alternative to careful.
+
+21. **The default scoring recipe is fixed.** Confirmatory cross-model,
+    unknown-model, and paper-headline results use standard
+    `User:/Assistant:` framing and bipolar projection:
+    `normalize(mean(pos) - mean(neg))`, then dot product with the response
+    embedding. Cosine-to-positive is allowed only as an explicitly declared
+    BGE-M3 diagnostic or pre-registered ablation, reported separately. Do
+    not choose per-axis or per-model scoring methods post hoc.
+
+22. **Compound anchor strings are not allowed as default anchors.** The
+    2026-06-28 compound-anchor audit tested cross-concept strings like
+    "careful and kind" against independent component scoring. Most
+    compounds diluted signal on >=2 models, and no compound beat its best
+    single component on >=2 models under the cosine diagnostic. This is
+    the anchor-text version of the no-averaging rule: score concepts as
+    separate axes, then combine scores/votes after scoring.
 
 ---
 
@@ -263,11 +404,13 @@ vocabulary. This is exploratory — look for surprising outliers.
 **Question**: Is good-minus-bad (bipolar axis) the best scoring method, or
 would distance-to-good (single-pole) or some other formulation work better?
 
-**Status**: DONE (2026-06-27). **Result**: Model-dependent. BGE-M3 benefits
-from cosine-to-positive (+10-16 points), explainable by low anchor cosine
-(~0.50). Snowflake (~0.90 anchor cosine) sees no benefit. Gemini is HURT
-by cospos (careful drops from 74% to 59%). No universal best method —
-must be specified per-model or defaulted to bipolar.
+**Status**: DONE (2026-06-27; audited 2026-06-29). **Result**:
+Model-dependent. BGE-M3 benefits from cosine-to-positive on many axes,
+Snowflake sees no robust benefit, Nomic is mixed, and Gemini is HURT by
+cospos (careful drops from 74% to 59%). Default recipe: bipolar with
+standard `User:/Assistant:` framing. Cospos is allowed only as an
+explicitly declared BGE-M3 diagnostic or pre-registered ablation; it is
+not a post-hoc per-axis default.
 
 ---
 
@@ -478,31 +621,32 @@ This is currently only in conversation, not in the paper.
 
 ## Priority ordering
 
-**DONE** (resolved this session):
-- F1-F3: Paper revisions — Hard/Soft corrected, rebalancing added, validation added
-- A5: Bipolar vs cospos — model-dependent, no universal winner
-- A6: Optimal term set — voting overfits, careful alone generalizes best
-- D1: Gemini vocabulary depth — careful 74%, hard inverts
-- A2: Tree decomposition — best child beats root, careful is independent of good
-- A3: Three prediction tests (26 terms) + comprehensive 45-term analysis; all hypotheses fail as predictive rules; restraint cluster is descriptive only; robust finding is warmth-bias asymmetry
-- Circularity fix: kind-delta split demoted from independent test to §4.18 restatement
-- §4.22: Comprehensive term analysis added to paper (restraint cluster, pooled prediction stats, OOS validation of restrained, asymmetry framing)
+### CENTROID PRIORITIES (publication path)
 
-**Immediate** (next experiments):
-2. B1: Expand battery further (factual accuracy, creative quality)
-3. B2: Discrimination vs training signal proxy test
+1. **C1. External validation** [DONE 2026-06-29 — NEGATIVE] — Cross-dataset transfer zero, method validates within-dataset
+2. **C2. Gameability probe** [DONE 2026-06-29 — NOT GAMEABLE] — 1.9% flip rate, formalization zero effect
+3. **C3. Vocabulary projection** [DONE 2026-06-29 — CLAIM HOLDS] — No word > 0.30, quality unnameable
+4. **C4. Margin-length correlation** [DONE 2026-06-29 — NOT A CONFOUND] — Inconsistent across models
+5. **C5. PCA dimensionality** [DONE 2026-06-29] — 51 PCs for 80%, centroid >> PCA
+6. **C6. Additional models** [DONE 2026-06-29 — MIXED] — 66-72% OOS, all p>0.33, none significant
+7. **C7. Stability at scale** [BLOCKED — C1 showed cross-dataset transfer is zero, so external datasets provide no useful stability test for OUR direction]
+8. **C8. Score diversity** [NOT STARTED] — Flavor tolerance
+9. **C9. Cross-author validation** [PARTIALLY STARTED 2026-06-29] — 9/70 pairs via Gemini Flash. Accumulate over days
+10. **C10. Meta-validity battery** [DONE 2026-06-29] — Prompt leakage, label flip, LOO, edge cases, influence
 
-**When Gemini quota resets**:
-5. D2-D3: Gemini anchor perturbation, word-stripping ablation
+### Word-based priorities (diagnostic/supporting)
 
-**Medium term**:
-6. A1: Word length optimization (2-3 word phrases)
-7. A3: Evaluative specificity measurement
-8. B3: Input length effects
-9. C1-C2: Model understanding
+**DONE** (resolved in prior sessions):
+- F1-F3: Paper revisions, A5: Bipolar vs cospos, A6: Optimal term set
+- D1: Gemini vocabulary depth, A2: Tree decomposition, A3: Evaluative specificity
+- Scoring recipe audit, compound anchor audit
 
-**Long term (needs resources)**:
-10. E2: DPO training experiment
-11. E3: Pretraining curation
-12. C3: Model development recommendations
-13. A4: Unusual/literary anchors (huge search space)
+**Remaining** (low priority, diagnostic):
+- B3: Input length effects
+- A4: Unusual/literary anchors
+- D2-D3: Gemini ablations (API quota gated)
+
+### Long term (needs resources we don't have)
+- E2: DPO training experiment (needs GPU)
+- E3: Pretraining data curation (needs scale)
+- C3: Model development recommendations (needs C1-C2)

@@ -1,0 +1,9 @@
+{
+  "model": "gemini-embedding-001",
+  "dim": 3072,
+  "battery_acc": 0.8285714285714286,
+  "expansion_acc": 0.8571428571428571,
+  "orig_acc": 0.96,
+  "warm_acc": 0.5,
+  "cos_firm_warm": -0.4883137633394692
+}

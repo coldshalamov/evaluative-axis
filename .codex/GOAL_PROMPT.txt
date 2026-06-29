@@ -1,0 +1,34 @@
+Read methodology/CENTROID_METHOD_SPEC.md and .codex/CODEX_GOAL.md carefully. These are your directives.
+
+You are running the test regimen for the supervised centroid direction method — a technique that uses embedding geometry to score LLM response quality. Claude (the project manager) has designed the tests and written the critical scripts. Your job is to implement and run the remaining tests in priority order, analyze results honestly, and save everything.
+
+ALREADY COMPLETED (do NOT re-run):
+- run_external_validation.py → external_validation_results.json [DONE — NEGATIVE]
+- run_gameability_probe.py → gameability_probe_results.json [DONE — NOT GAMEABLE]
+- run_vocabulary_projection.py → vocabulary_projection_results.json [DONE — CLAIM HOLDS]
+- run_margin_length_correlation.py → margin_length_correlation.json [DONE — NOT A CONFOUND]
+- run_pca_dimensionality.py → pca_dimensionality_results.json [DONE]
+- run_additional_models.py → additional_models_results.json [DONE — gte-base 65.6%, e5-base-v2 72.1%, mxbai 70.5%, ALL fail permutation significance]
+- run_meta_validity.py → meta_validity_results.json [DONE — see KEY FINDINGS below]
+
+KEY FINDINGS FROM META-VALIDITY:
+- Response-only embeddings BEAT full-format on 2/3 models (Snowflake +11.4pp, Nomic +8.2pp)
+- Label flip perfectly symmetric, LOO very stable, method is sound
+- Absolute dot-product scores are meaningless — centroid is PAIRWISE ONLY
+- Warmth influence asymmetry is Snowflake-specific (p=0.0002), not general
+
+Check notes/research_cycles/centroid_deep/ for existing results before running anything.
+
+ALSO COMPLETED (do NOT re-run):
+- run_score_diversity.py → score_diversity_results.json [DONE — TOLERATES DIVERSITY, formal/technical score lowest]
+- run_phrase_projection.py → phrase_projection_results.json [DONE — CLAIM HOLDS, no phrase > 0.30]
+
+PRIORITY ORDER for remaining tests:
+1. Write and run run_cross_author_validation.py accumulation (cross-author pairs using Gemini free tier — accumulate over multiple runs, 20 req/day limit)
+2. Any additional tests from CENTROID_METHOD_SPEC.md that haven't been run yet
+
+For each test: run the script, check the output makes sense, save results to JSON, and print a short honest analysis of what the numbers mean.
+
+Environment: Python venv at C:\Users\93rob\.cache\codex-embedding-venv\Scripts\python.exe. Windows PowerShell. No GPU. 32GB RAM. Free RAM between models with del model; gc.collect().
+
+RULES: Do NOT delete files. Do NOT reorganize the repo. Test all 3 models. Save all results as JSON. Report honestly including negative results.

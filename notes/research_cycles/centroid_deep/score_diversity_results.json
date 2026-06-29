@@ -1,0 +1,335 @@
+{
+  "snowflake-arctic-embed-m": {
+    "scores_by_prompt": {
+      "div_sunk_cost": {
+        "concise": 0.09277356415987015,
+        "warm": 0.08029859513044357,
+        "technical": 0.032270170748233795,
+        "casual": 0.0867534875869751,
+        "formal": 0.06277831643819809
+      },
+      "div_grief": {
+        "concise": 0.07767295092344284,
+        "warm": 0.05633360520005226,
+        "technical": 0.031056832522153854,
+        "casual": 0.06005874648690224,
+        "formal": -0.002620527520775795
+      },
+      "div_false_premise": {
+        "concise": 0.021145818755030632,
+        "warm": 0.011663639917969704,
+        "technical": -0.040860287845134735,
+        "casual": 0.03835892677307129,
+        "formal": -0.018649928271770477
+      },
+      "div_sleep_deprivation": {
+        "concise": 0.06054822355508804,
+        "warm": 0.14270012080669403,
+        "technical": -0.009748945012688637,
+        "casual": 0.07955692708492279,
+        "formal": 0.04934494197368622
+      },
+      "div_harmful_request": {
+        "concise": 0.16368234157562256,
+        "warm": 0.19757060706615448,
+        "technical": 0.1725343018770218,
+        "casual": 0.1809087097644806,
+        "formal": 0.16034646332263947
+      },
+      "div_flat_tire": {
+        "concise": 0.07587309181690216,
+        "warm": 0.10621953010559082,
+        "technical": 0.06839759647846222,
+        "casual": 0.12694983184337616,
+        "formal": 0.02633056417107582
+      },
+      "div_code_quality": {
+        "concise": 0.10440754890441895,
+        "warm": 0.1044766902923584,
+        "technical": 0.06484644114971161,
+        "casual": 0.10696525126695633,
+        "formal": 0.05569300800561905
+      },
+      "div_moon_conspiracy": {
+        "concise": 0.009538153186440468,
+        "warm": 0.019988689571619034,
+        "technical": 0.0439620167016983,
+        "casual": 0.04406828433275223,
+        "formal": 0.037020906805992126
+      },
+      "div_imposter_syndrome": {
+        "concise": 0.04862091317772865,
+        "warm": 0.05673769488930702,
+        "technical": 0.011492900550365448,
+        "casual": 0.0487370640039444,
+        "formal": 0.016993679106235504
+      },
+      "div_restaurant": {
+        "concise": 0.12396720051765442,
+        "warm": 0.11438395082950592,
+        "technical": 0.09273654222488403,
+        "casual": 0.07848231494426727,
+        "formal": 0.07013880461454391
+      }
+    },
+    "mean_within_prompt_variance": 0.0007294414113176398,
+    "between_prompt_variance": 0.0020010560755378817,
+    "variance_ratio_between_over_within": 2.7432718303218313,
+    "style_means": {
+      "concise": 0.07782298065721989,
+      "warm": 0.08903731238096953,
+      "technical": 0.04666875693947077,
+      "casual": 0.08508395440876484,
+      "formal": 0.04573762286454439
+    },
+    "style_stds": {
+      "concise": 0.0441151889911292,
+      "warm": 0.053645865241574824,
+      "technical": 0.055952619664048346,
+      "casual": 0.041597733680109245,
+      "formal": 0.046793384663494746
+    },
+    "style_wins": {
+      "concise": 3,
+      "warm": 3,
+      "technical": 0,
+      "casual": 4,
+      "formal": 0
+    },
+    "mean_score_spread_within_prompt": 0.06951841283589602,
+    "prompt_means": {
+      "div_sunk_cost": 0.07097482681274414,
+      "div_grief": 0.04450032152235508,
+      "div_false_premise": 0.0023316338658332823,
+      "div_sleep_deprivation": 0.06448025368154049,
+      "div_harmful_request": 0.17500848472118377,
+      "div_flat_tire": 0.08075412288308144,
+      "div_code_quality": 0.08727778792381287,
+      "div_moon_conspiracy": 0.030915610119700433,
+      "div_imposter_syndrome": 0.036516450345516205,
+      "div_restaurant": 0.09594176262617111
+    }
+  },
+  "bge-m3": {
+    "scores_by_prompt": {
+      "div_sunk_cost": {
+        "concise": 0.11492274701595306,
+        "warm": 0.09605160355567932,
+        "technical": 0.058307863771915436,
+        "casual": 0.11764927953481674,
+        "formal": 0.07207861542701721
+      },
+      "div_grief": {
+        "concise": 0.16350829601287842,
+        "warm": 0.09565521776676178,
+        "technical": 0.04565304145216942,
+        "casual": 0.1290580779314041,
+        "formal": 0.04211488366127014
+      },
+      "div_false_premise": {
+        "concise": 0.06996622681617737,
+        "warm": 0.023993808776140213,
+        "technical": 0.033017732203006744,
+        "casual": 0.06307932734489441,
+        "formal": 0.013541924767196178
+      },
+      "div_sleep_deprivation": {
+        "concise": 0.046598054468631744,
+        "warm": 0.09718795865774155,
+        "technical": 0.04317421093583107,
+        "casual": 0.033065855503082275,
+        "formal": 0.03543076664209366
+      },
+      "div_harmful_request": {
+        "concise": 0.18261656165122986,
+        "warm": 0.13084378838539124,
+        "technical": 0.18168392777442932,
+        "casual": 0.12759581208229065,
+        "formal": 0.15671120584011078
+      },
+      "div_flat_tire": {
+        "concise": 0.15145188570022583,
+        "warm": 0.1149168610572815,
+        "technical": 0.11524201184511185,
+        "casual": 0.1490897536277771,
+        "formal": 0.09455938637256622
+      },
+      "div_code_quality": {
+        "concise": 0.18239767849445343,
+        "warm": 0.1022840142250061,
+        "technical": 0.11664377897977829,
+        "casual": 0.15693026781082153,
+        "formal": 0.08817039430141449
+      },
+      "div_moon_conspiracy": {
+        "concise": 0.06898605823516846,
+        "warm": 0.05386325716972351,
+        "technical": 0.08037522435188293,
+        "casual": 0.04996799677610397,
+        "formal": 0.06863312423229218
+      },
+      "div_imposter_syndrome": {
+        "concise": 0.04223337769508362,
+        "warm": 0.05085896700620651,
+        "technical": 0.05000365525484085,
+        "casual": 0.050756338983774185,
+        "formal": 0.04460267722606659
+      },
+      "div_restaurant": {
+        "concise": 0.09125204384326935,
+        "warm": 0.09223626554012299,
+        "technical": 0.10424748063087463,
+        "casual": 0.062161803245544434,
+        "formal": 0.05852532759308815
+      }
+    },
+    "mean_within_prompt_variance": 0.0006542254170386897,
+    "between_prompt_variance": 0.001357286981397084,
+    "variance_ratio_between_over_within": 2.0746472791301174,
+    "style_means": {
+      "concise": 0.11139329299330711,
+      "warm": 0.08578917421400548,
+      "technical": 0.08283489271998405,
+      "casual": 0.09393545128405094,
+      "formal": 0.06743683060631156
+    },
+    "style_stds": {
+      "concise": 0.05229652024994381,
+      "warm": 0.030955814373067533,
+      "technical": 0.04421042559013379,
+      "casual": 0.044049578883297844,
+      "formal": 0.0378542844371181
+    },
+    "style_wins": {
+      "concise": 5,
+      "warm": 2,
+      "technical": 2,
+      "casual": 1,
+      "formal": 0
+    },
+    "mean_score_spread_within_prompt": 0.05921767363324761,
+    "prompt_means": {
+      "div_sunk_cost": 0.09180202186107636,
+      "div_grief": 0.09519790336489678,
+      "div_false_premise": 0.040719803981482984,
+      "div_sleep_deprivation": 0.05109136924147606,
+      "div_harmful_request": 0.15589025914669036,
+      "div_flat_tire": 0.1250519797205925,
+      "div_code_quality": 0.12928522676229476,
+      "div_moon_conspiracy": 0.06436513215303422,
+      "div_imposter_syndrome": 0.04769100323319435,
+      "div_restaurant": 0.08168458417057992
+    }
+  },
+  "nomic-embed-text-v1.5": {
+    "scores_by_prompt": {
+      "div_sunk_cost": {
+        "concise": 0.09244377166032791,
+        "warm": 0.08114729821681976,
+        "technical": 0.0038458043709397316,
+        "casual": 0.08640442043542862,
+        "formal": 0.009631793946027756
+      },
+      "div_grief": {
+        "concise": 0.1190260797739029,
+        "warm": 0.12156329303979874,
+        "technical": 0.053030289709568024,
+        "casual": 0.1167512908577919,
+        "formal": 0.08083309978246689
+      },
+      "div_false_premise": {
+        "concise": 0.042372070252895355,
+        "warm": 0.04190463945269585,
+        "technical": -0.0007737777195870876,
+        "casual": 0.06146462261676788,
+        "formal": 0.030369432643055916
+      },
+      "div_sleep_deprivation": {
+        "concise": -0.0183528121560812,
+        "warm": 0.0875481590628624,
+        "technical": -0.0645386278629303,
+        "casual": -0.0006652968004345894,
+        "formal": -0.01815227046608925
+      },
+      "div_harmful_request": {
+        "concise": 0.18731844425201416,
+        "warm": 0.17978766560554504,
+        "technical": 0.1161380261182785,
+        "casual": 0.17783890664577484,
+        "formal": 0.13077004253864288
+      },
+      "div_flat_tire": {
+        "concise": 0.08497581630945206,
+        "warm": 0.07972393929958344,
+        "technical": 0.04536304250359535,
+        "casual": 0.07890719920396805,
+        "formal": 0.03207111731171608
+      },
+      "div_code_quality": {
+        "concise": 0.103215292096138,
+        "warm": 0.06252078711986542,
+        "technical": 0.03391313925385475,
+        "casual": 0.11252396553754807,
+        "formal": 0.03036915510892868
+      },
+      "div_moon_conspiracy": {
+        "concise": 0.05694937705993652,
+        "warm": 0.029499681666493416,
+        "technical": 0.03198428824543953,
+        "casual": 0.043308936059474945,
+        "formal": 0.05106852948665619
+      },
+      "div_imposter_syndrome": {
+        "concise": 0.09518368542194366,
+        "warm": 0.11132591962814331,
+        "technical": 0.0232955701649189,
+        "casual": 0.08857528120279312,
+        "formal": 0.04094710201025009
+      },
+      "div_restaurant": {
+        "concise": 0.05917759984731674,
+        "warm": 0.03414028137922287,
+        "technical": -0.01723961904644966,
+        "casual": 0.034563519060611725,
+        "formal": -0.013824259862303734
+      }
+    },
+    "mean_within_prompt_variance": 0.0009806375476078002,
+    "between_prompt_variance": 0.0017912999153825286,
+    "variance_ratio_between_over_within": 1.8266687011447655,
+    "style_means": {
+      "concise": 0.08223093245178462,
+      "warm": 0.08291616644710302,
+      "technical": 0.022501813573762776,
+      "casual": 0.07996728448197246,
+      "formal": 0.03740837424993515
+    },
+    "style_stds": {
+      "concise": 0.05098397139928849,
+      "warm": 0.04364619231758995,
+      "technical": 0.04526405794211634,
+      "casual": 0.04728404722829437,
+      "formal": 0.04172783291507281
+    },
+    "style_wins": {
+      "concise": 5,
+      "warm": 3,
+      "technical": 0,
+      "casual": 2,
+      "formal": 0
+    },
+    "mean_score_spread_within_prompt": 0.07695933491922916,
+    "prompt_means": {
+      "div_sunk_cost": 0.05469461772590876,
+      "div_grief": 0.09824081063270569,
+      "div_false_premise": 0.03506739744916558,
+      "div_sleep_deprivation": -0.002832169644534588,
+      "div_harmful_request": 0.15837061703205108,
+      "div_flat_tire": 0.064208222925663,
+      "div_code_quality": 0.06850846782326699,
+      "div_moon_conspiracy": 0.04256216250360012,
+      "div_imposter_syndrome": 0.07186551168560981,
+      "div_restaurant": 0.019363504275679587
+    }
+  }
+}

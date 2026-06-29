@@ -1,22 +1,28 @@
 #!/usr/bin/env python3
-"""Definitive voting test with per-model optimal methods.
+"""Default-recipe voting test.
 
 Key insight from prior experiments:
 - "careful" is the ONLY axis validated out-of-sample on all models
-- Scoring method matters: cospos for BGE-M3, bipolar for others
-- Framing matters: response_only/quality_query for BGE-M3, standard for Nomic
+- Per-model/per-axis method selection inflates apparent accuracy
 
 This test: does adding other axes via majority voting IMPROVE on
-"careful" alone when using per-model optimal methods? And does it
-hold on the expansion battery?
+"careful" alone under the fixed default recipe? And does it hold on the
+expansion battery?
 """
 
 import json, sys, gc
 from pathlib import Path
 import numpy as np
-from numpy.linalg import norm
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+
+from scoring_recipe import (
+    DEFAULT_SCORING_METHOD,
+    framed_response,
+    normalized_bipolar_axis,
+    recipe_metadata,
+)
 
 BATTERY_ORIGINAL = ROOT / "notes/research_cycles/cycle_002_potential_shaping/controlled_evaluative_axis_battery_v3_50_cases.jsonl"
 BATTERY_WARMTH = ROOT / "notes/research_cycles/battery_rebalancing/warmth_cases.jsonl"
@@ -51,10 +57,6 @@ def read_jsonl(path):
     return rows
 
 
-def cosine(a, b):
-    return float(np.dot(a, b) / (norm(a) * norm(b) + 1e-12))
-
-
 def main():
     from sentence_transformers import SentenceTransformer
 
@@ -70,7 +72,10 @@ def main():
     n_exp = len(expansion_cases)
 
     axis_names = list(AXES.keys())
-    results = {"per_model": {}}
+    results = {
+        "scoring_recipe": recipe_metadata("default_voting"),
+        "per_model": {},
+    }
 
     for model_name in MODELS:
         print(f"\n{'='*60}")
@@ -80,16 +85,11 @@ def main():
         embed_fn = lambda texts: model.encode(texts, show_progress_bar=False,
                                                convert_to_numpy=True)
 
-        # Per-model optimal framing
-        is_bge = "bge" in model_name.lower()
-        if is_bge:
-            frame_fn = lambda c, w: c[w]  # response_only
-            frame_name = "response_only"
-        else:
-            frame_fn = lambda c, w: f"User: {c['prompt']}\nAssistant: {c[w]}"
-            frame_name = "standard"
+        frame_fn = framed_response
+        frame_name = "standard_user_assistant"
 
         print(f"  Framing: {frame_name}")
+        print(f"  Method: {DEFAULT_SCORING_METHOD}")
 
         # Embed responses
         main_better = embed_fn([frame_fn(c, "better") for c in all_cases])
@@ -97,51 +97,27 @@ def main():
         exp_better = embed_fn([frame_fn(c, "better") for c in expansion_cases])
         exp_worse = embed_fn([frame_fn(c, "worse") for c in expansion_cases])
 
-        # Score all axes with BOTH methods, then pick per-model best later
-        bp_correct_main = np.zeros((len(AXES), n_total))
-        cp_correct_main = np.zeros((len(AXES), n_total))
-        bp_correct_exp = np.zeros((len(AXES), n_exp))
-        cp_correct_exp = np.zeros((len(AXES), n_exp))
+        correct_main = np.zeros((len(AXES), n_total))
+        correct_exp = np.zeros((len(AXES), n_exp))
 
         for ai, (axis_name, anchors) in enumerate(AXES.items()):
             pos_emb = embed_fn(anchors["pos"]).mean(axis=0)
             neg_emb = embed_fn(anchors["neg"]).mean(axis=0)
-            axis_vec = pos_emb - neg_emb
-            axis_unit = axis_vec / (norm(axis_vec) + 1e-12)
+            axis_unit = normalized_bipolar_axis(pos_emb, neg_emb)
 
             for i in range(n_total):
                 sb = float(np.dot(main_better[i], axis_unit))
                 sw = float(np.dot(main_worse[i], axis_unit))
-                bp_correct_main[ai, i] = 1 if sb > sw else (0.5 if sb == sw else 0)
-
-                sb_c = cosine(main_better[i], pos_emb)
-                sw_c = cosine(main_worse[i], pos_emb)
-                cp_correct_main[ai, i] = 1 if sb_c > sw_c else (0.5 if sb_c == sw_c else 0)
+                correct_main[ai, i] = 1 if sb > sw else (0.5 if sb == sw else 0)
 
             for i in range(n_exp):
                 sb = float(np.dot(exp_better[i], axis_unit))
                 sw = float(np.dot(exp_worse[i], axis_unit))
-                bp_correct_exp[ai, i] = 1 if sb > sw else (0.5 if sb == sw else 0)
+                correct_exp[ai, i] = 1 if sb > sw else (0.5 if sb == sw else 0)
 
-                sb_c = cosine(exp_better[i], pos_emb)
-                sw_c = cosine(exp_worse[i], pos_emb)
-                cp_correct_exp[ai, i] = 1 if sb_c > sw_c else (0.5 if sb_c == sw_c else 0)
-
-        # Choose best method per axis based on MAIN battery combined accuracy
-        best_correct_main = np.zeros((len(AXES), n_total))
-        best_correct_exp = np.zeros((len(AXES), n_exp))
-        best_methods = []
-        for ai in range(len(AXES)):
-            bp_acc = np.mean(bp_correct_main[ai])
-            cp_acc = np.mean(cp_correct_main[ai])
-            if cp_acc > bp_acc:
-                best_correct_main[ai] = cp_correct_main[ai]
-                best_correct_exp[ai] = cp_correct_exp[ai]
-                best_methods.append("cp")
-            else:
-                best_correct_main[ai] = bp_correct_main[ai]
-                best_correct_exp[ai] = bp_correct_exp[ai]
-                best_methods.append("bp")
+        best_correct_main = correct_main
+        best_correct_exp = correct_exp
+        best_methods = [DEFAULT_SCORING_METHOD] * len(AXES)
 
         # Print per-axis results
         print(f"\n{'Axis':12s}  {'Method':6s}  {'Main':>6s}  {'Orig':>6s}  {'Warm':>6s}  {'OOS':>6s}")
@@ -190,7 +166,7 @@ def main():
                 print(f"  Best {n_axes}-axis: {best_info['axes']} ({best_info['methods']})")
                 print(f"    main: o={best_info['orig']:.0%} w={best_info['warm']:.0%} c={best_info['comb']:.0%} bal={best_info['bal']:.0%}  OOS={best_info['oos']:.0%}")
 
-        # Also: "careful" alone with per-model optimal method
+        # Also: "careful" alone with the default method
         ci = axis_names.index("careful")
         careful_main = np.mean(best_correct_main[ci])
         careful_orig = np.mean(best_correct_main[ci, :n_orig])
@@ -218,6 +194,7 @@ def main():
 
         results["per_model"][model_name] = {
             "framing": frame_name,
+            "method": DEFAULT_SCORING_METHOD,
             "careful_method": best_methods[ci],
             "careful_main": round(float(careful_main), 4),
             "careful_bal": round(float(careful_bal), 4),

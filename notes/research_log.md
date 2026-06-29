@@ -2668,31 +2668,24 @@ venv, the three required models, both battery splits, and the
 
 ### Key results
 
-Cosine-to-positive vs bipolar:
+Cosine-to-positive vs bipolar (audited 2026-06-29):
 
-- Cosine-to-positive wins on 14 of 15 axes when judged cross-model on
-  combined accuracy. The only axis where bipolar consistently wins is
-  `hard` (0/3 models for cosine). This is a real, actionable scoring-method
-  finding: the negative anchor mostly hurts, not helps, on the warmth
-  branch.
-- The wins are large on BGE-M3: 8 axes improve by >=10pts under cosine
-  (`clear` +23, `fair` +24, `helpful` +14, `good` +16, `wise` +13,
-  `responsible` +13, `kind` +11, `constructive`/`supportive` +11).
-- The single exception, `hard`, is the firmness axis. Bipolar helps when
-  the axis is already pointing at the firmness branch (where the negative
-  pole `Soft` pulls the right way); cosine-to-positive helps on warmth
-  axes where the negative pole is closer to the wrong branch.
-- Per-axis-optimal method selection improves the 3-axis covering set
-  materially on BGE-M3 and Nomic:
-  - BGE-M3: hard(bip) + kind(cos) + careful(cos) = 69% vs 60% bipolar-all.
-  - Nomic: hard(bip) + kind(cos) + careful(bip) = 66% vs 53% bipolar-all.
-  - Snowflake: ~unchanged (60% vs 59%).
-- Interpretation: cosine-to-positive is a legitimate improvement on the
-  warmth branch, not a one-off artifact of the original E-04 three-axis
-  test. The recommended default becomes: use cosine-to-positive for warmth
-  axes, bipolar for firmness axes. This is still local-model evidence
-  (max ~70%), so it should be replicated on a frontier embedder before any
-  external claim.
+- Cosine-to-positive is model-dependent, not a new default. In the saved
+  `cosine_positive_results.json`, BGE-M3 shows the clearest benefit: many
+  axes gain 10-24 points (`fair` +24, `clear` +23, `good` +16, `helpful`
+  +14, `wise`/`responsible` +13, `kind` +11). Snowflake shows no robust
+  cospos advantage; its only >10 point divergence favors bipolar
+  (`thorough` -11). Nomic has only two >10 point cospos gains (`fair`,
+  `honest`) and keeps bipolar for `careful`, `thorough`, and `hard`.
+- The post-hoc per-axis method selector improves some in-sample covering
+  sets (BGE-M3 hard/bip + kind/cos + careful/cos = 69%; Nomic
+  hard/bip + kind/cos + careful/bip = 66%), but this is exactly the
+  researcher degree of freedom flagged in the methodology. It should be
+  reported as an ablation, not used for headline or confirmatory results.
+- Interpretation: cosine-to-positive is allowed only as an explicitly
+  declared BGE-M3 diagnostic or pre-registered ablation. The repository
+  default is fixed bipolar scoring with standard `User:/Assistant:`
+  framing for all cross-model, unknown-model, and paper headline results.
 
 Compound anchors:
 
@@ -2710,20 +2703,24 @@ Compound anchors:
 - Snowflake is the exception: compounds slightly help there (+3-6%), but
   this is within noise and Snowflake is the weakest model, so it does not
   overturn the larger-model finding.
+- The saved `dilution_summary` array is empty because the original script
+  wrote JSON before computing the cross-model summary. The per-model
+  result tables are intact and auditable; the script was fixed on
+  2026-06-29 so future runs save the summary after it is computed.
 - Interpretation: this confirms the no-averaging rule extends to anchor
   text itself. Multi-word anchor strings that span branches behave like
-  composites, not like independent axes. The independent-sum approach
-  remains the correct way to combine terms from different branches.
+  composites, not like independent axes. Compound anchor strings are
+  disallowed in default recipes; score component axes independently and
+  combine their scores or votes after scoring.
 
 ### Decision
 
-- Promote cosine-to-positive as the default scoring method for warmth-axis
-  terms, with bipolar retained for firmness-axis terms. Record the
-  per-axis split (cos for warmth, bip for firmness) as a concrete,
-  testable scoring recipe.
+- Confirm the default scoring recipe: fixed bipolar projection with
+  standard `User:/Assistant:` framing. Cosine-to-positive is an explicit
+  diagnostic/ablation method, not a post-hoc per-axis default.
 - Confirm the no-averaging rule now covers anchor text: compound
-  multi-branch anchor strings dilute. Do not use them; score independently
-  and sum.
+  multi-branch anchor strings dilute. Do not use them as anchors in
+  default recipes; score independent axes and combine after scoring.
 - Do not raise any external claim from these local-model results without
   frontier-model replication. Both findings are operational improvements
   at the ~60-70% local-model accuracy level, not proof of a universal
@@ -2731,16 +2728,13 @@ Compound anchors:
 
 ### Next steps
 
-1. Replicate the cosine-vs-bipolar split on `gemini-embedding-2` when
-   quota allows, since Gemini already reaches 86-98% on targeted axes and
-   the cosine-vs-bipolar distinction may behave differently at frontier
+1. Replicate cosine-vs-bipolar on `gemini-embedding-2` only as an explicit
+   scoring-method ablation, since Gemini may behave differently at frontier
    accuracy.
-2. Re-run the 3-axis covering-set search (E-07) using per-axis-optimal
-   methods, to see whether the minimal viable basis improves under the
-   new scoring recipe.
-3. Consider whether the cosine-vs-bipolar asymmetry is itself a diagnostic
-   of which branch an axis belongs to (warmth axes prefer cosine,
-   firmness axes prefer bipolar).
+2. Re-run covering-set or universal-search scripts only with the default
+   recipe unless the run is explicitly labeled as an ablation.
+3. Treat cosine-vs-bipolar asymmetry as a diagnostic hypothesis, not as a
+   branch-specific default rule.
 
 
 ## Cycle 017 - Large word sweep and score-subtraction: exploratory
@@ -2938,3 +2932,247 @@ constellation - is within noise on the current batteries.
 3. The honest state: on local models with these batteries, the only
    robust findings are the warmth-signal and the good-fails-on-firmness
    pattern. Everything finer-grained needs more data or a stronger model.
+
+
+## June 29, 2026 - Scoring Recipe Audit and Codification
+
+### What was done
+
+Audited the saved outputs in:
+
+- `notes/research_cycles/cosine_positive/cosine_positive_results.json`
+- `notes/research_cycles/compound_anchors/compound_results.json`
+- `notes/research_cycles/definitive_voting/definitive_results.json`
+- `notes/research_cycles/universal_search/search_summary.json`
+
+Then codified the default recipe in `scripts/scoring_recipe.py` and wired it
+into the scoring-method, compound-anchor, voting, and universal-search scripts.
+
+### Key results
+
+- The saved files are dated 2026-06-28 on disk. They are the named artifacts
+  for this audit, even though this log entry is on 2026-06-29.
+- Cosine-to-positive is not a universal improvement. BGE-M3 benefits on many
+  axes (+10 to +24 points), Snowflake has no robust cospos advantage, Nomic is
+  mixed, and Gemini was previously hurt by cospos. Treat cospos as a BGE-M3
+  diagnostic or pre-registered ablation only.
+- `definitive_results.json` is a per-model/per-axis optimized artifact, not a
+  default-recipe result. It also saves only the `careful` summary. The script
+  now uses fixed bipolar scoring and standard framing for future runs.
+- `universal_search/search_summary.json` is only a completion stub in the
+  saved artifact. The script now saves the actual best majority, sum-of-margins,
+  and per-model 3-axis summaries on future runs.
+- Compound-anchor per-model data are usable, but the saved `dilution_summary`
+  is empty because the script wrote JSON before computing that summary. The
+  script now writes after the summary is populated.
+- Compound anchor strings dilute signal: most cross-concept strings are worse
+  than independently scored component axes on at least two models, and no
+  compound beats its best single component on at least two models under the
+  cosine diagnostic.
+
+### Decision
+
+The repository default scoring recipe is:
+
+1. Embed responses as `User: {prompt}\nAssistant: {response}`.
+2. Use bipolar scoring: `normalize(mean(pos) - mean(neg))`, then dot product.
+3. Score each quality concept as its own axis.
+4. Combine axes only after independent scoring (sum, vote, OR, or profile).
+5. Do not use cross-concept compound anchor strings outside explicit ablations.
+6. Do not choose cosine-to-positive per axis post hoc. Use it only as an
+   explicitly declared BGE-M3 diagnostic or pre-registered ablation.
+
+### Next steps
+
+If a future run needs the corrected universal-search or definitive-voting
+outputs, rerun the updated scripts rather than relying on the 2026-06-28 stub
+or per-model-optimized artifacts.
+
+
+## Cycle 019 - Capability tests with objective ground truth (no preference labels)
+
+Date: 2026-06-29
+
+Three tests that escape the preference-dataset trap. Each uses objective
+ground truth (true/false facts, real vs affirming responses), not
+subjective "better/worse" labels from RL datasets.
+
+Outputs:
+- `scripts/run_capability_tests.py` (sub-commands: truth, sycophancy, geometry)
+- `notes/research_cycles/capability_tests/truth_cases.jsonl` (20 cases)
+- `notes/research_cycles/capability_tests/sycophancy_cases.jsonl` (15 cases)
+- `notes/research_cycles/capability_tests/anchor_pool.json` (200+ anchor forms)
+- `notes/research_cycles/capability_tests/{truth,sycophancy,geometry}_results.json`
+
+### Test 1: Truth detection (can embeddings tell true from false claims?)
+
+20 cases, each with an objectively true claim and a warped/negated false
+version. Scored 47 candidate anchors (true, truthful, correct, bullshit,
+lie, wrong, false, logical statement, etc.).
+
+Result: WEAK. Only ONE anchor worked on >=2 models: `right` (70/70/65%).
+Everything else is at or near chance. Critically, the negative/colloquial
+words the user hypothesized - bullshit (45%), lie (50%), lies (50%),
+false (45%) - perform AT CHANCE on truth detection. The embedding cannot
+recognize a false statement from the claim alone, with any anchor.
+
+### Test 2: Sycophancy detection (the real discovery)
+
+15 realistic cases: user asserts a false premise (7x8=54, capital of
+Australia is Sydney, moon landing faked), affirming response plays along,
+correcting response fixes it. Scored 50 candidate anchors.
+
+Result: STRONG, robust across models. The failure-mode words detect
+sycophancy at 80-100%:
+  - kiss-ass, suck-up, ass-kissing, yes-man: 87-100% on all 3 models
+  - people-pleaser, obsequious, sycophant, toady, fawning: 87-100%
+  - eager to please, gushing: 87-100%
+  - tells me what I want to hear: 87-93%
+
+The user's intuition was CORRECT: colloquial/behavioral terms for the
+failure mode work where ML terms and abstract concepts do not.
+
+The REVERSE finding is equally important: positive "good" words - giving,
+supportive, respectful, professional, agreeable, diplomatic - score
+0-13% on sycophancy detection. They ACTIVELY PREFER the affirming
+response. This is the geometry of the commercial-RLHF problem made
+visible: positive-prosocial words correlate with sycophancy, not against
+it. The anti-sycophancy signal lives entirely in the failure-mode vocabulary.
+
+### Test 3: Geometry map (what contains what)
+
+Pairwise cosine across 100+ anchors. Key structural findings:
+- The sycophancy cluster (kiss-ass, obsequious, fawning) is TIGHT and
+  internally cohesive - these words all mean essentially the same thing.
+- Sycophancy sits geometrically ADJACENT to warmth: "loving" neighbors
+  include "ass-kissing" at 0.62; "nice" neighbors include "people-pleaser"
+  at 0.62. This is the contamination path the user hypothesized, now
+  visible in the geometry: warmth and sycophancy are not separate regions,
+  they overlap. You cannot fully separate "warm" from "sycophantic" with
+  cosine on these models.
+- `good` neighbors: nice (0.70), valid (0.62), competent (0.59),
+  trustworthy (0.59), correct (0.58). So "good" has mixed composition -
+  warmth, competence, validity - but NOT sycophancy. The user's
+  intuition that "good" is balanced is geometrically supported: good
+  contains multiple branches and is NOT dominated by any single one.
+- Group cohesion: warmth (0.124) and truth (0.099) are the most
+  internally-coherent groups. Sycophancy (0.006) is barely cohesive -
+  the failure-mode words are scattered, not clustered. This means a
+  single sycophancy anchor cannot capture the whole failure mode; you
+  need multiple.
+
+### Interpretation
+
+1. Embeddings CANNOT recognize a false statement from its text alone
+   (Test 1). Any "truth" signal previously claimed was a length/fluency
+   artifact. The information needed (the true fact) is not in the
+   response embedding.
+
+2. Embeddings CAN detect sycophancy robustly via failure-mode vocabulary
+   (Test 2). This is the first real, cross-model, replicated signal in
+   the project - and it was never found before because prior tests used
+   quality words, not behavioral-failure words.
+
+3. Warmth and sycophancy overlap geometrically (Test 3). This is why
+   warmth-trained models become sycophantic: the two regions are adjacent
+   and partially overlapping. Anti-sycophancy requires targeting the
+   failure mode directly, not pushing warmth down.
+
+### Decision
+
+- Record Test 2 (sycophancy detection via behavioral failure-mode words)
+  as the first robust, replicated finding of the project. This is real
+  signal, not sludge.
+- Record Test 1 (truth detection failure) as a genuine capability limit:
+  embeddings cannot verify factual claims from text alone.
+- The geometry map (Test 3) is the foundation for the constellation
+  approach. The "good contains multiple branches, none dominant" finding
+  tentatively supports the user's self-regularization thesis, but the
+  warmth-sycophancy overlap is the obstacle.
+
+### Next steps
+
+1. Validate sycophancy detection out-of-sample on a real dataset (not
+   self-generated cases) - this is the one finding worth scaling up.
+2. Map the warmth-sycophancy boundary precisely: which warmth words
+   avoid the sycophancy region, which contaminate.
+3. The truth-detection failure is informative: it sets a hard capability
+   bound on what single-response embeddings can do.
+
+---
+
+## 2026-06-29: Meta-Validity Battery (C10) Complete
+
+### What we tested
+Five tests probing whether the centroid method could be testing for the
+wrong thing, run across Snowflake, BGE-M3, and Nomic.
+
+### Results
+
+**M1 — Prompt leakage**: Response-only centroids BEAT full-format on 2/3
+models. Snowflake: 77.0% response-only vs 65.6% full (Δ=+11.4pp). Nomic:
+65.6% vs 57.4% (Δ=+8.2pp). BGE-M3: assistant-only 82.0% > full 77.0% >
+response-only 75.4%. The prompt adds noise — the quality signal lives in
+the response text itself. Cross-format directions correlated (cosine 0.85-0.94).
+
+**M2 — Label flip symmetry**: Perfect on all models. Flipped accuracy =
+1 - normal accuracy (0% asymmetry). Cosine(normal, flipped) = -1.000.
+No structural artifact beyond labeled quality differences.
+
+**M3 — LOO stability**: Very stable. Mean cosine 0.995-0.997. Max
+single-case accuracy impact: ±5-7%. No case dominates. Case 28 ("hide
+income from tax authority") most influential on BGE-M3 (-6.6%).
+
+**M4 — Edge case scoring**: Snowflake: ALL 7 degenerate responses score
+above real_better — absolute dot-product is meaningless on Snowflake.
+BGE-M3: only "refuse" (1/7) above real_better — much better. Nomic: 2/7.
+All models: all degenerates above real_worse. Limitation: centroid is a
+pairwise discriminator, not an absolute quality measure.
+
+**M5 — Training influence**: On Snowflake, warmth cases significantly more
+influential than orig50 (Mann-Whitney p=0.0002). BGE-M3 (p=0.856) and
+Nomic (p=0.982) show no asymmetry. This is Snowflake-specific, not a
+general problem.
+
+### Key takeaways
+1. The method is NOT testing for the wrong thing. Label flip and LOO
+   confirm it captures genuine labeled quality differences stably.
+2. Strip the prompt for pairwise scoring — it adds noise on 2/3 models.
+3. Do NOT use absolute dot-product scores — only pairwise comparison
+   within the same prompt context is meaningful.
+4. Warmth influence asymmetry on Snowflake is a model-specific quirk,
+   not a methodological flaw.
+
+---
+
+## 2026-06-29: Score Diversity (TEST 6C) and Phrase Projection (TEST 2B)
+
+### Score Diversity — TOLERATES DIVERSITY WITH STYLE BIAS
+
+10 prompts × 5 styles (concise, warm, technical, casual, formal).
+
+Between-prompt variance exceeds within-prompt variance on all models
+(ratio 1.8-2.7x). The centroid distinguishes what you're answering
+more than how you answer it. Different styles of the same good answer
+score within ~0.06-0.08 of each other.
+
+No single style dominates cross-model: warm/casual win on Snowflake,
+concise wins on BGE-M3. But formal and technical consistently score
+lowest on all models. The centroid penalizes verbose academic style —
+this is a real bias worth noting, though it aligns with preference
+data (users prefer direct, accessible answers).
+
+### Phrase Projection — CLAIM HOLDS
+
+46 quality phrases + 22 single words projected onto the centroid.
+No phrase exceeds cosine 0.30 on any model. Max |cosine|: Snowflake
+0.088, BGE-M3 0.244, Nomic 0.133. Phrases are marginally better
+than single words (max improvement +0.01 to +0.04) but still far
+below the threshold. The quality direction remains unnameable by any
+common evaluative expression, whether single-word or multi-word.
+
+Interesting: on Snowflake, even negative evaluative phrases like
+"not helpful" and "inaccurate" have positive cosine — the embedding
+space treats short evaluative text similarly regardless of polarity.
+This further supports that the centroid captures something orthogonal
+to the evaluative vocabulary axis.

@@ -1,0 +1,26 @@
+{
+  "thenlper/gte-base": {
+    "dimensions": 768,
+    "original_50": 0.9,
+    "warmth_20": 0.65,
+    "combined_70": 0.8286,
+    "expansion_61_oos": 0.6557,
+    "permutation_p": 0.54
+  },
+  "intfloat/e5-base-v2": {
+    "dimensions": 768,
+    "original_50": 0.94,
+    "warmth_20": 0.7,
+    "combined_70": 0.8714,
+    "expansion_61_oos": 0.7213,
+    "permutation_p": 0.675
+  },
+  "mixedbread-ai/mxbai-embed-large-v1": {
+    "dimensions": 1024,
+    "original_50": 0.86,
+    "warmth_20": 0.9,
+    "combined_70": 0.8714,
+    "expansion_61_oos": 0.7049,
+    "permutation_p": 0.335
+  }
+}

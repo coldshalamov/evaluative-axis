@@ -1,0 +1,42 @@
+{
+  "length_analysis": {
+    "bat_better_mean_len": 164.85714285714286,
+    "bat_worse_mean_len": 164.65714285714284,
+    "bat_length_acc": 0.4857142857142857,
+    "exp_length_acc": 0.37142857142857144,
+    "bat_pct_better_longer": 0.4857142857142857
+  },
+  "snowflake-arctic-embed-m": {
+    "score_vs_length_r": -0.057947578644998846,
+    "margin_vs_lengthdiff_r": 0.027762117519516193,
+    "cos_quality_length": -0.05079985227584028,
+    "orig_bat": 0.9714285714285714,
+    "orig_exp": 0.8,
+    "nolen_bat": 0.9714285714285714,
+    "nolen_exp": 0.8285714285714286,
+    "random_dir_mean": 0.5138857142857143,
+    "random_dir_max": 0.8571428571428571
+  },
+  "bge-m3": {
+    "score_vs_length_r": -0.04412380031692523,
+    "margin_vs_lengthdiff_r": 0.22519464414252754,
+    "cos_quality_length": -0.05611339466430397,
+    "orig_bat": 0.8428571428571429,
+    "orig_exp": 0.8,
+    "nolen_bat": 0.8142857142857143,
+    "nolen_exp": 0.8,
+    "random_dir_mean": 0.5340857142857143,
+    "random_dir_max": 0.8571428571428571
+  },
+  "nomic-embed-text-v1.5": {
+    "score_vs_length_r": -0.1489975476579578,
+    "margin_vs_lengthdiff_r": 0.07997450072211582,
+    "cos_quality_length": -0.15855117280608022,
+    "orig_bat": 0.9,
+    "orig_exp": 0.7714285714285715,
+    "nolen_bat": 0.8857142857142857,
+    "nolen_exp": 0.7428571428571429,
+    "random_dir_mean": 0.5202,
+    "random_dir_max": 0.8
+  }
+}

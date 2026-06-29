@@ -1,0 +1,860 @@
+{
+  "snowflake/snowflake-arctic-embed-m": {
+    "n_words": 10000,
+    "top_50": [
+      {
+        "word": "deny",
+        "cosine": 0.119061
+      },
+      {
+        "word": "reluctant",
+        "cosine": 0.11692
+      },
+      {
+        "word": "objected",
+        "cosine": 0.116185
+      },
+      {
+        "word": "conflicting",
+        "cosine": 0.114026
+      },
+      {
+        "word": "nor",
+        "cosine": 0.113036
+      },
+      {
+        "word": "denied",
+        "cosine": 0.112425
+      },
+      {
+        "word": "spoke",
+        "cosine": 0.112346
+      },
+      {
+        "word": "declined",
+        "cosine": 0.112205
+      },
+      {
+        "word": "refused",
+        "cosine": 0.110153
+      },
+      {
+        "word": "denying",
+        "cosine": 0.109389
+      },
+      {
+        "word": "denial",
+        "cosine": 0.107831
+      },
+      {
+        "word": "seldom",
+        "cosine": 0.107349
+      },
+      {
+        "word": "refusal",
+        "cosine": 0.10668
+      },
+      {
+        "word": "refusing",
+        "cosine": 0.105676
+      },
+      {
+        "word": "past",
+        "cosine": 0.105648
+      },
+      {
+        "word": "shaken",
+        "cosine": 0.10546
+      },
+      {
+        "word": "violate",
+        "cosine": 0.105016
+      },
+      {
+        "word": "prior",
+        "cosine": 0.10396
+      },
+      {
+        "word": "fork",
+        "cosine": 0.103292
+      },
+      {
+        "word": "isolate",
+        "cosine": 0.103248
+      },
+      {
+        "word": "sue",
+        "cosine": 0.102987
+      },
+      {
+        "word": "elsewhere",
+        "cosine": 0.102907
+      },
+      {
+        "word": "oppose",
+        "cosine": 0.102368
+      },
+      {
+        "word": "delegation",
+        "cosine": 0.102264
+      },
+      {
+        "word": "dispute",
+        "cosine": 0.101923
+      },
+      {
+        "word": "aside",
+        "cosine": 0.101507
+      },
+      {
+        "word": "unable",
+        "cosine": 0.101332
+      },
+      {
+        "word": "rarely",
+        "cosine": 0.101254
+      },
+      {
+        "word": "opposed",
+        "cosine": 0.100901
+      },
+      {
+        "word": "trying",
+        "cosine": 0.100733
+      },
+      {
+        "word": "forbidden",
+        "cosine": 0.100558
+      },
+      {
+        "word": "tried",
+        "cosine": 0.100531
+      },
+      {
+        "word": "others",
+        "cosine": 0.099902
+      },
+      {
+        "word": "unwilling",
+        "cosine": 0.099447
+      },
+      {
+        "word": "sprang",
+        "cosine": 0.09939
+      },
+      {
+        "word": "hearings",
+        "cosine": 0.098934
+      },
+      {
+        "word": "overhead",
+        "cosine": 0.098867
+      },
+      {
+        "word": "disagreement",
+        "cosine": 0.098841
+      },
+      {
+        "word": "weary",
+        "cosine": 0.098789
+      },
+      {
+        "word": "logs",
+        "cosine": 0.098475
+      },
+      {
+        "word": "veto",
+        "cosine": 0.098441
+      },
+      {
+        "word": "broken",
+        "cosine": 0.098291
+      },
+      {
+        "word": "contempt",
+        "cosine": 0.098181
+      },
+      {
+        "word": "refuse",
+        "cosine": 0.098027
+      },
+      {
+        "word": "blocked",
+        "cosine": 0.098004
+      },
+      {
+        "word": "curb",
+        "cosine": 0.097918
+      },
+      {
+        "word": "alternatives",
+        "cosine": 0.097664
+      },
+      {
+        "word": "delegate",
+        "cosine": 0.097616
+      },
+      {
+        "word": "kern",
+        "cosine": 0.097462
+      },
+      {
+        "word": "differed",
+        "cosine": 0.097449
+      }
+    ],
+    "flagged_above_020": [],
+    "mean_abs_cosine": 0.056543,
+    "max_abs_cosine": 0.119061,
+    "median_abs_cosine": 0.05747,
+    "count_above_010": 32,
+    "count_above_015": 0,
+    "count_above_020": 0
+  },
+  "BAAI/bge-m3": {
+    "n_words": 10000,
+    "top_50": [
+      {
+        "word": "doubted",
+        "cosine": 0.251444
+      },
+      {
+        "word": "omitted",
+        "cosine": 0.251231
+      },
+      {
+        "word": "differed",
+        "cosine": 0.246634
+      },
+      {
+        "word": "refused",
+        "cosine": 0.245051
+      },
+      {
+        "word": "discouraged",
+        "cosine": 0.244239
+      },
+      {
+        "word": "rejected",
+        "cosine": 0.243526
+      },
+      {
+        "word": "questionable",
+        "cosine": 0.243382
+      },
+      {
+        "word": "unsuccessful",
+        "cosine": 0.23933
+      },
+      {
+        "word": "restricted",
+        "cosine": 0.239096
+      },
+      {
+        "word": "prohibited",
+        "cosine": 0.238809
+      },
+      {
+        "word": "excluded",
+        "cosine": 0.23018
+      },
+      {
+        "word": "denied",
+        "cosine": 0.225729
+      },
+      {
+        "word": "disappointed",
+        "cosine": 0.225024
+      },
+      {
+        "word": "cannot",
+        "cosine": 0.224992
+      },
+      {
+        "word": "forbidden",
+        "cosine": 0.224205
+      },
+      {
+        "word": "doubtful",
+        "cosine": 0.221804
+      },
+      {
+        "word": "limited",
+        "cosine": 0.219193
+      },
+      {
+        "word": "lacked",
+        "cosine": 0.218109
+      },
+      {
+        "word": "hesitated",
+        "cosine": 0.217979
+      },
+      {
+        "word": "separated",
+        "cosine": 0.216879
+      },
+      {
+        "word": "failed",
+        "cosine": 0.212619
+      },
+      {
+        "word": "declined",
+        "cosine": 0.209606
+      },
+      {
+        "word": "questioned",
+        "cosine": 0.208832
+      },
+      {
+        "word": "limitations",
+        "cosine": 0.208669
+      },
+      {
+        "word": "struggling",
+        "cosine": 0.206346
+      },
+      {
+        "word": "different",
+        "cosine": 0.206232
+      },
+      {
+        "word": "ambiguous",
+        "cosine": 0.206105
+      },
+      {
+        "word": "errors",
+        "cosine": 0.206029
+      },
+      {
+        "word": "disagreement",
+        "cosine": 0.203782
+      },
+      {
+        "word": "disliked",
+        "cosine": 0.203194
+      },
+      {
+        "word": "doubts",
+        "cosine": 0.20137
+      },
+      {
+        "word": "blocked",
+        "cosine": 0.201039
+      },
+      {
+        "word": "puzzled",
+        "cosine": 0.200341
+      },
+      {
+        "word": "unable",
+        "cosine": 0.199937
+      },
+      {
+        "word": "disadvantages",
+        "cosine": 0.199167
+      },
+      {
+        "word": "dismissed",
+        "cosine": 0.19868
+      },
+      {
+        "word": "confusion",
+        "cosine": 0.197946
+      },
+      {
+        "word": "except",
+        "cosine": 0.197896
+      },
+      {
+        "word": "differs",
+        "cosine": 0.197884
+      },
+      {
+        "word": "divided",
+        "cosine": 0.197873
+      },
+      {
+        "word": "disappointing",
+        "cosine": 0.197334
+      },
+      {
+        "word": "disappointment",
+        "cosine": 0.195753
+      },
+      {
+        "word": "confused",
+        "cosine": 0.195713
+      },
+      {
+        "word": "varying",
+        "cosine": 0.19561
+      },
+      {
+        "word": "unlike",
+        "cosine": 0.195098
+      },
+      {
+        "word": "adverse",
+        "cosine": 0.194721
+      },
+      {
+        "word": "disagree",
+        "cosine": 0.194297
+      },
+      {
+        "word": "troubled",
+        "cosine": 0.194141
+      },
+      {
+        "word": "controversial",
+        "cosine": 0.194132
+      },
+      {
+        "word": "struggled",
+        "cosine": 0.193066
+      }
+    ],
+    "flagged_above_020": [
+      {
+        "word": "doubted",
+        "cosine": 0.251444
+      },
+      {
+        "word": "omitted",
+        "cosine": 0.251231
+      },
+      {
+        "word": "differed",
+        "cosine": 0.246634
+      },
+      {
+        "word": "refused",
+        "cosine": 0.245051
+      },
+      {
+        "word": "discouraged",
+        "cosine": 0.244239
+      },
+      {
+        "word": "rejected",
+        "cosine": 0.243526
+      },
+      {
+        "word": "questionable",
+        "cosine": 0.243382
+      },
+      {
+        "word": "unsuccessful",
+        "cosine": 0.23933
+      },
+      {
+        "word": "restricted",
+        "cosine": 0.239096
+      },
+      {
+        "word": "prohibited",
+        "cosine": 0.238809
+      },
+      {
+        "word": "excluded",
+        "cosine": 0.23018
+      },
+      {
+        "word": "denied",
+        "cosine": 0.225729
+      },
+      {
+        "word": "disappointed",
+        "cosine": 0.225024
+      },
+      {
+        "word": "cannot",
+        "cosine": 0.224992
+      },
+      {
+        "word": "forbidden",
+        "cosine": 0.224205
+      },
+      {
+        "word": "doubtful",
+        "cosine": 0.221804
+      },
+      {
+        "word": "limited",
+        "cosine": 0.219193
+      },
+      {
+        "word": "lacked",
+        "cosine": 0.218109
+      },
+      {
+        "word": "hesitated",
+        "cosine": 0.217979
+      },
+      {
+        "word": "separated",
+        "cosine": 0.216879
+      },
+      {
+        "word": "failed",
+        "cosine": 0.212619
+      },
+      {
+        "word": "declined",
+        "cosine": 0.209606
+      },
+      {
+        "word": "questioned",
+        "cosine": 0.208832
+      },
+      {
+        "word": "limitations",
+        "cosine": 0.208669
+      },
+      {
+        "word": "struggling",
+        "cosine": 0.206346
+      },
+      {
+        "word": "different",
+        "cosine": 0.206232
+      },
+      {
+        "word": "ambiguous",
+        "cosine": 0.206105
+      },
+      {
+        "word": "errors",
+        "cosine": 0.206029
+      },
+      {
+        "word": "disagreement",
+        "cosine": 0.203782
+      },
+      {
+        "word": "disliked",
+        "cosine": 0.203194
+      },
+      {
+        "word": "doubts",
+        "cosine": 0.20137
+      },
+      {
+        "word": "blocked",
+        "cosine": 0.201039
+      },
+      {
+        "word": "puzzled",
+        "cosine": 0.200341
+      }
+    ],
+    "mean_abs_cosine": 0.048416,
+    "max_abs_cosine": 0.251444,
+    "median_abs_cosine": 0.038573,
+    "count_above_010": 1079,
+    "count_above_015": 300,
+    "count_above_020": 33
+  },
+  "nomic-ai/nomic-embed-text-v1.5": {
+    "n_words": 10000,
+    "top_50": [
+      {
+        "word": "efficiently",
+        "cosine": -0.248087
+      },
+      {
+        "word": "effective",
+        "cosine": -0.243919
+      },
+      {
+        "word": "ideally",
+        "cosine": -0.22802
+      },
+      {
+        "word": "effectively",
+        "cosine": -0.223723
+      },
+      {
+        "word": "excellence",
+        "cosine": -0.219731
+      },
+      {
+        "word": "superbly",
+        "cosine": -0.218559
+      },
+      {
+        "word": "satisfactorily",
+        "cosine": -0.218459
+      },
+      {
+        "word": "optimum",
+        "cosine": -0.217972
+      },
+      {
+        "word": "prosperity",
+        "cosine": -0.217668
+      },
+      {
+        "word": "ideal",
+        "cosine": -0.216955
+      },
+      {
+        "word": "greatness",
+        "cosine": -0.216146
+      },
+      {
+        "word": "prosperous",
+        "cosine": -0.214665
+      },
+      {
+        "word": "vitality",
+        "cosine": -0.213991
+      },
+      {
+        "word": "successful",
+        "cosine": -0.21152
+      },
+      {
+        "word": "triumphantly",
+        "cosine": -0.210666
+      },
+      {
+        "word": "success",
+        "cosine": -0.210119
+      },
+      {
+        "word": "faster",
+        "cosine": -0.209522
+      },
+      {
+        "word": "efficient",
+        "cosine": -0.208792
+      },
+      {
+        "word": "rapidly",
+        "cosine": -0.208167
+      },
+      {
+        "word": "optimal",
+        "cosine": -0.206227
+      },
+      {
+        "word": "exceptionally",
+        "cosine": -0.206109
+      },
+      {
+        "word": "admirable",
+        "cosine": -0.202371
+      },
+      {
+        "word": "vitally",
+        "cosine": -0.198091
+      },
+      {
+        "word": "not",
+        "cosine": 0.197607
+      },
+      {
+        "word": "succeed",
+        "cosine": -0.197466
+      },
+      {
+        "word": "tremendously",
+        "cosine": -0.19736
+      },
+      {
+        "word": "congenial",
+        "cosine": -0.19601
+      },
+      {
+        "word": "quickly",
+        "cosine": -0.194956
+      },
+      {
+        "word": "brilliantly",
+        "cosine": -0.191516
+      },
+      {
+        "word": "decades",
+        "cosine": -0.190171
+      },
+      {
+        "word": "wonderfully",
+        "cosine": -0.189294
+      },
+      {
+        "word": "pleasantly",
+        "cosine": -0.188561
+      },
+      {
+        "word": "swiftly",
+        "cosine": -0.188558
+      },
+      {
+        "word": "efficiency",
+        "cosine": -0.188503
+      },
+      {
+        "word": "remarkably",
+        "cosine": -0.188462
+      },
+      {
+        "word": "optimism",
+        "cosine": -0.18717
+      },
+      {
+        "word": "physiological",
+        "cosine": -0.185873
+      },
+      {
+        "word": "succeeded",
+        "cosine": -0.185093
+      },
+      {
+        "word": "speed",
+        "cosine": -0.184567
+      },
+      {
+        "word": "successfully",
+        "cosine": -0.184382
+      },
+      {
+        "word": "maturity",
+        "cosine": -0.183999
+      },
+      {
+        "word": "proudly",
+        "cosine": -0.18361
+      },
+      {
+        "word": "assured",
+        "cosine": -0.181937
+      },
+      {
+        "word": "satisfaction",
+        "cosine": -0.181934
+      },
+      {
+        "word": "sooner",
+        "cosine": -0.180606
+      },
+      {
+        "word": "succeeds",
+        "cosine": -0.179829
+      },
+      {
+        "word": "adequately",
+        "cosine": -0.179827
+      },
+      {
+        "word": "advantages",
+        "cosine": -0.179808
+      },
+      {
+        "word": "fastest",
+        "cosine": -0.178539
+      },
+      {
+        "word": "positively",
+        "cosine": -0.177999
+      }
+    ],
+    "flagged_above_020": [
+      {
+        "word": "efficiently",
+        "cosine": -0.248087
+      },
+      {
+        "word": "effective",
+        "cosine": -0.243919
+      },
+      {
+        "word": "ideally",
+        "cosine": -0.22802
+      },
+      {
+        "word": "effectively",
+        "cosine": -0.223723
+      },
+      {
+        "word": "excellence",
+        "cosine": -0.219731
+      },
+      {
+        "word": "superbly",
+        "cosine": -0.218559
+      },
+      {
+        "word": "satisfactorily",
+        "cosine": -0.218459
+      },
+      {
+        "word": "optimum",
+        "cosine": -0.217972
+      },
+      {
+        "word": "prosperity",
+        "cosine": -0.217668
+      },
+      {
+        "word": "ideal",
+        "cosine": -0.216955
+      },
+      {
+        "word": "greatness",
+        "cosine": -0.216146
+      },
+      {
+        "word": "prosperous",
+        "cosine": -0.214665
+      },
+      {
+        "word": "vitality",
+        "cosine": -0.213991
+      },
+      {
+        "word": "successful",
+        "cosine": -0.21152
+      },
+      {
+        "word": "triumphantly",
+        "cosine": -0.210666
+      },
+      {
+        "word": "success",
+        "cosine": -0.210119
+      },
+      {
+        "word": "faster",
+        "cosine": -0.209522
+      },
+      {
+        "word": "efficient",
+        "cosine": -0.208792
+      },
+      {
+        "word": "rapidly",
+        "cosine": -0.208167
+      },
+      {
+        "word": "optimal",
+        "cosine": -0.206227
+      },
+      {
+        "word": "exceptionally",
+        "cosine": -0.206109
+      },
+      {
+        "word": "admirable",
+        "cosine": -0.202371
+      }
+    ],
+    "mean_abs_cosine": 0.044292,
+    "max_abs_cosine": 0.248087,
+    "median_abs_cosine": 0.035698,
+    "count_above_010": 808,
+    "count_above_015": 149,
+    "count_above_020": 22
+  }
+}

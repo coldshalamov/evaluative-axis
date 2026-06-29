@@ -1,0 +1,95 @@
+{
+  "snowflake-arctic-embed-m": {
+    "cross_type": {
+      "firm_on_warm": 0.15,
+      "firm_on_exp": 0.7142857142857143,
+      "warm_on_firm": 0.24,
+      "warm_on_exp": 0.5142857142857142,
+      "full_on_exp": 0.8,
+      "cos_firm_warm": -0.35385817289352417,
+      "cos_firm_full": 0.7436611652374268,
+      "cos_warm_full": 0.3621498644351959
+    },
+    "reverse_validation": {
+      "exp_on_battery": 0.6857142857142857,
+      "exp_on_orig": 0.86,
+      "exp_on_warm": 0.25,
+      "cos_exp_full": 0.2283618450164795
+    },
+    "probe_groupkfold": {
+      "mean": 0.7,
+      "std": 0.12289036095775183,
+      "folds": [
+        0.9285714285714286,
+        0.6428571428571429,
+        0.6428571428571429,
+        0.7142857142857143,
+        0.5714285714285714
+      ],
+      "oos": 0.8571428571428571,
+      "cos_probe_centroid": 0.9946452379226685
+    }
+  },
+  "bge-m3": {
+    "cross_type": {
+      "firm_on_warm": 0.25,
+      "firm_on_exp": 0.8,
+      "warm_on_firm": 0.16,
+      "warm_on_exp": 0.3142857142857143,
+      "full_on_exp": 0.8,
+      "cos_firm_warm": -0.39378830790519714,
+      "cos_firm_full": 0.8812133073806763,
+      "cos_warm_full": 0.08751239627599716
+    },
+    "reverse_validation": {
+      "exp_on_battery": 0.7,
+      "exp_on_orig": 0.88,
+      "exp_on_warm": 0.25,
+      "cos_exp_full": 0.48636549711227417
+    },
+    "probe_groupkfold": {
+      "mean": 0.6571428571428573,
+      "std": 0.05345224838248489,
+      "folds": [
+        0.7142857142857143,
+        0.6428571428571429,
+        0.7142857142857143,
+        0.5714285714285714,
+        0.6428571428571429
+      ],
+      "oos": 0.9428571428571428,
+      "cos_probe_centroid": 0.9514286518096924
+    }
+  },
+  "nomic-embed-text-v1.5": {
+    "cross_type": {
+      "firm_on_warm": 0.15,
+      "firm_on_exp": 0.7714285714285715,
+      "warm_on_firm": 0.08,
+      "warm_on_exp": 0.34285714285714286,
+      "full_on_exp": 0.7714285714285715,
+      "cos_firm_warm": -0.41633135080337524,
+      "cos_firm_full": 0.8087289333343506,
+      "cos_warm_full": 0.19808286428451538
+    },
+    "reverse_validation": {
+      "exp_on_battery": 0.6428571428571429,
+      "exp_on_orig": 0.86,
+      "exp_on_warm": 0.1,
+      "cos_exp_full": 0.28676581382751465
+    },
+    "probe_groupkfold": {
+      "mean": 0.7285714285714286,
+      "std": 0.09476070829586856,
+      "folds": [
+        0.7142857142857143,
+        0.7142857142857143,
+        0.7857142857142857,
+        0.8571428571428571,
+        0.5714285714285714
+      ],
+      "oos": 0.8,
+      "cos_probe_centroid": 0.9731590151786804
+    }
+  }
+}

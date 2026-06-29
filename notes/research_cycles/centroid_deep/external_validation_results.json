@@ -1,0 +1,86 @@
+{
+  "snowflake/snowflake-arctic-embed-m": {
+    "model": "snowflake/snowflake-arctic-embed-m",
+    "our_battery_insample": 0.9714,
+    "SHP": {
+      "n_pairs": 500,
+      "our_dir_to_external": 0.48,
+      "our_dir_to_external_margin_mean": -0.000907,
+      "our_dir_to_external_margin_std": 0.019536,
+      "external_dir_to_self_insample": 0.666,
+      "external_dir_to_our_battery": 0.4857,
+      "external_70train_oos": 0.5558,
+      "external_70train_oos_n_test": 430,
+      "cosine_directions": -0.040018,
+      "permutation_p": 1.0
+    },
+    "UltraFeedback": {
+      "n_pairs": 500,
+      "our_dir_to_external": 0.503,
+      "our_dir_to_external_margin_mean": -0.001414,
+      "our_dir_to_external_margin_std": 0.026181,
+      "external_dir_to_self_insample": 0.683,
+      "external_dir_to_our_battery": 0.4571,
+      "external_70train_oos": 0.514,
+      "external_70train_oos_n_test": 430,
+      "cosine_directions": -0.070717,
+      "permutation_p": 1.0
+    }
+  },
+  "BAAI/bge-m3": {
+    "model": "BAAI/bge-m3",
+    "our_battery_insample": 0.8571,
+    "SHP": {
+      "n_pairs": 500,
+      "our_dir_to_external": 0.472,
+      "our_dir_to_external_margin_mean": -0.00205,
+      "our_dir_to_external_margin_std": 0.032183,
+      "external_dir_to_self_insample": 0.774,
+      "external_dir_to_our_battery": 0.3571,
+      "external_70train_oos": 0.5581,
+      "external_70train_oos_n_test": 430,
+      "cosine_directions": -0.084101,
+      "permutation_p": 1.0
+    },
+    "UltraFeedback": {
+      "n_pairs": 500,
+      "our_dir_to_external": 0.456,
+      "our_dir_to_external_margin_mean": -0.002479,
+      "our_dir_to_external_margin_std": 0.030928,
+      "external_dir_to_self_insample": 0.72,
+      "external_dir_to_our_battery": 0.3,
+      "external_70train_oos": 0.5605,
+      "external_70train_oos_n_test": 430,
+      "cosine_directions": -0.115488,
+      "permutation_p": 1.0
+    }
+  },
+  "nomic-ai/nomic-embed-text-v1.5": {
+    "model": "nomic-ai/nomic-embed-text-v1.5",
+    "our_battery_insample": 0.8571,
+    "SHP": {
+      "n_pairs": 500,
+      "our_dir_to_external": 0.504,
+      "our_dir_to_external_margin_mean": 0.019198,
+      "our_dir_to_external_margin_std": 0.502551,
+      "external_dir_to_self_insample": 0.724,
+      "external_dir_to_our_battery": 0.5,
+      "external_70train_oos": 0.5721,
+      "external_70train_oos_n_test": 430,
+      "cosine_directions": 0.058213,
+      "permutation_p": 1.0
+    },
+    "UltraFeedback": {
+      "n_pairs": 500,
+      "our_dir_to_external": 0.434,
+      "our_dir_to_external_margin_mean": -0.06581,
+      "our_dir_to_external_margin_std": 0.547761,
+      "external_dir_to_self_insample": 0.658,
+      "external_dir_to_our_battery": 0.4,
+      "external_70train_oos": 0.5674,
+      "external_70train_oos_n_test": 430,
+      "cosine_directions": -0.203777,
+      "permutation_p": 1.0
+    }
+  }
+}

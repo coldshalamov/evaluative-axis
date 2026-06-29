@@ -16,11 +16,44 @@ anchor words, embed a response, take the dot product. That's the quality score.
 The paper draft is at `paper/draft.md`. The open research questions are at
 `methodology/RESEARCH_DIRECTIONS.md`.
 
-## Core method
+## Core methods
+
+### Method A: Supervised centroid direction (BEST RESULTS)
+
+The strongest approach. Requires labeled preference pairs. Achieves 77-86%
+OOS across all four tested models.
+
+```python
+# 1. Embed all "better" and "worse" responses from labeled pairs
+better_embs = model.encode([c["better"] for c in labeled_pairs])
+worse_embs = model.encode([c["worse"] for c in labeled_pairs])
+
+# 2. Compute quality direction: centroid difference
+quality_dir = better_embs.mean(axis=0) - worse_embs.mean(axis=0)
+quality_dir = quality_dir / np.linalg.norm(quality_dir)
+
+# 3. Score new responses by projection
+score = np.dot(response_emb, quality_dir)
+
+# 4. Pairwise comparison: higher projection = "better" response
+accuracy = (score_better > score_worse)
+```
+
+Key finding: the quality direction has near-zero cosine with every English
+word tested. Words are bad probes into evaluative geometry. 10 labeled
+pairs suffice for 78% OOS on BGE-M3.
+
+Scripts: `scripts/run_centroid_deep.py`, `scripts/run_centroid_splits.py`,
+`scripts/run_centroid_confounds.py`, `scripts/run_gemini_centroid.py`
+
+### Method B: Word-based axis (WEAKER, use when no labeled data available)
+
+The original approach. No labeled data needed. Best single word: "careful".
+Achieves 53-74% on best axis (model-dependent).
 
 ```python
 # 1. Embed positive and negative anchor terms
-pos_embs = model.encode(["Careful"])   # or multiple terms
+pos_embs = model.encode(["Careful"])
 neg_embs = model.encode(["Reckless"])
 
 # 2. Compute normalized axis vector
@@ -35,6 +68,9 @@ score = np.dot(response_emb[0], axis)
 # 4. Pairwise comparison: higher score = "better" response
 accuracy = (score_better > score_worse)
 ```
+
+Cosine-to-positive is allowed only as an explicitly declared BGE-M3
+diagnostic or pre-registered ablation.
 
 ## Environment
 
@@ -148,8 +184,14 @@ reconstructs the parent's unfocused direction.
 **What works instead**: Score each axis independently, then SUM the scores
 or use MAJORITY VOTE. This preserves the specificity of each axis.
 
-**Rule**: Never average axis vectors. Always score independently and combine
-the scores.
+**Compound anchor update**: Do not put multiple quality concepts into one
+anchor string either ("Careful and kind", "Hard, kind, and careful"). The
+2026-06-28 compound-anchor audit showed that these strings behave like
+diffuse composites. Keep concepts as separate axes, score independently,
+then combine scores or votes.
+
+**Rule**: Never average axis vectors or combine branches in one anchor
+string. Always score independently and combine the scores.
 
 ## 3. Frequency does not predict signal strength
 
@@ -189,6 +231,21 @@ absolute scores but wrong ordering.
 cases (correct). It's not noise — it's a strong signal pointing at the
 warmth branch of quality. This is a real finding about HOW "good" works
 in embedding space, not evidence that it's useless.
+
+## 7. The supervised centroid is the best result
+
+The centroid direction (mean better - mean worse) achieves 77-86% OOS
+across all 4 tested models. The quality direction is ORTHOGONAL to all
+tested words (cosine < 0.10 with "good", "careful", etc.). Firmness
+and warmth quality directions are anti-correlated (cosine -0.35 to -0.49).
+Length is ruled out as a confound. Statistical significance: p=0.003-0.053.
+10 labeled pairs suffice for BGE-M3 (78% OOS).
+
+## 8. The five-term tree's accuracy is inflated by OR logic
+
+With 5 independent binary classifiers under OR logic, chance alone gives
+1 - 0.5^5 = 97%. The tree's 89-94% doesn't beat this mathematical
+baseline. The centroid's 77-86% is a more honest measure.
 
 ## 7. Discrimination vs training signal
 

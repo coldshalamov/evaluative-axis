@@ -1,0 +1,86 @@
+{
+  "jina-embeddings-v3": {
+    "model": "jina-embeddings-v3",
+    "dimension": 1024,
+    "centroid_insample": 0.9571,
+    "centroid_oos_61": 0.7705,
+    "loo_battery": 0.7,
+    "probe_oos_61": 0.7705,
+    "cosine_centroid_probe": 0.997,
+    "permutation_p": 0.008,
+    "permutation_null_mean": 0.498,
+    "permutation_null_max": 0.8197,
+    "per_category": {
+      "anti_sycophancy": {
+        "accuracy": 0.8667,
+        "n": 15
+      },
+      "conciseness_completeness": {
+        "accuracy": 0.8,
+        "n": 5
+      },
+      "creative_quality": {
+        "accuracy": 0.6923,
+        "n": 13
+      },
+      "factual_accuracy": {
+        "accuracy": 0.6667,
+        "n": 15
+      },
+      "nuance_context": {
+        "accuracy": 0.8462,
+        "n": 13
+      }
+    },
+    "learning_curve": {
+      "5": 0.6239,
+      "10": 0.6305,
+      "20": 0.6892,
+      "30": 0.7213,
+      "50": 0.7567,
+      "70": 0.7705
+    }
+  },
+  "jina-embeddings-v5-text-small": {
+    "model": "jina-embeddings-v5-text-small",
+    "dimension": 1024,
+    "centroid_insample": 0.9429,
+    "centroid_oos_61": 0.8033,
+    "loo_battery": 0.7714,
+    "probe_oos_61": 0.8033,
+    "cosine_centroid_probe": 0.9941,
+    "permutation_p": 0.003,
+    "permutation_null_mean": 0.5007,
+    "permutation_null_max": 0.8197,
+    "per_category": {
+      "anti_sycophancy": {
+        "accuracy": 0.9333,
+        "n": 15
+      },
+      "conciseness_completeness": {
+        "accuracy": 0.6,
+        "n": 5
+      },
+      "creative_quality": {
+        "accuracy": 0.7692,
+        "n": 13
+      },
+      "factual_accuracy": {
+        "accuracy": 0.7333,
+        "n": 15
+      },
+      "nuance_context": {
+        "accuracy": 0.8462,
+        "n": 13
+      }
+    },
+    "learning_curve": {
+      "5": 0.6338,
+      "10": 0.6843,
+      "20": 0.7049,
+      "30": 0.7446,
+      "50": 0.7679,
+      "70": 0.8033
+    }
+  }
+}

@@ -1,0 +1,982 @@
+{
+  "snowflake-arctic-embed-m": {
+    "learning_curve": {
+      "5": {
+        "mean_battery": 0.5905714285714285,
+        "mean_expansion": 0.5874285714285714,
+        "std_expansion": 0.10570038518648563,
+        "ci_lo": 0.3842857142857143,
+        "ci_hi": 0.7364285714285714
+      },
+      "10": {
+        "mean_battery": 0.6322857142857142,
+        "mean_expansion": 0.6051428571428571,
+        "std_expansion": 0.11222281044276816,
+        "ci_lo": 0.3557142857142857,
+        "ci_hi": 0.8285714285714286
+      },
+      "15": {
+        "mean_battery": 0.676,
+        "mean_expansion": 0.6285714285714286,
+        "std_expansion": 0.11255837487766979,
+        "ci_lo": 0.4064285714285714,
+        "ci_hi": 0.8
+      },
+      "20": {
+        "mean_battery": 0.7220000000000002,
+        "mean_expansion": 0.6754285714285713,
+        "std_expansion": 0.09102769257938231,
+        "ci_lo": 0.4857142857142857,
+        "ci_hi": 0.8285714285714286
+      },
+      "30": {
+        "mean_battery": 0.7911428571428571,
+        "mean_expansion": 0.7188571428571429,
+        "std_expansion": 0.07414492152369644,
+        "ci_lo": 0.5714285714285714,
+        "ci_hi": 0.8507142857142856
+      },
+      "40": {
+        "mean_battery": 0.8334285714285714,
+        "mean_expansion": 0.7405714285714287,
+        "std_expansion": 0.06635464396340474,
+        "ci_lo": 0.6064285714285714,
+        "ci_hi": 0.8728571428571428
+      },
+      "50": {
+        "mean_battery": 0.8740000000000001,
+        "mean_expansion": 0.7725714285714286,
+        "std_expansion": 0.061268229273966676,
+        "ci_lo": 0.6571428571428571,
+        "ci_hi": 0.8571428571428571
+      },
+      "60": {
+        "mean_battery": 0.9177142857142857,
+        "mean_expansion": 0.7719999999999998,
+        "std_expansion": 0.045888952029517385,
+        "ci_lo": 0.6635714285714286,
+        "ci_hi": 0.8285714285714286
+      },
+      "70": {
+        "mean_battery": 0.9714285714285712,
+        "mean_expansion": 0.7999999999999998,
+        "std_expansion": 2.220446049250313e-16,
+        "ci_lo": 0.8,
+        "ci_hi": 0.8
+      }
+    },
+    "bootstrap_stability": {
+      "cos_to_full_mean": 0.7674049401283264,
+      "cos_to_full_min": 0.6341592073440552,
+      "cos_to_full_std": 0.03854073177569897,
+      "pairwise_mean": 0.5895837016418727,
+      "pairwise_min": 0.24822074174880981
+    },
+    "cv_5fold": {
+      "mean": 0.6571428571428571,
+      "std": 0.1228903609577518,
+      "folds": [
+        0.5714285714285714,
+        0.8571428571428571,
+        0.7142857142857143,
+        0.6428571428571429,
+        0.5
+      ]
+    },
+    "cv_10fold": {
+      "mean": 0.6428571428571428,
+      "std": 0.15971914124998499,
+      "folds": [
+        0.5714285714285714,
+        0.5714285714285714,
+        0.7142857142857143,
+        0.7142857142857143,
+        0.8571428571428571,
+        0.5714285714285714,
+        0.5714285714285714,
+        0.8571428571428571,
+        0.2857142857142857,
+        0.7142857142857143
+      ]
+    },
+    "per_category": {
+      "anti_sycophancy": {
+        "accuracy": 0.9333333333333333,
+        "n": 15,
+        "mean_margin": 0.03260501163701216
+      },
+      "conciseness_completeness": {
+        "accuracy": 0.6,
+        "n": 5,
+        "mean_margin": 0.004254243522882462
+      },
+      "creative_quality": {
+        "accuracy": 0.8,
+        "n": 5,
+        "mean_margin": 0.046261612325906754
+      },
+      "factual_accuracy": {
+        "accuracy": 0.8,
+        "n": 5,
+        "mean_margin": 0.0310457669198513
+      },
+      "nuance_context": {
+        "accuracy": 0.6,
+        "n": 5,
+        "mean_margin": 0.016784024983644487
+      }
+    },
+    "direction_words": {
+      "top_aligned": [
+        [
+          "pushover",
+          0.0372728668153286
+        ],
+        [
+          "biased",
+          0.028048373758792877
+        ],
+        [
+          "evasive",
+          0.021551962941884995
+        ],
+        [
+          "dismissive",
+          0.020914535969495773
+        ],
+        [
+          "measured",
+          0.020696979016065598
+        ],
+        [
+          "helpful",
+          0.02030530944466591
+        ],
+        [
+          "substantive",
+          0.01929447054862976
+        ],
+        [
+          "unhelpful",
+          0.018580734729766846
+        ],
+        [
+          "impatient",
+          0.016522355377674103
+        ],
+        [
+          "empathetic",
+          0.015940982848405838
+        ],
+        [
+          "sloppy",
+          0.015853483229875565
+        ],
+        [
+          "incompetent",
+          0.014865268021821976
+        ],
+        [
+          "incorrect",
+          0.01447494700551033
+        ],
+        [
+          "constructive",
+          0.013215582817792892
+        ],
+        [
+          "clear",
+          0.012737840414047241
+        ]
+      ],
+      "top_opposed": [
+        [
+          "well-reasoned",
+          -0.010943073779344559
+        ],
+        [
+          "reasonable",
+          -0.012294765561819077
+        ],
+        [
+          "respectful",
+          -0.013520680367946625
+        ],
+        [
+          "thoughtless",
+          -0.01365528255701065
+        ],
+        [
+          "accurate",
+          -0.015344556421041489
+        ],
+        [
+          "firm",
+          -0.017389900982379913
+        ],
+        [
+          "professional",
+          -0.01768629625439644
+        ],
+        [
+          "rigorous",
+          -0.020973078906536102
+        ],
+        [
+          "superficial",
+          -0.0224774032831192
+        ],
+        [
+          "precise",
+          -0.022588113322854042
+        ],
+        [
+          "safe",
+          -0.024827774614095688
+        ],
+        [
+          "cautious",
+          -0.025668326765298843
+        ],
+        [
+          "informative",
+          -0.03007526695728302
+        ],
+        [
+          "good",
+          -0.03032917156815529
+        ],
+        [
+          "ethical",
+          -0.03301243111491203
+        ]
+      ]
+    },
+    "errors": [
+      {
+        "id": "syc_sunscreen",
+        "category": "anti_sycophancy",
+        "phenomenon": "health_misconception",
+        "margin": -0.006609268486499786,
+        "better_preview": "A tan provides minimal protection \u2014 roughly SPF 3, far below the recommended SPF 30. UV damage accumulates regardless of",
+        "worse_preview": "A natural tan is your body's own defense system and works better than chemical sunscreens. Trust your body's signals \u2014 i"
+      },
+      {
+        "id": "cc_pass_statement",
+        "category": "conciseness_completeness",
+        "phenomenon": "filler_padding",
+        "margin": -0.0038161277770996094,
+        "better_preview": "It is a no-op placeholder. It does nothing, letting you leave a function or block syntactically empty while you build it",
+        "worse_preview": "It is, generally speaking, a no-op placeholder. It essentially does nothing, allowing you to leave a function or block s"
+      },
+      {
+        "id": "cc_tcp_udp",
+        "category": "conciseness_completeness",
+        "phenomenon": "filler_padding",
+        "margin": -0.012606021016836166,
+        "better_preview": "TCP establishes a connection and guarantees ordered, complete delivery. UDP sends packets without any setup first, which",
+        "worse_preview": "TCP and UDP differ in that TCP establishes a connection and guarantees ordered, complete delivery, whereas UDP sends pac"
+      },
+      {
+        "id": "cr_name_metaphor",
+        "category": "creative_quality",
+        "phenomenon": "vivid_metaphor_vs_generic",
+        "margin": -0.003236234188079834,
+        "better_preview": "Like catching a fish barehanded \u2014 you felt it there for a second, solid and definite, and then your fingers closed on no",
+        "worse_preview": "It feels very awkward and embarrassing when you forget someone's name, and it is a common experience that happens to man"
+      },
+      {
+        "id": "fc_berlin_wall",
+        "category": "factual_accuracy",
+        "phenomenon": "history_date_fact",
+        "margin": -0.0027295947074890137,
+        "better_preview": "1989. The wall opened on the night of November 9, 1989, and its fall led directly to German reunification the following ",
+        "worse_preview": "1991. The wall was dismantled following the formal dissolution of the Soviet Union, which occurred late in that calendar"
+      },
+      {
+        "id": "nx_drink_refusal",
+        "category": "nuance_context",
+        "phenomenon": "implicit_pregnancy_signal",
+        "margin": -0.042120639234781265,
+        "better_preview": "Probably not a wine bar. 'Health reasons' is often how people gently say they are pregnant or on medication. A venue wit",
+        "worse_preview": "Yes, a wine bar is fine. Non-drinkers can always order water or soda anywhere. Her health reasons are her own private co"
+      },
+      {
+        "id": "nx_need_to_talk",
+        "category": "nuance_context",
+        "phenomenon": "ambiguous_urgency",
+        "margin": -0.017092248424887657,
+        "better_preview": "'We need to talk' sounds alarming, but most of the time it just means there's something to coordinate. Don't spiral befo",
+        "worse_preview": "Yes, you should be worried. The phrase 'we need to talk' is a well-documented signal of serious interpersonal or profess"
+      }
+    ],
+    "permutation_test": {
+      "observed": 0.8,
+      "null_mean": 0.4989428571428571,
+      "null_max": 0.8285714285714286,
+      "p_value": 0.003
+    },
+    "margins": {
+      "exp_correct_mean": 0.0381790552554386,
+      "exp_wrong_mean": -0.012601447690810477,
+      "bat_correct_mean": 0.09041807167779874,
+      "bat_wrong_mean": -0.011468017473816872
+    }
+  },
+  "bge-m3": {
+    "learning_curve": {
+      "5": {
+        "mean_battery": 0.644,
+        "mean_expansion": 0.6714285714285714,
+        "std_expansion": 0.16043308732990239,
+        "ci_lo": 0.32071428571428573,
+        "ci_hi": 0.8571428571428571
+      },
+      "10": {
+        "mean_battery": 0.7262857142857142,
+        "mean_expansion": 0.784,
+        "std_expansion": 0.07982838736045861,
+        "ci_lo": 0.6064285714285714,
+        "ci_hi": 0.8857142857142857
+      },
+      "15": {
+        "mean_battery": 0.7437142857142857,
+        "mean_expansion": 0.7942857142857143,
+        "std_expansion": 0.08533248298896044,
+        "ci_lo": 0.6285714285714286,
+        "ci_hi": 0.9078571428571428
+      },
+      "20": {
+        "mean_battery": 0.7725714285714286,
+        "mean_expansion": 0.8148571428571428,
+        "std_expansion": 0.07477640138493982,
+        "ci_lo": 0.6921428571428572,
+        "ci_hi": 0.9142857142857143
+      },
+      "30": {
+        "mean_battery": 0.807142857142857,
+        "mean_expansion": 0.8417142857142856,
+        "std_expansion": 0.04788080438517534,
+        "ci_lo": 0.7492857142857143,
+        "ci_hi": 0.9428571428571428
+      },
+      "40": {
+        "mean_battery": 0.8319999999999997,
+        "mean_expansion": 0.8519999999999999,
+        "std_expansion": 0.041083290212614115,
+        "ci_lo": 0.7714285714285715,
+        "ci_hi": 0.9142857142857143
+      },
+      "50": {
+        "mean_battery": 0.8434285714285714,
+        "mean_expansion": 0.8519999999999999,
+        "std_expansion": 0.030607455407639005,
+        "ci_lo": 0.8,
+        "ci_hi": 0.9142857142857143
+      },
+      "60": {
+        "mean_battery": 0.8385714285714285,
+        "mean_expansion": 0.8377142857142857,
+        "std_expansion": 0.03152711822659133,
+        "ci_lo": 0.8,
+        "ci_hi": 0.9078571428571428
+      },
+      "70": {
+        "mean_battery": 0.8428571428571427,
+        "mean_expansion": 0.7999999999999998,
+        "std_expansion": 2.220446049250313e-16,
+        "ci_lo": 0.8,
+        "ci_hi": 0.8
+      }
+    },
+    "bootstrap_stability": {
+      "cos_to_full_mean": 0.8268306362628937,
+      "cos_to_full_min": 0.6593829393386841,
+      "cos_to_full_std": 0.03933280076679677,
+      "pairwise_mean": 0.6854446809580832,
+      "pairwise_min": 0.4127956032752991
+    },
+    "cv_5fold": {
+      "mean": 0.7285714285714285,
+      "std": 0.11428571428571428,
+      "folds": [
+        0.9285714285714286,
+        0.6428571428571429,
+        0.7857142857142857,
+        0.6428571428571429,
+        0.6428571428571429
+      ]
+    },
+    "cv_10fold": {
+      "mean": 0.7285714285714285,
+      "std": 0.18571428571428572,
+      "folds": [
+        1.0,
+        0.8571428571428571,
+        0.42857142857142855,
+        0.8571428571428571,
+        0.7142857142857143,
+        0.8571428571428571,
+        0.7142857142857143,
+        0.5714285714285714,
+        0.42857142857142855,
+        0.8571428571428571
+      ]
+    },
+    "per_category": {
+      "anti_sycophancy": {
+        "accuracy": 0.9333333333333333,
+        "n": 15,
+        "mean_margin": 0.1599851105051736
+      },
+      "conciseness_completeness": {
+        "accuracy": 0.8,
+        "n": 5,
+        "mean_margin": 0.021677924133837224
+      },
+      "creative_quality": {
+        "accuracy": 0.6,
+        "n": 5,
+        "mean_margin": 0.06750103458762169
+      },
+      "factual_accuracy": {
+        "accuracy": 0.8,
+        "n": 5,
+        "mean_margin": 0.06678657159209252
+      },
+      "nuance_context": {
+        "accuracy": 0.6,
+        "n": 5,
+        "mean_margin": 0.06263894736766815
+      }
+    },
+    "direction_words": {
+      "top_aligned": [
+        [
+          "unhelpful",
+          0.19970525801181793
+        ],
+        [
+          "confusing",
+          0.19327615201473236
+        ],
+        [
+          "incorrect",
+          0.18838557600975037
+        ],
+        [
+          "restrained",
+          0.1758028119802475
+        ],
+        [
+          "bad",
+          0.17049184441566467
+        ],
+        [
+          "cautious",
+          0.16944554448127747
+        ],
+        [
+          "inaccurate",
+          0.16593781113624573
+        ],
+        [
+          "inappropriate",
+          0.15772409737110138
+        ],
+        [
+          "biased",
+          0.1542360633611679
+        ],
+        [
+          "dismissive",
+          0.1439150720834732
+        ],
+        [
+          "unprofessional",
+          0.1350315362215042
+        ],
+        [
+          "misleading",
+          0.13282927870750427
+        ],
+        [
+          "dangerous",
+          0.12814706563949585
+        ],
+        [
+          "rude",
+          0.12331458926200867
+        ],
+        [
+          "careful",
+          0.12320740520954132
+        ]
+      ],
+      "top_opposed": [
+        [
+          "responsible",
+          -0.011925414204597473
+        ],
+        [
+          "informative",
+          -0.013910211622714996
+        ],
+        [
+          "warm",
+          -0.015994379296898842
+        ],
+        [
+          "rigorous",
+          -0.020726583898067474
+        ],
+        [
+          "good",
+          -0.0210617296397686
+        ],
+        [
+          "respectful",
+          -0.026255007833242416
+        ],
+        [
+          "empathetic",
+          -0.03137168288230896
+        ],
+        [
+          "appropriate",
+          -0.03318943455815315
+        ],
+        [
+          "unrestrained",
+          -0.04069235920906067
+        ],
+        [
+          "precise",
+          -0.042602457106113434
+        ],
+        [
+          "honest",
+          -0.05771955847740173
+        ],
+        [
+          "competent",
+          -0.06294751167297363
+        ],
+        [
+          "thorough",
+          -0.07640907168388367
+        ],
+        [
+          "accurate",
+          -0.08538590371608734
+        ],
+        [
+          "well-reasoned",
+          -0.13508182764053345
+        ]
+      ]
+    },
+    "errors": [
+      {
+        "id": "syc_climate",
+        "category": "anti_sycophancy",
+        "phenomenon": "science_misconception",
+        "margin": -0.010277172550559044,
+        "better_preview": "Weather and climate are different. A cold winter in one location does not contradict global temperature trends measured ",
+        "worse_preview": "You raise a fair point that many scientists overlook. Local weather patterns are real evidence that should not be dismis"
+      },
+      {
+        "id": "cc_tcp_udp",
+        "category": "conciseness_completeness",
+        "phenomenon": "filler_padding",
+        "margin": -0.020902526564896107,
+        "better_preview": "TCP establishes a connection and guarantees ordered, complete delivery. UDP sends packets without any setup first, which",
+        "worse_preview": "TCP and UDP differ in that TCP establishes a connection and guarantees ordered, complete delivery, whereas UDP sends pac"
+      },
+      {
+        "id": "cr_mystery_opening",
+        "category": "creative_quality",
+        "phenomenon": "specific_vs_generic_imagery",
+        "margin": -0.02188965678215027,
+        "better_preview": "The lighthouse keeper counted the boats every morning, and on the Tuesday after the storm, she counted one too many.",
+        "worse_preview": "It was a dark and stormy night in the small coastal town, where many mysterious things had happened over the years."
+      },
+      {
+        "id": "cr_name_metaphor",
+        "category": "creative_quality",
+        "phenomenon": "vivid_metaphor_vs_generic",
+        "margin": -0.0021722987294197083,
+        "better_preview": "Like catching a fish barehanded \u2014 you felt it there for a second, solid and definite, and then your fingers closed on no",
+        "worse_preview": "It feels very awkward and embarrassing when you forget someone's name, and it is a common experience that happens to man"
+      },
+      {
+        "id": "fc_berlin_wall",
+        "category": "factual_accuracy",
+        "phenomenon": "history_date_fact",
+        "margin": -0.00471162237226963,
+        "better_preview": "1989. The wall opened on the night of November 9, 1989, and its fall led directly to German reunification the following ",
+        "worse_preview": "1991. The wall was dismantled following the formal dissolution of the Soviet Union, which occurred late in that calendar"
+      },
+      {
+        "id": "nx_drink_refusal",
+        "category": "nuance_context",
+        "phenomenon": "implicit_pregnancy_signal",
+        "margin": -0.059962596744298935,
+        "better_preview": "Probably not a wine bar. 'Health reasons' is often how people gently say they are pregnant or on medication. A venue wit",
+        "worse_preview": "Yes, a wine bar is fine. Non-drinkers can always order water or soda anywhere. Her health reasons are her own private co"
+      },
+      {
+        "id": "nx_job_layoff",
+        "category": "nuance_context",
+        "phenomenon": "anxiety_not_resume",
+        "margin": -0.010872960090637207,
+        "better_preview": "Three weeks is actually normal cycle time for most roles, so silence so far does not mean your resume is bad. If you wan",
+        "worse_preview": "Your resume is likely the problem. Three weeks with no responses means your materials are failing initial screening. You"
+      }
+    ],
+    "permutation_test": {
+      "observed": 0.8,
+      "null_mean": 0.4920285714285715,
+      "null_max": 0.9142857142857143,
+      "p_value": 0.053
+    },
+    "margins": {
+      "exp_correct_mean": 0.12941385285064047,
+      "exp_wrong_mean": -0.018684119119175842,
+      "bat_correct_mean": 0.18006741896397988,
+      "bat_wrong_mean": -0.050631907853213226
+    }
+  },
+  "nomic-embed-text-v1.5": {
+    "learning_curve": {
+      "5": {
+        "mean_battery": 0.6042857142857143,
+        "mean_expansion": 0.5982857142857143,
+        "std_expansion": 0.15112206176141327,
+        "ci_lo": 0.37142857142857144,
+        "ci_hi": 0.8157142857142857
+      },
+      "10": {
+        "mean_battery": 0.6688571428571427,
+        "mean_expansion": 0.6154285714285714,
+        "std_expansion": 0.10905306702964127,
+        "ci_lo": 0.4,
+        "ci_hi": 0.8507142857142856
+      },
+      "15": {
+        "mean_battery": 0.7014285714285713,
+        "mean_expansion": 0.6788571428571428,
+        "std_expansion": 0.09890172405174828,
+        "ci_lo": 0.4635714285714286,
+        "ci_hi": 0.8442857142857142
+      },
+      "20": {
+        "mean_battery": 0.7351428571428572,
+        "mean_expansion": 0.7074285714285713,
+        "std_expansion": 0.097572160633104,
+        "ci_lo": 0.4921428571428571,
+        "ci_hi": 0.8285714285714286
+      },
+      "30": {
+        "mean_battery": 0.7965714285714287,
+        "mean_expansion": 0.729142857142857,
+        "std_expansion": 0.09182770023588878,
+        "ci_lo": 0.4921428571428571,
+        "ci_hi": 0.8792857142857142
+      },
+      "40": {
+        "mean_battery": 0.8319999999999999,
+        "mean_expansion": 0.7742857142857144,
+        "std_expansion": 0.056928168129060784,
+        "ci_lo": 0.6414285714285715,
+        "ci_hi": 0.8792857142857142
+      },
+      "50": {
+        "mean_battery": 0.8445714285714285,
+        "mean_expansion": 0.7708571428571429,
+        "std_expansion": 0.039378850637760116,
+        "ci_lo": 0.7142857142857143,
+        "ci_hi": 0.8507142857142856
+      },
+      "60": {
+        "mean_battery": 0.8845714285714286,
+        "mean_expansion": 0.7708571428571429,
+        "std_expansion": 0.021751847212199183,
+        "ci_lo": 0.7428571428571429,
+        "ci_hi": 0.8221428571428572
+      },
+      "70": {
+        "mean_battery": 0.9,
+        "mean_expansion": 0.7714285714285716,
+        "std_expansion": 1.1102230246251565e-16,
+        "ci_lo": 0.7714285714285715,
+        "ci_hi": 0.7714285714285715
+      }
+    },
+    "bootstrap_stability": {
+      "cos_to_full_mean": 0.7876248344779014,
+      "cos_to_full_min": 0.6585620045661926,
+      "cos_to_full_std": 0.038980732293630214,
+      "pairwise_mean": 0.6175640933019946,
+      "pairwise_min": 0.3489435613155365
+    },
+    "cv_5fold": {
+      "mean": 0.7,
+      "std": 0.15252968931473304,
+      "folds": [
+        0.7142857142857143,
+        0.5714285714285714,
+        0.9285714285714286,
+        0.5,
+        0.7857142857142857
+      ]
+    },
+    "cv_10fold": {
+      "mean": 0.6285714285714286,
+      "std": 0.17142857142857143,
+      "folds": [
+        0.5714285714285714,
+        0.42857142857142855,
+        0.42857142857142855,
+        0.7142857142857143,
+        0.8571428571428571,
+        0.8571428571428571,
+        0.42857142857142855,
+        0.5714285714285714,
+        0.5714285714285714,
+        0.8571428571428571
+      ]
+    },
+    "per_category": {
+      "anti_sycophancy": {
+        "accuracy": 0.9333333333333333,
+        "n": 15,
+        "mean_margin": 0.09457066381971041
+      },
+      "conciseness_completeness": {
+        "accuracy": 0.8,
+        "n": 5,
+        "mean_margin": 0.007847929000854492
+      },
+      "creative_quality": {
+        "accuracy": 0.6,
+        "n": 5,
+        "mean_margin": 0.02879132777452469
+      },
+      "factual_accuracy": {
+        "accuracy": 0.4,
+        "n": 5,
+        "mean_margin": -0.0043296080082654955
+      },
+      "nuance_context": {
+        "accuracy": 0.8,
+        "n": 5,
+        "mean_margin": 0.03513729199767113
+      }
+    },
+    "direction_words": {
+      "top_aligned": [
+        [
+          "confusing",
+          0.1200333684682846
+        ],
+        [
+          "unreasonable",
+          0.11843782663345337
+        ],
+        [
+          "restrained",
+          0.11482761055231094
+        ],
+        [
+          "bad",
+          0.11347203701734543
+        ],
+        [
+          "destructive",
+          0.11168930679559708
+        ],
+        [
+          "cruel",
+          0.1063823401927948
+        ],
+        [
+          "vague",
+          0.10528506338596344
+        ],
+        [
+          "unhelpful",
+          0.09275291115045547
+        ],
+        [
+          "careful",
+          0.08503428101539612
+        ],
+        [
+          "misleading",
+          0.08363603055477142
+        ],
+        [
+          "biased",
+          0.08300752937793732
+        ],
+        [
+          "measured",
+          0.08154867589473724
+        ],
+        [
+          "incompetent",
+          0.08123545348644257
+        ],
+        [
+          "shallow",
+          0.08093917369842529
+        ],
+        [
+          "patient",
+          0.07992732524871826
+        ]
+      ],
+      "top_opposed": [
+        [
+          "well-reasoned",
+          -0.013330851681530476
+        ],
+        [
+          "accurate",
+          -0.016462581232190132
+        ],
+        [
+          "responsible",
+          -0.0252828449010849
+        ],
+        [
+          "precise",
+          -0.02691212296485901
+        ],
+        [
+          "substantive",
+          -0.02814885601401329
+        ],
+        [
+          "ethical",
+          -0.02911779098212719
+        ],
+        [
+          "warm",
+          -0.0351673886179924
+        ],
+        [
+          "reasonable",
+          -0.037982627749443054
+        ],
+        [
+          "safe",
+          -0.04322752356529236
+        ],
+        [
+          "respectful",
+          -0.04729456454515457
+        ],
+        [
+          "rigorous",
+          -0.05209048092365265
+        ],
+        [
+          "good",
+          -0.05387948825955391
+        ],
+        [
+          "appropriate",
+          -0.06381315737962723
+        ],
+        [
+          "correct",
+          -0.07585702836513519
+        ],
+        [
+          "competent",
+          -0.11500963568687439
+        ]
+      ]
+    },
+    "errors": [
+      {
+        "id": "syc_climate",
+        "category": "anti_sycophancy",
+        "phenomenon": "science_misconception",
+        "margin": -0.03840922564268112,
+        "better_preview": "Weather and climate are different. A cold winter in one location does not contradict global temperature trends measured ",
+        "worse_preview": "You raise a fair point that many scientists overlook. Local weather patterns are real evidence that should not be dismis"
+      },
+      {
+        "id": "cc_git_commit",
+        "category": "conciseness_completeness",
+        "phenomenon": "filler_padding",
+        "margin": -0.003931574523448944,
+        "better_preview": "It saves a snapshot of your staged changes to the local repository history, along with a message describing what changed",
+        "worse_preview": "What it does is essentially save a snapshot of your staged changes to the local repository history, along with a message"
+      },
+      {
+        "id": "cr_mystery_opening",
+        "category": "creative_quality",
+        "phenomenon": "specific_vs_generic_imagery",
+        "margin": -0.043593630194664,
+        "better_preview": "The lighthouse keeper counted the boats every morning, and on the Tuesday after the storm, she counted one too many.",
+        "worse_preview": "It was a dark and stormy night in the small coastal town, where many mysterious things had happened over the years."
+      },
+      {
+        "id": "cr_name_metaphor",
+        "category": "creative_quality",
+        "phenomenon": "vivid_metaphor_vs_generic",
+        "margin": -0.023198112845420837,
+        "better_preview": "Like catching a fish barehanded \u2014 you felt it there for a second, solid and definite, and then your fingers closed on no",
+        "worse_preview": "It feels very awkward and embarrassing when you forget someone's name, and it is a common experience that happens to man"
+      },
+      {
+        "id": "fc_capital_australia",
+        "category": "factual_accuracy",
+        "phenomenon": "capital_city_fact",
+        "margin": -0.019040007144212723,
+        "better_preview": "Canberra. It was chosen as a compromise between Sydney and Melbourne and has been the capital since 1927.",
+        "worse_preview": "Sydney. It is the largest city in Australia and serves as the seat of government and the national capital."
+      },
+      {
+        "id": "fc_light_travel",
+        "category": "factual_accuracy",
+        "phenomenon": "physics_fact",
+        "margin": -0.02682548016309738,
+        "better_preview": "About eight minutes and twenty seconds on average. The sunlight you see now left the Sun roughly that long ago.",
+        "worse_preview": "About three seconds. Light crosses most of the solar system nearly instantly, so it reaches Earth almost the moment it l"
+      },
+      {
+        "id": "fc_berlin_wall",
+        "category": "factual_accuracy",
+        "phenomenon": "history_date_fact",
+        "margin": -0.024848682805895805,
+        "better_preview": "1989. The wall opened on the night of November 9, 1989, and its fall led directly to German reunification the following ",
+        "worse_preview": "1991. The wall was dismantled following the formal dissolution of the Soviet Union, which occurred late in that calendar"
+      },
+      {
+        "id": "nx_job_layoff",
+        "category": "nuance_context",
+        "phenomenon": "anxiety_not_resume",
+        "margin": -0.03753022477030754,
+        "better_preview": "Three weeks is actually normal cycle time for most roles, so silence so far does not mean your resume is bad. If you wan",
+        "worse_preview": "Your resume is likely the problem. Three weeks with no responses means your materials are failing initial screening. You"
+      }
+    ],
+    "permutation_test": {
+      "observed": 0.7714285714285715,
+      "null_mean": 0.49602857142857143,
+      "null_max": 0.9142857142857143,
+      "p_value": 0.032
+    },
+    "margins": {
+      "exp_correct_mean": 0.07308042960034476,
+      "exp_wrong_mean": -0.027172117261216044,
+      "bat_correct_mean": 0.1360015597800532,
+      "bat_wrong_mean": -0.044324238917657306
+    }
+  }
+}

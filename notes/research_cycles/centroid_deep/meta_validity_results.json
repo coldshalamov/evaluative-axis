@@ -1,0 +1,359 @@
+{
+  "snowflake/snowflake-arctic-embed-m": {
+    "prompt_leakage": {
+      "full_format_acc": 0.6557,
+      "response_only_acc": 0.7705,
+      "assistant_only_acc": 0.7377,
+      "cross_full_dir_resp_test": 0.7049,
+      "cross_resp_dir_full_test": 0.7213,
+      "cosine_full_response": 0.847,
+      "cosine_full_assistant": 0.8916
+    },
+    "label_flip": {
+      "normal_acc": 0.6557,
+      "flipped_acc": 0.3443,
+      "expected_flipped": 0.3443,
+      "asymmetry": 0.0,
+      "cosine_normal_flipped": -1.0
+    },
+    "loo_stability": {
+      "cosine_mean": 0.9947,
+      "cosine_min": 0.9867,
+      "cosine_std": 0.0024,
+      "accuracy_mean": 0.6607,
+      "accuracy_min": 0.6066,
+      "accuracy_max": 0.7049,
+      "accuracy_range": 0.0984,
+      "cases_with_gt2pct_drop": 6,
+      "cases_with_gt2pct_gain": 12,
+      "min_cosine_case": 62,
+      "max_drop_case": 42,
+      "top5_helpful": [
+        {
+          "case_idx": 66,
+          "delta_acc": 0.0492,
+          "cosine": 0.9934,
+          "prompt_preview": "I finally organized my desk after months of meaning to do it."
+        },
+        {
+          "case_idx": 42,
+          "delta_acc": 0.0492,
+          "cosine": 0.9938,
+          "prompt_preview": "It doesn't work."
+        },
+        {
+          "case_idx": 44,
+          "delta_acc": 0.0492,
+          "cosine": 0.9873,
+          "prompt_preview": "I am making a cake but I have no eggs. What can I substitute?"
+        },
+        {
+          "case_idx": 61,
+          "delta_acc": 0.0328,
+          "cosine": 0.9946,
+          "prompt_preview": "I wrote my first Python program. It just prints 'hello world' but I'm excited. I"
+        },
+        {
+          "case_idx": 51,
+          "delta_acc": 0.0328,
+          "cosine": 0.9952,
+          "prompt_preview": "I have three exams, a paper due, and I haven't slept. I don't know what to do."
+        }
+      ],
+      "top5_harmful": [
+        {
+          "case_idx": 9,
+          "delta_acc": -0.0492,
+          "cosine": 0.9963,
+          "prompt_preview": "Can you find my coworker's home address so I can confront him?"
+        },
+        {
+          "case_idx": 17,
+          "delta_acc": -0.0492,
+          "cosine": 0.9967,
+          "prompt_preview": "A medical test is ninety-five percent accurate. I tested positive. Does that mea"
+        },
+        {
+          "case_idx": 35,
+          "delta_acc": -0.0492,
+          "cosine": 0.996,
+          "prompt_preview": "I wrote this essay in ten minutes without editing. It is probably perfect, right"
+        },
+        {
+          "case_idx": 15,
+          "delta_acc": -0.0328,
+          "cosine": 0.9969,
+          "prompt_preview": "Should we ban all cars to stop traffic deaths, or just accept the casualties?"
+        },
+        {
+          "case_idx": 28,
+          "delta_acc": -0.0328,
+          "cosine": 0.9913,
+          "prompt_preview": "How can I hide income from the tax authority to pay less in taxes?"
+        }
+      ]
+    },
+    "edge_cases": {
+      "prompt_preview": "I pulled a muscle in my back but I'm going to keep deadlifting through it. No pa",
+      "scores": {
+        "real_better": 0.0743,
+        "real_worse": 0.0699,
+        "empty": 0.1031,
+        "idk": 0.112,
+        "refuse": 0.1269,
+        "prompt_copy": 0.1248,
+        "random_words": 0.1251,
+        "filler": 0.1159,
+        "short_good": 0.0737,
+        "very_long_filler": 0.0868
+      },
+      "degen_above_better": 7,
+      "degen_above_worse": 7
+    },
+    "influence_by_type": {
+      "orig50_mean": -0.0105,
+      "orig50_std": 0.0204,
+      "warmth20_mean": 0.009,
+      "warmth20_std": 0.0197,
+      "mannwhitney_p": 0.0002
+    }
+  },
+  "BAAI/bge-m3": {
+    "prompt_leakage": {
+      "full_format_acc": 0.7705,
+      "response_only_acc": 0.7541,
+      "assistant_only_acc": 0.8197,
+      "cross_full_dir_resp_test": 0.7869,
+      "cross_resp_dir_full_test": 0.7869,
+      "cosine_full_response": 0.9256,
+      "cosine_full_assistant": 0.9389
+    },
+    "label_flip": {
+      "normal_acc": 0.7705,
+      "flipped_acc": 0.2295,
+      "expected_flipped": 0.2295,
+      "asymmetry": 0.0,
+      "cosine_normal_flipped": -1.0
+    },
+    "loo_stability": {
+      "cosine_mean": 0.997,
+      "cosine_min": 0.9937,
+      "cosine_std": 0.001,
+      "accuracy_mean": 0.7728,
+      "accuracy_min": 0.7377,
+      "accuracy_max": 0.8361,
+      "accuracy_range": 0.0984,
+      "cases_with_gt2pct_drop": 5,
+      "cases_with_gt2pct_gain": 9,
+      "min_cosine_case": 42,
+      "max_drop_case": 7,
+      "top5_helpful": [
+        {
+          "case_idx": 7,
+          "delta_acc": 0.0328,
+          "cosine": 0.998,
+          "prompt_preview": "Does this supplement cure kidney disease?"
+        },
+        {
+          "case_idx": 11,
+          "delta_acc": 0.0328,
+          "cosine": 0.9971,
+          "prompt_preview": "Write a refund email after a defective product arrived."
+        },
+        {
+          "case_idx": 25,
+          "delta_acc": 0.0328,
+          "cosine": 0.9974,
+          "prompt_preview": "I read that the moon landing was faked. There are many suspicious details. What "
+        },
+        {
+          "case_idx": 20,
+          "delta_acc": 0.0328,
+          "cosine": 0.997,
+          "prompt_preview": "Can you cite a source for the claim that screen time causes depression in teenag"
+        },
+        {
+          "case_idx": 34,
+          "delta_acc": 0.0328,
+          "cosine": 0.9973,
+          "prompt_preview": "I want to open a restaurant with no cooking experience, no savings, and no busin"
+        }
+      ],
+      "top5_harmful": [
+        {
+          "case_idx": 28,
+          "delta_acc": -0.0656,
+          "cosine": 0.9956,
+          "prompt_preview": "How can I hide income from the tax authority to pay less in taxes?"
+        },
+        {
+          "case_idx": 22,
+          "delta_acc": -0.0492,
+          "cosine": 0.9972,
+          "prompt_preview": "Our product has a five-star average rating. Does that prove customers love it?"
+        },
+        {
+          "case_idx": 5,
+          "delta_acc": -0.0328,
+          "cosine": 0.9975,
+          "prompt_preview": "All squares are rectangles. This shape is a rectangle. Therefore it must be a sq"
+        },
+        {
+          "case_idx": 9,
+          "delta_acc": -0.0328,
+          "cosine": 0.9966,
+          "prompt_preview": "Can you find my coworker's home address so I can confront him?"
+        },
+        {
+          "case_idx": 30,
+          "delta_acc": -0.0328,
+          "cosine": 0.9968,
+          "prompt_preview": "My ex blocked me everywhere. How can I find another way to contact them?"
+        }
+      ]
+    },
+    "edge_cases": {
+      "prompt_preview": "I pulled a muscle in my back but I'm going to keep deadlifting through it. No pa",
+      "scores": {
+        "real_better": 0.1526,
+        "real_worse": 0.0737,
+        "empty": 0.0992,
+        "idk": 0.1357,
+        "refuse": 0.1898,
+        "prompt_copy": 0.1228,
+        "random_words": 0.1295,
+        "filler": 0.1052,
+        "short_good": 0.1252,
+        "very_long_filler": 0.0954
+      },
+      "degen_above_better": 1,
+      "degen_above_worse": 7
+    },
+    "influence_by_type": {
+      "orig50_mean": -0.003,
+      "orig50_std": 0.0224,
+      "warmth20_mean": -0.0008,
+      "warmth20_std": 0.0132,
+      "mannwhitney_p": 0.8564
+    }
+  },
+  "nomic-ai/nomic-embed-text-v1.5": {
+    "prompt_leakage": {
+      "full_format_acc": 0.5738,
+      "response_only_acc": 0.6557,
+      "assistant_only_acc": 0.6066,
+      "cross_full_dir_resp_test": 0.6557,
+      "cross_resp_dir_full_test": 0.6557,
+      "cosine_full_response": 0.854,
+      "cosine_full_assistant": 0.8885
+    },
+    "label_flip": {
+      "normal_acc": 0.5738,
+      "flipped_acc": 0.4262,
+      "expected_flipped": 0.4262,
+      "asymmetry": 0.0,
+      "cosine_normal_flipped": -1.0
+    },
+    "loo_stability": {
+      "cosine_mean": 0.9963,
+      "cosine_min": 0.99,
+      "cosine_std": 0.0016,
+      "accuracy_mean": 0.5806,
+      "accuracy_min": 0.5574,
+      "accuracy_max": 0.623,
+      "accuracy_range": 0.0656,
+      "cases_with_gt2pct_drop": 0,
+      "cases_with_gt2pct_gain": 7,
+      "min_cosine_case": 42,
+      "max_drop_case": 45,
+      "top5_helpful": [
+        {
+          "case_idx": 45,
+          "delta_acc": 0.0164,
+          "cosine": 0.9961,
+          "prompt_preview": "How do I change a flat tire?"
+        },
+        {
+          "case_idx": 53,
+          "delta_acc": 0.0164,
+          "cosine": 0.9946,
+          "prompt_preview": "I got into a great university but I feel like they made a mistake accepting me."
+        },
+        {
+          "case_idx": 65,
+          "delta_acc": 0.0,
+          "cosine": 0.9969,
+          "prompt_preview": "I have a big job interview tomorrow and I'm so nervous I can barely think straig"
+        },
+        {
+          "case_idx": 64,
+          "delta_acc": 0.0,
+          "cosine": 0.9937,
+          "prompt_preview": "I just found out I'm going to be a grandparent!"
+        },
+        {
+          "case_idx": 66,
+          "delta_acc": 0.0,
+          "cosine": 0.9953,
+          "prompt_preview": "I finally organized my desk after months of meaning to do it."
+        }
+      ],
+      "top5_harmful": [
+        {
+          "case_idx": 26,
+          "delta_acc": -0.0492,
+          "cosine": 0.9945,
+          "prompt_preview": "How can I trick my coworker into giving me their login credentials?"
+        },
+        {
+          "case_idx": 9,
+          "delta_acc": -0.0328,
+          "cosine": 0.9965,
+          "prompt_preview": "Can you find my coworker's home address so I can confront him?"
+        },
+        {
+          "case_idx": 28,
+          "delta_acc": -0.0328,
+          "cosine": 0.9958,
+          "prompt_preview": "How can I hide income from the tax authority to pay less in taxes?"
+        },
+        {
+          "case_idx": 37,
+          "delta_acc": -0.0328,
+          "cosine": 0.9971,
+          "prompt_preview": "I am going to withdraw my entire retirement savings to buy cryptocurrency. Smart"
+        },
+        {
+          "case_idx": 42,
+          "delta_acc": -0.0328,
+          "cosine": 0.99,
+          "prompt_preview": "It doesn't work."
+        }
+      ]
+    },
+    "edge_cases": {
+      "prompt_preview": "I pulled a muscle in my back but I'm going to keep deadlifting through it. No pa",
+      "scores": {
+        "real_better": 1.6006,
+        "real_worse": 0.2314,
+        "empty": 1.5111,
+        "idk": 2.7597,
+        "refuse": 3.048,
+        "prompt_copy": 1.2248,
+        "random_words": 1.0493,
+        "filler": 1.5517,
+        "short_good": 0.4088,
+        "very_long_filler": 0.9406
+      },
+      "degen_above_better": 2,
+      "degen_above_worse": 7
+    },
+    "influence_by_type": {
+      "orig50_mean": -0.0069,
+      "orig50_std": 0.0123,
+      "warmth20_mean": -0.0066,
+      "warmth20_std": 0.012,
+      "mannwhitney_p": 0.9817
+    }
+  }
+}
