@@ -18,9 +18,9 @@ For each compound anchor we compare it against:
 This is a direct dilution test: compound-in-one-string vs independent-sum.
 
 Note: these compound anchor strings are scored with BOTH methods from
-Experiment 1 (bipolar and cosine-to-positive), because cosine-to-positive
-just won on 14/15 single-word axes. Reporting both lets us see whether the
-dilution story changes under the better scoring method.
+Experiment 1 (bipolar and cosine-to-positive) as an ablation. The
+confirmatory default remains fixed bipolar scoring. Reporting both lets us
+see whether the dilution story changes under the diagnostic method.
 
 Rules (AGENTS.md / RESEARCH_CONTEXT.md):
   - All three local models, both splits + combined.
@@ -39,6 +39,16 @@ from pathlib import Path
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+
+from scoring_recipe import (
+    bipolar_scores,
+    cosine_positive_scores,
+    framed_response,
+    normalized_bipolar_axis,
+    pairwise_accuracy,
+    recipe_metadata,
+)
 
 BATTERY_ORIGINAL = (
     ROOT / "notes" / "research_cycles" / "cycle_002_potential_shaping"
@@ -93,28 +103,6 @@ def read_jsonl(path):
     return rows
 
 
-def framed(case, key):
-    return f"User: {case['prompt']}\nAssistant: {case[key]}"
-
-
-def cosine_to_anchor(response_embs, anchor):
-    anchor_norm = np.linalg.norm(anchor) + 1e-12
-    response_norms = np.linalg.norm(response_embs, axis=1) + 1e-12
-    return (response_embs @ anchor) / (response_norms * anchor_norm)
-
-
-def accuracy(better_scores, worse_scores):
-    margins = np.asarray(better_scores) - np.asarray(worse_scores)
-    correct = float(np.sum(margins > 0))
-    ties = float(np.sum(margins == 0))
-    return (correct + 0.5 * ties) / len(margins)
-
-
-def bipolar_axis(pos_emb, neg_emb):
-    axis = pos_emb - neg_emb
-    return axis / (np.linalg.norm(axis) + 1e-12)
-
-
 def main():
     from sentence_transformers import SentenceTransformer
 
@@ -136,6 +124,11 @@ def main():
             for k, v in COMPOUND_ANCHORS.items()
         },
         "models": MODELS,
+        "scoring_recipe": recipe_metadata("compound_anchor_ablation"),
+        "compound_anchor_policy": (
+            "compound strings are tested here only as a negative ablation; "
+            "default scoring must keep component terms as independent axes"
+        ),
         "per_model": {},
         "dilution_summary": [],
     }
@@ -161,16 +154,16 @@ def main():
         # Embed responses per split
         split_embs = {
             "firmness": (
-                embed_fn([framed(c, "better") for c in original]),
-                embed_fn([framed(c, "worse") for c in original]),
+                embed_fn([framed_response(c, "better") for c in original]),
+                embed_fn([framed_response(c, "worse") for c in original]),
             ),
             "warmth": (
-                embed_fn([framed(c, "better") for c in warmth]),
-                embed_fn([framed(c, "worse") for c in warmth]),
+                embed_fn([framed_response(c, "better") for c in warmth]),
+                embed_fn([framed_response(c, "worse") for c in warmth]),
             ),
             "combined": (
-                embed_fn([framed(c, "better") for c in combined]),
-                embed_fn([framed(c, "worse") for c in combined]),
+                embed_fn([framed_response(c, "better") for c in combined]),
+                embed_fn([framed_response(c, "worse") for c in combined]),
             ),
         }
 
@@ -194,7 +187,7 @@ def main():
             for pos, neg in comps:
                 pe = comp_embs[pos]
                 ne = comp_embs[neg]
-                comp_axis_vecs.append((pos, neg, bipolar_axis(pe, ne), pe))
+                comp_axis_vecs.append((pos, neg, normalized_bipolar_axis(pe, ne), pe))
                 comp_cos_pos.append(pe)
 
             entry = {}
@@ -203,13 +196,12 @@ def main():
                 for split, (be, we) in split_embs.items():
                     # Compound (single anchor string)
                     if method == "bipolar":
-                        ax = bipolar_axis(pos_emb, neg_emb)
-                        c_b = be @ ax
-                        c_w = we @ ax
+                        c_b = bipolar_scores(be, pos_emb, neg_emb)
+                        c_w = bipolar_scores(we, pos_emb, neg_emb)
                     else:
-                        c_b = cosine_to_anchor(be, pos_emb)
-                        c_w = cosine_to_anchor(we, pos_emb)
-                    comp_acc = accuracy(c_b, c_w)
+                        c_b = cosine_positive_scores(be, pos_emb)
+                        c_w = cosine_positive_scores(we, pos_emb)
+                    comp_acc = pairwise_accuracy(c_b, c_w)
 
                     # Independent-sum of component single words (no averaging)
                     sum_b = np.zeros(len(be))
@@ -219,18 +211,18 @@ def main():
                             sum_b += be @ axv
                             sum_w += we @ axv
                         else:
-                            sum_b += cosine_to_anchor(be, pe)
-                            sum_w += cosine_to_anchor(we, pe)
-                    sum_acc = accuracy(sum_b, sum_w)
+                            sum_b += cosine_positive_scores(be, pe)
+                            sum_w += cosine_positive_scores(we, pe)
+                    sum_acc = pairwise_accuracy(sum_b, sum_w)
 
                     # Best single component alone
                     comp_only_accs = []
                     for pos, neg, axv, pe in comp_axis_vecs:
                         if method == "bipolar":
-                            a = accuracy(be @ axv, we @ axv)
+                            a = pairwise_accuracy(be @ axv, we @ axv)
                         else:
-                            a = accuracy(cosine_to_anchor(be, pe),
-                                         cosine_to_anchor(we, pe))
+                            a = pairwise_accuracy(cosine_positive_scores(be, pe),
+                                                  cosine_positive_scores(we, pe))
                         comp_only_accs.append(a)
                     best_comp = max(comp_only_accs)
 
@@ -244,7 +236,7 @@ def main():
 
             model_results[cname] = entry
 
-            # Print using cosine (the better method from Exp 1) for the headline
+            # Print cosine first because it is the diagnostic method from Exp 1.
             m = "cosine"
             r = entry[m]["combined"]
             dil = r["compound"] - r["independent_sum"]
@@ -263,10 +255,6 @@ def main():
         results["per_model"][model_name] = model_results
         del model
         gc.collect()
-
-    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT_PATH.write_text(json.dumps(results, indent=2), encoding="utf-8")
-    print(f"\nSaved JSON: {OUTPUT_PATH}")
 
     # ---- Cross-model dilution summary ----
     print(f"\n{'='*88}")
@@ -306,6 +294,10 @@ def main():
         print("  None — no compound beats its best single component on >=2 models.")
         print("  Combining terms in one anchor string does not create a")
         print("  super-additive axis; it dilutes or ties.")
+
+    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    OUTPUT_PATH.write_text(json.dumps(results, indent=2), encoding="utf-8")
+    print(f"\nSaved JSON: {OUTPUT_PATH}")
 
 
 if __name__ == "__main__":
