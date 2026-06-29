@@ -1,0 +1,57 @@
+{
+  "experiment": "Tree decomposition L1 correlations on Gemini Embedding",
+  "date": "2026-06-28",
+  "model": "gemini-embedding-001",
+  "battery": "70-case balanced (50 orig + 20 warmth)",
+  "accuracy": {
+    "good": 0.46,
+    "careful": 0.74,
+    "thorough": 0.61,
+    "responsible": 0.57,
+    "wise": 0.56,
+    "kind": 0.51,
+    "respectful": 0.51,
+    "clear": 0.49,
+    "fair": 0.49,
+    "honest": 0.49,
+    "helpful": 0.41
+  },
+  "good_child_score_delta_correlations": {
+    "careful": 0.236,
+    "clear": -0.003,
+    "fair": 0.893,
+    "helpful": 0.929,
+    "honest": 0.873,
+    "kind": 0.915,
+    "respectful": 0.923,
+    "responsible": 0.852,
+    "thorough": 0.532,
+    "wise": 0.817
+  },
+  "good_child_axis_cosines": {
+    "careful": 0.146,
+    "clear": 0.078,
+    "fair": 0.192,
+    "helpful": 0.280,
+    "honest": 0.243,
+    "kind": 0.235,
+    "respectful": 0.338,
+    "responsible": 0.230,
+    "thorough": 0.062,
+    "wise": 0.106
+  },
+  "orig_warmth_split": {
+    "good": {"orig": 0.26, "warmth": 0.95},
+    "careful": {"orig": 0.72, "warmth": 0.80},
+    "thorough": {"orig": 0.52, "warmth": 0.85},
+    "kind": {"orig": 0.34, "warmth": 0.95},
+    "honest": {"orig": 0.30, "warmth": 0.95}
+  },
+  "cross_model_comparison_careful_good_r": {
+    "snowflake": 0.086,
+    "bge_m3": -0.246,
+    "nomic": -0.106,
+    "gemini": 0.236
+  },
+  "key_finding": "The independence pattern replicates on Gemini. Careful is the most independent child of good on all 4 models. Gemini's accuracy advantage is concentrated in independent terms (careful 74%, thorough 61%) while warmth-biased children stay near chance."
+}

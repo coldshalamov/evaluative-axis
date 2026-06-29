@@ -1,0 +1,49 @@
+{
+  "description": "Principled 5-term tree validation: in-sample (70 cases) + out-of-sample (35 expansion cases)",
+  "tree_terms": ["careful/reckless", "honest/dishonest", "helpful/unhelpful", "thorough/superficial", "restrained/unrestrained"],
+  "strategy": "A response is 'good' if ANY of the 5 axes scores better > worse. This is the decomposed good signal.",
+  "in_sample": {
+    "n": 70,
+    "splits": "45 firmness + 20 warmth + 5 sycophancy",
+    "raw_good": {
+      "snowflake-arctic-embed-m": {"overall": 0.51, "firmness": 0.51, "warmth": 0.60, "sycophancy": 0.20},
+      "bge-m3": {"overall": 0.36, "firmness": 0.18, "warmth": 0.85, "sycophancy": 0.00},
+      "nomic-embed-text-v1.5": {"overall": 0.31, "firmness": 0.13, "warmth": 0.80, "sycophancy": 0.00}
+    },
+    "tree_any": {
+      "snowflake-arctic-embed-m": {"overall": 0.86, "firmness": 0.84, "warmth": 0.85, "sycophancy": 1.00},
+      "bge-m3": {"overall": 0.93, "firmness": 0.89, "warmth": 1.00, "sycophancy": 1.00},
+      "nomic-embed-text-v1.5": {"overall": 0.96, "firmness": 0.98, "warmth": 0.95, "sycophancy": 0.80}
+    },
+    "tree_2of5": {
+      "snowflake-arctic-embed-m": {"overall": 0.74, "firmness": 0.73, "warmth": 0.75, "sycophancy": 0.80},
+      "bge-m3": {"overall": 0.79, "firmness": 0.76, "warmth": 0.85, "sycophancy": 0.80},
+      "nomic-embed-text-v1.5": {"overall": 0.77, "firmness": 0.73, "warmth": 0.90, "sycophancy": 0.60}
+    }
+  },
+  "out_of_sample": {
+    "n": 35,
+    "categories": {"anti_sycophancy_expansion": 15, "conciseness_completeness": 5, "creative_quality": 5, "factual_accuracy": 5, "nuance_context": 5},
+    "raw_good": {
+      "snowflake-arctic-embed-m": 0.23,
+      "bge-m3": 0.29,
+      "nomic-embed-text-v1.5": 0.26
+    },
+    "tree_any": {
+      "snowflake-arctic-embed-m": 0.89,
+      "bge-m3": 0.94,
+      "nomic-embed-text-v1.5": 0.91
+    },
+    "tree_2of5": {
+      "snowflake-arctic-embed-m": 0.74,
+      "bge-m3": 0.71,
+      "nomic-embed-text-v1.5": 0.83
+    }
+  },
+  "subtraction_result": {
+    "description": "Subtracting warmth+emotion directions from good/bad axis. Removes bias but leaves noise (~50% accuracy).",
+    "cos_good_warmth": {"snowflake": 0.291, "bge-m3": 0.608, "nomic": 0.328},
+    "good_minus_warmth_emotion_overall": {"snowflake": 0.47, "bge-m3": 0.51, "nomic": 0.50}
+  },
+  "key_finding": "Good fails because quality is distributed across children, not hiding behind warmth. 5 specific terms scored independently recover the full signal at 89-94% out-of-sample accuracy across 3 models."
+}

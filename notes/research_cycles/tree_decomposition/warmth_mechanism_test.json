@@ -1,0 +1,33 @@
+{
+  "experiment": "Direct warmth mechanism test",
+  "date": "2026-06-28",
+  "battery": "70-case balanced (50 orig + 20 warmth)",
+  "method": "Split cases by kind_delta sign: worse-is-warmer (kind_delta<0) vs better-is-warmer (kind_delta>=0)",
+  "results": {
+    "snowflake": {
+      "n_worse_warmer": 39,
+      "n_better_warmer": 31,
+      "good": {"worse_warmer": 0.38, "better_warmer": 0.68, "gap": 0.29},
+      "careful": {"worse_warmer": 0.51, "better_warmer": 0.45, "gap": -0.06},
+      "thorough": {"worse_warmer": 0.59, "better_warmer": 0.61, "gap": 0.02},
+      "honest": {"worse_warmer": 0.28, "better_warmer": 0.55, "gap": 0.27}
+    },
+    "bge_m3": {
+      "n_worse_warmer": 33,
+      "n_better_warmer": 37,
+      "good": {"worse_warmer": 0.24, "better_warmer": 0.46, "gap": 0.22},
+      "careful": {"worse_warmer": 0.48, "better_warmer": 0.54, "gap": 0.06},
+      "thorough": {"worse_warmer": 0.42, "better_warmer": 0.62, "gap": 0.20},
+      "honest": {"worse_warmer": 0.12, "better_warmer": 0.46, "gap": 0.34}
+    },
+    "nomic": {
+      "n_worse_warmer": 42,
+      "n_better_warmer": 28,
+      "good": {"worse_warmer": 0.14, "better_warmer": 0.57, "gap": 0.43},
+      "careful": {"worse_warmer": 0.64, "better_warmer": 0.64, "gap": 0.00},
+      "thorough": {"worse_warmer": 0.48, "better_warmer": 0.64, "gap": 0.17},
+      "honest": {"worse_warmer": 0.36, "better_warmer": 0.43, "gap": 0.07}
+    }
+  },
+  "key_finding": "Good fails specifically when quality requires rigor over warmth (14-38% accuracy). Careful shows small, direction-inconsistent gaps (0-6pt). Consistent with warmth-bias mechanism but note: kind_delta split is not independent of §4.18 correlations. Content split (orig/warmth battery) is the independent test."
+}

@@ -1,0 +1,394 @@
+{
+  "experiment": "B1: New case types (factual, logical, specificity, creative)",
+  "date": "2026-06-28",
+  "n_cases": 11,
+  "categories": {
+    "factual_cold": 4,
+    "logical": 3,
+    "specificity": 2,
+    "creative": 2
+  },
+  "results": {
+    "snowflake-arctic-embed-m": {
+      "good": {
+        "total_acc": 0.455,
+        "by_category": {
+          "factual_cold": {
+            "n": 4,
+            "correct": 1,
+            "acc": 0.25
+          },
+          "logical": {
+            "n": 3,
+            "correct": 1,
+            "acc": 0.333
+          },
+          "specificity": {
+            "n": 2,
+            "correct": 2,
+            "acc": 1.0
+          },
+          "creative": {
+            "n": 2,
+            "correct": 1,
+            "acc": 0.5
+          }
+        }
+      },
+      "careful": {
+        "total_acc": 0.727,
+        "by_category": {
+          "factual_cold": {
+            "n": 4,
+            "correct": 3,
+            "acc": 0.75
+          },
+          "logical": {
+            "n": 3,
+            "correct": 1,
+            "acc": 0.333
+          },
+          "specificity": {
+            "n": 2,
+            "correct": 2,
+            "acc": 1.0
+          },
+          "creative": {
+            "n": 2,
+            "correct": 2,
+            "acc": 1.0
+          }
+        }
+      },
+      "restrained": {
+        "total_acc": 0.818,
+        "by_category": {
+          "factual_cold": {
+            "n": 4,
+            "correct": 4,
+            "acc": 1.0
+          },
+          "logical": {
+            "n": 3,
+            "correct": 3,
+            "acc": 1.0
+          },
+          "specificity": {
+            "n": 2,
+            "correct": 1,
+            "acc": 0.5
+          },
+          "creative": {
+            "n": 2,
+            "correct": 1,
+            "acc": 0.5
+          }
+        }
+      },
+      "thorough": {
+        "total_acc": 0.091,
+        "by_category": {
+          "factual_cold": {
+            "n": 4,
+            "correct": 0,
+            "acc": 0.0
+          },
+          "logical": {
+            "n": 3,
+            "correct": 0,
+            "acc": 0.0
+          },
+          "specificity": {
+            "n": 2,
+            "correct": 0,
+            "acc": 0.0
+          },
+          "creative": {
+            "n": 2,
+            "correct": 1,
+            "acc": 0.5
+          }
+        }
+      },
+      "honest": {
+        "total_acc": 0.182,
+        "by_category": {
+          "factual_cold": {
+            "n": 4,
+            "correct": 0,
+            "acc": 0.0
+          },
+          "logical": {
+            "n": 3,
+            "correct": 0,
+            "acc": 0.0
+          },
+          "specificity": {
+            "n": 2,
+            "correct": 2,
+            "acc": 1.0
+          },
+          "creative": {
+            "n": 2,
+            "correct": 0,
+            "acc": 0.0
+          }
+        }
+      }
+    },
+    "bge-m3": {
+      "good": {
+        "total_acc": 0.182,
+        "by_category": {
+          "factual_cold": {
+            "n": 4,
+            "correct": 1,
+            "acc": 0.25
+          },
+          "logical": {
+            "n": 3,
+            "correct": 0,
+            "acc": 0.0
+          },
+          "specificity": {
+            "n": 2,
+            "correct": 0,
+            "acc": 0.0
+          },
+          "creative": {
+            "n": 2,
+            "correct": 1,
+            "acc": 0.5
+          }
+        }
+      },
+      "careful": {
+        "total_acc": 0.182,
+        "by_category": {
+          "factual_cold": {
+            "n": 4,
+            "correct": 1,
+            "acc": 0.25
+          },
+          "logical": {
+            "n": 3,
+            "correct": 0,
+            "acc": 0.0
+          },
+          "specificity": {
+            "n": 2,
+            "correct": 1,
+            "acc": 0.5
+          },
+          "creative": {
+            "n": 2,
+            "correct": 0,
+            "acc": 0.0
+          }
+        }
+      },
+      "restrained": {
+        "total_acc": 0.818,
+        "by_category": {
+          "factual_cold": {
+            "n": 4,
+            "correct": 2,
+            "acc": 0.5
+          },
+          "logical": {
+            "n": 3,
+            "correct": 3,
+            "acc": 1.0
+          },
+          "specificity": {
+            "n": 2,
+            "correct": 2,
+            "acc": 1.0
+          },
+          "creative": {
+            "n": 2,
+            "correct": 2,
+            "acc": 1.0
+          }
+        }
+      },
+      "thorough": {
+        "total_acc": 0.182,
+        "by_category": {
+          "factual_cold": {
+            "n": 4,
+            "correct": 1,
+            "acc": 0.25
+          },
+          "logical": {
+            "n": 3,
+            "correct": 0,
+            "acc": 0.0
+          },
+          "specificity": {
+            "n": 2,
+            "correct": 0,
+            "acc": 0.0
+          },
+          "creative": {
+            "n": 2,
+            "correct": 1,
+            "acc": 0.5
+          }
+        }
+      },
+      "honest": {
+        "total_acc": 0.091,
+        "by_category": {
+          "factual_cold": {
+            "n": 4,
+            "correct": 0,
+            "acc": 0.0
+          },
+          "logical": {
+            "n": 3,
+            "correct": 0,
+            "acc": 0.0
+          },
+          "specificity": {
+            "n": 2,
+            "correct": 0,
+            "acc": 0.0
+          },
+          "creative": {
+            "n": 2,
+            "correct": 1,
+            "acc": 0.5
+          }
+        }
+      }
+    },
+    "nomic-embed-text-v1.5": {
+      "good": {
+        "total_acc": 0.182,
+        "by_category": {
+          "factual_cold": {
+            "n": 4,
+            "correct": 1,
+            "acc": 0.25
+          },
+          "logical": {
+            "n": 3,
+            "correct": 0,
+            "acc": 0.0
+          },
+          "specificity": {
+            "n": 2,
+            "correct": 0,
+            "acc": 0.0
+          },
+          "creative": {
+            "n": 2,
+            "correct": 1,
+            "acc": 0.5
+          }
+        }
+      },
+      "careful": {
+        "total_acc": 0.818,
+        "by_category": {
+          "factual_cold": {
+            "n": 4,
+            "correct": 4,
+            "acc": 1.0
+          },
+          "logical": {
+            "n": 3,
+            "correct": 1,
+            "acc": 0.333
+          },
+          "specificity": {
+            "n": 2,
+            "correct": 2,
+            "acc": 1.0
+          },
+          "creative": {
+            "n": 2,
+            "correct": 2,
+            "acc": 1.0
+          }
+        }
+      },
+      "restrained": {
+        "total_acc": 0.727,
+        "by_category": {
+          "factual_cold": {
+            "n": 4,
+            "correct": 3,
+            "acc": 0.75
+          },
+          "logical": {
+            "n": 3,
+            "correct": 1,
+            "acc": 0.333
+          },
+          "specificity": {
+            "n": 2,
+            "correct": 2,
+            "acc": 1.0
+          },
+          "creative": {
+            "n": 2,
+            "correct": 2,
+            "acc": 1.0
+          }
+        }
+      },
+      "thorough": {
+        "total_acc": 0.545,
+        "by_category": {
+          "factual_cold": {
+            "n": 4,
+            "correct": 3,
+            "acc": 0.75
+          },
+          "logical": {
+            "n": 3,
+            "correct": 0,
+            "acc": 0.0
+          },
+          "specificity": {
+            "n": 2,
+            "correct": 1,
+            "acc": 0.5
+          },
+          "creative": {
+            "n": 2,
+            "correct": 2,
+            "acc": 1.0
+          }
+        }
+      },
+      "honest": {
+        "total_acc": 0.0,
+        "by_category": {
+          "factual_cold": {
+            "n": 4,
+            "correct": 0,
+            "acc": 0.0
+          },
+          "logical": {
+            "n": 3,
+            "correct": 0,
+            "acc": 0.0
+          },
+          "specificity": {
+            "n": 2,
+            "correct": 0,
+            "acc": 0.0
+          },
+          "creative": {
+            "n": 2,
+            "correct": 0,
+            "acc": 0.0
+          }
+        }
+      }
+    }
+  }
+}

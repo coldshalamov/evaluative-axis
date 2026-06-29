@@ -1,0 +1,181 @@
+{
+  "experiment": "Restraint hypothesis test",
+  "date": "2026-06-28",
+  "hypothesis": "Warmth-independence = restraint/discipline semantics",
+  "design": {
+    "n_independent_predictions": 3,
+    "n_biased_predictions": 3,
+    "null_score": 3
+  },
+  "results": {
+    "snowflake-arctic-embed-m": {
+      "restrained": {
+        "accuracy": 0.543,
+        "orig_accuracy": 0.58,
+        "warmth_accuracy": 0.45,
+        "r_good": -0.055,
+        "p_value": 0.6501,
+        "predicted": "independent",
+        "prediction_correct": true
+      },
+      "disciplined": {
+        "accuracy": 0.457,
+        "orig_accuracy": 0.36,
+        "warmth_accuracy": 0.7,
+        "r_good": 0.409,
+        "p_value": 0.0004,
+        "predicted": "independent",
+        "prediction_correct": false
+      },
+      "temperate": {
+        "accuracy": 0.371,
+        "orig_accuracy": 0.38,
+        "warmth_accuracy": 0.35,
+        "r_good": 0.105,
+        "p_value": 0.3869,
+        "predicted": "independent",
+        "prediction_correct": true
+      },
+      "exceptional": {
+        "accuracy": 0.471,
+        "orig_accuracy": 0.42,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.205,
+        "p_value": 0.0894,
+        "predicted": "biased",
+        "prediction_correct": false
+      },
+      "remarkable": {
+        "accuracy": 0.429,
+        "orig_accuracy": 0.38,
+        "warmth_accuracy": 0.55,
+        "r_good": 0.23,
+        "p_value": 0.0557,
+        "predicted": "biased",
+        "prediction_correct": false
+      },
+      "brilliant": {
+        "accuracy": 0.357,
+        "orig_accuracy": 0.2,
+        "warmth_accuracy": 0.75,
+        "r_good": 0.121,
+        "p_value": 0.3179,
+        "predicted": "biased",
+        "prediction_correct": false
+      }
+    },
+    "bge-m3": {
+      "restrained": {
+        "accuracy": 0.643,
+        "orig_accuracy": 0.68,
+        "warmth_accuracy": 0.55,
+        "r_good": -0.574,
+        "p_value": 0.0,
+        "predicted": "independent",
+        "prediction_correct": false
+      },
+      "disciplined": {
+        "accuracy": 0.257,
+        "orig_accuracy": 0.12,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.811,
+        "p_value": 0.0,
+        "predicted": "independent",
+        "prediction_correct": false
+      },
+      "temperate": {
+        "accuracy": 0.386,
+        "orig_accuracy": 0.42,
+        "warmth_accuracy": 0.3,
+        "r_good": 0.244,
+        "p_value": 0.0416,
+        "predicted": "independent",
+        "prediction_correct": true
+      },
+      "exceptional": {
+        "accuracy": 0.343,
+        "orig_accuracy": 0.16,
+        "warmth_accuracy": 0.8,
+        "r_good": 0.695,
+        "p_value": 0.0,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "remarkable": {
+        "accuracy": 0.357,
+        "orig_accuracy": 0.22,
+        "warmth_accuracy": 0.7,
+        "r_good": 0.702,
+        "p_value": 0.0,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "brilliant": {
+        "accuracy": 0.329,
+        "orig_accuracy": 0.14,
+        "warmth_accuracy": 0.8,
+        "r_good": 0.845,
+        "p_value": 0.0,
+        "predicted": "biased",
+        "prediction_correct": true
+      }
+    },
+    "nomic-embed-text-v1.5": {
+      "restrained": {
+        "accuracy": 0.614,
+        "orig_accuracy": 0.66,
+        "warmth_accuracy": 0.5,
+        "r_good": -0.237,
+        "p_value": 0.0486,
+        "predicted": "independent",
+        "prediction_correct": true
+      },
+      "disciplined": {
+        "accuracy": 0.329,
+        "orig_accuracy": 0.32,
+        "warmth_accuracy": 0.35,
+        "r_good": 0.285,
+        "p_value": 0.0167,
+        "predicted": "independent",
+        "prediction_correct": true
+      },
+      "temperate": {
+        "accuracy": 0.471,
+        "orig_accuracy": 0.54,
+        "warmth_accuracy": 0.3,
+        "r_good": 0.091,
+        "p_value": 0.4558,
+        "predicted": "independent",
+        "prediction_correct": true
+      },
+      "exceptional": {
+        "accuracy": 0.414,
+        "orig_accuracy": 0.24,
+        "warmth_accuracy": 0.85,
+        "r_good": 0.542,
+        "p_value": 0.0,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "remarkable": {
+        "accuracy": 0.386,
+        "orig_accuracy": 0.3,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.662,
+        "p_value": 0.0,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "brilliant": {
+        "accuracy": 0.257,
+        "orig_accuracy": 0.2,
+        "warmth_accuracy": 0.4,
+        "r_good": 0.47,
+        "p_value": 0.0,
+        "predicted": "biased",
+        "prediction_correct": true
+      }
+    }
+  },
+  "total_correct_on_2_of_3": 5
+}

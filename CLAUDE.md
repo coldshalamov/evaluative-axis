@@ -48,7 +48,8 @@ The paper draft is at `paper/draft.md`.
 
 - No single word survives both firmness and warmth on all three models
 - "Good/Bad" is bipolar: 85% on warmth, 16% on firmness (BGE-M3)
-- "Careful/Reckless" captures firmness but fails warmth
+- Subtracting warmth from "good" leaves noise at chance — quality IS in the children
+- 5-term tree (careful, honest, helpful, thorough, restrained) with OR logic: 89-94% OOS across all 3 models
+- This is the decomposed "good" signal: each term catches different quality dimensions
 - Gemini Embedding 2 dramatically outperforms local models (cause unknown)
-- Compositing kills signal; independent scoring + summing preserves it
-- The "good" tree decomposition theory is the leading framework but untested
+- The "good" tree decomposition is confirmed: neighborhood analysis shows 40% warmth+emotion vs 12% competence+restraint

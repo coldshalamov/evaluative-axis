@@ -1,0 +1,30 @@
+{
+  "experiment": "Warmth predicts good's behavior",
+  "date": "2026-06-28",
+  "results": {
+    "snowflake-arctic-embed-m": {
+      "kind_pos_good_acc": 0.677,
+      "kind_neg_good_acc": 0.385,
+      "kind_pos_careful_acc": 0.452,
+      "kind_neg_careful_acc": 0.513,
+      "prediction_acc": 0.643,
+      "n_disagree": 30
+    },
+    "bge-m3": {
+      "kind_pos_good_acc": 0.459,
+      "kind_neg_good_acc": 0.242,
+      "kind_pos_careful_acc": 0.541,
+      "kind_neg_careful_acc": 0.485,
+      "prediction_acc": 0.6,
+      "n_disagree": 39
+    },
+    "nomic-embed-text-v1.5": {
+      "kind_pos_good_acc": 0.571,
+      "kind_neg_good_acc": 0.143,
+      "kind_pos_careful_acc": 0.643,
+      "kind_neg_careful_acc": 0.643,
+      "prediction_acc": 0.743,
+      "n_disagree": 37
+    }
+  }
+}

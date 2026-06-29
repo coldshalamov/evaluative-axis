@@ -1,0 +1,19 @@
+{
+  "per_model": {
+    "snowflake/snowflake-arctic-embed-m": {
+      "careful": {
+        "bipolar": {
+          "orig": 0.52,
+          "warm": 0.4,
+          "comb": 0.4857
+        },
+        "cospos": {
+          "orig": 0.44,
+          "warm": 0.65,
+          "comb": 0.5
+        },
+        "anchor_geometry": {
+          "cos_pos_to_responses": 0.4574,
+          "cos_neg_to_responses": 0.4946,
+          "cos_between_anchors": 0.9057,
+          "neg_closer_than_pos": 

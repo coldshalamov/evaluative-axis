@@ -1,0 +1,219 @@
+{
+  "experiment": "Pre-registered warmth-bias prediction test",
+  "date": "2026-06-28",
+  "predictions": {
+    "independent": [
+      "prudent",
+      "vigilant",
+      "scrupulous",
+      "measured"
+    ],
+    "biased": [
+      "exemplary",
+      "superb",
+      "commendable",
+      "outstanding",
+      "gracious",
+      "benevolent"
+    ],
+    "criterion_independent": "|r_good| < 0.3",
+    "criterion_biased": "r_good > 0.4"
+  },
+  "results": {
+    "snowflake-arctic-embed-m": {
+      "prudent": {
+        "accuracy": 0.5,
+        "r_good": 0.16,
+        "predicted": "independent",
+        "prediction_correct": true
+      },
+      "vigilant": {
+        "accuracy": 0.41,
+        "r_good": 0.38,
+        "predicted": "independent",
+        "prediction_correct": false
+      },
+      "scrupulous": {
+        "accuracy": 0.46,
+        "r_good": -0.12,
+        "predicted": "independent",
+        "prediction_correct": true
+      },
+      "measured": {
+        "accuracy": 0.53,
+        "r_good": 0.36,
+        "predicted": "independent",
+        "prediction_correct": false
+      },
+      "exemplary": {
+        "accuracy": 0.47,
+        "r_good": 0.61,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "superb": {
+        "accuracy": 0.36,
+        "r_good": 0.59,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "commendable": {
+        "accuracy": 0.41,
+        "r_good": 0.62,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "outstanding": {
+        "accuracy": 0.44,
+        "r_good": 0.31,
+        "predicted": "biased",
+        "prediction_correct": false
+      },
+      "gracious": {
+        "accuracy": 0.33,
+        "r_good": 0.52,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "benevolent": {
+        "accuracy": 0.44,
+        "r_good": 0.48,
+        "predicted": "biased",
+        "prediction_correct": true
+      }
+    },
+    "bge-m3": {
+      "prudent": {
+        "accuracy": 0.44,
+        "r_good": -0.01,
+        "predicted": "independent",
+        "prediction_correct": true
+      },
+      "vigilant": {
+        "accuracy": 0.36,
+        "r_good": 0.71,
+        "predicted": "independent",
+        "prediction_correct": false
+      },
+      "scrupulous": {
+        "accuracy": 0.29,
+        "r_good": 0.8,
+        "predicted": "independent",
+        "prediction_correct": false
+      },
+      "measured": {
+        "accuracy": 0.51,
+        "r_good": 0.2,
+        "predicted": "independent",
+        "prediction_correct": true
+      },
+      "exemplary": {
+        "accuracy": 0.36,
+        "r_good": 0.74,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "superb": {
+        "accuracy": 0.37,
+        "r_good": 0.91,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "commendable": {
+        "accuracy": 0.37,
+        "r_good": 0.95,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "outstanding": {
+        "accuracy": 0.31,
+        "r_good": 0.7,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "gracious": {
+        "accuracy": 0.34,
+        "r_good": 0.81,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "benevolent": {
+        "accuracy": 0.4,
+        "r_good": 0.82,
+        "predicted": "biased",
+        "prediction_correct": true
+      }
+    },
+    "nomic-embed-text-v1.5": {
+      "prudent": {
+        "accuracy": 0.46,
+        "r_good": 0.42,
+        "predicted": "independent",
+        "prediction_correct": false
+      },
+      "vigilant": {
+        "accuracy": 0.46,
+        "r_good": 0.64,
+        "predicted": "independent",
+        "prediction_correct": false
+      },
+      "scrupulous": {
+        "accuracy": 0.51,
+        "r_good": 0.44,
+        "predicted": "independent",
+        "prediction_correct": false
+      },
+      "measured": {
+        "accuracy": 0.51,
+        "r_good": 0.12,
+        "predicted": "independent",
+        "prediction_correct": true
+      },
+      "exemplary": {
+        "accuracy": 0.3,
+        "r_good": 0.71,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "superb": {
+        "accuracy": 0.33,
+        "r_good": 0.78,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "commendable": {
+        "accuracy": 0.34,
+        "r_good": 0.77,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "outstanding": {
+        "accuracy": 0.31,
+        "r_good": 0.76,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "gracious": {
+        "accuracy": 0.41,
+        "r_good": 0.86,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "benevolent": {
+        "accuracy": 0.3,
+        "r_good": 0.8,
+        "predicted": "biased",
+        "prediction_correct": true
+      }
+    }
+  },
+  "total_correct_on_2_of_3": 8,
+  "success_criterion": "8/10",
+  "key_findings": [
+    "All 6 warmth-biased predictions correct (6/6): exemplary, superb, commendable, outstanding, gracious, benevolent all show r_good > 0.4 on at least 2/3 models",
+    "2/4 warmth-independent predictions correct: prudent (r=+0.16/-0.01/+0.42) and measured (r=+0.36/+0.20/+0.12) are independent on 2+ models",
+    "2 predicted-independent terms failed: vigilant (r=0.38-0.71) and scrupulous (r=-0.12 to +0.80) are warmth-biased on most models",
+    "Measured is the only new term that matches careful s independence pattern: r_good near zero on 2/3 models, balanced content split",
+    "None of the 10 new terms approach careful s accuracy (49-64%), confirming careful s unique position"
+  ]
+}

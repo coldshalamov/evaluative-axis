@@ -1,0 +1,72 @@
+{
+  "experiment": "Composite training signal analysis",
+  "date": "2026-06-28",
+  "results": {
+    "snowflake-arctic-embed-m": {
+      "composites_all_positive": [
+        "restrained+thorough",
+        "careful+restrained+thorough",
+        "thorough+measured",
+        "restrained+kind",
+        "thorough+deliberate+measured",
+        "careful+restrained+deliberate",
+        "careful+thorough",
+        "restrained+deliberate",
+        "careful+thorough+measured"
+      ],
+      "best_composite": {
+        "name": "restrained+thorough",
+        "d_all": 0.08325105478116418,
+        "d_firm": 0.05379188731089024,
+        "d_warm": 0.10935894592638386,
+        "d_syc": 0.23302015584910296,
+        "pair": 0.5857142857142857
+      }
+    },
+    "bge-m3": {
+      "composites_all_positive": [
+        "restrained+kind",
+        "restrained+thorough",
+        "restrained+thorough+measured",
+        "careful+kind",
+        "restrained+thorough+deliberate",
+        "careful+restrained+thorough"
+      ],
+      "best_composite": {
+        "name": "restrained+kind",
+        "d_all": 0.36254011586323603,
+        "d_firm": 0.328566548892065,
+        "d_warm": 0.41084364431905335,
+        "d_syc": 0.9825892909330196,
+        "pair": 0.6571428571428571
+      }
+    },
+    "nomic-embed-text-v1.5": {
+      "composites_all_positive": [
+        "careful+restrained+measured",
+        "careful+restrained",
+        "careful+restrained+thorough",
+        "restrained+measured",
+        "careful+restrained+deliberate",
+        "careful+measured",
+        "careful+thorough+measured",
+        "careful+thorough",
+        "careful+deliberate+measured",
+        "restrained+thorough+measured",
+        "careful+thorough+deliberate",
+        "careful+deliberate",
+        "thorough+measured",
+        "careful+restrained+precise",
+        "restrained+measured+precise"
+      ],
+      "best_composite": {
+        "name": "careful+restrained+measured",
+        "d_all": 0.20792955448730496,
+        "d_firm": 0.19862347313932582,
+        "d_warm": 0.22243104804459135,
+        "d_syc": 0.3029751263779106,
+        "pair": 0.6142857142857143
+      }
+    }
+  }
+}

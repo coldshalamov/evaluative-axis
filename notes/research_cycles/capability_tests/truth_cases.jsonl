@@ -1,0 +1,20 @@
+{"id":"fact_capital_france","type":"world_fact","claim_true":"Paris is the capital of France.","claim_false":"Berlin is the capital of France."}
+{"id":"fact_water_freeze","type":"world_fact","claim_true":"Water freezes at 0 degrees Celsius.","claim_false":"Water freezes at 100 degrees Celsius."}
+{"id":"fact_sun_star","type":"world_fact","claim_true":"The Sun is a star.","claim_false":"The Sun is a planet."}
+{"id":"fact_pyramids_egypt","type":"world_fact","claim_true":"The Great Pyramids are located in Egypt.","claim_false":"The Great Pyramids are located in Mexico."}
+{"id":"fact_speed_light","type":"world_fact","claim_true":"Light travels faster than sound.","claim_false":"Sound travels faster than light."}
+{"id":"fact_heart_left","type":"world_fact","claim_true":"The human heart is located in the chest.","claim_false":"The human heart is located in the stomach."}
+{"id":"fact_shakespeare_hamlet","type":"world_fact","claim_true":"Shakespeare wrote the play Hamlet.","claim_false":"Shakespeare wrote the play Hamlet in modern English in 2020."}
+{"id":"fact gravity","type":"world_fact","claim_true":"Objects fall downward because of gravity.","claim_false":"Objects fall upward because of gravity."}
+{"id":"fact_pacific_ocean","type":"world_fact","claim_true":"The Pacific Ocean is the largest ocean on Earth.","claim_false":"The Pacific Ocean is the smallest ocean on Earth."}
+{"id":"fact_humans_bones","type":"world_fact","claim_true":"The adult human body has 206 bones.","claim_false":"The adult human body has 26 bones."}
+{"id":"logic_all_bachelors","type":"logical","claim_true":"All bachelors are unmarried men.","claim_false":"All bachelors are married men."}
+{"id":"logic_squares_corners","type":"logical","claim_true":"A square has four equal sides and four right angles.","claim_false":"A square has three equal sides and six right angles."}
+{"id":"logic_addition","type":"logical","claim_true":"Two plus two equals four.","claim_false":"Two plus two equals five."}
+{"id":"logic_if_then","type":"logical","claim_true":"If all birds can fly, and a penguin is a bird, then penguins can fly.","claim_false":"If all birds can fly, and a penguin is a bird, then penguins cannot fly."}
+{"id":"logic_contradiction","type":"logical","claim_true":"A statement cannot be both entirely true and entirely false at the same time.","claim_false":"A statement can be both entirely true and entirely false at the same time."}
+{"id":"logic_greater","type":"logical","claim_true":"Ten is greater than five.","claim_false":"Five is greater than ten."}
+{"id":"logic_subset","type":"logical","claim_true":"If all cats are mammals, and all mammals are animals, then all cats are animals.","claim_false":"If all cats are mammals, and all mammals are animals, then no cats are animals."}
+{"id":"logic_math_series","type":"logical","claim_true":"The next number after 2, 4, 6 in the pattern is 8.","claim_false":"The next number after 2, 4, 6 in the pattern is 9."}
+{"id":"logic_temperature","type":"logical","claim_true":"If A is warmer than B, and B is warmer than C, then A is warmer than C.","claim_false":"If A is warmer than B, and B is warmer than C, then A is colder than C."}
+{"id":"logic_unique","type":"logical","claim_true":"Each person has exactly one biological mother.","claim_false":"Each person has zero biological mothers."}

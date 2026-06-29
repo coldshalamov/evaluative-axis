@@ -1,0 +1,102 @@
+{
+  "experiment": "Semantic neighborhood decomposition of good vs careful",
+  "date": "2026-06-28",
+  "finding": "The semantic neighborhood of 'good' is warmth-heavy (40% warmth+emotion cross-model avg), while 'careful' is competence-heavy (30% competence+restraint). Neighborhood warmth fraction predicts scoring warmth bias (r=+0.65 to +0.69 across 3 models, n=7 axes).",
+  "good_neighborhood_composition_crossmodel_avg": {
+    "warmth": 0.21,
+    "emotion": 0.19,
+    "misc": 0.18,
+    "utility": 0.11,
+    "competence": 0.09,
+    "integrity": 0.08,
+    "wisdom": 0.07,
+    "strength": 0.04,
+    "restraint": 0.03
+  },
+  "careful_neighborhood_composition_crossmodel_avg": {
+    "competence": 0.16,
+    "restraint": 0.14,
+    "strength": 0.11,
+    "warmth": 0.11,
+    "misc": 0.09,
+    "wisdom": 0.08,
+    "emotion": 0.07,
+    "integrity": 0.07,
+    "social": 0.07,
+    "neg_competence": 0.06,
+    "utility": 0.03,
+    "neg_warmth": 0.02
+  },
+  "warmth_fraction_by_model": {
+    "good": {
+      "snowflake": 0.27,
+      "bge-m3": 0.53,
+      "nomic": 0.47,
+      "mean": 0.42
+    },
+    "careful": {
+      "snowflake": 0.2,
+      "bge-m3": 0.17,
+      "nomic": 0.23,
+      "mean": 0.2
+    },
+    "restrained": {
+      "snowflake": 0.1,
+      "bge-m3": 0.07,
+      "nomic": 0.13,
+      "mean": 0.1
+    },
+    "thorough": {
+      "snowflake": 0.07,
+      "bge-m3": 0.03,
+      "nomic": 0.03,
+      "mean": 0.04
+    },
+    "precise": {
+      "snowflake": 0.07,
+      "bge-m3": 0.0,
+      "nomic": 0.0,
+      "mean": 0.02
+    },
+    "rigorous": {
+      "snowflake": 0.0,
+      "bge-m3": 0.03,
+      "nomic": 0.03,
+      "mean": 0.02
+    }
+  },
+  "correlations": {
+    "snowflake": {
+      "r_warmth_frac_warmth_d": 0.687,
+      "r_warmth_frac_firmness_d": -0.784,
+      "n": 7
+    },
+    "bge-m3": {
+      "r_warmth_frac_warmth_d": 0.645,
+      "r_warmth_frac_firmness_d": -0.471,
+      "n": 7
+    },
+    "nomic": {
+      "r_warmth_frac_warmth_d": 0.658,
+      "r_warmth_frac_firmness_d": -0.774,
+      "n": 7
+    }
+  },
+  "cross_model_good_neighbors_all_3": [
+    "encouraging (warmth)",
+    "happy (emotion)",
+    "helpful (utility)",
+    "positive (emotion)",
+    "satisfied (emotion)",
+    "strong (strength)",
+    "suitable (misc)"
+  ],
+  "cross_model_careful_neighbors_all_3": [
+    "cautious (restraint)"
+  ],
+  "good_careful_overlap": {
+    "bge-m3": 4,
+    "nomic": 5,
+    "snowflake": 15
+  }
+}

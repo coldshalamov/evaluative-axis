@@ -1,0 +1,339 @@
+{
+  "metadata": {
+    "axes": [
+      "careful",
+      "honest",
+      "kind",
+      "wise",
+      "helpful",
+      "thorough",
+      "fair",
+      "responsible",
+      "clear",
+      "good",
+      "hard",
+      "gentle",
+      "patient",
+      "supportive",
+      "constructive"
+    ],
+    "sets": {
+      "all_15": [
+        "careful",
+        "honest",
+        "kind",
+        "wise",
+        "helpful",
+        "thorough",
+        "fair",
+        "responsible",
+        "clear",
+        "good",
+        "hard",
+        "gentle",
+        "patient",
+        "supportive",
+        "constructive"
+      ],
+      "tree_4_available": [
+        "careful",
+        "honest",
+        "helpful",
+        "thorough"
+      ],
+      "firmness_3": [
+        "hard",
+        "careful",
+        "thorough"
+      ],
+      "warmth_8": [
+        "good",
+        "kind",
+        "helpful",
+        "honest",
+        "supportive",
+        "constructive",
+        "gentle",
+        "wise"
+      ]
+    },
+    "methods": [
+      "raw",
+      "zscore",
+      "sign",
+      "rank"
+    ]
+  },
+  "per_model": {
+    "snowflake/snowflake-arctic-embed-m": {
+      "all_15": {
+        "raw": {
+          "combined": 0.4714,
+          "firmness": 0.44,
+          "warmth": 0.55
+        },
+        "zscore": {
+          "combined": 0.4714,
+          "firmness": 0.44,
+          "warmth": 0.55
+        },
+        "sign": {
+          "combined": 0.5429,
+          "firmness": 0.46,
+          "warmth": 0.75
+        },
+        "rank": {
+          "combined": 0.5143,
+          "firmness": 0.44,
+          "warmth": 0.7
+        }
+      },
+      "tree_4_available": {
+        "raw": {
+          "combined": 0.6143,
+          "firmness": 0.58,
+          "warmth": 0.7
+        },
+        "zscore": {
+          "combined": 0.6,
+          "firmness": 0.56,
+          "warmth": 0.7
+        },
+        "sign": {
+          "combined": 0.5429,
+          "firmness": 0.52,
+          "warmth": 0.6
+        },
+        "rank": {
+          "combined": 0.6071,
+          "firmness": 0.58,
+          "warmth": 0.675
+        }
+      },
+      "firmness_3": {
+        "raw": {
+          "combined": 0.5571,
+          "firmness": 0.58,
+          "warmth": 0.5
+        },
+        "zscore": {
+          "combined": 0.5,
+          "firmness": 0.5,
+          "warmth": 0.5
+        },
+        "sign": {
+          "combined": 0.5429,
+          "firmness": 0.56,
+          "warmth": 0.5
+        },
+        "rank": {
+          "combined": 0.5,
+          "firmness": 0.5,
+          "warmth": 0.5
+        }
+      },
+      "warmth_8": {
+        "raw": {
+          "combined": 0.4857,
+          "firmness": 0.44,
+          "warmth": 0.6
+        },
+        "zscore": {
+          "combined": 0.4857,
+          "firmness": 0.44,
+          "warmth": 0.6
+        },
+        "sign": {
+          "combined": 0.4857,
+          "firmness": 0.41,
+          "warmth": 0.675
+        },
+        "rank": {
+          "combined": 0.5143,
+          "firmness": 0.46,
+          "warmth": 0.65
+        }
+      }
+    },
+    "BAAI/bge-m3": {
+      "all_15": {
+        "raw": {
+          "combined": 0.3571,
+          "firmness": 0.18,
+          "warmth": 0.8
+        },
+        "zscore": {
+          "combined": 0.4714,
+          "firmness": 0.32,
+          "warmth": 0.85
+        },
+        "sign": {
+          "combined": 0.3571,
+          "firmness": 0.2,
+          "warmth": 0.75
+        },
+        "rank": {
+          "combined": 0.5143,
+          "firmness": 0.38,
+          "warmth": 0.85
+        }
+      },
+      "tree_4_available": {
+        "raw": {
+          "combined": 0.3714,
+          "firmness": 0.22,
+          "warmth": 0.75
+        },
+        "zscore": {
+          "combined": 0.4714,
+          "firmness": 0.32,
+          "warmth": 0.85
+        },
+        "sign": {
+          "combined": 0.3857,
+          "firmness": 0.26,
+          "warmth": 0.7
+        },
+        "rank": {
+          "combined": 0.4857,
+          "firmness": 0.34,
+          "warmth": 0.85
+        }
+      },
+      "firmness_3": {
+        "raw": {
+          "combined": 0.5714,
+          "firmness": 0.56,
+          "warmth": 0.6
+        },
+        "zscore": {
+          "combined": 0.5286,
+          "firmness": 0.5,
+          "warmth": 0.6
+        },
+        "sign": {
+          "combined": 0.5571,
+          "firmness": 0.56,
+          "warmth": 0.55
+        },
+        "rank": {
+          "combined": 0.5286,
+          "firmness": 0.5,
+          "warmth": 0.6
+        }
+      },
+      "warmth_8": {
+        "raw": {
+          "combined": 0.3571,
+          "firmness": 0.18,
+          "warmth": 0.8
+        },
+        "zscore": {
+          "combined": 0.5143,
+          "firmness": 0.38,
+          "warmth": 0.85
+        },
+        "sign": {
+          "combined": 0.3714,
+          "firmness": 0.22,
+          "warmth": 0.75
+        },
+        "rank": {
+          "combined": 0.5429,
+          "firmness": 0.42,
+          "warmth": 0.85
+        }
+      }
+    },
+    "nomic-ai/nomic-embed-text-v1.5": {
+      "all_15": {
+        "raw": {
+          "combined": 0.3571,
+          "firmness": 0.18,
+          "warmth": 0.8
+        },
+        "zscore": {
+          "combined": 0.4714,
+          "firmness": 0.32,
+          "warmth": 0.85
+        },
+        "sign": {
+          "combined": 0.3429,
+          "firmness": 0.18,
+          "warmth": 0.75
+        },
+        "rank": {
+          "combined": 0.5143,
+          "firmness": 0.38,
+          "warmth": 0.85
+        }
+      },
+      "tree_4_available": {
+        "raw": {
+          "combined": 0.4,
+          "firmness": 0.26,
+          "warmth": 0.75
+        },
+        "zscore": {
+          "combined": 0.4714,
+          "firmness": 0.36,
+          "warmth": 0.75
+        },
+        "sign": {
+          "combined": 0.4714,
+          "firmness": 0.35,
+          "warmth": 0.775
+        },
+        "rank": {
+          "combined": 0.4929,
+          "firmness": 0.39,
+          "warmth": 0.75
+        }
+      },
+      "firmness_3": {
+        "raw": {
+          "combined": 0.6429,
+          "firmness": 0.64,
+          "warmth": 0.65
+        },
+        "zscore": {
+          "combined": 0.5,
+          "firmness": 0.5,
+          "warmth": 0.5
+        },
+        "sign": {
+          "combined": 0.6143,
+          "firmness": 0.6,
+          "warmth": 0.65
+        },
+        "rank": {
+          "combined": 0.5143,
+          "firmness": 0.54,
+          "warmth": 0.45
+        }
+      },
+      "warmth_8": {
+        "raw": {
+          "combined": 0.3429,
+          "firmness": 0.16,
+          "warmth": 0.8
+        },
+        "zscore": {
+          "combined": 0.4857,
+          "firmness": 0.34,
+          "warmth": 0.85
+        },
+        "sign": {
+          "combined": 0.3214,
+          "firmness": 0.13,
+          "warmth": 0.8
+        },
+        "rank": {
+          "combined": 0.5143,
+          "firmness": 0.36,
+          "warmth": 0.9
+        }
+      }
+    }
+  }
+}

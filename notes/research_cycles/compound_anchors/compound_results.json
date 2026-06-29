@@ -1,0 +1,1469 @@
+{
+  "experiment": "Cross-Concept Compound Anchors",
+  "n_firmness": 50,
+  "n_warmth": 20,
+  "compound_anchors": {
+    "careful_kind": {
+      "pos": [
+        "Careful and kind"
+      ],
+      "neg": [
+        "Reckless and cruel"
+      ],
+      "components": [
+        [
+          "Careful",
+          "Reckless"
+        ],
+        [
+          "Kind",
+          "Cruel"
+        ]
+      ]
+    },
+    "honest_gentle": {
+      "pos": [
+        "Honest and gentle"
+      ],
+      "neg": [
+        "Dishonest and harsh"
+      ],
+      "components": [
+        [
+          "Honest",
+          "Dishonest"
+        ],
+        [
+          "Gentle",
+          "Harsh"
+        ]
+      ]
+    },
+    "thorough_supportive": {
+      "pos": [
+        "Thorough and supportive"
+      ],
+      "neg": [
+        "Superficial and dismissive"
+      ],
+      "components": [
+        [
+          "Thorough",
+          "Superficial"
+        ],
+        [
+          "Supportive",
+          "Unsupportive"
+        ]
+      ]
+    },
+    "wise_patient": {
+      "pos": [
+        "Wise and patient"
+      ],
+      "neg": [
+        "Foolish and impatient"
+      ],
+      "components": [
+        [
+          "Wise",
+          "Foolish"
+        ],
+        [
+          "Patient",
+          "Impatient"
+        ]
+      ]
+    },
+    "clear_fair": {
+      "pos": [
+        "Clear and fair"
+      ],
+      "neg": [
+        "Confusing and unfair"
+      ],
+      "components": [
+        [
+          "Clear",
+          "Confusing"
+        ],
+        [
+          "Fair",
+          "Unfair"
+        ]
+      ]
+    },
+    "firm_kind": {
+      "pos": [
+        "Firm but kind"
+      ],
+      "neg": [
+        "Weak and cruel"
+      ],
+      "components": [
+        [
+          "Hard",
+          "Soft"
+        ],
+        [
+          "Kind",
+          "Cruel"
+        ]
+      ]
+    },
+    "honest_warm": {
+      "pos": [
+        "Honest but warm"
+      ],
+      "neg": [
+        "Dishonest and cold"
+      ],
+      "components": [
+        [
+          "Honest",
+          "Dishonest"
+        ],
+        [
+          "Kind",
+          "Cruel"
+        ]
+      ]
+    },
+    "precise_encouraging": {
+      "pos": [
+        "Precise and encouraging"
+      ],
+      "neg": [
+        "Sloppy and discouraging"
+      ],
+      "components": [
+        [
+          "Precise",
+          "Sloppy"
+        ],
+        [
+          "Supportive",
+          "Unsupportive"
+        ]
+      ]
+    },
+    "careful_kind_honest": {
+      "pos": [
+        "Careful, kind, and honest"
+      ],
+      "neg": [
+        "Reckless, cruel, and dishonest"
+      ],
+      "components": [
+        [
+          "Careful",
+          "Reckless"
+        ],
+        [
+          "Kind",
+          "Cruel"
+        ],
+        [
+          "Honest",
+          "Dishonest"
+        ]
+      ]
+    },
+    "all_top3": {
+      "pos": [
+        "Hard, kind, and careful"
+      ],
+      "neg": [
+        "Soft, cruel, and reckless"
+      ],
+      "components": [
+        [
+          "Hard",
+          "Soft"
+        ],
+        [
+          "Kind",
+          "Cruel"
+        ],
+        [
+          "Careful",
+          "Reckless"
+        ]
+      ]
+    }
+  },
+  "models": [
+    "snowflake/snowflake-arctic-embed-m",
+    "BAAI/bge-m3",
+    "nomic-ai/nomic-embed-text-v1.5"
+  ],
+  "per_model": {
+    "snowflake/snowflake-arctic-embed-m": {
+      "careful_kind": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.36,
+            "independent_sum": 0.52,
+            "best_component": 0.52,
+            "dilution": -0.16
+          },
+          "warmth": {
+            "compound": 0.7,
+            "independent_sum": 0.55,
+            "best_component": 0.55,
+            "dilution": 0.15
+          },
+          "combined": {
+            "compound": 0.4571,
+            "independent_sum": 0.5286,
+            "best_component": 0.4857,
+            "dilution": -0.0714
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.46,
+            "independent_sum": 0.4,
+            "best_component": 0.44,
+            "dilution": 0.06
+          },
+          "warmth": {
+            "compound": 0.65,
+            "independent_sum": 0.65,
+            "best_component": 0.7,
+            "dilution": 0.0
+          },
+          "combined": {
+            "compound": 0.5143,
+            "independent_sum": 0.4714,
+            "best_component": 0.5,
+            "dilution": 0.0429
+          }
+        }
+      },
+      "honest_gentle": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.28,
+            "independent_sum": 0.32,
+            "best_component": 0.46,
+            "dilution": -0.04
+          },
+          "warmth": {
+            "compound": 0.65,
+            "independent_sum": 0.75,
+            "best_component": 0.75,
+            "dilution": -0.1
+          },
+          "combined": {
+            "compound": 0.3857,
+            "independent_sum": 0.4429,
+            "best_component": 0.5,
+            "dilution": -0.0571
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.44,
+            "independent_sum": 0.4,
+            "best_component": 0.4,
+            "dilution": 0.04
+          },
+          "warmth": {
+            "compound": 0.65,
+            "independent_sum": 0.65,
+            "best_component": 0.7,
+            "dilution": 0.0
+          },
+          "combined": {
+            "compound": 0.5,
+            "independent_sum": 0.4714,
+            "best_component": 0.4857,
+            "dilution": 0.0286
+          }
+        }
+      },
+      "thorough_supportive": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.46,
+            "independent_sum": 0.48,
+            "best_component": 0.6,
+            "dilution": -0.02
+          },
+          "warmth": {
+            "compound": 0.6,
+            "independent_sum": 0.65,
+            "best_component": 0.6,
+            "dilution": -0.05
+          },
+          "combined": {
+            "compound": 0.5,
+            "independent_sum": 0.5286,
+            "best_component": 0.6,
+            "dilution": -0.0286
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.4,
+            "independent_sum": 0.4,
+            "best_component": 0.42,
+            "dilution": 0.0
+          },
+          "warmth": {
+            "compound": 0.65,
+            "independent_sum": 0.65,
+            "best_component": 0.7,
+            "dilution": 0.0
+          },
+          "combined": {
+            "compound": 0.4714,
+            "independent_sum": 0.4714,
+            "best_component": 0.5,
+            "dilution": 0.0
+          }
+        }
+      },
+      "wise_patient": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.48,
+            "independent_sum": 0.58,
+            "best_component": 0.54,
+            "dilution": -0.1
+          },
+          "warmth": {
+            "compound": 0.4,
+            "independent_sum": 0.2,
+            "best_component": 0.55,
+            "dilution": 0.2
+          },
+          "combined": {
+            "compound": 0.4571,
+            "independent_sum": 0.4714,
+            "best_component": 0.4857,
+            "dilution": -0.0143
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.46,
+            "independent_sum": 0.4,
+            "best_component": 0.44,
+            "dilution": 0.06
+          },
+          "warmth": {
+            "compound": 0.65,
+            "independent_sum": 0.65,
+            "best_component": 0.65,
+            "dilution": 0.0
+          },
+          "combined": {
+            "compound": 0.5143,
+            "independent_sum": 0.4714,
+            "best_component": 0.5,
+            "dilution": 0.0429
+          }
+        }
+      },
+      "clear_fair": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.44,
+            "independent_sum": 0.48,
+            "best_component": 0.5,
+            "dilution": -0.04
+          },
+          "warmth": {
+            "compound": 0.3,
+            "independent_sum": 0.4,
+            "best_component": 0.55,
+            "dilution": -0.1
+          },
+          "combined": {
+            "compound": 0.4,
+            "independent_sum": 0.4571,
+            "best_component": 0.5,
+            "dilution": -0.0571
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.46,
+            "independent_sum": 0.42,
+            "best_component": 0.46,
+            "dilution": 0.04
+          },
+          "warmth": {
+            "compound": 0.65,
+            "independent_sum": 0.65,
+            "best_component": 0.65,
+            "dilution": 0.0
+          },
+          "combined": {
+            "compound": 0.5143,
+            "independent_sum": 0.4857,
+            "best_component": 0.5143,
+            "dilution": 0.0286
+          }
+        }
+      },
+      "firm_kind": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.28,
+            "independent_sum": 0.54,
+            "best_component": 0.58,
+            "dilution": -0.26
+          },
+          "warmth": {
+            "compound": 0.75,
+            "independent_sum": 0.65,
+            "best_component": 0.65,
+            "dilution": 0.1
+          },
+          "combined": {
+            "compound": 0.4143,
+            "independent_sum": 0.5714,
+            "best_component": 0.6,
+            "dilution": -0.1571
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.44,
+            "independent_sum": 0.4,
+            "best_component": 0.42,
+            "dilution": 0.04
+          },
+          "warmth": {
+            "compound": 0.7,
+            "independent_sum": 0.7,
+            "best_component": 0.7,
+            "dilution": 0.0
+          },
+          "combined": {
+            "compound": 0.5143,
+            "independent_sum": 0.4857,
+            "best_component": 0.5,
+            "dilution": 0.0286
+          }
+        }
+      },
+      "honest_warm": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.36,
+            "independent_sum": 0.34,
+            "best_component": 0.4,
+            "dilution": 0.02
+          },
+          "warmth": {
+            "compound": 0.8,
+            "independent_sum": 0.65,
+            "best_component": 0.75,
+            "dilution": 0.15
+          },
+          "combined": {
+            "compound": 0.4857,
+            "independent_sum": 0.4286,
+            "best_component": 0.4429,
+            "dilution": 0.0571
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.48,
+            "independent_sum": 0.4,
+            "best_component": 0.4,
+            "dilution": 0.08
+          },
+          "warmth": {
+            "compound": 0.7,
+            "independent_sum": 0.7,
+            "best_component": 0.7,
+            "dilution": 0.0
+          },
+          "combined": {
+            "compound": 0.5429,
+            "independent_sum": 0.4857,
+            "best_component": 0.4857,
+            "dilution": 0.0571
+          }
+        }
+      },
+      "precise_encouraging": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.3,
+            "independent_sum": 0.4,
+            "best_component": 0.48,
+            "dilution": -0.1
+          },
+          "warmth": {
+            "compound": 0.5,
+            "independent_sum": 0.45,
+            "best_component": 0.55,
+            "dilution": 0.05
+          },
+          "combined": {
+            "compound": 0.3571,
+            "independent_sum": 0.4143,
+            "best_component": 0.4429,
+            "dilution": -0.0571
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.4,
+            "independent_sum": 0.42,
+            "best_component": 0.42,
+            "dilution": -0.02
+          },
+          "warmth": {
+            "compound": 0.65,
+            "independent_sum": 0.65,
+            "best_component": 0.7,
+            "dilution": 0.0
+          },
+          "combined": {
+            "compound": 0.4714,
+            "independent_sum": 0.4857,
+            "best_component": 0.5,
+            "dilution": -0.0143
+          }
+        }
+      },
+      "careful_kind_honest": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.3,
+            "independent_sum": 0.42,
+            "best_component": 0.52,
+            "dilution": -0.12
+          },
+          "warmth": {
+            "compound": 0.7,
+            "independent_sum": 0.55,
+            "best_component": 0.75,
+            "dilution": 0.15
+          },
+          "combined": {
+            "compound": 0.4143,
+            "independent_sum": 0.4571,
+            "best_component": 0.4857,
+            "dilution": -0.0429
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.46,
+            "independent_sum": 0.4,
+            "best_component": 0.44,
+            "dilution": 0.06
+          },
+          "warmth": {
+            "compound": 0.65,
+            "independent_sum": 0.65,
+            "best_component": 0.7,
+            "dilution": 0.0
+          },
+          "combined": {
+            "compound": 0.5143,
+            "independent_sum": 0.4714,
+            "best_component": 0.5,
+            "dilution": 0.0429
+          }
+        }
+      },
+      "all_top3": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.48,
+            "independent_sum": 0.58,
+            "best_component": 0.58,
+            "dilution": -0.1
+          },
+          "warmth": {
+            "compound": 0.6,
+            "independent_sum": 0.6,
+            "best_component": 0.65,
+            "dilution": 0.0
+          },
+          "combined": {
+            "compound": 0.5143,
+            "independent_sum": 0.5857,
+            "best_component": 0.6,
+            "dilution": -0.0714
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.44,
+            "independent_sum": 0.4,
+            "best_component": 0.44,
+            "dilution": 0.04
+          },
+          "warmth": {
+            "compound": 0.65,
+            "independent_sum": 0.65,
+            "best_component": 0.7,
+            "dilution": 0.0
+          },
+          "combined": {
+            "compound": 0.5,
+            "independent_sum": 0.4714,
+            "best_component": 0.5,
+            "dilution": 0.0286
+          }
+        }
+      }
+    },
+    "BAAI/bge-m3": {
+      "careful_kind": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.32,
+            "independent_sum": 0.62,
+            "best_component": 0.58,
+            "dilution": -0.3
+          },
+          "warmth": {
+            "compound": 0.65,
+            "independent_sum": 0.6,
+            "best_component": 0.75,
+            "dilution": 0.05
+          },
+          "combined": {
+            "compound": 0.4143,
+            "independent_sum": 0.6143,
+            "best_component": 0.5286,
+            "dilution": -0.2
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.4,
+            "independent_sum": 0.7,
+            "best_component": 0.66,
+            "dilution": -0.3
+          },
+          "warmth": {
+            "compound": 0.85,
+            "independent_sum": 0.7,
+            "best_component": 0.8,
+            "dilution": 0.15
+          },
+          "combined": {
+            "compound": 0.5286,
+            "independent_sum": 0.7,
+            "best_component": 0.6429,
+            "dilution": -0.1714
+          }
+        }
+      },
+      "honest_gentle": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.28,
+            "independent_sum": 0.2,
+            "best_component": 0.28,
+            "dilution": 0.08
+          },
+          "warmth": {
+            "compound": 0.7,
+            "independent_sum": 0.7,
+            "best_component": 0.65,
+            "dilution": 0.0
+          },
+          "combined": {
+            "compound": 0.4,
+            "independent_sum": 0.3429,
+            "best_component": 0.3571,
+            "dilution": 0.0571
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.2,
+            "independent_sum": 0.2,
+            "best_component": 0.26,
+            "dilution": 0.0
+          },
+          "warmth": {
+            "compound": 0.75,
+            "independent_sum": 0.75,
+            "best_component": 0.75,
+            "dilution": 0.0
+          },
+          "combined": {
+            "compound": 0.3571,
+            "independent_sum": 0.3571,
+            "best_component": 0.4,
+            "dilution": 0.0
+          }
+        }
+      },
+      "thorough_supportive": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.16,
+            "independent_sum": 0.28,
+            "best_component": 0.42,
+            "dilution": -0.12
+          },
+          "warmth": {
+            "compound": 0.8,
+            "independent_sum": 0.8,
+            "best_component": 0.8,
+            "dilution": 0.0
+          },
+          "combined": {
+            "compound": 0.3429,
+            "independent_sum": 0.4286,
+            "best_component": 0.5286,
+            "dilution": -0.0857
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.28,
+            "independent_sum": 0.38,
+            "best_component": 0.56,
+            "dilution": -0.1
+          },
+          "warmth": {
+            "compound": 0.9,
+            "independent_sum": 0.8,
+            "best_component": 0.75,
+            "dilution": 0.1
+          },
+          "combined": {
+            "compound": 0.4571,
+            "independent_sum": 0.5,
+            "best_component": 0.6143,
+            "dilution": -0.0429
+          }
+        }
+      },
+      "wise_patient": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.16,
+            "independent_sum": 0.28,
+            "best_component": 0.38,
+            "dilution": -0.12
+          },
+          "warmth": {
+            "compound": 0.75,
+            "independent_sum": 0.65,
+            "best_component": 0.75,
+            "dilution": 0.1
+          },
+          "combined": {
+            "compound": 0.3286,
+            "independent_sum": 0.3857,
+            "best_component": 0.4286,
+            "dilution": -0.0571
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.26,
+            "independent_sum": 0.36,
+            "best_component": 0.36,
+            "dilution": -0.1
+          },
+          "warmth": {
+            "compound": 0.8,
+            "independent_sum": 0.85,
+            "best_component": 0.9,
+            "dilution": -0.05
+          },
+          "combined": {
+            "compound": 0.4143,
+            "independent_sum": 0.5,
+            "best_component": 0.5143,
+            "dilution": -0.0857
+          }
+        }
+      },
+      "clear_fair": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.18,
+            "independent_sum": 0.24,
+            "best_component": 0.26,
+            "dilution": -0.06
+          },
+          "warmth": {
+            "compound": 0.6,
+            "independent_sum": 0.65,
+            "best_component": 0.7,
+            "dilution": -0.05
+          },
+          "combined": {
+            "compound": 0.3,
+            "independent_sum": 0.3571,
+            "best_component": 0.3286,
+            "dilution": -0.0571
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.26,
+            "independent_sum": 0.52,
+            "best_component": 0.56,
+            "dilution": -0.26
+          },
+          "warmth": {
+            "compound": 0.8,
+            "independent_sum": 0.65,
+            "best_component": 0.8,
+            "dilution": 0.15
+          },
+          "combined": {
+            "compound": 0.4143,
+            "independent_sum": 0.5571,
+            "best_component": 0.5571,
+            "dilution": -0.1429
+          }
+        }
+      },
+      "firm_kind": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.16,
+            "independent_sum": 0.66,
+            "best_component": 0.64,
+            "dilution": -0.5
+          },
+          "warmth": {
+            "compound": 0.8,
+            "independent_sum": 0.75,
+            "best_component": 0.75,
+            "dilution": 0.05
+          },
+          "combined": {
+            "compound": 0.3429,
+            "independent_sum": 0.6857,
+            "best_component": 0.6143,
+            "dilution": -0.3429
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.4,
+            "independent_sum": 0.52,
+            "best_component": 0.58,
+            "dilution": -0.12
+          },
+          "warmth": {
+            "compound": 0.9,
+            "independent_sum": 0.85,
+            "best_component": 0.8,
+            "dilution": 0.05
+          },
+          "combined": {
+            "compound": 0.5429,
+            "independent_sum": 0.6143,
+            "best_component": 0.6429,
+            "dilution": -0.0714
+          }
+        }
+      },
+      "honest_warm": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.12,
+            "independent_sum": 0.18,
+            "best_component": 0.44,
+            "dilution": -0.06
+          },
+          "warmth": {
+            "compound": 0.7,
+            "independent_sum": 0.65,
+            "best_component": 0.75,
+            "dilution": 0.05
+          },
+          "combined": {
+            "compound": 0.2857,
+            "independent_sum": 0.3143,
+            "best_component": 0.5286,
+            "dilution": -0.0286
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.26,
+            "independent_sum": 0.38,
+            "best_component": 0.58,
+            "dilution": -0.12
+          },
+          "warmth": {
+            "compound": 0.85,
+            "independent_sum": 0.85,
+            "best_component": 0.8,
+            "dilution": 0.0
+          },
+          "combined": {
+            "compound": 0.4286,
+            "independent_sum": 0.5143,
+            "best_component": 0.6429,
+            "dilution": -0.0857
+          }
+        }
+      },
+      "precise_encouraging": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.14,
+            "independent_sum": 0.2,
+            "best_component": 0.22,
+            "dilution": -0.06
+          },
+          "warmth": {
+            "compound": 0.75,
+            "independent_sum": 0.75,
+            "best_component": 0.75,
+            "dilution": 0.0
+          },
+          "combined": {
+            "compound": 0.3143,
+            "independent_sum": 0.3571,
+            "best_component": 0.3714,
+            "dilution": -0.0429
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.2,
+            "independent_sum": 0.4,
+            "best_component": 0.4,
+            "dilution": -0.2
+          },
+          "warmth": {
+            "compound": 0.85,
+            "independent_sum": 0.75,
+            "best_component": 0.7,
+            "dilution": 0.1
+          },
+          "combined": {
+            "compound": 0.3857,
+            "independent_sum": 0.5,
+            "best_component": 0.4857,
+            "dilution": -0.1143
+          }
+        }
+      },
+      "careful_kind_honest": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.24,
+            "independent_sum": 0.4,
+            "best_component": 0.58,
+            "dilution": -0.16
+          },
+          "warmth": {
+            "compound": 0.65,
+            "independent_sum": 0.65,
+            "best_component": 0.75,
+            "dilution": 0.0
+          },
+          "combined": {
+            "compound": 0.3571,
+            "independent_sum": 0.4714,
+            "best_component": 0.5286,
+            "dilution": -0.1143
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.28,
+            "independent_sum": 0.6,
+            "best_component": 0.66,
+            "dilution": -0.32
+          },
+          "warmth": {
+            "compound": 0.75,
+            "independent_sum": 0.75,
+            "best_component": 0.8,
+            "dilution": 0.0
+          },
+          "combined": {
+            "compound": 0.4143,
+            "independent_sum": 0.6429,
+            "best_component": 0.6429,
+            "dilution": -0.2286
+          }
+        }
+      },
+      "all_top3": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.48,
+            "independent_sum": 0.58,
+            "best_component": 0.64,
+            "dilution": -0.1
+          },
+          "warmth": {
+            "compound": 0.85,
+            "independent_sum": 0.6,
+            "best_component": 0.75,
+            "dilution": 0.25
+          },
+          "combined": {
+            "compound": 0.5857,
+            "independent_sum": 0.5857,
+            "best_component": 0.6143,
+            "dilution": 0.0
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.46,
+            "independent_sum": 0.62,
+            "best_component": 0.66,
+            "dilution": -0.16
+          },
+          "warmth": {
+            "compound": 0.85,
+            "independent_sum": 0.75,
+            "best_component": 0.8,
+            "dilution": 0.1
+          },
+          "combined": {
+            "compound": 0.5714,
+            "independent_sum": 0.6571,
+            "best_component": 0.6429,
+            "dilution": -0.0857
+          }
+        }
+      }
+    },
+    "nomic-ai/nomic-embed-text-v1.5": {
+      "careful_kind": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.2,
+            "independent_sum": 0.38,
+            "best_component": 0.62,
+            "dilution": -0.18
+          },
+          "warmth": {
+            "compound": 0.75,
+            "independent_sum": 0.65,
+            "best_component": 0.7,
+            "dilution": 0.1
+          },
+          "combined": {
+            "compound": 0.3571,
+            "independent_sum": 0.4571,
+            "best_component": 0.6429,
+            "dilution": -0.1
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.36,
+            "independent_sum": 0.5,
+            "best_component": 0.6,
+            "dilution": -0.14
+          },
+          "warmth": {
+            "compound": 0.8,
+            "independent_sum": 0.75,
+            "best_component": 0.85,
+            "dilution": 0.05
+          },
+          "combined": {
+            "compound": 0.4857,
+            "independent_sum": 0.5714,
+            "best_component": 0.5857,
+            "dilution": -0.0857
+          }
+        }
+      },
+      "honest_gentle": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.26,
+            "independent_sum": 0.28,
+            "best_component": 0.3,
+            "dilution": -0.02
+          },
+          "warmth": {
+            "compound": 0.85,
+            "independent_sum": 0.8,
+            "best_component": 0.65,
+            "dilution": 0.05
+          },
+          "combined": {
+            "compound": 0.4286,
+            "independent_sum": 0.4286,
+            "best_component": 0.3857,
+            "dilution": 0.0
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.38,
+            "independent_sum": 0.44,
+            "best_component": 0.44,
+            "dilution": -0.06
+          },
+          "warmth": {
+            "compound": 0.85,
+            "independent_sum": 0.75,
+            "best_component": 0.7,
+            "dilution": 0.1
+          },
+          "combined": {
+            "compound": 0.5143,
+            "independent_sum": 0.5286,
+            "best_component": 0.5143,
+            "dilution": -0.0143
+          }
+        }
+      },
+      "thorough_supportive": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.38,
+            "independent_sum": 0.36,
+            "best_component": 0.56,
+            "dilution": 0.02
+          },
+          "warmth": {
+            "compound": 0.6,
+            "independent_sum": 0.55,
+            "best_component": 0.75,
+            "dilution": 0.05
+          },
+          "combined": {
+            "compound": 0.4429,
+            "independent_sum": 0.4143,
+            "best_component": 0.5429,
+            "dilution": 0.0286
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.28,
+            "independent_sum": 0.4,
+            "best_component": 0.5,
+            "dilution": -0.12
+          },
+          "warmth": {
+            "compound": 0.7,
+            "independent_sum": 0.65,
+            "best_component": 0.75,
+            "dilution": 0.05
+          },
+          "combined": {
+            "compound": 0.4,
+            "independent_sum": 0.4714,
+            "best_component": 0.5143,
+            "dilution": -0.0714
+          }
+        }
+      },
+      "wise_patient": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.34,
+            "independent_sum": 0.52,
+            "best_component": 0.56,
+            "dilution": -0.18
+          },
+          "warmth": {
+            "compound": 0.7,
+            "independent_sum": 0.65,
+            "best_component": 0.65,
+            "dilution": 0.05
+          },
+          "combined": {
+            "compound": 0.4429,
+            "independent_sum": 0.5571,
+            "best_component": 0.5286,
+            "dilution": -0.1143
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.26,
+            "independent_sum": 0.42,
+            "best_component": 0.52,
+            "dilution": -0.16
+          },
+          "warmth": {
+            "compound": 0.8,
+            "independent_sum": 0.6,
+            "best_component": 0.6,
+            "dilution": 0.2
+          },
+          "combined": {
+            "compound": 0.4143,
+            "independent_sum": 0.4714,
+            "best_component": 0.5429,
+            "dilution": -0.0571
+          }
+        }
+      },
+      "clear_fair": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.22,
+            "independent_sum": 0.22,
+            "best_component": 0.34,
+            "dilution": 0.0
+          },
+          "warmth": {
+            "compound": 0.75,
+            "independent_sum": 0.8,
+            "best_component": 0.7,
+            "dilution": -0.05
+          },
+          "combined": {
+            "compound": 0.3714,
+            "independent_sum": 0.3857,
+            "best_component": 0.4286,
+            "dilution": -0.0143
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.34,
+            "independent_sum": 0.6,
+            "best_component": 0.56,
+            "dilution": -0.26
+          },
+          "warmth": {
+            "compound": 0.75,
+            "independent_sum": 0.65,
+            "best_component": 0.7,
+            "dilution": 0.1
+          },
+          "combined": {
+            "compound": 0.4571,
+            "independent_sum": 0.6143,
+            "best_component": 0.5286,
+            "dilution": -0.1571
+          }
+        }
+      },
+      "firm_kind": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.18,
+            "independent_sum": 0.4,
+            "best_component": 0.68,
+            "dilution": -0.22
+          },
+          "warmth": {
+            "compound": 0.9,
+            "independent_sum": 0.75,
+            "best_component": 0.7,
+            "dilution": 0.15
+          },
+          "combined": {
+            "compound": 0.3857,
+            "independent_sum": 0.5,
+            "best_component": 0.6286,
+            "dilution": -0.1143
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.2,
+            "independent_sum": 0.42,
+            "best_component": 0.52,
+            "dilution": -0.22
+          },
+          "warmth": {
+            "compound": 0.9,
+            "independent_sum": 0.85,
+            "best_component": 0.85,
+            "dilution": 0.05
+          },
+          "combined": {
+            "compound": 0.4,
+            "independent_sum": 0.5429,
+            "best_component": 0.5714,
+            "dilution": -0.1429
+          }
+        }
+      },
+      "honest_warm": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.28,
+            "independent_sum": 0.24,
+            "best_component": 0.3,
+            "dilution": 0.04
+          },
+          "warmth": {
+            "compound": 0.85,
+            "independent_sum": 0.85,
+            "best_component": 0.7,
+            "dilution": 0.0
+          },
+          "combined": {
+            "compound": 0.4429,
+            "independent_sum": 0.4143,
+            "best_component": 0.4,
+            "dilution": 0.0286
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.26,
+            "independent_sum": 0.38,
+            "best_component": 0.44,
+            "dilution": -0.12
+          },
+          "warmth": {
+            "compound": 0.75,
+            "independent_sum": 0.65,
+            "best_component": 0.85,
+            "dilution": 0.1
+          },
+          "combined": {
+            "compound": 0.4,
+            "independent_sum": 0.4571,
+            "best_component": 0.5143,
+            "dilution": -0.0571
+          }
+        }
+      },
+      "precise_encouraging": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.18,
+            "independent_sum": 0.2,
+            "best_component": 0.32,
+            "dilution": -0.02
+          },
+          "warmth": {
+            "compound": 0.8,
+            "independent_sum": 0.8,
+            "best_component": 0.75,
+            "dilution": 0.0
+          },
+          "combined": {
+            "compound": 0.3571,
+            "independent_sum": 0.3714,
+            "best_component": 0.4429,
+            "dilution": -0.0143
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.18,
+            "independent_sum": 0.3,
+            "best_component": 0.4,
+            "dilution": -0.12
+          },
+          "warmth": {
+            "compound": 0.85,
+            "independent_sum": 0.8,
+            "best_component": 0.75,
+            "dilution": 0.05
+          },
+          "combined": {
+            "compound": 0.3714,
+            "independent_sum": 0.4429,
+            "best_component": 0.5,
+            "dilution": -0.0714
+          }
+        }
+      },
+      "careful_kind_honest": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.16,
+            "independent_sum": 0.28,
+            "best_component": 0.62,
+            "dilution": -0.12
+          },
+          "warmth": {
+            "compound": 0.85,
+            "independent_sum": 0.8,
+            "best_component": 0.7,
+            "dilution": 0.05
+          },
+          "combined": {
+            "compound": 0.3571,
+            "independent_sum": 0.4286,
+            "best_component": 0.6429,
+            "dilution": -0.0714
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.36,
+            "independent_sum": 0.52,
+            "best_component": 0.6,
+            "dilution": -0.16
+          },
+          "warmth": {
+            "compound": 0.9,
+            "independent_sum": 0.75,
+            "best_component": 0.85,
+            "dilution": 0.15
+          },
+          "combined": {
+            "compound": 0.5143,
+            "independent_sum": 0.5857,
+            "best_component": 0.5857,
+            "dilution": -0.0714
+          }
+        }
+      },
+      "all_top3": {
+        "bipolar": {
+          "firmness": {
+            "compound": 0.26,
+            "independent_sum": 0.46,
+            "best_component": 0.68,
+            "dilution": -0.2
+          },
+          "warmth": {
+            "compound": 0.8,
+            "independent_sum": 0.7,
+            "best_component": 0.7,
+            "dilution": 0.1
+          },
+          "combined": {
+            "compound": 0.4143,
+            "independent_sum": 0.5286,
+            "best_component": 0.6429,
+            "dilution": -0.1143
+          }
+        },
+        "cosine": {
+          "firmness": {
+            "compound": 0.42,
+            "independent_sum": 0.52,
+            "best_component": 0.6,
+            "dilution": -0.1
+          },
+          "warmth": {
+            "compound": 0.9,
+            "independent_sum": 0.75,
+            "best_component": 0.85,
+            "dilution": 0.15
+          },
+          "combined": {
+            "compound": 0.5571,
+            "independent_sum": 0.5857,
+            "best_component": 0.5857,
+            "dilution": -0.0286
+          }
+        }
+      }
+    }
+  },
+  "dilution_summary": []
+}

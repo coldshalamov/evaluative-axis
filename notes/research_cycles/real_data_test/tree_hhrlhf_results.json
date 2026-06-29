@@ -1,0 +1,50 @@
+{
+  "snowflake-arctic-embed-m": {
+    "individual_cospos": {
+      "Careful": 0.5010141987829615,
+      "Honest": 0.5070993914807302,
+      "Helpful": 0.49898580121703856,
+      "Thorough": 0.5030425963488844,
+      "Restrained": 0.49290060851926976
+    },
+    "individual_bipolar": {
+      "Careful": 0.5152129817444219,
+      "Honest": 0.5010141987829615,
+      "Helpful": 0.49898580121703856,
+      "Thorough": 0.5050709939148073,
+      "Restrained": 0.4908722109533469
+    }
+  },
+  "bge-m3": {
+    "individual_cospos": {
+      "Careful": 0.5152129817444219,
+      "Honest": 0.49290060851926976,
+      "Helpful": 0.4969574036511156,
+      "Thorough": 0.49290060851926976,
+      "Restrained": 0.4665314401622718
+    },
+    "individual_bipolar": {
+      "Careful": 0.49290060851926976,
+      "Honest": 0.49290060851926976,
+      "Helpful": 0.5091277890466531,
+      "Thorough": 0.4969574036511156,
+      "Restrained": 0.49898580121703856
+    }
+  },
+  "nomic-embed-text-v1.5": {
+    "individual_cospos": {
+      "Careful": 0.5111561866125761,
+      "Honest": 0.5456389452332657,
+      "Helpful": 0.5030425963488844,
+      "Thorough": 0.5172413793103449,
+      "Restrained": 0.49898580121703856
+    },
+    "individual_bipolar": {
+      "Careful": 0.4847870182555781,
+      "Honest": 0.4949290060851927,
+      "Helpful": 0.4969574036511156,
+      "Thorough": 0.5030425963488844,
+      "Restrained": 0.4766734279918864
+    }
+  }
+}

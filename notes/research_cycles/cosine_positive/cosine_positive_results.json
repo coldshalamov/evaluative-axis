@@ -1,0 +1,1548 @@
+{
+  "experiment": "Cosine-to-Positive vs Bipolar (15 axes)",
+  "n_firmness": 50,
+  "n_warmth": 20,
+  "axes": {
+    "careful": {
+      "positive": "Careful",
+      "negative": "Reckless"
+    },
+    "honest": {
+      "positive": "Honest",
+      "negative": "Dishonest"
+    },
+    "kind": {
+      "positive": "Kind",
+      "negative": "Cruel"
+    },
+    "wise": {
+      "positive": "Wise",
+      "negative": "Foolish"
+    },
+    "helpful": {
+      "positive": "Helpful",
+      "negative": "Unhelpful"
+    },
+    "thorough": {
+      "positive": "Thorough",
+      "negative": "Superficial"
+    },
+    "fair": {
+      "positive": "Fair",
+      "negative": "Unfair"
+    },
+    "responsible": {
+      "positive": "Responsible",
+      "negative": "Irresponsible"
+    },
+    "clear": {
+      "positive": "Clear",
+      "negative": "Confusing"
+    },
+    "good": {
+      "positive": "Good",
+      "negative": "Bad"
+    },
+    "hard": {
+      "positive": "Hard",
+      "negative": "Soft"
+    },
+    "gentle": {
+      "positive": "Gentle",
+      "negative": "Harsh"
+    },
+    "patient": {
+      "positive": "Patient",
+      "negative": "Impatient"
+    },
+    "supportive": {
+      "positive": "Supportive",
+      "negative": "Unsupportive"
+    },
+    "constructive": {
+      "positive": "Constructive",
+      "negative": "Destructive"
+    }
+  },
+  "models": [
+    "snowflake/snowflake-arctic-embed-m",
+    "BAAI/bge-m3",
+    "nomic-ai/nomic-embed-text-v1.5"
+  ],
+  "per_model": {
+    "snowflake/snowflake-arctic-embed-m": {
+      "careful": {
+        "firmness": {
+          "bipolar": 0.52,
+          "cosine_positive": 0.44
+        },
+        "warmth": {
+          "bipolar": 0.4,
+          "cosine_positive": 0.65
+        },
+        "combined": {
+          "bipolar": 0.4857,
+          "cosine_positive": 0.5
+        }
+      },
+      "honest": {
+        "firmness": {
+          "bipolar": 0.26,
+          "cosine_positive": 0.4
+        },
+        "warmth": {
+          "bipolar": 0.75,
+          "cosine_positive": 0.7
+        },
+        "combined": {
+          "bipolar": 0.4,
+          "cosine_positive": 0.4857
+        }
+      },
+      "kind": {
+        "firmness": {
+          "bipolar": 0.4,
+          "cosine_positive": 0.4
+        },
+        "warmth": {
+          "bipolar": 0.55,
+          "cosine_positive": 0.7
+        },
+        "combined": {
+          "bipolar": 0.4429,
+          "cosine_positive": 0.4857
+        }
+      },
+      "wise": {
+        "firmness": {
+          "bipolar": 0.46,
+          "cosine_positive": 0.44
+        },
+        "warmth": {
+          "bipolar": 0.55,
+          "cosine_positive": 0.65
+        },
+        "combined": {
+          "bipolar": 0.4857,
+          "cosine_positive": 0.5
+        }
+      },
+      "helpful": {
+        "firmness": {
+          "bipolar": 0.58,
+          "cosine_positive": 0.46
+        },
+        "warmth": {
+          "bipolar": 0.45,
+          "cosine_positive": 0.65
+        },
+        "combined": {
+          "bipolar": 0.5429,
+          "cosine_positive": 0.5143
+        }
+      },
+      "thorough": {
+        "firmness": {
+          "bipolar": 0.6,
+          "cosine_positive": 0.42
+        },
+        "warmth": {
+          "bipolar": 0.6,
+          "cosine_positive": 0.65
+        },
+        "combined": {
+          "bipolar": 0.6,
+          "cosine_positive": 0.4857
+        }
+      },
+      "fair": {
+        "firmness": {
+          "bipolar": 0.42,
+          "cosine_positive": 0.42
+        },
+        "warmth": {
+          "bipolar": 0.55,
+          "cosine_positive": 0.65
+        },
+        "combined": {
+          "bipolar": 0.4571,
+          "cosine_positive": 0.4857
+        }
+      },
+      "responsible": {
+        "firmness": {
+          "bipolar": 0.52,
+          "cosine_positive": 0.44
+        },
+        "warmth": {
+          "bipolar": 0.6,
+          "cosine_positive": 0.65
+        },
+        "combined": {
+          "bipolar": 0.5429,
+          "cosine_positive": 0.5
+        }
+      },
+      "clear": {
+        "firmness": {
+          "bipolar": 0.5,
+          "cosine_positive": 0.46
+        },
+        "warmth": {
+          "bipolar": 0.5,
+          "cosine_positive": 0.65
+        },
+        "combined": {
+          "bipolar": 0.5,
+          "cosine_positive": 0.5143
+        }
+      },
+      "good": {
+        "firmness": {
+          "bipolar": 0.48,
+          "cosine_positive": 0.4
+        },
+        "warmth": {
+          "bipolar": 0.6,
+          "cosine_positive": 0.7
+        },
+        "combined": {
+          "bipolar": 0.5143,
+          "cosine_positive": 0.4857
+        }
+      },
+      "hard": {
+        "firmness": {
+          "bipolar": 0.58,
+          "cosine_positive": 0.42
+        },
+        "warmth": {
+          "bipolar": 0.65,
+          "cosine_positive": 0.7
+        },
+        "combined": {
+          "bipolar": 0.6,
+          "cosine_positive": 0.5
+        }
+      },
+      "gentle": {
+        "firmness": {
+          "bipolar": 0.46,
+          "cosine_positive": 0.4
+        },
+        "warmth": {
+          "bipolar": 0.6,
+          "cosine_positive": 0.65
+        },
+        "combined": {
+          "bipolar": 0.5,
+          "cosine_positive": 0.4714
+        }
+      },
+      "patient": {
+        "firmness": {
+          "bipolar": 0.54,
+          "cosine_positive": 0.4
+        },
+        "warmth": {
+          "bipolar": 0.2,
+          "cosine_positive": 0.65
+        },
+        "combined": {
+          "bipolar": 0.4429,
+          "cosine_positive": 0.4714
+        }
+      },
+      "supportive": {
+        "firmness": {
+          "bipolar": 0.4,
+          "cosine_positive": 0.42
+        },
+        "warmth": {
+          "bipolar": 0.55,
+          "cosine_positive": 0.7
+        },
+        "combined": {
+          "bipolar": 0.4429,
+          "cosine_positive": 0.5
+        }
+      },
+      "constructive": {
+        "firmness": {
+          "bipolar": 0.46,
+          "cosine_positive": 0.48
+        },
+        "warmth": {
+          "bipolar": 0.75,
+          "cosine_positive": 0.65
+        },
+        "combined": {
+          "bipolar": 0.5429,
+          "cosine_positive": 0.5286
+        }
+      }
+    },
+    "BAAI/bge-m3": {
+      "careful": {
+        "firmness": {
+          "bipolar": 0.58,
+          "cosine_positive": 0.66
+        },
+        "warmth": {
+          "bipolar": 0.35,
+          "cosine_positive": 0.5
+        },
+        "combined": {
+          "bipolar": 0.5143,
+          "cosine_positive": 0.6143
+        }
+      },
+      "honest": {
+        "firmness": {
+          "bipolar": 0.16,
+          "cosine_positive": 0.2
+        },
+        "warmth": {
+          "bipolar": 0.65,
+          "cosine_positive": 0.7
+        },
+        "combined": {
+          "bipolar": 0.3,
+          "cosine_positive": 0.3429
+        }
+      },
+      "kind": {
+        "firmness": {
+          "bipolar": 0.44,
+          "cosine_positive": 0.58
+        },
+        "warmth": {
+          "bipolar": 0.75,
+          "cosine_positive": 0.8
+        },
+        "combined": {
+          "bipolar": 0.5286,
+          "cosine_positive": 0.6429
+        }
+      },
+      "wise": {
+        "firmness": {
+          "bipolar": 0.24,
+          "cosine_positive": 0.36
+        },
+        "warmth": {
+          "bipolar": 0.75,
+          "cosine_positive": 0.9
+        },
+        "combined": {
+          "bipolar": 0.3857,
+          "cosine_positive": 0.5143
+        }
+      },
+      "helpful": {
+        "firmness": {
+          "bipolar": 0.22,
+          "cosine_positive": 0.38
+        },
+        "warmth": {
+          "bipolar": 0.8,
+          "cosine_positive": 0.9
+        },
+        "combined": {
+          "bipolar": 0.3857,
+          "cosine_positive": 0.5286
+        }
+      },
+      "thorough": {
+        "firmness": {
+          "bipolar": 0.42,
+          "cosine_positive": 0.56
+        },
+        "warmth": {
+          "bipolar": 0.8,
+          "cosine_positive": 0.75
+        },
+        "combined": {
+          "bipolar": 0.5286,
+          "cosine_positive": 0.6143
+        }
+      },
+      "fair": {
+        "firmness": {
+          "bipolar": 0.16,
+          "cosine_positive": 0.46
+        },
+        "warmth": {
+          "bipolar": 0.7,
+          "cosine_positive": 0.8
+        },
+        "combined": {
+          "bipolar": 0.3143,
+          "cosine_positive": 0.5571
+        }
+      },
+      "responsible": {
+        "firmness": {
+          "bipolar": 0.24,
+          "cosine_positive": 0.46
+        },
+        "warmth": {
+          "bipolar": 0.7,
+          "cosine_positive": 0.6
+        },
+        "combined": {
+          "bipolar": 0.3714,
+          "cosine_positive": 0.5
+        }
+      },
+      "clear": {
+        "firmness": {
+          "bipolar": 0.26,
+          "cosine_positive": 0.56
+        },
+        "warmth": {
+          "bipolar": 0.5,
+          "cosine_positive": 0.55
+        },
+        "combined": {
+          "bipolar": 0.3286,
+          "cosine_positive": 0.5571
+        }
+      },
+      "good": {
+        "firmness": {
+          "bipolar": 0.16,
+          "cosine_positive": 0.36
+        },
+        "warmth": {
+          "bipolar": 0.85,
+          "cosine_positive": 0.9
+        },
+        "combined": {
+          "bipolar": 0.3571,
+          "cosine_positive": 0.5143
+        }
+      },
+      "hard": {
+        "firmness": {
+          "bipolar": 0.64,
+          "cosine_positive": 0.54
+        },
+        "warmth": {
+          "bipolar": 0.55,
+          "cosine_positive": 0.7
+        },
+        "combined": {
+          "bipolar": 0.6143,
+          "cosine_positive": 0.5857
+        }
+      },
+      "gentle": {
+        "firmness": {
+          "bipolar": 0.28,
+          "cosine_positive": 0.26
+        },
+        "warmth": {
+          "bipolar": 0.55,
+          "cosine_positive": 0.75
+        },
+        "combined": {
+          "bipolar": 0.3571,
+          "cosine_positive": 0.4
+        }
+      },
+      "patient": {
+        "firmness": {
+          "bipolar": 0.38,
+          "cosine_positive": 0.36
+        },
+        "warmth": {
+          "bipolar": 0.55,
+          "cosine_positive": 0.7
+        },
+        "combined": {
+          "bipolar": 0.4286,
+          "cosine_positive": 0.4571
+        }
+      },
+      "supportive": {
+        "firmness": {
+          "bipolar": 0.22,
+          "cosine_positive": 0.4
+        },
+        "warmth": {
+          "bipolar": 0.75,
+          "cosine_positive": 0.7
+        },
+        "combined": {
+          "bipolar": 0.3714,
+          "cosine_positive": 0.4857
+        }
+      },
+      "constructive": {
+        "firmness": {
+          "bipolar": 0.26,
+          "cosine_positive": 0.42
+        },
+        "warmth": {
+          "bipolar": 0.7,
+          "cosine_positive": 0.7
+        },
+        "combined": {
+          "bipolar": 0.3857,
+          "cosine_positive": 0.5
+        }
+      }
+    },
+    "nomic-ai/nomic-embed-text-v1.5": {
+      "careful": {
+        "firmness": {
+          "bipolar": 0.62,
+          "cosine_positive": 0.6
+        },
+        "warmth": {
+          "bipolar": 0.7,
+          "cosine_positive": 0.55
+        },
+        "combined": {
+          "bipolar": 0.6429,
+          "cosine_positive": 0.5857
+        }
+      },
+      "honest": {
+        "firmness": {
+          "bipolar": 0.3,
+          "cosine_positive": 0.44
+        },
+        "warmth": {
+          "bipolar": 0.6,
+          "cosine_positive": 0.7
+        },
+        "combined": {
+          "bipolar": 0.3857,
+          "cosine_positive": 0.5143
+        }
+      },
+      "kind": {
+        "firmness": {
+          "bipolar": 0.28,
+          "cosine_positive": 0.34
+        },
+        "warmth": {
+          "bipolar": 0.7,
+          "cosine_positive": 0.85
+        },
+        "combined": {
+          "bipolar": 0.4,
+          "cosine_positive": 0.4857
+        }
+      },
+      "wise": {
+        "firmness": {
+          "bipolar": 0.3,
+          "cosine_positive": 0.46
+        },
+        "warmth": {
+          "bipolar": 0.65,
+          "cosine_positive": 0.5
+        },
+        "combined": {
+          "bipolar": 0.4,
+          "cosine_positive": 0.4714
+        }
+      },
+      "helpful": {
+        "firmness": {
+          "bipolar": 0.2,
+          "cosine_positive": 0.36
+        },
+        "warmth": {
+          "bipolar": 0.9,
+          "cosine_positive": 0.7
+        },
+        "combined": {
+          "bipolar": 0.4,
+          "cosine_positive": 0.4571
+        }
+      },
+      "thorough": {
+        "firmness": {
+          "bipolar": 0.56,
+          "cosine_positive": 0.5
+        },
+        "warmth": {
+          "bipolar": 0.5,
+          "cosine_positive": 0.55
+        },
+        "combined": {
+          "bipolar": 0.5429,
+          "cosine_positive": 0.5143
+        }
+      },
+      "fair": {
+        "firmness": {
+          "bipolar": 0.24,
+          "cosine_positive": 0.56
+        },
+        "warmth": {
+          "bipolar": 0.7,
+          "cosine_positive": 0.45
+        },
+        "combined": {
+          "bipolar": 0.3714,
+          "cosine_positive": 0.5286
+        }
+      },
+      "responsible": {
+        "firmness": {
+          "bipolar": 0.2,
+          "cosine_positive": 0.38
+        },
+        "warmth": {
+          "bipolar": 0.8,
+          "cosine_positive": 0.5
+        },
+        "combined": {
+          "bipolar": 0.3714,
+          "cosine_positive": 0.4143
+        }
+      },
+      "clear": {
+        "firmness": {
+          "bipolar": 0.34,
+          "cosine_positive": 0.36
+        },
+        "warmth": {
+          "bipolar": 0.65,
+          "cosine_positive": 0.7
+        },
+        "combined": {
+          "bipolar": 0.4286,
+          "cosine_positive": 0.4571
+        }
+      },
+      "good": {
+        "firmness": {
+          "bipolar": 0.12,
+          "cosine_positive": 0.24
+        },
+        "warmth": {
+          "bipolar": 0.8,
+          "cosine_positive": 0.65
+        },
+        "combined": {
+          "bipolar": 0.3143,
+          "cosine_positive": 0.3571
+        }
+      },
+      "hard": {
+        "firmness": {
+          "bipolar": 0.68,
+          "cosine_positive": 0.52
+        },
+        "warmth": {
+          "bipolar": 0.5,
+          "cosine_positive": 0.7
+        },
+        "combined": {
+          "bipolar": 0.6286,
+          "cosine_positive": 0.5714
+        }
+      },
+      "gentle": {
+        "firmness": {
+          "bipolar": 0.26,
+          "cosine_positive": 0.34
+        },
+        "warmth": {
+          "bipolar": 0.65,
+          "cosine_positive": 0.65
+        },
+        "combined": {
+          "bipolar": 0.3714,
+          "cosine_positive": 0.4286
+        }
+      },
+      "patient": {
+        "firmness": {
+          "bipolar": 0.56,
+          "cosine_positive": 0.52
+        },
+        "warmth": {
+          "bipolar": 0.45,
+          "cosine_positive": 0.6
+        },
+        "combined": {
+          "bipolar": 0.5286,
+          "cosine_positive": 0.5429
+        }
+      },
+      "supportive": {
+        "firmness": {
+          "bipolar": 0.32,
+          "cosine_positive": 0.4
+        },
+        "warmth": {
+          "bipolar": 0.75,
+          "cosine_positive": 0.75
+        },
+        "combined": {
+          "bipolar": 0.4429,
+          "cosine_positive": 0.5
+        }
+      },
+      "constructive": {
+        "firmness": {
+          "bipolar": 0.28,
+          "cosine_positive": 0.44
+        },
+        "warmth": {
+          "bipolar": 0.7,
+          "cosine_positive": 0.65
+        },
+        "combined": {
+          "bipolar": 0.4,
+          "cosine_positive": 0.5
+        }
+      }
+    }
+  },
+  "divergences_gt_10pts": [
+    {
+      "model": "snowflake/snowflake-arctic-embed-m",
+      "axis": "thorough",
+      "bipolar_combined": 0.6,
+      "cosine_combined": 0.4857,
+      "delta_cos_minus_bip": -0.1143,
+      "winner": "bip"
+    },
+    {
+      "model": "BAAI/bge-m3",
+      "axis": "kind",
+      "bipolar_combined": 0.5286,
+      "cosine_combined": 0.6429,
+      "delta_cos_minus_bip": 0.1143,
+      "winner": "cos"
+    },
+    {
+      "model": "BAAI/bge-m3",
+      "axis": "wise",
+      "bipolar_combined": 0.3857,
+      "cosine_combined": 0.5143,
+      "delta_cos_minus_bip": 0.1286,
+      "winner": "cos"
+    },
+    {
+      "model": "BAAI/bge-m3",
+      "axis": "helpful",
+      "bipolar_combined": 0.3857,
+      "cosine_combined": 0.5286,
+      "delta_cos_minus_bip": 0.1429,
+      "winner": "cos"
+    },
+    {
+      "model": "BAAI/bge-m3",
+      "axis": "fair",
+      "bipolar_combined": 0.3143,
+      "cosine_combined": 0.5571,
+      "delta_cos_minus_bip": 0.2428,
+      "winner": "cos"
+    },
+    {
+      "model": "BAAI/bge-m3",
+      "axis": "responsible",
+      "bipolar_combined": 0.3714,
+      "cosine_combined": 0.5,
+      "delta_cos_minus_bip": 0.1286,
+      "winner": "cos"
+    },
+    {
+      "model": "BAAI/bge-m3",
+      "axis": "clear",
+      "bipolar_combined": 0.3286,
+      "cosine_combined": 0.5571,
+      "delta_cos_minus_bip": 0.2285,
+      "winner": "cos"
+    },
+    {
+      "model": "BAAI/bge-m3",
+      "axis": "good",
+      "bipolar_combined": 0.3571,
+      "cosine_combined": 0.5143,
+      "delta_cos_minus_bip": 0.1572,
+      "winner": "cos"
+    },
+    {
+      "model": "BAAI/bge-m3",
+      "axis": "supportive",
+      "bipolar_combined": 0.3714,
+      "cosine_combined": 0.4857,
+      "delta_cos_minus_bip": 0.1143,
+      "winner": "cos"
+    },
+    {
+      "model": "BAAI/bge-m3",
+      "axis": "constructive",
+      "bipolar_combined": 0.3857,
+      "cosine_combined": 0.5,
+      "delta_cos_minus_bip": 0.1143,
+      "winner": "cos"
+    },
+    {
+      "model": "nomic-ai/nomic-embed-text-v1.5",
+      "axis": "honest",
+      "bipolar_combined": 0.3857,
+      "cosine_combined": 0.5143,
+      "delta_cos_minus_bip": 0.1286,
+      "winner": "cos"
+    },
+    {
+      "model": "nomic-ai/nomic-embed-text-v1.5",
+      "axis": "fair",
+      "bipolar_combined": 0.3714,
+      "cosine_combined": 0.5286,
+      "delta_cos_minus_bip": 0.1572,
+      "winner": "cos"
+    }
+  ],
+  "covering_set": {
+    "snowflake/snowflake-arctic-embed-m": {
+      "optimal_method_per_axis": {
+        "careful": "cos",
+        "honest": "cos",
+        "kind": "cos",
+        "wise": "cos",
+        "helpful": "bip",
+        "thorough": "bip",
+        "fair": "cos",
+        "responsible": "bip",
+        "clear": "cos",
+        "good": "bip",
+        "hard": "bip",
+        "gentle": "bip",
+        "patient": "cos",
+        "supportive": "cos",
+        "constructive": "bip"
+      },
+      "three_axis_sets": [
+        {
+          "set": [
+            "hard",
+            "kind",
+            "careful"
+          ],
+          "bipolar_all": 0.5857,
+          "optimal_per_axis": 0.5,
+          "delta": -0.0857,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "careful": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "honest"
+          ],
+          "bipolar_all": 0.4714,
+          "optimal_per_axis": 0.4857,
+          "delta": 0.0143,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "honest": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "wise"
+          ],
+          "bipolar_all": 0.5714,
+          "optimal_per_axis": 0.5143,
+          "delta": -0.0571,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "wise": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "helpful"
+          ],
+          "bipolar_all": 0.5714,
+          "optimal_per_axis": 0.6,
+          "delta": 0.0286,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "helpful": "bip"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "thorough"
+          ],
+          "bipolar_all": 0.5571,
+          "optimal_per_axis": 0.6,
+          "delta": 0.0429,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "thorough": "bip"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "fair"
+          ],
+          "bipolar_all": 0.5143,
+          "optimal_per_axis": 0.5143,
+          "delta": 0.0,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "fair": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "responsible"
+          ],
+          "bipolar_all": 0.4714,
+          "optimal_per_axis": 0.5571,
+          "delta": 0.0857,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "responsible": "bip"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "clear"
+          ],
+          "bipolar_all": 0.5143,
+          "optimal_per_axis": 0.5,
+          "delta": -0.0143,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "clear": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "good"
+          ],
+          "bipolar_all": 0.4,
+          "optimal_per_axis": 0.5286,
+          "delta": 0.1286,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "good": "bip"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "gentle"
+          ],
+          "bipolar_all": 0.5571,
+          "optimal_per_axis": 0.5286,
+          "delta": -0.0286,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "gentle": "bip"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "patient"
+          ],
+          "bipolar_all": 0.5714,
+          "optimal_per_axis": 0.5,
+          "delta": -0.0714,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "patient": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "supportive"
+          ],
+          "bipolar_all": 0.5571,
+          "optimal_per_axis": 0.5143,
+          "delta": -0.0429,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "supportive": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "constructive"
+          ],
+          "bipolar_all": 0.5429,
+          "optimal_per_axis": 0.5857,
+          "delta": 0.0429,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "constructive": "bip"
+          }
+        }
+      ],
+      "best_bipolar_all": {
+        "set": [
+          "hard",
+          "kind",
+          "careful"
+        ],
+        "bipolar_all": 0.5857,
+        "optimal_per_axis": 0.5,
+        "delta": -0.0857,
+        "methods_used": {
+          "hard": "bip",
+          "kind": "cos",
+          "careful": "cos"
+        }
+      },
+      "best_per_axis_optimal": {
+        "set": [
+          "hard",
+          "kind",
+          "helpful"
+        ],
+        "bipolar_all": 0.5714,
+        "optimal_per_axis": 0.6,
+        "delta": 0.0286,
+        "methods_used": {
+          "hard": "bip",
+          "kind": "cos",
+          "helpful": "bip"
+        }
+      }
+    },
+    "BAAI/bge-m3": {
+      "optimal_method_per_axis": {
+        "careful": "cos",
+        "honest": "cos",
+        "kind": "cos",
+        "wise": "cos",
+        "helpful": "cos",
+        "thorough": "cos",
+        "fair": "cos",
+        "responsible": "cos",
+        "clear": "cos",
+        "good": "cos",
+        "hard": "bip",
+        "gentle": "cos",
+        "patient": "cos",
+        "supportive": "cos",
+        "constructive": "cos"
+      },
+      "three_axis_sets": [
+        {
+          "set": [
+            "hard",
+            "kind",
+            "careful"
+          ],
+          "bipolar_all": 0.5857,
+          "optimal_per_axis": 0.6857,
+          "delta": 0.1,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "careful": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "honest"
+          ],
+          "bipolar_all": 0.4286,
+          "optimal_per_axis": 0.5286,
+          "delta": 0.1,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "honest": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "wise"
+          ],
+          "bipolar_all": 0.5286,
+          "optimal_per_axis": 0.6714,
+          "delta": 0.1429,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "wise": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "helpful"
+          ],
+          "bipolar_all": 0.4429,
+          "optimal_per_axis": 0.6286,
+          "delta": 0.1857,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "helpful": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "thorough"
+          ],
+          "bipolar_all": 0.5571,
+          "optimal_per_axis": 0.6,
+          "delta": 0.0429,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "thorough": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "fair"
+          ],
+          "bipolar_all": 0.4857,
+          "optimal_per_axis": 0.6857,
+          "delta": 0.2,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "fair": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "responsible"
+          ],
+          "bipolar_all": 0.4143,
+          "optimal_per_axis": 0.6286,
+          "delta": 0.2143,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "responsible": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "clear"
+          ],
+          "bipolar_all": 0.4857,
+          "optimal_per_axis": 0.6429,
+          "delta": 0.1571,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "clear": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "good"
+          ],
+          "bipolar_all": 0.3857,
+          "optimal_per_axis": 0.6,
+          "delta": 0.2143,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "good": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "gentle"
+          ],
+          "bipolar_all": 0.5143,
+          "optimal_per_axis": 0.5429,
+          "delta": 0.0286,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "gentle": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "patient"
+          ],
+          "bipolar_all": 0.6,
+          "optimal_per_axis": 0.6,
+          "delta": 0.0,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "patient": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "supportive"
+          ],
+          "bipolar_all": 0.4286,
+          "optimal_per_axis": 0.6,
+          "delta": 0.1714,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "supportive": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "constructive"
+          ],
+          "bipolar_all": 0.4857,
+          "optimal_per_axis": 0.6143,
+          "delta": 0.1286,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "constructive": "cos"
+          }
+        }
+      ],
+      "best_bipolar_all": {
+        "set": [
+          "hard",
+          "kind",
+          "patient"
+        ],
+        "bipolar_all": 0.6,
+        "optimal_per_axis": 0.6,
+        "delta": 0.0,
+        "methods_used": {
+          "hard": "bip",
+          "kind": "cos",
+          "patient": "cos"
+        }
+      },
+      "best_per_axis_optimal": {
+        "set": [
+          "hard",
+          "kind",
+          "careful"
+        ],
+        "bipolar_all": 0.5857,
+        "optimal_per_axis": 0.6857,
+        "delta": 0.1,
+        "methods_used": {
+          "hard": "bip",
+          "kind": "cos",
+          "careful": "cos"
+        }
+      }
+    },
+    "nomic-ai/nomic-embed-text-v1.5": {
+      "optimal_method_per_axis": {
+        "careful": "bip",
+        "honest": "cos",
+        "kind": "cos",
+        "wise": "cos",
+        "helpful": "cos",
+        "thorough": "bip",
+        "fair": "cos",
+        "responsible": "cos",
+        "clear": "cos",
+        "good": "cos",
+        "hard": "bip",
+        "gentle": "cos",
+        "patient": "cos",
+        "supportive": "cos",
+        "constructive": "cos"
+      },
+      "three_axis_sets": [
+        {
+          "set": [
+            "hard",
+            "kind",
+            "careful"
+          ],
+          "bipolar_all": 0.5286,
+          "optimal_per_axis": 0.6571,
+          "delta": 0.1286,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "careful": "bip"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "honest"
+          ],
+          "bipolar_all": 0.4429,
+          "optimal_per_axis": 0.6286,
+          "delta": 0.1857,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "honest": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "wise"
+          ],
+          "bipolar_all": 0.4286,
+          "optimal_per_axis": 0.6286,
+          "delta": 0.2,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "wise": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "helpful"
+          ],
+          "bipolar_all": 0.3857,
+          "optimal_per_axis": 0.6286,
+          "delta": 0.2429,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "helpful": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "thorough"
+          ],
+          "bipolar_all": 0.4286,
+          "optimal_per_axis": 0.6286,
+          "delta": 0.2,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "thorough": "bip"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "fair"
+          ],
+          "bipolar_all": 0.3857,
+          "optimal_per_axis": 0.6143,
+          "delta": 0.2286,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "fair": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "responsible"
+          ],
+          "bipolar_all": 0.4143,
+          "optimal_per_axis": 0.6143,
+          "delta": 0.2,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "responsible": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "clear"
+          ],
+          "bipolar_all": 0.3714,
+          "optimal_per_axis": 0.6286,
+          "delta": 0.2571,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "clear": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "good"
+          ],
+          "bipolar_all": 0.4,
+          "optimal_per_axis": 0.6286,
+          "delta": 0.2286,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "good": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "gentle"
+          ],
+          "bipolar_all": 0.3857,
+          "optimal_per_axis": 0.6286,
+          "delta": 0.2429,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "gentle": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "patient"
+          ],
+          "bipolar_all": 0.5286,
+          "optimal_per_axis": 0.6286,
+          "delta": 0.1,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "patient": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "supportive"
+          ],
+          "bipolar_all": 0.4714,
+          "optimal_per_axis": 0.6286,
+          "delta": 0.1571,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "supportive": "cos"
+          }
+        },
+        {
+          "set": [
+            "hard",
+            "kind",
+            "constructive"
+          ],
+          "bipolar_all": 0.3571,
+          "optimal_per_axis": 0.6286,
+          "delta": 0.2714,
+          "methods_used": {
+            "hard": "bip",
+            "kind": "cos",
+            "constructive": "cos"
+          }
+        }
+      ],
+      "best_bipolar_all": {
+        "set": [
+          "hard",
+          "kind",
+          "careful"
+        ],
+        "bipolar_all": 0.5286,
+        "optimal_per_axis": 0.6571,
+        "delta": 0.1286,
+        "methods_used": {
+          "hard": "bip",
+          "kind": "cos",
+          "careful": "bip"
+        }
+      },
+      "best_per_axis_optimal": {
+        "set": [
+          "hard",
+          "kind",
+          "careful"
+        ],
+        "bipolar_all": 0.5286,
+        "optimal_per_axis": 0.6571,
+        "delta": 0.1286,
+        "methods_used": {
+          "hard": "bip",
+          "kind": "cos",
+          "careful": "bip"
+        }
+      }
+    }
+  }
+}

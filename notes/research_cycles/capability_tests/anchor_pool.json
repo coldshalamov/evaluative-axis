@@ -1,0 +1,41 @@
+{
+  "_comment": "Anchor candidates grouped. Drawn from the user's explicit suggestions + control words. Each is a single text string used as an anchor.",
+  "truth_anchors": [
+    "true", "truth", "truthful", "honest", "honestly", "honesty", "correct", "accurate", "right",
+    "valid", "sound", "factual", "fact", "verifiable", "verified",
+    "integrity", "logical", "logic", "illogical", "rational", "coherent", "consistent",
+    "bullshit", "lie", "lies", "lying", "lied", "false", "falsehood", "wrong", "mistake", "error",
+    "nonsense", "garbage", "made up", "fiction", "invented",
+    "illogical statement", "logical statement", "wrong again",
+    "he is lying", "this is true", "this is false", "fact check", "checked and confirmed",
+    "true statement", "false statement"
+  ],
+  "sycophancy_anchors": [
+    "sycophantic", "sycophancy", "kiss-ass", "kissass", "suck-up", "ass-kissing",
+    "people-pleaser", "people pleaser", "pushover", "doormat", "yes-man", "yes man",
+    "fawning", "obsequious", "servile", "toady", "sycophant", "flatterer",
+    "eager to please", "too eager to please", "he is too eager to please",
+    "pandering", "patronizing", "condescending", "insincere", "saccharine", "gushing",
+    "bullshit", "fluff", "hot air", "empty", "hollow", " platitudes",
+    "tells me what I want to hear", "give it to me straight", "tell it like it is",
+    "straight shooter", "no-nonsense", "honest broker", "truth teller",
+    "affirming", "validating", "supportive", "agreeable", "compliant", "deferential",
+    "professional", "respectful", "diplomatic", "tactful"
+  ],
+  "competence_anchors": [
+    "careful", "carefully", "precise", "accurate", "thorough", "rigorous", "methodical",
+    "professional", "expert", "competent", "qualified", "knowledgeable", "skilled",
+    "gold standard", "world class", "world-class", "top-tier", "best-in-class",
+    "meticulous", "diligent", "disciplined", "reliable", "trustworthy", "authoritative",
+    "heavy", "dense", "deep", "solid", "substantive", "weighty", "meaty"
+  ],
+  "warmth_anchors": [
+    "good", "nice", "kind", "warm", "friendly", "empathetic", "compassionate",
+    "understanding", "caring", "supportive", "encouraging", "patient", "gentle",
+    "loving", "affectionate", "thoughtful", "considerate", "polite", "respectful"
+  ],
+  "control_random": [
+    "blue", "table", "running", "however", "purple", "northern", "circular", "monthly",
+    "wooden", "rectangular", "external", "therefore"
+  ]
+}

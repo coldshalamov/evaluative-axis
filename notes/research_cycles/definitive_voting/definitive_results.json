@@ -1,0 +1,25 @@
+{
+  "per_model": {
+    "snowflake/snowflake-arctic-embed-m": {
+      "framing": "standard",
+      "careful_method": "cp",
+      "careful_main": 0.5,
+      "careful_bal": 0.44,
+      "careful_oos": 0.85
+    },
+    "BAAI/bge-m3": {
+      "framing": "response_only",
+      "careful_method": "cp",
+      "careful_main": 0.6714,
+      "careful_bal": 0.6,
+      "careful_oos": 0.85
+    },
+    "nomic-ai/nomic-embed-text-v1.5": {
+      "framing": "standard",
+      "careful_method": "bp",
+      "careful_main": 0.6429,
+      "careful_bal": 0.62,
+      "careful_oos": 0.65
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "experiment": "Content split OOS validation on expansion battery",
+  "date": "2026-06-28",
+  "main_battery": "70 cases (50 orig + 20 warmth)",
+  "expansion_battery": "20 cases (4 categories x 5)",
+  "expansion_accuracy": {
+    "snowflake": {"good": 0.30, "careful": 0.80, "kind": 0.40, "thorough": 0.40, "honest": 0.55},
+    "bge_m3": {"good": 0.50, "careful": 0.60, "kind": 0.35, "thorough": 0.65, "honest": 0.45},
+    "nomic": {"good": 0.45, "careful": 0.65, "kind": 0.20, "thorough": 0.40, "honest": 0.40}
+  },
+  "expansion_per_category": {
+    "conciseness_completeness": {
+      "snowflake": {"good": 0.20, "careful": 0.80},
+      "bge_m3": {"good": 0.60, "careful": 0.80},
+      "nomic": {"good": 0.20, "careful": 0.80}
+    },
+    "creative_quality": {
+      "snowflake": {"good": 0.40, "careful": 1.00},
+      "bge_m3": {"good": 0.40, "careful": 0.40},
+      "nomic": {"good": 0.60, "careful": 0.80}
+    },
+    "factual_accuracy": {
+      "snowflake": {"good": 0.20, "careful": 0.80},
+      "bge_m3": {"good": 0.40, "careful": 0.40},
+      "nomic": {"good": 0.20, "careful": 0.40}
+    },
+    "nuance_context": {
+      "snowflake": {"good": 0.40, "careful": 0.60},
+      "bge_m3": {"good": 0.60, "careful": 0.80},
+      "nomic": {"good": 0.80, "careful": 0.60}
+    }
+  },
+  "main_content_split": {
+    "snowflake": {"good_orig": 0.48, "good_warmth": 0.60, "good_gap": 0.12, "careful_orig": 0.52, "careful_warmth": 0.40, "careful_gap": -0.12},
+    "bge_m3": {"good_orig": 0.16, "good_warmth": 0.85, "good_gap": 0.69, "careful_orig": 0.58, "careful_warmth": 0.35, "careful_gap": -0.23},
+    "nomic": {"good_orig": 0.12, "good_warmth": 0.80, "good_gap": 0.68, "careful_orig": 0.62, "careful_warmth": 0.70, "careful_gap": 0.08}
+  },
+  "key_findings": [
+    "Careful beats good on expansion on all 3 models: Snowflake 80% vs 30%, BGE-M3 60% vs 50%, Nomic 65% vs 45%",
+    "Per-category pattern matches warmth-bias prediction: good best on nuance_context (warmth-adjacent), careful dominates conciseness/factual_accuracy (rigor)",
+    "Snowflake careful reaches 80% on expansion — best local-model OOS result, CI [58%, 92%] above chance",
+    "Good's nuance_context accuracy (40-80%) vs factual_accuracy (20-40%) confirms warmth-sensitivity even on expansion"
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "experiment": "Warmth-bias prediction test",
+  "date": "2026-06-28",
+  "n_cases": 70,
+  "results": {
+    "snowflake-arctic-embed-m": {
+      "good": {
+        "accuracy": 0.514,
+        "warmth_pred_acc": 0.543,
+        "firm_pred_acc": 0.5,
+        "warmth_outcome_corr": 0.108
+      },
+      "careful": {
+        "accuracy": 0.486,
+        "warmth_pred_acc": 0.457,
+        "firm_pred_acc": 0.5,
+        "warmth_outcome_corr": -0.108
+      },
+      "restrained": {
+        "accuracy": 0.543,
+        "warmth_pred_acc": 0.429,
+        "firm_pred_acc": 0.529,
+        "warmth_outcome_corr": -0.118
+      },
+      "kind": {
+        "accuracy": 0.443,
+        "warmth_pred_acc": 0.586,
+        "firm_pred_acc": 0.457,
+        "warmth_outcome_corr": 0.136
+      },
+      "thorough": {
+        "accuracy": 0.6,
+        "warmth_pred_acc": 0.457,
+        "firm_pred_acc": 0.529,
+        "warmth_outcome_corr": -0.0
+      },
+      "helpful": {
+        "accuracy": 0.543,
+        "warmth_pred_acc": 0.429,
+        "firm_pred_acc": 0.5,
+        "warmth_outcome_corr": -0.118
+      },
+      "honest": {
+        "accuracy": 0.4,
+        "warmth_pred_acc": 0.743,
+        "firm_pred_acc": 0.3,
+        "warmth_outcome_corr": 0.452
+      }
+    },
+    "bge-m3": {
+      "good": {
+        "accuracy": 0.357,
+        "warmth_pred_acc": 0.843,
+        "firm_pred_acc": 0.229,
+        "warmth_outcome_corr": 0.651
+      },
+      "careful": {
+        "accuracy": 0.514,
+        "warmth_pred_acc": 0.4,
+        "firm_pred_acc": 0.557,
+        "warmth_outcome_corr": -0.208
+      },
+      "restrained": {
+        "accuracy": 0.643,
+        "warmth_pred_acc": 0.386,
+        "firm_pred_acc": 0.543,
+        "warmth_outcome_corr": -0.123
+      },
+      "kind": {
+        "accuracy": 0.529,
+        "warmth_pred_acc": 0.614,
+        "firm_pred_acc": 0.457,
+        "warmth_outcome_corr": 0.281
+      },
+      "thorough": {
+        "accuracy": 0.529,
+        "warmth_pred_acc": 0.643,
+        "firm_pred_acc": 0.371,
+        "warmth_outcome_corr": 0.344
+      },
+      "helpful": {
+        "accuracy": 0.386,
+        "warmth_pred_acc": 0.786,
+        "firm_pred_acc": 0.286,
+        "warmth_outcome_corr": 0.538
+      },
+      "honest": {
+        "accuracy": 0.3,
+        "warmth_pred_acc": 0.786,
+        "firm_pred_acc": 0.286,
+        "warmth_outcome_corr": 0.483
+      }
+    },
+    "nomic-embed-text-v1.5": {
+      "good": {
+        "accuracy": 0.314,
+        "warmth_pred_acc": 0.857,
+        "firm_pred_acc": 0.214,
+        "warmth_outcome_corr": 0.662
+      },
+      "careful": {
+        "accuracy": 0.643,
+        "warmth_pred_acc": 0.471,
+        "firm_pred_acc": 0.486,
+        "warmth_outcome_corr": 0.075
+      },
+      "restrained": {
+        "accuracy": 0.614,
+        "warmth_pred_acc": 0.386,
+        "firm_pred_acc": 0.6,
+        "warmth_outcome_corr": -0.148
+      },
+      "kind": {
+        "accuracy": 0.4,
+        "warmth_pred_acc": 0.714,
+        "firm_pred_acc": 0.357,
+        "warmth_outcome_corr": 0.387
+      },
+      "thorough": {
+        "accuracy": 0.543,
+        "warmth_pred_acc": 0.457,
+        "firm_pred_acc": 0.529,
+        "warmth_outcome_corr": -0.054
+      },
+      "helpful": {
+        "accuracy": 0.4,
+        "warmth_pred_acc": 0.829,
+        "firm_pred_acc": 0.243,
+        "warmth_outcome_corr": 0.645
+      },
+      "honest": {
+        "accuracy": 0.386,
+        "warmth_pred_acc": 0.671,
+        "firm_pred_acc": 0.4,
+        "warmth_outcome_corr": 0.278
+      }
+    }
+  }
+}

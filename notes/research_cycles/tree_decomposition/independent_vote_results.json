@@ -1,0 +1,44 @@
+{
+  "experiment": "Majority vote among 9 warmth-independent terms",
+  "date": "2026-06-28",
+  "terms_tested": [
+    "careful",
+    "thorough",
+    "deliberate",
+    "cautious",
+    "methodical",
+    "patient",
+    "prudent",
+    "measured",
+    "rigorous"
+  ],
+  "results": {
+    "snowflake-arctic-embed-m": {
+      "careful_alone": 0.486,
+      "top3_vote": 0.557,
+      "top5_vote": 0.471,
+      "all9_vote": 0.443,
+      "all9_sum": 0.529,
+      "good": 0.514,
+      "net_rescue_9vote": -3
+    },
+    "bge-m3": {
+      "careful_alone": 0.514,
+      "top3_vote": 0.557,
+      "top5_vote": 0.471,
+      "all9_vote": 0.429,
+      "all9_sum": 0.443,
+      "good": 0.357,
+      "net_rescue_9vote": -6
+    },
+    "nomic-embed-text-v1.5": {
+      "careful_alone": 0.643,
+      "top3_vote": 0.614,
+      "top5_vote": 0.557,
+      "all9_vote": 0.5,
+      "all9_sum": 0.443,
+      "good": 0.314,
+      "net_rescue_9vote": -10
+    }
+  }
+}

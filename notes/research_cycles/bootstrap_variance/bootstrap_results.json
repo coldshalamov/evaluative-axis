@@ -1,0 +1,679 @@
+{
+  "metadata": {
+    "n_boot": 2000,
+    "axes": [
+      "careful",
+      "honest",
+      "kind",
+      "wise",
+      "helpful",
+      "thorough",
+      "fair",
+      "responsible",
+      "clear",
+      "good",
+      "hard",
+      "gentle",
+      "patient",
+      "supportive",
+      "constructive"
+    ],
+    "models": [
+      "snowflake/snowflake-arctic-embed-m",
+      "BAAI/bge-m3",
+      "nomic-ai/nomic-embed-text-v1.5"
+    ],
+    "n_firmness": 50,
+    "n_warmth": 20
+  },
+  "per_model": {
+    "snowflake/snowflake-arctic-embed-m": {
+      "original": {
+        "careful": {
+          "point": 0.52,
+          "ci_lo": 0.38,
+          "ci_hi": 0.66,
+          "ci_width": 0.28,
+          "excludes_50": false
+        },
+        "honest": {
+          "point": 0.26,
+          "ci_lo": 0.14,
+          "ci_hi": 0.3805,
+          "ci_width": 0.2405,
+          "excludes_50": true
+        },
+        "kind": {
+          "point": 0.4,
+          "ci_lo": 0.26,
+          "ci_hi": 0.54,
+          "ci_width": 0.28,
+          "excludes_50": false
+        },
+        "wise": {
+          "point": 0.46,
+          "ci_lo": 0.32,
+          "ci_hi": 0.6,
+          "ci_width": 0.28,
+          "excludes_50": false
+        },
+        "helpful": {
+          "point": 0.58,
+          "ci_lo": 0.44,
+          "ci_hi": 0.72,
+          "ci_width": 0.28,
+          "excludes_50": false
+        },
+        "thorough": {
+          "point": 0.6,
+          "ci_lo": 0.46,
+          "ci_hi": 0.74,
+          "ci_width": 0.28,
+          "excludes_50": false
+        },
+        "fair": {
+          "point": 0.42,
+          "ci_lo": 0.28,
+          "ci_hi": 0.56,
+          "ci_width": 0.28,
+          "excludes_50": false
+        },
+        "responsible": {
+          "point": 0.52,
+          "ci_lo": 0.38,
+          "ci_hi": 0.66,
+          "ci_width": 0.28,
+          "excludes_50": false
+        },
+        "clear": {
+          "point": 0.5,
+          "ci_lo": 0.36,
+          "ci_hi": 0.64,
+          "ci_width": 0.28,
+          "excludes_50": false
+        },
+        "good": {
+          "point": 0.48,
+          "ci_lo": 0.34,
+          "ci_hi": 0.62,
+          "ci_width": 0.28,
+          "excludes_50": false
+        },
+        "hard": {
+          "point": 0.58,
+          "ci_lo": 0.44,
+          "ci_hi": 0.7,
+          "ci_width": 0.26,
+          "excludes_50": false
+        },
+        "gentle": {
+          "point": 0.46,
+          "ci_lo": 0.32,
+          "ci_hi": 0.6,
+          "ci_width": 0.28,
+          "excludes_50": false
+        },
+        "patient": {
+          "point": 0.54,
+          "ci_lo": 0.4,
+          "ci_hi": 0.68,
+          "ci_width": 0.28,
+          "excludes_50": false
+        },
+        "supportive": {
+          "point": 0.5,
+          "ci_lo": 0.36,
+          "ci_hi": 0.64,
+          "ci_width": 0.28,
+          "excludes_50": false
+        },
+        "constructive": {
+          "point": 0.46,
+          "ci_lo": 0.34,
+          "ci_hi": 0.6,
+          "ci_width": 0.26,
+          "excludes_50": false
+        }
+      },
+      "warmth": {
+        "careful": {
+          "point": 0.4,
+          "ci_lo": 0.2,
+          "ci_hi": 0.65,
+          "ci_width": 0.45,
+          "excludes_50": false
+        },
+        "honest": {
+          "point": 0.75,
+          "ci_lo": 0.55,
+          "ci_hi": 0.9,
+          "ci_width": 0.35,
+          "excludes_50": true
+        },
+        "kind": {
+          "point": 0.55,
+          "ci_lo": 0.35,
+          "ci_hi": 0.75,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "wise": {
+          "point": 0.55,
+          "ci_lo": 0.35,
+          "ci_hi": 0.75,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "helpful": {
+          "point": 0.45,
+          "ci_lo": 0.25,
+          "ci_hi": 0.7,
+          "ci_width": 0.45,
+          "excludes_50": false
+        },
+        "thorough": {
+          "point": 0.6,
+          "ci_lo": 0.4,
+          "ci_hi": 0.8,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "fair": {
+          "point": 0.55,
+          "ci_lo": 0.35,
+          "ci_hi": 0.75,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "responsible": {
+          "point": 0.6,
+          "ci_lo": 0.4,
+          "ci_hi": 0.8,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "clear": {
+          "point": 0.5,
+          "ci_lo": 0.3,
+          "ci_hi": 0.7,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "good": {
+          "point": 0.6,
+          "ci_lo": 0.4,
+          "ci_hi": 0.8,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "hard": {
+          "point": 0.65,
+          "ci_lo": 0.4,
+          "ci_hi": 0.85,
+          "ci_width": 0.45,
+          "excludes_50": false
+        },
+        "gentle": {
+          "point": 0.6,
+          "ci_lo": 0.4,
+          "ci_hi": 0.8,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "patient": {
+          "point": 0.2,
+          "ci_lo": 0.05,
+          "ci_hi": 0.4,
+          "ci_width": 0.35,
+          "excludes_50": true
+        },
+        "supportive": {
+          "point": 0.4,
+          "ci_lo": 0.2,
+          "ci_hi": 0.6,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "constructive": {
+          "point": 0.75,
+          "ci_lo": 0.55,
+          "ci_hi": 0.95,
+          "ci_width": 0.4,
+          "excludes_50": true
+        }
+      }
+    },
+    "BAAI/bge-m3": {
+      "original": {
+        "careful": {
+          "point": 0.58,
+          "ci_lo": 0.44,
+          "ci_hi": 0.72,
+          "ci_width": 0.28,
+          "excludes_50": false
+        },
+        "honest": {
+          "point": 0.16,
+          "ci_lo": 0.06,
+          "ci_hi": 0.26,
+          "ci_width": 0.2,
+          "excludes_50": true
+        },
+        "kind": {
+          "point": 0.44,
+          "ci_lo": 0.3,
+          "ci_hi": 0.58,
+          "ci_width": 0.28,
+          "excludes_50": false
+        },
+        "wise": {
+          "point": 0.24,
+          "ci_lo": 0.14,
+          "ci_hi": 0.36,
+          "ci_width": 0.22,
+          "excludes_50": true
+        },
+        "helpful": {
+          "point": 0.22,
+          "ci_lo": 0.1,
+          "ci_hi": 0.34,
+          "ci_width": 0.24,
+          "excludes_50": true
+        },
+        "thorough": {
+          "point": 0.42,
+          "ci_lo": 0.28,
+          "ci_hi": 0.56,
+          "ci_width": 0.28,
+          "excludes_50": false
+        },
+        "fair": {
+          "point": 0.16,
+          "ci_lo": 0.06,
+          "ci_hi": 0.26,
+          "ci_width": 0.2,
+          "excludes_50": true
+        },
+        "responsible": {
+          "point": 0.24,
+          "ci_lo": 0.12,
+          "ci_hi": 0.3605,
+          "ci_width": 0.2405,
+          "excludes_50": true
+        },
+        "clear": {
+          "point": 0.26,
+          "ci_lo": 0.14,
+          "ci_hi": 0.38,
+          "ci_width": 0.24,
+          "excludes_50": true
+        },
+        "good": {
+          "point": 0.16,
+          "ci_lo": 0.06,
+          "ci_hi": 0.26,
+          "ci_width": 0.2,
+          "excludes_50": true
+        },
+        "hard": {
+          "point": 0.64,
+          "ci_lo": 0.52,
+          "ci_hi": 0.78,
+          "ci_width": 0.26,
+          "excludes_50": true
+        },
+        "gentle": {
+          "point": 0.28,
+          "ci_lo": 0.16,
+          "ci_hi": 0.4,
+          "ci_width": 0.24,
+          "excludes_50": true
+        },
+        "patient": {
+          "point": 0.38,
+          "ci_lo": 0.24,
+          "ci_hi": 0.52,
+          "ci_width": 0.28,
+          "excludes_50": false
+        },
+        "supportive": {
+          "point": 0.28,
+          "ci_lo": 0.16,
+          "ci_hi": 0.4,
+          "ci_width": 0.24,
+          "excludes_50": true
+        },
+        "constructive": {
+          "point": 0.26,
+          "ci_lo": 0.14,
+          "ci_hi": 0.38,
+          "ci_width": 0.24,
+          "excludes_50": true
+        }
+      },
+      "warmth": {
+        "careful": {
+          "point": 0.35,
+          "ci_lo": 0.15,
+          "ci_hi": 0.55,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "honest": {
+          "point": 0.65,
+          "ci_lo": 0.45,
+          "ci_hi": 0.85,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "kind": {
+          "point": 0.75,
+          "ci_lo": 0.55,
+          "ci_hi": 0.9,
+          "ci_width": 0.35,
+          "excludes_50": true
+        },
+        "wise": {
+          "point": 0.75,
+          "ci_lo": 0.55,
+          "ci_hi": 0.95,
+          "ci_width": 0.4,
+          "excludes_50": true
+        },
+        "helpful": {
+          "point": 0.8,
+          "ci_lo": 0.6,
+          "ci_hi": 0.95,
+          "ci_width": 0.35,
+          "excludes_50": true
+        },
+        "thorough": {
+          "point": 0.8,
+          "ci_lo": 0.6,
+          "ci_hi": 0.95,
+          "ci_width": 0.35,
+          "excludes_50": true
+        },
+        "fair": {
+          "point": 0.7,
+          "ci_lo": 0.5,
+          "ci_hi": 0.9,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "responsible": {
+          "point": 0.7,
+          "ci_lo": 0.5,
+          "ci_hi": 0.9,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "clear": {
+          "point": 0.5,
+          "ci_lo": 0.3,
+          "ci_hi": 0.7,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "good": {
+          "point": 0.85,
+          "ci_lo": 0.7,
+          "ci_hi": 1.0,
+          "ci_width": 0.3,
+          "excludes_50": true
+        },
+        "hard": {
+          "point": 0.55,
+          "ci_lo": 0.35,
+          "ci_hi": 0.75,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "gentle": {
+          "point": 0.55,
+          "ci_lo": 0.35,
+          "ci_hi": 0.75,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "patient": {
+          "point": 0.55,
+          "ci_lo": 0.35,
+          "ci_hi": 0.75,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "supportive": {
+          "point": 0.65,
+          "ci_lo": 0.45,
+          "ci_hi": 0.85,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "constructive": {
+          "point": 0.7,
+          "ci_lo": 0.5,
+          "ci_hi": 0.9,
+          "ci_width": 0.4,
+          "excludes_50": false
+        }
+      }
+    },
+    "nomic-ai/nomic-embed-text-v1.5": {
+      "original": {
+        "careful": {
+          "point": 0.62,
+          "ci_lo": 0.48,
+          "ci_hi": 0.76,
+          "ci_width": 0.28,
+          "excludes_50": false
+        },
+        "honest": {
+          "point": 0.3,
+          "ci_lo": 0.18,
+          "ci_hi": 0.44,
+          "ci_width": 0.26,
+          "excludes_50": true
+        },
+        "kind": {
+          "point": 0.28,
+          "ci_lo": 0.16,
+          "ci_hi": 0.42,
+          "ci_width": 0.26,
+          "excludes_50": true
+        },
+        "wise": {
+          "point": 0.3,
+          "ci_lo": 0.18,
+          "ci_hi": 0.44,
+          "ci_width": 0.26,
+          "excludes_50": true
+        },
+        "helpful": {
+          "point": 0.2,
+          "ci_lo": 0.1,
+          "ci_hi": 0.32,
+          "ci_width": 0.22,
+          "excludes_50": true
+        },
+        "thorough": {
+          "point": 0.56,
+          "ci_lo": 0.42,
+          "ci_hi": 0.7,
+          "ci_width": 0.28,
+          "excludes_50": false
+        },
+        "fair": {
+          "point": 0.24,
+          "ci_lo": 0.12,
+          "ci_hi": 0.36,
+          "ci_width": 0.24,
+          "excludes_50": true
+        },
+        "responsible": {
+          "point": 0.2,
+          "ci_lo": 0.1,
+          "ci_hi": 0.32,
+          "ci_width": 0.22,
+          "excludes_50": true
+        },
+        "clear": {
+          "point": 0.34,
+          "ci_lo": 0.2,
+          "ci_hi": 0.48,
+          "ci_width": 0.28,
+          "excludes_50": true
+        },
+        "good": {
+          "point": 0.12,
+          "ci_lo": 0.04,
+          "ci_hi": 0.22,
+          "ci_width": 0.18,
+          "excludes_50": true
+        },
+        "hard": {
+          "point": 0.68,
+          "ci_lo": 0.54,
+          "ci_hi": 0.8,
+          "ci_width": 0.26,
+          "excludes_50": true
+        },
+        "gentle": {
+          "point": 0.26,
+          "ci_lo": 0.14,
+          "ci_hi": 0.4,
+          "ci_width": 0.26,
+          "excludes_50": true
+        },
+        "patient": {
+          "point": 0.56,
+          "ci_lo": 0.42,
+          "ci_hi": 0.7,
+          "ci_width": 0.28,
+          "excludes_50": false
+        },
+        "supportive": {
+          "point": 0.38,
+          "ci_lo": 0.24,
+          "ci_hi": 0.52,
+          "ci_width": 0.28,
+          "excludes_50": false
+        },
+        "constructive": {
+          "point": 0.28,
+          "ci_lo": 0.16,
+          "ci_hi": 0.4,
+          "ci_width": 0.24,
+          "excludes_50": true
+        }
+      },
+      "warmth": {
+        "careful": {
+          "point": 0.7,
+          "ci_lo": 0.5,
+          "ci_hi": 0.9,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "honest": {
+          "point": 0.6,
+          "ci_lo": 0.4,
+          "ci_hi": 0.8,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "kind": {
+          "point": 0.7,
+          "ci_lo": 0.5,
+          "ci_hi": 0.9,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "wise": {
+          "point": 0.65,
+          "ci_lo": 0.45,
+          "ci_hi": 0.85,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "helpful": {
+          "point": 0.9,
+          "ci_lo": 0.75,
+          "ci_hi": 1.0,
+          "ci_width": 0.25,
+          "excludes_50": true
+        },
+        "thorough": {
+          "point": 0.5,
+          "ci_lo": 0.3,
+          "ci_hi": 0.7,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "fair": {
+          "point": 0.7,
+          "ci_lo": 0.5,
+          "ci_hi": 0.9,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "responsible": {
+          "point": 0.8,
+          "ci_lo": 0.6,
+          "ci_hi": 0.95,
+          "ci_width": 0.35,
+          "excludes_50": true
+        },
+        "clear": {
+          "point": 0.65,
+          "ci_lo": 0.45,
+          "ci_hi": 0.85,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "good": {
+          "point": 0.8,
+          "ci_lo": 0.6,
+          "ci_hi": 0.95,
+          "ci_width": 0.35,
+          "excludes_50": true
+        },
+        "hard": {
+          "point": 0.5,
+          "ci_lo": 0.3,
+          "ci_hi": 0.7,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "gentle": {
+          "point": 0.65,
+          "ci_lo": 0.45,
+          "ci_hi": 0.85,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "patient": {
+          "point": 0.45,
+          "ci_lo": 0.25,
+          "ci_hi": 0.65,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "supportive": {
+          "point": 0.65,
+          "ci_lo": 0.45,
+          "ci_hi": 0.85,
+          "ci_width": 0.4,
+          "excludes_50": false
+        },
+        "constructive": {
+          "point": 0.7,
+          "ci_lo": 0.5,
+          "ci_hi": 0.9,
+          "ci_width": 0.4,
+          "excludes_50": false
+        }
+      }
+    }
+  }
+}

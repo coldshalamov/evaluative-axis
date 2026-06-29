@@ -1,0 +1,2472 @@
+{
+  "metadata": {
+    "n_original": 50,
+    "n_warmth": 20,
+    "n_total": 70,
+    "n_axes": 36,
+    "axes_tested": [
+      "careful",
+      "honest",
+      "kind",
+      "thorough",
+      "good",
+      "hard",
+      "helpful",
+      "fair",
+      "wise",
+      "responsible",
+      "clear",
+      "active",
+      "fast",
+      "sharp",
+      "bold",
+      "strong",
+      "vigorous",
+      "better",
+      "right",
+      "correct",
+      "proper",
+      "ideal",
+      "excellent",
+      "superior",
+      "gentle",
+      "patient",
+      "supportive",
+      "constructive",
+      "warm",
+      "empathetic",
+      "accurate",
+      "reliable",
+      "rigorous",
+      "precise",
+      "competent",
+      "diligent"
+    ],
+    "models": [
+      "snowflake/snowflake-arctic-embed-m",
+      "BAAI/bge-m3",
+      "nomic-ai/nomic-embed-text-v1.5"
+    ]
+  },
+  "per_model": {
+    "snowflake/snowflake-arctic-embed-m": {
+      "careful": {
+        "bipolar": {
+          "original": 0.52,
+          "warmth": 0.4,
+          "combined": 0.4857
+        },
+        "cosine_pos": {
+          "original": 0.44,
+          "warmth": 0.65,
+          "combined": 0.5
+        },
+        "margins": {
+          "original": 0.003011,
+          "warmth": -0.001595,
+          "combined": 0.001695
+        }
+      },
+      "honest": {
+        "bipolar": {
+          "original": 0.26,
+          "warmth": 0.75,
+          "combined": 0.4
+        },
+        "cosine_pos": {
+          "original": 0.4,
+          "warmth": 0.7,
+          "combined": 0.4857
+        },
+        "margins": {
+          "original": -0.011217,
+          "warmth": 0.023752,
+          "combined": -0.001226
+        }
+      },
+      "kind": {
+        "bipolar": {
+          "original": 0.4,
+          "warmth": 0.55,
+          "combined": 0.4429
+        },
+        "cosine_pos": {
+          "original": 0.4,
+          "warmth": 0.7,
+          "combined": 0.4857
+        },
+        "margins": {
+          "original": -0.003521,
+          "warmth": 0.009541,
+          "combined": 0.000211
+        }
+      },
+      "thorough": {
+        "bipolar": {
+          "original": 0.6,
+          "warmth": 0.6,
+          "combined": 0.6
+        },
+        "cosine_pos": {
+          "original": 0.42,
+          "warmth": 0.65,
+          "combined": 0.4857
+        },
+        "margins": {
+          "original": -0.000518,
+          "warmth": 0.009209,
+          "combined": 0.002261
+        }
+      },
+      "good": {
+        "bipolar": {
+          "original": 0.48,
+          "warmth": 0.6,
+          "combined": 0.5143
+        },
+        "cosine_pos": {
+          "original": 0.4,
+          "warmth": 0.7,
+          "combined": 0.4857
+        },
+        "margins": {
+          "original": -0.009537,
+          "warmth": 0.006227,
+          "combined": -0.005033
+        }
+      },
+      "hard": {
+        "bipolar": {
+          "original": 0.58,
+          "warmth": 0.65,
+          "combined": 0.6
+        },
+        "cosine_pos": {
+          "original": 0.42,
+          "warmth": 0.7,
+          "combined": 0.5
+        },
+        "margins": {
+          "original": 0.004323,
+          "warmth": 0.01356,
+          "combined": 0.006962
+        }
+      },
+      "helpful": {
+        "bipolar": {
+          "original": 0.58,
+          "warmth": 0.45,
+          "combined": 0.5429
+        },
+        "cosine_pos": {
+          "original": 0.46,
+          "warmth": 0.65,
+          "combined": 0.5143
+        },
+        "margins": {
+          "original": 0.00222,
+          "warmth": -0.002996,
+          "combined": 0.00073
+        }
+      },
+      "fair": {
+        "bipolar": {
+          "original": 0.42,
+          "warmth": 0.55,
+          "combined": 0.4571
+        },
+        "cosine_pos": {
+          "original": 0.42,
+          "warmth": 0.65,
+          "combined": 0.4857
+        },
+        "margins": {
+          "original": -0.006045,
+          "warmth": -0.000582,
+          "combined": -0.004484
+        }
+      },
+      "wise": {
+        "bipolar": {
+          "original": 0.46,
+          "warmth": 0.55,
+          "combined": 0.4857
+        },
+        "cosine_pos": {
+          "original": 0.44,
+          "warmth": 0.65,
+          "combined": 0.5
+        },
+        "margins": {
+          "original": -0.001258,
+          "warmth": -0.006758,
+          "combined": -0.002829
+        }
+      },
+      "responsible": {
+        "bipolar": {
+          "original": 0.52,
+          "warmth": 0.6,
+          "combined": 0.5429
+        },
+        "cosine_pos": {
+          "original": 0.44,
+          "warmth": 0.65,
+          "combined": 0.5
+        },
+        "margins": {
+          "original": -0.00409,
+          "warmth": 0.014605,
+          "combined": 0.001252
+        }
+      },
+      "clear": {
+        "bipolar": {
+          "original": 0.5,
+          "warmth": 0.5,
+          "combined": 0.5
+        },
+        "cosine_pos": {
+          "original": 0.46,
+          "warmth": 0.65,
+          "combined": 0.5143
+        },
+        "margins": {
+          "original": -0.002178,
+          "warmth": 0.001503,
+          "combined": -0.001126
+        }
+      },
+      "active": {
+        "bipolar": {
+          "original": 0.6,
+          "warmth": 0.5,
+          "combined": 0.5714
+        },
+        "cosine_pos": {
+          "original": 0.4,
+          "warmth": 0.65,
+          "combined": 0.4714
+        },
+        "margins": {
+          "original": -0.00013,
+          "warmth": 0.004105,
+          "combined": 0.00108
+        }
+      },
+      "fast": {
+        "bipolar": {
+          "original": 0.22,
+          "warmth": 0.75,
+          "combined": 0.3714
+        },
+        "cosine_pos": {
+          "original": 0.38,
+          "warmth": 0.65,
+          "combined": 0.4571
+        },
+        "margins": {
+          "original": -0.012747,
+          "warmth": 0.013851,
+          "combined": -0.005147
+        }
+      },
+      "sharp": {
+        "bipolar": {
+          "original": 0.32,
+          "warmth": 0.5,
+          "combined": 0.3714
+        },
+        "cosine_pos": {
+          "original": 0.4,
+          "warmth": 0.7,
+          "combined": 0.4857
+        },
+        "margins": {
+          "original": -0.007859,
+          "warmth": 0.000789,
+          "combined": -0.005388
+        }
+      },
+      "bold": {
+        "bipolar": {
+          "original": 0.56,
+          "warmth": 0.3,
+          "combined": 0.4857
+        },
+        "cosine_pos": {
+          "original": 0.46,
+          "warmth": 0.65,
+          "combined": 0.5143
+        },
+        "margins": {
+          "original": 0.001888,
+          "warmth": -0.008227,
+          "combined": -0.001002
+        }
+      },
+      "strong": {
+        "bipolar": {
+          "original": 0.24,
+          "warmth": 0.85,
+          "combined": 0.4143
+        },
+        "cosine_pos": {
+          "original": 0.4,
+          "warmth": 0.7,
+          "combined": 0.4857
+        },
+        "margins": {
+          "original": -0.01972,
+          "warmth": 0.030673,
+          "combined": -0.005322
+        }
+      },
+      "vigorous": {
+        "bipolar": {
+          "original": 0.46,
+          "warmth": 0.55,
+          "combined": 0.4857
+        },
+        "cosine_pos": {
+          "original": 0.4,
+          "warmth": 0.65,
+          "combined": 0.4714
+        },
+        "margins": {
+          "original": -0.00299,
+          "warmth": 0.008983,
+          "combined": 0.000431
+        }
+      },
+      "better": {
+        "bipolar": {
+          "original": 0.34,
+          "warmth": 0.75,
+          "combined": 0.4571
+        },
+        "cosine_pos": {
+          "original": 0.4,
+          "warmth": 0.7,
+          "combined": 0.4857
+        },
+        "margins": {
+          "original": -0.013801,
+          "warmth": 0.01896,
+          "combined": -0.004441
+        }
+      },
+      "right": {
+        "bipolar": {
+          "original": 0.3,
+          "warmth": 0.75,
+          "combined": 0.4286
+        },
+        "cosine_pos": {
+          "original": 0.4,
+          "warmth": 0.65,
+          "combined": 0.4714
+        },
+        "margins": {
+          "original": -0.011322,
+          "warmth": 0.022303,
+          "combined": -0.001714
+        }
+      },
+      "correct": {
+        "bipolar": {
+          "original": 0.26,
+          "warmth": 0.85,
+          "combined": 0.4286
+        },
+        "cosine_pos": {
+          "original": 0.42,
+          "warmth": 0.65,
+          "combined": 0.4857
+        },
+        "margins": {
+          "original": -0.020767,
+          "warmth": 0.033961,
+          "combined": -0.005131
+        }
+      },
+      "proper": {
+        "bipolar": {
+          "original": 0.2,
+          "warmth": 0.7,
+          "combined": 0.3429
+        },
+        "cosine_pos": {
+          "original": 0.4,
+          "warmth": 0.65,
+          "combined": 0.4714
+        },
+        "margins": {
+          "original": -0.02601,
+          "warmth": 0.016581,
+          "combined": -0.013841
+        }
+      },
+      "ideal": {
+        "bipolar": {
+          "original": 0.48,
+          "warmth": 0.55,
+          "combined": 0.5
+        },
+        "cosine_pos": {
+          "original": 0.4,
+          "warmth": 0.7,
+          "combined": 0.4857
+        },
+        "margins": {
+          "original": -0.004791,
+          "warmth": -0.006068,
+          "combined": -0.005156
+        }
+      },
+      "excellent": {
+        "bipolar": {
+          "original": 0.38,
+          "warmth": 0.7,
+          "combined": 0.4714
+        },
+        "cosine_pos": {
+          "original": 0.4,
+          "warmth": 0.65,
+          "combined": 0.4714
+        },
+        "margins": {
+          "original": -0.010237,
+          "warmth": 0.008201,
+          "combined": -0.004969
+        }
+      },
+      "superior": {
+        "bipolar": {
+          "original": 0.22,
+          "warmth": 0.9,
+          "combined": 0.4143
+        },
+        "cosine_pos": {
+          "original": 0.4,
+          "warmth": 0.65,
+          "combined": 0.4714
+        },
+        "margins": {
+          "original": -0.016466,
+          "warmth": 0.029967,
+          "combined": -0.003199
+        }
+      },
+      "gentle": {
+        "bipolar": {
+          "original": 0.46,
+          "warmth": 0.6,
+          "combined": 0.5
+        },
+        "cosine_pos": {
+          "original": 0.4,
+          "warmth": 0.65,
+          "combined": 0.4714
+        },
+        "margins": {
+          "original": -0.003328,
+          "warmth": 0.005149,
+          "combined": -0.000906
+        }
+      },
+      "patient": {
+        "bipolar": {
+          "original": 0.54,
+          "warmth": 0.2,
+          "combined": 0.4429
+        },
+        "cosine_pos": {
+          "original": 0.4,
+          "warmth": 0.65,
+          "combined": 0.4714
+        },
+        "margins": {
+          "original": 0.006919,
+          "warmth": -0.019928,
+          "combined": -0.000752
+        }
+      },
+      "supportive": {
+        "bipolar": {
+          "original": 0.5,
+          "warmth": 0.4,
+          "combined": 0.4714
+        },
+        "cosine_pos": {
+          "original": 0.42,
+          "warmth": 0.7,
+          "combined": 0.5
+        },
+        "margins": {
+          "original": 0.000788,
+          "warmth": -0.008267,
+          "combined": -0.001799
+        }
+      },
+      "constructive": {
+        "bipolar": {
+          "original": 0.46,
+          "warmth": 0.75,
+          "combined": 0.5429
+        },
+        "cosine_pos": {
+          "original": 0.48,
+          "warmth": 0.65,
+          "combined": 0.5286
+        },
+        "margins": {
+          "original": -0.005799,
+          "warmth": 0.027679,
+          "combined": 0.003766
+        }
+      },
+      "warm": {
+        "bipolar": {
+          "original": 0.58,
+          "warmth": 0.55,
+          "combined": 0.5714
+        },
+        "cosine_pos": {
+          "original": 0.42,
+          "warmth": 0.75,
+          "combined": 0.5143
+        },
+        "margins": {
+          "original": 0.003361,
+          "warmth": 0.005367,
+          "combined": 0.003934
+        }
+      },
+      "empathetic": {
+        "bipolar": {
+          "original": 0.48,
+          "warmth": 0.5,
+          "combined": 0.4857
+        },
+        "cosine_pos": {
+          "original": 0.48,
+          "warmth": 0.65,
+          "combined": 0.5286
+        },
+        "margins": {
+          "original": -0.000548,
+          "warmth": 0.002384,
+          "combined": 0.000289
+        }
+      },
+      "accurate": {
+        "bipolar": {
+          "original": 0.22,
+          "warmth": 0.75,
+          "combined": 0.3714
+        },
+        "cosine_pos": {
+          "original": 0.44,
+          "warmth": 0.65,
+          "combined": 0.5
+        },
+        "margins": {
+          "original": -0.018889,
+          "warmth": 0.016183,
+          "combined": -0.008869
+        }
+      },
+      "reliable": {
+        "bipolar": {
+          "original": 0.24,
+          "warmth": 0.7,
+          "combined": 0.3714
+        },
+        "cosine_pos": {
+          "original": 0.42,
+          "warmth": 0.65,
+          "combined": 0.4857
+        },
+        "margins": {
+          "original": -0.015804,
+          "warmth": 0.016299,
+          "combined": -0.006632
+        }
+      },
+      "rigorous": {
+        "bipolar": {
+          "original": 0.5,
+          "warmth": 0.3,
+          "combined": 0.4429
+        },
+        "cosine_pos": {
+          "original": 0.38,
+          "warmth": 0.65,
+          "combined": 0.4571
+        },
+        "margins": {
+          "original": 0.001656,
+          "warmth": -0.008911,
+          "combined": -0.001363
+        }
+      },
+      "precise": {
+        "bipolar": {
+          "original": 0.48,
+          "warmth": 0.25,
+          "combined": 0.4143
+        },
+        "cosine_pos": {
+          "original": 0.42,
+          "warmth": 0.65,
+          "combined": 0.4857
+        },
+        "margins": {
+          "original": -0.000963,
+          "warmth": -0.016398,
+          "combined": -0.005373
+        }
+      },
+      "competent": {
+        "bipolar": {
+          "original": 0.26,
+          "warmth": 0.75,
+          "combined": 0.4
+        },
+        "cosine_pos": {
+          "original": 0.4,
+          "warmth": 0.65,
+          "combined": 0.4714
+        },
+        "margins": {
+          "original": -0.01107,
+          "warmth": 0.021176,
+          "combined": -0.001857
+        }
+      },
+      "diligent": {
+        "bipolar": {
+          "original": 0.6,
+          "warmth": 0.2,
+          "combined": 0.4857
+        },
+        "cosine_pos": {
+          "original": 0.46,
+          "warmth": 0.65,
+          "combined": 0.5143
+        },
+        "margins": {
+          "original": 0.008242,
+          "warmth": -0.019808,
+          "combined": 0.000228
+        }
+      },
+      "majority_vote_combos": {
+        "hard+kind+careful": {
+          "axes": [
+            "hard",
+            "kind",
+            "careful"
+          ],
+          "majority_vote": {
+            "original": 0.5,
+            "warmth": 0.55,
+            "combined": 0.5143
+          },
+          "any_correct": 0.9143,
+          "cospos_majority": 0.4857
+        },
+        "hard+kind+good": {
+          "axes": [
+            "hard",
+            "kind",
+            "good"
+          ],
+          "majority_vote": {
+            "original": 0.38,
+            "warmth": 0.6,
+            "combined": 0.4429
+          },
+          "any_correct": 0.9714,
+          "cospos_majority": 0.4857
+        },
+        "hard+kind+thorough": {
+          "axes": [
+            "hard",
+            "kind",
+            "thorough"
+          ],
+          "majority_vote": {
+            "original": 0.6,
+            "warmth": 0.55,
+            "combined": 0.5857
+          },
+          "any_correct": 0.9,
+          "cospos_majority": 0.4857
+        },
+        "hard+kind+clear": {
+          "axes": [
+            "hard",
+            "kind",
+            "clear"
+          ],
+          "majority_vote": {
+            "original": 0.48,
+            "warmth": 0.6,
+            "combined": 0.5143
+          },
+          "any_correct": 0.9429,
+          "cospos_majority": 0.4857
+        },
+        "careful+kind+honest": {
+          "axes": [
+            "careful",
+            "kind",
+            "honest"
+          ],
+          "majority_vote": {
+            "original": 0.32,
+            "warmth": 0.55,
+            "combined": 0.3857
+          },
+          "any_correct": 0.8,
+          "cospos_majority": 0.4857
+        },
+        "active+kind+careful": {
+          "axes": [
+            "active",
+            "kind",
+            "careful"
+          ],
+          "majority_vote": {
+            "original": 0.54,
+            "warmth": 0.55,
+            "combined": 0.5429
+          },
+          "any_correct": 0.8714,
+          "cospos_majority": 0.4714
+        },
+        "better+kind+careful": {
+          "axes": [
+            "better",
+            "kind",
+            "careful"
+          ],
+          "majority_vote": {
+            "original": 0.34,
+            "warmth": 0.45,
+            "combined": 0.3714
+          },
+          "any_correct": 0.8714,
+          "cospos_majority": 0.4857
+        },
+        "correct+kind+careful": {
+          "axes": [
+            "correct",
+            "kind",
+            "careful"
+          ],
+          "majority_vote": {
+            "original": 0.3,
+            "warmth": 0.65,
+            "combined": 0.4
+          },
+          "any_correct": 0.8286,
+          "cospos_majority": 0.4714
+        },
+        "right+kind+careful": {
+          "axes": [
+            "right",
+            "kind",
+            "careful"
+          ],
+          "majority_vote": {
+            "original": 0.38,
+            "warmth": 0.5,
+            "combined": 0.4143
+          },
+          "any_correct": 0.8286,
+          "cospos_majority": 0.4714
+        },
+        "top5_greedy": {
+          "axes": [
+            "thorough",
+            "hard",
+            "active",
+            "warm",
+            "helpful"
+          ],
+          "majority_vote": {
+            "original": 0.66,
+            "warmth": 0.65,
+            "combined": 0.6571
+          },
+          "any_correct": 1.0,
+          "cospos_majority": 0.4714
+        },
+        "all_35": {
+          "axes": "36 axes",
+          "majority_vote": {
+            "original": 0.28,
+            "warmth": 0.65,
+            "combined": 0.3857
+          },
+          "any_correct": 1.0,
+          "cospos_majority": 0.4714
+        },
+        "top3_greedy": {
+          "axes": [
+            "thorough",
+            "hard",
+            "active"
+          ],
+          "majority_vote": {
+            "original": 0.58,
+            "warmth": 0.55,
+            "combined": 0.5714
+          },
+          "any_correct": 0.8571,
+          "cospos_majority": 0.4714
+        },
+        "top7_greedy": {
+          "axes": [
+            "thorough",
+            "hard",
+            "active",
+            "warm",
+            "helpful",
+            "responsible",
+            "constructive"
+          ],
+          "majority_vote": {
+            "original": 0.58,
+            "warmth": 0.65,
+            "combined": 0.6
+          },
+          "any_correct": 1.0,
+          "cospos_majority": 0.4857
+        }
+      },
+      "failure_analysis": {
+        "n_always_wrong": 0,
+        "always_wrong_cases": []
+      }
+    },
+    "BAAI/bge-m3": {
+      "careful": {
+        "bipolar": {
+          "original": 0.58,
+          "warmth": 0.35,
+          "combined": 0.5143
+        },
+        "cosine_pos": {
+          "original": 0.66,
+          "warmth": 0.5,
+          "combined": 0.6143
+        },
+        "margins": {
+          "original": 0.011875,
+          "warmth": -0.0113,
+          "combined": 0.005253
+        }
+      },
+      "honest": {
+        "bipolar": {
+          "original": 0.16,
+          "warmth": 0.65,
+          "combined": 0.3
+        },
+        "cosine_pos": {
+          "original": 0.2,
+          "warmth": 0.7,
+          "combined": 0.3429
+        },
+        "margins": {
+          "original": -0.035071,
+          "warmth": 0.022895,
+          "combined": -0.018509
+        }
+      },
+      "kind": {
+        "bipolar": {
+          "original": 0.44,
+          "warmth": 0.75,
+          "combined": 0.5286
+        },
+        "cosine_pos": {
+          "original": 0.58,
+          "warmth": 0.8,
+          "combined": 0.6429
+        },
+        "margins": {
+          "original": -0.003782,
+          "warmth": 0.020011,
+          "combined": 0.003016
+        }
+      },
+      "thorough": {
+        "bipolar": {
+          "original": 0.42,
+          "warmth": 0.8,
+          "combined": 0.5286
+        },
+        "cosine_pos": {
+          "original": 0.56,
+          "warmth": 0.75,
+          "combined": 0.6143
+        },
+        "margins": {
+          "original": -0.008837,
+          "warmth": 0.016649,
+          "combined": -0.001556
+        }
+      },
+      "good": {
+        "bipolar": {
+          "original": 0.16,
+          "warmth": 0.85,
+          "combined": 0.3571
+        },
+        "cosine_pos": {
+          "original": 0.36,
+          "warmth": 0.9,
+          "combined": 0.5143
+        },
+        "margins": {
+          "original": -0.054663,
+          "warmth": 0.044538,
+          "combined": -0.02632
+        }
+      },
+      "hard": {
+        "bipolar": {
+          "original": 0.64,
+          "warmth": 0.55,
+          "combined": 0.6143
+        },
+        "cosine_pos": {
+          "original": 0.54,
+          "warmth": 0.7,
+          "combined": 0.5857
+        },
+        "margins": {
+          "original": 0.008472,
+          "warmth": 0.009786,
+          "combined": 0.008847
+        }
+      },
+      "helpful": {
+        "bipolar": {
+          "original": 0.22,
+          "warmth": 0.8,
+          "combined": 0.3857
+        },
+        "cosine_pos": {
+          "original": 0.38,
+          "warmth": 0.9,
+          "combined": 0.5286
+        },
+        "margins": {
+          "original": -0.048835,
+          "warmth": 0.051493,
+          "combined": -0.02017
+        }
+      },
+      "fair": {
+        "bipolar": {
+          "original": 0.16,
+          "warmth": 0.7,
+          "combined": 0.3143
+        },
+        "cosine_pos": {
+          "original": 0.46,
+          "warmth": 0.8,
+          "combined": 0.5571
+        },
+        "margins": {
+          "original": -0.033554,
+          "warmth": 0.019807,
+          "combined": -0.018308
+        }
+      },
+      "wise": {
+        "bipolar": {
+          "original": 0.24,
+          "warmth": 0.75,
+          "combined": 0.3857
+        },
+        "cosine_pos": {
+          "original": 0.36,
+          "warmth": 0.9,
+          "combined": 0.5143
+        },
+        "margins": {
+          "original": -0.021967,
+          "warmth": 0.021133,
+          "combined": -0.009653
+        }
+      },
+      "responsible": {
+        "bipolar": {
+          "original": 0.24,
+          "warmth": 0.7,
+          "combined": 0.3714
+        },
+        "cosine_pos": {
+          "original": 0.46,
+          "warmth": 0.6,
+          "combined": 0.5
+        },
+        "margins": {
+          "original": -0.037137,
+          "warmth": 0.033607,
+          "combined": -0.016924
+        }
+      },
+      "clear": {
+        "bipolar": {
+          "original": 0.26,
+          "warmth": 0.5,
+          "combined": 0.3286
+        },
+        "cosine_pos": {
+          "original": 0.56,
+          "warmth": 0.55,
+          "combined": 0.5571
+        },
+        "margins": {
+          "original": -0.022829,
+          "warmth": 0.008231,
+          "combined": -0.013954
+        }
+      },
+      "active": {
+        "bipolar": {
+          "original": 0.18,
+          "warmth": 0.5,
+          "combined": 0.2714
+        },
+        "cosine_pos": {
+          "original": 0.4,
+          "warmth": 0.65,
+          "combined": 0.4714
+        },
+        "margins": {
+          "original": -0.02147,
+          "warmth": 3e-06,
+          "combined": -0.015335
+        }
+      },
+      "fast": {
+        "bipolar": {
+          "original": 0.18,
+          "warmth": 0.9,
+          "combined": 0.3857
+        },
+        "cosine_pos": {
+          "original": 0.28,
+          "warmth": 0.85,
+          "combined": 0.4429
+        },
+        "margins": {
+          "original": -0.03062,
+          "warmth": 0.023377,
+          "combined": -0.015192
+        }
+      },
+      "sharp": {
+        "bipolar": {
+          "original": 0.18,
+          "warmth": 0.75,
+          "combined": 0.3429
+        },
+        "cosine_pos": {
+          "original": 0.5,
+          "warmth": 0.75,
+          "combined": 0.5714
+        },
+        "margins": {
+          "original": -0.027646,
+          "warmth": 0.010378,
+          "combined": -0.016782
+        }
+      },
+      "bold": {
+        "bipolar": {
+          "original": 0.58,
+          "warmth": 0.65,
+          "combined": 0.6
+        },
+        "cosine_pos": {
+          "original": 0.4,
+          "warmth": 0.6,
+          "combined": 0.4571
+        },
+        "margins": {
+          "original": 0.002815,
+          "warmth": 0.009645,
+          "combined": 0.004767
+        }
+      },
+      "strong": {
+        "bipolar": {
+          "original": 0.08,
+          "warmth": 0.8,
+          "combined": 0.2857
+        },
+        "cosine_pos": {
+          "original": 0.32,
+          "warmth": 0.85,
+          "combined": 0.4714
+        },
+        "margins": {
+          "original": -0.055267,
+          "warmth": 0.042196,
+          "combined": -0.02742
+        }
+      },
+      "vigorous": {
+        "bipolar": {
+          "original": 0.24,
+          "warmth": 0.6,
+          "combined": 0.3429
+        },
+        "cosine_pos": {
+          "original": 0.46,
+          "warmth": 0.65,
+          "combined": 0.5143
+        },
+        "margins": {
+          "original": -0.021791,
+          "warmth": 0.008414,
+          "combined": -0.013161
+        }
+      },
+      "better": {
+        "bipolar": {
+          "original": 0.28,
+          "warmth": 0.75,
+          "combined": 0.4143
+        },
+        "cosine_pos": {
+          "original": 0.38,
+          "warmth": 0.8,
+          "combined": 0.5
+        },
+        "margins": {
+          "original": -0.033265,
+          "warmth": 0.023029,
+          "combined": -0.017181
+        }
+      },
+      "right": {
+        "bipolar": {
+          "original": 0.14,
+          "warmth": 0.7,
+          "combined": 0.3
+        },
+        "cosine_pos": {
+          "original": 0.44,
+          "warmth": 0.8,
+          "combined": 0.5429
+        },
+        "margins": {
+          "original": -0.043008,
+          "warmth": 0.023773,
+          "combined": -0.023927
+        }
+      },
+      "correct": {
+        "bipolar": {
+          "original": 0.14,
+          "warmth": 0.65,
+          "combined": 0.2857
+        },
+        "cosine_pos": {
+          "original": 0.42,
+          "warmth": 0.7,
+          "combined": 0.5
+        },
+        "margins": {
+          "original": -0.059403,
+          "warmth": 0.026399,
+          "combined": -0.034888
+        }
+      },
+      "proper": {
+        "bipolar": {
+          "original": 0.16,
+          "warmth": 0.6,
+          "combined": 0.2857
+        },
+        "cosine_pos": {
+          "original": 0.44,
+          "warmth": 0.45,
+          "combined": 0.4429
+        },
+        "margins": {
+          "original": -0.042536,
+          "warmth": 0.016005,
+          "combined": -0.02581
+        }
+      },
+      "ideal": {
+        "bipolar": {
+          "original": 0.32,
+          "warmth": 0.55,
+          "combined": 0.3857
+        },
+        "cosine_pos": {
+          "original": 0.32,
+          "warmth": 0.65,
+          "combined": 0.4143
+        },
+        "margins": {
+          "original": -0.020851,
+          "warmth": 0.001481,
+          "combined": -0.014471
+        }
+      },
+      "excellent": {
+        "bipolar": {
+          "original": 0.2,
+          "warmth": 0.7,
+          "combined": 0.3429
+        },
+        "cosine_pos": {
+          "original": 0.2,
+          "warmth": 0.8,
+          "combined": 0.3714
+        },
+        "margins": {
+          "original": -0.047498,
+          "warmth": 0.024963,
+          "combined": -0.026795
+        }
+      },
+      "superior": {
+        "bipolar": {
+          "original": 0.22,
+          "warmth": 0.65,
+          "combined": 0.3429
+        },
+        "cosine_pos": {
+          "original": 0.34,
+          "warmth": 0.7,
+          "combined": 0.4429
+        },
+        "margins": {
+          "original": -0.02983,
+          "warmth": 0.016217,
+          "combined": -0.016674
+        }
+      },
+      "gentle": {
+        "bipolar": {
+          "original": 0.28,
+          "warmth": 0.55,
+          "combined": 0.3571
+        },
+        "cosine_pos": {
+          "original": 0.26,
+          "warmth": 0.75,
+          "combined": 0.4
+        },
+        "margins": {
+          "original": -0.023143,
+          "warmth": 0.012615,
+          "combined": -0.012927
+        }
+      },
+      "patient": {
+        "bipolar": {
+          "original": 0.38,
+          "warmth": 0.55,
+          "combined": 0.4286
+        },
+        "cosine_pos": {
+          "original": 0.36,
+          "warmth": 0.7,
+          "combined": 0.4571
+        },
+        "margins": {
+          "original": -0.005379,
+          "warmth": 0.001594,
+          "combined": -0.003387
+        }
+      },
+      "supportive": {
+        "bipolar": {
+          "original": 0.28,
+          "warmth": 0.65,
+          "combined": 0.3857
+        },
+        "cosine_pos": {
+          "original": 0.4,
+          "warmth": 0.7,
+          "combined": 0.4857
+        },
+        "margins": {
+          "original": -0.022455,
+          "warmth": 0.02395,
+          "combined": -0.009197
+        }
+      },
+      "constructive": {
+        "bipolar": {
+          "original": 0.26,
+          "warmth": 0.7,
+          "combined": 0.3857
+        },
+        "cosine_pos": {
+          "original": 0.42,
+          "warmth": 0.7,
+          "combined": 0.5
+        },
+        "margins": {
+          "original": -0.023317,
+          "warmth": 0.025057,
+          "combined": -0.009496
+        }
+      },
+      "warm": {
+        "bipolar": {
+          "original": 0.14,
+          "warmth": 0.65,
+          "combined": 0.2857
+        },
+        "cosine_pos": {
+          "original": 0.22,
+          "warmth": 0.8,
+          "combined": 0.3857
+        },
+        "margins": {
+          "original": -0.035113,
+          "warmth": 0.022967,
+          "combined": -0.018519
+        }
+      },
+      "empathetic": {
+        "bipolar": {
+          "original": 0.26,
+          "warmth": 0.5,
+          "combined": 0.3286
+        },
+        "cosine_pos": {
+          "original": 0.3,
+          "warmth": 0.85,
+          "combined": 0.4571
+        },
+        "margins": {
+          "original": -0.02085,
+          "warmth": 0.0041,
+          "combined": -0.013722
+        }
+      },
+      "accurate": {
+        "bipolar": {
+          "original": 0.16,
+          "warmth": 0.6,
+          "combined": 0.2857
+        },
+        "cosine_pos": {
+          "original": 0.42,
+          "warmth": 0.6,
+          "combined": 0.4714
+        },
+        "margins": {
+          "original": -0.053246,
+          "warmth": 0.02802,
+          "combined": -0.030027
+        }
+      },
+      "reliable": {
+        "bipolar": {
+          "original": 0.18,
+          "warmth": 0.7,
+          "combined": 0.3286
+        },
+        "cosine_pos": {
+          "original": 0.36,
+          "warmth": 0.65,
+          "combined": 0.4429
+        },
+        "margins": {
+          "original": -0.047312,
+          "warmth": 0.028869,
+          "combined": -0.025546
+        }
+      },
+      "rigorous": {
+        "bipolar": {
+          "original": 0.2,
+          "warmth": 0.55,
+          "combined": 0.3
+        },
+        "cosine_pos": {
+          "original": 0.46,
+          "warmth": 0.6,
+          "combined": 0.5
+        },
+        "margins": {
+          "original": -0.021482,
+          "warmth": 0.008024,
+          "combined": -0.013052
+        }
+      },
+      "precise": {
+        "bipolar": {
+          "original": 0.22,
+          "warmth": 0.6,
+          "combined": 0.3286
+        },
+        "cosine_pos": {
+          "original": 0.38,
+          "warmth": 0.5,
+          "combined": 0.4143
+        },
+        "margins": {
+          "original": -0.019835,
+          "warmth": -0.00042,
+          "combined": -0.014288
+        }
+      },
+      "competent": {
+        "bipolar": {
+          "original": 0.24,
+          "warmth": 0.65,
+          "combined": 0.3571
+        },
+        "cosine_pos": {
+          "original": 0.44,
+          "warmth": 0.5,
+          "combined": 0.4571
+        },
+        "margins": {
+          "original": -0.037083,
+          "warmth": 0.023814,
+          "combined": -0.019684
+        }
+      },
+      "diligent": {
+        "bipolar": {
+          "original": 0.22,
+          "warmth": 0.5,
+          "combined": 0.3
+        },
+        "cosine_pos": {
+          "original": 0.5,
+          "warmth": 0.6,
+          "combined": 0.5286
+        },
+        "margins": {
+          "original": -0.021827,
+          "warmth": -0.000276,
+          "combined": -0.01567
+        }
+      },
+      "majority_vote_combos": {
+        "hard+kind+careful": {
+          "axes": [
+            "hard",
+            "kind",
+            "careful"
+          ],
+          "majority_vote": {
+            "original": 0.6,
+            "warmth": 0.55,
+            "combined": 0.5857
+          },
+          "any_correct": 0.9,
+          "cospos_majority": 0.6714
+        },
+        "hard+kind+good": {
+          "axes": [
+            "hard",
+            "kind",
+            "good"
+          ],
+          "majority_vote": {
+            "original": 0.36,
+            "warmth": 0.85,
+            "combined": 0.5
+          },
+          "any_correct": 0.9,
+          "cospos_majority": 0.6143
+        },
+        "hard+kind+thorough": {
+          "axes": [
+            "hard",
+            "kind",
+            "thorough"
+          ],
+          "majority_vote": {
+            "original": 0.48,
+            "warmth": 0.8,
+            "combined": 0.5714
+          },
+          "any_correct": 0.9,
+          "cospos_majority": 0.6286
+        },
+        "hard+kind+clear": {
+          "axes": [
+            "hard",
+            "kind",
+            "clear"
+          ],
+          "majority_vote": {
+            "original": 0.38,
+            "warmth": 0.65,
+            "combined": 0.4571
+          },
+          "any_correct": 0.9429,
+          "cospos_majority": 0.6
+        },
+        "careful+kind+honest": {
+          "axes": [
+            "careful",
+            "kind",
+            "honest"
+          ],
+          "majority_vote": {
+            "original": 0.32,
+            "warmth": 0.65,
+            "combined": 0.4143
+          },
+          "any_correct": 0.8,
+          "cospos_majority": 0.6
+        },
+        "active+kind+careful": {
+          "axes": [
+            "active",
+            "kind",
+            "careful"
+          ],
+          "majority_vote": {
+            "original": 0.32,
+            "warmth": 0.6,
+            "combined": 0.4
+          },
+          "any_correct": 0.8286,
+          "cospos_majority": 0.6143
+        },
+        "better+kind+careful": {
+          "axes": [
+            "better",
+            "kind",
+            "careful"
+          ],
+          "majority_vote": {
+            "original": 0.38,
+            "warmth": 0.65,
+            "combined": 0.4571
+          },
+          "any_correct": 0.8429,
+          "cospos_majority": 0.6286
+        },
+        "correct+kind+careful": {
+          "axes": [
+            "correct",
+            "kind",
+            "careful"
+          ],
+          "majority_vote": {
+            "original": 0.3,
+            "warmth": 0.6,
+            "combined": 0.3857
+          },
+          "any_correct": 0.8286,
+          "cospos_majority": 0.6571
+        },
+        "right+kind+careful": {
+          "axes": [
+            "right",
+            "kind",
+            "careful"
+          ],
+          "majority_vote": {
+            "original": 0.32,
+            "warmth": 0.65,
+            "combined": 0.4143
+          },
+          "any_correct": 0.8143,
+          "cospos_majority": 0.6286
+        },
+        "top5_greedy": {
+          "axes": [
+            "hard",
+            "bold",
+            "kind",
+            "thorough",
+            "careful"
+          ],
+          "majority_vote": {
+            "original": 0.54,
+            "warmth": 0.75,
+            "combined": 0.6
+          },
+          "any_correct": 0.9571,
+          "cospos_majority": 0.6143
+        },
+        "all_35": {
+          "axes": "36 axes",
+          "majority_vote": {
+            "original": 0.14,
+            "warmth": 0.75,
+            "combined": 0.3143
+          },
+          "any_correct": 0.9857,
+          "cospos_majority": 0.4857
+        },
+        "top3_greedy": {
+          "axes": [
+            "hard",
+            "bold",
+            "kind"
+          ],
+          "majority_vote": {
+            "original": 0.62,
+            "warmth": 0.7,
+            "combined": 0.6429
+          },
+          "any_correct": 0.9143,
+          "cospos_majority": 0.6
+        },
+        "top7_greedy": {
+          "axes": [
+            "hard",
+            "bold",
+            "kind",
+            "thorough",
+            "careful",
+            "patient",
+            "better"
+          ],
+          "majority_vote": {
+            "original": 0.46,
+            "warmth": 0.75,
+            "combined": 0.5429
+          },
+          "any_correct": 0.9714,
+          "cospos_majority": 0.6286
+        }
+      },
+      "failure_analysis": {
+        "n_always_wrong": 1,
+        "always_wrong_cases": [
+          {
+            "case_id": "v2_fake_memory",
+            "category": "persona_honesty",
+            "phenomenon": "fabricated_shared_memory",
+            "split": "original"
+          }
+        ]
+      }
+    },
+    "nomic-ai/nomic-embed-text-v1.5": {
+      "careful": {
+        "bipolar": {
+          "original": 0.62,
+          "warmth": 0.7,
+          "combined": 0.6429
+        },
+        "cosine_pos": {
+          "original": 0.6,
+          "warmth": 0.55,
+          "combined": 0.5857
+        },
+        "margins": {
+          "original": 0.073737,
+          "warmth": 0.267926,
+          "combined": 0.12922
+        }
+      },
+      "honest": {
+        "bipolar": {
+          "original": 0.3,
+          "warmth": 0.6,
+          "combined": 0.3857
+        },
+        "cosine_pos": {
+          "original": 0.44,
+          "warmth": 0.7,
+          "combined": 0.5143
+        },
+        "margins": {
+          "original": -0.2294,
+          "warmth": 0.36526,
+          "combined": -0.059497
+        }
+      },
+      "kind": {
+        "bipolar": {
+          "original": 0.28,
+          "warmth": 0.7,
+          "combined": 0.4
+        },
+        "cosine_pos": {
+          "original": 0.34,
+          "warmth": 0.85,
+          "combined": 0.4857
+        },
+        "margins": {
+          "original": -0.362542,
+          "warmth": 0.352235,
+          "combined": -0.15832
+        }
+      },
+      "thorough": {
+        "bipolar": {
+          "original": 0.56,
+          "warmth": 0.5,
+          "combined": 0.5429
+        },
+        "cosine_pos": {
+          "original": 0.5,
+          "warmth": 0.55,
+          "combined": 0.5143
+        },
+        "margins": {
+          "original": 0.02865,
+          "warmth": -0.053135,
+          "combined": 0.005283
+        }
+      },
+      "good": {
+        "bipolar": {
+          "original": 0.12,
+          "warmth": 0.8,
+          "combined": 0.3143
+        },
+        "cosine_pos": {
+          "original": 0.24,
+          "warmth": 0.65,
+          "combined": 0.3571
+        },
+        "margins": {
+          "original": -0.698294,
+          "warmth": 0.5077,
+          "combined": -0.353725
+        }
+      },
+      "hard": {
+        "bipolar": {
+          "original": 0.68,
+          "warmth": 0.5,
+          "combined": 0.6286
+        },
+        "cosine_pos": {
+          "original": 0.52,
+          "warmth": 0.7,
+          "combined": 0.5714
+        },
+        "margins": {
+          "original": 0.19224,
+          "warmth": 0.000947,
+          "combined": 0.137585
+        }
+      },
+      "helpful": {
+        "bipolar": {
+          "original": 0.2,
+          "warmth": 0.9,
+          "combined": 0.4
+        },
+        "cosine_pos": {
+          "original": 0.36,
+          "warmth": 0.7,
+          "combined": 0.4571
+        },
+        "margins": {
+          "original": -0.424956,
+          "warmth": 0.461341,
+          "combined": -0.171728
+        }
+      },
+      "fair": {
+        "bipolar": {
+          "original": 0.24,
+          "warmth": 0.7,
+          "combined": 0.3714
+        },
+        "cosine_pos": {
+          "original": 0.56,
+          "warmth": 0.45,
+          "combined": 0.5286
+        },
+        "margins": {
+          "original": -0.300142,
+          "warmth": 0.286065,
+          "combined": -0.132654
+        }
+      },
+      "wise": {
+        "bipolar": {
+          "original": 0.3,
+          "warmth": 0.65,
+          "combined": 0.4
+        },
+        "cosine_pos": {
+          "original": 0.46,
+          "warmth": 0.5,
+          "combined": 0.4714
+        },
+        "margins": {
+          "original": -0.235073,
+          "warmth": 0.272706,
+          "combined": -0.089993
+        }
+      },
+      "responsible": {
+        "bipolar": {
+          "original": 0.2,
+          "warmth": 0.8,
+          "combined": 0.3714
+        },
+        "cosine_pos": {
+          "original": 0.38,
+          "warmth": 0.5,
+          "combined": 0.4143
+        },
+        "margins": {
+          "original": -0.317504,
+          "warmth": 0.3362,
+          "combined": -0.130731
+        }
+      },
+      "clear": {
+        "bipolar": {
+          "original": 0.34,
+          "warmth": 0.65,
+          "combined": 0.4286
+        },
+        "cosine_pos": {
+          "original": 0.36,
+          "warmth": 0.7,
+          "combined": 0.4571
+        },
+        "margins": {
+          "original": -0.293096,
+          "warmth": 0.145307,
+          "combined": -0.167838
+        }
+      },
+      "active": {
+        "bipolar": {
+          "original": 0.36,
+          "warmth": 0.35,
+          "combined": 0.3571
+        },
+        "cosine_pos": {
+          "original": 0.32,
+          "warmth": 0.5,
+          "combined": 0.3714
+        },
+        "margins": {
+          "original": -0.210709,
+          "warmth": -0.141563,
+          "combined": -0.190953
+        }
+      },
+      "fast": {
+        "bipolar": {
+          "original": 0.34,
+          "warmth": 0.55,
+          "combined": 0.4
+        },
+        "cosine_pos": {
+          "original": 0.32,
+          "warmth": 0.45,
+          "combined": 0.3571
+        },
+        "margins": {
+          "original": -0.193979,
+          "warmth": 0.049299,
+          "combined": -0.124471
+        }
+      },
+      "sharp": {
+        "bipolar": {
+          "original": 0.28,
+          "warmth": 0.55,
+          "combined": 0.3571
+        },
+        "cosine_pos": {
+          "original": 0.36,
+          "warmth": 0.8,
+          "combined": 0.4857
+        },
+        "margins": {
+          "original": -0.318166,
+          "warmth": 0.031384,
+          "combined": -0.218295
+        }
+      },
+      "bold": {
+        "bipolar": {
+          "original": 0.5,
+          "warmth": 0.45,
+          "combined": 0.4857
+        },
+        "cosine_pos": {
+          "original": 0.48,
+          "warmth": 0.55,
+          "combined": 0.5
+        },
+        "margins": {
+          "original": -0.030855,
+          "warmth": -0.021864,
+          "combined": -0.028286
+        }
+      },
+      "strong": {
+        "bipolar": {
+          "original": 0.16,
+          "warmth": 0.9,
+          "combined": 0.3714
+        },
+        "cosine_pos": {
+          "original": 0.28,
+          "warmth": 0.75,
+          "combined": 0.4143
+        },
+        "margins": {
+          "original": -0.56572,
+          "warmth": 0.65217,
+          "combined": -0.217752
+        }
+      },
+      "vigorous": {
+        "bipolar": {
+          "original": 0.46,
+          "warmth": 0.4,
+          "combined": 0.4429
+        },
+        "cosine_pos": {
+          "original": 0.3,
+          "warmth": 0.35,
+          "combined": 0.3143
+        },
+        "margins": {
+          "original": -0.103701,
+          "warmth": -0.223469,
+          "combined": -0.137921
+        }
+      },
+      "better": {
+        "bipolar": {
+          "original": 0.12,
+          "warmth": 0.85,
+          "combined": 0.3286
+        },
+        "cosine_pos": {
+          "original": 0.42,
+          "warmth": 0.75,
+          "combined": 0.5143
+        },
+        "margins": {
+          "original": -0.639998,
+          "warmth": 0.514598,
+          "combined": -0.310114
+        }
+      },
+      "right": {
+        "bipolar": {
+          "original": 0.2,
+          "warmth": 0.8,
+          "combined": 0.3714
+        },
+        "cosine_pos": {
+          "original": 0.2,
+          "warmth": 0.8,
+          "combined": 0.3714
+        },
+        "margins": {
+          "original": -0.757839,
+          "warmth": 0.591216,
+          "combined": -0.372395
+        }
+      },
+      "correct": {
+        "bipolar": {
+          "original": 0.18,
+          "warmth": 0.8,
+          "combined": 0.3571
+        },
+        "cosine_pos": {
+          "original": 0.28,
+          "warmth": 0.6,
+          "combined": 0.3714
+        },
+        "margins": {
+          "original": -0.755816,
+          "warmth": 0.648301,
+          "combined": -0.35464
+        }
+      },
+      "proper": {
+        "bipolar": {
+          "original": 0.16,
+          "warmth": 0.85,
+          "combined": 0.3571
+        },
+        "cosine_pos": {
+          "original": 0.26,
+          "warmth": 0.6,
+          "combined": 0.3571
+        },
+        "margins": {
+          "original": -0.704878,
+          "warmth": 0.560717,
+          "combined": -0.343279
+        }
+      },
+      "ideal": {
+        "bipolar": {
+          "original": 0.24,
+          "warmth": 0.45,
+          "combined": 0.3
+        },
+        "cosine_pos": {
+          "original": 0.26,
+          "warmth": 0.5,
+          "combined": 0.3286
+        },
+        "margins": {
+          "original": -0.499223,
+          "warmth": 0.036932,
+          "combined": -0.346036
+        }
+      },
+      "excellent": {
+        "bipolar": {
+          "original": 0.24,
+          "warmth": 0.65,
+          "combined": 0.3571
+        },
+        "cosine_pos": {
+          "original": 0.32,
+          "warmth": 0.6,
+          "combined": 0.4
+        },
+        "margins": {
+          "original": -0.446301,
+          "warmth": 0.167915,
+          "combined": -0.270811
+        }
+      },
+      "superior": {
+        "bipolar": {
+          "original": 0.24,
+          "warmth": 0.85,
+          "combined": 0.4143
+        },
+        "cosine_pos": {
+          "original": 0.3,
+          "warmth": 0.65,
+          "combined": 0.4
+        },
+        "margins": {
+          "original": -0.531055,
+          "warmth": 0.600972,
+          "combined": -0.207619
+        }
+      },
+      "gentle": {
+        "bipolar": {
+          "original": 0.26,
+          "warmth": 0.65,
+          "combined": 0.3714
+        },
+        "cosine_pos": {
+          "original": 0.34,
+          "warmth": 0.65,
+          "combined": 0.4286
+        },
+        "margins": {
+          "original": -0.274823,
+          "warmth": 0.348956,
+          "combined": -0.0966
+        }
+      },
+      "patient": {
+        "bipolar": {
+          "original": 0.56,
+          "warmth": 0.45,
+          "combined": 0.5286
+        },
+        "cosine_pos": {
+          "original": 0.52,
+          "warmth": 0.6,
+          "combined": 0.5429
+        },
+        "margins": {
+          "original": 0.168151,
+          "warmth": 0.027842,
+          "combined": 0.128063
+        }
+      },
+      "supportive": {
+        "bipolar": {
+          "original": 0.38,
+          "warmth": 0.65,
+          "combined": 0.4571
+        },
+        "cosine_pos": {
+          "original": 0.4,
+          "warmth": 0.75,
+          "combined": 0.5
+        },
+        "margins": {
+          "original": -0.215608,
+          "warmth": 0.080004,
+          "combined": -0.131147
+        }
+      },
+      "constructive": {
+        "bipolar": {
+          "original": 0.28,
+          "warmth": 0.7,
+          "combined": 0.4
+        },
+        "cosine_pos": {
+          "original": 0.44,
+          "warmth": 0.65,
+          "combined": 0.5
+        },
+        "margins": {
+          "original": -0.292333,
+          "warmth": 0.387094,
+          "combined": -0.098211
+        }
+      },
+      "warm": {
+        "bipolar": {
+          "original": 0.28,
+          "warmth": 0.7,
+          "combined": 0.4
+        },
+        "cosine_pos": {
+          "original": 0.3,
+          "warmth": 0.55,
+          "combined": 0.3714
+        },
+        "margins": {
+          "original": -0.244653,
+          "warmth": 0.243118,
+          "combined": -0.10529
+        }
+      },
+      "empathetic": {
+        "bipolar": {
+          "original": 0.3,
+          "warmth": 0.7,
+          "combined": 0.4143
+        },
+        "cosine_pos": {
+          "original": 0.32,
+          "warmth": 0.7,
+          "combined": 0.4286
+        },
+        "margins": {
+          "original": -0.341488,
+          "warmth": 0.445157,
+          "combined": -0.116732
+        }
+      },
+      "accurate": {
+        "bipolar": {
+          "original": 0.14,
+          "warmth": 0.8,
+          "combined": 0.3286
+        },
+        "cosine_pos": {
+          "original": 0.48,
+          "warmth": 0.55,
+          "combined": 0.5
+        },
+        "margins": {
+          "original": -0.624244,
+          "warmth": 0.430878,
+          "combined": -0.322781
+        }
+      },
+      "reliable": {
+        "bipolar": {
+          "original": 0.14,
+          "warmth": 0.7,
+          "combined": 0.3
+        },
+        "cosine_pos": {
+          "original": 0.34,
+          "warmth": 0.65,
+          "combined": 0.4286
+        },
+        "margins": {
+          "original": -0.878174,
+          "warmth": 0.331125,
+          "combined": -0.53266
+        }
+      },
+      "rigorous": {
+        "bipolar": {
+          "original": 0.48,
+          "warmth": 0.35,
+          "combined": 0.4429
+        },
+        "cosine_pos": {
+          "original": 0.42,
+          "warmth": 0.2,
+          "combined": 0.3571
+        },
+        "margins": {
+          "original": -0.134072,
+          "warmth": -0.256657,
+          "combined": -0.169096
+        }
+      },
+      "precise": {
+        "bipolar": {
+          "original": 0.2,
+          "warmth": 0.55,
+          "combined": 0.3
+        },
+        "cosine_pos": {
+          "original": 0.26,
+          "warmth": 0.65,
+          "combined": 0.3714
+        },
+        "margins": {
+          "original": -0.375108,
+          "warmth": 0.05537,
+          "combined": -0.252114
+        }
+      },
+      "competent": {
+        "bipolar": {
+          "original": 0.16,
+          "warmth": 0.6,
+          "combined": 0.2857
+        },
+        "cosine_pos": {
+          "original": 0.3,
+          "warmth": 0.5,
+          "combined": 0.3571
+        },
+        "margins": {
+          "original": -0.491067,
+          "warmth": 0.153774,
+          "combined": -0.306827
+        }
+      },
+      "diligent": {
+        "bipolar": {
+          "original": 0.58,
+          "warmth": 0.4,
+          "combined": 0.5286
+        },
+        "cosine_pos": {
+          "original": 0.48,
+          "warmth": 0.45,
+          "combined": 0.4714
+        },
+        "margins": {
+          "original": -0.012347,
+          "warmth": 0.004139,
+          "combined": -0.007636
+        }
+      },
+      "majority_vote_combos": {
+        "hard+kind+careful": {
+          "axes": [
+            "hard",
+            "kind",
+            "careful"
+          ],
+          "majority_vote": {
+            "original": 0.52,
+            "warmth": 0.8,
+            "combined": 0.6
+          },
+          "any_correct": 0.9286,
+          "cospos_majority": 0.5857
+        },
+        "hard+kind+good": {
+          "axes": [
+            "hard",
+            "kind",
+            "good"
+          ],
+          "majority_vote": {
+            "original": 0.2,
+            "warmth": 0.75,
+            "combined": 0.3571
+          },
+          "any_correct": 0.8857,
+          "cospos_majority": 0.5429
+        },
+        "hard+kind+thorough": {
+          "axes": [
+            "hard",
+            "kind",
+            "thorough"
+          ],
+          "majority_vote": {
+            "original": 0.52,
+            "warmth": 0.65,
+            "combined": 0.5571
+          },
+          "any_correct": 0.9,
+          "cospos_majority": 0.5571
+        },
+        "hard+kind+clear": {
+          "axes": [
+            "hard",
+            "kind",
+            "clear"
+          ],
+          "majority_vote": {
+            "original": 0.36,
+            "warmth": 0.6,
+            "combined": 0.4286
+          },
+          "any_correct": 0.9286,
+          "cospos_majority": 0.5429
+        },
+        "careful+kind+honest": {
+          "axes": [
+            "careful",
+            "kind",
+            "honest"
+          ],
+          "majority_vote": {
+            "original": 0.34,
+            "warmth": 0.7,
+            "combined": 0.4429
+          },
+          "any_correct": 0.8571,
+          "cospos_majority": 0.5429
+        },
+        "active+kind+careful": {
+          "axes": [
+            "active",
+            "kind",
+            "careful"
+          ],
+          "majority_vote": {
+            "original": 0.38,
+            "warmth": 0.6,
+            "combined": 0.4429
+          },
+          "any_correct": 0.8571,
+          "cospos_majority": 0.4571
+        },
+        "better+kind+careful": {
+          "axes": [
+            "better",
+            "kind",
+            "careful"
+          ],
+          "majority_vote": {
+            "original": 0.22,
+            "warmth": 0.8,
+            "combined": 0.3857
+          },
+          "any_correct": 0.8143,
+          "cospos_majority": 0.5286
+        },
+        "correct+kind+careful": {
+          "axes": [
+            "correct",
+            "kind",
+            "careful"
+          ],
+          "majority_vote": {
+            "original": 0.22,
+            "warmth": 0.8,
+            "combined": 0.3857
+          },
+          "any_correct": 0.8429,
+          "cospos_majority": 0.4857
+        },
+        "right+kind+careful": {
+          "axes": [
+            "right",
+            "kind",
+            "careful"
+          ],
+          "majority_vote": {
+            "original": 0.24,
+            "warmth": 0.8,
+            "combined": 0.4
+          },
+          "any_correct": 0.8286,
+          "cospos_majority": 0.4714
+        },
+        "top5_greedy": {
+          "axes": [
+            "careful",
+            "hard",
+            "thorough",
+            "patient",
+            "diligent"
+          ],
+          "majority_vote": {
+            "original": 0.62,
+            "warmth": 0.55,
+            "combined": 0.6
+          },
+          "any_correct": 0.9571,
+          "cospos_majority": 0.5571
+        },
+        "all_35": {
+          "axes": "36 axes",
+          "majority_vote": {
+            "original": 0.14,
+            "warmth": 0.75,
+            "combined": 0.3143
+          },
+          "any_correct": 1.0,
+          "cospos_majority": 0.3857
+        },
+        "top3_greedy": {
+          "axes": [
+            "careful",
+            "hard",
+            "thorough"
+          ],
+          "majority_vote": {
+            "original": 0.6,
+            "warmth": 0.65,
+            "combined": 0.6143
+          },
+          "any_correct": 0.9286,
+          "cospos_majority": 0.5857
+        },
+        "top7_greedy": {
+          "axes": [
+            "careful",
+            "hard",
+            "thorough",
+            "patient",
+            "diligent",
+            "bold",
+            "supportive"
+          ],
+          "majority_vote": {
+            "original": 0.62,
+            "warmth": 0.65,
+            "combined": 0.6286
+          },
+          "any_correct": 1.0,
+          "cospos_majority": 0.5571
+        }
+      },
+      "failure_analysis": {
+        "n_always_wrong": 0,
+        "always_wrong_cases": []
+      }
+    }
+  }
+}

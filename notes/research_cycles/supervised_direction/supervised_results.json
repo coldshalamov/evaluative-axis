@@ -1,0 +1,20 @@
+{
+  "snowflake-arctic-embed-m": {
+    "supervised_battery": 0.9714285714285714,
+    "supervised_expansion": 0.8,
+    "loo_battery": 0.6571428571428571,
+    "probe_expansion": 0.8571428571428571
+  },
+  "bge-m3": {
+    "supervised_battery": 0.8428571428571429,
+    "supervised_expansion": 0.8,
+    "loo_battery": 0.7285714285714285,
+    "probe_expansion": 0.9428571428571428
+  },
+  "nomic-embed-text-v1.5": {
+    "supervised_battery": 0.9,
+    "supervised_expansion": 0.7714285714285715,
+    "loo_battery": 0.6571428571428571,
+    "probe_expansion": 0.8
+  }
+}

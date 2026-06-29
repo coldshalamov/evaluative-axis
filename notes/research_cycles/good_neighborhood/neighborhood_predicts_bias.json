@@ -1,0 +1,440 @@
+{
+  "snowflake-arctic-embed-m": [
+    {
+      "axis": "good",
+      "warmth_frac": 0.267,
+      "comp_frac": 0.233,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "ambiguous"
+    },
+    {
+      "axis": "careful",
+      "warmth_frac": 0.2,
+      "comp_frac": 0.167,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "ambiguous"
+    },
+    {
+      "axis": "restrained",
+      "warmth_frac": 0.1,
+      "comp_frac": 0.267,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "thorough",
+      "warmth_frac": 0.067,
+      "comp_frac": 0.367,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "honest",
+      "warmth_frac": 0.367,
+      "comp_frac": 0.167,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-biased"
+    },
+    {
+      "axis": "kind",
+      "warmth_frac": 0.333,
+      "comp_frac": 0.2,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "ambiguous"
+    },
+    {
+      "axis": "helpful",
+      "warmth_frac": 0.1,
+      "comp_frac": 0.267,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "moderate",
+      "warmth_frac": 0.3,
+      "comp_frac": 0.167,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "ambiguous"
+    },
+    {
+      "axis": "precise",
+      "warmth_frac": 0.067,
+      "comp_frac": 0.267,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "logical",
+      "warmth_frac": 0.1,
+      "comp_frac": 0.2,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "ambiguous"
+    },
+    {
+      "axis": "measured",
+      "warmth_frac": 0.167,
+      "comp_frac": 0.4,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "disciplined",
+      "warmth_frac": 0.067,
+      "comp_frac": 0.233,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "ambiguous"
+    },
+    {
+      "axis": "prudent",
+      "warmth_frac": 0.033,
+      "comp_frac": 0.267,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "methodical",
+      "warmth_frac": 0.1,
+      "comp_frac": 0.333,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "rigorous",
+      "warmth_frac": 0.0,
+      "comp_frac": 0.367,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "diligent",
+      "warmth_frac": 0.067,
+      "comp_frac": 0.3,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "balanced",
+      "warmth_frac": 0.267,
+      "comp_frac": 0.167,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "ambiguous"
+    },
+    {
+      "axis": "considerate",
+      "warmth_frac": 0.233,
+      "comp_frac": 0.333,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    }
+  ],
+  "bge-m3": [
+    {
+      "axis": "good",
+      "warmth_frac": 0.533,
+      "comp_frac": 0.1,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-biased"
+    },
+    {
+      "axis": "careful",
+      "warmth_frac": 0.167,
+      "comp_frac": 0.4,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "restrained",
+      "warmth_frac": 0.067,
+      "comp_frac": 0.5,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "thorough",
+      "warmth_frac": 0.033,
+      "comp_frac": 0.467,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "honest",
+      "warmth_frac": 0.133,
+      "comp_frac": 0.133,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "ambiguous"
+    },
+    {
+      "axis": "kind",
+      "warmth_frac": 0.467,
+      "comp_frac": 0.1,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-biased"
+    },
+    {
+      "axis": "helpful",
+      "warmth_frac": 0.4,
+      "comp_frac": 0.167,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-biased"
+    },
+    {
+      "axis": "moderate",
+      "warmth_frac": 0.433,
+      "comp_frac": 0.2,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-biased"
+    },
+    {
+      "axis": "precise",
+      "warmth_frac": 0.0,
+      "comp_frac": 0.3,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "logical",
+      "warmth_frac": 0.067,
+      "comp_frac": 0.3,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "measured",
+      "warmth_frac": 0.033,
+      "comp_frac": 0.533,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "disciplined",
+      "warmth_frac": 0.1,
+      "comp_frac": 0.533,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "prudent",
+      "warmth_frac": 0.067,
+      "comp_frac": 0.567,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "methodical",
+      "warmth_frac": 0.133,
+      "comp_frac": 0.5,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "rigorous",
+      "warmth_frac": 0.033,
+      "comp_frac": 0.4,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "diligent",
+      "warmth_frac": 0.033,
+      "comp_frac": 0.5,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "balanced",
+      "warmth_frac": 0.1,
+      "comp_frac": 0.4,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "considerate",
+      "warmth_frac": 0.133,
+      "comp_frac": 0.333,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    }
+  ],
+  "nomic-embed-text-v1.5": [
+    {
+      "axis": "good",
+      "warmth_frac": 0.467,
+      "comp_frac": 0.033,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-biased"
+    },
+    {
+      "axis": "careful",
+      "warmth_frac": 0.233,
+      "comp_frac": 0.233,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "ambiguous"
+    },
+    {
+      "axis": "restrained",
+      "warmth_frac": 0.133,
+      "comp_frac": 0.367,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "thorough",
+      "warmth_frac": 0.033,
+      "comp_frac": 0.5,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "honest",
+      "warmth_frac": 0.233,
+      "comp_frac": 0.067,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "ambiguous"
+    },
+    {
+      "axis": "kind",
+      "warmth_frac": 0.667,
+      "comp_frac": 0.0,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-biased"
+    },
+    {
+      "axis": "helpful",
+      "warmth_frac": 0.6,
+      "comp_frac": 0.133,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-biased"
+    },
+    {
+      "axis": "moderate",
+      "warmth_frac": 0.2,
+      "comp_frac": 0.233,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "ambiguous"
+    },
+    {
+      "axis": "precise",
+      "warmth_frac": 0.0,
+      "comp_frac": 0.5,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "logical",
+      "warmth_frac": 0.1,
+      "comp_frac": 0.333,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "measured",
+      "warmth_frac": 0.067,
+      "comp_frac": 0.333,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "disciplined",
+      "warmth_frac": 0.033,
+      "comp_frac": 0.467,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "prudent",
+      "warmth_frac": 0.267,
+      "comp_frac": 0.1,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "ambiguous"
+    },
+    {
+      "axis": "methodical",
+      "warmth_frac": 0.067,
+      "comp_frac": 0.633,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "rigorous",
+      "warmth_frac": 0.033,
+      "comp_frac": 0.433,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "diligent",
+      "warmth_frac": 0.1,
+      "comp_frac": 0.567,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-independent"
+    },
+    {
+      "axis": "balanced",
+      "warmth_frac": 0.267,
+      "comp_frac": 0.233,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "ambiguous"
+    },
+    {
+      "axis": "considerate",
+      "warmth_frac": 0.367,
+      "comp_frac": 0.2,
+      "warmth_d": null,
+      "firmness_d": null,
+      "prediction": "warmth-biased"
+    }
+  ]
+}

@@ -1,0 +1,727 @@
+{
+  "experiment": "Absolute score analysis: discrimination vs training signal",
+  "date": "2026-06-28",
+  "n_cases": 70,
+  "results": {
+    "snowflake-arctic-embed-m": {
+      "good": {
+        "pairwise_acc": 0.514,
+        "cohens_d": -0.143,
+        "better_mean": -0.075709,
+        "worse_mean": -0.070676,
+        "better_std": 0.032509,
+        "worse_std": 0.037114,
+        "above_median_better": 0.471,
+        "above_median_worse": 0.529,
+        "overlap_rate": 0.986,
+        "splits": {
+          "firmness": {
+            "n": 45,
+            "pairwise_acc": 0.511,
+            "cohens_d": -0.221,
+            "better_mean": -0.074178,
+            "worse_mean": -0.066733
+          },
+          "warmth": {
+            "n": 20,
+            "pairwise_acc": 0.6,
+            "cohens_d": 0.153,
+            "better_mean": -0.076975,
+            "worse_mean": -0.083202
+          },
+          "sycophancy": {
+            "n": 5,
+            "pairwise_acc": 0.2,
+            "cohens_d": -2.084,
+            "better_mean": -0.08442,
+            "worse_mean": -0.056058
+          }
+        }
+      },
+      "careful": {
+        "pairwise_acc": 0.486,
+        "cohens_d": 0.033,
+        "better_mean": -0.085011,
+        "worse_mean": -0.086706,
+        "better_std": 0.050665,
+        "worse_std": 0.051017,
+        "above_median_better": 0.529,
+        "above_median_worse": 0.471,
+        "overlap_rate": 0.986,
+        "splits": {
+          "firmness": {
+            "n": 45,
+            "pairwise_acc": 0.489,
+            "cohens_d": 0.021,
+            "better_mean": -0.086945,
+            "worse_mean": -0.088085
+          },
+          "warmth": {
+            "n": 20,
+            "pairwise_acc": 0.4,
+            "cohens_d": -0.035,
+            "better_mean": -0.080546,
+            "worse_mean": -0.078952
+          },
+          "sycophancy": {
+            "n": 5,
+            "pairwise_acc": 0.8,
+            "cohens_d": 0.403,
+            "better_mean": -0.085457,
+            "worse_mean": -0.105305
+          }
+        }
+      },
+      "restrained": {
+        "pairwise_acc": 0.543,
+        "cohens_d": 0.081,
+        "better_mean": -0.016999,
+        "worse_mean": -0.020954,
+        "better_std": 0.04647,
+        "worse_std": 0.05004,
+        "above_median_better": 0.486,
+        "above_median_worse": 0.514,
+        "overlap_rate": 0.971,
+        "splits": {
+          "firmness": {
+            "n": 45,
+            "pairwise_acc": 0.556,
+            "cohens_d": 0.096,
+            "better_mean": -0.014588,
+            "worse_mean": -0.019516
+          },
+          "warmth": {
+            "n": 20,
+            "pairwise_acc": 0.45,
+            "cohens_d": -0.103,
+            "better_mean": -0.013141,
+            "worse_mean": -0.00931
+          },
+          "sycophancy": {
+            "n": 5,
+            "pairwise_acc": 0.8,
+            "cohens_d": 0.584,
+            "better_mean": -0.054132,
+            "worse_mean": -0.080466
+          }
+        }
+      },
+      "thorough": {
+        "pairwise_acc": 0.6,
+        "cohens_d": 0.055,
+        "better_mean": -0.01384,
+        "worse_mean": -0.016101,
+        "better_std": 0.042424,
+        "worse_std": 0.039781,
+        "above_median_better": 0.5,
+        "above_median_worse": 0.5,
+        "overlap_rate": 0.986,
+        "splits": {
+          "firmness": {
+            "n": 45,
+            "pairwise_acc": 0.6,
+            "cohens_d": -0.009,
+            "better_mean": -0.020246,
+            "worse_mean": -0.019873
+          },
+          "warmth": {
+            "n": 20,
+            "pairwise_acc": 0.6,
+            "cohens_d": 0.223,
+            "better_mean": -0.004529,
+            "worse_mean": -0.013738
+          },
+          "sycophancy": {
+            "n": 5,
+            "pairwise_acc": 0.6,
+            "cohens_d": -0.033,
+            "better_mean": 0.006576,
+            "worse_mean": 0.008399
+          }
+        }
+      },
+      "kind": {
+        "pairwise_acc": 0.443,
+        "cohens_d": 0.005,
+        "better_mean": -0.007305,
+        "worse_mean": -0.007516,
+        "better_std": 0.035487,
+        "worse_std": 0.043617,
+        "above_median_better": 0.514,
+        "above_median_worse": 0.486,
+        "overlap_rate": 0.971,
+        "splits": {
+          "firmness": {
+            "n": 45,
+            "pairwise_acc": 0.422,
+            "cohens_d": -0.071,
+            "better_mean": -0.013575,
+            "worse_mean": -0.010761
+          },
+          "warmth": {
+            "n": 20,
+            "pairwise_acc": 0.55,
+            "cohens_d": 0.216,
+            "better_mean": 0.003955,
+            "worse_mean": -0.005586
+          },
+          "sycophancy": {
+            "n": 5,
+            "pairwise_acc": 0.2,
+            "cohens_d": -0.666,
+            "better_mean": 0.004085,
+            "worse_mean": 0.013971
+          }
+        }
+      },
+      "helpful": {
+        "pairwise_acc": 0.543,
+        "cohens_d": 0.019,
+        "better_mean": -0.077312,
+        "worse_mean": -0.078042,
+        "better_std": 0.037661,
+        "worse_std": 0.03814,
+        "above_median_better": 0.486,
+        "above_median_worse": 0.514,
+        "overlap_rate": 0.986,
+        "splits": {
+          "firmness": {
+            "n": 45,
+            "pairwise_acc": 0.533,
+            "cohens_d": 0.011,
+            "better_mean": -0.071848,
+            "worse_mean": -0.072268
+          },
+          "warmth": {
+            "n": 20,
+            "pairwise_acc": 0.45,
+            "cohens_d": -0.072,
+            "better_mean": -0.087091,
+            "worse_mean": -0.084095
+          },
+          "sycophancy": {
+            "n": 5,
+            "pairwise_acc": 1.0,
+            "cohens_d": 0.632,
+            "better_mean": -0.087372,
+            "worse_mean": -0.105792
+          }
+        }
+      },
+      "honest": {
+        "pairwise_acc": 0.4,
+        "cohens_d": -0.027,
+        "better_mean": -0.107083,
+        "worse_mean": -0.105857,
+        "better_std": 0.045839,
+        "worse_std": 0.043534,
+        "above_median_better": 0.443,
+        "above_median_worse": 0.557,
+        "overlap_rate": 0.986,
+        "splits": {
+          "firmness": {
+            "n": 45,
+            "pairwise_acc": 0.267,
+            "cohens_d": -0.257,
+            "better_mean": -0.121277,
+            "worse_mean": -0.110263
+          },
+          "warmth": {
+            "n": 20,
+            "pairwise_acc": 0.75,
+            "cohens_d": 0.545,
+            "better_mean": -0.078305,
+            "worse_mean": -0.102056
+          },
+          "sycophancy": {
+            "n": 5,
+            "pairwise_acc": 0.2,
+            "cohens_d": -0.302,
+            "better_mean": -0.094451,
+            "worse_mean": -0.081401
+          }
+        }
+      }
+    },
+    "bge-m3": {
+      "good": {
+        "pairwise_acc": 0.357,
+        "cohens_d": -0.399,
+        "better_mean": 0.01281,
+        "worse_mean": 0.03913,
+        "better_std": 0.059479,
+        "worse_std": 0.071005,
+        "above_median_better": 0.429,
+        "above_median_worse": 0.571,
+        "overlap_rate": 1.0,
+        "splits": {
+          "firmness": {
+            "n": 45,
+            "pairwise_acc": 0.178,
+            "cohens_d": -0.725,
+            "better_mean": 0.007246,
+            "worse_mean": 0.052446
+          },
+          "warmth": {
+            "n": 20,
+            "pairwise_acc": 0.85,
+            "cohens_d": 0.738,
+            "better_mean": 0.0322,
+            "worse_mean": -0.012338
+          },
+          "sycophancy": {
+            "n": 5,
+            "pairwise_acc": 0.0,
+            "cohens_d": -4.02,
+            "better_mean": -0.014669,
+            "worse_mean": 0.125164
+          }
+        }
+      },
+      "careful": {
+        "pairwise_acc": 0.514,
+        "cohens_d": 0.123,
+        "better_mean": 0.1427,
+        "worse_mean": 0.137446,
+        "better_std": 0.040792,
+        "worse_std": 0.04416,
+        "above_median_better": 0.557,
+        "above_median_worse": 0.443,
+        "overlap_rate": 0.986,
+        "splits": {
+          "firmness": {
+            "n": 45,
+            "pairwise_acc": 0.556,
+            "cohens_d": 0.183,
+            "better_mean": 0.140261,
+            "worse_mean": 0.131587
+          },
+          "warmth": {
+            "n": 20,
+            "pairwise_acc": 0.35,
+            "cohens_d": -0.373,
+            "better_mean": 0.141066,
+            "worse_mean": 0.152366
+          },
+          "sycophancy": {
+            "n": 5,
+            "pairwise_acc": 0.8,
+            "cohens_d": 1.164,
+            "better_mean": 0.171178,
+            "worse_mean": 0.130497
+          }
+        }
+      },
+      "restrained": {
+        "pairwise_acc": 0.643,
+        "cohens_d": 0.365,
+        "better_mean": 0.097399,
+        "worse_mean": 0.081786,
+        "better_std": 0.035043,
+        "worse_std": 0.048864,
+        "above_median_better": 0.571,
+        "above_median_worse": 0.429,
+        "overlap_rate": 0.814,
+        "splits": {
+          "firmness": {
+            "n": 45,
+            "pairwise_acc": 0.644,
+            "cohens_d": 0.453,
+            "better_mean": 0.099197,
+            "worse_mean": 0.080372
+          },
+          "warmth": {
+            "n": 20,
+            "pairwise_acc": 0.55,
+            "cohens_d": -0.076,
+            "better_mean": 0.096173,
+            "worse_mean": 0.099492
+          },
+          "sycophancy": {
+            "n": 5,
+            "pairwise_acc": 1.0,
+            "cohens_d": 2.521,
+            "better_mean": 0.086124,
+            "worse_mean": 0.023685
+          }
+        }
+      },
+      "thorough": {
+        "pairwise_acc": 0.529,
+        "cohens_d": -0.039,
+        "better_mean": -0.049748,
+        "worse_mean": -0.048192,
+        "better_std": 0.038511,
+        "worse_std": 0.040694,
+        "above_median_better": 0.429,
+        "above_median_worse": 0.571,
+        "overlap_rate": 0.971,
+        "splits": {
+          "firmness": {
+            "n": 45,
+            "pairwise_acc": 0.422,
+            "cohens_d": -0.264,
+            "better_mean": -0.05359,
+            "worse_mean": -0.043736
+          },
+          "warmth": {
+            "n": 20,
+            "pairwise_acc": 0.8,
+            "cohens_d": 0.359,
+            "better_mean": -0.042938,
+            "worse_mean": -0.059587
+          },
+          "sycophancy": {
+            "n": 5,
+            "pairwise_acc": 0.4,
+            "cohens_d": 0.009,
+            "better_mean": -0.042405,
+            "worse_mean": -0.042719
+          }
+        }
+      },
+      "kind": {
+        "pairwise_acc": 0.529,
+        "cohens_d": 0.088,
+        "better_mean": 0.060007,
+        "worse_mean": 0.056991,
+        "better_std": 0.034382,
+        "worse_std": 0.033822,
+        "above_median_better": 0.486,
+        "above_median_worse": 0.514,
+        "overlap_rate": 0.957,
+        "splits": {
+          "firmness": {
+            "n": 45,
+            "pairwise_acc": 0.489,
+            "cohens_d": -0.034,
+            "better_mean": 0.058883,
+            "worse_mean": 0.060029
+          },
+          "warmth": {
+            "n": 20,
+            "pairwise_acc": 0.75,
+            "cohens_d": 0.553,
+            "better_mean": 0.070313,
+            "worse_mean": 0.050302
+          },
+          "sycophancy": {
+            "n": 5,
+            "pairwise_acc": 0.0,
+            "cohens_d": -1.577,
+            "better_mean": 0.02889,
+            "worse_mean": 0.056399
+          }
+        }
+      },
+      "helpful": {
+        "pairwise_acc": 0.386,
+        "cohens_d": -0.322,
+        "better_mean": 0.05796,
+        "worse_mean": 0.07813,
+        "better_std": 0.055698,
+        "worse_std": 0.067891,
+        "above_median_better": 0.429,
+        "above_median_worse": 0.571,
+        "overlap_rate": 1.0,
+        "splits": {
+          "firmness": {
+            "n": 45,
+            "pairwise_acc": 0.244,
+            "cohens_d": -0.713,
+            "better_mean": 0.049023,
+            "worse_mean": 0.090385
+          },
+          "warmth": {
+            "n": 20,
+            "pairwise_acc": 0.8,
+            "cohens_d": 0.841,
+            "better_mean": 0.086112,
+            "worse_mean": 0.034619
+          },
+          "sycophancy": {
+            "n": 5,
+            "pairwise_acc": 0.0,
+            "cohens_d": -3.038,
+            "better_mean": 0.025796,
+            "worse_mean": 0.141887
+          }
+        }
+      },
+      "honest": {
+        "pairwise_acc": 0.3,
+        "cohens_d": -0.38,
+        "better_mean": 0.048272,
+        "worse_mean": 0.066782,
+        "better_std": 0.047453,
+        "worse_std": 0.049261,
+        "above_median_better": 0.414,
+        "above_median_worse": 0.586,
+        "overlap_rate": 1.0,
+        "splits": {
+          "firmness": {
+            "n": 45,
+            "pairwise_acc": 0.178,
+            "cohens_d": -0.649,
+            "better_mean": 0.03807,
+            "worse_mean": 0.069453
+          },
+          "warmth": {
+            "n": 20,
+            "pairwise_acc": 0.65,
+            "cohens_d": 0.488,
+            "better_mean": 0.071576,
+            "worse_mean": 0.048681
+          },
+          "sycophancy": {
+            "n": 5,
+            "pairwise_acc": 0.0,
+            "cohens_d": -3.084,
+            "better_mean": 0.046879,
+            "worse_mean": 0.115151
+          }
+        }
+      }
+    },
+    "nomic-embed-text-v1.5": {
+      "good": {
+        "pairwise_acc": 0.314,
+        "cohens_d": -0.296,
+        "better_mean": -0.105976,
+        "worse_mean": 0.247748,
+        "better_std": 1.047601,
+        "worse_std": 1.313434,
+        "above_median_better": 0.414,
+        "above_median_worse": 0.586,
+        "overlap_rate": 0.957,
+        "splits": {
+          "firmness": {
+            "n": 45,
+            "pairwise_acc": 0.133,
+            "cohens_d": -0.515,
+            "better_mean": -0.226137,
+            "worse_mean": 0.381072
+          },
+          "warmth": {
+            "n": 20,
+            "pairwise_acc": 0.8,
+            "cohens_d": 0.43,
+            "better_mean": 0.229622,
+            "worse_mean": -0.278078
+          },
+          "sycophancy": {
+            "n": 5,
+            "pairwise_acc": 0.0,
+            "cohens_d": -1.447,
+            "better_mean": -0.366925,
+            "worse_mean": 1.151136
+          }
+        }
+      },
+      "careful": {
+        "pairwise_acc": 0.643,
+        "cohens_d": 0.147,
+        "better_mean": 0.762896,
+        "worse_mean": 0.633676,
+        "better_std": 0.859012,
+        "worse_std": 0.884993,
+        "above_median_better": 0.514,
+        "above_median_worse": 0.486,
+        "overlap_rate": 0.971,
+        "splits": {
+          "firmness": {
+            "n": 45,
+            "pairwise_acc": 0.6,
+            "cohens_d": 0.057,
+            "better_mean": 0.786662,
+            "worse_mean": 0.732583
+          },
+          "warmth": {
+            "n": 20,
+            "pairwise_acc": 0.7,
+            "cohens_d": 0.371,
+            "better_mean": 0.823813,
+            "worse_mean": 0.555888
+          },
+          "sycophancy": {
+            "n": 5,
+            "pairwise_acc": 0.8,
+            "cohens_d": 0.335,
+            "better_mean": 0.305329,
+            "worse_mean": 0.054673
+          }
+        }
+      },
+      "restrained": {
+        "pairwise_acc": 0.614,
+        "cohens_d": 0.206,
+        "better_mean": 0.329599,
+        "worse_mean": 0.170931,
+        "better_std": 0.739209,
+        "worse_std": 0.79039,
+        "above_median_better": 0.543,
+        "above_median_worse": 0.457,
+        "overlap_rate": 0.957,
+        "splits": {
+          "firmness": {
+            "n": 45,
+            "pairwise_acc": 0.667,
+            "cohens_d": 0.25,
+            "better_mean": 0.409441,
+            "worse_mean": 0.224617
+          },
+          "warmth": {
+            "n": 20,
+            "pairwise_acc": 0.5,
+            "cohens_d": 0.022,
+            "better_mean": 0.393096,
+            "worse_mean": 0.379216
+          },
+          "sycophancy": {
+            "n": 5,
+            "pairwise_acc": 0.6,
+            "cohens_d": 0.748,
+            "better_mean": -0.642964,
+            "worse_mean": -1.145377
+          }
+        }
+      },
+      "thorough": {
+        "pairwise_acc": 0.543,
+        "cohens_d": 0.008,
+        "better_mean": -0.298401,
+        "worse_mean": -0.303684,
+        "better_std": 0.631965,
+        "worse_std": 0.696524,
+        "above_median_better": 0.486,
+        "above_median_worse": 0.514,
+        "overlap_rate": 0.986,
+        "splits": {
+          "firmness": {
+            "n": 45,
+            "pairwise_acc": 0.556,
+            "cohens_d": 0.019,
+            "better_mean": -0.273488,
+            "worse_mean": -0.285507
+          },
+          "warmth": {
+            "n": 20,
+            "pairwise_acc": 0.5,
+            "cohens_d": -0.067,
+            "better_mean": -0.341964,
+            "worse_mean": -0.28883
+          },
+          "sycophancy": {
+            "n": 5,
+            "pairwise_acc": 0.6,
+            "cohens_d": 0.523,
+            "better_mean": -0.348374,
+            "worse_mean": -0.526697
+          }
+        }
+      },
+      "kind": {
+        "pairwise_acc": 0.4,
+        "cohens_d": -0.164,
+        "better_mean": 1.120534,
+        "worse_mean": 1.278854,
+        "better_std": 0.925444,
+        "worse_std": 0.98954,
+        "above_median_better": 0.457,
+        "above_median_worse": 0.543,
+        "overlap_rate": 0.971,
+        "splits": {
+          "firmness": {
+            "n": 45,
+            "pairwise_acc": 0.311,
+            "cohens_d": -0.33,
+            "better_mean": 0.946665,
+            "worse_mean": 1.235991
+          },
+          "warmth": {
+            "n": 20,
+            "pairwise_acc": 0.7,
+            "cohens_d": 0.325,
+            "better_mean": 1.437727,
+            "worse_mean": 1.085493
+          },
+          "sycophancy": {
+            "n": 5,
+            "pairwise_acc": 0.0,
+            "cohens_d": -1.335,
+            "better_mean": 1.416575,
+            "worse_mean": 2.438066
+          }
+        }
+      },
+      "helpful": {
+        "pairwise_acc": 0.4,
+        "cohens_d": -0.156,
+        "better_mean": 2.037454,
+        "worse_mean": 2.209182,
+        "better_std": 1.14238,
+        "worse_std": 1.042393,
+        "above_median_better": 0.457,
+        "above_median_worse": 0.543,
+        "overlap_rate": 1.0,
+        "splits": {
+          "firmness": {
+            "n": 45,
+            "pairwise_acc": 0.222,
+            "cohens_d": -0.334,
+            "better_mean": 1.868376,
+            "worse_mean": 2.254406
+          },
+          "warmth": {
+            "n": 20,
+            "pairwise_acc": 0.9,
+            "cohens_d": 0.51,
+            "better_mean": 2.589046,
+            "worse_mean": 2.127704
+          },
+          "sycophancy": {
+            "n": 5,
+            "pairwise_acc": 0.0,
+            "cohens_d": -0.744,
+            "better_mean": 1.352787,
+            "worse_mean": 2.128078
+          }
+        }
+      },
+      "honest": {
+        "pairwise_acc": 0.386,
+        "cohens_d": -0.071,
+        "better_mean": -0.672305,
+        "worse_mean": -0.612808,
+        "better_std": 0.805581,
+        "worse_std": 0.865544,
+        "above_median_better": 0.457,
+        "above_median_worse": 0.543,
+        "overlap_rate": 0.971,
+        "splits": {
+          "firmness": {
+            "n": 45,
+            "pairwise_acc": 0.333,
+            "cohens_d": -0.22,
+            "better_mean": -0.879499,
+            "worse_mean": -0.685291
+          },
+          "warmth": {
+            "n": 20,
+            "pairwise_acc": 0.6,
+            "cohens_d": 0.502,
+            "better_mean": -0.16797,
+            "worse_mean": -0.53323
+          },
+          "sycophancy": {
+            "n": 5,
+            "pairwise_acc": 0.0,
+            "cohens_d": -1.392,
+            "better_mean": -0.824904,
+            "worse_mean": -0.278769
+          }
+        }
+      }
+    }
+  }
+}

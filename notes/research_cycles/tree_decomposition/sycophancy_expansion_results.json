@@ -1,0 +1,267 @@
+{
+  "experiment": "Expanded anti-sycophancy test (n=20)",
+  "date": "2026-06-28",
+  "n_original": 5,
+  "n_new": 15,
+  "n_total": 20,
+  "results": {
+    "snowflake-arctic-embed-m": {
+      "good": {
+        "syc_accuracy": 0.15,
+        "syc_correct": 3,
+        "syc_total": 20,
+        "syc_wilson_ci": [
+          0.052,
+          0.36
+        ],
+        "orig_accuracy": 0.2,
+        "new_accuracy": 0.133,
+        "nonsyc_accuracy": 0.511
+      },
+      "careful": {
+        "syc_accuracy": 0.5,
+        "syc_correct": 10,
+        "syc_total": 20,
+        "syc_wilson_ci": [
+          0.299,
+          0.701
+        ],
+        "orig_accuracy": 0.8,
+        "new_accuracy": 0.4,
+        "nonsyc_accuracy": 0.489
+      },
+      "restrained": {
+        "syc_accuracy": 0.7,
+        "syc_correct": 14,
+        "syc_total": 20,
+        "syc_wilson_ci": [
+          0.481,
+          0.855
+        ],
+        "orig_accuracy": 0.8,
+        "new_accuracy": 0.667,
+        "nonsyc_accuracy": 0.556
+      },
+      "thorough": {
+        "syc_accuracy": 0.25,
+        "syc_correct": 5,
+        "syc_total": 20,
+        "syc_wilson_ci": [
+          0.112,
+          0.469
+        ],
+        "orig_accuracy": 0.6,
+        "new_accuracy": 0.133,
+        "nonsyc_accuracy": 0.6
+      },
+      "kind": {
+        "syc_accuracy": 0.45,
+        "syc_correct": 9,
+        "syc_total": 20,
+        "syc_wilson_ci": [
+          0.258,
+          0.658
+        ],
+        "orig_accuracy": 0.2,
+        "new_accuracy": 0.533,
+        "nonsyc_accuracy": 0.422
+      },
+      "helpful": {
+        "syc_accuracy": 0.7,
+        "syc_correct": 14,
+        "syc_total": 20,
+        "syc_wilson_ci": [
+          0.481,
+          0.855
+        ],
+        "orig_accuracy": 1.0,
+        "new_accuracy": 0.6,
+        "nonsyc_accuracy": 0.533
+      },
+      "honest": {
+        "syc_accuracy": 0.2,
+        "syc_correct": 4,
+        "syc_total": 20,
+        "syc_wilson_ci": [
+          0.081,
+          0.416
+        ],
+        "orig_accuracy": 0.2,
+        "new_accuracy": 0.2,
+        "nonsyc_accuracy": 0.267
+      }
+    },
+    "bge-m3": {
+      "good": {
+        "syc_accuracy": 0.0,
+        "syc_correct": 0,
+        "syc_total": 20,
+        "syc_wilson_ci": [
+          0,
+          0.161
+        ],
+        "orig_accuracy": 0.0,
+        "new_accuracy": 0.0,
+        "nonsyc_accuracy": 0.178
+      },
+      "careful": {
+        "syc_accuracy": 0.65,
+        "syc_correct": 13,
+        "syc_total": 20,
+        "syc_wilson_ci": [
+          0.433,
+          0.819
+        ],
+        "orig_accuracy": 0.8,
+        "new_accuracy": 0.6,
+        "nonsyc_accuracy": 0.556
+      },
+      "restrained": {
+        "syc_accuracy": 0.75,
+        "syc_correct": 15,
+        "syc_total": 20,
+        "syc_wilson_ci": [
+          0.531,
+          0.888
+        ],
+        "orig_accuracy": 1.0,
+        "new_accuracy": 0.667,
+        "nonsyc_accuracy": 0.644
+      },
+      "thorough": {
+        "syc_accuracy": 0.35,
+        "syc_correct": 7,
+        "syc_total": 20,
+        "syc_wilson_ci": [
+          0.181,
+          0.567
+        ],
+        "orig_accuracy": 0.4,
+        "new_accuracy": 0.333,
+        "nonsyc_accuracy": 0.422
+      },
+      "kind": {
+        "syc_accuracy": 0.25,
+        "syc_correct": 5,
+        "syc_total": 20,
+        "syc_wilson_ci": [
+          0.112,
+          0.469
+        ],
+        "orig_accuracy": 0.0,
+        "new_accuracy": 0.333,
+        "nonsyc_accuracy": 0.489
+      },
+      "helpful": {
+        "syc_accuracy": 0.0,
+        "syc_correct": 0,
+        "syc_total": 20,
+        "syc_wilson_ci": [
+          0,
+          0.161
+        ],
+        "orig_accuracy": 0.0,
+        "new_accuracy": 0.0,
+        "nonsyc_accuracy": 0.244
+      },
+      "honest": {
+        "syc_accuracy": 0.05,
+        "syc_correct": 1,
+        "syc_total": 20,
+        "syc_wilson_ci": [
+          0.009,
+          0.236
+        ],
+        "orig_accuracy": 0.0,
+        "new_accuracy": 0.067,
+        "nonsyc_accuracy": 0.178
+      }
+    },
+    "nomic-embed-text-v1.5": {
+      "good": {
+        "syc_accuracy": 0.0,
+        "syc_correct": 0,
+        "syc_total": 20,
+        "syc_wilson_ci": [
+          0,
+          0.161
+        ],
+        "orig_accuracy": 0.0,
+        "new_accuracy": 0.0,
+        "nonsyc_accuracy": 0.133
+      },
+      "careful": {
+        "syc_accuracy": 0.85,
+        "syc_correct": 17,
+        "syc_total": 20,
+        "syc_wilson_ci": [
+          0.64,
+          0.948
+        ],
+        "orig_accuracy": 0.8,
+        "new_accuracy": 0.867,
+        "nonsyc_accuracy": 0.6
+      },
+      "restrained": {
+        "syc_accuracy": 0.85,
+        "syc_correct": 17,
+        "syc_total": 20,
+        "syc_wilson_ci": [
+          0.64,
+          0.948
+        ],
+        "orig_accuracy": 0.6,
+        "new_accuracy": 0.933,
+        "nonsyc_accuracy": 0.667
+      },
+      "thorough": {
+        "syc_accuracy": 0.65,
+        "syc_correct": 13,
+        "syc_total": 20,
+        "syc_wilson_ci": [
+          0.433,
+          0.819
+        ],
+        "orig_accuracy": 0.6,
+        "new_accuracy": 0.667,
+        "nonsyc_accuracy": 0.556
+      },
+      "kind": {
+        "syc_accuracy": 0.0,
+        "syc_correct": 0,
+        "syc_total": 20,
+        "syc_wilson_ci": [
+          0,
+          0.161
+        ],
+        "orig_accuracy": 0.0,
+        "new_accuracy": 0.0,
+        "nonsyc_accuracy": 0.311
+      },
+      "helpful": {
+        "syc_accuracy": 0.05,
+        "syc_correct": 1,
+        "syc_total": 20,
+        "syc_wilson_ci": [
+          0.009,
+          0.236
+        ],
+        "orig_accuracy": 0.0,
+        "new_accuracy": 0.067,
+        "nonsyc_accuracy": 0.222
+      },
+      "honest": {
+        "syc_accuracy": 0.2,
+        "syc_correct": 4,
+        "syc_total": 20,
+        "syc_wilson_ci": [
+          0.081,
+          0.416
+        ],
+        "orig_accuracy": 0.0,
+        "new_accuracy": 0.267,
+        "nonsyc_accuracy": 0.333
+      }
+    }
+  }
+}

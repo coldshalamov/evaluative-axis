@@ -1,0 +1,572 @@
+{
+  "snowflake/snowflake-arctic-embed-m": {
+    "true": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0155
+    },
+    "truth": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0144
+    },
+    "truthful": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0154
+    },
+    "honest": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0144
+    },
+    "honestly": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0142
+    },
+    "honesty": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0149
+    },
+    "correct": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0152
+    },
+    "accurate": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0149
+    },
+    "right": {
+      "accuracy": 0.7,
+      "avg_margin": 0.0161
+    },
+    "valid": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0149
+    },
+    "sound": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0149
+    },
+    "factual": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0137
+    },
+    "fact": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0154
+    },
+    "verifiable": {
+      "accuracy": 0.7,
+      "avg_margin": 0.0142
+    },
+    "verified": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0128
+    },
+    "integrity": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0144
+    },
+    "logical": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0159
+    },
+    "logic": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0149
+    },
+    "illogical": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0141
+    },
+    "rational": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0153
+    },
+    "coherent": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0138
+    },
+    "consistent": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0151
+    },
+    "bullshit": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0139
+    },
+    "lie": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0157
+    },
+    "lies": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0146
+    },
+    "lying": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0152
+    },
+    "lied": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0144
+    },
+    "false": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0155
+    },
+    "falsehood": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0127
+    },
+    "wrong": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0159
+    },
+    "mistake": {
+      "accuracy": 0.7,
+      "avg_margin": 0.0166
+    },
+    "error": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0159
+    },
+    "nonsense": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0147
+    },
+    "garbage": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0139
+    },
+    "made up": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0141
+    },
+    "fiction": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0127
+    },
+    "invented": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0144
+    },
+    "illogical statement": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0144
+    },
+    "logical statement": {
+      "accuracy": 0.75,
+      "avg_margin": 0.016
+    },
+    "wrong again": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0152
+    },
+    "he is lying": {
+      "accuracy": 0.55,
+      "avg_margin": 0.0129
+    },
+    "this is true": {
+      "accuracy": 0.65,
+      "avg_margin": 0.015
+    },
+    "this is false": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0148
+    },
+    "fact check": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0139
+    },
+    "checked and confirmed": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0142
+    },
+    "true statement": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0164
+    },
+    "false statement": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0162
+    }
+  },
+  "BAAI/bge-m3": {
+    "true": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0104
+    },
+    "truth": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0115
+    },
+    "truthful": {
+      "accuracy": 0.7,
+      "avg_margin": 0.0131
+    },
+    "honest": {
+      "accuracy": 0.7,
+      "avg_margin": 0.0099
+    },
+    "honestly": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0087
+    },
+    "honesty": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0093
+    },
+    "correct": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0119
+    },
+    "accurate": {
+      "accuracy": 0.7,
+      "avg_margin": 0.0128
+    },
+    "right": {
+      "accuracy": 0.7,
+      "avg_margin": 0.013
+    },
+    "valid": {
+      "accuracy": 0.7,
+      "avg_margin": 0.0095
+    },
+    "sound": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0068
+    },
+    "factual": {
+      "accuracy": 0.7,
+      "avg_margin": 0.0093
+    },
+    "fact": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0126
+    },
+    "verifiable": {
+      "accuracy": 0.65,
+      "avg_margin": 0.015
+    },
+    "verified": {
+      "accuracy": 0.7,
+      "avg_margin": 0.0147
+    },
+    "integrity": {
+      "accuracy": 0.6,
+      "avg_margin": 0.005
+    },
+    "logical": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0076
+    },
+    "logic": {
+      "accuracy": 0.55,
+      "avg_margin": 0.002
+    },
+    "illogical": {
+      "accuracy": 0.5,
+      "avg_margin": -0.0028
+    },
+    "rational": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0086
+    },
+    "coherent": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0124
+    },
+    "consistent": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0168
+    },
+    "bullshit": {
+      "accuracy": 0.45,
+      "avg_margin": -0.0041
+    },
+    "lie": {
+      "accuracy": 0.4,
+      "avg_margin": -0.0016
+    },
+    "lies": {
+      "accuracy": 0.7,
+      "avg_margin": 0.0017
+    },
+    "lying": {
+      "accuracy": 0.45,
+      "avg_margin": -0.0002
+    },
+    "lied": {
+      "accuracy": 0.6,
+      "avg_margin": 0.001
+    },
+    "false": {
+      "accuracy": 0.55,
+      "avg_margin": -0.0002
+    },
+    "falsehood": {
+      "accuracy": 0.45,
+      "avg_margin": 0.0009
+    },
+    "wrong": {
+      "accuracy": 0.35,
+      "avg_margin": -0.0018
+    },
+    "mistake": {
+      "accuracy": 0.4,
+      "avg_margin": -0.0002
+    },
+    "error": {
+      "accuracy": 0.5,
+      "avg_margin": 0.0004
+    },
+    "nonsense": {
+      "accuracy": 0.5,
+      "avg_margin": -0.006
+    },
+    "garbage": {
+      "accuracy": 0.45,
+      "avg_margin": -0.001
+    },
+    "made up": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0075
+    },
+    "fiction": {
+      "accuracy": 0.55,
+      "avg_margin": 0.0055
+    },
+    "invented": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0097
+    },
+    "illogical statement": {
+      "accuracy": 0.55,
+      "avg_margin": 0.0021
+    },
+    "logical statement": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0095
+    },
+    "wrong again": {
+      "accuracy": 0.65,
+      "avg_margin": -0.0015
+    },
+    "he is lying": {
+      "accuracy": 0.55,
+      "avg_margin": -0.0008
+    },
+    "this is true": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0169
+    },
+    "this is false": {
+      "accuracy": 0.5,
+      "avg_margin": 0.001
+    },
+    "fact check": {
+      "accuracy": 0.55,
+      "avg_margin": 0.0106
+    },
+    "checked and confirmed": {
+      "accuracy": 0.7,
+      "avg_margin": 0.0185
+    },
+    "true statement": {
+      "accuracy": 0.7,
+      "avg_margin": 0.018
+    },
+    "false statement": {
+      "accuracy": 0.45,
+      "avg_margin": 0.0002
+    }
+  },
+  "nomic-ai/nomic-embed-text-v1.5": {
+    "true": {
+      "accuracy": 0.55,
+      "avg_margin": 0.0062
+    },
+    "truth": {
+      "accuracy": 0.7,
+      "avg_margin": 0.0056
+    },
+    "truthful": {
+      "accuracy": 0.55,
+      "avg_margin": 0.0076
+    },
+    "honest": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0086
+    },
+    "honestly": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0086
+    },
+    "honesty": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0093
+    },
+    "correct": {
+      "accuracy": 0.7,
+      "avg_margin": 0.0099
+    },
+    "accurate": {
+      "accuracy": 0.6,
+      "avg_margin": 0.005
+    },
+    "right": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0106
+    },
+    "valid": {
+      "accuracy": 0.5,
+      "avg_margin": 0.0042
+    },
+    "sound": {
+      "accuracy": 0.5,
+      "avg_margin": -0.0016
+    },
+    "factual": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0085
+    },
+    "fact": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0073
+    },
+    "verifiable": {
+      "accuracy": 0.6,
+      "avg_margin": 0.009
+    },
+    "verified": {
+      "accuracy": 0.55,
+      "avg_margin": 0.0054
+    },
+    "integrity": {
+      "accuracy": 0.7,
+      "avg_margin": 0.011
+    },
+    "logical": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0083
+    },
+    "logic": {
+      "accuracy": 0.55,
+      "avg_margin": 0.0062
+    },
+    "illogical": {
+      "accuracy": 0.7,
+      "avg_margin": 0.0065
+    },
+    "rational": {
+      "accuracy": 0.55,
+      "avg_margin": 0.0017
+    },
+    "coherent": {
+      "accuracy": 0.55,
+      "avg_margin": 0.0093
+    },
+    "consistent": {
+      "accuracy": 0.7,
+      "avg_margin": 0.0147
+    },
+    "bullshit": {
+      "accuracy": 0.45,
+      "avg_margin": -0.0002
+    },
+    "lie": {
+      "accuracy": 0.5,
+      "avg_margin": -0.0001
+    },
+    "lies": {
+      "accuracy": 0.5,
+      "avg_margin": -0.0003
+    },
+    "lying": {
+      "accuracy": 0.6,
+      "avg_margin": -0.0002
+    },
+    "lied": {
+      "accuracy": 0.45,
+      "avg_margin": -0.0001
+    },
+    "false": {
+      "accuracy": 0.45,
+      "avg_margin": -0.0016
+    },
+    "falsehood": {
+      "accuracy": 0.4,
+      "avg_margin": 0.0
+    },
+    "wrong": {
+      "accuracy": 0.55,
+      "avg_margin": 0.0014
+    },
+    "mistake": {
+      "accuracy": 0.6,
+      "avg_margin": 0.005
+    },
+    "error": {
+      "accuracy": 0.5,
+      "avg_margin": 0.002
+    },
+    "nonsense": {
+      "accuracy": 0.45,
+      "avg_margin": -0.0031
+    },
+    "garbage": {
+      "accuracy": 0.4,
+      "avg_margin": -0.005
+    },
+    "made up": {
+      "accuracy": 0.55,
+      "avg_margin": 0.0018
+    },
+    "fiction": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0062
+    },
+    "invented": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0082
+    },
+    "illogical statement": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0063
+    },
+    "logical statement": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0097
+    },
+    "wrong again": {
+      "accuracy": 0.35,
+      "avg_margin": 0.0008
+    },
+    "he is lying": {
+      "accuracy": 0.45,
+      "avg_margin": 0.0004
+    },
+    "this is true": {
+      "accuracy": 0.5,
+      "avg_margin": 0.007
+    },
+    "this is false": {
+      "accuracy": 0.4,
+      "avg_margin": -0.0028
+    },
+    "fact check": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0038
+    },
+    "checked and confirmed": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0085
+    },
+    "true statement": {
+      "accuracy": 0.65,
+      "avg_margin": 0.0092
+    },
+    "false statement": {
+      "accuracy": 0.5,
+      "avg_margin": 0.0003
+    }
+  }
+}

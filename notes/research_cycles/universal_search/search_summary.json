@@ -1,0 +1,9 @@
+{
+  "search_completed": true,
+  "n_axes": 20,
+  "models": [
+    "snowflake/snowflake-arctic-embed-m",
+    "BAAI/bge-m3",
+    "nomic-ai/nomic-embed-text-v1.5"
+  ]
+}

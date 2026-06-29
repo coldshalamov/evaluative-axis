@@ -2377,3 +2377,564 @@ Do not present the old 8-task objective wins as decisive evidence anymore.
    stronger OSS embedder on the same frozen v2 files.
 3. Update the serious research report so the old objective v1 wins are framed
    as pilot evidence and v2 becomes the new confirmatory target.
+
+## Cycle 014 - Local tree/scoring/correlation experiments
+
+Date: 2026-06-28
+
+Ran three local CPU experiments from `methodology/EXPERIMENT_SPECS.md` using the
+project venv and the required three local models:
+
+- `snowflake/snowflake-arctic-embed-m`
+- `BAAI/bge-m3`
+- `nomic-ai/nomic-embed-text-v1.5`
+
+All runs used both battery splits separately:
+
+- original 50-case battery:
+  `notes/research_cycles/cycle_002_potential_shaping/controlled_evaluative_axis_battery_v3_50_cases.jsonl`
+- warmth 20-case battery:
+  `notes/research_cycles/battery_rebalancing/warmth_cases.jsonl`
+
+All response embeddings used the required framing:
+
+```text
+User: {prompt}
+Assistant: {response}
+```
+
+### Experiments run
+
+- E-01 Tree Decomposition of "Good":
+  `scripts/run_tree_decomposition.py`
+- E-04 Bipolar vs Single-Pole Scoring:
+  `scripts/run_scoring_methods.py`
+- E-08 Same-Branch vs Cross-Branch Correlation:
+  `scripts/run_branch_correlation.py`
+
+### Outputs
+
+- `notes/research_cycles/tree_decomposition/tree_results.json`
+- `notes/research_cycles/scoring_methods/scoring_results.json`
+- `notes/research_cycles/branch_correlation/branch_results.json`
+
+The three JSON outputs were parsed successfully after the run.
+
+### Execution notes
+
+- Dependencies were already installed:
+  `sentence-transformers`, `numpy`, `einops`
+- No Colab, Gemini, or paid API path was used.
+- Hugging Face emitted an unauthenticated-request warning.
+- BGE-M3 emitted the existing `get_extended_attention_mask` transformer
+  deprecation warning, but the runs completed.
+- Each script loads models with `trust_remote_code=True` and deletes each model
+  between runs.
+
+### Interpretation
+
+No research conclusion is recorded in this entry. This cycle records the raw
+measurements only; the saved JSON files contain the full per-model, per-split
+tables and per-case margins/correlations.
+
+### Next steps
+
+Inspect the three JSON outputs before updating `RESEARCH_DIRECTIONS.md`,
+`paper/draft.md`, or any external-facing summary.
+
+## Cycle 015 - Anchor formats and diagnostic score profiles
+
+Date: 2026-06-28
+
+Ran two local CPU experiments using the project venv and the required three
+standard local models:
+
+- `snowflake/snowflake-arctic-embed-m`
+- `BAAI/bge-m3`
+- `nomic-ai/nomic-embed-text-v1.5`
+
+All runs used both battery splits separately:
+
+- original 50-case battery:
+  `notes/research_cycles/cycle_002_potential_shaping/controlled_evaluative_axis_battery_v3_50_cases.jsonl`
+- warmth 20-case battery:
+  `notes/research_cycles/battery_rebalancing/warmth_cases.jsonl`
+
+All response embeddings used:
+
+```text
+User: {prompt}
+Assistant: {response}
+```
+
+### Experiments run
+
+- Anchor Format Variations:
+  `scripts/run_anchor_format_variations.py`
+- Diagnostic Score Profiles:
+  `scripts/run_diagnostic_score_profiles.py`
+
+### Outputs
+
+- `notes/research_cycles/anchor_formats/format_results.json`
+- `notes/research_cycles/diagnostic_profiles/profile_results.json`
+
+Both JSON outputs were parsed successfully after the run and each contains
+results for all three required models.
+
+### Execution notes
+
+- Dependencies were already installed.
+- No Colab, Gemini, or paid API path was used.
+- Hugging Face emitted an unauthenticated-request warning.
+- BGE-M3 emitted the existing `get_extended_attention_mask` transformer
+  deprecation warning, but the runs completed.
+- Each script loads models with `trust_remote_code=True` and deletes each model
+  between runs.
+
+### Interpretation
+
+No research conclusion is recorded in this entry. This cycle records the raw
+measurements only.
+
+
+## Cycle 015 - Battery expansion, complementarity, word length
+
+Date: 2026-06-28
+
+Ran three local CPU experiments from `methodology/EXPERIMENT_SPECS.md`
+(E-05, E-07, E-03) using the project venv and the required three local
+models (`snowflake/snowflake-arctic-embed-m`, `BAAI/bge-m3`,
+`nomic-ai/nomic-embed-text-v1.5`). All runs used both battery splits
+separately and the required `User:/Assistant:` framing.
+
+### Experiments and outputs
+
+- E-05 Battery Expansion:
+  - 20 new cases written across four categories, length-balanced within 20%:
+    `notes/research_cycles/battery_expansion/nuance_context.jsonl`,
+    `factual_accuracy.jsonl`, `conciseness_completeness.jsonl`,
+    `creative_quality.jsonl`.
+  - Scorer: `scripts/run_battery_expansion.py`
+  - Results: `notes/research_cycles/battery_expansion/expansion_results.json`
+  - All 23 existing axes (5 ML-jargon + 18 single-word) scored on the new
+    battery and compared to their firmness/warmth accuracy.
+
+- E-07 Per-Case Complementarity:
+  - Scorer: `scripts/run_complementarity.py`
+  - Results: `notes/research_cycles/complementarity/complementarity_results.json`
+  - 15 axes, per-case correctness vectors, pairwise correlation matrix,
+    greedy + exhaustive minimum covering sets, best sum-of-projections
+    combo at each k.
+
+- E-03 Word Length and Phrase Complexity:
+  - Scorer: `scripts/run_word_length.py`
+  - Results: `notes/research_cycles/word_length/length_results.json`
+  - 4 concepts x 6 length variants scored on the balanced battery.
+
+### Key results
+
+E-05 (expansion battery, 20 cases):
+
+- Only ONE axis clears 55% on all three models on the new battery:
+  `word/careful` (Snowflake 80%, BGE-M3 60%, Nomic 65%). This is
+  consistent with prior findings that `careful` is the most cross-model
+  robust single-word axis.
+- Several axes that previously worked on the balanced battery break on
+  the expansion battery. The largest drops (expansion vs balanced mean):
+  - `ml/anti_sycophancy` on BGE-M3: 25% vs 57% (-32 pts)
+  - `word/useful` on BGE-M3: 25% vs 54% (-29 pts)
+  - `word/kind` on Nomic: 20% vs 49% (-29 pts)
+  - `ml/persona_honesty` on Snowflake: 25% vs 53% (-28 pts)
+  The targeted ML-jargon axes, which dominated the firmness battery,
+  collapse on nuance and factual cases.
+- Per-category pattern: the nuance/context category is the hardest. Many
+  axes score 0-20% there. Factual and creative are more recoverable.
+- Interpretation: the targeted axes are not universal evaluators. They are
+  strong on the conflict dimensions they were written for and weak on
+  reading implicit context. The single-word `careful` is the most robust
+  generalist but still only ~65% cross-model.
+
+E-07 (complementarity, 70-case balanced battery):
+
+- `hard` is the recurring complementarity hub. It is negatively correlated
+  with warmth-axis terms on all three models:
+  - `good x hard`: r = -0.33 / -0.21 / -0.24 (3/3 models)
+  - `kind x hard`: r = -0.27 / -0.16 / -0.28 (3/3 models)
+  - `hard x constructive`: r = -0.22 / -0.34 / -0.16 (3/3 models)
+  This is the firmness/warmth split made geometrically explicit: `hard`
+  captures the branch of quality that warmth-axis terms miss, and vice
+  versa.
+- Most redundant pair (positive correlation) is also cross-model stable:
+  `helpful x good` r = +0.82 / +0.77 (BGE-M3, Nomic), confirming these
+  access the same failed warmth-dominated direction.
+- Minimum covering set (>90% OR-coverage) is small but model-dependent:
+  - Snowflake: `kind, good, hard` reaches 97% at k=3.
+  - BGE-M3: `kind, clear, hard` reaches 94% at k=3.
+  - Nomic: `careful, kind, hard` reaches 93% at k=3.
+  `hard` appears in the best k=3 set on all three models; a warmth-axis
+  term (`kind` or `good`) appears alongside it on all three. This is the
+  clearest empirical support yet for the scalar-plus-basis view: the
+  minimal viable basis is roughly {one firmness term, one warmth term}.
+- Caveat: OR-coverage is an upper bound. Actual sum-of-projections
+  accuracy at k=3 only reaches ~61-67%, because summing reintroduces
+  some interference. The covering set shows the axes are complementary;
+  it does not yet show a clean scalar aggregation rule.
+
+E-03 (word length):
+
+- Clear monotonic relationship: shorter anchors are better, across all
+  three models. Mean combined accuracy by length:
+  - 1_word: 48%  |  2_word: 44%  |  phrase: 46%
+  - clause: 42%  |  sentence: 37%  |  two_sent: 39%
+- The drop is steepest at the sentence level, especially on BGE-M3 and
+  Nomic (sentence/two_sent fall to 33-35%).
+- `thorough` is the cleanest case: `1_word` is best on all three models
+  (Snowflake 60%, BGE-M3 53%, Nomic 54%); every longer variant is worse.
+- Warmth split is the opposite pattern in some cases: longer anchors
+  sometimes help warmth (e.g. `careful` two_sent gets 70-75% warmth on
+  two models) while hurting firmness. This again reflects the
+  firmness/warmth geometry: longer, more elaborated anchors drift toward
+  the warmth branch.
+- Interpretation: there is no "sweet spot" at medium length. The bare
+  antonym pair is consistently the strongest and most stable anchor
+  form. Adding context words ("The response is...") or full sentences
+  generally degrades the signal, consistent with the diffusion theory
+  in paper section 5.6.
+
+### Interpretation
+
+The three experiments converge on the same picture the rebalancing cycle
+already pointed at:
+
+1. There is no universal single axis. Every targeted axis is strong on
+   some dimensions and breaks on others (E-05).
+2. The structure of quality in embedding space is dominated by a
+   firmness-vs-warmth axis split, with `hard` on one pole and warmth
+   terms (`good`, `kind`, `constructive`) on the other (E-07).
+3. Anchor form should stay minimal: the bare antonym word pair
+   outperforms phrases, clauses, and sentences (E-03).
+
+The minimal viable basis implied by E-07 (one firmness term + one warmth
+term, scored independently) is the most concrete design recommendation
+the local-model evidence has produced so far. It is still not strong
+enough for training claims and does not generalize cleanly to a scalar
+sum, but it is a specific, falsifiable target for the next cycle.
+
+### Decision
+
+- Record `word/careful` as the most cross-model-robust single-word axis
+  on the expanded battery, with the caveat that 65% is not decisive.
+- Record the {firmness, warmth} pair finding as the leading basis
+  hypothesis, to be retested on a frontier model (Gemini/Jina) where
+  individual axes already reach 86-98%.
+- Do not promote any expansion-battery result as a positive finding
+  without frontier-model replication, because local-model accuracy
+  remains near chance on the hardest category (nuance/context).
+
+### Next steps
+
+1. Replicate E-05 and E-07 on `gemini-embedding-2` when quota allows, to
+   see whether the firmness/warmth complementarity structure survives at
+   frontier accuracy.
+2. Test a second frontier embedder (Jina-v3 free API or Qwen3-Embedding)
+   to break the n=1 frontier dependency.
+3. Consider whether the minimal {firmness, warmth} basis, scored as a
+  sum-of-projections on a frontier model, beats single-axis scoring on
+  the objective reranking suites.
+
+
+## Cycle 016 - Cosine-to-positive scoring and compound anchors
+
+Date: 2026-06-28
+
+Two local CPU experiments testing the scoring method and anchor form
+questions raised by the prior E-04 / E-01 cycles. Both used the project
+venv, the three required models, both battery splits, and the
+`User:/Assistant:` framing.
+
+### Experiments and outputs
+
+- Cosine-to-Positive Systematic Test:
+  - `scripts/run_cosine_positive.py`
+  - `notes/research_cycles/cosine_positive/cosine_positive_results.json`
+  - All 15 single-word axes, bipolar vs cosine-to-positive, plus a
+    per-axis-optimal covering-set test.
+- Cross-Concept Compound Anchors:
+  - `scripts/run_compound_anchors.py`
+  - `notes/research_cycles/compound_anchors/compound_results.json`
+  - 10 compound anchor strings vs their component single words summed
+    independently (the dilution test), scored under both methods.
+
+### Key results
+
+Cosine-to-positive vs bipolar:
+
+- Cosine-to-positive wins on 14 of 15 axes when judged cross-model on
+  combined accuracy. The only axis where bipolar consistently wins is
+  `hard` (0/3 models for cosine). This is a real, actionable scoring-method
+  finding: the negative anchor mostly hurts, not helps, on the warmth
+  branch.
+- The wins are large on BGE-M3: 8 axes improve by >=10pts under cosine
+  (`clear` +23, `fair` +24, `helpful` +14, `good` +16, `wise` +13,
+  `responsible` +13, `kind` +11, `constructive`/`supportive` +11).
+- The single exception, `hard`, is the firmness axis. Bipolar helps when
+  the axis is already pointing at the firmness branch (where the negative
+  pole `Soft` pulls the right way); cosine-to-positive helps on warmth
+  axes where the negative pole is closer to the wrong branch.
+- Per-axis-optimal method selection improves the 3-axis covering set
+  materially on BGE-M3 and Nomic:
+  - BGE-M3: hard(bip) + kind(cos) + careful(cos) = 69% vs 60% bipolar-all.
+  - Nomic: hard(bip) + kind(cos) + careful(bip) = 66% vs 53% bipolar-all.
+  - Snowflake: ~unchanged (60% vs 59%).
+- Interpretation: cosine-to-positive is a legitimate improvement on the
+  warmth branch, not a one-off artifact of the original E-04 three-axis
+  test. The recommended default becomes: use cosine-to-positive for warmth
+  axes, bipolar for firmness axes. This is still local-model evidence
+  (max ~70%), so it should be replicated on a frontier embedder before any
+  external claim.
+
+Compound anchors:
+
+- Combining two terms from different branches into one anchor string
+  DILUTES signal on the two larger models. 7 of 10 compounds dilute on
+  BGE-M3 and Nomic under cosine (the better method from Exp 1).
+  `careful_kind` drops -17% (BGE-M3) / -9% (Nomic); `clear_fair` drops
+  -14% / -16%; `careful_kind_honest` drops -23% / -7%.
+- This is the same failure mode as averaging axis vectors: putting both
+  terms in one string recreates a diffuse centroid. The compound does not
+  create a super-additive axis.
+- NO compound beats its best single component on >=2 models. The
+  independent-sum baseline (score each word separately, add scores)
+  consistently beats the compound string on BGE-M3 and Nomic.
+- Snowflake is the exception: compounds slightly help there (+3-6%), but
+  this is within noise and Snowflake is the weakest model, so it does not
+  overturn the larger-model finding.
+- Interpretation: this confirms the no-averaging rule extends to anchor
+  text itself. Multi-word anchor strings that span branches behave like
+  composites, not like independent axes. The independent-sum approach
+  remains the correct way to combine terms from different branches.
+
+### Decision
+
+- Promote cosine-to-positive as the default scoring method for warmth-axis
+  terms, with bipolar retained for firmness-axis terms. Record the
+  per-axis split (cos for warmth, bip for firmness) as a concrete,
+  testable scoring recipe.
+- Confirm the no-averaging rule now covers anchor text: compound
+  multi-branch anchor strings dilute. Do not use them; score independently
+  and sum.
+- Do not raise any external claim from these local-model results without
+  frontier-model replication. Both findings are operational improvements
+  at the ~60-70% local-model accuracy level, not proof of a universal
+  evaluative signal.
+
+### Next steps
+
+1. Replicate the cosine-vs-bipolar split on `gemini-embedding-2` when
+   quota allows, since Gemini already reaches 86-98% on targeted axes and
+   the cosine-vs-bipolar distinction may behave differently at frontier
+   accuracy.
+2. Re-run the 3-axis covering-set search (E-07) using per-axis-optimal
+   methods, to see whether the minimal viable basis improves under the
+   new scoring recipe.
+3. Consider whether the cosine-vs-bipolar asymmetry is itself a diagnostic
+   of which branch an axis belongs to (warmth axes prefer cosine,
+   firmness axes prefer bipolar).
+
+
+## Cycle 017 - Large word sweep and score-subtraction: exploratory
+
+Date: 2026-06-28
+
+Two exploratory experiments with no premature conclusions. Methodology
+shifted from "pick winners by discrimination rate" to "test many words and
+learn the structure." All three local models, full battery (105 cases:
+firmness 50 + warmth 20 + 4 expansion categories + anti-sycophancy 15).
+
+### Experiments and outputs
+
+- Large word discrimination sweep (129 words):
+  - `scripts/run_large_word_sweep.py`
+  - `notes/research_cycles/large_word_sweep/sweep_results.json`
+  - Each word scored cosine-to-positive AND bipolar, across all 7 categories.
+  - INCLUDED 10 random control words (blue, however, therefore, etc.) to
+    establish a measured chance floor per model.
+- Score-subtraction sweep (6 bases x 13 penalties x 7 alphas):
+  - `scripts/run_score_subtraction_sweep.py`
+  - `notes/research_cycles/score_subtraction/subtraction_results.json`
+  - Tests the tree-penalty idea: reward = cos(base) - alpha*cos(penalty),
+    with score subtraction (not vector subtraction).
+
+### Findings
+
+1. THE CHANCE FLOOR IS HIGH AND MODEL-VARYING.
+
+   This is the most important methodological finding. The measured random-
+   word discrimination floor differs sharply by model:
+     - Snowflake: random words discriminate at ~63% combined
+     - BGE-M3:     ~59%
+     - Nomic:      ~44%
+   On Snowflake a RANDOM word gets 63%. This means most prior "this word
+   scored well" results on Snowflake were within noise of a random word.
+   This is the structural reason predictions kept failing: the table was
+   mostly noise, and we read signal into chance.
+
+2. ONLY ~11% OF WORDS BEAT THE FLOOR CONSISTENTLY ACROSS ALL 3 MODELS.
+
+   Of 119 non-random words, only 13 beat the random floor on combined
+   accuracy on all three models. The semantically-coherent quality words
+   among them: careful, restrained, measured, fair, patient, gentle.
+   "heavy" does NOT survive this filter (it was a local-model artifact).
+
+3. RANDOM CONTROL WORDS THEMSELVES SOMETIMES BEAT THE FLOOR.
+
+   'blue' and 'northern' both beat the floor on all 3 models. This is a
+   red flag: if random color/direction words discriminate above chance,
+   either the battery has a length/fluency bias any word picks up, or the
+   floor estimate is noisy. Either way, "beats floor" is necessary but
+   not sufficient for real signal.
+
+4. NO WORD SOLVES ANTI-SYCOPHANCY CONSISTENTLY ACROSS ALL 3 MODELS.
+
+   The category we most want a signal for (refusing to validate bad plans)
+   has no single-word solution on local models. The best words on BGE-M3
+   and Nomic are 'misleading' and 'careful' (both 80-93%), but these
+   collapse on Snowflake (27%). This is the clearest evidence that local
+   embedding models cannot detect sycophancy from single-word anchors.
+
+5. SCORE SUBTRACTION HAS A CONTAMINATION PROBLEM.
+
+   The tree-penalty idea (reward = cos(good) - alpha*cos(flattering))
+   showed apparent gains, but a CONTROL reveals the problem: on Nomic,
+   subtracting 'therefore' (a random word) gives +32% while subtracting
+   'flattering' (the hypothesized semantic penalty) gives +21%. If a
+   random word outperforms the semantic penalty, the gain is a magnitude/
+   calibration artifact, not semantic decontamination. The semantic
+   penalty only convincingly helps on BGE-M3, the one model where the
+   'good -> pleasant -> flattering' contamination path was cleanest.
+
+### Interpretation (tentative)
+
+- The varying chance floor is the key new fact. It reframes prior results:
+  many "winning" words were noise. Local models, especially Snowflake,
+  have a high baseline where any word discriminates at ~60%.
+- 'careful' remains the only quality word that consistently beats floor
+  across models AND has a coherent semantic story. But it does not solve
+  anti-sycophancy alone.
+- The score-subtraction tree idea is NOT validated by this sweep because
+  random controls beat the semantic penalties on Nomic. The mechanism
+  cannot be confirmed while controls outperform targets.
+- The fact that 'misleading' (a negative concept) is the single best word
+  on BGE-M3 and Nomic anti-sycophancy (80-93%) is notable and was not
+  predicted. It may be worth examining as a penalty signal, but only
+  after the control problem is addressed.
+
+### Decision
+
+- Do not promote any word or combination as a "golden rule" from this
+  cycle. The chance-floor analysis shows most prior results were noisier
+  than reported.
+- Record the chance floor as a required control for all future sweeps.
+  Any word-level claim must beat the measured random-word floor on
+  >=2 of 3 models.
+- The score-subtraction tree idea remains untested properly. The control
+  failure on Nomic means a new method is needed that separates semantic
+  penalty effect from calibration artifact.
+
+### Next steps
+
+1. Run the per-case complementarity analysis properly: re-score per-case
+   correctness vectors for the top ~20 words so we can find words that
+   catch each others' SPECIFIC failures (not just category averages).
+2. Investigate why random words discriminate above chance on Snowflake
+   (length bias? fluency bias? floor-estimation noise?).
+3. Re-test score subtraction with a magnitude-controlled penalty so the
+   semantic effect can be isolated from calibration artifacts.
+
+
+## Cycle 018 - Bootstrap variance: most findings are within noise
+
+Date: 2026-06-28
+
+The user correctly challenged the variance assumption: "13% on one model,
+80% on another" is exactly what wide variance looks like. Ran a 2000-
+iteration bootstrap (resample cases with replacement) to get 95% CIs on the
+15 axes for which per-case margins were stored (diagnostic_profiles).
+
+Output: `notes/research_cycles/bootstrap_variance/bootstrap_results.json`
+
+### Finding: uncertainty bands are huge; most prior structure is noise
+
+CI widths at n=50 (firmness): typically 26-28 points.
+CI widths at n=20 (warmth): typically 35-40 points.
+
+This means "55% vs 65%" is indistinguishable at 95% confidence on these
+sample sizes. Most of the apparent per-word, per-model structure in the
+large word sweep (Cycle 017) cannot be distinguished from noise.
+
+### What survives the bootstrap (CI excludes 50%, or cross-model CIs disjoint)
+
+Firmness (n=50):
+- `good` genuinely fails below chance on BGE-M3 [6%, 26%] and Nomic
+  [4%, 22%]. Real, robust, cross-model.
+- `hard` genuinely works above chance on BGE-M3 [52%, 78%] and Nomic
+  [54%, 80%]. Real, robust.
+- A warmth cluster (`helpful`, `fair`, `responsible`) shows genuinely
+  disjoint CIs between Snowflake and BGE-M3/Nomic on firmness — they
+  collapse on the larger models. Real.
+
+Warmth (n=20):
+- Several words have CIs excluding 50% upward: `helpful` [75%, 100%],
+  `responsible` [60%, 95%], `good` [60%, 95%] on Nomic. Warmth has real
+  signal, though wider bands.
+
+### What does NOT survive (and was previously reported as signal)
+
+- `careful` on firmness: CIs [38%, 66%] / [44%, 72%] / [48%, 76%]. ALL
+  overlap 50%. The "careful is the robust competence word" claim is within
+  noise on this battery size. Not established.
+- `honest` is anti-signal (below chance): CIs exclude 50%, so honest does
+  genuinely perform below chance. BUT the cross-model CIs all overlap
+  each other, so the "13% vs 30%" framing is itself noise.
+- The large word sweep (Cycle 017) constellation/inversion claims: CANNOT
+  be bootstrapped because per-case data was not stored. Every word-level
+  finding from that sweep is an uncheckable point estimate.
+
+### Interpretation
+
+The real bottleneck is sample size, not embedding model or word choice.
+50 + 20 cases cannot resolve differences below ~15 points. This reframes
+the entire project's local-model evidence base: most of the per-word
+discrimination patterns that looked like signal are statistically
+indistinguishable from noise at 95% confidence.
+
+The few robust facts:
+- Warmth has real signal (warmth words work on warmth cases, robustly).
+- `good` genuinely fails on firmness (below chance, robust).
+- `hard` genuinely works on firmness (above chance, robust).
+- Warmth-words genuinely fail on firmness on the larger models.
+
+Almost everything else - careful, honest, the praise-word inversion, the
+constellation - is within noise on the current batteries.
+
+### Decision
+
+- From this point, NO word-level claim is made without a 95% CI.
+- The large word sweep must be re-run with per-case margins stored, so
+  every result is bootstrappable.
+- The battery is the bottleneck. Either (a) generate more cases to narrow
+  the CIs, or (b) accept that local-model word-level discrimination has
+  a ~15-point resolution floor and report only effects larger than that.
+
+### Next steps
+
+1. Re-run the large word sweep storing per-case margins, then bootstrap
+   the candidate constellation (careful + kind + failure-mode penalties)
+   to see if it survives.
+2. Consider whether the expansion batteries (nuance/factual/creative, n=5
+   each) are usable at all - with n=5, CIs will be ~50 points wide, so
+   almost nothing is resolvable.
+3. The honest state: on local models with these batteries, the only
+   robust findings are the warmth-signal and the good-fails-on-firmness
+   pattern. Everything finer-grained needs more data or a stronger model.

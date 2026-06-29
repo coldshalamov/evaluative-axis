@@ -1,0 +1,382 @@
+{
+  "per_model": {
+    "BAAI/bge-m3": {
+      "careful_bp": {
+        "orig": 0.58,
+        "warm": 0.35,
+        "comb": 0.5143,
+        "bal": 0.35,
+        "expansion": 0.6
+      },
+      "careful_thorough_bp": {
+        "orig": 0.32,
+        "warm": 0.7,
+        "comb": 0.4286,
+        "bal": 0.32,
+        "expansion": 0.5
+      },
+      "careful_kind_bp": {
+        "orig": 0.54,
+        "warm": 0.55,
+        "comb": 0.5429,
+        "bal": 0.54,
+        "expansion": 0.5
+      },
+      "hard_kind_bp": {
+        "orig": 0.6,
+        "warm": 0.6,
+        "comb": 0.6,
+        "bal": 0.6,
+        "expansion": 0.3
+      },
+      "careful_vs_text": {
+        "orig": 0.68,
+        "warm": 0.25,
+        "comb": 0.5571,
+        "bal": 0.25,
+        "expansion": 0.55
+      },
+      "thorough_vs_text": {
+        "orig": 0.54,
+        "warm": 0.45,
+        "comb": 0.5143,
+        "bal": 0.45,
+        "expansion": 0.6
+      },
+      "hard_vs_text": {
+        "orig": 0.56,
+        "warm": 0.5,
+        "comb": 0.5429,
+        "bal": 0.5,
+        "expansion": 0.45
+      },
+      "careful_thorough_hard_bp": {
+        "orig": 0.34,
+        "warm": 0.8,
+        "comb": 0.4714,
+        "bal": 0.34,
+        "expansion": 0.45
+      },
+      "this_is_careful": {
+        "orig": 0.52,
+        "warm": 0.5,
+        "comb": 0.5143,
+        "bal": 0.5,
+        "expansion": 0.5
+      },
+      "a_careful_response": {
+        "orig": 0.22,
+        "warm": 0.7,
+        "comb": 0.3571,
+        "bal": 0.22,
+        "expansion": 0.2
+      },
+      "cospos_careful": {
+        "orig": 0.66,
+        "warm": 0.5,
+        "comb": 0.6143,
+        "bal": 0.5,
+        "expansion": 0.8
+      },
+      "cospos_hard": {
+        "orig": 0.54,
+        "warm": 0.7,
+        "comb": 0.5857,
+        "bal": 0.54,
+        "expansion": 0.55
+      },
+      "cospos_thorough": {
+        "orig": 0.56,
+        "warm": 0.75,
+        "comb": 0.6143,
+        "bal": 0.56,
+        "expansion": 0.75
+      },
+      "cospos_kind": {
+        "orig": 0.58,
+        "warm": 0.8,
+        "comb": 0.6429,
+        "bal": 0.58,
+        "expansion": 0.7
+      },
+      "cospos_careful_thorough": {
+        "orig": 0.42,
+        "warm": 0.85,
+        "comb": 0.5429,
+        "bal": 0.42,
+        "expansion": 0.6
+      },
+      "cospos_hard_kind": {
+        "orig": 0.52,
+        "warm": 0.7,
+        "comb": 0.5714,
+        "bal": 0.52,
+        "expansion": 0.55
+      },
+      "cospos_careful_thorough_hard": {
+        "orig": 0.42,
+        "warm": 0.8,
+        "comb": 0.5286,
+        "bal": 0.42,
+        "expansion": 0.5
+      },
+      "cospos_this_is_a_careful_response": {
+        "orig": 0.54,
+        "warm": 0.65,
+        "comb": 0.5714,
+        "bal": 0.54,
+        "expansion": 0.85
+      },
+      "cospos_a_careful_thorough_response": {
+        "orig": 0.36,
+        "warm": 0.7,
+        "comb": 0.4571,
+        "bal": 0.36,
+        "expansion": 0.65
+      },
+      "cospos_quality": {
+        "orig": 0.44,
+        "warm": 0.6,
+        "comb": 0.4857,
+        "bal": 0.44,
+        "expansion": 0.55
+      },
+      "cospos_excellent": {
+        "orig": 0.2,
+        "warm": 0.8,
+        "comb": 0.3714,
+        "bal": 0.2,
+        "expansion": 0.35
+      },
+      "frame_standard_bp": {
+        "orig": 0.58,
+        "warm": 0.35,
+        "comb": 0.5143
+      },
+      "frame_standard_cp": {
+        "orig": 0.66,
+        "warm": 0.5,
+        "comb": 0.6143
+      },
+      "frame_response_only_bp": {
+        "orig": 0.64,
+        "warm": 0.4,
+        "comb": 0.5714
+      },
+      "frame_response_only_cp": {
+        "orig": 0.7,
+        "warm": 0.6,
+        "comb": 0.6714
+      },
+      "frame_quality_query_bp": {
+        "orig": 0.54,
+        "warm": 0.45,
+        "comb": 0.5143
+      },
+      "frame_quality_query_cp": {
+        "orig": 0.66,
+        "warm": 0.7,
+        "comb": 0.6714
+      },
+      "frame_rate_quality_bp": {
+        "orig": 0.6,
+        "warm": 0.35,
+        "comb": 0.5286
+      },
+      "frame_rate_quality_cp": {
+        "orig": 0.72,
+        "warm": 0.55,
+        "comb": 0.6714
+      }
+    },
+    "nomic-ai/nomic-embed-text-v1.5": {
+      "careful_bp": {
+        "orig": 0.62,
+        "warm": 0.7,
+        "comb": 0.6429,
+        "bal": 0.62,
+        "expansion": 0.65
+      },
+      "careful_thorough_bp": {
+        "orig": 0.56,
+        "warm": 0.6,
+        "comb": 0.5714,
+        "bal": 0.56,
+        "expansion": 0.45
+      },
+      "careful_kind_bp": {
+        "orig": 0.46,
+        "warm": 0.55,
+        "comb": 0.4857,
+        "bal": 0.46,
+        "expansion": 0.45
+      },
+      "hard_kind_bp": {
+        "orig": 0.48,
+        "warm": 0.6,
+        "comb": 0.5143,
+        "bal": 0.48,
+        "expansion": 0.4
+      },
+      "careful_vs_text": {
+        "orig": 0.68,
+        "warm": 0.4,
+        "comb": 0.6,
+        "bal": 0.4,
+        "expansion": 0.75
+      },
+      "thorough_vs_text": {
+        "orig": 0.62,
+        "warm": 0.25,
+        "comb": 0.5143,
+        "bal": 0.25,
+        "expansion": 0.5
+      },
+      "hard_vs_text": {
+        "orig": 0.66,
+        "warm": 0.5,
+        "comb": 0.6143,
+        "bal": 0.5,
+        "expansion": 0.75
+      },
+      "careful_thorough_hard_bp": {
+        "orig": 0.54,
+        "warm": 0.7,
+        "comb": 0.5857,
+        "bal": 0.54,
+        "expansion": 0.5
+      },
+      "this_is_careful": {
+        "orig": 0.38,
+        "warm": 0.7,
+        "comb": 0.4714,
+        "bal": 0.38,
+        "expansion": 0.45
+      },
+      "a_careful_response": {
+        "orig": 0.3,
+        "warm": 0.7,
+        "comb": 0.4143,
+        "bal": 0.3,
+        "expansion": 0.4
+      },
+      "cospos_careful": {
+        "orig": 0.6,
+        "warm": 0.55,
+        "comb": 0.5857,
+        "bal": 0.55,
+        "expansion": 0.6
+      },
+      "cospos_hard": {
+        "orig": 0.52,
+        "warm": 0.7,
+        "comb": 0.5714,
+        "bal": 0.52,
+        "expansion": 0.45
+      },
+      "cospos_thorough": {
+        "orig": 0.5,
+        "warm": 0.55,
+        "comb": 0.5143,
+        "bal": 0.5,
+        "expansion": 0.3
+      },
+      "cospos_kind": {
+        "orig": 0.34,
+        "warm": 0.85,
+        "comb": 0.4857,
+        "bal": 0.34,
+        "expansion": 0.35
+      },
+      "cospos_careful_thorough": {
+        "orig": 0.54,
+        "warm": 0.5,
+        "comb": 0.5286,
+        "bal": 0.5,
+        "expansion": 0.25
+      },
+      "cospos_hard_kind": {
+        "orig": 0.6,
+        "warm": 0.7,
+        "comb": 0.6286,
+        "bal": 0.6,
+        "expansion": 0.3
+      },
+      "cospos_careful_thorough_hard": {
+        "orig": 0.52,
+        "warm": 0.55,
+        "comb": 0.5286,
+        "bal": 0.52,
+        "expansion": 0.45
+      },
+      "cospos_this_is_a_careful_response": {
+        "orig": 0.48,
+        "warm": 0.6,
+        "comb": 0.5143,
+        "bal": 0.48,
+        "expansion": 0.4
+      },
+      "cospos_a_careful_thorough_response": {
+        "orig": 0.36,
+        "warm": 0.65,
+        "comb": 0.4429,
+        "bal": 0.36,
+        "expansion": 0.15
+      },
+      "cospos_quality": {
+        "orig": 0.5,
+        "warm": 0.5,
+        "comb": 0.5,
+        "bal": 0.5,
+        "expansion": 0.4
+      },
+      "cospos_excellent": {
+        "orig": 0.32,
+        "warm": 0.6,
+        "comb": 0.4,
+        "bal": 0.32,
+        "expansion": 0.35
+      },
+      "frame_standard_bp": {
+        "orig": 0.62,
+        "warm": 0.7,
+        "comb": 0.6429
+      },
+      "frame_standard_cp": {
+        "orig": 0.6,
+        "warm": 0.55,
+        "comb": 0.5857
+      },
+      "frame_response_only_bp": {
+        "orig": 0.56,
+        "warm": 0.65,
+        "comb": 0.5857
+      },
+      "frame_response_only_cp": {
+        "orig": 0.64,
+        "warm": 0.5,
+        "comb": 0.6
+      },
+      "frame_quality_query_bp": {
+        "orig": 0.52,
+        "warm": 0.65,
+        "comb": 0.5571
+      },
+      "frame_quality_query_cp": {
+        "orig": 0.5,
+        "warm": 0.55,
+        "comb": 0.5143
+      },
+      "frame_rate_quality_bp": {
+        "orig": 0.58,
+        "warm": 0.6,
+        "comb": 0.5857
+      },
+      "frame_rate_quality_cp": {
+        "orig": 0.6,
+        "warm": 0.4,
+        "comb": 0.5429
+      }
+    }
+  }
+}

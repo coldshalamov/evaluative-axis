@@ -1,0 +1,1442 @@
+{
+  "experiment": "Comprehensive analysis of all tested evaluative terms",
+  "date": "2026-06-28",
+  "n_terms": 46,
+  "n_cases": 70,
+  "results": {
+    "snowflake-arctic-embed-m": {
+      "good": {
+        "accuracy": 0.514,
+        "orig_accuracy": 0.48,
+        "warmth_accuracy": 0.6,
+        "r_good": 1.0,
+        "p_value": 0.0,
+        "cos_with_good_axis": 1.0,
+        "anchor_cosine": 0.965,
+        "status": "warmth-biased"
+      },
+      "careful": {
+        "accuracy": 0.486,
+        "orig_accuracy": 0.52,
+        "warmth_accuracy": 0.4,
+        "r_good": 0.086,
+        "p_value": 0.4811,
+        "cos_with_good_axis": 0.111,
+        "anchor_cosine": 0.906,
+        "status": "INDEPENDENT"
+      },
+      "honest": {
+        "accuracy": 0.4,
+        "orig_accuracy": 0.26,
+        "warmth_accuracy": 0.75,
+        "r_good": 0.548,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.361,
+        "anchor_cosine": 0.954,
+        "status": "warmth-biased"
+      },
+      "kind": {
+        "accuracy": 0.443,
+        "orig_accuracy": 0.4,
+        "warmth_accuracy": 0.55,
+        "r_good": 0.487,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.175,
+        "anchor_cosine": 0.947,
+        "status": "warmth-biased"
+      },
+      "wise": {
+        "accuracy": 0.486,
+        "orig_accuracy": 0.46,
+        "warmth_accuracy": 0.55,
+        "r_good": 0.192,
+        "p_value": 0.1112,
+        "cos_with_good_axis": 0.193,
+        "anchor_cosine": 0.904,
+        "status": "INDEPENDENT"
+      },
+      "helpful": {
+        "accuracy": 0.543,
+        "orig_accuracy": 0.58,
+        "warmth_accuracy": 0.45,
+        "r_good": 0.297,
+        "p_value": 0.0126,
+        "cos_with_good_axis": 0.379,
+        "anchor_cosine": 0.934,
+        "status": "INDEPENDENT"
+      },
+      "thorough": {
+        "accuracy": 0.6,
+        "orig_accuracy": 0.6,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.113,
+        "p_value": 0.3515,
+        "cos_with_good_axis": 0.097,
+        "anchor_cosine": 0.932,
+        "status": "INDEPENDENT"
+      },
+      "fair": {
+        "accuracy": 0.457,
+        "orig_accuracy": 0.42,
+        "warmth_accuracy": 0.55,
+        "r_good": 0.258,
+        "p_value": 0.0314,
+        "cos_with_good_axis": -0.024,
+        "anchor_cosine": 0.944,
+        "status": "INDEPENDENT"
+      },
+      "responsible": {
+        "accuracy": 0.543,
+        "orig_accuracy": 0.52,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.204,
+        "p_value": 0.0902,
+        "cos_with_good_axis": 0.117,
+        "anchor_cosine": 0.967,
+        "status": "INDEPENDENT"
+      },
+      "clear": {
+        "accuracy": 0.5,
+        "orig_accuracy": 0.5,
+        "warmth_accuracy": 0.5,
+        "r_good": 0.267,
+        "p_value": 0.0252,
+        "cos_with_good_axis": 0.148,
+        "anchor_cosine": 0.953,
+        "status": "INDEPENDENT"
+      },
+      "respectful": {
+        "accuracy": 0.386,
+        "orig_accuracy": 0.36,
+        "warmth_accuracy": 0.45,
+        "r_good": 0.476,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.261,
+        "anchor_cosine": 0.958,
+        "status": "warmth-biased"
+      },
+      "deliberate": {
+        "accuracy": 0.471,
+        "orig_accuracy": 0.44,
+        "warmth_accuracy": 0.55,
+        "r_good": 0.273,
+        "p_value": 0.0221,
+        "cos_with_good_axis": 0.209,
+        "anchor_cosine": 0.93,
+        "status": "INDEPENDENT"
+      },
+      "attentive": {
+        "accuracy": 0.414,
+        "orig_accuracy": 0.32,
+        "warmth_accuracy": 0.65,
+        "r_good": 0.473,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.224,
+        "anchor_cosine": 0.961,
+        "status": "warmth-biased"
+      },
+      "precise": {
+        "accuracy": 0.443,
+        "orig_accuracy": 0.48,
+        "warmth_accuracy": 0.35,
+        "r_good": 0.006,
+        "p_value": 0.9601,
+        "cos_with_good_axis": 0.061,
+        "anchor_cosine": 0.916,
+        "status": "INDEPENDENT"
+      },
+      "cautious": {
+        "accuracy": 0.486,
+        "orig_accuracy": 0.46,
+        "warmth_accuracy": 0.55,
+        "r_good": 0.25,
+        "p_value": 0.037,
+        "cos_with_good_axis": 0.19,
+        "anchor_cosine": 0.879,
+        "status": "INDEPENDENT"
+      },
+      "methodical": {
+        "accuracy": 0.386,
+        "orig_accuracy": 0.48,
+        "warmth_accuracy": 0.15,
+        "r_good": 0.017,
+        "p_value": 0.8908,
+        "cos_with_good_axis": 0.018,
+        "anchor_cosine": 0.931,
+        "status": "INDEPENDENT"
+      },
+      "truthful": {
+        "accuracy": 0.443,
+        "orig_accuracy": 0.3,
+        "warmth_accuracy": 0.8,
+        "r_good": 0.555,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.282,
+        "anchor_cosine": 0.955,
+        "status": "warmth-biased"
+      },
+      "transparent": {
+        "accuracy": 0.4,
+        "orig_accuracy": 0.34,
+        "warmth_accuracy": 0.55,
+        "r_good": 0.118,
+        "p_value": 0.3313,
+        "cos_with_good_axis": -0.001,
+        "anchor_cosine": 0.978,
+        "status": "INDEPENDENT"
+      },
+      "sincere": {
+        "accuracy": 0.4,
+        "orig_accuracy": 0.24,
+        "warmth_accuracy": 0.8,
+        "r_good": 0.201,
+        "p_value": 0.0955,
+        "cos_with_good_axis": 0.036,
+        "anchor_cosine": 0.907,
+        "status": "INDEPENDENT"
+      },
+      "forthright": {
+        "accuracy": 0.4,
+        "orig_accuracy": 0.32,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.342,
+        "p_value": 0.0037,
+        "cos_with_good_axis": 0.12,
+        "anchor_cosine": 0.914,
+        "status": "borderline"
+      },
+      "candid": {
+        "accuracy": 0.443,
+        "orig_accuracy": 0.28,
+        "warmth_accuracy": 0.85,
+        "r_good": 0.378,
+        "p_value": 0.0013,
+        "cos_with_good_axis": 0.012,
+        "anchor_cosine": 0.91,
+        "status": "borderline"
+      },
+      "compassionate": {
+        "accuracy": 0.471,
+        "orig_accuracy": 0.5,
+        "warmth_accuracy": 0.4,
+        "r_good": -0.169,
+        "p_value": 0.1609,
+        "cos_with_good_axis": -0.086,
+        "anchor_cosine": 0.9,
+        "status": "INDEPENDENT"
+      },
+      "patient": {
+        "accuracy": 0.443,
+        "orig_accuracy": 0.54,
+        "warmth_accuracy": 0.2,
+        "r_good": -0.081,
+        "p_value": 0.5041,
+        "cos_with_good_axis": 0.185,
+        "anchor_cosine": 0.929,
+        "status": "INDEPENDENT"
+      },
+      "gentle": {
+        "accuracy": 0.5,
+        "orig_accuracy": 0.46,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.323,
+        "p_value": 0.0063,
+        "cos_with_good_axis": 0.073,
+        "anchor_cosine": 0.932,
+        "status": "borderline"
+      },
+      "encouraging": {
+        "accuracy": 0.429,
+        "orig_accuracy": 0.3,
+        "warmth_accuracy": 0.75,
+        "r_good": 0.481,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.23,
+        "anchor_cosine": 0.953,
+        "status": "warmth-biased"
+      },
+      "supportive": {
+        "accuracy": 0.471,
+        "orig_accuracy": 0.5,
+        "warmth_accuracy": 0.4,
+        "r_good": 0.137,
+        "p_value": 0.2577,
+        "cos_with_good_axis": 0.084,
+        "anchor_cosine": 0.925,
+        "status": "INDEPENDENT"
+      },
+      "prudent": {
+        "accuracy": 0.5,
+        "orig_accuracy": 0.56,
+        "warmth_accuracy": 0.35,
+        "r_good": 0.158,
+        "p_value": 0.1928,
+        "cos_with_good_axis": 0.076,
+        "anchor_cosine": 0.906,
+        "status": "INDEPENDENT"
+      },
+      "vigilant": {
+        "accuracy": 0.414,
+        "orig_accuracy": 0.32,
+        "warmth_accuracy": 0.65,
+        "r_good": 0.382,
+        "p_value": 0.0011,
+        "cos_with_good_axis": -0.064,
+        "anchor_cosine": 0.917,
+        "status": "borderline"
+      },
+      "scrupulous": {
+        "accuracy": 0.457,
+        "orig_accuracy": 0.48,
+        "warmth_accuracy": 0.4,
+        "r_good": -0.119,
+        "p_value": 0.3271,
+        "cos_with_good_axis": -0.044,
+        "anchor_cosine": 0.903,
+        "status": "INDEPENDENT"
+      },
+      "measured": {
+        "accuracy": 0.529,
+        "orig_accuracy": 0.5,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.36,
+        "p_value": 0.0022,
+        "cos_with_good_axis": 0.241,
+        "anchor_cosine": 0.901,
+        "status": "borderline"
+      },
+      "exemplary": {
+        "accuracy": 0.471,
+        "orig_accuracy": 0.46,
+        "warmth_accuracy": 0.5,
+        "r_good": 0.612,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.412,
+        "anchor_cosine": 0.921,
+        "status": "warmth-biased"
+      },
+      "superb": {
+        "accuracy": 0.357,
+        "orig_accuracy": 0.24,
+        "warmth_accuracy": 0.65,
+        "r_good": 0.589,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.278,
+        "anchor_cosine": 0.942,
+        "status": "warmth-biased"
+      },
+      "commendable": {
+        "accuracy": 0.414,
+        "orig_accuracy": 0.26,
+        "warmth_accuracy": 0.8,
+        "r_good": 0.625,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.3,
+        "anchor_cosine": 0.946,
+        "status": "warmth-biased"
+      },
+      "outstanding": {
+        "accuracy": 0.443,
+        "orig_accuracy": 0.36,
+        "warmth_accuracy": 0.65,
+        "r_good": 0.311,
+        "p_value": 0.0087,
+        "cos_with_good_axis": 0.16,
+        "anchor_cosine": 0.933,
+        "status": "borderline"
+      },
+      "gracious": {
+        "accuracy": 0.329,
+        "orig_accuracy": 0.28,
+        "warmth_accuracy": 0.45,
+        "r_good": 0.524,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.262,
+        "anchor_cosine": 0.935,
+        "status": "warmth-biased"
+      },
+      "benevolent": {
+        "accuracy": 0.443,
+        "orig_accuracy": 0.4,
+        "warmth_accuracy": 0.55,
+        "r_good": 0.482,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.282,
+        "anchor_cosine": 0.906,
+        "status": "warmth-biased"
+      },
+      "systematic": {
+        "accuracy": 0.386,
+        "orig_accuracy": 0.38,
+        "warmth_accuracy": 0.4,
+        "r_good": 0.104,
+        "p_value": 0.3914,
+        "cos_with_good_axis": 0.168,
+        "anchor_cosine": 0.937,
+        "status": "INDEPENDENT"
+      },
+      "rigorous": {
+        "accuracy": 0.486,
+        "orig_accuracy": 0.46,
+        "warmth_accuracy": 0.55,
+        "r_good": 0.016,
+        "p_value": 0.8952,
+        "cos_with_good_axis": 0.031,
+        "anchor_cosine": 0.85,
+        "status": "INDEPENDENT"
+      },
+      "stringent": {
+        "accuracy": 0.414,
+        "orig_accuracy": 0.32,
+        "warmth_accuracy": 0.65,
+        "r_good": -0.167,
+        "p_value": 0.1675,
+        "cos_with_good_axis": -0.048,
+        "anchor_cosine": 0.966,
+        "status": "INDEPENDENT"
+      },
+      "accurate": {
+        "accuracy": 0.371,
+        "orig_accuracy": 0.22,
+        "warmth_accuracy": 0.75,
+        "r_good": 0.663,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.388,
+        "anchor_cosine": 0.982,
+        "status": "warmth-biased"
+      },
+      "logical": {
+        "accuracy": 0.457,
+        "orig_accuracy": 0.5,
+        "warmth_accuracy": 0.35,
+        "r_good": 0.377,
+        "p_value": 0.0013,
+        "cos_with_good_axis": 0.387,
+        "anchor_cosine": 0.929,
+        "status": "borderline"
+      },
+      "analytical": {
+        "accuracy": 0.471,
+        "orig_accuracy": 0.62,
+        "warmth_accuracy": 0.1,
+        "r_good": -0.133,
+        "p_value": 0.272,
+        "cos_with_good_axis": 0.075,
+        "anchor_cosine": 0.916,
+        "status": "INDEPENDENT"
+      },
+      "admirable": {
+        "accuracy": 0.371,
+        "orig_accuracy": 0.28,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.461,
+        "p_value": 0.0001,
+        "cos_with_good_axis": 0.199,
+        "anchor_cosine": 0.942,
+        "status": "warmth-biased"
+      },
+      "noble": {
+        "accuracy": 0.429,
+        "orig_accuracy": 0.46,
+        "warmth_accuracy": 0.35,
+        "r_good": 0.18,
+        "p_value": 0.1352,
+        "cos_with_good_axis": 0.047,
+        "anchor_cosine": 0.917,
+        "status": "INDEPENDENT"
+      },
+      "generous": {
+        "accuracy": 0.514,
+        "orig_accuracy": 0.5,
+        "warmth_accuracy": 0.55,
+        "r_good": 0.321,
+        "p_value": 0.0068,
+        "cos_with_good_axis": 0.189,
+        "anchor_cosine": 0.941,
+        "status": "borderline"
+      },
+      "worthy": {
+        "accuracy": 0.371,
+        "orig_accuracy": 0.22,
+        "warmth_accuracy": 0.75,
+        "r_good": 0.708,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.492,
+        "anchor_cosine": 0.945,
+        "status": "warmth-biased"
+      }
+    },
+    "bge-m3": {
+      "good": {
+        "accuracy": 0.357,
+        "orig_accuracy": 0.16,
+        "warmth_accuracy": 0.85,
+        "r_good": 1.0,
+        "p_value": 0.0,
+        "cos_with_good_axis": 1.0,
+        "anchor_cosine": 0.737,
+        "status": "warmth-biased"
+      },
+      "careful": {
+        "accuracy": 0.514,
+        "orig_accuracy": 0.58,
+        "warmth_accuracy": 0.35,
+        "r_good": -0.246,
+        "p_value": 0.0398,
+        "cos_with_good_axis": 0.103,
+        "anchor_cosine": 0.505,
+        "status": "INDEPENDENT"
+      },
+      "honest": {
+        "accuracy": 0.3,
+        "orig_accuracy": 0.16,
+        "warmth_accuracy": 0.65,
+        "r_good": 0.787,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.343,
+        "anchor_cosine": 0.69,
+        "status": "warmth-biased"
+      },
+      "kind": {
+        "accuracy": 0.529,
+        "orig_accuracy": 0.44,
+        "warmth_accuracy": 0.75,
+        "r_good": 0.573,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.175,
+        "anchor_cosine": 0.5,
+        "status": "warmth-biased"
+      },
+      "wise": {
+        "accuracy": 0.386,
+        "orig_accuracy": 0.24,
+        "warmth_accuracy": 0.75,
+        "r_good": 0.83,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.312,
+        "anchor_cosine": 0.495,
+        "status": "warmth-biased"
+      },
+      "helpful": {
+        "accuracy": 0.386,
+        "orig_accuracy": 0.22,
+        "warmth_accuracy": 0.8,
+        "r_good": 0.924,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.638,
+        "anchor_cosine": 0.705,
+        "status": "warmth-biased"
+      },
+      "thorough": {
+        "accuracy": 0.529,
+        "orig_accuracy": 0.42,
+        "warmth_accuracy": 0.8,
+        "r_good": 0.294,
+        "p_value": 0.0134,
+        "cos_with_good_axis": 0.018,
+        "anchor_cosine": 0.456,
+        "status": "INDEPENDENT"
+      },
+      "fair": {
+        "accuracy": 0.314,
+        "orig_accuracy": 0.16,
+        "warmth_accuracy": 0.7,
+        "r_good": 0.823,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.377,
+        "anchor_cosine": 0.634,
+        "status": "warmth-biased"
+      },
+      "responsible": {
+        "accuracy": 0.371,
+        "orig_accuracy": 0.24,
+        "warmth_accuracy": 0.7,
+        "r_good": 0.848,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.494,
+        "anchor_cosine": 0.72,
+        "status": "warmth-biased"
+      },
+      "clear": {
+        "accuracy": 0.329,
+        "orig_accuracy": 0.26,
+        "warmth_accuracy": 0.5,
+        "r_good": 0.454,
+        "p_value": 0.0001,
+        "cos_with_good_axis": 0.162,
+        "anchor_cosine": 0.544,
+        "status": "warmth-biased"
+      },
+      "respectful": {
+        "accuracy": 0.314,
+        "orig_accuracy": 0.16,
+        "warmth_accuracy": 0.7,
+        "r_good": 0.89,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.549,
+        "anchor_cosine": 0.786,
+        "status": "warmth-biased"
+      },
+      "deliberate": {
+        "accuracy": 0.514,
+        "orig_accuracy": 0.5,
+        "warmth_accuracy": 0.55,
+        "r_good": 0.1,
+        "p_value": 0.4084,
+        "cos_with_good_axis": 0.008,
+        "anchor_cosine": 0.553,
+        "status": "INDEPENDENT"
+      },
+      "attentive": {
+        "accuracy": 0.357,
+        "orig_accuracy": 0.18,
+        "warmth_accuracy": 0.8,
+        "r_good": 0.886,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.449,
+        "anchor_cosine": 0.825,
+        "status": "warmth-biased"
+      },
+      "precise": {
+        "accuracy": 0.271,
+        "orig_accuracy": 0.14,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.614,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.244,
+        "anchor_cosine": 0.442,
+        "status": "warmth-biased"
+      },
+      "cautious": {
+        "accuracy": 0.471,
+        "orig_accuracy": 0.46,
+        "warmth_accuracy": 0.5,
+        "r_good": 0.166,
+        "p_value": 0.17,
+        "cos_with_good_axis": 0.229,
+        "anchor_cosine": 0.595,
+        "status": "INDEPENDENT"
+      },
+      "methodical": {
+        "accuracy": 0.486,
+        "orig_accuracy": 0.5,
+        "warmth_accuracy": 0.45,
+        "r_good": 0.127,
+        "p_value": 0.2932,
+        "cos_with_good_axis": 0.085,
+        "anchor_cosine": 0.436,
+        "status": "INDEPENDENT"
+      },
+      "truthful": {
+        "accuracy": 0.343,
+        "orig_accuracy": 0.14,
+        "warmth_accuracy": 0.85,
+        "r_good": 0.765,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.297,
+        "anchor_cosine": 0.528,
+        "status": "warmth-biased"
+      },
+      "transparent": {
+        "accuracy": 0.343,
+        "orig_accuracy": 0.18,
+        "warmth_accuracy": 0.75,
+        "r_good": 0.803,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.187,
+        "anchor_cosine": 0.715,
+        "status": "warmth-biased"
+      },
+      "sincere": {
+        "accuracy": 0.243,
+        "orig_accuracy": 0.1,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.815,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.196,
+        "anchor_cosine": 0.665,
+        "status": "warmth-biased"
+      },
+      "forthright": {
+        "accuracy": 0.414,
+        "orig_accuracy": 0.28,
+        "warmth_accuracy": 0.75,
+        "r_good": 0.513,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.108,
+        "anchor_cosine": 0.389,
+        "status": "warmth-biased"
+      },
+      "candid": {
+        "accuracy": 0.343,
+        "orig_accuracy": 0.24,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.345,
+        "p_value": 0.0035,
+        "cos_with_good_axis": 0.022,
+        "anchor_cosine": 0.534,
+        "status": "borderline"
+      },
+      "compassionate": {
+        "accuracy": 0.357,
+        "orig_accuracy": 0.26,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.544,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.159,
+        "anchor_cosine": 0.606,
+        "status": "warmth-biased"
+      },
+      "patient": {
+        "accuracy": 0.429,
+        "orig_accuracy": 0.38,
+        "warmth_accuracy": 0.55,
+        "r_good": 0.232,
+        "p_value": 0.0537,
+        "cos_with_good_axis": 0.105,
+        "anchor_cosine": 0.583,
+        "status": "INDEPENDENT"
+      },
+      "gentle": {
+        "accuracy": 0.357,
+        "orig_accuracy": 0.28,
+        "warmth_accuracy": 0.55,
+        "r_good": 0.724,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.391,
+        "anchor_cosine": 0.512,
+        "status": "warmth-biased"
+      },
+      "encouraging": {
+        "accuracy": 0.371,
+        "orig_accuracy": 0.36,
+        "warmth_accuracy": 0.4,
+        "r_good": 0.411,
+        "p_value": 0.0004,
+        "cos_with_good_axis": 0.104,
+        "anchor_cosine": 0.93,
+        "status": "warmth-biased"
+      },
+      "supportive": {
+        "accuracy": 0.386,
+        "orig_accuracy": 0.28,
+        "warmth_accuracy": 0.65,
+        "r_good": 0.757,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.289,
+        "anchor_cosine": 0.614,
+        "status": "warmth-biased"
+      },
+      "prudent": {
+        "accuracy": 0.443,
+        "orig_accuracy": 0.48,
+        "warmth_accuracy": 0.35,
+        "r_good": -0.006,
+        "p_value": 0.9634,
+        "cos_with_good_axis": 0.133,
+        "anchor_cosine": 0.473,
+        "status": "INDEPENDENT"
+      },
+      "vigilant": {
+        "accuracy": 0.357,
+        "orig_accuracy": 0.28,
+        "warmth_accuracy": 0.55,
+        "r_good": 0.711,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.25,
+        "anchor_cosine": 0.614,
+        "status": "warmth-biased"
+      },
+      "scrupulous": {
+        "accuracy": 0.286,
+        "orig_accuracy": 0.18,
+        "warmth_accuracy": 0.55,
+        "r_good": 0.799,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.371,
+        "anchor_cosine": 0.632,
+        "status": "warmth-biased"
+      },
+      "measured": {
+        "accuracy": 0.514,
+        "orig_accuracy": 0.48,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.204,
+        "p_value": 0.0907,
+        "cos_with_good_axis": 0.051,
+        "anchor_cosine": 0.557,
+        "status": "INDEPENDENT"
+      },
+      "exemplary": {
+        "accuracy": 0.357,
+        "orig_accuracy": 0.3,
+        "warmth_accuracy": 0.5,
+        "r_good": 0.739,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.397,
+        "anchor_cosine": 0.435,
+        "status": "warmth-biased"
+      },
+      "superb": {
+        "accuracy": 0.371,
+        "orig_accuracy": 0.24,
+        "warmth_accuracy": 0.7,
+        "r_good": 0.911,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.461,
+        "anchor_cosine": 0.487,
+        "status": "warmth-biased"
+      },
+      "commendable": {
+        "accuracy": 0.371,
+        "orig_accuracy": 0.22,
+        "warmth_accuracy": 0.75,
+        "r_good": 0.952,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.646,
+        "anchor_cosine": 0.567,
+        "status": "warmth-biased"
+      },
+      "outstanding": {
+        "accuracy": 0.314,
+        "orig_accuracy": 0.18,
+        "warmth_accuracy": 0.65,
+        "r_good": 0.698,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.343,
+        "anchor_cosine": 0.439,
+        "status": "warmth-biased"
+      },
+      "gracious": {
+        "accuracy": 0.343,
+        "orig_accuracy": 0.18,
+        "warmth_accuracy": 0.75,
+        "r_good": 0.808,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.382,
+        "anchor_cosine": 0.44,
+        "status": "warmth-biased"
+      },
+      "benevolent": {
+        "accuracy": 0.4,
+        "orig_accuracy": 0.28,
+        "warmth_accuracy": 0.7,
+        "r_good": 0.817,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.326,
+        "anchor_cosine": 0.561,
+        "status": "warmth-biased"
+      },
+      "systematic": {
+        "accuracy": 0.286,
+        "orig_accuracy": 0.18,
+        "warmth_accuracy": 0.55,
+        "r_good": 0.654,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.291,
+        "anchor_cosine": 0.566,
+        "status": "warmth-biased"
+      },
+      "rigorous": {
+        "accuracy": 0.429,
+        "orig_accuracy": 0.34,
+        "warmth_accuracy": 0.65,
+        "r_good": -0.02,
+        "p_value": 0.8716,
+        "cos_with_good_axis": -0.013,
+        "anchor_cosine": 0.411,
+        "status": "INDEPENDENT"
+      },
+      "stringent": {
+        "accuracy": 0.529,
+        "orig_accuracy": 0.58,
+        "warmth_accuracy": 0.4,
+        "r_good": -0.36,
+        "p_value": 0.0022,
+        "cos_with_good_axis": -0.075,
+        "anchor_cosine": 0.55,
+        "status": "borderline"
+      },
+      "accurate": {
+        "accuracy": 0.286,
+        "orig_accuracy": 0.16,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.863,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.352,
+        "anchor_cosine": 0.74,
+        "status": "warmth-biased"
+      },
+      "logical": {
+        "accuracy": 0.257,
+        "orig_accuracy": 0.12,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.849,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.453,
+        "anchor_cosine": 0.699,
+        "status": "warmth-biased"
+      },
+      "analytical": {
+        "accuracy": 0.343,
+        "orig_accuracy": 0.32,
+        "warmth_accuracy": 0.4,
+        "r_good": 0.319,
+        "p_value": 0.007,
+        "cos_with_good_axis": 0.16,
+        "anchor_cosine": 0.502,
+        "status": "borderline"
+      },
+      "admirable": {
+        "accuracy": 0.371,
+        "orig_accuracy": 0.18,
+        "warmth_accuracy": 0.85,
+        "r_good": 0.925,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.536,
+        "anchor_cosine": 0.695,
+        "status": "warmth-biased"
+      },
+      "noble": {
+        "accuracy": 0.443,
+        "orig_accuracy": 0.34,
+        "warmth_accuracy": 0.7,
+        "r_good": 0.717,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.304,
+        "anchor_cosine": 0.615,
+        "status": "warmth-biased"
+      },
+      "generous": {
+        "accuracy": 0.414,
+        "orig_accuracy": 0.3,
+        "warmth_accuracy": 0.7,
+        "r_good": 0.842,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.431,
+        "anchor_cosine": 0.557,
+        "status": "warmth-biased"
+      },
+      "worthy": {
+        "accuracy": 0.329,
+        "orig_accuracy": 0.16,
+        "warmth_accuracy": 0.75,
+        "r_good": 0.908,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.489,
+        "anchor_cosine": 0.613,
+        "status": "warmth-biased"
+      }
+    },
+    "nomic-embed-text-v1.5": {
+      "good": {
+        "accuracy": 0.314,
+        "orig_accuracy": 0.12,
+        "warmth_accuracy": 0.8,
+        "r_good": 1.0,
+        "p_value": 0.0,
+        "cos_with_good_axis": 1.0,
+        "anchor_cosine": 0.664,
+        "status": "warmth-biased"
+      },
+      "careful": {
+        "accuracy": 0.643,
+        "orig_accuracy": 0.62,
+        "warmth_accuracy": 0.7,
+        "r_good": -0.106,
+        "p_value": 0.3827,
+        "cos_with_good_axis": -0.01,
+        "anchor_cosine": 0.615,
+        "status": "INDEPENDENT"
+      },
+      "honest": {
+        "accuracy": 0.386,
+        "orig_accuracy": 0.3,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.711,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.195,
+        "anchor_cosine": 0.576,
+        "status": "warmth-biased"
+      },
+      "kind": {
+        "accuracy": 0.4,
+        "orig_accuracy": 0.28,
+        "warmth_accuracy": 0.7,
+        "r_good": 0.603,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.193,
+        "anchor_cosine": 0.686,
+        "status": "warmth-biased"
+      },
+      "wise": {
+        "accuracy": 0.4,
+        "orig_accuracy": 0.3,
+        "warmth_accuracy": 0.65,
+        "r_good": 0.734,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.216,
+        "anchor_cosine": 0.613,
+        "status": "warmth-biased"
+      },
+      "helpful": {
+        "accuracy": 0.4,
+        "orig_accuracy": 0.2,
+        "warmth_accuracy": 0.9,
+        "r_good": 0.764,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.184,
+        "anchor_cosine": 0.589,
+        "status": "warmth-biased"
+      },
+      "thorough": {
+        "accuracy": 0.543,
+        "orig_accuracy": 0.56,
+        "warmth_accuracy": 0.5,
+        "r_good": -0.118,
+        "p_value": 0.3294,
+        "cos_with_good_axis": 0.036,
+        "anchor_cosine": 0.55,
+        "status": "INDEPENDENT"
+      },
+      "fair": {
+        "accuracy": 0.371,
+        "orig_accuracy": 0.24,
+        "warmth_accuracy": 0.7,
+        "r_good": 0.529,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.131,
+        "anchor_cosine": 0.717,
+        "status": "warmth-biased"
+      },
+      "responsible": {
+        "accuracy": 0.371,
+        "orig_accuracy": 0.2,
+        "warmth_accuracy": 0.8,
+        "r_good": 0.759,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.16,
+        "anchor_cosine": 0.675,
+        "status": "warmth-biased"
+      },
+      "clear": {
+        "accuracy": 0.429,
+        "orig_accuracy": 0.34,
+        "warmth_accuracy": 0.65,
+        "r_good": 0.419,
+        "p_value": 0.0003,
+        "cos_with_good_axis": 0.122,
+        "anchor_cosine": 0.546,
+        "status": "warmth-biased"
+      },
+      "respectful": {
+        "accuracy": 0.386,
+        "orig_accuracy": 0.26,
+        "warmth_accuracy": 0.7,
+        "r_good": 0.704,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.229,
+        "anchor_cosine": 0.693,
+        "status": "warmth-biased"
+      },
+      "deliberate": {
+        "accuracy": 0.514,
+        "orig_accuracy": 0.56,
+        "warmth_accuracy": 0.4,
+        "r_good": 0.105,
+        "p_value": 0.3851,
+        "cos_with_good_axis": 0.1,
+        "anchor_cosine": 0.533,
+        "status": "INDEPENDENT"
+      },
+      "attentive": {
+        "accuracy": 0.443,
+        "orig_accuracy": 0.34,
+        "warmth_accuracy": 0.7,
+        "r_good": 0.703,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.222,
+        "anchor_cosine": 0.641,
+        "status": "warmth-biased"
+      },
+      "precise": {
+        "accuracy": 0.343,
+        "orig_accuracy": 0.28,
+        "warmth_accuracy": 0.5,
+        "r_good": 0.422,
+        "p_value": 0.0003,
+        "cos_with_good_axis": 0.066,
+        "anchor_cosine": 0.515,
+        "status": "warmth-biased"
+      },
+      "cautious": {
+        "accuracy": 0.5,
+        "orig_accuracy": 0.48,
+        "warmth_accuracy": 0.55,
+        "r_good": 0.269,
+        "p_value": 0.0243,
+        "cos_with_good_axis": 0.064,
+        "anchor_cosine": 0.641,
+        "status": "INDEPENDENT"
+      },
+      "methodical": {
+        "accuracy": 0.4,
+        "orig_accuracy": 0.28,
+        "warmth_accuracy": 0.7,
+        "r_good": 0.443,
+        "p_value": 0.0001,
+        "cos_with_good_axis": 0.109,
+        "anchor_cosine": 0.502,
+        "status": "warmth-biased"
+      },
+      "truthful": {
+        "accuracy": 0.357,
+        "orig_accuracy": 0.22,
+        "warmth_accuracy": 0.7,
+        "r_good": 0.725,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.092,
+        "anchor_cosine": 0.625,
+        "status": "warmth-biased"
+      },
+      "transparent": {
+        "accuracy": 0.343,
+        "orig_accuracy": 0.22,
+        "warmth_accuracy": 0.65,
+        "r_good": 0.449,
+        "p_value": 0.0001,
+        "cos_with_good_axis": 0.052,
+        "anchor_cosine": 0.84,
+        "status": "warmth-biased"
+      },
+      "sincere": {
+        "accuracy": 0.386,
+        "orig_accuracy": 0.28,
+        "warmth_accuracy": 0.65,
+        "r_good": 0.667,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.104,
+        "anchor_cosine": 0.419,
+        "status": "warmth-biased"
+      },
+      "forthright": {
+        "accuracy": 0.471,
+        "orig_accuracy": 0.4,
+        "warmth_accuracy": 0.65,
+        "r_good": 0.15,
+        "p_value": 0.214,
+        "cos_with_good_axis": 0.039,
+        "anchor_cosine": 0.454,
+        "status": "INDEPENDENT"
+      },
+      "candid": {
+        "accuracy": 0.4,
+        "orig_accuracy": 0.26,
+        "warmth_accuracy": 0.75,
+        "r_good": 0.672,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.043,
+        "anchor_cosine": 0.521,
+        "status": "warmth-biased"
+      },
+      "compassionate": {
+        "accuracy": 0.371,
+        "orig_accuracy": 0.34,
+        "warmth_accuracy": 0.45,
+        "r_good": 0.386,
+        "p_value": 0.001,
+        "cos_with_good_axis": 0.098,
+        "anchor_cosine": 0.494,
+        "status": "borderline"
+      },
+      "patient": {
+        "accuracy": 0.529,
+        "orig_accuracy": 0.56,
+        "warmth_accuracy": 0.45,
+        "r_good": -0.04,
+        "p_value": 0.7411,
+        "cos_with_good_axis": 0.062,
+        "anchor_cosine": 0.636,
+        "status": "INDEPENDENT"
+      },
+      "gentle": {
+        "accuracy": 0.371,
+        "orig_accuracy": 0.26,
+        "warmth_accuracy": 0.65,
+        "r_good": 0.561,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.186,
+        "anchor_cosine": 0.619,
+        "status": "warmth-biased"
+      },
+      "encouraging": {
+        "accuracy": 0.386,
+        "orig_accuracy": 0.22,
+        "warmth_accuracy": 0.8,
+        "r_good": 0.732,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.235,
+        "anchor_cosine": 0.537,
+        "status": "warmth-biased"
+      },
+      "supportive": {
+        "accuracy": 0.457,
+        "orig_accuracy": 0.38,
+        "warmth_accuracy": 0.65,
+        "r_good": 0.544,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.161,
+        "anchor_cosine": 0.451,
+        "status": "warmth-biased"
+      },
+      "prudent": {
+        "accuracy": 0.457,
+        "orig_accuracy": 0.4,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.421,
+        "p_value": 0.0003,
+        "cos_with_good_axis": 0.162,
+        "anchor_cosine": 0.556,
+        "status": "warmth-biased"
+      },
+      "vigilant": {
+        "accuracy": 0.457,
+        "orig_accuracy": 0.36,
+        "warmth_accuracy": 0.7,
+        "r_good": 0.636,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.115,
+        "anchor_cosine": 0.487,
+        "status": "warmth-biased"
+      },
+      "scrupulous": {
+        "accuracy": 0.514,
+        "orig_accuracy": 0.5,
+        "warmth_accuracy": 0.55,
+        "r_good": 0.437,
+        "p_value": 0.0002,
+        "cos_with_good_axis": 0.124,
+        "anchor_cosine": 0.452,
+        "status": "warmth-biased"
+      },
+      "measured": {
+        "accuracy": 0.514,
+        "orig_accuracy": 0.54,
+        "warmth_accuracy": 0.45,
+        "r_good": 0.123,
+        "p_value": 0.3096,
+        "cos_with_good_axis": 0.125,
+        "anchor_cosine": 0.315,
+        "status": "INDEPENDENT"
+      },
+      "exemplary": {
+        "accuracy": 0.3,
+        "orig_accuracy": 0.28,
+        "warmth_accuracy": 0.35,
+        "r_good": 0.706,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.373,
+        "anchor_cosine": 0.292,
+        "status": "warmth-biased"
+      },
+      "superb": {
+        "accuracy": 0.329,
+        "orig_accuracy": 0.24,
+        "warmth_accuracy": 0.55,
+        "r_good": 0.778,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.365,
+        "anchor_cosine": 0.416,
+        "status": "warmth-biased"
+      },
+      "commendable": {
+        "accuracy": 0.343,
+        "orig_accuracy": 0.24,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.775,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.328,
+        "anchor_cosine": 0.478,
+        "status": "warmth-biased"
+      },
+      "outstanding": {
+        "accuracy": 0.314,
+        "orig_accuracy": 0.16,
+        "warmth_accuracy": 0.7,
+        "r_good": 0.755,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.358,
+        "anchor_cosine": 0.446,
+        "status": "warmth-biased"
+      },
+      "gracious": {
+        "accuracy": 0.414,
+        "orig_accuracy": 0.26,
+        "warmth_accuracy": 0.8,
+        "r_good": 0.86,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.374,
+        "anchor_cosine": 0.614,
+        "status": "warmth-biased"
+      },
+      "benevolent": {
+        "accuracy": 0.3,
+        "orig_accuracy": 0.18,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.802,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.36,
+        "anchor_cosine": 0.611,
+        "status": "warmth-biased"
+      },
+      "systematic": {
+        "accuracy": 0.329,
+        "orig_accuracy": 0.34,
+        "warmth_accuracy": 0.3,
+        "r_good": 0.443,
+        "p_value": 0.0001,
+        "cos_with_good_axis": 0.127,
+        "anchor_cosine": 0.501,
+        "status": "warmth-biased"
+      },
+      "rigorous": {
+        "accuracy": 0.343,
+        "orig_accuracy": 0.36,
+        "warmth_accuracy": 0.3,
+        "r_good": 0.132,
+        "p_value": 0.2763,
+        "cos_with_good_axis": 0.056,
+        "anchor_cosine": 0.365,
+        "status": "INDEPENDENT"
+      },
+      "stringent": {
+        "accuracy": 0.571,
+        "orig_accuracy": 0.48,
+        "warmth_accuracy": 0.8,
+        "r_good": 0.419,
+        "p_value": 0.0003,
+        "cos_with_good_axis": 0.068,
+        "anchor_cosine": 0.563,
+        "status": "warmth-biased"
+      },
+      "accurate": {
+        "accuracy": 0.329,
+        "orig_accuracy": 0.14,
+        "warmth_accuracy": 0.8,
+        "r_good": 0.765,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.221,
+        "anchor_cosine": 0.89,
+        "status": "warmth-biased"
+      },
+      "logical": {
+        "accuracy": 0.257,
+        "orig_accuracy": 0.12,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.738,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.226,
+        "anchor_cosine": 0.635,
+        "status": "warmth-biased"
+      },
+      "analytical": {
+        "accuracy": 0.371,
+        "orig_accuracy": 0.34,
+        "warmth_accuracy": 0.45,
+        "r_good": 0.392,
+        "p_value": 0.0008,
+        "cos_with_good_axis": 0.14,
+        "anchor_cosine": 0.374,
+        "status": "borderline"
+      },
+      "admirable": {
+        "accuracy": 0.357,
+        "orig_accuracy": 0.22,
+        "warmth_accuracy": 0.7,
+        "r_good": 0.77,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.192,
+        "anchor_cosine": 0.55,
+        "status": "warmth-biased"
+      },
+      "noble": {
+        "accuracy": 0.357,
+        "orig_accuracy": 0.24,
+        "warmth_accuracy": 0.65,
+        "r_good": 0.815,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.192,
+        "anchor_cosine": 0.387,
+        "status": "warmth-biased"
+      },
+      "generous": {
+        "accuracy": 0.429,
+        "orig_accuracy": 0.36,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.671,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.226,
+        "anchor_cosine": 0.637,
+        "status": "warmth-biased"
+      },
+      "worthy": {
+        "accuracy": 0.386,
+        "orig_accuracy": 0.22,
+        "warmth_accuracy": 0.8,
+        "r_good": 0.883,
+        "p_value": 0.0,
+        "cos_with_good_axis": 0.238,
+        "anchor_cosine": 0.698,
+        "status": "warmth-biased"
+      }
+    }
+  },
+  "cross_model_independence": {
+    "good": 0,
+    "careful": 3,
+    "honest": 0,
+    "kind": 0,
+    "wise": 1,
+    "helpful": 1,
+    "thorough": 3,
+    "fair": 1,
+    "responsible": 1,
+    "clear": 1,
+    "respectful": 0,
+    "deliberate": 3,
+    "attentive": 0,
+    "precise": 1,
+    "cautious": 3,
+    "methodical": 2,
+    "truthful": 0,
+    "transparent": 1,
+    "sincere": 1,
+    "forthright": 1,
+    "candid": 0,
+    "compassionate": 1,
+    "patient": 3,
+    "gentle": 0,
+    "encouraging": 0,
+    "supportive": 1,
+    "prudent": 2,
+    "vigilant": 0,
+    "scrupulous": 1,
+    "measured": 2,
+    "exemplary": 0,
+    "superb": 0,
+    "commendable": 0,
+    "outstanding": 0,
+    "gracious": 0,
+    "benevolent": 0,
+    "systematic": 1,
+    "rigorous": 3,
+    "stringent": 1,
+    "accurate": 0,
+    "logical": 0,
+    "analytical": 1,
+    "admirable": 0,
+    "noble": 1,
+    "generous": 0,
+    "worthy": 0
+  }
+}

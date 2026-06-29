@@ -1,0 +1,910 @@
+{
+  "per_model": {
+    "snowflake/snowflake-arctic-embed-m": {
+      "anchor_careful_alone": {
+        "orig": 0.52,
+        "warm": 0.4,
+        "comb": 0.4857,
+        "balanced": 0.4
+      },
+      "anchor_thorough_alone": {
+        "orig": 0.6,
+        "warm": 0.6,
+        "comb": 0.6,
+        "balanced": 0.6
+      },
+      "anchor_hard_alone": {
+        "orig": 0.58,
+        "warm": 0.65,
+        "comb": 0.6,
+        "balanced": 0.58
+      },
+      "anchor_kind_alone": {
+        "orig": 0.4,
+        "warm": 0.55,
+        "comb": 0.4429,
+        "balanced": 0.4
+      },
+      "anchor_honest_alone": {
+        "orig": 0.26,
+        "warm": 0.75,
+        "comb": 0.4,
+        "balanced": 0.26
+      },
+      "anchor_careful_thorough": {
+        "orig": 0.54,
+        "warm": 0.6,
+        "comb": 0.5571,
+        "balanced": 0.54
+      },
+      "anchor_careful_honest": {
+        "orig": 0.38,
+        "warm": 0.7,
+        "comb": 0.4714,
+        "balanced": 0.38
+      },
+      "anchor_careful_kind": {
+        "orig": 0.48,
+        "warm": 0.55,
+        "comb": 0.5,
+        "balanced": 0.48
+      },
+      "anchor_thorough_kind": {
+        "orig": 0.44,
+        "warm": 0.55,
+        "comb": 0.4714,
+        "balanced": 0.44
+      },
+      "anchor_hard_kind": {
+        "orig": 0.58,
+        "warm": 0.6,
+        "comb": 0.5857,
+        "balanced": 0.58
+      },
+      "anchor_careful_thorough_hard": {
+        "orig": 0.48,
+        "warm": 0.7,
+        "comb": 0.5429,
+        "balanced": 0.48
+      },
+      "anchor_careful_kind_honest": {
+        "orig": 0.36,
+        "warm": 0.75,
+        "comb": 0.4714,
+        "balanced": 0.36
+      },
+      "anchor_careful_and_kind": {
+        "orig": 0.36,
+        "warm": 0.7,
+        "comb": 0.4571,
+        "balanced": 0.36
+      },
+      "anchor_careful_and_thorough": {
+        "orig": 0.54,
+        "warm": 0.6,
+        "comb": 0.5571,
+        "balanced": 0.54
+      },
+      "anchor_firm_but_kind": {
+        "orig": 0.28,
+        "warm": 0.75,
+        "comb": 0.4143,
+        "balanced": 0.28
+      },
+      "anchor_honest_but_warm": {
+        "orig": 0.36,
+        "warm": 0.8,
+        "comb": 0.4857,
+        "balanced": 0.36
+      },
+      "anchor_careful_vs_text": {
+        "orig": 0.6,
+        "warm": 0.6,
+        "comb": 0.6,
+        "balanced": 0.6
+      },
+      "anchor_careful_vs_response": {
+        "orig": 0.58,
+        "warm": 0.45,
+        "comb": 0.5429,
+        "balanced": 0.45
+      },
+      "anchor_good_vs_text": {
+        "orig": 0.38,
+        "warm": 0.6,
+        "comb": 0.4429,
+        "balanced": 0.38
+      },
+      "anchor_quality_vs_text": {
+        "orig": 0.58,
+        "warm": 0.3,
+        "comb": 0.5,
+        "balanced": 0.3
+      },
+      "anchor_thorough_vs_text": {
+        "orig": 0.52,
+        "warm": 0.55,
+        "comb": 0.5286,
+        "balanced": 0.52
+      },
+      "anchor_excellent_vs_text": {
+        "orig": 0.36,
+        "warm": 0.65,
+        "comb": 0.4429,
+        "balanced": 0.36
+      },
+      "anchor_multi_pos_firmness": {
+        "orig": 0.58,
+        "warm": 0.4,
+        "comb": 0.5286,
+        "balanced": 0.4
+      },
+      "anchor_multi_pos_warmth": {
+        "orig": 0.5,
+        "warm": 0.25,
+        "comb": 0.4286,
+        "balanced": 0.25
+      },
+      "anchor_multi_pos_mixed": {
+        "orig": 0.52,
+        "warm": 0.6,
+        "comb": 0.5429,
+        "balanced": 0.52
+      },
+      "cospos_careful": {
+        "orig": 0.44,
+        "warm": 0.65,
+        "comb": 0.5,
+        "balanced": 0.44
+      },
+      "cospos_thorough": {
+        "orig": 0.42,
+        "warm": 0.65,
+        "comb": 0.4857,
+        "balanced": 0.42
+      },
+      "cospos_hard": {
+        "orig": 0.42,
+        "warm": 0.7,
+        "comb": 0.5,
+        "balanced": 0.42
+      },
+      "cospos_kind": {
+        "orig": 0.4,
+        "warm": 0.7,
+        "comb": 0.4857,
+        "balanced": 0.4
+      },
+      "cospos_honest": {
+        "orig": 0.4,
+        "warm": 0.7,
+        "comb": 0.4857,
+        "balanced": 0.4
+      },
+      "cospos_good": {
+        "orig": 0.4,
+        "warm": 0.7,
+        "comb": 0.4857,
+        "balanced": 0.4
+      },
+      "cospos_careful_thorough": {
+        "orig": 0.42,
+        "warm": 0.65,
+        "comb": 0.4857,
+        "balanced": 0.42
+      },
+      "cospos_careful_kind": {
+        "orig": 0.42,
+        "warm": 0.65,
+        "comb": 0.4857,
+        "balanced": 0.42
+      },
+      "cospos_hard_kind": {
+        "orig": 0.44,
+        "warm": 0.65,
+        "comb": 0.5,
+        "balanced": 0.44
+      },
+      "cospos_careful_thorough_hard": {
+        "orig": 0.42,
+        "warm": 0.65,
+        "comb": 0.4857,
+        "balanced": 0.42
+      },
+      "cospos_careful_kind_honest": {
+        "orig": 0.46,
+        "warm": 0.65,
+        "comb": 0.5143,
+        "balanced": 0.46
+      },
+      "cospos_quality": {
+        "orig": 0.42,
+        "warm": 0.65,
+        "comb": 0.4857,
+        "balanced": 0.42
+      },
+      "cospos_excellent": {
+        "orig": 0.4,
+        "warm": 0.65,
+        "comb": 0.4714,
+        "balanced": 0.4
+      },
+      "cospos_ideal": {
+        "orig": 0.4,
+        "warm": 0.7,
+        "comb": 0.4857,
+        "balanced": 0.4
+      },
+      "frame_standard_careful": {
+        "orig": 0.52,
+        "warm": 0.4,
+        "comb": 0.4857,
+        "balanced": 0.4
+      },
+      "frame_response_only_careful": {
+        "orig": 0.54,
+        "warm": 0.6,
+        "comb": 0.5571,
+        "balanced": 0.54
+      },
+      "frame_quality_query_careful": {
+        "orig": 0.54,
+        "warm": 0.7,
+        "comb": 0.5857,
+        "balanced": 0.54
+      },
+      "frame_careful_query_careful": {
+        "orig": 0.48,
+        "warm": 0.75,
+        "comb": 0.5571,
+        "balanced": 0.48
+      },
+      "frame_rate_quality_careful": {
+        "orig": 0.52,
+        "warm": 0.55,
+        "comb": 0.5286,
+        "balanced": 0.52
+      },
+      "frame_search_doc_careful": {
+        "orig": 0.54,
+        "warm": 0.45,
+        "comb": 0.5143,
+        "balanced": 0.45
+      },
+      "frame_standard_hard": {
+        "orig": 0.58,
+        "warm": 0.65,
+        "comb": 0.6
+      },
+      "frame_response_only_hard": {
+        "orig": 0.54,
+        "warm": 0.7,
+        "comb": 0.5857
+      },
+      "frame_quality_query_hard": {
+        "orig": 0.52,
+        "warm": 0.5,
+        "comb": 0.5143
+      },
+      "frame_careful_query_hard": {
+        "orig": 0.5,
+        "warm": 0.7,
+        "comb": 0.5571
+      },
+      "frame_rate_quality_hard": {
+        "orig": 0.56,
+        "warm": 0.6,
+        "comb": 0.5714
+      },
+      "frame_search_doc_hard": {
+        "orig": 0.56,
+        "warm": 0.6,
+        "comb": 0.5714
+      }
+    },
+    "BAAI/bge-m3": {
+      "anchor_careful_alone": {
+        "orig": 0.58,
+        "warm": 0.35,
+        "comb": 0.5143,
+        "balanced": 0.35
+      },
+      "anchor_thorough_alone": {
+        "orig": 0.42,
+        "warm": 0.8,
+        "comb": 0.5286,
+        "balanced": 0.42
+      },
+      "anchor_hard_alone": {
+        "orig": 0.64,
+        "warm": 0.55,
+        "comb": 0.6143,
+        "balanced": 0.55
+      },
+      "anchor_kind_alone": {
+        "orig": 0.44,
+        "warm": 0.75,
+        "comb": 0.5286,
+        "balanced": 0.44
+      },
+      "anchor_honest_alone": {
+        "orig": 0.16,
+        "warm": 0.65,
+        "comb": 0.3,
+        "balanced": 0.16
+      },
+      "anchor_careful_thorough": {
+        "orig": 0.32,
+        "warm": 0.7,
+        "comb": 0.4286,
+        "balanced": 0.32
+      },
+      "anchor_careful_honest": {
+        "orig": 0.32,
+        "warm": 0.65,
+        "comb": 0.4143,
+        "balanced": 0.32
+      },
+      "anchor_careful_kind": {
+        "orig": 0.54,
+        "warm": 0.55,
+        "comb": 0.5429,
+        "balanced": 0.54
+      },
+      "anchor_thorough_kind": {
+        "orig": 0.26,
+        "warm": 0.9,
+        "comb": 0.4429,
+        "balanced": 0.26
+      },
+      "anchor_hard_kind": {
+        "orig": 0.6,
+        "warm": 0.6,
+        "comb": 0.6,
+        "balanced": 0.6
+      },
+      "anchor_careful_thorough_hard": {
+        "orig": 0.34,
+        "warm": 0.8,
+        "comb": 0.4714,
+        "balanced": 0.34
+      },
+      "anchor_careful_kind_honest": {
+        "orig": 0.3,
+        "warm": 0.7,
+        "comb": 0.4143,
+        "balanced": 0.3
+      },
+      "anchor_careful_and_kind": {
+        "orig": 0.32,
+        "warm": 0.65,
+        "comb": 0.4143,
+        "balanced": 0.32
+      },
+      "anchor_careful_and_thorough": {
+        "orig": 0.26,
+        "warm": 0.8,
+        "comb": 0.4143,
+        "balanced": 0.26
+      },
+      "anchor_firm_but_kind": {
+        "orig": 0.16,
+        "warm": 0.8,
+        "comb": 0.3429,
+        "balanced": 0.16
+      },
+      "anchor_honest_but_warm": {
+        "orig": 0.12,
+        "warm": 0.7,
+        "comb": 0.2857,
+        "balanced": 0.12
+      },
+      "anchor_careful_vs_text": {
+        "orig": 0.68,
+        "warm": 0.25,
+        "comb": 0.5571,
+        "balanced": 0.25
+      },
+      "anchor_careful_vs_response": {
+        "orig": 0.7,
+        "warm": 0.35,
+        "comb": 0.6,
+        "balanced": 0.35
+      },
+      "anchor_good_vs_text": {
+        "orig": 0.34,
+        "warm": 0.65,
+        "comb": 0.4286,
+        "balanced": 0.34
+      },
+      "anchor_quality_vs_text": {
+        "orig": 0.46,
+        "warm": 0.2,
+        "comb": 0.3857,
+        "balanced": 0.2
+      },
+      "anchor_thorough_vs_text": {
+        "orig": 0.54,
+        "warm": 0.45,
+        "comb": 0.5143,
+        "balanced": 0.45
+      },
+      "anchor_excellent_vs_text": {
+        "orig": 0.14,
+        "warm": 0.6,
+        "comb": 0.2714,
+        "balanced": 0.14
+      },
+      "anchor_multi_pos_firmness": {
+        "orig": 0.4,
+        "warm": 0.6,
+        "comb": 0.4571,
+        "balanced": 0.4
+      },
+      "anchor_multi_pos_warmth": {
+        "orig": 0.3,
+        "warm": 0.7,
+        "comb": 0.4143,
+        "balanced": 0.3
+      },
+      "anchor_multi_pos_mixed": {
+        "orig": 0.56,
+        "warm": 0.7,
+        "comb": 0.6,
+        "balanced": 0.56
+      },
+      "cospos_careful": {
+        "orig": 0.66,
+        "warm": 0.5,
+        "comb": 0.6143,
+        "balanced": 0.5
+      },
+      "cospos_thorough": {
+        "orig": 0.56,
+        "warm": 0.75,
+        "comb": 0.6143,
+        "balanced": 0.56
+      },
+      "cospos_hard": {
+        "orig": 0.54,
+        "warm": 0.7,
+        "comb": 0.5857,
+        "balanced": 0.54
+      },
+      "cospos_kind": {
+        "orig": 0.58,
+        "warm": 0.8,
+        "comb": 0.6429,
+        "balanced": 0.58
+      },
+      "cospos_honest": {
+        "orig": 0.2,
+        "warm": 0.7,
+        "comb": 0.3429,
+        "balanced": 0.2
+      },
+      "cospos_good": {
+        "orig": 0.36,
+        "warm": 0.9,
+        "comb": 0.5143,
+        "balanced": 0.36
+      },
+      "cospos_careful_thorough": {
+        "orig": 0.42,
+        "warm": 0.85,
+        "comb": 0.5429,
+        "balanced": 0.42
+      },
+      "cospos_careful_kind": {
+        "orig": 0.6,
+        "warm": 0.75,
+        "comb": 0.6429,
+        "balanced": 0.6
+      },
+      "cospos_hard_kind": {
+        "orig": 0.52,
+        "warm": 0.7,
+        "comb": 0.5714,
+        "balanced": 0.52
+      },
+      "cospos_careful_thorough_hard": {
+        "orig": 0.42,
+        "warm": 0.8,
+        "comb": 0.5286,
+        "balanced": 0.42
+      },
+      "cospos_careful_kind_honest": {
+        "orig": 0.4,
+        "warm": 0.8,
+        "comb": 0.5143,
+        "balanced": 0.4
+      },
+      "cospos_quality": {
+        "orig": 0.44,
+        "warm": 0.6,
+        "comb": 0.4857,
+        "balanced": 0.44
+      },
+      "cospos_excellent": {
+        "orig": 0.2,
+        "warm": 0.8,
+        "comb": 0.3714,
+        "balanced": 0.2
+      },
+      "cospos_ideal": {
+        "orig": 0.32,
+        "warm": 0.65,
+        "comb": 0.4143,
+        "balanced": 0.32
+      },
+      "frame_standard_careful": {
+        "orig": 0.58,
+        "warm": 0.35,
+        "comb": 0.5143,
+        "balanced": 0.35
+      },
+      "frame_response_only_careful": {
+        "orig": 0.64,
+        "warm": 0.4,
+        "comb": 0.5714,
+        "balanced": 0.4
+      },
+      "frame_quality_query_careful": {
+        "orig": 0.54,
+        "warm": 0.45,
+        "comb": 0.5143,
+        "balanced": 0.45
+      },
+      "frame_careful_query_careful": {
+        "orig": 0.62,
+        "warm": 0.55,
+        "comb": 0.6,
+        "balanced": 0.55
+      },
+      "frame_rate_quality_careful": {
+        "orig": 0.6,
+        "warm": 0.35,
+        "comb": 0.5286,
+        "balanced": 0.35
+      },
+      "frame_search_doc_careful": {
+        "orig": 0.58,
+        "warm": 0.4,
+        "comb": 0.5286,
+        "balanced": 0.4
+      },
+      "frame_standard_hard": {
+        "orig": 0.64,
+        "warm": 0.55,
+        "comb": 0.6143
+      },
+      "frame_response_only_hard": {
+        "orig": 0.7,
+        "warm": 0.55,
+        "comb": 0.6571
+      },
+      "frame_quality_query_hard": {
+        "orig": 0.66,
+        "warm": 0.55,
+        "comb": 0.6286
+      },
+      "frame_careful_query_hard": {
+        "orig": 0.64,
+        "warm": 0.6,
+        "comb": 0.6286
+      },
+      "frame_rate_quality_hard": {
+        "orig": 0.6,
+        "warm": 0.55,
+        "comb": 0.5857
+      },
+      "frame_search_doc_hard": {
+        "orig": 0.68,
+        "warm": 0.75,
+        "comb": 0.7
+      }
+    },
+    "nomic-ai/nomic-embed-text-v1.5": {
+      "anchor_careful_alone": {
+        "orig": 0.62,
+        "warm": 0.7,
+        "comb": 0.6429,
+        "balanced": 0.62
+      },
+      "anchor_thorough_alone": {
+        "orig": 0.56,
+        "warm": 0.5,
+        "comb": 0.5429,
+        "balanced": 0.5
+      },
+      "anchor_hard_alone": {
+        "orig": 0.68,
+        "warm": 0.5,
+        "comb": 0.6286,
+        "balanced": 0.5
+      },
+      "anchor_kind_alone": {
+        "orig": 0.28,
+        "warm": 0.7,
+        "comb": 0.4,
+        "balanced": 0.28
+      },
+      "anchor_honest_alone": {
+        "orig": 0.3,
+        "warm": 0.6,
+        "comb": 0.3857,
+        "balanced": 0.3
+      },
+      "anchor_careful_thorough": {
+        "orig": 0.56,
+        "warm": 0.6,
+        "comb": 0.5714,
+        "balanced": 0.56
+      },
+      "anchor_careful_honest": {
+        "orig": 0.48,
+        "warm": 0.75,
+        "comb": 0.5571,
+        "balanced": 0.48
+      },
+      "anchor_careful_kind": {
+        "orig": 0.46,
+        "warm": 0.55,
+        "comb": 0.4857,
+        "balanced": 0.46
+      },
+      "anchor_thorough_kind": {
+        "orig": 0.38,
+        "warm": 0.55,
+        "comb": 0.4286,
+        "balanced": 0.38
+      },
+      "anchor_hard_kind": {
+        "orig": 0.48,
+        "warm": 0.6,
+        "comb": 0.5143,
+        "balanced": 0.48
+      },
+      "anchor_careful_thorough_hard": {
+        "orig": 0.54,
+        "warm": 0.7,
+        "comb": 0.5857,
+        "balanced": 0.54
+      },
+      "anchor_careful_kind_honest": {
+        "orig": 0.3,
+        "warm": 0.85,
+        "comb": 0.4571,
+        "balanced": 0.3
+      },
+      "anchor_careful_and_kind": {
+        "orig": 0.2,
+        "warm": 0.75,
+        "comb": 0.3571,
+        "balanced": 0.2
+      },
+      "anchor_careful_and_thorough": {
+        "orig": 0.38,
+        "warm": 0.7,
+        "comb": 0.4714,
+        "balanced": 0.38
+      },
+      "anchor_firm_but_kind": {
+        "orig": 0.18,
+        "warm": 0.9,
+        "comb": 0.3857,
+        "balanced": 0.18
+      },
+      "anchor_honest_but_warm": {
+        "orig": 0.28,
+        "warm": 0.85,
+        "comb": 0.4429,
+        "balanced": 0.28
+      },
+      "anchor_careful_vs_text": {
+        "orig": 0.68,
+        "warm": 0.4,
+        "comb": 0.6,
+        "balanced": 0.4
+      },
+      "anchor_careful_vs_response": {
+        "orig": 0.66,
+        "warm": 0.4,
+        "comb": 0.5857,
+        "balanced": 0.4
+      },
+      "anchor_good_vs_text": {
+        "orig": 0.36,
+        "warm": 0.55,
+        "comb": 0.4143,
+        "balanced": 0.36
+      },
+      "anchor_quality_vs_text": {
+        "orig": 0.54,
+        "warm": 0.25,
+        "comb": 0.4571,
+        "balanced": 0.25
+      },
+      "anchor_thorough_vs_text": {
+        "orig": 0.62,
+        "warm": 0.25,
+        "comb": 0.5143,
+        "balanced": 0.25
+      },
+      "anchor_excellent_vs_text": {
+        "orig": 0.38,
+        "warm": 0.25,
+        "comb": 0.3429,
+        "balanced": 0.25
+      },
+      "anchor_multi_pos_firmness": {
+        "orig": 0.38,
+        "warm": 0.85,
+        "comb": 0.5143,
+        "balanced": 0.38
+      },
+      "anchor_multi_pos_warmth": {
+        "orig": 0.48,
+        "warm": 0.55,
+        "comb": 0.5,
+        "balanced": 0.48
+      },
+      "anchor_multi_pos_mixed": {
+        "orig": 0.36,
+        "warm": 0.6,
+        "comb": 0.4286,
+        "balanced": 0.36
+      },
+      "cospos_careful": {
+        "orig": 0.6,
+        "warm": 0.55,
+        "comb": 0.5857,
+        "balanced": 0.55
+      },
+      "cospos_thorough": {
+        "orig": 0.5,
+        "warm": 0.55,
+        "comb": 0.5143,
+        "balanced": 0.5
+      },
+      "cospos_hard": {
+        "orig": 0.52,
+        "warm": 0.7,
+        "comb": 0.5714,
+        "balanced": 0.52
+      },
+      "cospos_kind": {
+        "orig": 0.34,
+        "warm": 0.85,
+        "comb": 0.4857,
+        "balanced": 0.34
+      },
+      "cospos_honest": {
+        "orig": 0.44,
+        "warm": 0.7,
+        "comb": 0.5143,
+        "balanced": 0.44
+      },
+      "cospos_good": {
+        "orig": 0.24,
+        "warm": 0.65,
+        "comb": 0.3571,
+        "balanced": 0.24
+      },
+      "cospos_careful_thorough": {
+        "orig": 0.54,
+        "warm": 0.5,
+        "comb": 0.5286,
+        "balanced": 0.5
+      },
+      "cospos_careful_kind": {
+        "orig": 0.5,
+        "warm": 0.55,
+        "comb": 0.5143,
+        "balanced": 0.5
+      },
+      "cospos_hard_kind": {
+        "orig": 0.6,
+        "warm": 0.7,
+        "comb": 0.6286,
+        "balanced": 0.6
+      },
+      "cospos_careful_thorough_hard": {
+        "orig": 0.52,
+        "warm": 0.55,
+        "comb": 0.5286,
+        "balanced": 0.52
+      },
+      "cospos_careful_kind_honest": {
+        "orig": 0.54,
+        "warm": 0.75,
+        "comb": 0.6,
+        "balanced": 0.54
+      },
+      "cospos_quality": {
+        "orig": 0.5,
+        "warm": 0.5,
+        "comb": 0.5,
+        "balanced": 0.5
+      },
+      "cospos_excellent": {
+        "orig": 0.32,
+        "warm": 0.6,
+        "comb": 0.4,
+        "balanced": 0.32
+      },
+      "cospos_ideal": {
+        "orig": 0.26,
+        "warm": 0.5,
+        "comb": 0.3286,
+        "balanced": 0.26
+      },
+      "frame_standard_careful": {
+        "orig": 0.62,
+        "warm": 0.7,
+        "comb": 0.6429,
+        "balanced": 0.62
+      },
+      "frame_response_only_careful": {
+        "orig": 0.56,
+        "warm": 0.65,
+        "comb": 0.5857,
+        "balanced": 0.56
+      },
+      "frame_quality_query_careful": {
+        "orig": 0.52,
+        "warm": 0.65,
+        "comb": 0.5571,
+        "balanced": 0.52
+      },
+      "frame_careful_query_careful": {
+        "orig": 0.54,
+        "warm": 0.75,
+        "comb": 0.6,
+        "balanced": 0.54
+      },
+      "frame_rate_quality_careful": {
+        "orig": 0.58,
+        "warm": 0.6,
+        "comb": 0.5857,
+        "balanced": 0.58
+      },
+      "frame_search_doc_careful": {
+        "orig": 0.68,
+        "warm": 0.65,
+        "comb": 0.6714,
+        "balanced": 0.65
+      },
+      "frame_standard_hard": {
+        "orig": 0.68,
+        "warm": 0.5,
+        "comb": 0.6286
+      },
+      "frame_response_only_hard": {
+        "orig": 0.66,
+        "warm": 0.4,
+        "comb": 0.5857
+      },
+      "frame_quality_query_hard": {
+        "orig": 0.66,
+        "warm": 0.45,
+        "comb": 0.6
+      },
+      "frame_careful_query_hard": {
+        "orig": 0.66,
+        "warm": 0.45,
+        "comb": 0.6
+      },
+      "frame_rate_quality_hard": {
+        "orig": 0.66,
+        "warm": 0.35,
+        "comb": 0.5714
+      },
+      "frame_search_doc_hard": {
+        "orig": 0.62,
+        "warm": 0.4,
+        "comb": 0.5571
+      }
+    }
+  }
+}

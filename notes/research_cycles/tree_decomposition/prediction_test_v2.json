@@ -1,0 +1,309 @@
+{
+  "experiment": "Second prediction test \u2014 discriminating from null",
+  "date": "2026-06-28",
+  "design": {
+    "hypothesis": "Warmth-independence requires task/quality distributional context, not personality-praise",
+    "n_independent_predictions": 6,
+    "n_biased_predictions": 4,
+    "null_score": 4,
+    "success_criterion": "Score significantly above 4/10 (null)"
+  },
+  "predictions": {
+    "independent": [
+      "systematic",
+      "rigorous",
+      "stringent",
+      "accurate",
+      "logical",
+      "analytical"
+    ],
+    "biased": [
+      "admirable",
+      "noble",
+      "generous",
+      "worthy"
+    ],
+    "criterion_independent": "|r_good| < 0.3 on >= 2/3 models",
+    "criterion_biased": "r_good > 0.4 on >= 2/3 models"
+  },
+  "results": {
+    "snowflake-arctic-embed-m": {
+      "systematic": {
+        "accuracy": 0.386,
+        "orig_accuracy": 0.38,
+        "warmth_accuracy": 0.4,
+        "r_good": 0.104,
+        "p_value": 0.3914,
+        "predicted": "independent",
+        "prediction_correct": true
+      },
+      "rigorous": {
+        "accuracy": 0.486,
+        "orig_accuracy": 0.46,
+        "warmth_accuracy": 0.55,
+        "r_good": 0.016,
+        "p_value": 0.8952,
+        "predicted": "independent",
+        "prediction_correct": true
+      },
+      "stringent": {
+        "accuracy": 0.414,
+        "orig_accuracy": 0.32,
+        "warmth_accuracy": 0.65,
+        "r_good": -0.167,
+        "p_value": 0.1675,
+        "predicted": "independent",
+        "prediction_correct": true
+      },
+      "accurate": {
+        "accuracy": 0.371,
+        "orig_accuracy": 0.22,
+        "warmth_accuracy": 0.75,
+        "r_good": 0.663,
+        "p_value": 0.0,
+        "predicted": "independent",
+        "prediction_correct": false
+      },
+      "logical": {
+        "accuracy": 0.457,
+        "orig_accuracy": 0.5,
+        "warmth_accuracy": 0.35,
+        "r_good": 0.377,
+        "p_value": 0.0013,
+        "predicted": "independent",
+        "prediction_correct": false
+      },
+      "analytical": {
+        "accuracy": 0.471,
+        "orig_accuracy": 0.62,
+        "warmth_accuracy": 0.1,
+        "r_good": -0.133,
+        "p_value": 0.272,
+        "predicted": "independent",
+        "prediction_correct": true
+      },
+      "admirable": {
+        "accuracy": 0.371,
+        "orig_accuracy": 0.28,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.461,
+        "p_value": 0.0001,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "noble": {
+        "accuracy": 0.429,
+        "orig_accuracy": 0.46,
+        "warmth_accuracy": 0.35,
+        "r_good": 0.18,
+        "p_value": 0.1352,
+        "predicted": "biased",
+        "prediction_correct": false
+      },
+      "generous": {
+        "accuracy": 0.514,
+        "orig_accuracy": 0.5,
+        "warmth_accuracy": 0.55,
+        "r_good": 0.321,
+        "p_value": 0.0068,
+        "predicted": "biased",
+        "prediction_correct": false
+      },
+      "worthy": {
+        "accuracy": 0.371,
+        "orig_accuracy": 0.22,
+        "warmth_accuracy": 0.75,
+        "r_good": 0.708,
+        "p_value": 0.0,
+        "predicted": "biased",
+        "prediction_correct": true
+      }
+    },
+    "bge-m3": {
+      "systematic": {
+        "accuracy": 0.286,
+        "orig_accuracy": 0.18,
+        "warmth_accuracy": 0.55,
+        "r_good": 0.654,
+        "p_value": 0.0,
+        "predicted": "independent",
+        "prediction_correct": false
+      },
+      "rigorous": {
+        "accuracy": 0.429,
+        "orig_accuracy": 0.34,
+        "warmth_accuracy": 0.65,
+        "r_good": -0.02,
+        "p_value": 0.8716,
+        "predicted": "independent",
+        "prediction_correct": true
+      },
+      "stringent": {
+        "accuracy": 0.529,
+        "orig_accuracy": 0.58,
+        "warmth_accuracy": 0.4,
+        "r_good": -0.36,
+        "p_value": 0.0022,
+        "predicted": "independent",
+        "prediction_correct": false
+      },
+      "accurate": {
+        "accuracy": 0.286,
+        "orig_accuracy": 0.16,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.863,
+        "p_value": 0.0,
+        "predicted": "independent",
+        "prediction_correct": false
+      },
+      "logical": {
+        "accuracy": 0.257,
+        "orig_accuracy": 0.12,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.849,
+        "p_value": 0.0,
+        "predicted": "independent",
+        "prediction_correct": false
+      },
+      "analytical": {
+        "accuracy": 0.343,
+        "orig_accuracy": 0.32,
+        "warmth_accuracy": 0.4,
+        "r_good": 0.319,
+        "p_value": 0.007,
+        "predicted": "independent",
+        "prediction_correct": false
+      },
+      "admirable": {
+        "accuracy": 0.371,
+        "orig_accuracy": 0.18,
+        "warmth_accuracy": 0.85,
+        "r_good": 0.925,
+        "p_value": 0.0,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "noble": {
+        "accuracy": 0.443,
+        "orig_accuracy": 0.34,
+        "warmth_accuracy": 0.7,
+        "r_good": 0.717,
+        "p_value": 0.0,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "generous": {
+        "accuracy": 0.414,
+        "orig_accuracy": 0.3,
+        "warmth_accuracy": 0.7,
+        "r_good": 0.842,
+        "p_value": 0.0,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "worthy": {
+        "accuracy": 0.329,
+        "orig_accuracy": 0.16,
+        "warmth_accuracy": 0.75,
+        "r_good": 0.908,
+        "p_value": 0.0,
+        "predicted": "biased",
+        "prediction_correct": true
+      }
+    },
+    "nomic-embed-text-v1.5": {
+      "systematic": {
+        "accuracy": 0.329,
+        "orig_accuracy": 0.34,
+        "warmth_accuracy": 0.3,
+        "r_good": 0.443,
+        "p_value": 0.0001,
+        "predicted": "independent",
+        "prediction_correct": false
+      },
+      "rigorous": {
+        "accuracy": 0.343,
+        "orig_accuracy": 0.36,
+        "warmth_accuracy": 0.3,
+        "r_good": 0.132,
+        "p_value": 0.2763,
+        "predicted": "independent",
+        "prediction_correct": true
+      },
+      "stringent": {
+        "accuracy": 0.571,
+        "orig_accuracy": 0.48,
+        "warmth_accuracy": 0.8,
+        "r_good": 0.419,
+        "p_value": 0.0003,
+        "predicted": "independent",
+        "prediction_correct": false
+      },
+      "accurate": {
+        "accuracy": 0.329,
+        "orig_accuracy": 0.14,
+        "warmth_accuracy": 0.8,
+        "r_good": 0.765,
+        "p_value": 0.0,
+        "predicted": "independent",
+        "prediction_correct": false
+      },
+      "logical": {
+        "accuracy": 0.257,
+        "orig_accuracy": 0.12,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.738,
+        "p_value": 0.0,
+        "predicted": "independent",
+        "prediction_correct": false
+      },
+      "analytical": {
+        "accuracy": 0.371,
+        "orig_accuracy": 0.34,
+        "warmth_accuracy": 0.45,
+        "r_good": 0.392,
+        "p_value": 0.0008,
+        "predicted": "independent",
+        "prediction_correct": false
+      },
+      "admirable": {
+        "accuracy": 0.357,
+        "orig_accuracy": 0.22,
+        "warmth_accuracy": 0.7,
+        "r_good": 0.77,
+        "p_value": 0.0,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "noble": {
+        "accuracy": 0.357,
+        "orig_accuracy": 0.24,
+        "warmth_accuracy": 0.65,
+        "r_good": 0.815,
+        "p_value": 0.0,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "generous": {
+        "accuracy": 0.429,
+        "orig_accuracy": 0.36,
+        "warmth_accuracy": 0.6,
+        "r_good": 0.671,
+        "p_value": 0.0,
+        "predicted": "biased",
+        "prediction_correct": true
+      },
+      "worthy": {
+        "accuracy": 0.386,
+        "orig_accuracy": 0.22,
+        "warmth_accuracy": 0.8,
+        "r_good": 0.883,
+        "p_value": 0.0,
+        "predicted": "biased",
+        "prediction_correct": true
+      }
+    }
+  },
+  "total_correct_on_2_of_3": 5,
+  "null_score": 4
+}

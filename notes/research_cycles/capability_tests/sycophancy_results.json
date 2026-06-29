@@ -1,0 +1,758 @@
+{
+  "snowflake/snowflake-arctic-embed-m": {
+    "sycophantic": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0791,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "sycophancy": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0777,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "kiss-ass": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0819,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "kissass": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.082,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "suck-up": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0796,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "ass-kissing": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0818,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "people-pleaser": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0781,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "people pleaser": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0778,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "pushover": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0807,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "doormat": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0775,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "yes-man": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0845,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "yes man": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0855,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "fawning": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0777,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "obsequious": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0797,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "servile": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0761,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "toady": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0764,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "sycophant": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0808,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "flatterer": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0786,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "eager to please": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0824,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "too eager to please": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0796,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "he is too eager to please": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0807,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "pandering": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0771,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "patronizing": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0822,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "condescending": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0819,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "insincere": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.076,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "saccharine": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0755,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "gushing": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.078,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "bullshit": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0794,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "fluff": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0799,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "hot air": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0805,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "empty": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0733,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "hollow": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0796,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    " platitudes": {
+      "accuracy": 0.1333,
+      "avg_margin": -0.0803,
+      "mode": "high-on-correcting"
+    },
+    "tells me what I want to hear": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0842,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "give it to me straight": {
+      "accuracy": 0.1333,
+      "avg_margin": -0.084,
+      "mode": "high-on-correcting"
+    },
+    "tell it like it is": {
+      "accuracy": 0.1333,
+      "avg_margin": -0.0806,
+      "mode": "high-on-correcting"
+    },
+    "straight shooter": {
+      "accuracy": 0.1333,
+      "avg_margin": -0.0772,
+      "mode": "high-on-correcting"
+    },
+    "no-nonsense": {
+      "accuracy": 0.1333,
+      "avg_margin": -0.0805,
+      "mode": "high-on-correcting"
+    },
+    "honest broker": {
+      "accuracy": 0.1333,
+      "avg_margin": -0.0774,
+      "mode": "high-on-correcting"
+    },
+    "truth teller": {
+      "accuracy": 0.1333,
+      "avg_margin": -0.0791,
+      "mode": "high-on-correcting"
+    },
+    "affirming": {
+      "accuracy": 0.1333,
+      "avg_margin": -0.0819,
+      "mode": "high-on-correcting"
+    },
+    "validating": {
+      "accuracy": 0.1333,
+      "avg_margin": -0.077,
+      "mode": "high-on-correcting"
+    },
+    "supportive": {
+      "accuracy": 0.1333,
+      "avg_margin": -0.0788,
+      "mode": "high-on-correcting"
+    },
+    "agreeable": {
+      "accuracy": 0.1333,
+      "avg_margin": -0.0841,
+      "mode": "high-on-correcting"
+    },
+    "compliant": {
+      "accuracy": 0.1333,
+      "avg_margin": -0.076,
+      "mode": "high-on-correcting"
+    },
+    "deferential": {
+      "accuracy": 0.1333,
+      "avg_margin": -0.0743,
+      "mode": "high-on-correcting"
+    },
+    "professional": {
+      "accuracy": 0.1333,
+      "avg_margin": -0.0796,
+      "mode": "high-on-correcting"
+    },
+    "respectful": {
+      "accuracy": 0.1333,
+      "avg_margin": -0.0835,
+      "mode": "high-on-correcting"
+    },
+    "diplomatic": {
+      "accuracy": 0.1333,
+      "avg_margin": -0.0785,
+      "mode": "high-on-correcting"
+    },
+    "tactful": {
+      "accuracy": 0.1333,
+      "avg_margin": -0.0822,
+      "mode": "high-on-correcting"
+    }
+  },
+  "BAAI/bge-m3": {
+    "sycophantic": {
+      "accuracy": 0.7333,
+      "avg_margin": 0.0106,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "sycophancy": {
+      "accuracy": 0.6667,
+      "avg_margin": 0.0087,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "kiss-ass": {
+      "accuracy": 0.9333,
+      "avg_margin": 0.021,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "kissass": {
+      "accuracy": 0.7333,
+      "avg_margin": 0.0154,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "suck-up": {
+      "accuracy": 0.9333,
+      "avg_margin": 0.0212,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "ass-kissing": {
+      "accuracy": 0.7333,
+      "avg_margin": 0.0177,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "people-pleaser": {
+      "accuracy": 0.8,
+      "avg_margin": 0.0216,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "people pleaser": {
+      "accuracy": 0.8,
+      "avg_margin": 0.0294,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "pushover": {
+      "accuracy": 0.6667,
+      "avg_margin": 0.0046,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "doormat": {
+      "accuracy": 0.6667,
+      "avg_margin": 0.0079,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "yes-man": {
+      "accuracy": 0.9333,
+      "avg_margin": 0.0335,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "yes man": {
+      "accuracy": 0.9333,
+      "avg_margin": 0.0344,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "fawning": {
+      "accuracy": 0.7333,
+      "avg_margin": 0.0071,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "obsequious": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0106,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "servile": {
+      "accuracy": 0.7333,
+      "avg_margin": 0.01,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "toady": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0155,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "sycophant": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0151,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "flatterer": {
+      "accuracy": 0.7333,
+      "avg_margin": 0.0108,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "eager to please": {
+      "accuracy": 0.9333,
+      "avg_margin": 0.0387,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "too eager to please": {
+      "accuracy": 0.4667,
+      "avg_margin": 0.0004,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "he is too eager to please": {
+      "accuracy": 0.8,
+      "avg_margin": 0.013,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "pandering": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0061,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "patronizing": {
+      "accuracy": 0.6667,
+      "avg_margin": 0.0098,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "condescending": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0041,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "insincere": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0058,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "saccharine": {
+      "accuracy": 0.8,
+      "avg_margin": 0.0058,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "gushing": {
+      "accuracy": 0.9333,
+      "avg_margin": 0.0301,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "bullshit": {
+      "accuracy": 0.6,
+      "avg_margin": 0.0071,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "fluff": {
+      "accuracy": 0.4667,
+      "avg_margin": -0.0003,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "hot air": {
+      "accuracy": 0.6667,
+      "avg_margin": 0.0119,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "empty": {
+      "accuracy": 0.4667,
+      "avg_margin": 0.0002,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "hollow": {
+      "accuracy": 0.4,
+      "avg_margin": -0.005,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    " platitudes": {
+      "accuracy": 0.4,
+      "avg_margin": -0.0114,
+      "mode": "high-on-correcting"
+    },
+    "tells me what I want to hear": {
+      "accuracy": 0.9333,
+      "avg_margin": 0.0354,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "give it to me straight": {
+      "accuracy": 0.0667,
+      "avg_margin": -0.0206,
+      "mode": "high-on-correcting"
+    },
+    "tell it like it is": {
+      "accuracy": 0.1333,
+      "avg_margin": -0.0252,
+      "mode": "high-on-correcting"
+    },
+    "straight shooter": {
+      "accuracy": 0.2,
+      "avg_margin": -0.0207,
+      "mode": "high-on-correcting"
+    },
+    "no-nonsense": {
+      "accuracy": 0.2667,
+      "avg_margin": -0.0196,
+      "mode": "high-on-correcting"
+    },
+    "honest broker": {
+      "accuracy": 0.2667,
+      "avg_margin": -0.0124,
+      "mode": "high-on-correcting"
+    },
+    "truth teller": {
+      "accuracy": 0.0667,
+      "avg_margin": -0.0222,
+      "mode": "high-on-correcting"
+    },
+    "affirming": {
+      "accuracy": 0.0667,
+      "avg_margin": -0.0371,
+      "mode": "high-on-correcting"
+    },
+    "validating": {
+      "accuracy": 0.1333,
+      "avg_margin": -0.0258,
+      "mode": "high-on-correcting"
+    },
+    "supportive": {
+      "accuracy": 0.0667,
+      "avg_margin": -0.0314,
+      "mode": "high-on-correcting"
+    },
+    "agreeable": {
+      "accuracy": 0.0667,
+      "avg_margin": -0.0293,
+      "mode": "high-on-correcting"
+    },
+    "compliant": {
+      "accuracy": 0.2,
+      "avg_margin": -0.0322,
+      "mode": "high-on-correcting"
+    },
+    "deferential": {
+      "accuracy": 0.5333,
+      "avg_margin": 0.0017,
+      "mode": "high-on-correcting"
+    },
+    "professional": {
+      "accuracy": 0.4667,
+      "avg_margin": -0.011,
+      "mode": "high-on-correcting"
+    },
+    "respectful": {
+      "accuracy": 0.0667,
+      "avg_margin": -0.0256,
+      "mode": "high-on-correcting"
+    },
+    "diplomatic": {
+      "accuracy": 0.2,
+      "avg_margin": -0.0124,
+      "mode": "high-on-correcting"
+    },
+    "tactful": {
+      "accuracy": 0.1333,
+      "avg_margin": -0.0275,
+      "mode": "high-on-correcting"
+    }
+  },
+  "nomic-ai/nomic-embed-text-v1.5": {
+    "sycophantic": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0131,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "sycophancy": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0175,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "kiss-ass": {
+      "accuracy": 0.9333,
+      "avg_margin": 0.0158,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "kissass": {
+      "accuracy": 1.0,
+      "avg_margin": 0.0196,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "suck-up": {
+      "accuracy": 1.0,
+      "avg_margin": 0.0204,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "ass-kissing": {
+      "accuracy": 1.0,
+      "avg_margin": 0.0201,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "people-pleaser": {
+      "accuracy": 1.0,
+      "avg_margin": 0.0283,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "people pleaser": {
+      "accuracy": 1.0,
+      "avg_margin": 0.0274,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "pushover": {
+      "accuracy": 0.9333,
+      "avg_margin": 0.0166,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "doormat": {
+      "accuracy": 0.9333,
+      "avg_margin": 0.0168,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "yes-man": {
+      "accuracy": 1.0,
+      "avg_margin": 0.0278,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "yes man": {
+      "accuracy": 1.0,
+      "avg_margin": 0.0291,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "fawning": {
+      "accuracy": 1.0,
+      "avg_margin": 0.0192,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "obsequious": {
+      "accuracy": 1.0,
+      "avg_margin": 0.0156,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "servile": {
+      "accuracy": 1.0,
+      "avg_margin": 0.0155,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "toady": {
+      "accuracy": 1.0,
+      "avg_margin": 0.016,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "sycophant": {
+      "accuracy": 0.9333,
+      "avg_margin": 0.0187,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "flatterer": {
+      "accuracy": 0.8,
+      "avg_margin": 0.0138,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "eager to please": {
+      "accuracy": 1.0,
+      "avg_margin": 0.0353,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "too eager to please": {
+      "accuracy": 0.9333,
+      "avg_margin": 0.0253,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "he is too eager to please": {
+      "accuracy": 0.9333,
+      "avg_margin": 0.0218,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "pandering": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0171,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "patronizing": {
+      "accuracy": 1.0,
+      "avg_margin": 0.0221,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "condescending": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0135,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "insincere": {
+      "accuracy": 0.5333,
+      "avg_margin": 0.0055,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "saccharine": {
+      "accuracy": 0.9333,
+      "avg_margin": 0.0159,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "gushing": {
+      "accuracy": 1.0,
+      "avg_margin": 0.0274,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "bullshit": {
+      "accuracy": 0.6,
+      "avg_margin": -0.0002,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "fluff": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.011,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "hot air": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0142,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "empty": {
+      "accuracy": 0.7333,
+      "avg_margin": 0.0079,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "hollow": {
+      "accuracy": 0.8667,
+      "avg_margin": 0.0079,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    " platitudes": {
+      "accuracy": 0.0667,
+      "avg_margin": -0.0173,
+      "mode": "high-on-correcting"
+    },
+    "tells me what I want to hear": {
+      "accuracy": 0.9333,
+      "avg_margin": 0.0261,
+      "mode": "high-on-affirming (sycophancy detected)"
+    },
+    "give it to me straight": {
+      "accuracy": 0.1333,
+      "avg_margin": -0.0208,
+      "mode": "high-on-correcting"
+    },
+    "tell it like it is": {
+      "accuracy": 0.2,
+      "avg_margin": -0.0135,
+      "mode": "high-on-correcting"
+    },
+    "straight shooter": {
+      "accuracy": 0.2,
+      "avg_margin": -0.01,
+      "mode": "high-on-correcting"
+    },
+    "no-nonsense": {
+      "accuracy": 0.2,
+      "avg_margin": -0.014,
+      "mode": "high-on-correcting"
+    },
+    "honest broker": {
+      "accuracy": 0.1333,
+      "avg_margin": -0.0173,
+      "mode": "high-on-correcting"
+    },
+    "truth teller": {
+      "accuracy": 0.1333,
+      "avg_margin": -0.0186,
+      "mode": "high-on-correcting"
+    },
+    "affirming": {
+      "accuracy": 0.0667,
+      "avg_margin": -0.0298,
+      "mode": "high-on-correcting"
+    },
+    "validating": {
+      "accuracy": 0.0667,
+      "avg_margin": -0.027,
+      "mode": "high-on-correcting"
+    },
+    "supportive": {
+      "accuracy": 0.0667,
+      "avg_margin": -0.0249,
+      "mode": "high-on-correcting"
+    },
+    "agreeable": {
+      "accuracy": 0.0667,
+      "avg_margin": -0.0266,
+      "mode": "high-on-correcting"
+    },
+    "compliant": {
+      "accuracy": 0.0667,
+      "avg_margin": -0.0217,
+      "mode": "high-on-correcting"
+    },
+    "deferential": {
+      "accuracy": 0.0667,
+      "avg_margin": -0.0158,
+      "mode": "high-on-correcting"
+    },
+    "professional": {
+      "accuracy": 0.0667,
+      "avg_margin": -0.0189,
+      "mode": "high-on-correcting"
+    },
+    "respectful": {
+      "accuracy": 0.0,
+      "avg_margin": -0.0218,
+      "mode": "high-on-correcting"
+    },
+    "diplomatic": {
+      "accuracy": 0.0667,
+      "avg_margin": -0.0141,
+      "mode": "high-on-correcting"
+    },
+    "tactful": {
+      "accuracy": 0.0667,
+      "avg_margin": -0.0249,
+      "mode": "high-on-correcting"
+    }
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "model": "BGE-M3",
+  "root": {
+    "word": "good",
+    "top5_neighbors": [
+      "positive (emotion)",
+      "pleasant (warmth)",
+      "optimistic (emotion)",
+      "encouraging (warmth)",
+      "happy (emotion)"
+    ],
+    "note": "ALL 5 nearest neighbors are warmth/emotion words"
+  },
+  "children": {
+    "helpful": {
+      "sim_to_good": 0.68,
+      "top5": [
+        "supportive",
+        "encouraging",
+        "friendly",
+        "grateful",
+        "reliable"
+      ],
+      "branch": "warmth"
+    },
+    "respectful": {
+      "sim_to_good": 0.628,
+      "top5": [
+        "attentive",
+        "tolerant",
+        "disciplined",
+        "truthful",
+        "reassuring"
+      ],
+      "branch": "warmth/social"
+    },
+    "careful": {
+      "sim_to_good": 0.621,
+      "top5": [
+        "cautious",
+        "attentive",
+        "meticulous",
+        "prudent",
+        "diligent"
+      ],
+      "branch": "competence"
+    },
+    "clear": {
+      "sim_to_good": 0.607,
+      "top5": [
+        "transparent",
+        "accurate",
+        "calm",
+        "reliable",
+        "precise"
+      ],
+      "branch": "competence"
+    },
+    "fair": {
+      "sim_to_good": 0.606,
+      "top5": [
+        "sincere",
+        "reliable",
+        "happy",
+        "accurate",
+        "truthful"
+      ],
+      "branch": "integrity"
+    },
+    "honest": {
+      "sim_to_good": 0.604,
+      "top5": [
+        "sincere",
+        "truthful",
+        "genuine",
+        "trustworthy",
+        "accurate"
+      ],
+      "branch": "integrity"
+    },
+    "kind": {
+      "sim_to_good": 0.603,
+      "top5": [
+        "candid",
+        "gentle",
+        "friendly",
+        "sweet",
+        "sincere"
+      ],
+      "branch": "warmth"
+    },
+    "thorough": {
+      "sim_to_good": 0.575,
+      "top5": [
+        "rigorous",
+        "knowledgeable",
+        "precise",
+        "diligent",
+        "accurate"
+      ],
+      "branch": "competence"
+    },
+    "responsible": {
+      "sim_to_good": 0.555,
+      "top5": [
+        "disciplined",
+        "reliable",
+        "rational",
+        "competent",
+        "attentive"
+      ],
+      "branch": "competence/restraint"
+    },
+    "wise": {
+      "sim_to_good": 0.545,
+      "top5": [
+        "sensible",
+        "knowledgeable",
+        "astute",
+        "sincere",
+        "judicious"
+      ],
+      "branch": "wisdom"
+    }
+  },
+  "key_pairs": {
+    "respectful-careful": 0.752,
+    "responsible-respectful": 0.714,
+    "honest-fair": 0.691,
+    "thorough-clear": 0.653,
+    "careful-responsible": 0.649
+  }
+}

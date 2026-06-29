@@ -1,0 +1,124 @@
+{
+  "results": {
+    "careful": {
+      "bipolar": {
+        "orig": 0.72,
+        "warm": 0.8,
+        "comb": 0.7429
+      },
+      "cospos": {
+        "orig": 0.58,
+        "warm": 0.6,
+        "comb": 0.5857
+      }
+    },
+    "thorough": {
+      "bipolar": {
+        "orig": 0.52,
+        "warm": 0.85,
+        "comb": 0.6143
+      },
+      "cospos": {
+        "orig": 0.2,
+        "warm": 0.45,
+        "comb": 0.2714
+      }
+    },
+    "hard": {
+      "bipolar": {
+        "orig": 0.42,
+        "warm": 0.3,
+        "comb": 0.3857
+      },
+      "cospos": {
+        "orig": 0.3,
+        "warm": 0.4,
+        "comb": 0.3286
+      }
+    },
+    "kind": {
+      "bipolar": {
+        "orig": 0.34,
+        "warm": 0.95,
+        "comb": 0.5143
+      },
+      "cospos": {
+        "orig": 0.32,
+        "warm": 0.95,
+        "comb": 0.5
+      }
+    },
+    "honest": {
+      "bipolar": {
+        "orig": 0.3,
+        "warm": 0.95,
+        "comb": 0.4857
+      },
+      "cospos": {
+        "orig": 0.36,
+        "warm": 0.8,
+        "comb": 0.4857
+      }
+    },
+    "good": {
+      "bipolar": {
+        "orig": 0.26,
+        "warm": 0.95,
+        "comb": 0.4571
+      },
+      "cospos": {
+        "orig": 0.24,
+        "warm": 0.9,
+        "comb": 0.4286
+      }
+    },
+    "bold": {
+      "bipolar": {
+        "orig": 0.28,
+        "warm": 0.9,
+        "comb": 0.4571
+      },
+      "cospos": {
+        "orig": 0.2,
+        "warm": 0.75,
+        "comb": 0.3571
+      }
+    },
+    "helpful": {
+      "bipolar": {
+        "orig": 0.2,
+        "warm": 0.95,
+        "comb": 0.4143
+      },
+      "cospos": {
+        "orig": 0.38,
+        "warm": 0.85,
+        "comb": 0.5143
+      }
+    },
+    "active": {
+      "bipolar": {
+        "orig": 0.34,
+        "warm": 0.25,
+        "comb": 0.3143
+      },
+      "cospos": {
+        "orig": 0.28,
+        "warm": 0.6,
+        "comb": 0.3714
+      }
+    },
+    "fair": {
+      "bipolar": {
+        "orig": 0.32,
+        "warm": 0.9,
+        "comb": 0.4857
+      },
+      "cospos": {
+        "orig": 0.4,
+        "warm": 0.7,
+        "comb": 0.4857
+      }
+    }
+  }
+}

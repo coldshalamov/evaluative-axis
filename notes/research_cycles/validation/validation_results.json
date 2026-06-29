@@ -1,0 +1,826 @@
+{
+  "per_model": {
+    "snowflake/snowflake-arctic-embed-m": {
+      "careful": {
+        "main_battery": {
+          "bipolar_combined": 0.4857,
+          "cospos_combined": 0.5,
+          "cospos_advantage": 0.0143,
+          "bipolar_orig": 0.52,
+          "bipolar_warm": 0.4
+        },
+        "expansion_oos": {
+          "bipolar": 0.8,
+          "cospos": 0.85
+        },
+        "kfold_5": {
+          "mean": 0.4857,
+          "std": 0.1591,
+          "folds": [
+            0.6429,
+            0.4286,
+            0.6429,
+            0.2143,
+            0.5
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.9057
+        }
+      },
+      "honest": {
+        "main_battery": {
+          "bipolar_combined": 0.4,
+          "cospos_combined": 0.4857,
+          "cospos_advantage": 0.0857,
+          "bipolar_orig": 0.26,
+          "bipolar_warm": 0.75
+        },
+        "expansion_oos": {
+          "bipolar": 0.55,
+          "cospos": 0.85
+        },
+        "kfold_5": {
+          "mean": 0.4,
+          "std": 0.2807,
+          "folds": [
+            0.2857,
+            0.3571,
+            0.8571,
+            0.5,
+            0.0
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.9544
+        }
+      },
+      "kind": {
+        "main_battery": {
+          "bipolar_combined": 0.4429,
+          "cospos_combined": 0.4857,
+          "cospos_advantage": 0.0429,
+          "bipolar_orig": 0.4,
+          "bipolar_warm": 0.55
+        },
+        "expansion_oos": {
+          "bipolar": 0.4,
+          "cospos": 0.75
+        },
+        "kfold_5": {
+          "mean": 0.4429,
+          "std": 0.1457,
+          "folds": [
+            0.4286,
+            0.4286,
+            0.7143,
+            0.3571,
+            0.2857
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.9472
+        }
+      },
+      "thorough": {
+        "main_battery": {
+          "bipolar_combined": 0.6,
+          "cospos_combined": 0.4857,
+          "cospos_advantage": -0.1143,
+          "bipolar_orig": 0.6,
+          "bipolar_warm": 0.6
+        },
+        "expansion_oos": {
+          "bipolar": 0.4,
+          "cospos": 0.75
+        },
+        "kfold_5": {
+          "mean": 0.6,
+          "std": 0.0571,
+          "folds": [
+            0.5714,
+            0.7143,
+            0.5714,
+            0.5714,
+            0.5714
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.9323
+        }
+      },
+      "good": {
+        "main_battery": {
+          "bipolar_combined": 0.5143,
+          "cospos_combined": 0.4857,
+          "cospos_advantage": -0.0286,
+          "bipolar_orig": 0.48,
+          "bipolar_warm": 0.6
+        },
+        "expansion_oos": {
+          "bipolar": 0.3,
+          "cospos": 0.8
+        },
+        "kfold_5": {
+          "mean": 0.5143,
+          "std": 0.0948,
+          "folds": [
+            0.5714,
+            0.5,
+            0.6429,
+            0.3571,
+            0.5
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.9645
+        }
+      },
+      "hard": {
+        "main_battery": {
+          "bipolar_combined": 0.6,
+          "cospos_combined": 0.5,
+          "cospos_advantage": -0.1,
+          "bipolar_orig": 0.58,
+          "bipolar_warm": 0.65
+        },
+        "expansion_oos": {
+          "bipolar": 0.75,
+          "cospos": 0.8
+        },
+        "kfold_5": {
+          "mean": 0.6,
+          "std": 0.1539,
+          "folds": [
+            0.5,
+            0.7143,
+            0.3571,
+            0.6429,
+            0.7857
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.9376
+        }
+      },
+      "helpful": {
+        "main_battery": {
+          "bipolar_combined": 0.5429,
+          "cospos_combined": 0.5143,
+          "cospos_advantage": -0.0286,
+          "bipolar_orig": 0.58,
+          "bipolar_warm": 0.45
+        },
+        "expansion_oos": {
+          "bipolar": 0.5,
+          "cospos": 0.8
+        },
+        "kfold_5": {
+          "mean": 0.5429,
+          "std": 0.1325,
+          "folds": [
+            0.7143,
+            0.4286,
+            0.6429,
+            0.3571,
+            0.5714
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.934
+        }
+      },
+      "bold": {
+        "main_battery": {
+          "bipolar_combined": 0.4857,
+          "cospos_combined": 0.5143,
+          "cospos_advantage": 0.0286,
+          "bipolar_orig": 0.56,
+          "bipolar_warm": 0.3
+        },
+        "expansion_oos": {
+          "bipolar": 0.2,
+          "cospos": 0.7
+        },
+        "kfold_5": {
+          "mean": 0.4857,
+          "std": 0.0535,
+          "folds": [
+            0.4286,
+            0.5,
+            0.5,
+            0.4286,
+            0.5714
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.8886
+        }
+      },
+      "active": {
+        "main_battery": {
+          "bipolar_combined": 0.5714,
+          "cospos_combined": 0.4714,
+          "cospos_advantage": -0.1,
+          "bipolar_orig": 0.6,
+          "bipolar_warm": 0.5
+        },
+        "expansion_oos": {
+          "bipolar": 0.85,
+          "cospos": 0.8
+        },
+        "kfold_5": {
+          "mean": 0.5714,
+          "std": 0.207,
+          "folds": [
+            0.7857,
+            0.7143,
+            0.3571,
+            0.2857,
+            0.7143
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.9527
+        }
+      },
+      "fair": {
+        "main_battery": {
+          "bipolar_combined": 0.4571,
+          "cospos_combined": 0.4857,
+          "cospos_advantage": 0.0286,
+          "bipolar_orig": 0.42,
+          "bipolar_warm": 0.55
+        },
+        "expansion_oos": {
+          "bipolar": 0.65,
+          "cospos": 0.8
+        },
+        "kfold_5": {
+          "mean": 0.4571,
+          "std": 0.1161,
+          "folds": [
+            0.2857,
+            0.5714,
+            0.5,
+            0.3571,
+            0.5714
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.9444
+        }
+      },
+      "geometry_correlation": -0.1138,
+      "prediction_correlation": 0.2038
+    },
+    "BAAI/bge-m3": {
+      "careful": {
+        "main_battery": {
+          "bipolar_combined": 0.5143,
+          "cospos_combined": 0.6143,
+          "cospos_advantage": 0.1,
+          "bipolar_orig": 0.58,
+          "bipolar_warm": 0.35
+        },
+        "expansion_oos": {
+          "bipolar": 0.6,
+          "cospos": 0.8
+        },
+        "kfold_5": {
+          "mean": 0.5143,
+          "std": 0.1714,
+          "folds": [
+            0.6429,
+            0.6429,
+            0.6429,
+            0.2143,
+            0.4286
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.5052
+        }
+      },
+      "honest": {
+        "main_battery": {
+          "bipolar_combined": 0.3,
+          "cospos_combined": 0.3429,
+          "cospos_advantage": 0.0429,
+          "bipolar_orig": 0.16,
+          "bipolar_warm": 0.65
+        },
+        "expansion_oos": {
+          "bipolar": 0.45,
+          "cospos": 0.6
+        },
+        "kfold_5": {
+          "mean": 0.3,
+          "std": 0.1457,
+          "folds": [
+            0.2143,
+            0.3571,
+            0.5,
+            0.3571,
+            0.0714
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.6895
+        }
+      },
+      "kind": {
+        "main_battery": {
+          "bipolar_combined": 0.5286,
+          "cospos_combined": 0.6429,
+          "cospos_advantage": 0.1143,
+          "bipolar_orig": 0.44,
+          "bipolar_warm": 0.75
+        },
+        "expansion_oos": {
+          "bipolar": 0.35,
+          "cospos": 0.7
+        },
+        "kfold_5": {
+          "mean": 0.5286,
+          "std": 0.205,
+          "folds": [
+            0.6429,
+            0.2857,
+            0.8571,
+            0.3571,
+            0.5
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.4999
+        }
+      },
+      "thorough": {
+        "main_battery": {
+          "bipolar_combined": 0.5286,
+          "cospos_combined": 0.6143,
+          "cospos_advantage": 0.0857,
+          "bipolar_orig": 0.42,
+          "bipolar_warm": 0.8
+        },
+        "expansion_oos": {
+          "bipolar": 0.65,
+          "cospos": 0.75
+        },
+        "kfold_5": {
+          "mean": 0.5286,
+          "std": 0.1726,
+          "folds": [
+            0.2857,
+            0.5,
+            0.6429,
+            0.7857,
+            0.4286
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.4564
+        }
+      },
+      "good": {
+        "main_battery": {
+          "bipolar_combined": 0.3571,
+          "cospos_combined": 0.5143,
+          "cospos_advantage": 0.1571,
+          "bipolar_orig": 0.16,
+          "bipolar_warm": 0.85
+        },
+        "expansion_oos": {
+          "bipolar": 0.5,
+          "cospos": 0.6
+        },
+        "kfold_5": {
+          "mean": 0.3571,
+          "std": 0.1429,
+          "folds": [
+            0.2857,
+            0.3571,
+            0.5714,
+            0.4286,
+            0.1429
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.7372
+        }
+      },
+      "hard": {
+        "main_battery": {
+          "bipolar_combined": 0.6143,
+          "cospos_combined": 0.5857,
+          "cospos_advantage": -0.0286,
+          "bipolar_orig": 0.64,
+          "bipolar_warm": 0.55
+        },
+        "expansion_oos": {
+          "bipolar": 0.4,
+          "cospos": 0.55
+        },
+        "kfold_5": {
+          "mean": 0.6143,
+          "std": 0.0728,
+          "folds": [
+            0.5714,
+            0.7143,
+            0.5,
+            0.6429,
+            0.6429
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.6513
+        }
+      },
+      "helpful": {
+        "main_battery": {
+          "bipolar_combined": 0.3857,
+          "cospos_combined": 0.5286,
+          "cospos_advantage": 0.1429,
+          "bipolar_orig": 0.22,
+          "bipolar_warm": 0.8
+        },
+        "expansion_oos": {
+          "bipolar": 0.45,
+          "cospos": 0.6
+        },
+        "kfold_5": {
+          "mean": 0.3857,
+          "std": 0.1325,
+          "folds": [
+            0.2857,
+            0.3571,
+            0.6429,
+            0.3571,
+            0.2857
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.705
+        }
+      },
+      "bold": {
+        "main_battery": {
+          "bipolar_combined": 0.6,
+          "cospos_combined": 0.4571,
+          "cospos_advantage": -0.1429,
+          "bipolar_orig": 0.58,
+          "bipolar_warm": 0.65
+        },
+        "expansion_oos": {
+          "bipolar": 0.3,
+          "cospos": 0.7
+        },
+        "kfold_5": {
+          "mean": 0.6,
+          "std": 0.035,
+          "folds": [
+            0.5714,
+            0.6429,
+            0.6429,
+            0.5714,
+            0.5714
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.5597
+        }
+      },
+      "active": {
+        "main_battery": {
+          "bipolar_combined": 0.2714,
+          "cospos_combined": 0.4714,
+          "cospos_advantage": 0.2,
+          "bipolar_orig": 0.18,
+          "bipolar_warm": 0.5
+        },
+        "expansion_oos": {
+          "bipolar": 0.45,
+          "cospos": 0.75
+        },
+        "kfold_5": {
+          "mean": 0.2714,
+          "std": 0.0535,
+          "folds": [
+            0.2143,
+            0.3571,
+            0.2857,
+            0.2857,
+            0.2143
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.674
+        }
+      },
+      "fair": {
+        "main_battery": {
+          "bipolar_combined": 0.3143,
+          "cospos_combined": 0.5571,
+          "cospos_advantage": 0.2429,
+          "bipolar_orig": 0.16,
+          "bipolar_warm": 0.7
+        },
+        "expansion_oos": {
+          "bipolar": 0.4,
+          "cospos": 0.85
+        },
+        "kfold_5": {
+          "mean": 0.3143,
+          "std": 0.1245,
+          "folds": [
+            0.2143,
+            0.3571,
+            0.5,
+            0.3571,
+            0.1429
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.634
+        }
+      },
+      "geometry_correlation": 0.2435,
+      "prediction_correlation": -0.0857
+    },
+    "nomic-ai/nomic-embed-text-v1.5": {
+      "careful": {
+        "main_battery": {
+          "bipolar_combined": 0.6429,
+          "cospos_combined": 0.5857,
+          "cospos_advantage": -0.0571,
+          "bipolar_orig": 0.62,
+          "bipolar_warm": 0.7
+        },
+        "expansion_oos": {
+          "bipolar": 0.65,
+          "cospos": 0.6
+        },
+        "kfold_5": {
+          "mean": 0.6429,
+          "std": 0.101,
+          "folds": [
+            0.7857,
+            0.5,
+            0.7143,
+            0.5714,
+            0.6429
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.6145
+        }
+      },
+      "honest": {
+        "main_battery": {
+          "bipolar_combined": 0.3857,
+          "cospos_combined": 0.5143,
+          "cospos_advantage": 0.1286,
+          "bipolar_orig": 0.3,
+          "bipolar_warm": 0.6
+        },
+        "expansion_oos": {
+          "bipolar": 0.4,
+          "cospos": 0.35
+        },
+        "kfold_5": {
+          "mean": 0.3857,
+          "std": 0.1325,
+          "folds": [
+            0.2857,
+            0.3571,
+            0.6429,
+            0.3571,
+            0.2857
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.5763
+        }
+      },
+      "kind": {
+        "main_battery": {
+          "bipolar_combined": 0.4,
+          "cospos_combined": 0.4857,
+          "cospos_advantage": 0.0857,
+          "bipolar_orig": 0.28,
+          "bipolar_warm": 0.7
+        },
+        "expansion_oos": {
+          "bipolar": 0.2,
+          "cospos": 0.35
+        },
+        "kfold_5": {
+          "mean": 0.4,
+          "std": 0.0571,
+          "folds": [
+            0.4286,
+            0.5,
+            0.3571,
+            0.3571,
+            0.3571
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.6859
+        }
+      },
+      "thorough": {
+        "main_battery": {
+          "bipolar_combined": 0.5429,
+          "cospos_combined": 0.5143,
+          "cospos_advantage": -0.0286,
+          "bipolar_orig": 0.56,
+          "bipolar_warm": 0.5
+        },
+        "expansion_oos": {
+          "bipolar": 0.4,
+          "cospos": 0.3
+        },
+        "kfold_5": {
+          "mean": 0.5429,
+          "std": 0.0571,
+          "folds": [
+            0.5714,
+            0.5714,
+            0.5714,
+            0.4286,
+            0.5714
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.5501
+        }
+      },
+      "good": {
+        "main_battery": {
+          "bipolar_combined": 0.3143,
+          "cospos_combined": 0.3571,
+          "cospos_advantage": 0.0429,
+          "bipolar_orig": 0.12,
+          "bipolar_warm": 0.8
+        },
+        "expansion_oos": {
+          "bipolar": 0.45,
+          "cospos": 0.3
+        },
+        "kfold_5": {
+          "mean": 0.3143,
+          "std": 0.1069,
+          "folds": [
+            0.2143,
+            0.3571,
+            0.5,
+            0.2857,
+            0.2143
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.6636
+        }
+      },
+      "hard": {
+        "main_battery": {
+          "bipolar_combined": 0.6286,
+          "cospos_combined": 0.5714,
+          "cospos_advantage": -0.0571,
+          "bipolar_orig": 0.68,
+          "bipolar_warm": 0.5
+        },
+        "expansion_oos": {
+          "bipolar": 0.55,
+          "cospos": 0.45
+        },
+        "kfold_5": {
+          "mean": 0.6286,
+          "std": 0.105,
+          "folds": [
+            0.7857,
+            0.7143,
+            0.5714,
+            0.5714,
+            0.5
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.6768
+        }
+      },
+      "helpful": {
+        "main_battery": {
+          "bipolar_combined": 0.4,
+          "cospos_combined": 0.4571,
+          "cospos_advantage": 0.0571,
+          "bipolar_orig": 0.2,
+          "bipolar_warm": 0.9
+        },
+        "expansion_oos": {
+          "bipolar": 0.45,
+          "cospos": 0.25
+        },
+        "kfold_5": {
+          "mean": 0.4,
+          "std": 0.1069,
+          "folds": [
+            0.2857,
+            0.5714,
+            0.4286,
+            0.4286,
+            0.2857
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.5888
+        }
+      },
+      "bold": {
+        "main_battery": {
+          "bipolar_combined": 0.4857,
+          "cospos_combined": 0.5,
+          "cospos_advantage": 0.0143,
+          "bipolar_orig": 0.5,
+          "bipolar_warm": 0.45
+        },
+        "expansion_oos": {
+          "bipolar": 0.5,
+          "cospos": 0.45
+        },
+        "kfold_5": {
+          "mean": 0.4857,
+          "std": 0.1143,
+          "folds": [
+            0.4286,
+            0.7143,
+            0.4286,
+            0.4286,
+            0.4286
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.4189
+        }
+      },
+      "active": {
+        "main_battery": {
+          "bipolar_combined": 0.3571,
+          "cospos_combined": 0.3714,
+          "cospos_advantage": 0.0143,
+          "bipolar_orig": 0.36,
+          "bipolar_warm": 0.35
+        },
+        "expansion_oos": {
+          "bipolar": 0.45,
+          "cospos": 0.45
+        },
+        "kfold_5": {
+          "mean": 0.3571,
+          "std": 0.0639,
+          "folds": [
+            0.3571,
+            0.4286,
+            0.4286,
+            0.2857,
+            0.2857
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.6755
+        }
+      },
+      "fair": {
+        "main_battery": {
+          "bipolar_combined": 0.3714,
+          "cospos_combined": 0.5286,
+          "cospos_advantage": 0.1571,
+          "bipolar_orig": 0.24,
+          "bipolar_warm": 0.7
+        },
+        "expansion_oos": {
+          "bipolar": 0.55,
+          "cospos": 0.55
+        },
+        "kfold_5": {
+          "mean": 0.3714,
+          "std": 0.1385,
+          "folds": [
+            0.2143,
+            0.5,
+            0.5714,
+            0.2857,
+            0.2857
+          ]
+        },
+        "anchor_geometry": {
+          "cos_between_anchors": 0.7174
+        }
+      },
+      "geometry_correlation": 0.232,
+      "prediction_correlation": 0.4889
+    }
+  }
+}
